@@ -117,6 +117,7 @@ textarea{min-height:120px;resize:vertical}
   <a href="#" onclick="showSection('cron')" id="nav-cron">⏱️ Cron Controls</a>
   <a href="#" onclick="showSection('activity')" id="nav-activity">📡 Live Activity</a>
   <a href="#" onclick="showSection('knowledge')" id="nav-knowledge">📚 Knowledge Browser</a>
+  <a href="#" onclick="showSection('learned')" id="nav-learned">📖 Learned Topics</a>
   <div class="logout"><a href="/admin/logout">🚪 Sign Out</a></div>
 </nav>
 
@@ -513,6 +514,17 @@ Crawl for network segmentation best practices"></textarea>
   <p style="margin-top:8px;color:#8b949e;font-size:.85rem" id="kbCount"></p>
 </div>
 
+<!-- ══════════════ LEARNED TOPICS ══════════════ -->
+<div class="section" id="sec-learned">
+  <h2>Learned Topics &amp; Subtopics</h2>
+  <p style="margin-bottom:16px;color:#8b949e">All knowledge the AI has learned from uploads, pastes, crawlers, and other sources — grouped by topic.</p>
+  <div id="learned-summary" style="margin-bottom:20px"></div>
+  <div id="learned-topics"></div>
+  <hr style="border-color:#30363d;margin:24px 0">
+  <h3 style="font-size:1rem;margin-bottom:12px">Knowledge Files</h3>
+  <div id="learned-files" style="max-height:400px;overflow-y:auto"></div>
+</div>
+
 </div><!-- /main -->
 
 <script>
@@ -527,6 +539,7 @@ function showSection(name) {
   if (name === 'forum') loadForumTopics();
   if (name === 'sitecrawl') loadSiteStats();
   if (name === 'mlengine') loadMLEngine();
+  if (name === 'learned') loadLearned();
 }
 
 function statusHTML(cls, msg) {
@@ -627,15 +640,30 @@ async function uploadFiles(files) {
   const el = document.getElementById('upload-status');
   const domain = document.getElementById('uploadDomain').value;
   let html = '';
-  for (const file of files) {
-    el.innerHTML = spinnerHTML(`Extracting knowledge from ${file.name}…`);
+  for (let i = 0; i < files.length; i++) {
+    const file = files[i];
+    el.innerHTML = spinnerHTML(`Processing file ${i+1}/${files.length}: ${file.name}…`);
     const fd = new FormData();
     fd.append('file', file);
     fd.append('domain', domain);
     const res = await fetch('/admin/upload', {method:'POST', body: fd});
     const d = await res.json();
     if (d.status === 'success') {
-      html += resultBox('success', `✅ <strong>${file.name}</strong>: ${d.entries_extracted} entries extracted\n\nSamples:\n${(d.samples||[]).map(s => `Q: ${s.question}\nA: ${s.answer}\nDomain: ${s.domain}`).join('\n\n')}`);
+      let details = `✅ <strong>${file.name}</strong>: <strong>${d.entries_extracted}</strong> entries extracted\n`;
+      if (d.domain_breakdown && Object.keys(d.domain_breakdown).length) {
+        details += `\n<strong>Domains:</strong>\n`;
+        for (const [dom, cnt] of Object.entries(d.domain_breakdown).sort((a,b)=>b[1]-a[1])) {
+          const pct = (cnt / d.entries_extracted * 100).toFixed(0);
+          details += `  ${dom}: ${cnt} entries (${pct}%)\n`;
+        }
+      }
+      if (d.topics && d.topics.length) {
+        details += `\n<strong>Topics learned:</strong> ${d.topics.join(', ')}\n`;
+      }
+      if (d.samples && d.samples.length) {
+        details += `\n<strong>Sample entries:</strong>\n${d.samples.map(s => `  Q: ${s.question}\n  A: ${s.answer}\n  Domain: ${s.domain}`).join('\n\n')}`;
+      }
+      html += resultBox('success', details);
     } else if (d.status === 'warning') {
       html += resultBox('warning', `⚠️ ${file.name}: ${d.message}`);
     } else {
@@ -651,10 +679,24 @@ async function submitPaste() {
   const text = document.getElementById('pasteText').value.trim();
   if (!text) return;
   const el = document.getElementById('paste-status');
-  el.innerHTML = spinnerHTML('Extracting knowledge…');
+  el.innerHTML = spinnerHTML(`Extracting knowledge from ${text.length} characters…`);
   const d = await postJSON('/admin/paste', {text, domain: document.getElementById('pasteDomain').value});
   if (d.status === 'success') {
-    el.innerHTML = resultBox('success', `✅ Extracted ${d.entries_extracted} entries\n\n${(d.samples||[]).map(s => `Q: ${s.question}\nA: ${s.answer}`).join('\n\n')}`);
+    let details = `✅ Extracted <strong>${d.entries_extracted}</strong> entries from ${d.text_length || text.length} characters\n`;
+    if (d.domain_breakdown && Object.keys(d.domain_breakdown).length) {
+      details += `\n<strong>Domains:</strong>\n`;
+      for (const [dom, cnt] of Object.entries(d.domain_breakdown).sort((a,b)=>b[1]-a[1])) {
+        const pct = (cnt / d.entries_extracted * 100).toFixed(0);
+        details += `  ${dom}: ${cnt} entries (${pct}%)\n`;
+      }
+    }
+    if (d.topics && d.topics.length) {
+      details += `\n<strong>Topics learned:</strong> ${d.topics.join(', ')}\n`;
+    }
+    if (d.samples && d.samples.length) {
+      details += `\n<strong>Sample entries:</strong>\n${(d.samples).map(s => `  Q: ${s.question}\n  A: ${s.answer}`).join('\n\n')}`;
+    }
+    el.innerHTML = resultBox('success', details);
     refreshStats();
   } else {
     el.innerHTML = resultBox('warning', `⚠️ ${d.message || 'No entries extracted'}`);
@@ -1261,6 +1303,76 @@ async function mlGrowthCycle() {
 
 /* ── Init ── */
 loadTopics();
+loadLearned();
+
+/* ── Learned Topics ── */
+async function loadLearned() {
+  const summaryEl = document.getElementById('learned-summary');
+  const topicsEl = document.getElementById('learned-topics');
+  const filesEl = document.getElementById('learned-files');
+  if (!summaryEl) return;
+
+  summaryEl.innerHTML = spinnerHTML('Loading learned knowledge…');
+  topicsEl.innerHTML = '';
+  filesEl.innerHTML = '';
+
+  try {
+    const d = await api('/admin/learned');
+    const s = d.summary || {};
+
+    summaryEl.innerHTML = `
+      <div class="cards">
+        <div class="card"><div class="label">Total Files</div><div class="value">${s.total_files || 0}</div></div>
+        <div class="card"><div class="label">Total Entries</div><div class="value green">${s.total_entries || 0}</div></div>
+        <div class="card"><div class="label">Topics</div><div class="value purple">${s.total_topics || 0}</div></div>
+        <div class="card"><div class="label">Sources</div><div class="value orange">${(s.source_types||[]).join(', ') || '—'}</div></div>
+      </div>`;
+
+    // Topics list
+    const topics = d.topics || [];
+    if (topics.length) {
+      topicsEl.innerHTML = '<h3 style="font-size:1rem;margin-bottom:12px">Topics &amp; Subtopics</h3>' +
+        topics.map(t => {
+          const domains = Object.entries(t.domains||{}).sort((a,b)=>b[1]-a[1]);
+          const domainTags = domains.map(([dom,cnt]) =>
+            `<span class="k-table .domain-tag" style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:.75rem;background:#1c2128;color:#58a6ff;margin-right:4px">${dom}: ${cnt}</span>`
+          ).join('');
+          return `<div style="background:#0d1117;border:1px solid #30363d;border-radius:6px;padding:12px;margin-bottom:8px">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+              <strong style="color:#e6edf3">${esc(t.topic)}</strong>
+              <span style="color:#8b949e;font-size:.85rem">${t.total_entries} entries · ${t.file_count} file(s) · ${(t.sources||[]).join(', ')}</span>
+            </div>
+            <div>${domainTags}</div>
+            ${t.latest ? `<div style="margin-top:4px;color:#8b949e;font-size:.8rem">Latest: ${t.latest}</div>` : ''}
+          </div>`;
+        }).join('');
+    } else {
+      topicsEl.innerHTML = '<p style="color:#8b949e">No learned topics yet. Upload files or paste text to teach the AI.</p>';
+    }
+
+    // Files list
+    const files = d.files || [];
+    if (files.length) {
+      filesEl.innerHTML = `<table class="k-table"><thead><tr>
+          <th>File</th><th>Source</th><th>Topic</th><th>Entries</th><th>Top Domain</th><th>Size</th><th>Date</th>
+        </tr></thead><tbody>` +
+        files.map(f => `<tr>
+          <td style="font-family:monospace;font-size:.8rem">${esc(f.filename)}</td>
+          <td>${esc(f.source_type)}</td>
+          <td>${esc(f.topic)}</td>
+          <td>${f.entries}</td>
+          <td><span class="k-table .domain-tag" style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:.75rem;background:#1c2128;color:#58a6ff">${esc(f.top_domain)}</span></td>
+          <td>${f.size_kb} KB</td>
+          <td style="font-size:.8rem">${f.timestamp || '—'}</td>
+        </tr>`).join('') +
+        '</tbody></table>';
+    }
+  } catch (e) {
+    summaryEl.innerHTML = statusHTML('err', 'Failed to load learned topics: ' + e.message);
+  }
+}
+
+function esc(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
 </script>
 </body>
 </html>

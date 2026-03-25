@@ -200,6 +200,8 @@ def upload_file():
         entries, preview = process_file(filepath, domain_hint)
         if entries:
             save_path = _save_knowledge(entries, f"upload_{filename}")
+            domain_breakdown = _entries_domain_breakdown(entries)
+            topics = _entries_topic_summary(entries)
             return jsonify({
                 "status": "success",
                 "file": filename,
@@ -207,14 +209,16 @@ def upload_file():
                 "preview": preview,
                 "samples": entries[:5],
                 "saved_to": str(save_path),
-                "message": f"Extracted {len(entries)} entries. File deleted.",
+                "domain_breakdown": domain_breakdown,
+                "topics": topics,
+                "message": f"Extracted {len(entries)} entries from {filename}. Saved and file deleted.",
             })
         return jsonify({
             "status": "warning",
             "file": filename,
             "entries_extracted": 0,
             "preview": preview,
-            "message": "No entries could be extracted from this file.",
+            "message": "No Q&A entries could be extracted. The text may lack definitions (\"X is a Y\") or structured content. Try pasting as plain text instead.",
         })
     except Exception as exc:
         return jsonify({"status": "error", "error": str(exc)}), 500
@@ -233,19 +237,33 @@ def paste_text():
     if not data or not data.get("text"):
         return jsonify({"error": "No text provided"}), 400
 
-    entries = process_pasted_text(data["text"], data.get("domain", ""))
+    text = data["text"]
+    text_len = len(text)
+    entries = process_pasted_text(text, data.get("domain", ""))
     if entries:
         save_path = _save_knowledge(entries, "paste")
+        domain_breakdown = _entries_domain_breakdown(entries)
+        topics = _entries_topic_summary(entries)
         return jsonify({
             "status": "success",
             "entries_extracted": len(entries),
+            "text_length": text_len,
             "samples": entries[:5],
             "saved_to": str(save_path),
+            "domain_breakdown": domain_breakdown,
+            "topics": topics,
+            "message": f"Extracted {len(entries)} entries from {text_len} characters of pasted text.",
         })
     return jsonify({
         "status": "warning",
         "entries_extracted": 0,
-        "message": "No entries extracted. Try pasting structured content with definitions.",
+        "text_length": text_len,
+        "message": (
+            "No Q&A entries could be extracted. Tips:\n"
+            "• Include definitions like 'X is a Y' or 'X provides Y'\n"
+            "• Use sentences longer than 30 characters\n"
+            "• Paste structured content (articles, docs, wiki text)"
+        ),
     })
 
 
@@ -478,6 +496,116 @@ def browse_knowledge():
             continue
 
     return jsonify({"entries": entries, "total": len(entries)})
+
+
+# ── Learned Topics ────────────────────────────────────────────────────
+
+@admin_bp.route("/learned")
+@login_required
+def learned_topics():
+    """Return a structured list of all learned knowledge grouped by source/topic."""
+    files_info: list[dict] = []
+    topic_map: dict[str, dict] = {}
+
+    for fp in _iter_extra_files():
+        try:
+            data = json.loads(fp.read_text(encoding="utf-8"))
+            if not data:
+                continue
+
+            # Parse source type and topic from filename
+            name = fp.name
+            source_type, topic = _parse_knowledge_filename(name)
+            domains: dict[str, int] = {}
+            for e in data:
+                d = e.get("domain", "general")
+                domains[d] = domains.get(d, 0) + 1
+
+            ts_str = _extract_timestamp_from_filename(name)
+            stat = fp.stat()
+
+            file_info = {
+                "filename": name,
+                "source_type": source_type,
+                "topic": topic,
+                "entries": len(data),
+                "domains": domains,
+                "top_domain": max(domains, key=domains.get) if domains else "general",
+                "size_kb": round(stat.st_size / 1024, 1),
+                "timestamp": ts_str,
+                "sample_questions": [e["question"] for e in data[:3]],
+            }
+            files_info.append(file_info)
+
+            # Aggregate by topic
+            if topic not in topic_map:
+                topic_map[topic] = {
+                    "topic": topic,
+                    "total_entries": 0,
+                    "sources": [],
+                    "domains": {},
+                    "file_count": 0,
+                    "latest": ts_str,
+                }
+            tm = topic_map[topic]
+            tm["total_entries"] += len(data)
+            tm["file_count"] += 1
+            if source_type not in tm["sources"]:
+                tm["sources"].append(source_type)
+            for d, c in domains.items():
+                tm["domains"][d] = tm["domains"].get(d, 0) + c
+            if ts_str and (not tm["latest"] or ts_str > tm["latest"]):
+                tm["latest"] = ts_str
+
+        except Exception:
+            continue
+
+    # Sort: topics by total entries descending
+    topics_sorted = sorted(topic_map.values(), key=lambda t: -t["total_entries"])
+
+    return jsonify({
+        "files": sorted(files_info, key=lambda f: f.get("timestamp", ""), reverse=True),
+        "topics": topics_sorted,
+        "summary": {
+            "total_files": len(files_info),
+            "total_entries": sum(f["entries"] for f in files_info),
+            "total_topics": len(topic_map),
+            "source_types": sorted(set(f["source_type"] for f in files_info)),
+        },
+    })
+
+
+# ── Local Scheduler Status ───────────────────────────────────────────
+
+@admin_bp.route("/scheduler/status")
+@login_required
+def scheduler_status():
+    """Return local scheduler status if running."""
+    try:
+        from local_scheduler import get_scheduler_status
+        return jsonify(get_scheduler_status())
+    except ImportError:
+        return jsonify({
+            "running": False,
+            "mode": "github_actions",
+            "message": "Local scheduler not loaded. Using GitHub Actions for automation.",
+        })
+
+
+@admin_bp.route("/scheduler/toggle", methods=["POST"])
+@login_required
+def scheduler_toggle():
+    """Start or stop the local scheduler."""
+    try:
+        from local_scheduler import start_scheduler, stop_scheduler, get_scheduler_status
+        data = request.get_json() or {}
+        if data.get("action") == "stop":
+            stop_scheduler()
+        else:
+            start_scheduler()
+        return jsonify(get_scheduler_status())
+    except ImportError:
+        return jsonify({"error": "Local scheduler module not available"}), 500
 
 
 # ── Helpers ───────────────────────────────────────────────────────────
@@ -1082,6 +1210,67 @@ def _list_extra_files() -> list[dict]:
 def _iter_extra_files():
     if EXTRA_KNOWLEDGE_DIR.exists():
         yield from sorted(EXTRA_KNOWLEDGE_DIR.glob("*.json"))
+
+
+def _entries_domain_breakdown(entries: list[dict]) -> dict[str, int]:
+    """Count entries per domain."""
+    breakdown: dict[str, int] = {}
+    for e in entries:
+        d = e.get("domain", "general")
+        breakdown[d] = breakdown.get(d, 0) + 1
+    return breakdown
+
+
+def _entries_topic_summary(entries: list[dict]) -> list[str]:
+    """Extract unique topics/subjects from Q&A entries."""
+    topics: set[str] = set()
+    for e in entries:
+        q = e.get("question", "")
+        # Extract subject from common question patterns
+        for prefix in ("What is ", "What are ", "Tell me about ", "What does "):
+            if q.startswith(prefix):
+                subj = q[len(prefix):].rstrip("?").strip()
+                if 3 <= len(subj) <= 80:
+                    topics.add(subj)
+                break
+        # Also use domain as a topic
+        d = e.get("domain", "")
+        if d and d != "general":
+            topics.add(d.replace("_", " ").title())
+    return sorted(topics)[:50]
+
+
+def _parse_knowledge_filename(name: str) -> tuple[str, str]:
+    """Parse source type and topic from a knowledge filename."""
+    import re
+    name_no_ext = name.rsplit(".", 1)[0]
+
+    if name_no_ext.startswith("upload_"):
+        return "upload", name_no_ext.replace("upload_", "").split("_2")[0] or "uploaded file"
+    if name_no_ext.startswith("paste_"):
+        return "paste", "pasted text"
+    if name_no_ext.startswith("site_"):
+        return "site_crawler", name_no_ext.replace("site_", "").split("_2")[0] or "crawled site"
+    if name_no_ext.startswith("forum_"):
+        return "forum_crawler", name_no_ext.replace("forum_", "").split("_2")[0] or "forum"
+
+    # Try to extract topic from middle of filename
+    parts = re.split(r"[_\-]", name_no_ext)
+    # Filter out timestamps and generic parts
+    meaningful = [p for p in parts if len(p) > 2 and not p.isdigit()]
+    topic = " ".join(meaningful[:3]) if meaningful else name_no_ext
+    return "other", topic
+
+
+def _extract_timestamp_from_filename(name: str) -> str:
+    """Extract a timestamp string from filename like 'paste_20260325_070122.json'."""
+    import re
+    m = re.search(r"(\d{8})[_-]?(\d{6})?", name)
+    if m:
+        date_str = m.group(1)
+        time_str = m.group(2) or "000000"
+        return f"{date_str[:4]}-{date_str[4:6]}-{date_str[6:8]} {time_str[:2]}:{time_str[2:4]}:{time_str[4:6]}"
+    return ""
 
 
 def _get_extra_domains() -> list[str]:
