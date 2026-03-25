@@ -61,7 +61,7 @@ class TestBackwardPass:
 
 class TestXORLearning:
     def test_xor_convergence(self):
-        """The network should learn XOR within 10 000 epochs."""
+        """The network should learn XOR within 10,000 epochs."""
         nn = NeuralNetwork([2, 4, 1], learning_rate=1.0, seed=42)
         x = np.array([[0, 0], [0, 1], [1, 0], [1, 1]], dtype=np.float64)
         y = np.array([[0], [1], [1], [0]], dtype=np.float64)
