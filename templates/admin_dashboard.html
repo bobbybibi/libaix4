@@ -107,6 +107,8 @@ textarea{min-height:120px;resize:vertical}
   <a href="#" onclick="showSection('sitecrawl')" id="nav-sitecrawl">🌐 URL Crawler</a>
   <a href="#" onclick="showSection('learn')" id="nav-learn">🎓 AI Learning</a>
   <a href="#" onclick="showSection('mlengine')" id="nav-mlengine">⚙️ ML Engine</a>
+  <a href="#" onclick="showSection('cron')" id="nav-cron">⏱️ Cron Controls</a>
+  <a href="#" onclick="showSection('activity')" id="nav-activity">📡 Live Activity</a>
   <a href="#" onclick="showSection('knowledge')" id="nav-knowledge">📚 Knowledge Browser</a>
   <div class="logout"><a href="/admin/logout">🚪 Sign Out</a></div>
 </nav>
@@ -125,6 +127,45 @@ textarea{min-height:120px;resize:vertical}
   <div class="card"><div class="label">Domains</div><div class="value orange" id="stat-domains">{{ domains|length }}</div></div>
   <div class="card"><div class="label">ML Cycles</div><div class="value" id="stat-cycles" style="color:#58a6ff">0</div></div>
   <div class="card"><div class="label">Model Accuracy</div><div class="value green" id="stat-accuracy">—</div></div>
+  <div class="card"><div class="label">Learning Rate</div><div class="value" id="stat-velocity" style="color:#bc8cff">— /hr</div></div>
+  <div class="card"><div class="label">Last 24h Entries</div><div class="value green" id="stat-24h">—</div></div>
+</div>
+
+<!-- ── Source Breakdown Bar ── -->
+<div style="background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px;margin-bottom:20px">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+    <span style="font-size:.9rem;font-weight:600;color:#e6edf3">Knowledge Sources</span>
+    <span style="font-size:.8rem;color:#8b949e" id="source-total">—</span>
+  </div>
+
+  <hr style="border-color:#30363d;margin:24px 0">
+
+  <!-- AI Growth Summary -->
+  <h2 style="font-size:1.1rem;margin-bottom:12px">AI Growth Factors</h2>
+  <div id="growth-summary" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px">
+    <div class="card" style="padding:14px">
+      <div class="label">Knowledge Growth</div>
+      <div id="growth-knowledge" style="font-size:.9rem;color:#c9d1d9;margin-top:4px">Loading…</div>
+    </div>
+    <div class="card" style="padding:14px">
+      <div class="label">Data Sources Active</div>
+      <div id="growth-sources" style="font-size:.9rem;color:#c9d1d9;margin-top:4px">Loading…</div>
+    </div>
+    <div class="card" style="padding:14px">
+      <div class="label">Model Stability</div>
+      <div id="growth-stability" style="font-size:.9rem;color:#c9d1d9;margin-top:4px">Loading…</div>
+    </div>
+    <div class="card" style="padding:14px">
+      <div class="label">Automation Status</div>
+      <div id="growth-automation" style="font-size:.9rem;color:#c9d1d9;margin-top:4px">Loading…</div>
+    </div>
+  </div>
+
+  <!-- Stabilization Notes -->
+  <h2 style="font-size:1.1rem;margin-bottom:12px">Stabilization Notes</h2>
+  <div id="stabilization-notes" class="result-box" style="min-height:80px;max-height:200px">Loading…</div>
+  <div id="source-bar" style="display:flex;height:24px;border-radius:6px;overflow:hidden;background:#0d1117;margin-bottom:8px"></div>
+  <div id="source-legend" style="display:flex;flex-wrap:wrap;gap:12px;font-size:.8rem;color:#8b949e"></div>
 </div>
 
 <!-- ══════════════ DASHBOARD ══════════════ -->
@@ -173,15 +214,17 @@ textarea{min-height:120px;resize:vertical}
   <textarea id="manualA" style="min-height:80px" placeholder="WPA3-Enterprise provides 192-bit minimum security..."></textarea>
   <label for="manualD">Domain</label>
   <input type="text" id="manualD" placeholder="Auto-detected if blank">
-  <button class="btn btn-primary" onclick="submitManual()">➕ Add Entry</button>
-  <div id="manual-status"></div>
-</div>
+  <button class="btn btn-primary" o, Reddit, HN &amp; DEV.to</h2>
+  <p style="margin-bottom:16px;color:#8b949e">
+    Crawl free public sources: StackExchange (ServerFault, NetworkEngineering, Security), Reddit (r/networking, r/netsec, r/sysadmin, r/cybersecurity), Hacker News, and DEV.to tech articles
 
 <!-- ══════════════ CRAWLER (Wikipedia) ══════════════ -->
 <div class="section" id="sec-crawler">
   <h2>Wikipedia Crawler Management</h2>
   <p style="margin-bottom:16px;color:#8b949e">Configure topics for the Wikipedia knowledge crawler. Runs every 15 min via GitHub Actions or manually from here.</p>
-
+  <label style="margin-left:12px"><input type="checkbox" id="srcHN" checked> Hacker News</label>
+    <label style="margin-left:12px"><input type="checkbox" id="srcDevto" checked> DEV.to</label>
+  
   <div id="topic-list"></div>
 
   <h3 style="margin:20px 0 12px;font-size:1rem">Add New Crawler Topic</h3>
@@ -229,7 +272,7 @@ textarea{min-height:120px;resize:vertical}
 </div>
 
 <!-- ══════════════ SITE/URL CRAWLER ══════════════ -->
-<div class="section" id="sec-sitecrawl">
+<div class="section" id="sec-sitecrawl"><strong>all sources</strong> (Wikipedia + Reddit + StackExchange + Hacker News + DEV.to)
   <h2>URL Crawler — Crawl Any Website</h2>
   <p style="margin-bottom:16px;color:#8b949e">
     Enter any URL. The crawler will follow internal links, extract topic-relevant knowledge, discard original data, and flush caches. Only extracted Q&amp;A entries are kept.
@@ -327,7 +370,46 @@ Crawl for network segmentation best practices"></textarea>
     </div>
   </div>
 
-  <!-- Action buttons -->
+  <!-- Action buttonCRON CONTROLS ══════════════ -->
+<div class="section" id="sec-cron">
+  <h2>⏱️ Cron Job Controls &amp; Redline Warnings</h2>
+  <p style="margin-bottom:16px;color:#8b949e">
+    Control automation frequency. <span style="color:#f85149;font-weight:600">RED</span> = at or above safe maximum. <span style="color:#d29922;font-weight:600">YELLOW</span> = approaching limit. <span style="color:#3fb950;font-weight:600">GREEN</span> = safe.
+  </p>
+  <div id="cron-controls"></div>
+  <div id="cron-status" style="margin-top:12px"></div>
+</div>
+
+<!-- ══════════════ LIVE ACTIVITY ══════════════ -->
+<div class="section" id="sec-activity">
+  <h2>📡 Live Learning Activity</h2>
+  <p style="margin-bottom:16px;color:#8b949e">
+    Real-time view of what the AI is learning and from where. Auto-refreshes every 30 seconds.
+  </p>
+
+  <!-- Activity stats -->
+  <div class="cards" style="margin-bottom:20px">
+    <div class="card"><div class="label">Total Events</div><div class="value" id="act-events" style="color:#58a6ff">—</div></div>
+    <div class="card"><div class="label">Entries Learned (24h)</div><div class="value green" id="act-24h">—</div></div>
+    <div class="card"><div class="label">Learning Velocity</div><div class="value purple" id="act-velocity">— /hr</div></div>
+  </div>
+
+  <!-- Source breakdown table -->
+  <h3 style="font-size:1rem;margin-bottom:8px">Entries by Source</h3>
+  <div id="act-sources" style="margin-bottom:20px"></div>
+
+  <!-- Topic breakdown -->
+  <h3 style="font-size:1rem;margin-bottom:8px">Entries by Topic</h3>
+  <div id="act-topics" style="margin-bottom:20px"></div>
+
+  <!-- Recent activity feed -->
+  <h3 style="font-size:1rem;margin-bottom:8px">Recent Activity Feed</h3>
+  <div id="act-feed" style="max-height:400px;overflow-y:auto"></div>
+
+  <button class="btn btn-blue" onclick="loadActivity()" style="margin-top:12px">🔄 Refresh</button>
+</div>
+
+<!-- ══════════════ s -->
   <div style="margin-bottom:16px">
     <button class="btn btn-blue" onclick="mlAssess()">📊 Assess Model</button>
     <button class="btn btn-primary" onclick="mlOptimize()">⚡ Optimize Model</button>
@@ -350,6 +432,9 @@ Crawl for network segmentation best practices"></textarea>
   <div id="ml-trend" style="font-family:monospace;font-size:.85rem"></div>
 
   <hr style="border-color:#30363d;margin:24px 0">
+  if (name === 'cron') loadCronConfig();
+  if (name === 'activity') loadActivity();
+  if (name === 'dashboard') loadDashboardGrowth();
 
   <!-- Recent Events -->
   <h3 style="font-size:1rem;margin-bottom:12px">Recent Events</h3>
@@ -418,6 +503,44 @@ async function refreshStats() {
   document.getElementById('stat-total').textContent = d.total_entries;
   document.getElementById('stat-domains').textContent = d.domains.length;
   document.getElementById('last-crawl').textContent = d.crawler.last_crawl || 'Never';
+  // Learning stats
+  if (d.learning) {
+    const v = d.learning.learning_velocity || 0;
+    document.getElementById('stat-velocity').textContent = v.toFixed(1) + ' /hr';
+    document.getElementById('stat-24h').textContent = d.learning.entries_last_24h || 0;
+  }
+  // Source breakdown bar
+  renderSourceBar(d.source_breakdown || {});
+}
+
+const SOURCE_COLORS = {
+  wikipedia: '#3fb950', stackexchange: '#58a6ff', reddit: '#f85149',
+  hackernews: '#d29922', devto: '#bc8cff', forums: '#79c0ff',
+  site_crawler: '#7ee787', uploads: '#e3b341', paste: '#8b949e',
+  manual: '#c9d1d9', other: '#484f58', builtin: '#388bfd',
+};
+
+function renderSourceBar(breakdown) {
+  const bar = document.getElementById('source-bar');
+  const legend = document.getElementById('source-legend');
+  const totalEl = document.getElementById('source-total');
+
+  const entries = Object.entries(breakdown).sort((a,b) => b[1] - a[1]);
+  const total = entries.reduce((s,[,v]) => s+v, 0);
+  totalEl.textContent = `${total} crawled/uploaded entries`;
+
+  if (!total) { bar.innerHTML = '<div style="flex:1;background:#30363d;display:flex;align-items:center;justify-content:center;color:#8b949e;font-size:.8rem">No external data yet</div>'; legend.innerHTML = ''; return; }
+
+  bar.innerHTML = entries.map(([src, count]) => {
+    const pct = (count / total * 100).toFixed(1);
+    const color = SOURCE_COLORS[src] || '#484f58';
+    return `<div style="flex:${count};background:${color};min-width:2px" title="${src}: ${count} (${pct}%)"></div>`;
+  }).join('');
+
+  legend.innerHTML = entries.map(([src, count]) => {
+    const color = SOURCE_COLORS[src] || '#484f58';
+    return `<span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:${color};margin-right:4px;vertical-align:middle"></span>${src}: ${count}</span>`;
+  }).join('');
   if (d.ml_engine) {
     document.getElementById('stat-cycles').textContent = d.ml_engine.cycle_count || 0;
   }
@@ -526,13 +649,35 @@ async function addTopic() {
   const max = parseInt(document.getElementById('newTopicMax').value) || 8;
   await postJSON('/admin/crawler/add-topic', {name, keywords:kw, max_articles:max});
   document.getElementById('newTopicName').value = '';
-  document.getElementById('newTopicKeywords').value = '';
-  loadTopics();
-}
-async function removeTopic(name) {
-  if (!confirm(`Remove topic "${name}"?`)) return;
-  await postJSON('/admin/crawler/remove-topic', {name});
-  loadTopics();
+  document.getElementById('newTopicKeywords').value = '';ALL sources (Wikipedia + Reddit + StackExchange + HN + DEV.to).`);
+  const d = await postJSON('/admin/learn', {prompt, keywords:kw});
+  if (d.status === 'success') {
+    let lines = [`✅ ${d.message}\n\nTotal entries: ${d.entries}`];
+    // Source breakdown
+    const sb = d.source_breakdown || {};
+    if (Object.keys(sb).length) {
+      lines.push('\nSource breakdown:');
+      for (const [src, count] of Object.entries(sb)) {
+        lines.push(`  ${src}: ${count} entries`);
+      }
+    }
+    // Show per-source results
+    if (d.sources) {
+      const wiki = d.sources.wikipedia || {};
+      const forum = d.sources.forums || {};
+      lines.push(`\nWikipedia: ${wiki.entries||0} entries (${wiki.status||'—'})`);
+      lines.push(`Forums: ${forum.entries||0} entries (${forum.status||'—'})`);
+    }
+    if (d.samples && d.samples.length) {
+      lines.push('\nSamples:');
+      for (const s of d.samples) {
+        lines.push(`Q: ${s.question}\nA: ${s.answer?.substring(0,150)}…`);
+      }
+    }
+    el.innerHTML = resultBox('success', lines.join('\n'));
+    refreshStats();
+  } else {
+    el.innerHTML = resultBox('error', `❌ ${d.error || d.message
 }
 async function toggleTopic(name) {
   await postJSON('/admin/crawler/toggle-topic', {name});
@@ -598,6 +743,8 @@ async function loadKnowledge() {
       <td style="color:#8b949e;font-size:.8rem">${e.source}</td>
     </tr>
   `).join('');
+  if (document.getElementById('srcHN').checked) sources.push('hackernews');
+  if (document.getElementById('srcDevto').checked) sources.push('devto');
   document.getElementById('kbCount').textContent = `${d.total} entries`;
 }
 function esc(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }

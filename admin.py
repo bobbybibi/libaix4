@@ -42,7 +42,9 @@ from crawler import (
 from file_processor import classify_domain, process_file, process_pasted_text
 from forum_crawler import (
     crawl_single_forum_topic,
+    get_learning_stats,
     load_forum_config,
+    log_learning_event,
     run_all_forum_crawlers,
     save_forum_config,
 )
@@ -139,12 +141,19 @@ def api_stats():
     forum_config = load_forum_config()
     site_stats = get_site_crawl_stats()
     engine_stats = get_engine_stats()
+    learning_stats = get_learning_stats()
+    cron_config = _load_cron_config()
+
+    # Source breakdown from extra knowledge files
+    source_breakdown = _get_source_breakdown()
+
     return jsonify({
         "builtin_entries": len(KNOWLEDGE),
         "extra_entries": extra_count,
         "total_entries": len(KNOWLEDGE) + extra_count,
         "domains": get_domains() + _get_extra_domains(),
         "extra_files": _list_extra_files(),
+        "source_breakdown": source_breakdown,
         "crawler": {
             "topics": config.get("topics", []),
             "last_crawl": config.get("last_crawl"),
@@ -156,6 +165,8 @@ def api_stats():
         },
         "site_crawler": site_stats,
         "ml_engine": engine_stats,
+        "learning": learning_stats,
+        "cron": cron_config,
     })
 
 
@@ -339,7 +350,7 @@ def run_single_crawler():
 @admin_bp.route("/learn", methods=["POST"])
 @login_required
 def learn_prompt():
-    """Parse an admin learning command and crawl for the topic."""
+    """Parse an admin learning command and crawl ALL sources for the topic."""
     data = request.get_json()
     if not data or not data.get("prompt"):
         return jsonify({"error": "Prompt required"}), 400
@@ -351,26 +362,70 @@ def learn_prompt():
         }), 400
 
     keywords = [k.strip() for k in data.get("keywords", []) if k.strip()]
-    result = crawl_single_topic(topic, keywords, max_articles=15)
+    results: dict[str, dict] = {}
+    total_entries = 0
 
-    if result["status"] == "success":
-        # Auto-add to crawler config for continuous learning
-        config = load_config()
-        topics = config.get("topics", [])
-        if not any(t["name"].lower() == topic.lower() for t in topics):
-            topics.append({
-                "name": topic,
-                "keywords": keywords,
-                "enabled": True,
-                "max_articles": 8,
-            })
-            config["topics"] = topics
-            save_config(config)
-        result["message"] = (
-            f"Learned {result['entries']} facts about '{topic}'. "
-            "Topic added to crawler for continuous learning."
-        )
-    return jsonify(result)
+    # 1) Wikipedia (single crawl — not repeated frequently)
+    wiki_result = crawl_single_topic(topic, keywords, max_articles=10)
+    results["wikipedia"] = wiki_result
+    if wiki_result.get("status") == "success":
+        total_entries += wiki_result.get("entries", 0)
+        log_learning_event("wikipedia", topic, wiki_result.get("entries", 0))
+
+    # 2) Forums (Reddit + StackExchange + HN + DEV.to)
+    forum_result = crawl_single_forum_topic(
+        topic, keywords, max_per_source=10,
+        sources=["stackexchange", "reddit", "hackernews", "devto"],
+    )
+    results["forums"] = forum_result
+    if forum_result.get("status") == "success":
+        total_entries += forum_result.get("entries", 0)
+
+    # Auto-add to crawler config for continuous learning
+    config = load_config()
+    topics = config.get("topics", [])
+    if not any(t["name"].lower() == topic.lower() for t in topics):
+        topics.append({
+            "name": topic,
+            "keywords": keywords,
+            "enabled": True,
+            "max_articles": 8,
+        })
+        config["topics"] = topics
+        save_config(config)
+
+    # Auto-add to forum config too
+    forum_config = load_forum_config()
+    forum_topics = forum_config.get("topics", [])
+    if not any(t["name"].lower() == topic.lower() for t in forum_topics):
+        forum_topics.append({
+            "name": topic,
+            "keywords": keywords,
+            "enabled": True,
+            "max_per_source": 10,
+            "sources": ["stackexchange", "reddit", "hackernews", "devto"],
+        })
+        forum_config["topics"] = forum_topics
+        save_forum_config(forum_config)
+
+    # Collect all samples
+    all_samples = []
+    if wiki_result.get("samples"):
+        all_samples.extend(wiki_result["samples"][:2])
+    if forum_result.get("samples"):
+        all_samples.extend(forum_result["samples"][:2])
+
+    return jsonify({
+        "status": "success" if total_entries > 0 else "no_results",
+        "entries": total_entries,
+        "sources": results,
+        "source_breakdown": forum_result.get("source_breakdown", {}),
+        "samples": all_samples,
+        "message": (
+            f"Learned {total_entries} facts about '{topic}' from multiple sources. "
+            "Topic added to all crawlers for continuous learning."
+        ) if total_entries > 0 else f"No results found for '{topic}'.",
+    })
 
 
 # ── Retrain ───────────────────────────────────────────────────────────
@@ -612,6 +667,68 @@ def ml_config():
     return jsonify(load_engine_config())
 
 
+# ── Cron Job Controls ─────────────────────────────────────────────────
+
+CRON_CONFIG_PATH = Path("data/cron_config.json")
+
+# Redline/max safe values for cron schedules
+CRON_REDLINES = {
+    "auto_train": {
+        "label": "Auto-Train",
+        "max_safe_per_hour": 4,
+        "max_absolute_per_hour": 12,
+        "note": "8 parallel configs per run = 8x multiplier. >4/hr risks GitHub throttling.",
+    },
+    "wiki_crawler": {
+        "label": "Wikipedia Crawler",
+        "max_safe_per_hour": 2,
+        "max_absolute_per_hour": 4,
+        "note": "Wikipedia rate limits: 200 req/s but polite crawling means 1-2/hr max.",
+    },
+    "forum_crawler": {
+        "label": "Forum Crawler (Reddit/SE/HN)",
+        "max_safe_per_hour": 4,
+        "max_absolute_per_hour": 8,
+        "note": "SE: 300 req/day. Reddit: 60 req/min. HN: unlimited. >4/hr may hit SE limit.",
+    },
+    "ml_growth": {
+        "label": "ML Growth Cycle",
+        "max_safe_per_hour": 1,
+        "max_absolute_per_hour": 2,
+        "note": "Each cycle trains multiple models. Very CPU-heavy. 1/hr is optimal.",
+    },
+}
+
+
+@admin_bp.route("/cron/config", methods=["GET", "POST"])
+@login_required
+def cron_config_endpoint():
+    if request.method == "POST":
+        data = request.get_json()
+        if not data:
+            return jsonify({"error": "No data provided"}), 400
+        config = _load_cron_config()
+        for wf_key in ["auto_train", "wiki_crawler", "forum_crawler", "ml_growth"]:
+            if wf_key in data:
+                wf_data = data[wf_key]
+                if "enabled" in wf_data:
+                    config["workflows"][wf_key]["enabled"] = bool(wf_data["enabled"])
+                if "runs_per_hour" in wf_data:
+                    limit = CRON_REDLINES[wf_key]["max_absolute_per_hour"]
+                    config["workflows"][wf_key]["runs_per_hour"] = max(0, min(limit, int(wf_data["runs_per_hour"])))
+        config["updated_at"] = datetime.now(timezone.utc).isoformat()
+        _save_cron_config(config)
+        return jsonify({"status": "success", "config": config, "redlines": CRON_REDLINES})
+    config = _load_cron_config()
+    return jsonify({"config": config, "redlines": CRON_REDLINES})
+
+
+@admin_bp.route("/learning/stats")
+@login_required
+def learning_stats_endpoint():
+    return jsonify(get_learning_stats())
+
+
 # ── Helpers ───────────────────────────────────────────────────────────
 
 def _save_knowledge(entries: list[dict], source: str) -> Path:
@@ -621,6 +738,72 @@ def _save_knowledge(entries: list[dict], source: str) -> Path:
     path = EXTRA_KNOWLEDGE_DIR / f"{safe}_{ts}.json"
     path.write_text(json.dumps(entries, indent=2, ensure_ascii=False), encoding="utf-8")
     return path
+
+
+def _load_cron_config() -> dict:
+    if CRON_CONFIG_PATH.exists():
+        try:
+            return json.loads(CRON_CONFIG_PATH.read_text(encoding="utf-8"))
+        except Exception:
+            pass
+    return _default_cron_config()
+
+
+def _save_cron_config(config: dict) -> None:
+    CRON_CONFIG_PATH.parent.mkdir(parents=True, exist_ok=True)
+    CRON_CONFIG_PATH.write_text(
+        json.dumps(config, indent=2, ensure_ascii=False, default=str),
+        encoding="utf-8",
+    )
+
+
+def _default_cron_config() -> dict:
+    return {
+        "workflows": {
+            "auto_train": {"enabled": True, "runs_per_hour": 4},
+            "wiki_crawler": {"enabled": True, "runs_per_hour": 4},
+            "forum_crawler": {"enabled": True, "runs_per_hour": 4},
+            "ml_growth": {"enabled": True, "runs_per_hour": 1},
+        },
+        "updated_at": None,
+    }
+
+
+def _get_source_breakdown() -> dict:
+    """Count extra knowledge entries by source type."""
+    breakdown: dict[str, int] = {}
+    for fp in _iter_extra_files():
+        try:
+            data = json.loads(fp.read_text(encoding="utf-8"))
+            for e in data:
+                src = e.get("source", "unknown")
+                # Normalize source to category
+                if "wikipedia" in src or "wiki" in fp.name:
+                    cat = "wikipedia"
+                elif "stackexchange" in src or "serverfault" in src:
+                    cat = "stackexchange"
+                elif "reddit" in src:
+                    cat = "reddit"
+                elif "hackernews" in src:
+                    cat = "hackernews"
+                elif "devto" in src:
+                    cat = "devto"
+                elif "forum" in fp.name:
+                    cat = "forums"
+                elif "site_" in fp.name:
+                    cat = "site_crawler"
+                elif "upload" in fp.name:
+                    cat = "uploads"
+                elif "paste" in fp.name:
+                    cat = "paste"
+                elif "manual" in fp.name:
+                    cat = "manual"
+                else:
+                    cat = "other"
+                breakdown[cat] = breakdown.get(cat, 0) + 1
+        except Exception:
+            continue
+    return breakdown
 
 
 def _count_extra_knowledge() -> int:

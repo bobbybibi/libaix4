@@ -24,7 +24,25 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Check if enabled
+        id: enabled
+        run: |
+          python -c "
+          import json, sys
+          from pathlib import Path
+          cfg_path = Path('data/cron_config.json')
+          if cfg_path.exists():
+              cfg = json.loads(cfg_path.read_text())
+              wf = cfg.get('workflows', {}).get('ml_growth', {})
+              if not wf.get('enabled', True):
+                  print('ML growth disabled via admin')
+                  sys.exit(0)
+          print('enabled=true')
+          " | tee /dev/stderr
+          echo "run=true" >> "$GITHUB_OUTPUT"
+
       - name: Run ML growth cycle
+        if: steps.enabled.outputs.run == 'true'
         run: |
           python -c "
           import json, sys

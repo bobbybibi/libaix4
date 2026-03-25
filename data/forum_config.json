@@ -5,35 +5,35 @@
       "keywords": ["WPA3", "802.1X", "wireless security"],
       "enabled": true,
       "max_per_source": 10,
-      "sources": ["stackexchange", "reddit"]
+      "sources": ["stackexchange", "reddit", "hackernews", "devto"]
     },
     {
       "name": "Network Troubleshooting",
       "keywords": ["packet loss", "latency", "DNS resolution"],
       "enabled": true,
       "max_per_source": 10,
-      "sources": ["stackexchange", "reddit"]
+      "sources": ["stackexchange", "reddit", "hackernews", "devto"]
     },
     {
       "name": "Firewall Configuration",
       "keywords": ["iptables", "firewall rules", "pfSense", "next-gen firewall"],
       "enabled": true,
       "max_per_source": 10,
-      "sources": ["stackexchange", "reddit"]
+      "sources": ["stackexchange", "reddit", "hackernews", "devto"]
     },
     {
       "name": "VPN Setup",
       "keywords": ["WireGuard", "OpenVPN", "IPsec", "site-to-site VPN"],
       "enabled": true,
       "max_per_source": 10,
-      "sources": ["stackexchange", "reddit"]
+      "sources": ["stackexchange", "reddit", "hackernews", "devto"]
     },
     {
       "name": "Network Monitoring",
       "keywords": ["SNMP", "Nagios", "Zabbix", "network monitoring tools"],
       "enabled": true,
       "max_per_source": 10,
-      "sources": ["stackexchange", "reddit"]
+      "sources": ["stackexchange", "reddit", "hackernews", "devto"]
     }
   ],
   "last_crawl": null,
