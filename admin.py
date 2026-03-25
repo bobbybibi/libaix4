@@ -60,6 +60,7 @@ from ml_engine import (
     stabilize_model,
 )
 from site_crawler import add_site_job, clear_site_jobs, get_site_crawl_stats
+from admin_chatbot import get_chat_history, process_message
 
 # ── Config ────────────────────────────────────────────────────────────
 UPLOAD_DIR = Path("data/uploads")
@@ -667,6 +668,253 @@ def ml_config():
     return jsonify(load_engine_config())
 
 
+# ── Admin Chatbot ─────────────────────────────────────────────────────
+
+@admin_bp.route("/chat", methods=["POST"])
+@login_required
+def chat():
+    """Process a chatbot message and execute any actions."""
+    data = request.get_json()
+    if not data or not data.get("message"):
+        return jsonify({"error": "Message required"}), 400
+
+    result = process_message(data["message"])
+    actions = result.get("actions", [])
+    queries = result.get("queries", [])
+    action_results: list[dict] = []
+
+    # Execute actions
+    for act in actions:
+        atype = act.get("type", "")
+        try:
+            if atype == "site_crawl":
+                r = add_site_job(
+                    url=act["url"],
+                    topic=act.get("topic", "general"),
+                    keywords=act.get("keywords", []),
+                    max_pages=min(int(act.get("max_pages", 30)), 50),
+                    max_depth=min(int(act.get("max_depth", 2)), 3),
+                )
+                action_results.append({"type": "site_crawl", "url": act["url"], "result": r})
+            elif atype == "learn":
+                wiki_r = crawl_single_topic(act["topic"], act.get("keywords", []), max_articles=10)
+                forum_r = crawl_single_forum_topic(
+                    act["topic"], act.get("keywords", []), max_per_source=10,
+                    sources=["stackexchange", "reddit", "hackernews", "devto"],
+                )
+                total = (wiki_r.get("entries", 0) if wiki_r.get("status") == "success" else 0) + \
+                        (forum_r.get("entries", 0) if forum_r.get("status") == "success" else 0)
+                action_results.append({
+                    "type": "learn", "topic": act["topic"],
+                    "total_entries": total,
+                    "wikipedia": wiki_r.get("entries", 0),
+                    "forums": forum_r.get("entries", 0),
+                })
+            elif atype == "forum_crawl":
+                r = crawl_single_forum_topic(
+                    act["topic"], act.get("keywords", []), max_per_source=10,
+                    sources=["stackexchange", "reddit", "hackernews", "devto"],
+                )
+                action_results.append({"type": "forum_crawl", "topic": act["topic"], "result": r})
+            elif atype == "retrain":
+                from train_knowledge import train as _train
+                model, bow, answer_map = _train(
+                    activation="tanh", optimizer="adam",
+                    lr=0.01, epochs=5000, hidden=256,
+                    augment=True, verbose=False,
+                )
+                action_results.append({
+                    "type": "retrain", "entries": len(answer_map),
+                    "vocab": bow.vocab_size,
+                })
+            elif atype == "optimize":
+                r = optimize_model()
+                action_results.append({"type": "optimize", "result": r})
+            elif atype == "stabilize":
+                r = stabilize_model()
+                action_results.append({"type": "stabilize", "result": r})
+            elif atype == "assess":
+                r = assess_model()
+                action_results.append({"type": "assess", "result": r})
+            elif atype == "growth_cycle":
+                r = run_growth_cycle()
+                action_results.append({"type": "growth_cycle", "result": r})
+            elif atype == "ml_config":
+                config = load_engine_config()
+                key = act["key"]
+                if "." in key:
+                    parts = key.split(".", 1)
+                    config.setdefault(parts[0], {})[parts[1]] = act["value"]
+                else:
+                    config[key] = act["value"]
+                save_engine_config(config)
+                action_results.append({"type": "ml_config", "key": key, "value": act["value"]})
+            elif atype == "cron":
+                cron_cfg = _load_cron_config()
+                wf = act["workflow"]
+                cron_cfg["workflows"].setdefault(wf, {})
+                cron_cfg["workflows"][wf][act["key"]] = act["value"]
+                cron_cfg["updated_at"] = datetime.now(timezone.utc).isoformat()
+                _save_cron_config(cron_cfg)
+                action_results.append({"type": "cron", "workflow": wf, "key": act["key"], "value": act["value"]})
+        except Exception as exc:
+            action_results.append({"type": atype, "error": str(exc)})
+
+    # Fetch queried data for status responses
+    query_data: dict = {}
+    for q in queries:
+        try:
+            if q == "stats":
+                extra = _count_extra_knowledge()
+                query_data["stats"] = {
+                    "builtin_entries": len(KNOWLEDGE),
+                    "extra_entries": extra,
+                    "total_entries": len(KNOWLEDGE) + extra,
+                    "domains": get_domains() + _get_extra_domains(),
+                    "source_breakdown": _get_source_breakdown(),
+                }
+            elif q == "ml_stats":
+                query_data["ml_stats"] = get_engine_stats()
+            elif q == "learning":
+                query_data["learning"] = get_learning_stats()
+            elif q == "cron":
+                query_data["cron"] = _load_cron_config()
+            elif q == "sources":
+                query_data["sources"] = _get_source_breakdown()
+        except Exception:
+            pass
+
+    # Build follow-up reply with results
+    followup = _build_chat_followup(result, action_results, query_data)
+
+    return jsonify({
+        "reply": result["reply"],
+        "followup": followup,
+        "intent": result.get("intent"),
+        "action_results": action_results,
+        "query_data": query_data,
+    })
+
+
+@admin_bp.route("/chat/history")
+@login_required
+def chat_history():
+    return jsonify({"history": get_chat_history()})
+
+
+def _build_chat_followup(result: dict, actions: list[dict], query_data: dict) -> str:
+    """Build a human-readable followup from action/query results."""
+    parts: list[str] = []
+
+    for ar in actions:
+        atype = ar.get("type", "")
+        if ar.get("error"):
+            parts.append(f"❌ {atype}: {ar['error']}")
+            continue
+
+        if atype == "site_crawl":
+            r = ar.get("result", {})
+            entries = r.get("entries", 0)
+            stats = r.get("stats", {})
+            parts.append(
+                f"🌐 Crawled **{ar.get('url', '?')}**: "
+                f"{entries} entries extracted "
+                f"({stats.get('pages_crawled', 0)} pages crawled, "
+                f"{stats.get('pages_relevant', 0)} relevant)"
+            )
+        elif atype == "learn":
+            parts.append(
+                f"🎓 Learned about **{ar.get('topic', '?')}**: "
+                f"{ar.get('total_entries', 0)} total entries "
+                f"(Wikipedia: {ar.get('wikipedia', 0)}, "
+                f"Forums: {ar.get('forums', 0)})"
+            )
+        elif atype == "forum_crawl":
+            r = ar.get("result", {})
+            parts.append(
+                f"💬 Forum search for **{ar.get('topic', '?')}**: "
+                f"{r.get('entries', 0)} entries"
+            )
+        elif atype == "retrain":
+            parts.append(
+                f"🔄 Model retrained: {ar.get('entries', 0)} answers, "
+                f"{ar.get('vocab', 0)} vocab words"
+            )
+        elif atype == "optimize":
+            r = ar.get("result", {})
+            parts.append(
+                f"⚡ Optimization: {r.get('status', 'done')} — "
+                f"best accuracy {(r.get('best_accuracy', 0)*100):.1f}%"
+            )
+        elif atype == "stabilize":
+            r = ar.get("result", {})
+            parts.append(f"🛡️ Stability: {r.get('message', r.get('status', 'done'))}")
+        elif atype == "assess":
+            r = ar.get("result", {})
+            parts.append(
+                f"📊 Assessment: accuracy {(r.get('overall_accuracy', 0)*100):.1f}%, "
+                f"confidence {(r.get('avg_confidence', 0)*100):.1f}%"
+            )
+        elif atype == "growth_cycle":
+            r = ar.get("result", {})
+            parts.append(
+                f"🔄 Growth cycle: final accuracy {(r.get('final_accuracy', 0)*100):.1f}%, "
+                f"improvement {(r.get('improvement', 0)*100):+.2f}%"
+            )
+        elif atype == "ml_config":
+            parts.append(f"⚙️ Set `{ar.get('key')}` = `{ar.get('value')}`")
+        elif atype == "cron":
+            parts.append(f"⏱️ Cron `{ar.get('workflow')}`.`{ar.get('key')}` = `{ar.get('value')}`")
+
+    # Status query results
+    if "stats" in query_data:
+        s = query_data["stats"]
+        parts.append(
+            f"\n📊 **Knowledge Base**\n"
+            f"• Total entries: **{s['total_entries']}** "
+            f"(built-in: {s['builtin_entries']}, learned: {s['extra_entries']})\n"
+            f"• Domains: **{len(s['domains'])}** — {', '.join(s['domains'][:10])}"
+        )
+        sb = s.get("source_breakdown", {})
+        if sb:
+            parts.append("• Sources: " + ", ".join(f"{k}: {v}" for k, v in sorted(sb.items(), key=lambda x: -x[1])))
+
+    if "ml_stats" in query_data:
+        ml = query_data["ml_stats"]
+        cfg = ml.get("config", {})
+        trend = ml.get("accuracy_trend", [])
+        last_acc = f"{trend[-1]['accuracy']*100:.1f}%" if trend else "unknown"
+        parts.append(
+            f"\n🧠 **Model**\n"
+            f"• Accuracy: **{last_acc}**\n"
+            f"• Growth cycles: {ml.get('cycle_count', 0)}\n"
+            f"• Auto-optimize: {'✅' if cfg.get('auto_optimize') else '❌'} | "
+            f"Auto-stabilize: {'✅' if cfg.get('auto_stabilize') else '❌'} | "
+            f"Auto-grow: {'✅' if cfg.get('auto_grow') else '❌'}"
+        )
+
+    if "learning" in query_data:
+        ls = query_data["learning"]
+        parts.append(
+            f"\n📈 **Learning**\n"
+            f"• Velocity: **{ls.get('learning_velocity', 0):.1f}** entries/hr\n"
+            f"• Last 24h: {ls.get('entries_last_24h', 0)} entries\n"
+            f"• Total events: {ls.get('total_events', 0)}"
+        )
+
+    if "cron" in query_data:
+        c = query_data["cron"]
+        wfs = c.get("workflows", {})
+        lines = []
+        for k, v in wfs.items():
+            status = "✅" if v.get("enabled") else "❌"
+            lines.append(f"  {status} {k}: {v.get('runs_per_hour', 0)}/hr")
+        parts.append(f"\n⏱️ **Cron Jobs**\n" + "\n".join(lines))
+
+    return "\n\n".join(parts) if parts else ""
+
+
+# ── 
 # ── Cron Job Controls ─────────────────────────────────────────────────
 
 CRON_CONFIG_PATH = Path("data/cron_config.json")

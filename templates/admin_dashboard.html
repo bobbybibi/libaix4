@@ -92,6 +92,12 @@ textarea{min-height:120px;resize:vertical}
 
 /* ── Responsive ── */
 @media(max-width:768px){.sidebar{display:none}.main{margin-left:0}}
+
+/* ── Chatbot ── */
+.chat-msg.user{display:flex;flex-direction:column;align-items:flex-end}
+.chat-msg.assistant{display:flex;flex-direction:column;align-items:flex-start}
+.chat-msg code{font-family:'SF Mono','Fira Code',monospace}
+#chat-input:focus{border-color:#58a6ff;box-shadow:0 0 0 3px rgba(88,166,255,.15)}
 </style>
 </head>
 <body>
@@ -101,6 +107,7 @@ textarea{min-height:120px;resize:vertical}
   <h2>🧠 libaix</h2>
   <p class="sub">Admin Dashboard</p>
   <a href="#" onclick="showSection('dashboard')" class="active" id="nav-dashboard">📊 Dashboard</a>
+  <a href="#" onclick="showSection('chatbot')" id="nav-chatbot">💬 Admin Chat</a>
   <a href="#" onclick="showSection('upload')" id="nav-upload">📁 Upload &amp; Extract</a>
   <a href="#" onclick="showSection('crawler')" id="nav-crawler">🕷️ Wiki Crawler</a>
   <a href="#" onclick="showSection('forum')" id="nav-forum">💬 Forum Crawler</a>
@@ -177,7 +184,52 @@ textarea{min-height:120px;resize:vertical}
   <button class="btn btn-blue" onclick="refreshStats()">📊 Refresh Stats</button>
   <div id="dashboard-status"></div>
 </div>
+ADMIN CHATBOT ══════════════ -->
+<div class="section" id="sec-chatbot">
+  <h2>💬 Admin Command Center</h2>
+  <p style="margin-bottom:16px;color:#8b949e">
+    Chat with the AI admin. Give it URLs to crawl, topics to learn, parameters to tune, or ask about stats.
+    Type <code>help</code> for all commands.
+  </p>
 
+  <!-- Chat messages area -->
+  <div id="chat-messages" style="background:#0d1117;border:1px solid #30363d;border-radius:10px;padding:16px;
+    min-height:400px;max-height:600px;overflow-y:auto;margin-bottom:16px;display:flex;flex-direction:column;gap:12px">
+    <div class="chat-msg assistant">
+      <div style="font-size:.8rem;color:#8b949e;margin-bottom:4px">🤖 Admin Bot</div>
+      <div style="background:#1c2128;border:1px solid #30363d;border-radius:10px;padding:12px;color:#c9d1d9;font-size:.9rem;max-width:85%;white-space:pre-wrap">
+Hello! I'm your admin assistant. I can:
+
+• **Crawl URLs** — give me links and I'll scrape them
+• **Learn topics** — tell me what to research
+• **Tune parameters** — adjust thresholds, cron jobs
+• **Check status** — ask about entries, accuracy, domains
+• **Run actions** — retrain, optimize, assess the model
+
+Type <code>help</code> for full command list, or just tell me what you need!</div>
+    </div>
+  </div>
+
+  <!-- Input area -->
+  <div style="display:flex;gap:8px">
+    <input type="text" id="chat-input" placeholder="e.g. crawl https://example.com for wifi security..."
+      style="flex:1;margin-bottom:0" onkeydown="if(event.key==='Enter')sendChat()">
+    <button class="btn btn-primary" onclick="sendChat()" style="margin:0;white-space:nowrap">Send ➤</button>
+  </div>
+
+  <!-- Quick action buttons -->
+  <div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:6px">
+    <button class="btn btn-gray" style="padding:6px 12px;font-size:.8rem" onclick="chatQuick('show me stats')">📊 Stats</button>
+    <button class="btn btn-gray" style="padding:6px 12px;font-size:.8rem" onclick="chatQuick('what is the model accuracy?')">🎯 Accuracy</button>
+    <button class="btn btn-gray" style="padding:6px 12px;font-size:.8rem" onclick="chatQuick('show learning velocity')">📈 Learning</button>
+    <button class="btn btn-gray" style="padding:6px 12px;font-size:.8rem" onclick="chatQuick('retrain the model')">🔄 Retrain</button>
+    <button class="btn btn-gray" style="padding:6px 12px;font-size:.8rem" onclick="chatQuick('assess the model')">📊 Assess</button>
+    <button class="btn btn-gray" style="padding:6px 12px;font-size:.8rem" onclick="chatQuick('run a growth cycle')">🔄 Growth</button>
+    <button class="btn btn-gray" style="padding:6px 12px;font-size:.8rem" onclick="chatQuick('show cron config')">⏱️ Cron</button>
+  </div>
+</div>
+
+<!-- ══════════════ 
 <!-- ══════════════ UPLOAD & EXTRACT ══════════════ -->
 <div class="section" id="sec-upload">
   <h2>Upload Files &amp; Paste Text</h2>
@@ -428,6 +480,7 @@ Crawl for network segmentation best practices"></textarea>
   <hr style="border-color:#30363d;margin:24px 0">
 
   <!-- History / Trend -->
+  if (name === 'chatbot') document.getElementById('chat-input').focus();
   <h3 style="font-size:1rem;margin-bottom:12px">Accuracy Trend</h3>
   <div id="ml-trend" style="font-family:monospace;font-size:.85rem"></div>
 
@@ -911,7 +964,174 @@ async function saveMLConfig() {
     min_accuracy_threshold: parseFloat(document.getElementById('mlMinAccuracy').value) || 0.90,
     confidence_threshold: parseFloat(document.getElementById('mlConfThreshold').value) || 0.60,
     growth_targets: { target_accuracy: parseFloat(document.getElementById('mlTargetAccuracy').value) || 0.98 },
-  });
+  });Dashboard Growth Info ── */
+async functio
+refreshStats();
+loadDashboardGrowth();n loadDashboardGrowth() {
+  const d = await api('/admin/api/stats');
+  // Growth factors
+  const gk = document.getElementById('growth-knowledge');
+  gk.innerHTML = `<strong style="color:#3fb950">${d.total_entries}</strong> total entries | <strong style="color:#58a6ff">${d.extra_entries}</strong> learned | <strong style="color:#bc8cff">${d.domains.length}</strong> domains`;
+
+  const gs = document.getElementById('growth-sources');
+  const sb = d.source_breakdown || {};
+  const activeSources = Object.keys(sb).filter(k => sb[k] > 0);
+  gs.innerHTML = `<strong style="color:#3fb950">${activeSources.length}</strong> active: ${activeSources.join(', ') || 'none'}`;
+
+  const gst = document.getElementById('growth-stability');
+  const ml = d.ml_engine || {};
+  const lastOpt = ml.last_optimization ? new Date(ml.last_optimization).toLocaleString() : 'Never';
+  gst.innerHTML = `Cycles: <strong style="color:#58a6ff">${ml.cycle_count||0}</strong> | Last optimization: ${lastOpt}`;
+
+  const ga = document.getElementById('growth-automation');
+  const cron = d.cron || {};
+  const wfs = cron.workflows || {};
+  const activeWfs = Object.entries(wfs).filter(([,v]) => v.enabled).length;
+  ga.innerHTML = `<strong style="color:#3fb950">${activeWfs}/4</strong> workflows active | Learning ${d.learning?.learning_velocity?.toFixed(1)||0} entries/hr`;
+
+  // Stabilization notes
+  const sn = document.getElementById('stabilization-notes');
+  const events = ml.recent_events || [];
+  const stabEvents = events.filter(e => e.type && (e.type.includes('stabiliz') || e.type === 'growth_cycle' || e.type === 'assessment'));
+  if (stabEvents.length) {
+    sn.innerHTML = stabEvents.reverse().map(e => {
+      const ts = e.timestamp ? new Date(e.timestamp).toLocaleString() : '';
+      let msg = `[${e.type}] `;
+      if (e.accuracy !== undefined) msg += `Accuracy: ${(e.accuracy*100).toFixed(1)}% `;
+      if (e.action) msg += `Action: ${e.action} `;
+      if (e.old_accuracy !== undefined) msg += `Old: ${(e.old_accuracy*100).toFixed(1)}% → New: ${(e.new_accuracy*100).toFixed(1)}% `;
+      if (e.weak_domains && e.weak_domains.length) msg += `Weak: ${e.weak_domains.join(', ')} `;
+      if (e.confidence !== undefined) msg += `Conf: ${(e.confidence*100).toFixed(1)}% `;
+      return `<div style="padding:4px 0;border-bottom:1px solid #21262d"><span style="color:#8b949e;font-size:.8rem">${ts}</span> ${msg}</div>`;
+    }).join('');
+  } else {
+    sn.innerHTML = '<span style="color:#8b949e">No stabilization events yet. Run an ML assessment or growth cycle.</span>';
+  }
+  renderSourceBar(d.source_breakdown || {});
+}
+
+/* ── Cron Controls ── */
+async function loadCronConfig() {
+  const d = await api('/admin/cron/config');
+  const cfg = d.config || {};
+  const redlines = d.redlines || {};
+  const el = document.getElementById('cron-controls');
+  const wfs = cfg.workflows || {};
+
+  el.innerHTML = Object.entries(wfs).map(([key, wf]) => {
+    const rl = redlines[key] || {};
+    const maxSafe = rl.max_safe_per_hour || 4;
+    const maxAbs = rl.max_absolute_per_hour || 12;
+    const current = wf.runs_per_hour || 0;
+
+    let color = '#3fb950'; // green
+    if (current >= maxAbs) color = '#f85149'; // red
+    else if (current >= maxSafe) color = '#d29922'; // yellow
+
+    const pct = Math.min(100, (current / maxAbs) * 100);
+    const label = rl.label || key;
+
+    return `
+      <div class="card" style="padding:16px;margin-bottom:12px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+          <div>
+            <strong style="color:#e6edf3">${label}</strong>
+            <label style="margin-left:12px;cursor:pointer">
+              <input type="checkbox" ${wf.enabled?'checked':''} onchange="saveCronConfig('${key}', 'enabled', this.checked)"> Enabled
+            </label>
+          </div>
+          <div style="font-size:.85rem">
+            <span style="color:${color};font-weight:700">${current}</span>
+            <span style="color:#8b949e">/ ${maxAbs} max</span>
+            <span style="color:#8b949e;margin-left:8px">(safe: ≤${maxSafe})</span>
+          </div>
+        </div>
+        <!-- Gauge bar -->
+        <div style="background:#0d1117;border-radius:4px;height:8px;overflow:hidden;margin-bottom:8px;position:relative">
+          <div style="width:${pct}%;background:${color};height:100%;border-radius:4px;transition:width .3s"></div>
+          <div style="position:absolute;left:${maxSafe/maxAbs*100}%;top:0;width:2px;height:100%;background:#d29922" title="Safe limit"></div>
+        </div>
+        <!-- Slider -->
+        <div style="display:flex;align-items:center;gap:8px">
+          <input type="range" min="0" max="${maxAbs}" value="${current}" style="flex:1;accent-color:${color}"
+            oninput="this.nextElementSibling.textContent=this.value+'/hr'"
+            onchange="saveCronConfig('${key}', 'runs_per_hour', parseInt(this.value))">
+          <span style="color:#c9d1d9;font-size:.85rem;min-width:40px">${current}/hr</span>
+        </div>
+        <div style="color:#8b949e;font-size:.8rem;margin-top:6px">
+          ${current >= maxAbs ? '🔴 REDLINE — at absolute maximum! Risk of service throttling.' :
+            current >= maxSafe ? '🟡 Above safe limit. Monitor for rate limiting.' :
+            '🟢 Within safe operating range.'}
+          <br>${rl.note || ''}
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+async function saveCronConfig(key, field, value) {
+  const data = {};
+  data[key] = {};
+  data[key][field] = value;
+  const el = document.getElementById('cron-status');
+  const d = await postJSON('/admin/cron/config', data);
+  if (d.status === 'success') {
+    el.innerHTML = statusHTML('ok', '✅ Cron config saved');
+    loadCronConfig();
+  } else {
+    el.innerHTML = statusHTML('err', '❌ ' + (d.error || 'Failed'));
+  }
+}
+
+/* ── Live Activity ── */
+async function loadActivity() {
+  const d = await api('/admin/learning/stats');
+
+  document.getElementById('act-events').textContent = d.total_events || 0;
+  document.getElementById('act-24h').textContent = d.entries_last_24h || 0;
+  document.getElementById('act-velocity').textContent = (d.learning_velocity || 0).toFixed(1) + ' /hr';
+
+  // Source table
+  const srcEl = document.getElementById('act-sources');
+  const sources = d.source_stats || {};
+  if (Object.keys(sources).length) {
+    srcEl.innerHTML = '<table class="k-table"><thead><tr><th>Source</th><th>Entries</th><th>Crawls</th><th>Last</th></tr></thead><tbody>' +
+      Object.entries(sources).sort((a,b) => b[1].total_entries - a[1].total_entries).map(([src, s]) =>
+        `<tr><td><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:${SOURCE_COLORS[src]||'#484f58'};margin-right:6px;vertical-align:middle"></span>${esc(src)}</td><td style="color:#3fb950;font-weight:600">${s.total_entries}</td><td>${s.crawl_count}</td><td style="color:#8b949e;font-size:.8rem">${s.last_crawl?new Date(s.last_crawl).toLocaleString():'—'}</td></tr>`
+      ).join('') + '</tbody></table>';
+  } else { srcEl.innerHTML = '<p style="color:#8b949e">No learning events yet.</p>'; }
+
+  // Topic table
+  const topEl = document.getElementById('act-topics');
+  const topics = d.topic_stats || {};
+  if (Object.keys(topics).length) {
+    topEl.innerHTML = '<table class="k-table"><thead><tr><th>Topic</th><th>Entries</th><th>Crawls</th><th>Sources</th></tr></thead><tbody>' +
+      Object.entries(topics).sort((a,b) => b[1].total_entries - a[1].total_entries).map(([topic, s]) =>
+        `<tr><td style="font-weight:600">${esc(topic)}</td><td style="color:#3fb950">${s.total_entries}</td><td>${s.crawl_count}</td><td style="color:#8b949e;font-size:.8rem">${(s.sources||[]).join(', ')}</td></tr>`
+      ).join('') + '</tbody></table>';
+  } else { topEl.innerHTML = '<p style="color:#8b949e">No topic data yet.</p>'; }
+
+  // Activity feed
+  const feedEl = document.getElementById('act-feed');
+  const recent = (d.recent_activity || []).reverse();
+  if (recent.length) {
+    feedEl.innerHTML = recent.map(e => {
+      const ts = e.timestamp ? new Date(e.timestamp).toLocaleString() : '';
+      const color = SOURCE_COLORS[e.source] || '#8b949e';
+      return `<div class="topic-item">
+        <span style="color:${color};font-weight:600;min-width:110px">${esc(e.source||'')}</span>
+        <span class="name">${esc(e.topic||'')}</span>
+        <span style="color:#3fb950;font-weight:600">${e.entries||0} entries</span>
+        <span style="color:#8b949e;font-size:.75rem">${ts}</span>
+      </div>`;
+    }).join('');
+  } else { feedEl.innerHTML = '<p style="color:#8b949e">No activity to show. Trigger a crawl or learning command.</p>'; }
+}
+// Auto-refresh activity every 30s when visible
+setInterval(() => {
+  if (document.getElementById('sec-activity').classList.contains('active')) loadActivity();
+}, 30000);
+
+/* ── 
 }
 async function mlAssess() {
   const el = document.getElementById('ml-status');
@@ -927,7 +1147,73 @@ async function mlAssess() {
   } else { el.innerHTML = statusHTML('err', `❌ ${d.message || d.status}`); }
 }
 async function mlOptimize() {
-  const el = document.getElementById('ml-status');
+  consAdmin Chatbot ── */
+function chatAppendMsg(role, html) {
+  const container = document.getElementById('chat-messages');
+  const div = document.createElement('div');
+  div.className = 'chat-msg ' + role;
+  const label = role === 'user' ? '👤 You' : '🤖 Admin Bot';
+  const bg = role === 'user' ? '#161b22' : '#1c2128';
+  const align = role === 'user' ? 'align-self:flex-end' : '';
+  div.innerHTML = `
+    <div style="font-size:.8rem;color:#8b949e;margin-bottom:4px;${role==='user'?'text-align:right':''}">${label}</div>
+    <div style="background:${bg};border:1px solid #30363d;border-radius:10px;padding:12px;color:#c9d1d9;font-size:.9rem;max-width:85%;white-space:pre-wrap;${align}">${html}</div>
+  `;
+  container.appendChild(div);
+  container.scrollTop = container.scrollHeight;
+}
+
+function chatMarkdown(text) {
+  // Minimal markdown: bold, code, newlines
+  return text
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/\*\*(.+?)\*\*/g, '<strong style="color:#58a6ff">$1</strong>')
+    .replace(/`(.+?)`/g, '<code style="background:#0d1117;padding:2px 6px;border-radius:4px;font-size:.85rem">$1</code>')
+    .replace(/\n/g, '<br>');
+}
+
+async function sendChat() {
+  const input = document.getElementById('chat-input');
+  const msg = input.value.trim();
+  if (!msg) return;
+  input.value = '';
+  input.disabled = true;
+
+  chatAppendMsg('user', esc(msg));
+  chatAppendMsg('assistant', '<span class="spinner"></span> Thinking...');
+
+  try {
+    const d = await postJSON('/admin/chat', {message: msg});
+    // Remove the "thinking" message
+    const container = document.getElementById('chat-messages');
+    container.removeChild(container.lastChild);
+
+    // Show reply
+    let replyHTML = chatMarkdown(d.reply || 'No response');
+    if (d.followup) {
+      replyHTML += '<hr style="border-color:#30363d;margin:12px 0">' + chatMarkdown(d.followup);
+    }
+    chatAppendMsg('assistant', replyHTML);
+
+    // Refresh dashboard stats after any action
+    if (d.action_results && d.action_results.length) {
+      refreshStats();
+    }
+  } catch (e) {
+    const container = document.getElementById('chat-messages');
+    container.removeChild(container.lastChild);
+    chatAppendMsg('assistant', '<span style="color:#f85149">Error: ' + esc(e.message) + '</span>');
+  }
+  input.disabled = false;
+  input.focus();
+}
+
+function chatQuick(msg) {
+  document.getElementById('chat-input').value = msg;
+  sendChat();
+}
+
+/* ── t el = document.getElementById('ml-status');
   el.innerHTML = spinnerHTML('Optimizing model… trying multiple hyperparameter configs. This may take several minutes.');
   const d = await postJSON('/admin/ml/optimize', {});
   if (d.status === 'success') {
