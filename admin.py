@@ -60,7 +60,13 @@ from ml_engine import (
     stabilize_model,
 )
 from site_crawler import add_site_job, clear_site_jobs, get_site_crawl_stats
-from admin_chatbot import get_chat_history, process_message
+from admin_chatbot import (
+    get_chat_history,
+    get_conditioning_entries,
+    load_conditioning,
+    process_message,
+    save_conditioning,
+)
 
 # ── Config ────────────────────────────────────────────────────────────
 UPLOAD_DIR = Path("data/uploads")
@@ -928,6 +934,65 @@ def chat():
 @login_required
 def chat_history():
     return jsonify({"history": get_chat_history()})
+
+
+# ── Conditioning (personality / worldview / values) ───────────────────
+
+@admin_bp.route("/conditioning", methods=["GET"])
+@login_required
+def get_conditioning():
+    """Return all conditioning entries."""
+    data = load_conditioning()
+    return jsonify(data)
+
+
+@admin_bp.route("/conditioning", methods=["POST"])
+@login_required
+def add_conditioning():
+    """Add a new conditioning entry."""
+    data = request.get_json()
+    if not data or not data.get("directive"):
+        return jsonify({"error": "directive is required"}), 400
+
+    entry = {
+        "id": datetime.now(timezone.utc).strftime("%Y%m%d%H%M%S%f"),
+        "category": data.get("category", "general"),
+        "directive": data["directive"].strip(),
+        "detail": data.get("detail", "").strip(),
+        "active": True,
+        "created_at": datetime.now(timezone.utc).isoformat(),
+    }
+
+    cond = load_conditioning()
+    cond.setdefault("entries", []).append(entry)
+    save_conditioning(cond)
+    return jsonify({"status": "ok", "entry": entry, "total": len(cond["entries"])})
+
+
+@admin_bp.route("/conditioning/<entry_id>", methods=["DELETE"])
+@login_required
+def delete_conditioning(entry_id: str):
+    """Delete a conditioning entry by id."""
+    cond = load_conditioning()
+    before = len(cond.get("entries", []))
+    cond["entries"] = [e for e in cond.get("entries", []) if e.get("id") != entry_id]
+    if len(cond["entries"]) == before:
+        return jsonify({"error": "Entry not found"}), 404
+    save_conditioning(cond)
+    return jsonify({"status": "ok", "remaining": len(cond["entries"])})
+
+
+@admin_bp.route("/conditioning/<entry_id>/toggle", methods=["POST"])
+@login_required
+def toggle_conditioning(entry_id: str):
+    """Toggle a conditioning entry active/inactive."""
+    cond = load_conditioning()
+    for entry in cond.get("entries", []):
+        if entry.get("id") == entry_id:
+            entry["active"] = not entry.get("active", True)
+            save_conditioning(cond)
+            return jsonify({"status": "ok", "active": entry["active"]})
+    return jsonify({"error": "Entry not found"}), 404
 
 
 def _build_chat_followup(result: dict, actions: list[dict], query_data: dict) -> str:

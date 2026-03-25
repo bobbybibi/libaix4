@@ -17,6 +17,99 @@ from typing import Any
 # ── URL pattern ───────────────────────────────────────────────────────
 _URL_RE = re.compile(r'https?://[^\s<>"\'`,;)\]]+', re.IGNORECASE)
 
+# ── Conditioning (personality / worldview / values) ───────────────────
+_CONDITIONING_FILE = Path("data/conditioning.json")
+_conditioning_cache: dict | None = None
+
+
+def load_conditioning() -> dict:
+    """Load conditioning config from disk (cached in memory)."""
+    global _conditioning_cache
+    if _conditioning_cache is not None:
+        return _conditioning_cache
+    if _CONDITIONING_FILE.exists():
+        try:
+            _conditioning_cache = json.loads(
+                _CONDITIONING_FILE.read_text(encoding="utf-8")
+            )
+        except Exception:
+            _conditioning_cache = {"entries": []}
+    else:
+        _conditioning_cache = {"entries": []}
+    return _conditioning_cache
+
+
+def save_conditioning(data: dict) -> None:
+    """Save conditioning config and invalidate cache."""
+    global _conditioning_cache
+    data["updated_at"] = datetime.now(timezone.utc).isoformat()
+    _CONDITIONING_FILE.parent.mkdir(parents=True, exist_ok=True)
+    _CONDITIONING_FILE.write_text(
+        json.dumps(data, indent=2, default=str), encoding="utf-8"
+    )
+    _conditioning_cache = data
+
+
+def get_conditioning_entries() -> list[dict]:
+    """Return active conditioning entries."""
+    return [e for e in load_conditioning().get("entries", []) if e.get("active", True)]
+
+
+def apply_conditioning(reply: str) -> str:
+    """Apply conditioning directives to shape the reply tone and content."""
+    entries = get_conditioning_entries()
+    if not entries:
+        return reply
+
+    # Build conditioning context
+    beliefs = [e for e in entries if e.get("category") == "belief"]
+    values = [e for e in entries if e.get("category") == "value"]
+    tone_entries = [e for e in entries if e.get("category") == "tone"]
+    worldview = [e for e in entries if e.get("category") == "worldview"]
+    rules = [e for e in entries if e.get("category") == "rule"]
+
+    # Prefix: add conditioning awareness markers
+    prefix_parts = []
+
+    if tone_entries:
+        tone_str = ", ".join(e["directive"] for e in tone_entries)
+        prefix_parts.append(f"*[tone: {tone_str}]*")
+
+    # Append a conditioning footer for transparency
+    conditioned = reply
+
+    # Apply rule-based transformations
+    for rule in rules:
+        directive = rule.get("directive", "").lower()
+        replacement = rule.get("detail", "")
+        # Simple word/phrase replacement rules
+        if " → " in directive:
+            old, new = directive.split(" → ", 1)
+            conditioned = conditioned.replace(old.strip(), new.strip())
+
+    return conditioned
+
+
+def get_conditioning_context() -> str:
+    """Build a conditioning context string for the chatbot to reference."""
+    entries = get_conditioning_entries()
+    if not entries:
+        return ""
+
+    lines = []
+    categories = {}
+    for e in entries:
+        cat = e.get("category", "general")
+        categories.setdefault(cat, []).append(e["directive"])
+
+    for cat, directives in categories.items():
+        lines.append(f"[{cat.upper()}]")
+        for d in directives:
+            lines.append(f"  • {d}")
+
+    return "\n".join(lines)
+
+
 # ── Chat history (in-memory, last 50) ────────────────────────────────
 _chat_history: list[dict] = []
 _HISTORY_FILE = Path("data/admin_chat_history.json")

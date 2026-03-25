@@ -228,6 +228,41 @@ Type <code>help</code> for full command list, or just tell me what you need!</di
     <button class="btn btn-gray" style="padding:6px 12px;font-size:.8rem" onclick="chatQuick('run a growth cycle')">🔄 Growth</button>
     <button class="btn btn-gray" style="padding:6px 12px;font-size:.8rem" onclick="chatQuick('show cron config')">⏱️ Cron</button>
   </div>
+
+  <!-- ── AI Conditioning Panel ── -->
+  <div style="margin-top:24px;border-top:1px solid #30363d;padding-top:20px">
+    <h3 style="color:#e6edf3;margin-bottom:4px">🧠 AI Conditioning</h3>
+    <p style="color:#8b949e;font-size:.85rem;margin-bottom:16px">
+      Shape how the AI thinks and responds. Add beliefs, values, personality traits, and worldview directives.
+      Like teaching a child about the world — these aren't topics, they're <strong>perception</strong>.
+    </p>
+
+    <!-- Add new conditioning -->
+    <div class="card" style="padding:16px;margin-bottom:16px">
+      <div style="display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap">
+        <select id="condCategory" style="background:#0d1117;color:#c9d1d9;border:1px solid #30363d;border-radius:6px;padding:6px 10px;font-size:.85rem">
+          <option value="belief">🌍 Belief</option>
+          <option value="value">💎 Value</option>
+          <option value="tone">🎭 Tone</option>
+          <option value="worldview">🔭 Worldview</option>
+          <option value="rule">📏 Rule</option>
+        </select>
+        <input type="text" id="condDirective" placeholder="e.g. Always be curious and encourage exploration"
+          style="flex:1;min-width:200px;margin:0;font-size:.85rem">
+      </div>
+      <div style="display:flex;gap:8px">
+        <input type="text" id="condDetail" placeholder="Optional: extra context or example (optional)"
+          style="flex:1;margin:0;font-size:.85rem">
+        <button class="btn btn-primary" onclick="addConditioning()" style="margin:0;white-space:nowrap;font-size:.85rem">+ Add</button>
+      </div>
+    </div>
+
+    <!-- Active conditioning entries -->
+    <div id="conditioning-list" style="display:flex;flex-direction:column;gap:8px">
+      <p style="color:#484f58;font-style:italic">Loading conditioning...</p>
+    </div>
+    <div id="conditioning-status" style="margin-top:8px"></div>
+  </div>
 </div>
 
 <!-- ══════════════ UPLOAD & EXTRACT ══════════════ -->
@@ -535,7 +570,7 @@ function showSection(name) {
   if (name === 'sitecrawl') loadSiteStats();
   if (name === 'mlengine') loadMLEngine();
   if (name === 'learned') loadLearned();
-  if (name === 'chatbot') document.getElementById('chat-input').focus();
+  if (name === 'chatbot') { document.getElementById('chat-input').focus(); loadConditioning(); }
   if (name === 'cron') loadCronConfig();
   if (name === 'activity') loadActivity();
   if (name === 'dashboard') loadDashboardGrowth();
@@ -1231,6 +1266,73 @@ async function sendChat() {
   }
 }
 function chatQuick(msg) { document.getElementById('chat-input').value = msg; sendChat(); }
+
+/* ── AI Conditioning ── */
+const COND_ICONS = {belief:'🌍', value:'💎', tone:'🎭', worldview:'🔭', rule:'📏'};
+
+async function loadConditioning() {
+  const el = document.getElementById('conditioning-list');
+  try {
+    const d = await api('/admin/conditioning');
+    const entries = d.entries || [];
+    if (!entries.length) {
+      el.innerHTML = '<p style="color:#484f58;font-style:italic">No conditioning set. The AI has a blank slate — add beliefs, values, and worldview to shape its perception.</p>';
+      return;
+    }
+    el.innerHTML = entries.map(e => {
+      const icon = COND_ICONS[e.category] || '📋';
+      const opacity = e.active ? '1' : '0.4';
+      const toggleLabel = e.active ? 'Pause' : 'Resume';
+      const catColor = {belief:'#58a6ff', value:'#3fb950', tone:'#d2a8ff', worldview:'#f0883e', rule:'#8b949e'}[e.category] || '#8b949e';
+      return `<div class="card" style="padding:12px;display:flex;align-items:flex-start;gap:10px;opacity:${opacity}">
+        <span style="font-size:1.3rem">${icon}</span>
+        <div style="flex:1;min-width:0">
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px">
+            <span style="background:${catColor}22;color:${catColor};padding:2px 8px;border-radius:4px;font-size:.7rem;text-transform:uppercase;font-weight:600">${e.category}</span>
+            <span style="color:#8b949e;font-size:.7rem">${new Date(e.created_at).toLocaleDateString()}</span>
+          </div>
+          <div style="color:#e6edf3;font-size:.9rem">${esc(e.directive)}</div>
+          ${e.detail ? `<div style="color:#8b949e;font-size:.8rem;margin-top:4px">${esc(e.detail)}</div>` : ''}
+        </div>
+        <div style="display:flex;gap:4px;flex-shrink:0">
+          <button class="btn btn-gray" style="padding:4px 8px;font-size:.75rem" onclick="toggleConditioning('${e.id}')">${toggleLabel}</button>
+          <button class="btn btn-gray" style="padding:4px 8px;font-size:.75rem;color:#f85149" onclick="deleteConditioning('${e.id}')">✕</button>
+        </div>
+      </div>`;
+    }).join('');
+  } catch (err) {
+    el.innerHTML = statusHTML('err', 'Failed to load conditioning: ' + err.message);
+  }
+}
+
+async function addConditioning() {
+  const cat = document.getElementById('condCategory').value;
+  const directive = document.getElementById('condDirective').value.trim();
+  const detail = document.getElementById('condDetail').value.trim();
+  const st = document.getElementById('conditioning-status');
+  if (!directive) { st.innerHTML = statusHTML('err', 'Enter a directive'); return; }
+
+  st.innerHTML = spinnerHTML('Adding...');
+  const d = await postJSON('/admin/conditioning', {category: cat, directive, detail});
+  if (d.status === 'ok') {
+    st.innerHTML = statusHTML('ok', `✅ Added ${cat} conditioning (${d.total} total)`);
+    document.getElementById('condDirective').value = '';
+    document.getElementById('condDetail').value = '';
+    loadConditioning();
+  } else {
+    st.innerHTML = statusHTML('err', d.error || 'Failed');
+  }
+}
+
+async function toggleConditioning(id) {
+  await postJSON(`/admin/conditioning/${id}/toggle`, {});
+  loadConditioning();
+}
+
+async function deleteConditioning(id) {
+  await api(`/admin/conditioning/${id}`, {method: 'DELETE'});
+  loadConditioning();
+}
 
 async function mlStabilize() {
   const el = document.getElementById('ml-status');
