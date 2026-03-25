@@ -119,8 +119,11 @@ def train(
     if verbose:
         print(f"Vocabulary size: {vocab_size}")
 
-    # Build network: input(vocab) → hidden → hidden/2 → output(n_classes)
-    layer_sizes = [vocab_size, hidden, hidden // 2, n_classes]
+    # Build network: scale depth with dataset size
+    if n_classes > 100:
+        layer_sizes = [vocab_size, hidden, hidden, hidden // 2, n_classes]
+    else:
+        layer_sizes = [vocab_size, hidden, hidden // 2, n_classes]
     nn = NeuralNetwork(
         layer_sizes=layer_sizes,
         learning_rate=lr,

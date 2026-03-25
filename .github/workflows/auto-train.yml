@@ -1,19 +1,25 @@
 name: Auto-Train Knowledge AI
 
-# Runs:
-#   1. Every 6 hours via cron (4x/day = max practical for free tier)
-#   2. On every push that touches knowledge files or the trainer
-#   3. Manually via workflow_dispatch with configurable epochs/activation
-#
-# GitHub free tier: 2,000 min/month for private repos, unlimited for public.
-# Each run ≈ 2 min, so 4x/day = ~240 min/month — well within limits.
+# MAXIMUM TRAINING SCHEDULE
+# Runs 12x/day (every 2 hours) + on every knowledge push + manual dispatch.
+# 3 parallel configs per run = 36 training sessions/day.
+# Public repos get unlimited GitHub Actions minutes.
+# Each run ≈ 3-5 min × 3 configs × 12/day ≈ ~180 min/day of compute.
 
 on:
   schedule:
-    - cron: "0 0 * * *"           # midnight UTC
+    - cron: "0 0 * * *"           # 00:00 UTC
+    - cron: "0 2 * * *"           # 02:00 UTC
+    - cron: "0 4 * * *"           # 04:00 UTC
     - cron: "0 6 * * *"           # 06:00 UTC
-    - cron: "0 12 * * *"          # noon UTC
+    - cron: "0 8 * * *"           # 08:00 UTC
+    - cron: "0 10 * * *"          # 10:00 UTC
+    - cron: "0 12 * * *"          # 12:00 UTC
+    - cron: "0 14 * * *"          # 14:00 UTC
+    - cron: "0 16 * * *"          # 16:00 UTC
     - cron: "0 18 * * *"          # 18:00 UTC
+    - cron: "0 20 * * *"          # 20:00 UTC
+    - cron: "0 22 * * *"          # 22:00 UTC
   push:
     paths:
       - "knowledge_base.py"
@@ -46,23 +52,38 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        # Train with multiple configs in parallel — best model wins
+        # Train 5 configs in parallel — best model wins
         include:
-          - name: "tanh-adam"
+          - name: "tanh-adam-5k"
             activation: "tanh"
             optimizer: "adam"
             epochs: 5000
             lr: 0.01
-          - name: "relu-adam"
+            hidden: 256
+          - name: "tanh-adam-8k"
+            activation: "tanh"
+            optimizer: "adam"
+            epochs: 8000
+            lr: 0.005
+            hidden: 256
+          - name: "relu-adam-5k"
             activation: "relu"
             optimizer: "adam"
             epochs: 5000
             lr: 0.005
-          - name: "sigmoid-momentum"
+            hidden: 256
+          - name: "sigmoid-momentum-5k"
             activation: "sigmoid"
             optimizer: "momentum"
             epochs: 5000
             lr: 0.05
+            hidden: 256
+          - name: "tanh-adam-10k"
+            activation: "tanh"
+            optimizer: "adam"
+            epochs: 10000
+            lr: 0.003
+            hidden: 256
     steps:
       - uses: actions/checkout@v4
         with:
@@ -82,12 +103,13 @@ jobs:
 
       - name: Train — ${{ matrix.name }}
         run: |
-          echo "Training with activation=${{ matrix.activation }} optimizer=${{ matrix.optimizer }} lr=${{ matrix.lr }} epochs=${{ matrix.epochs }}"
+          echo "Training with activation=${{ matrix.activation }} optimizer=${{ matrix.optimizer }} lr=${{ matrix.lr }} epochs=${{ matrix.epochs }} hidden=${{ matrix.hidden }}"
           python train_knowledge.py \
             --activation ${{ matrix.activation }} \
             --optimizer ${{ matrix.optimizer }} \
             --lr ${{ matrix.lr }} \
-            --epochs ${{ matrix.epochs }}
+            --epochs ${{ matrix.epochs }} \
+            --hidden ${{ matrix.hidden }}
 
       - name: Show model stats
         run: |
@@ -126,23 +148,11 @@ jobs:
         run: pip install -r requirements.txt
 
       # Download all model artifacts
-      - name: Download tanh-adam model
+      - name: Download all candidate models
         uses: actions/download-artifact@v4
         with:
-          name: model-tanh-adam
-          path: candidates/tanh-adam/
-
-      - name: Download relu-adam model
-        uses: actions/download-artifact@v4
-        with:
-          name: model-relu-adam
-          path: candidates/relu-adam/
-
-      - name: Download sigmoid-momentum model
-        uses: actions/download-artifact@v4
-        with:
-          name: model-sigmoid-momentum
-          path: candidates/sigmoid-momentum/
+          path: candidates/
+          pattern: model-*
 
       - name: Select best model by accuracy
         run: |
