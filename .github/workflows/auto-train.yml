@@ -1,13 +1,19 @@
 name: Auto-Train Knowledge AI
 
 # Runs:
-#   1. Daily at 04:00 UTC (cron) — retrains even if nothing changed
+#   1. Every 6 hours via cron (4x/day = max practical for free tier)
 #   2. On every push that touches knowledge files or the trainer
-#   3. Manually via workflow_dispatch
+#   3. Manually via workflow_dispatch with configurable epochs/activation
+#
+# GitHub free tier: 2,000 min/month for private repos, unlimited for public.
+# Each run ≈ 2 min, so 4x/day = ~240 min/month — well within limits.
 
 on:
   schedule:
-    - cron: "0 4 * * *"          # daily at 04:00 UTC
+    - cron: "0 0 * * *"           # midnight UTC
+    - cron: "0 6 * * *"           # 06:00 UTC
+    - cron: "0 12 * * *"          # noon UTC
+    - cron: "0 18 * * *"          # 18:00 UTC
   push:
     paths:
       - "knowledge_base.py"
@@ -15,14 +21,48 @@ on:
       - "vectorizer.py"
       - "neural_network.py"
       - "data/extra_knowledge/*.json"
-  workflow_dispatch:               # manual trigger from Actions tab
+  workflow_dispatch:
+    inputs:
+      epochs:
+        description: "Training epochs"
+        default: "5000"
+        type: string
+      activation:
+        description: "Activation function"
+        default: "tanh"
+        type: choice
+        options: ["tanh", "sigmoid", "relu"]
+      optimizer:
+        description: "Optimizer"
+        default: "adam"
+        type: choice
+        options: ["adam", "momentum", "sgd"]
 
 permissions:
-  contents: write                  # needs write to commit updated models
+  contents: write
 
 jobs:
   train:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        # Train with multiple configs in parallel — best model wins
+        include:
+          - name: "tanh-adam"
+            activation: "tanh"
+            optimizer: "adam"
+            epochs: 5000
+            lr: 0.01
+          - name: "relu-adam"
+            activation: "relu"
+            optimizer: "adam"
+            epochs: 5000
+            lr: 0.005
+          - name: "sigmoid-momentum"
+            activation: "sigmoid"
+            optimizer: "momentum"
+            epochs: 5000
+            lr: 0.05
     steps:
       - uses: actions/checkout@v4
         with:
@@ -40,8 +80,14 @@ jobs:
       - name: Run tests first
         run: python -m pytest tests/ -v
 
-      - name: Train knowledge model
-        run: python train_knowledge.py --epochs 3000
+      - name: Train — ${{ matrix.name }}
+        run: |
+          echo "Training with activation=${{ matrix.activation }} optimizer=${{ matrix.optimizer }} lr=${{ matrix.lr }} epochs=${{ matrix.epochs }}"
+          python train_knowledge.py \
+            --activation ${{ matrix.activation }} \
+            --optimizer ${{ matrix.optimizer }} \
+            --lr ${{ matrix.lr }} \
+            --epochs ${{ matrix.epochs }}
 
       - name: Show model stats
         run: |
@@ -54,12 +100,112 @@ jobs:
           echo "=== Vocab size ==="
           python -c "import json; d=json.load(open('models/vectorizer.json')); print(f'{len(d[\"vocab\"])} words')"
 
+      - name: Upload trained model as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: model-${{ matrix.name }}
+          path: models/
+          retention-days: 7
+
+  # Pick the best model and commit it
+  select-best:
+    needs: train
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # Download all model artifacts
+      - name: Download tanh-adam model
+        uses: actions/download-artifact@v4
+        with:
+          name: model-tanh-adam
+          path: candidates/tanh-adam/
+
+      - name: Download relu-adam model
+        uses: actions/download-artifact@v4
+        with:
+          name: model-relu-adam
+          path: candidates/relu-adam/
+
+      - name: Download sigmoid-momentum model
+        uses: actions/download-artifact@v4
+        with:
+          name: model-sigmoid-momentum
+          path: candidates/sigmoid-momentum/
+
+      - name: Select best model by accuracy
+        run: |
+          python - <<'SCRIPT'
+          import json, shutil, sys
+          from pathlib import Path
+          import numpy as np
+          sys.path.insert(0, ".")
+          from neural_network import NeuralNetwork
+          from vectorizer import BagOfWords
+          from knowledge_base import KNOWLEDGE
+
+          questions = [q for q, _, _ in KNOWLEDGE]
+          answers = [a for _, a, _ in KNOWLEDGE]
+
+          best_acc = -1
+          best_dir = None
+
+          for cand in Path("candidates").iterdir():
+              if not cand.is_dir():
+                  continue
+              try:
+                  model = NeuralNetwork.load(cand / "knowledge.npz")
+                  bow = BagOfWords.load(cand / "vectorizer.json")
+                  ans_map = json.loads((cand / "answer_map.json").read_text())
+
+                  X = bow.transform(questions)
+                  preds = model.predict(X)
+                  pred_classes = np.argmax(preds, axis=1)
+
+                  correct = 0
+                  for i, q in enumerate(questions):
+                      pred_answer = ans_map.get(str(pred_classes[i]), "")
+                      # Find the expected answer for this question
+                      expected = answers[i]
+                      if pred_answer == expected:
+                          correct += 1
+
+                  acc = correct / len(questions)
+                  print(f"  {cand.name}: {acc:.1%} ({correct}/{len(questions)})")
+
+                  if acc > best_acc:
+                      best_acc = acc
+                      best_dir = cand
+              except Exception as e:
+                  print(f"  {cand.name}: FAILED — {e}")
+
+          if best_dir is None:
+              print("ERROR: No valid candidate models!")
+              sys.exit(1)
+
+          print(f"\nBest: {best_dir.name} ({best_acc:.1%})")
+          # Copy best to models/
+          for f in best_dir.iterdir():
+              shutil.copy2(f, Path("models") / f.name)
+          print("Copied best model to models/")
+          SCRIPT
+
       - name: Commit updated models
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add models/
-          # Only commit if there are changes
           if git diff --cached --quiet; then
             echo "No model changes to commit."
           else
@@ -68,5 +214,7 @@ jobs:
           Trained on $(python -c "from knowledge_base import KNOWLEDGE; print(len(KNOWLEDGE))") knowledge entries
           $(python -c "import json; d=json.load(open('models/answer_map.json')); print(f'{len(d)} answer classes')")
           $(python -c "import json; d=json.load(open('models/vectorizer.json')); print(f'{len(d[\"vocab\"])} vocab words')")"
+            git push
+          fi
             git push
           fi
