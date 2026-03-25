@@ -995,6 +995,7 @@ def toggle_conditioning(entry_id: str):
     return jsonify({"error": "Entry not found"}), 404
 
 
+
 def _build_chat_followup(result: dict, actions: list[dict], query_data: dict) -> str:
     """Build a human-readable followup from action/query results."""
     parts: list[str] = []
