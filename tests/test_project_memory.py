@@ -73,10 +73,9 @@ class TestRememberRecall:
 
     def test_ttl_expired(self):
         remember("ns", "temp", "value", ttl_hours=0.0001)
-        # Immediate recall should work
+        # Immediate recall should work since TTL hasn't elapsed yet
         val = recall("ns", "temp")
-        # Value should be present (just stored) — TTL is very short but not instant
-        assert val is not None or val is None  # may expire instantly
+        assert val == "value"
 
     def test_memory_persists_across_loads(self):
         remember("persist", "test", "data")

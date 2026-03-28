@@ -115,7 +115,7 @@ try:
         print(f"Performance trend: {perf.get('latest_accuracy', 'N/A')} accuracy "
               f"({'↑ improving' if perf.get('improving') else '→ stable'})")
 except Exception as _e:
-    print(f"Note: Project memory init skipped ({_e})")
+    print(f"Note: Project memory init skipped ({type(_e).__name__}: {_e})")
 print()
 
 

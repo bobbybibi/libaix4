@@ -140,6 +140,8 @@ class NeuralNetwork:
         self.lr_step_every = lr_step_every
         self._act_fn, self._act_deriv = _ACT_FN[activation]
         self._rng = np.random.default_rng(seed)
+        self._masks: list[np.ndarray | None] = []
+        self._pre_dropout: list[np.ndarray] = []
         self._training = False  # toggled during train()
 
         # Weight initialisation (He for ReLU, Xavier otherwise)
@@ -236,13 +238,11 @@ class NeuralNetwork:
         for i in range(n_layers - 2, -1, -1):
             err_h = deltas[i + 1] @ self.weights[i + 1].T
             # Apply dropout mask to error signal (same mask as forward pass)
-            mask = self._masks[i + 1] if hasattr(self, '_masks') and i + 1 < len(self._masks) else None
+            mask = self._masks[i + 1] if i + 1 < len(self._masks) else None
             if mask is not None:
                 err_h = err_h * mask / (1.0 - self.dropout_rate)
             # Use pre-dropout activation for derivative computation
-            act_for_deriv = (
-                self._pre_dropout[i] if hasattr(self, '_pre_dropout') else self._activations[i + 1]
-            )
+            act_for_deriv = self._pre_dropout[i]
             deltas[i] = err_h * self._act_deriv(act_for_deriv, self._zs[i])
 
         self._step += 1
@@ -429,6 +429,8 @@ class NeuralNetwork:
         nn._act_fn, nn._act_deriv = _ACT_FN[nn.activation]
         nn._rng = np.random.default_rng()
         nn._training = False
+        nn._masks = []
+        nn._pre_dropout = []
         nn.weights = [data[f"w{i}"] for i in range(len(nn.layer_sizes) - 1)]
         nn.biases = [data[f"b{i}"] for i in range(len(nn.layer_sizes) - 1)]
         nn._step = 0

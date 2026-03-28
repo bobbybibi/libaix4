@@ -221,7 +221,7 @@ def train(
             },
         )
     except Exception:
-        pass  # memory system not critical
+        pass  # memory system is optional; training result already saved to disk
 
     return nn, bow, answer_map
 
