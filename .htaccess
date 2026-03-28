@@ -1,0 +1,7 @@
+# .htaccess — Apache/Passenger configuration for shared hosting.
+#
+# This file tells cPanel/Passenger to route all requests to the Flask app.
+# Place it in the public directory that maps to your domain.
+
+PassengerEnabled on
+PassengerAppRoot /home/%{ENV:USER}/libaix
