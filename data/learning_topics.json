@@ -71,8 +71,26 @@
       "priority": "medium",
       "enabled": false,
       "added_at": "2026-03-28T19:58:51.423265+00:00"
+    },
+    {
+      "name": "test_topic_4cfde062",
+      "priority": "low",
+      "enabled": true,
+      "added_at": "2026-03-28T20:04:59.849333+00:00"
+    },
+    {
+      "name": "dup_test_24fd20e0",
+      "priority": "low",
+      "enabled": true,
+      "added_at": "2026-03-28T20:04:59.928156+00:00"
+    },
+    {
+      "name": "toggle_test_7e370f2a",
+      "priority": "medium",
+      "enabled": false,
+      "added_at": "2026-03-28T20:05:00.008932+00:00"
     }
   ],
   "auto_discover": true,
-  "last_updated": "2026-03-28T19:58:51.424191+00:00"
+  "last_updated": "2026-03-28T20:05:00.009874+00:00"
 }

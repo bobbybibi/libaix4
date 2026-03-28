@@ -77,6 +77,43 @@ ALLOWED_EXTENSIONS = {
 }
 _URL_PATTERN = re.compile(r'https?://[^\s<>"\'`,;)\]]+', re.IGNORECASE)
 
+# Blocklist for SSRF protection — reject URLs targeting internal/cloud-metadata IPs
+_SSRF_BLOCKED_HOSTS = {
+    "localhost", "127.0.0.1", "[::1]", "0.0.0.0",
+    "169.254.169.254",  # AWS/GCP/Azure metadata
+    "metadata.google.internal",
+}
+_SSRF_BLOCKED_PREFIXES = (
+    "http://10.", "https://10.",
+    "http://172.16.", "https://172.16.", "http://172.17.", "https://172.17.",
+    "http://172.18.", "https://172.18.", "http://172.19.", "https://172.19.",
+    "http://172.20.", "https://172.20.", "http://172.21.", "https://172.21.",
+    "http://172.22.", "https://172.22.", "http://172.23.", "https://172.23.",
+    "http://172.24.", "https://172.24.", "http://172.25.", "https://172.25.",
+    "http://172.26.", "https://172.26.", "http://172.27.", "https://172.27.",
+    "http://172.28.", "https://172.28.", "http://172.29.", "https://172.29.",
+    "http://172.30.", "https://172.30.", "http://172.31.", "https://172.31.",
+    "http://192.168.", "https://192.168.",
+)
+MAX_PASTE_LENGTH = 500_000  # 500KB max for pasted text
+
+
+def _is_safe_url(url: str) -> bool:
+    """Check if a URL is safe to crawl (not targeting internal networks)."""
+    url_lower = url.lower()
+    # Extract host from URL
+    try:
+        # Simple host extraction: skip scheme, get host before path/port
+        after_scheme = url_lower.split("://", 1)[1] if "://" in url_lower else url_lower
+        host = after_scheme.split("/")[0].split(":")[0].split("?")[0]
+    except (IndexError, ValueError):
+        return False
+    if host in _SSRF_BLOCKED_HOSTS:
+        return False
+    if url_lower.startswith(_SSRF_BLOCKED_PREFIXES):
+        return False
+    return True
+
 # Credentials — override via env vars ADMIN_USER / ADMIN_PASS
 _admin_user = os.environ.get("ADMIN_USER", "kakababa")
 _admin_pass = os.environ.get("ADMIN_PASS", "Nepidaras25!!??")
@@ -250,6 +287,8 @@ def paste_text():
         return jsonify({"error": "No text provided"}), 400
 
     text = data["text"]
+    if len(text) > MAX_PASTE_LENGTH:
+        return jsonify({"error": f"Text too long ({len(text)} chars). Max: {MAX_PASTE_LENGTH}"}), 400
     text_len = len(text)
     entries = process_pasted_text(text, data.get("domain", ""))
 
@@ -296,6 +335,8 @@ def paste_and_crawl():
         return jsonify({"error": "No text provided"}), 400
 
     text = data["text"]
+    if len(text) > MAX_PASTE_LENGTH:
+        return jsonify({"error": f"Text too long ({len(text)} chars). Max: {MAX_PASTE_LENGTH}"}), 400
     topic = data.get("topic", "")
 
     # Step 1: Extract Q&A from text directly
@@ -308,10 +349,17 @@ def paste_and_crawl():
     urls_found = [u.rstrip('.,;:!?)') for u in urls_found]
     urls_found = list(dict.fromkeys(urls_found))  # deduplicate preserving order
 
-    # Step 3: Crawl found URLs
+    # Step 3: Crawl found URLs (with SSRF protection)
     crawl_results = []
     total_crawled_entries = 0
     for url in urls_found[:10]:  # Limit to 10 URLs
+        if not _is_safe_url(url):
+            crawl_results.append({
+                "url": url,
+                "status": "blocked",
+                "error": "URL targets an internal or reserved network address",
+            })
+            continue
         try:
             result = add_site_job(
                 url=url,
@@ -784,6 +832,9 @@ def site_crawl():
     # Basic URL validation
     if not url.startswith(("http://", "https://")):
         return jsonify({"error": "URL must start with http:// or https://"}), 400
+    # SSRF protection
+    if not _is_safe_url(url):
+        return jsonify({"error": "URL targets an internal or reserved network address"}), 400
     result = add_site_job(
         url=url,
         topic=data["topic"],
@@ -1132,6 +1183,8 @@ def add_learning_topic():
     name = str(data["name"]).strip()
     if not name:
         return jsonify({"error": "Topic name is required"}), 400
+    if len(name) > 200:
+        return jsonify({"error": "Topic name too long (max 200 chars)"}), 400
 
     priority = data.get("priority", "medium")
     if priority not in ("high", "medium", "low"):
