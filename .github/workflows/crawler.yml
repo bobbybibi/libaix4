@@ -1,0 +1,58 @@
+name: Knowledge Crawler
+
+on:
+  schedule:
+    # Every 15 minutes offset from training (at :07 and :37)
+    - cron: "7 * * * *"
+    - cron: "22 * * * *"
+    - cron: "37 * * * *"
+    - cron: "52 * * * *"
+  workflow_dispatch:
+    inputs:
+      topic:
+        description: "Specific topic to crawl (leave empty for all)"
+        type: string
+        required: false
+
+permissions:
+  contents: write
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run crawler
+        run: |
+          if [ -n "${{ inputs.topic }}" ]; then
+            python scripts/crawl_knowledge.py --topic "${{ inputs.topic }}"
+          else
+            python scripts/crawl_knowledge.py
+          fi
+
+      - name: Check for new knowledge files
+        id: check
+        run: |
+          if [ -n "$(git status data/extra_knowledge/ --porcelain 2>/dev/null)" ]; then
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit new knowledge
+        if: steps.check.outputs.has_changes == 'true'
+        run: |
+          git config user.name "libaix-crawler[bot]"
+          git config user.email "crawler@libaix.local"
+          git add data/extra_knowledge/ data/crawler_config.json
+          count=$(git diff --cached --numstat data/extra_knowledge/ | wc -l)
+          git commit -m "crawler: add ${count} new knowledge file(s) [skip ci]"
+          git push

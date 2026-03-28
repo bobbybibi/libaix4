@@ -1,0 +1,1546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>libaix Admin Dashboard</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:#0d1117;color:#c9d1d9;display:flex;min-height:100vh}
+
+/* ── Sidebar ── */
+.sidebar{width:220px;background:#161b22;border-right:1px solid #30363d;padding:20px 0;flex-shrink:0;position:fixed;height:100vh;overflow-y:auto}
+.sidebar h2{padding:0 20px;color:#58a6ff;font-size:1.1rem;margin-bottom:4px}
+.sidebar .sub{padding:0 20px;color:#8b949e;font-size:.75rem;margin-bottom:20px}
+.sidebar a{display:block;padding:10px 20px;color:#c9d1d9;text-decoration:none;font-size:.9rem;border-left:3px solid transparent}
+.sidebar a:hover,.sidebar a.active{background:#1c2128;border-left-color:#58a6ff;color:#58a6ff}
+.sidebar .logout{margin-top:auto;border-top:1px solid #30363d;padding-top:10px}
+.sidebar .logout a{color:#da3633}
+
+/* ── Main ── */
+.main{margin-left:220px;padding:24px;flex:1;max-width:1100px}
+h1{font-size:1.5rem;margin-bottom:8px;color:#e6edf3}
+.breadcrumb{color:#8b949e;font-size:.85rem;margin-bottom:24px}
+
+/* ── Cards ── */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:28px}
+.card{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:20px}
+.card .label{color:#8b949e;font-size:.8rem;margin-bottom:4px}
+.card .value{font-size:1.8rem;font-weight:700;color:#58a6ff}
+.card .value.green{color:#3fb950}
+.card .value.purple{color:#bc8cff}
+.card .value.orange{color:#d29922}
+
+/* ── Sections ── */
+.section{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:24px;margin-bottom:20px;display:none}
+.section.active{display:block}
+.section h2{font-size:1.2rem;margin-bottom:16px;color:#e6edf3;border-bottom:1px solid #30363d;padding-bottom:8px}
+
+/* ── Forms ── */
+label{display:block;margin-bottom:4px;color:#8b949e;font-size:.85rem}
+input[type=text],textarea,select{width:100%;padding:10px;border:1px solid #30363d;border-radius:6px;
+  background:#0d1117;color:#c9d1d9;font-size:.95rem;margin-bottom:12px;outline:none;font-family:inherit}
+input:focus,textarea:focus,select:focus{border-color:#58a6ff}
+textarea{min-height:120px;resize:vertical}
+.btn{padding:10px 20px;border:none;border-radius:6px;font-size:.9rem;cursor:pointer;font-weight:600;display:inline-block;margin-right:8px;margin-bottom:8px}
+.btn-primary{background:#238636;color:#fff}.btn-primary:hover{background:#2ea043}
+.btn-blue{background:#1f6feb;color:#fff}.btn-blue:hover{background:#388bfd}
+.btn-orange{background:#9e6a03;color:#fff}.btn-orange:hover{background:#bb8009}
+.btn-red{background:#da3633;color:#fff}.btn-red:hover{background:#f85149}
+.btn-gray{background:#30363d;color:#c9d1d9}.btn-gray:hover{background:#484f58}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+
+/* ── Upload area ── */
+.drop-zone{border:2px dashed #30363d;border-radius:10px;padding:40px;text-align:center;color:#8b949e;
+  cursor:pointer;transition:all .2s;margin-bottom:16px}
+.drop-zone:hover,.drop-zone.drag-over{border-color:#58a6ff;background:#161b22;color:#58a6ff}
+.drop-zone input{display:none}
+
+/* ── Results ── */
+.result-box{background:#0d1117;border:1px solid #30363d;border-radius:8px;padding:16px;margin-top:12px;
+  font-size:.88rem;max-height:400px;overflow-y:auto;white-space:pre-wrap;word-break:break-word}
+.result-box.success{border-color:#238636}
+.result-box.error{border-color:#da3633}
+.result-box.warning{border-color:#d29922}
+
+/* ── Topic list ── */
+.topic-item{display:flex;align-items:center;gap:10px;padding:10px;background:#0d1117;border:1px solid #30363d;
+  border-radius:6px;margin-bottom:8px}
+.topic-item .name{flex:1;font-weight:600}
+.topic-item .keywords{color:#8b949e;font-size:.8rem;flex:2}
+.topic-item .badge{padding:2px 8px;border-radius:4px;font-size:.75rem;font-weight:600}
+.badge-on{background:#238636;color:#fff}
+.badge-off{background:#484f58;color:#8b949e}
+
+/* ── Knowledge table ── */
+.k-table{width:100%;border-collapse:collapse;font-size:.85rem}
+.k-table th,.k-table td{padding:8px 10px;border-bottom:1px solid #21262d;text-align:left;vertical-align:top}
+.k-table th{color:#8b949e;font-weight:600;position:sticky;top:0;background:#161b22}
+.k-table td{color:#c9d1d9}
+.k-table .domain-tag{display:inline-block;padding:2px 8px;border-radius:4px;font-size:.75rem;background:#1c2128;color:#58a6ff}
+.k-scroll{max-height:500px;overflow-y:auto}
+
+/* ── Status ── */
+.spinner{display:inline-block;width:16px;height:16px;border:2px solid #30363d;border-top-color:#58a6ff;
+  border-radius:50%;animation:spin .6s linear infinite;margin-right:6px;vertical-align:middle}
+@keyframes spin{to{transform:rotate(360deg)}}
+.status-msg{margin-top:12px;font-size:.9rem}
+.status-msg.ok{color:#3fb950}
+.status-msg.err{color:#f85149}
+.status-msg.warn{color:#d29922}
+
+/* ── Responsive ── */
+@media(max-width:768px){.sidebar{display:none}.main{margin-left:0}}
+
+/* ── Chatbot ── */
+.chat-msg.user{display:flex;flex-direction:column;align-items:flex-end}
+.chat-msg.assistant{display:flex;flex-direction:column;align-items:flex-start}
+.chat-msg code{font-family:'SF Mono','Fira Code',monospace}
+#chat-input:focus{border-color:#58a6ff;box-shadow:0 0 0 3px rgba(88,166,255,.15)}
+</style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<nav class="sidebar">
+  <h2>🧠 libaix</h2>
+  <p class="sub">Admin Dashboard</p>
+  <a href="#" onclick="showSection('dashboard')" class="active" id="nav-dashboard">📊 Dashboard</a>
+  <a href="#" onclick="showSection('chatbot')" id="nav-chatbot">💬 Admin Chat</a>
+  <a href="#" onclick="showSection('upload')" id="nav-upload">📁 Upload &amp; Extract</a>
+  <a href="#" onclick="showSection('crawler')" id="nav-crawler">🕷️ Wiki Crawler</a>
+  <a href="#" onclick="showSection('forum')" id="nav-forum">💬 Forum Crawler</a>
+  <a href="#" onclick="showSection('sitecrawl')" id="nav-sitecrawl">🌐 URL Crawler</a>
+  <a href="#" onclick="showSection('learn')" id="nav-learn">🎓 AI Learning</a>
+  <a href="#" onclick="showSection('mlengine')" id="nav-mlengine">⚙️ ML Engine</a>
+  <a href="#" onclick="showSection('cron')" id="nav-cron">⏱️ Cron Controls</a>
+  <a href="#" onclick="showSection('activity')" id="nav-activity">📡 Live Activity</a>
+  <a href="#" onclick="showSection('knowledge')" id="nav-knowledge">📚 Knowledge Browser</a>
+  <a href="#" onclick="showSection('learned')" id="nav-learned">📖 Learned Topics</a>
+  <div class="logout"><a href="/admin/logout">🚪 Sign Out</a></div>
+</nav>
+
+<!-- Main content -->
+<div class="main">
+
+<h1>Admin Dashboard</h1>
+<p class="breadcrumb">Logged in as <strong>{{ session.admin_user }}</strong> · libaix Knowledge Management</p>
+
+<!-- ── Stat cards ── -->
+<div class="cards">
+  <div class="card"><div class="label">Built-in Entries</div><div class="value" id="stat-builtin">{{ knowledge_count }}</div></div>
+  <div class="card"><div class="label">Crawled / Uploaded</div><div class="value green" id="stat-extra">{{ extra_count }}</div></div>
+  <div class="card"><div class="label">Total Knowledge</div><div class="value purple" id="stat-total">{{ total_count }}</div></div>
+  <div class="card"><div class="label">Domains</div><div class="value orange" id="stat-domains">{{ domains|length }}</div></div>
+  <div class="card"><div class="label">ML Cycles</div><div class="value" id="stat-cycles" style="color:#58a6ff">0</div></div>
+  <div class="card"><div class="label">Model Accuracy</div><div class="value green" id="stat-accuracy">—</div></div>
+  <div class="card"><div class="label">Learning Rate</div><div class="value" id="stat-velocity" style="color:#bc8cff">— /hr</div></div>
+  <div class="card"><div class="label">Last 24h Entries</div><div class="value green" id="stat-24h">—</div></div>
+</div>
+
+<!-- ── Source Breakdown Bar ── -->
+<div style="background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px;margin-bottom:20px">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+    <span style="font-size:.9rem;font-weight:600;color:#e6edf3">Knowledge Sources</span>
+    <span style="font-size:.8rem;color:#8b949e" id="source-total">—</span>
+  </div>
+
+  <hr style="border-color:#30363d;margin:24px 0">
+
+  <!-- AI Growth Summary -->
+  <h2 style="font-size:1.1rem;margin-bottom:12px">AI Growth Factors</h2>
+  <div id="growth-summary" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px">
+    <div class="card" style="padding:14px">
+      <div class="label">Knowledge Growth</div>
+      <div id="growth-knowledge" style="font-size:.9rem;color:#c9d1d9;margin-top:4px">Loading…</div>
+    </div>
+    <div class="card" style="padding:14px">
+      <div class="label">Data Sources Active</div>
+      <div id="growth-sources" style="font-size:.9rem;color:#c9d1d9;margin-top:4px">Loading…</div>
+    </div>
+    <div class="card" style="padding:14px">
+      <div class="label">Model Stability</div>
+      <div id="growth-stability" style="font-size:.9rem;color:#c9d1d9;margin-top:4px">Loading…</div>
+    </div>
+    <div class="card" style="padding:14px">
+      <div class="label">Automation Status</div>
+      <div id="growth-automation" style="font-size:.9rem;color:#c9d1d9;margin-top:4px">Loading…</div>
+    </div>
+  </div>
+
+  <!-- Stabilization Notes -->
+  <h2 style="font-size:1.1rem;margin-bottom:12px">Stabilization Notes</h2>
+  <div id="stabilization-notes" class="result-box" style="min-height:80px;max-height:200px">Loading…</div>
+  <div id="source-bar" style="display:flex;height:24px;border-radius:6px;overflow:hidden;background:#0d1117;margin-bottom:8px"></div>
+  <div id="source-legend" style="display:flex;flex-wrap:wrap;gap:12px;font-size:.8rem;color:#8b949e"></div>
+</div>
+
+<!-- ══════════════ DASHBOARD ══════════════ -->
+<div class="section active" id="sec-dashboard">
+  <h2>Overview</h2>
+  <p style="margin-bottom:12px">Knowledge domains: <strong>{{ domains|join(', ') }}</strong></p>
+  <p style="margin-bottom:16px">Last crawl: <strong id="last-crawl">{{ crawler_config.last_crawl or 'Never' }}</strong></p>
+  <button class="btn btn-primary" onclick="retrain()">🔄 Retrain Model Now</button>
+  <button class="btn btn-blue" onclick="refreshStats()">📊 Refresh Stats</button>
+  <div id="dashboard-status"></div>
+</div>
+ADMIN CHATBOT ══════════════ -->
+<div class="section" id="sec-chatbot">
+  <h2>💬 Admin Command Center</h2>
+  <p style="margin-bottom:16px;color:#8b949e">
+    Chat with the AI admin. Give it URLs to crawl, topics to learn, parameters to tune, or ask about stats.
+    Type <code>help</code> for all commands.
+  </p>
+
+  <!-- Chat messages area -->
+  <div id="chat-messages" style="background:#0d1117;border:1px solid #30363d;border-radius:10px;padding:16px;
+    min-height:400px;max-height:600px;overflow-y:auto;margin-bottom:16px;display:flex;flex-direction:column;gap:12px">
+    <div class="chat-msg assistant">
+      <div style="font-size:.8rem;color:#8b949e;margin-bottom:4px">🤖 Admin Bot</div>
+      <div style="background:#1c2128;border:1px solid #30363d;border-radius:10px;padding:12px;color:#c9d1d9;font-size:.9rem;max-width:85%;white-space:pre-wrap">
+Hello! I'm your admin assistant. I can:
+
+• **Crawl URLs** — give me links and I'll scrape them
+• **Learn topics** — tell me what to research
+• **Tune parameters** — adjust thresholds, cron jobs
+• **Check status** — ask about entries, accuracy, domains
+• **Run actions** — retrain, optimize, assess the model
+
+Type <code>help</code> for full command list, or just tell me what you need!</div>
+    </div>
+  </div>
+
+  <!-- Input area -->
+  <div style="display:flex;gap:8px">
+    <input type="text" id="chat-input" placeholder="e.g. crawl https://example.com for wifi security..."
+      style="flex:1;margin-bottom:0" onkeydown="if(event.key==='Enter')sendChat()">
+    <button class="btn btn-primary" onclick="sendChat()" style="margin:0;white-space:nowrap">Send ➤</button>
+  </div>
+
+  <!-- Quick action buttons -->
+  <div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:6px">
+    <button class="btn btn-gray" style="padding:6px 12px;font-size:.8rem" onclick="chatQuick('show me stats')">📊 Stats</button>
+    <button class="btn btn-gray" style="padding:6px 12px;font-size:.8rem" onclick="chatQuick('what is the model accuracy?')">🎯 Accuracy</button>
+    <button class="btn btn-gray" style="padding:6px 12px;font-size:.8rem" onclick="chatQuick('show learning velocity')">📈 Learning</button>
+    <button class="btn btn-gray" style="padding:6px 12px;font-size:.8rem" onclick="chatQuick('retrain the model')">🔄 Retrain</button>
+    <button class="btn btn-gray" style="padding:6px 12px;font-size:.8rem" onclick="chatQuick('assess the model')">📊 Assess</button>
+    <button class="btn btn-gray" style="padding:6px 12px;font-size:.8rem" onclick="chatQuick('run a growth cycle')">🔄 Growth</button>
+    <button class="btn btn-gray" style="padding:6px 12px;font-size:.8rem" onclick="chatQuick('show cron config')">⏱️ Cron</button>
+  </div>
+
+  <!-- ── AI Conditioning Panel ── -->
+  <div style="margin-top:24px;border-top:1px solid #30363d;padding-top:20px">
+    <h3 style="color:#e6edf3;margin-bottom:4px">🧠 AI Conditioning</h3>
+    <p style="color:#8b949e;font-size:.85rem;margin-bottom:16px">
+      Shape how the AI thinks and responds. Add beliefs, values, personality traits, and worldview directives.
+      Like teaching a child about the world — these aren't topics, they're <strong>perception</strong>.
+    </p>
+
+    <!-- Add new conditioning -->
+    <div class="card" style="padding:16px;margin-bottom:16px">
+      <div style="display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap">
+        <select id="condCategory" style="background:#0d1117;color:#c9d1d9;border:1px solid #30363d;border-radius:6px;padding:6px 10px;font-size:.85rem">
+          <option value="belief">🌍 Belief</option>
+          <option value="value">💎 Value</option>
+          <option value="tone">🎭 Tone</option>
+          <option value="worldview">🔭 Worldview</option>
+          <option value="rule">📏 Rule</option>
+        </select>
+        <input type="text" id="condDirective" placeholder="e.g. Always be curious and encourage exploration"
+          style="flex:1;min-width:200px;margin:0;font-size:.85rem">
+      </div>
+      <div style="display:flex;gap:8px">
+        <input type="text" id="condDetail" placeholder="Optional: extra context or example (optional)"
+          style="flex:1;margin:0;font-size:.85rem">
+        <button class="btn btn-primary" onclick="addConditioning()" style="margin:0;white-space:nowrap;font-size:.85rem">+ Add</button>
+      </div>
+    </div>
+
+    <!-- Active conditioning entries -->
+    <div id="conditioning-list" style="display:flex;flex-direction:column;gap:8px">
+      <p style="color:#484f58;font-style:italic">Loading conditioning...</p>
+    </div>
+    <div id="conditioning-status" style="margin-top:8px"></div>
+  </div>
+
+  <!-- ── AI Conditioning Panel ── -->
+  <div style="margin-top:24px;border-top:1px solid #30363d;padding-top:20px">
+    <h3 style="color:#e6edf3;margin-bottom:4px">🧠 AI Conditioning</h3>
+    <p style="color:#8b949e;font-size:.85rem;margin-bottom:16px">
+      Shape how the AI thinks and responds. Add beliefs, values, personality traits, and worldview directives.
+      Like teaching a child about the world — these aren't topics, they're <strong>perception</strong>.
+    </p>
+
+    <!-- Add new conditioning -->
+    <div class="card" style="padding:16px;margin-bottom:16px">
+      <div style="display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap">
+        <select id="condCategory" style="background:#0d1117;color:#c9d1d9;border:1px solid #30363d;border-radius:6px;padding:6px 10px;font-size:.85rem">
+          <option value="belief">🌍 Belief</option>
+          <option value="value">💎 Value</option>
+          <option value="tone">🎭 Tone</option>
+          <option value="worldview">🔭 Worldview</option>
+          <option value="rule">📏 Rule</option>
+        </select>
+        <input type="text" id="condDirective" placeholder="e.g. Always be curious and encourage exploration"
+          style="flex:1;min-width:200px;margin:0;font-size:.85rem">
+      </div>
+      <div style="display:flex;gap:8px">
+        <input type="text" id="condDetail" placeholder="Optional: extra context or example (optional)"
+          style="flex:1;margin:0;font-size:.85rem">
+        <button class="btn btn-primary" onclick="addConditioning()" style="margin:0;white-space:nowrap;font-size:.85rem">+ Add</button>
+      </div>
+    </div>
+
+    <!-- Active conditioning entries -->
+    <div id="conditioning-list" style="display:flex;flex-direction:column;gap:8px">
+      <p style="color:#484f58;font-style:italic">Loading conditioning...</p>
+    </div>
+    <div id="conditioning-status" style="margin-top:8px"></div>
+  </div>
+</div>
+
+<!-- ══════════════ UPLOAD & EXTRACT ══════════════ -->
+<div class="section" id="sec-upload">
+  <h2>Upload Files &amp; Paste Text</h2>
+  <p style="margin-bottom:16px;color:#8b949e">Upload PDF, TXT, CSV, MD, or paste text. Knowledge is extracted automatically and the original file is <strong>deleted</strong> to save space.</p>
+
+  <!-- File upload -->
+  <div class="drop-zone" id="dropZone" onclick="document.getElementById('fileInput').click()">
+    <p style="font-size:1.1rem;margin-bottom:6px">📄 Drop files here or click to browse</p>
+    <p style="font-size:.8rem">Supported: PDF, TXT, MD, CSV, LOG, CONF, HTML, XML, JSON</p>
+    <input type="file" id="fileInput" accept=".txt,.md,.pdf,.csv,.log,.conf,.cfg,.ini,.json,.xml,.html" multiple>
+  </div>
+  <label for="uploadDomain">Domain hint (optional)</label>
+  <input type="text" id="uploadDomain" placeholder="e.g. wifi_security, networking, security...">
+  <div id="upload-status"></div>
+
+  <hr style="border-color:#30363d;margin:24px 0">
+
+  <!-- Text paste -->
+  <h2 style="font-size:1.1rem;margin-bottom:12px">Or Paste Text</h2>
+  <label for="pasteText">Paste text content (definitions, articles, documentation…)</label>
+  <textarea id="pasteText" placeholder="Paste network/security content here. The AI will extract Q&A knowledge automatically..."></textarea>
+  <label for="pasteDomain">Domain hint (optional)</label>
+  <input type="text" id="pasteDomain" placeholder="e.g. wifi, troubleshooting...">
+  <button class="btn btn-primary" onclick="submitPaste()">🧠 Extract Knowledge from Text</button>
+  <div id="paste-status"></div>
+
+  <hr style="border-color:#30363d;margin:24px 0">
+
+  <!-- Manual entry -->
+  <h2 style="font-size:1.1rem;margin-bottom:12px">Manual Q&amp;A Entry</h2>
+  <label for="manualQ">Question</label>
+  <input type="text" id="manualQ" placeholder="What is WPA3-Enterprise?">
+  <label for="manualA">Answer</label>
+  <textarea id="manualA" style="min-height:80px" placeholder="WPA3-Enterprise provides 192-bit minimum security..."></textarea>
+  <label for="manualD">Domain</label>
+  <input type="text" id="manualD" placeholder="Auto-detected if blank">
+  <button class="btn btn-primary" onclick="submitManual()">✅ Add Q&amp;A Entry</button>
+  <div id="manual-status"></div>
+</div>
+
+<!-- ══════════════ CRAWLER (Wikipedia) ══════════════ -->
+<div class="section" id="sec-crawler">
+  <h2>Wikipedia Crawler Management</h2>
+  <p style="margin-bottom:16px;color:#8b949e">Configure topics for the Wikipedia knowledge crawler. Runs every 15 min via GitHub Actions or manually from here.</p>
+
+  <div id="topic-list"></div>
+
+  <h3 style="margin:20px 0 12px;font-size:1rem">Add New Crawler Topic</h3>
+  <label for="newTopicName">Topic Name</label>
+  <input type="text" id="newTopicName" placeholder="e.g. VLAN Trunking Protocol">
+  <label for="newTopicKeywords">Keywords (comma-separated)</label>
+  <input type="text" id="newTopicKeywords" placeholder="e.g. VTP, VLAN trunking, trunk port">
+  <label for="newTopicMax">Max Articles</label>
+  <input type="text" id="newTopicMax" value="8" style="width:80px">
+  <button class="btn btn-primary" onclick="addTopic()">➕ Add Topic</button>
+
+  <hr style="border-color:#30363d;margin:24px 0">
+  <button class="btn btn-orange" onclick="runAllCrawlers()">🕷️ Run All Crawlers Now</button>
+  <div id="crawler-status"></div>
+</div>
+
+<!-- ══════════════ FORUM CRAWLER ══════════════ -->
+<div class="section" id="sec-forum">
+  <h2>Forum Crawler — StackExchange, Reddit, HN &amp; DEV.to</h2>
+  <p style="margin-bottom:16px;color:#8b949e">
+    Crawl free public sources: StackExchange (ServerFault, NetworkEngineering, Security), Reddit (r/networking, r/netsec, r/sysadmin, r/cybersecurity), Hacker News, and DEV.to tech articles.
+  </p>
+
+  <div id="forum-topic-list"></div>
+
+  <h3 style="margin:20px 0 12px;font-size:1rem">Forum Crawl Stats</h3>
+  <div id="forum-stats" style="margin-bottom:16px"></div>
+
+  <h3 style="margin:20px 0 12px;font-size:1rem">Add Forum Topic</h3>
+  <label for="forumTopicName">Topic Name</label>
+  <input type="text" id="forumTopicName" placeholder="e.g. Firewall Configuration">
+  <label for="forumTopicKeywords">Keywords (comma-separated)</label>
+  <input type="text" id="forumTopicKeywords" placeholder="e.g. iptables, firewalld, pfSense">
+  <label for="forumTopicMax">Max Results per Source</label>
+  <input type="text" id="forumTopicMax" value="10" style="width:80px">
+  <div style="margin-bottom:12px">
+    <label><input type="checkbox" id="srcSE" checked> StackExchange</label>
+    <label style="margin-left:12px"><input type="checkbox" id="srcReddit" checked> Reddit</label>
+    <label style="margin-left:12px"><input type="checkbox" id="srcHN" checked> Hacker News</label>
+    <label style="margin-left:12px"><input type="checkbox" id="srcDevto" checked> DEV.to</label>
+  </div>
+  <button class="btn btn-primary" onclick="addForumTopic()">➕ Add Forum Topic</button>
+
+  <hr style="border-color:#30363d;margin:24px 0">
+  <button class="btn btn-orange" onclick="runAllForums()">💬 Run All Forum Crawlers</button>
+  <div id="forum-status"></div>
+</div>
+
+<!-- ══════════════ SITE/URL CRAWLER ══════════════ -->
+<div class="section" id="sec-sitecrawl">
+  <h2>URL Crawler — Crawl Any Website</h2>
+  <p style="margin-bottom:16px;color:#8b949e">
+    Enter any URL. The crawler will follow internal links, extract topic-relevant knowledge, discard original data, and flush caches. Only extracted Q&amp;A entries are kept.
+  </p>
+
+  <label for="siteURL">Website URL</label>
+  <input type="text" id="siteURL" placeholder="https://example.com/networking-guide">
+  <label for="siteTopic">Topic to Extract</label>
+  <input type="text" id="siteTopic" placeholder="e.g. Network Security">
+  <label for="siteKeywords">Keywords (comma-separated, optional)</label>
+  <input type="text" id="siteKeywords" placeholder="e.g. firewall, IDS, VPN">
+  <div style="display:flex;gap:16px;margin-bottom:12px">
+    <div><label for="siteMaxPages">Max Pages</label><input type="text" id="siteMaxPages" value="20" style="width:80px"></div>
+    <div><label for="siteMaxDepth">Max Depth</label><input type="text" id="siteMaxDepth" value="2" style="width:80px"></div>
+  </div>
+  <button class="btn btn-primary" onclick="runSiteCrawl()">🌐 Crawl Website</button>
+  <div id="site-status"></div>
+
+  <hr style="border-color:#30363d;margin:24px 0">
+  <h3 style="font-size:1rem;margin-bottom:12px">Crawl History</h3>
+  <div id="site-history"></div>
+  <button class="btn btn-gray" onclick="loadSiteStats()">🔄 Refresh History</button>
+  <button class="btn btn-red" onclick="clearSiteHistory()">🗑️ Clear History</button>
+</div>
+
+<!-- ══════════════ AI LEARNING ══════════════ -->
+<div class="section" id="sec-learn">
+  <h2>AI Learning Prompts</h2>
+  <p style="margin-bottom:16px;color:#8b949e">Command the AI to learn about new topics. It will crawl Wikipedia, extract knowledge, and add it to the training data.</p>
+
+  <label for="learnPrompt">Learning Command</label>
+  <textarea id="learnPrompt" style="min-height:80px" placeholder="Examples:
+Learn about OSPF routing protocol
+Research zero trust network architecture
+Study WPA3 Enterprise encryption
+Crawl for network segmentation best practices"></textarea>
+  <label for="learnKeywords">Additional keywords (comma-separated, optional)</label>
+  <input type="text" id="learnKeywords" placeholder="e.g. link-state, Dijkstra, area 0">
+  <button class="btn btn-primary" onclick="submitLearn()">🎓 Execute Learning Command</button>
+  <button class="btn btn-blue" onclick="submitLearnAndTrain()">🎓+🔄 Learn &amp; Retrain</button>
+  <div id="learn-status"></div>
+
+  <hr style="border-color:#30363d;margin:24px 0">
+  <h3 style="font-size:1rem;margin-bottom:12px">Quick Learn Buttons</h3>
+  <div id="quick-learns">
+    <button class="btn btn-gray" onclick="quickLearn('DHCP Snooping')">DHCP Snooping</button>
+    <button class="btn btn-gray" onclick="quickLearn('Network Load Balancing')">Load Balancing</button>
+    <button class="btn btn-gray" onclick="quickLearn('Software Defined Networking')">SDN</button>
+    <button class="btn btn-gray" onclick="quickLearn('Wi-Fi 6E technology')">Wi-Fi 6E</button>
+    <button class="btn btn-gray" onclick="quickLearn('Cisco IOS commands')">Cisco IOS</button>
+    <button class="btn btn-gray" onclick="quickLearn('Network Address Translation')">NAT Deep Dive</button>
+    <button class="btn btn-gray" onclick="quickLearn('RADIUS authentication protocol')">RADIUS</button>
+    <button class="btn btn-gray" onclick="quickLearn('SSL TLS certificate management')">TLS/SSL Certs</button>
+    <button class="btn btn-gray" onclick="quickLearn('Wireless site survey planning')">Site Survey</button>
+    <button class="btn btn-gray" onclick="quickLearn('SIEM security monitoring')">SIEM</button>
+  </div>
+</div>
+
+<!-- ══════════════ ML ENGINE ══════════════ -->
+<div class="section" id="sec-mlengine">
+  <h2>ML Self-Growth &amp; Optimization Engine</h2>
+  <p style="margin-bottom:16px;color:#8b949e">
+    Control the AI's self-improvement mechanisms: auto-assessment, hyperparameter optimization, stability monitoring, and growth cycles.
+  </p>
+
+  <!-- Controls -->
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:20px">
+    <div class="card" style="padding:14px">
+      <div class="label">Auto-Optimize</div>
+      <label style="cursor:pointer"><input type="checkbox" id="mlAutoOptimize" onchange="saveMLConfig()"> Enable</label>
+    </div>
+    <div class="card" style="padding:14px">
+      <div class="label">Auto-Stabilize</div>
+      <label style="cursor:pointer"><input type="checkbox" id="mlAutoStabilize" onchange="saveMLConfig()"> Enable</label>
+    </div>
+    <div class="card" style="padding:14px">
+      <div class="label">Auto-Grow</div>
+      <label style="cursor:pointer"><input type="checkbox" id="mlAutoGrow" onchange="saveMLConfig()"> Enable</label>
+    </div>
+  </div>
+
+  <!-- Thresholds -->
+  <div style="display:flex;gap:16px;margin-bottom:16px">
+    <div>
+      <label for="mlMinAccuracy">Min Accuracy Threshold</label>
+      <input type="text" id="mlMinAccuracy" value="0.90" style="width:100px" onchange="saveMLConfig()">
+    </div>
+    <div>
+      <label for="mlConfThreshold">Confidence Threshold</label>
+      <input type="text" id="mlConfThreshold" value="0.60" style="width:100px" onchange="saveMLConfig()">
+    </div>
+    <div>
+      <label for="mlTargetAccuracy">Target Accuracy</label>
+      <input type="text" id="mlTargetAccuracy" value="0.98" style="width:100px" onchange="saveMLConfig()">
+    </div>
+  </div>
+
+  <!-- Action buttons -->
+  <div style="margin-bottom:16px">
+    <button class="btn btn-blue" onclick="mlAssess()">📊 Assess Model</button>
+    <button class="btn btn-primary" onclick="mlOptimize()">⚡ Optimize Model</button>
+    <button class="btn btn-orange" onclick="mlStabilize()">🛡️ Stabilize</button>
+    <button class="btn btn-blue" onclick="mlGrowthCheck()">📈 Growth Check</button>
+    <button class="btn btn-primary" onclick="mlGrowthCycle()">🔄 Full Growth Cycle</button>
+  </div>
+  <div id="ml-status"></div>
+
+  <hr style="border-color:#30363d;margin:24px 0">
+
+  <!-- Assessment Results -->
+  <h3 style="font-size:1rem;margin-bottom:12px">Model Assessment</h3>
+  <div id="ml-assessment"></div>
+
+  <hr style="border-color:#30363d;margin:24px 0">
+
+  <!-- History / Trend -->
+  <h3 style="font-size:1rem;margin-bottom:12px">Accuracy Trend</h3>
+  <div id="ml-trend" style="font-family:monospace;font-size:.85rem"></div>
+
+  <hr style="border-color:#30363d;margin:24px 0">
+
+  <!-- Recent Events -->
+  <h3 style="font-size:1rem;margin-bottom:12px">Recent Events</h3>
+  <div id="ml-events"></div>
+</div>
+
+<!-- ══════════════ CRON CONTROLS ══════════════ -->
+<div class="section" id="sec-cron">
+  <h2>⏱️ Cron Job Controls &amp; Redline Warnings</h2>
+  <p style="margin-bottom:16px;color:#8b949e">
+    Control automation frequency. <span style="color:#f85149;font-weight:600">RED</span> = at or above safe maximum. <span style="color:#d29922;font-weight:600">YELLOW</span> = approaching limit. <span style="color:#3fb950;font-weight:600">GREEN</span> = safe.
+  </p>
+  <div id="cron-controls"></div>
+  <div id="cron-status" style="margin-top:12px"></div>
+</div>
+
+<!-- ══════════════ LIVE ACTIVITY ══════════════ -->
+<div class="section" id="sec-activity">
+  <h2>📡 Live Learning Activity</h2>
+  <p style="margin-bottom:16px;color:#8b949e">
+    Real-time view of what the AI is learning and from where. Auto-refreshes every 30 seconds.
+  </p>
+
+  <!-- Activity stats -->
+  <div class="cards" style="margin-bottom:20px">
+    <div class="card"><div class="label">Total Events</div><div class="value" id="act-events" style="color:#58a6ff">—</div></div>
+    <div class="card"><div class="label">Entries Learned (24h)</div><div class="value green" id="act-24h">—</div></div>
+    <div class="card"><div class="label">Learning Velocity</div><div class="value purple" id="act-velocity">— /hr</div></div>
+  </div>
+
+  <!-- Source breakdown table -->
+  <h3 style="font-size:1rem;margin-bottom:8px">Entries by Source</h3>
+  <div id="act-sources" style="margin-bottom:20px"></div>
+
+  <!-- Topic breakdown -->
+  <h3 style="font-size:1rem;margin-bottom:8px">Entries by Topic</h3>
+  <div id="act-topics" style="margin-bottom:20px"></div>
+
+  <!-- Recent activity feed -->
+  <h3 style="font-size:1rem;margin-bottom:8px">Recent Activity Feed</h3>
+  <div id="act-feed" style="max-height:400px;overflow-y:auto"></div>
+
+  <button class="btn btn-blue" onclick="loadActivity()" style="margin-top:12px">🔄 Refresh</button>
+</div>
+
+<!-- ══════════════ KNOWLEDGE BROWSER ══════════════ -->
+<div class="section" id="sec-knowledge">
+  <h2>Knowledge Browser</h2>
+  <label for="kbDomain">Filter by Domain</label>
+  <select id="kbDomain" onchange="loadKnowledge()">
+    <option value="">All Domains</option>
+    {% for d in domains %}
+    <option value="{{ d }}">{{ d }}</option>
+    {% endfor %}
+  </select>
+  <div class="k-scroll">
+    <table class="k-table">
+      <thead><tr><th style="width:30%">Question</th><th style="width:50%">Answer</th><th>Domain</th><th>Source</th></tr></thead>
+      <tbody id="kbBody"></tbody>
+    </table>
+  </div>
+  <p style="margin-top:8px;color:#8b949e;font-size:.85rem" id="kbCount"></p>
+</div>
+
+<!-- ══════════════ LEARNED TOPICS ══════════════ -->
+<div class="section" id="sec-learned">
+  <h2>Learned Topics &amp; Subtopics</h2>
+  <p style="margin-bottom:16px;color:#8b949e">All knowledge the AI has learned from uploads, pastes, crawlers, and other sources — grouped by topic.</p>
+  <div id="learned-summary" style="margin-bottom:20px"></div>
+  <div id="learned-topics"></div>
+  <hr style="border-color:#30363d;margin:24px 0">
+  <h3 style="font-size:1rem;margin-bottom:12px">Knowledge Files</h3>
+  <div id="learned-files" style="max-height:400px;overflow-y:auto"></div>
+</div>
+
+</div><!-- /main -->
+
+<script>
+/* ── Navigation ── */
+function showSection(name) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.sidebar a').forEach(a => a.classList.remove('active'));
+  document.getElementById('sec-' + name).classList.add('active');
+  document.getElementById('nav-' + name).classList.add('active');
+  if (name === 'knowledge') loadKnowledge();
+  if (name === 'crawler') loadTopics();
+  if (name === 'forum') loadForumTopics();
+  if (name === 'sitecrawl') loadSiteStats();
+  if (name === 'mlengine') loadMLEngine();
+  if (name === 'learned') loadLearned();
+  if (name === 'chatbot') { document.getElementById('chat-input').focus(); loadConditioning(); }
+  if (name === 'cron') loadCronConfig();
+  if (name === 'activity') loadActivity();
+  if (name === 'dashboard') loadDashboardGrowth();
+}
+
+function statusHTML(cls, msg) {
+  return `<div class="status-msg ${cls}">${msg}</div>`;
+}
+function spinnerHTML(msg) {
+  return `<div class="status-msg"><span class="spinner"></span>${msg}</div>`;
+}
+function resultBox(cls, content) {
+  return `<div class="result-box ${cls}">${content}</div>`;
+}
+
+/* ── API helper ── */
+async function api(url, opts = {}) {
+  const res = await fetch(url, opts);
+  return res.json();
+}
+async function postJSON(url, body) {
+  return api(url, {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(body)});
+}
+
+/* ── Dashboard ── */
+async function refreshStats() {
+  const d = await api('/admin/api/stats');
+  document.getElementById('stat-builtin').textContent = d.builtin_entries;
+  document.getElementById('stat-extra').textContent = d.extra_entries;
+  document.getElementById('stat-total').textContent = d.total_entries;
+  document.getElementById('stat-domains').textContent = d.domains.length;
+  document.getElementById('last-crawl').textContent = d.crawler.last_crawl || 'Never';
+  // Learning stats
+  if (d.learning) {
+    const v = d.learning.learning_velocity || 0;
+    document.getElementById('stat-velocity').textContent = v.toFixed(1) + ' /hr';
+  if (d.ml_engine) {
+    document.getElementById('stat-cycles').textContent = d.ml_engine.cycle_count || 0;
+  }
+    document.getElementById('stat-24h').textContent = d.learning.entries_last_24h || 0;
+  }
+  // Source breakdown bar
+  renderSourceBar(d.source_breakdown || {});
+}
+
+const SOURCE_COLORS = {
+  wikipedia: '#3fb950', stackexchange: '#58a6ff', reddit: '#f85149',
+  hackernews: '#d29922', devto: '#bc8cff', forums: '#79c0ff',
+  site_crawler: '#7ee787', uploads: '#e3b341', paste: '#8b949e',
+  manual: '#c9d1d9', other: '#484f58', builtin: '#388bfd',
+};
+
+function renderSourceBar(breakdown) {
+  const bar = document.getElementById('source-bar');
+  const legend = document.getElementById('source-legend');
+  const totalEl = document.getElementById('source-total');
+
+  const entries = Object.entries(breakdown).sort((a,b) => b[1] - a[1]);
+  const total = entries.reduce((s,[,v]) => s+v, 0);
+  totalEl.textContent = `${total} crawled/uploaded entries`;
+
+  if (!total) { bar.innerHTML = '<div style="flex:1;background:#30363d;display:flex;align-items:center;justify-content:center;color:#8b949e;font-size:.8rem">No external data yet</div>'; legend.innerHTML = ''; return; }
+
+  bar.innerHTML = entries.map(([src, count]) => {
+    const pct = (count / total * 100).toFixed(1);
+    const color = SOURCE_COLORS[src] || '#484f58';
+    return `<div style="flex:${count};background:${color};min-width:2px" title="${src}: ${count} (${pct}%)"></div>`;
+  }).join('');
+
+  legend.innerHTML = entries.map(([src, count]) => {
+    const pct = (count / total * 100).toFixed(1);
+    const color = SOURCE_COLORS[src] || '#484f58';
+    return `<span style="display:inline-flex;align-items:center;gap:4px;margin-right:12px"><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:${color}"></span>${src}: ${count} (${pct}%)</span>`;
+  }).join('');
+}
+async function retrain() {
+  const el = document.getElementById('dashboard-status');
+  el.innerHTML = spinnerHTML('Retraining model… this may take a minute.');
+  const d = await postJSON('/admin/retrain', {});
+  if (d.status === 'success') {
+    el.innerHTML = statusHTML('ok', `✅ ${d.message}`);
+    refreshStats();
+  } else {
+    el.innerHTML = statusHTML('err', `❌ ${d.error}`);
+  }
+}
+
+/* ── File Upload ── */
+const dropZone = document.getElementById('dropZone');
+const fileInput = document.getElementById('fileInput');
+
+dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('drag-over'); });
+dropZone.addEventListener('dragleave', () => dropZone.classList.remove('drag-over'));
+dropZone.addEventListener('drop', e => {
+  e.preventDefault();
+  dropZone.classList.remove('drag-over');
+  if (e.dataTransfer.files.length) uploadFiles(e.dataTransfer.files);
+});
+fileInput.addEventListener('change', () => { if (fileInput.files.length) uploadFiles(fileInput.files); });
+
+async function uploadFiles(files) {
+  const el = document.getElementById('upload-status');
+  const domain = document.getElementById('uploadDomain').value;
+  let html = '';
+  for (let i = 0; i < files.length; i++) {
+    const file = files[i];
+    el.innerHTML = spinnerHTML(`Processing file ${i+1}/${files.length}: ${file.name}…`);
+    const fd = new FormData();
+    fd.append('file', file);
+    fd.append('domain', domain);
+    const res = await fetch('/admin/upload', {method:'POST', body: fd});
+    const d = await res.json();
+    if (d.status === 'success') {
+      let details = `✅ <strong>${file.name}</strong>: <strong>${d.entries_extracted}</strong> entries extracted\n`;
+      if (d.domain_breakdown && Object.keys(d.domain_breakdown).length) {
+        details += `\n<strong>Domains:</strong>\n`;
+        for (const [dom, cnt] of Object.entries(d.domain_breakdown).sort((a,b)=>b[1]-a[1])) {
+          const pct = (cnt / d.entries_extracted * 100).toFixed(0);
+          details += `  ${dom}: ${cnt} entries (${pct}%)\n`;
+        }
+      }
+      if (d.topics && d.topics.length) {
+        details += `\n<strong>Topics learned:</strong> ${d.topics.join(', ')}\n`;
+      }
+      if (d.samples && d.samples.length) {
+        details += `\n<strong>Sample entries:</strong>\n${d.samples.map(s => `  Q: ${s.question}\n  A: ${s.answer}\n  Domain: ${s.domain}`).join('\n\n')}`;
+      }
+      html += resultBox('success', details);
+    } else if (d.status === 'warning') {
+      html += resultBox('warning', `⚠️ ${file.name}: ${d.message}`);
+    } else {
+      html += resultBox('error', `❌ ${file.name}: ${d.error || 'Unknown error'}`);
+    }
+  }
+  el.innerHTML = html;
+  refreshStats();
+}
+
+/* ── Paste ── */
+async function submitPaste() {
+  const text = document.getElementById('pasteText').value.trim();
+  if (!text) return;
+  const el = document.getElementById('paste-status');
+  el.innerHTML = spinnerHTML(`Extracting knowledge from ${text.length} characters…`);
+  const d = await postJSON('/admin/paste', {text, domain: document.getElementById('pasteDomain').value});
+  if (d.status === 'success') {
+    let details = `✅ Extracted <strong>${d.entries_extracted}</strong> entries from ${d.text_length || text.length} characters\n`;
+    if (d.domain_breakdown && Object.keys(d.domain_breakdown).length) {
+      details += `\n<strong>Domains:</strong>\n`;
+      for (const [dom, cnt] of Object.entries(d.domain_breakdown).sort((a,b)=>b[1]-a[1])) {
+        const pct = (cnt / d.entries_extracted * 100).toFixed(0);
+        details += `  ${dom}: ${cnt} entries (${pct}%)\n`;
+      }
+    }
+    if (d.topics && d.topics.length) {
+      details += `\n<strong>Topics learned:</strong> ${d.topics.join(', ')}\n`;
+    }
+    if (d.samples && d.samples.length) {
+      details += `\n<strong>Sample entries:</strong>\n${(d.samples).map(s => `  Q: ${s.question}\n  A: ${s.answer}`).join('\n\n')}`;
+    }
+    el.innerHTML = resultBox('success', details);
+    refreshStats();
+  } else {
+    el.innerHTML = resultBox('warning', `⚠️ ${d.message || 'No entries extracted'}`);
+  }
+}
+
+/* ── Manual entry ── */
+async function submitManual() {
+  const q = document.getElementById('manualQ').value.trim();
+  const a = document.getElementById('manualA').value.trim();
+  const dom = document.getElementById('manualD').value.trim();
+  if (!q || !a) { alert('Both question and answer required'); return; }
+  const el = document.getElementById('manual-status');
+  el.innerHTML = spinnerHTML('Adding…');
+  const d = await postJSON('/admin/add-entry', {question:q, answer:a, domain:dom});
+  if (d.status === 'success') {
+    el.innerHTML = statusHTML('ok', `✅ Added: "${d.entry.question}" [${d.entry.domain}]`);
+    document.getElementById('manualQ').value = '';
+    document.getElementById('manualA').value = '';
+    refreshStats();
+  } else {
+    el.innerHTML = statusHTML('err', `❌ ${d.error}`);
+  }
+}
+
+/* ── Crawler ── */
+async function loadTopics() {
+  const topics = await api('/admin/crawler/topics');
+  const el = document.getElementById('topic-list');
+  if (!topics.length) { el.innerHTML = '<p style="color:#8b949e">No crawler topics configured.</p>'; return; }
+  el.innerHTML = topics.map(t => `
+    <div class="topic-item">
+      <span class="name">${t.name}</span>
+      <span class="keywords">${(t.keywords||[]).join(', ') || '—'}</span>
+      <span class="badge ${t.enabled?'badge-on':'badge-off'}" onclick="toggleTopic('${t.name}')" style="cursor:pointer">${t.enabled?'ON':'OFF'}</span>
+      <button class="btn btn-blue" style="padding:4px 10px;font-size:.8rem;margin:0" onclick="runOneTopic('${t.name}')">▶ Run</button>
+      <button class="btn btn-red" style="padding:4px 10px;font-size:.8rem;margin:0" onclick="removeTopic('${t.name}')">✕</button>
+    </div>
+  `).join('');
+}
+async function addTopic() {
+  const name = document.getElementById('newTopicName').value.trim();
+  if (!name) return;
+  const kw = document.getElementById('newTopicKeywords').value.split(',').map(s=>s.trim()).filter(Boolean);
+  const max = parseInt(document.getElementById('newTopicMax').value) || 8;
+  await postJSON('/admin/crawler/add-topic', {name, keywords:kw, max_articles:max});
+  document.getElementById('newTopicName').value = '';
+  document.getElementById('newTopicKeywords').value = '';
+  loadTopics();
+}
+async function toggleTopic(name) {
+  await postJSON('/admin/crawler/toggle-topic', {name});
+  loadTopics();
+}
+async function runOneTopic(topic) {
+  const el = document.getElementById('crawler-status');
+  el.innerHTML = spinnerHTML(`Crawling "${topic}"… this may take 30-60 seconds.`);
+  const d = await postJSON('/admin/crawler/run-topic', {topic});
+  if (d.status === 'success') {
+    el.innerHTML = resultBox('success', `✅ Crawled "${topic}": ${d.entries} new entries\n\nSamples:\n${(d.samples||[]).map(s=>`Q: ${s.question}\nA: ${s.answer?.substring(0,150)}…`).join('\n\n')}`);
+    refreshStats();
+  } else {
+    el.innerHTML = resultBox('warning', `⚠️ ${d.status}`);
+  }
+}
+async function runAllCrawlers() {
+  const el = document.getElementById('crawler-status');
+  el.innerHTML = spinnerHTML('Running all crawlers… this may take several minutes.');
+  const d = await postJSON('/admin/crawler/run', {});
+  let lines = [`Total new entries: ${d.total_new_entries}\n`];
+  for (const [name, info] of Object.entries(d.topics || {})) {
+    lines.push(`${name}: ${info.status} (${info.entries} entries)`);
+  }
+  el.innerHTML = resultBox(d.total_new_entries > 0 ? 'success' : 'warning', lines.join('\n'));
+  refreshStats();
+}
+
+/* ── Learning ── */
+async function submitLearn() {
+  const prompt = document.getElementById('learnPrompt').value.trim();
+  if (!prompt) return;
+  const kw = document.getElementById('learnKeywords').value.split(',').map(s=>s.trim()).filter(Boolean);
+  const el = document.getElementById('learn-status');
+  el.innerHTML = spinnerHTML(`Learning about "${prompt}"… crawling Wikipedia.`);
+  const d = await postJSON('/admin/learn', {prompt, keywords:kw});
+  if (d.status === 'success') {
+    el.innerHTML = resultBox('success', `✅ ${d.message}\n\nEntries: ${d.entries}\n\nSamples:\n${(d.samples||[]).map(s=>`Q: ${s.question}\nA: ${s.answer?.substring(0,150)}…`).join('\n\n')}`);
+    refreshStats();
+  } else {
+    el.innerHTML = resultBox('error', `❌ ${d.error || d.status}`);
+  }
+}
+async function submitLearnAndTrain() {
+  await submitLearn();
+  await retrain();
+}
+function quickLearn(topic) {
+  document.getElementById('learnPrompt').value = `Learn about ${topic}`;
+  submitLearn();
+}
+
+/* ── Knowledge Browser ── */
+async function loadKnowledge() {
+  const domain = document.getElementById('kbDomain').value;
+  const d = await api(`/admin/knowledge?domain=${encodeURIComponent(domain)}`);
+  const tbody = document.getElementById('kbBody');
+  tbody.innerHTML = d.entries.map(e => `
+    <tr>
+      <td>${esc(e.question)}</td>
+      <td>${esc(e.answer)}</td>
+      <td><span class="domain-tag">${e.domain}</span></td>
+      <td style="color:#8b949e;font-size:.8rem">${e.source}</td>
+    </tr>
+  `).join('');
+  if (document.getElementById('srcHN').checked) sources.push('hackernews');
+  if (document.getElementById('srcDevto').checked) sources.push('devto');
+  document.getElementById('kbCount').textContent = `${d.total} entries`;
+}
+function esc(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+
+/* ── Forum Crawler ── */
+async function loadForumTopics() {
+  const d = await api('/admin/forum/topics');
+  const el = document.getElementById('forum-topic-list');
+  const topics = d.topics || [];
+  if (!topics.length) { el.innerHTML = '<p style="color:#8b949e">No forum crawler topics configured.</p>'; }
+  else {
+    el.innerHTML = topics.map(t => `
+      <div class="topic-item">
+        <span class="name">${esc(t.name)}</span>
+        <span class="keywords">${(t.keywords||[]).join(', ') || '—'}</span>
+        <span style="color:#8b949e;font-size:.8rem">${(t.sources||[]).join(', ')}</span>
+        <span class="badge ${t.enabled?'badge-on':'badge-off'}" onclick="toggleForumTopic('${esc(t.name)}')" style="cursor:pointer">${t.enabled?'ON':'OFF'}</span>
+        <button class="btn btn-blue" style="padding:4px 10px;font-size:.8rem;margin:0" onclick="runOneForumTopic('${esc(t.name)}')">▶ Run</button>
+        <button class="btn btn-red" style="padding:4px 10px;font-size:.8rem;margin:0" onclick="removeForumTopic('${esc(t.name)}')">✕</button>
+      </div>
+    `).join('');
+  }
+  // Stats
+  const stats = d.stats || {};
+  const statsEl = document.getElementById('forum-stats');
+  const statKeys = Object.keys(stats);
+  if (statKeys.length) {
+    statsEl.innerHTML = statKeys.map(k => {
+      const s = stats[k];
+      return `<div class="topic-item"><span class="name">${esc(k)}</span><span style="color:#3fb950">${s.total_crawled||0} entries</span><span style="color:#8b949e">${s.crawl_count||0} crawls</span><span style="color:#8b949e;font-size:.8rem">${s.last_crawl?new Date(s.last_crawl).toLocaleString():'Never'}</span></div>`;
+    }).join('');
+  } else { statsEl.innerHTML = '<p style="color:#8b949e">No forum crawl history yet.</p>'; }
+}
+async function addForumTopic() {
+  const name = document.getElementById('forumTopicName').value.trim();
+  if (!name) return;
+  const kw = document.getElementById('forumTopicKeywords').value.split(',').map(s=>s.trim()).filter(Boolean);
+  const max = parseInt(document.getElementById('forumTopicMax').value) || 10;
+  const sources = [];
+  if (document.getElementById('srcSE').checked) sources.push('stackexchange');
+  if (document.getElementById('srcReddit').checked) sources.push('reddit');
+  await postJSON('/admin/forum/add-topic', {name, keywords:kw, max_per_source:max, sources});
+  document.getElementById('forumTopicName').value = '';
+  document.getElementById('forumTopicKeywords').value = '';
+  loadForumTopics();
+}
+async function removeForumTopic(name) {
+  if (!confirm(`Remove forum topic "${name}"?`)) return;
+  await postJSON('/admin/forum/remove-topic', {name});
+  loadForumTopics();
+}
+async function toggleForumTopic(name) {
+  await postJSON('/admin/forum/toggle-topic', {name});
+  loadForumTopics();
+}
+async function runOneForumTopic(topic) {
+  const el = document.getElementById('forum-status');
+  el.innerHTML = spinnerHTML(`Crawling forums for "${topic}"… may take 1-2 minutes.`);
+  const d = await postJSON('/admin/forum/run-topic', {topic});
+  if (d.status === 'success') {
+    el.innerHTML = resultBox('success', `✅ Forum crawl "${topic}": ${d.entries} new entries\n\nSamples:\n${(d.samples||[]).map(s=>`Q: ${s.question}\nA: ${s.answer?.substring(0,150)}…`).join('\n\n')}`);
+    refreshStats(); loadForumTopics();
+  } else { el.innerHTML = resultBox('warning', `⚠️ ${d.status}`); }
+}
+async function runAllForums() {
+  const el = document.getElementById('forum-status');
+  el.innerHTML = spinnerHTML('Running all forum crawlers… this may take several minutes.');
+  const d = await postJSON('/admin/forum/run', {});
+  let lines = [`Total new entries: ${d.total_new_entries}\n`];
+  for (const [name, info] of Object.entries(d.topics || {})) {
+    lines.push(`${name}: ${info.status} (${info.entries} entries)`);
+  }
+  el.innerHTML = resultBox(d.total_new_entries > 0 ? 'success' : 'warning', lines.join('\n'));
+  refreshStats(); loadForumTopics();
+}
+
+/* ── Site/URL Crawler ── */
+async function runSiteCrawl() {
+  const url = document.getElementById('siteURL').value.trim();
+  const topic = document.getElementById('siteTopic').value.trim();
+  if (!url || !topic) { alert('URL and topic are required'); return; }
+  const kw = document.getElementById('siteKeywords').value.split(',').map(s=>s.trim()).filter(Boolean);
+  const maxPages = parseInt(document.getElementById('siteMaxPages').value) || 20;
+  const maxDepth = parseInt(document.getElementById('siteMaxDepth').value) || 2;
+  const el = document.getElementById('site-status');
+  el.innerHTML = spinnerHTML(`Crawling ${url}… extracting "${topic}" knowledge. This may take 1-3 minutes.`);
+  const d = await postJSON('/admin/site-crawl', {url, topic, keywords:kw, max_pages:maxPages, max_depth:maxDepth});
+  if (d.status === 'success') {
+    const st = d.stats || {};
+    el.innerHTML = resultBox('success', `✅ Site crawl complete!\n\nPages crawled: ${st.pages_crawled||0}\nPages relevant: ${st.pages_relevant||0}\nEntries extracted: ${d.entries}\nOriginal data: DISCARDED ✓\n\nSamples:\n${(d.samples||[]).map(s=>`Q: ${s.question}\nA: ${s.answer?.substring(0,150)}…`).join('\n\n')}`);
+    document.getElementById('siteURL').value = '';
+    refreshStats(); loadSiteStats();
+  } else if (d.error) {
+    el.innerHTML = resultBox('error', `❌ ${d.error}`);
+  } else {
+    el.innerHTML = resultBox('warning', `⚠️ No relevant content found on this site for "${topic}".`);
+  }
+}
+async function loadSiteStats() {
+  const d = await api('/admin/site-crawl/stats');
+  const el = document.getElementById('site-history');
+  const jobs = d.recent_jobs || [];
+  if (!jobs.length) { el.innerHTML = '<p style="color:#8b949e">No site crawl history.</p>'; return; }
+  el.innerHTML = `<p style="margin-bottom:8px;color:#3fb950">Total: ${d.total_entries} entries from ${d.total_jobs} crawls across ${d.domains_crawled.length} domains</p>` +
+    jobs.reverse().map(j => `
+    <div class="topic-item">
+      <span class="name" style="flex:2">${esc(j.domain)}</span>
+      <span style="color:#58a6ff">${esc(j.topic)}</span>
+      <span style="color:#3fb950">${j.entries_extracted} entries</span>
+      <span style="color:#8b949e;font-size:.8rem">${j.stats?.pages_crawled||0} pages</span>
+      <span style="color:#8b949e;font-size:.75rem">${new Date(j.crawled_at).toLocaleString()}</span>
+    </div>
+  `).join('');
+}
+async function clearSiteHistory() {
+  if (!confirm('Clear all site crawl history? (Knowledge files are kept)')) return;
+  await postJSON('/admin/site-crawl/clear', {});
+  loadSiteStats();
+}
+
+/* ── ML Engine ── */
+async function loadMLEngine() {
+  const d = await api('/admin/ml/stats');
+  const cfg = d.config || {};
+  document.getElementById('mlAutoOptimize').checked = cfg.auto_optimize !== false;
+  document.getElementById('mlAutoStabilize').checked = cfg.auto_stabilize !== false;
+  document.getElementById('mlAutoGrow').checked = cfg.auto_grow !== false;
+  document.getElementById('mlMinAccuracy').value = cfg.min_accuracy_threshold || 0.90;
+  document.getElementById('mlConfThreshold').value = cfg.confidence_threshold || 0.60;
+  const gt = cfg.growth_targets || {};
+  document.getElementById('mlTargetAccuracy').value = gt.target_accuracy || 0.98;
+
+  // Trend
+  const trend = d.accuracy_trend || [];
+  const trendEl = document.getElementById('ml-trend');
+  if (trend.length) {
+    trendEl.innerHTML = trend.map(t => {
+      const pct = (t.accuracy * 100).toFixed(1);
+      const bar = '█'.repeat(Math.round(t.accuracy * 30));
+      return `<div>${new Date(t.timestamp).toLocaleString()} | ${bar} ${pct}% [${t.type}]</div>`;
+    }).join('');
+  } else { trendEl.innerHTML = '<p style="color:#8b949e">No accuracy history yet. Run an assessment first.</p>'; }
+
+  // Events
+  const events = d.recent_events || [];
+  const evEl = document.getElementById('ml-events');
+  if (events.length) {
+    evEl.innerHTML = events.reverse().map(e => `
+      <div class="topic-item">
+        <span class="badge ${e.type==='growth_cycle'?'badge-on':'badge-off'}">${e.type}</span>
+        <span style="color:#8b949e;font-size:.85rem">${Object.entries(e).filter(([k])=>!['timestamp','type'].includes(k)).map(([k,v])=>`${k}: ${typeof v==='number'?(v*100).toFixed(1)+'%':JSON.stringify(v)}`).join(' | ')}</span>
+        <span style="color:#8b949e;font-size:.75rem">${new Date(e.timestamp).toLocaleString()}</span>
+      </div>
+    `).join('');
+  } else { evEl.innerHTML = '<p style="color:#8b949e">No ML events yet.</p>'; }
+
+  document.getElementById('stat-cycles').textContent = d.cycle_count || 0;
+}
+async function saveMLConfig() {
+  await postJSON('/admin/ml/config', {
+    auto_grow: document.getElementById('mlAutoGrow').checked,
+    min_accuracy_threshold: parseFloat(document.getElementById('mlMinAccuracy').value) || 0.90,
+    confidence_threshold: parseFloat(document.getElementById('mlConfThreshold').value) || 0.60,
+    growth_targets: { target_accuracy: parseFloat(document.getElementById('mlTargetAccuracy').value) || 0.98 },
+  });
+}
+
+/* ── Dashboard Growth Info ── */
+async function loadDashboardGrowth() {
+  const d = await api('/admin/api/stats');
+  // Growth factors
+  const gk = document.getElementById('growth-knowledge');
+  gk.innerHTML = `<strong style="color:#3fb950">${d.total_entries}</strong> total entries | <strong style="color:#58a6ff">${d.extra_entries}</strong> learned | <strong style="color:#bc8cff">${d.domains.length}</strong> domains`;
+
+  const gs = document.getElementById('growth-sources');
+  const sb = d.source_breakdown || {};
+  const activeSources = Object.keys(sb).filter(k => sb[k] > 0);
+  gs.innerHTML = `<strong style="color:#3fb950">${activeSources.length}</strong> active: ${activeSources.join(', ') || 'none'}`;
+
+  const gst = document.getElementById('growth-stability');
+  const ml = d.ml_engine || {};
+  const lastOpt = ml.last_optimization ? new Date(ml.last_optimization).toLocaleString() : 'Never';
+  gst.innerHTML = `Cycles: <strong style="color:#58a6ff">${ml.cycle_count||0}</strong> | Last optimization: ${lastOpt}`;
+
+  const ga = document.getElementById('growth-automation');
+  const cron = d.cron || {};
+  const wfs = cron.workflows || {};
+  const activeWfs = Object.entries(wfs).filter(([,v]) => v.enabled).length;
+  ga.innerHTML = `<strong style="color:#3fb950">${activeWfs}/4</strong> workflows active | Learning ${d.learning?.learning_velocity?.toFixed(1)||0} entries/hr`;
+
+  // Stabilization notes
+  const sn = document.getElementById('stabilization-notes');
+  const events = ml.recent_events || [];
+  const stabEvents = events.filter(e => e.type && (e.type.includes('stabiliz') || e.type === 'growth_cycle' || e.type === 'assessment'));
+  if (stabEvents.length) {
+    sn.innerHTML = stabEvents.slice(-5).map(e => {
+      const ts = e.timestamp ? new Date(e.timestamp).toLocaleString() : '';
+      let msg = `[${e.type}] `;
+      if (e.accuracy !== undefined) msg += `Accuracy: ${(e.accuracy*100).toFixed(1)}% `;
+      if (e.action) msg += `Action: ${e.action} `;
+      if (e.old_accuracy !== undefined) msg += `Old: ${(e.old_accuracy*100).toFixed(1)}% → New: ${(e.new_accuracy*100).toFixed(1)}% `;
+      if (e.weak_domains && e.weak_domains.length) msg += `Weak: ${e.weak_domains.join(', ')} `;
+      if (e.confidence !== undefined) msg += `Conf: ${(e.confidence*100).toFixed(1)}% `;
+      return `<div style="padding:4px 0;border-bottom:1px solid #21262d"><span style="color:#8b949e;font-size:.8rem">${ts}</span> ${msg}</div>`;
+    }).join('');
+  } else {
+    sn.innerHTML = '<span style="color:#8b949e">No stabilization events yet. Run an ML assessment or growth cycle.</span>';
+  }
+  renderSourceBar(d.source_breakdown || {});
+}
+
+/* ── Cron Controls ── */
+async function loadCronConfig() {
+  const d = await api('/admin/cron/config');
+  const cfg = d.config || {};
+  const redlines = d.redlines || {};
+  const el = document.getElementById('cron-controls');
+  const wfs = cfg.workflows || {};
+
+  el.innerHTML = Object.entries(wfs).map(([key, wf]) => {
+    const rl = redlines[key] || {};
+    const maxSafe = rl.max_safe_per_hour || 4;
+    const maxAbs = rl.max_absolute_per_hour || 12;
+    const current = wf.runs_per_hour || 0;
+
+    let color = '#3fb950'; // green
+    if (current >= maxAbs) color = '#f85149'; // red
+    else if (current >= maxSafe) color = '#d29922'; // yellow
+
+    const pct = Math.min(100, (current / maxAbs) * 100);
+    const label = rl.label || key;
+
+    return `
+      <div class="card" style="padding:16px;margin-bottom:12px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+          <div>
+            <strong style="color:#e6edf3">${label}</strong>
+            <label style="margin-left:12px;cursor:pointer">
+              <input type="checkbox" ${wf.enabled?'checked':''} onchange="saveCronConfig('${key}', 'enabled', this.checked)"> Enabled
+            </label>
+          </div>
+          <div style="font-size:.85rem">
+            <span style="color:${color};font-weight:700">${current}</span>
+            <span style="color:#8b949e">/ ${maxAbs} max</span>
+            <span style="color:#8b949e;margin-left:8px">(safe: ≤${maxSafe})</span>
+          </div>
+        </div>
+        <!-- Gauge bar -->
+        <div style="background:#0d1117;border-radius:4px;height:8px;overflow:hidden;margin-bottom:8px;position:relative">
+          <div style="width:${pct}%;background:${color};height:100%;border-radius:4px;transition:width .3s"></div>
+          <div style="position:absolute;left:${maxSafe/maxAbs*100}%;top:0;width:2px;height:100%;background:#d29922" title="Safe limit"></div>
+        </div>
+        <!-- Slider -->
+        <div style="display:flex;align-items:center;gap:8px">
+          <input type="range" min="0" max="${maxAbs}" value="${current}" style="flex:1;accent-color:${color}"
+            oninput="this.nextElementSibling.textContent=this.value+'/hr'"
+            onchange="saveCronConfig('${key}', 'runs_per_hour', parseInt(this.value))">
+          <span style="color:#c9d1d9;font-size:.85rem;min-width:40px">${current}/hr</span>
+        </div>
+        <div style="color:#8b949e;font-size:.8rem;margin-top:6px">
+          ${current >= maxAbs ? '🔴 REDLINE — at absolute maximum! Risk of service throttling.' :
+            current >= maxSafe ? '🟡 Above safe limit. Monitor for rate limiting.' :
+            '🟢 Within safe operating range.'}
+          <br>${rl.note || ''}
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+async function saveCronConfig(key, field, value) {
+  const data = {};
+  data[key] = {};
+  data[key][field] = value;
+  const el = document.getElementById('cron-status');
+  const d = await postJSON('/admin/cron/config', data);
+  if (d.status === 'success') {
+    el.innerHTML = statusHTML('ok', '✅ Cron config saved');
+    loadCronConfig();
+  } else {
+    el.innerHTML = statusHTML('err', '❌ ' + (d.error || 'Failed'));
+  }
+}
+
+/* ── Live Activity ── */
+async function loadActivity() {
+  const d = await api('/admin/learning/stats');
+
+  document.getElementById('act-events').textContent = d.total_events || 0;
+  document.getElementById('act-24h').textContent = d.entries_last_24h || 0;
+  document.getElementById('act-velocity').textContent = (d.learning_velocity || 0).toFixed(1) + ' /hr';
+
+  // Source table
+  const srcEl = document.getElementById('act-sources');
+  const sources = d.source_stats || {};
+  if (Object.keys(sources).length) {
+    srcEl.innerHTML = '<table class="k-table"><thead><tr><th>Source</th><th>Entries</th><th>Crawls</th><th>Last</th></tr></thead><tbody>' +
+      Object.entries(sources).sort((a,b) => b[1].total_entries - a[1].total_entries).map(([src, s]) =>
+        `<tr><td><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:${SOURCE_COLORS[src]||'#484f58'};margin-right:6px;vertical-align:middle"></span>${esc(src)}</td><td style="color:#3fb950;font-weight:600">${s.total_entries}</td><td>${s.crawl_count}</td><td style="color:#8b949e;font-size:.8rem">${s.last_crawl?new Date(s.last_crawl).toLocaleString():'—'}</td></tr>`
+      ).join('') + '</tbody></table>';
+  } else { srcEl.innerHTML = '<p style="color:#8b949e">No learning events yet.</p>'; }
+
+  // Topic table
+  const topEl = document.getElementById('act-topics');
+  const topics = d.topic_stats || {};
+  if (Object.keys(topics).length) {
+    topEl.innerHTML = '<table class="k-table"><thead><tr><th>Topic</th><th>Entries</th><th>Crawls</th><th>Sources</th></tr></thead><tbody>' +
+      Object.entries(topics).sort((a,b) => b[1].total_entries - a[1].total_entries).map(([topic, s]) =>
+        `<tr><td style="font-weight:600">${esc(topic)}</td><td style="color:#3fb950">${s.total_entries}</td><td>${s.crawl_count}</td><td style="color:#8b949e;font-size:.8rem">${(s.sources||[]).join(', ')}</td></tr>`
+      ).join('') + '</tbody></table>';
+  } else { topEl.innerHTML = '<p style="color:#8b949e">No topic data yet.</p>'; }
+
+  // Activity feed
+  const feedEl = document.getElementById('act-feed');
+  const recent = (d.recent_activity || []).reverse();
+  if (recent.length) {
+    feedEl.innerHTML = recent.map(e => {
+      const ts = e.timestamp ? new Date(e.timestamp).toLocaleString() : '';
+      const color = SOURCE_COLORS[e.source] || '#8b949e';
+      return `<div class="topic-item">
+        <span style="color:${color};font-weight:600;min-width:110px">${esc(e.source||'')}</span>
+        <span class="name">${esc(e.topic||'')}</span>
+        <span style="color:#3fb950;font-weight:600">${e.entries||0} entries</span>
+        <span style="color:#8b949e;font-size:.75rem">${ts}</span>
+      </div>`;
+    }).join('');
+  } else { feedEl.innerHTML = '<p style="color:#8b949e">No activity to show. Trigger a crawl or learning command.</p>'; }
+}
+// Auto-refresh activity every 30s when visible
+setInterval(() => {
+  if (document.getElementById('sec-activity').classList.contains('active')) loadActivity();
+}, 30000);
+
+async function mlAssess() {
+  const el = document.getElementById('ml-status');
+  el.innerHTML = spinnerHTML('Assessing model quality…');
+  const d = await postJSON('/admin/ml/assess', {});
+  if (d.status === 'ok') {
+    document.getElementById('stat-accuracy').textContent = (d.overall_accuracy*100).toFixed(1)+'%';
+    let domLines = Object.entries(d.domains||{}).map(([dom, s])=>`  ${dom}: ${(s.accuracy*100).toFixed(1)}% acc, ${(s.avg_confidence*100).toFixed(1)}% conf (${s.low_confidence_count} low-conf)`).join('\n');
+    const asEl = document.getElementById('ml-assessment');
+    asEl.innerHTML = resultBox('success', `Overall Accuracy: ${(d.overall_accuracy*100).toFixed(1)}%\nAvg Confidence: ${(d.avg_confidence*100).toFixed(1)}%\nTotal Entries: ${d.total_entries}\nClasses: ${d.total_classes}\nWeak Domains: ${d.weak_domains.length? d.weak_domains.join(', ') : 'None'}\n\nDomain Breakdown:\n${domLines}`);
+    el.innerHTML = statusHTML('ok', '✅ Assessment complete');
+    loadMLEngine();
+  } else { el.innerHTML = statusHTML('err', `❌ ${d.message || d.status}`); }
+}
+async function mlOptimize() {
+  const el = document.getElementById('ml-status');
+  el.innerHTML = spinnerHTML('Optimizing model… trying multiple hyperparameter configs. This may take several minutes.');
+  const d = await postJSON('/admin/ml/optimize', {});
+/* ── AI Conditioning ── */
+const COND_ICONS = {belief:'🌍', value:'💎', tone:'🎭', worldview:'🔭', rule:'📏'};
+
+async function loadConditioning() {
+  const el = document.getElementById('conditioning-list');
+  try {
+    const d = await api('/admin/conditioning');
+    const entries = d.entries || [];
+    if (!entries.length) {
+      el.innerHTML = '<p style="color:#484f58;font-style:italic">No conditioning set. The AI has a blank slate — add beliefs, values, and worldview to shape its perception.</p>';
+      return;
+    }
+    el.innerHTML = entries.map(e => {
+      const icon = COND_ICONS[e.category] || '📋';
+      const opacity = e.active ? '1' : '0.4';
+      const toggleLabel = e.active ? 'Pause' : 'Resume';
+      const catColor = {belief:'#58a6ff', value:'#3fb950', tone:'#d2a8ff', worldview:'#f0883e', rule:'#8b949e'}[e.category] || '#8b949e';
+      return `<div class="card" style="padding:12px;display:flex;align-items:flex-start;gap:10px;opacity:${opacity}">
+        <span style="font-size:1.3rem">${icon}</span>
+        <div style="flex:1;min-width:0">
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px">
+            <span style="background:${catColor}22;color:${catColor};padding:2px 8px;border-radius:4px;font-size:.7rem;text-transform:uppercase;font-weight:600">${e.category}</span>
+            <span style="color:#8b949e;font-size:.7rem">${new Date(e.created_at).toLocaleDateString()}</span>
+          </div>
+          <div style="color:#e6edf3;font-size:.9rem">${esc(e.directive)}</div>
+          ${e.detail ? `<div style="color:#8b949e;font-size:.8rem;margin-top:4px">${esc(e.detail)}</div>` : ''}
+        </div>
+        <div style="display:flex;gap:4px;flex-shrink:0">
+          <button class="btn btn-gray" style="padding:4px 8px;font-size:.75rem" onclick="toggleConditioning('${e.id}')">${toggleLabel}</button>
+          <button class="btn btn-gray" style="padding:4px 8px;font-size:.75rem;color:#f85149" onclick="deleteConditioning('${e.id}')">✕</button>
+        </div>
+      </div>`;
+    }).join('');
+  } catch (err) {
+    el.innerHTML = statusHTML('err', 'Failed to load conditioning: ' + err.message);
+  }
+}
+
+async function addConditioning() {
+  const cat = document.getElementById('condCategory').value;
+  const directive = document.getElementById('condDirective').value.trim();
+  const detail = document.getElementById('condDetail').value.trim();
+  const st = document.getElementById('conditioning-status');
+  if (!directive) { st.innerHTML = statusHTML('err', 'Enter a directive'); return; }
+
+  st.innerHTML = spinnerHTML('Adding...');
+  const d = await postJSON('/admin/conditioning', {category: cat, directive, detail});
+  if (d.status === 'ok') {
+    st.innerHTML = statusHTML('ok', `✅ Added ${cat} conditioning (${d.total} total)`);
+    document.getElementById('condDirective').value = '';
+    document.getElementById('condDetail').value = '';
+    loadConditioning();
+  } else {
+    st.innerHTML = statusHTML('err', d.error || 'Failed');
+  }
+}
+
+async function toggleConditioning(id) {
+  await postJSON(`/admin/conditioning/${id}/toggle`, {});
+  loadConditioning();
+}
+
+async function deleteConditioning(id) {
+  await postJSON(`/admin/conditioning/${id}`, {}, 'DELETE');
+  loadConditioning();
+}
+
+  if (d.status === 'success') {
+    let lines = [`Best accuracy: ${(d.best_accuracy*100).toFixed(1)}%\nBest config: ${JSON.stringify(d.best_config)}\n`];
+    for (const r of d.results||[]) {
+      lines.push(`  ${JSON.stringify(r.config)}: ${r.status === 'ok'? (r.accuracy*100).toFixed(1)+'%' : r.status}`);
+    }
+    el.innerHTML = resultBox('success', `✅ Optimization complete!\n\n${lines.join('\n')}`);
+    refreshStats(); loadMLEngine();
+  } else { el.innerHTML = resultBox('error', `❌ ${d.error || d.status}`); }
+}
+
+/* ── Admin Chatbot ── */
+function chatAppendMsg(role, html) {
+  const container = document.getElementById('chat-messages');
+  const div = document.createElement('div');
+  div.className = 'chat-msg ' + role;
+  const label = role === 'user' ? '👤 You' : '🤖 Admin Bot';
+  const bg = role === 'user' ? '#161b22' : '#1c2128';
+  const align = role === 'user' ? 'align-self:flex-end' : '';
+  div.innerHTML = `
+    <div style="font-size:.8rem;color:#8b949e;margin-bottom:4px;${role==='user'?'text-align:right':''}">${label}</div>
+    <div style="background:${bg};border:1px solid #30363d;border-radius:10px;padding:12px;color:#c9d1d9;font-size:.9rem;max-width:85%;white-space:pre-wrap;${align}">${html}</div>
+  `;
+  container.appendChild(div);
+  container.scrollTop = container.scrollHeight;
+}
+
+function chatMarkdown(text) {
+  // Minimal markdown: bold, code, newlines
+  return text
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/\*\*(.+?)\*\*/g, '<strong style="color:#58a6ff">$1</strong>')
+    .replace(/`(.+?)`/g, '<code style="background:#0d1117;padding:2px 6px;border-radius:4px;font-size:.85rem">$1</code>')
+    .replace(/\n/g, '<br>');
+}
+
+async function sendChat() {
+  const input = document.getElementById('chat-input');
+  const msg = input.value.trim();
+  if (!msg) return;
+  input.value = '';
+  input.disabled = true;
+
+  chatAppendMsg('user', esc(msg));
+  chatAppendMsg('assistant', '<span class="spinner"></span> Thinking...');
+
+  try {
+    const d = await postJSON('/admin/chat', {message: msg});
+    // Remove the "thinking" message
+    const container = document.getElementById('chat-messages');
+    container.removeChild(container.lastChild);
+
+    // Show reply
+    let replyHTML = chatMarkdown(d.reply || 'No response');
+    if (d.followup) {
+      replyHTML += '<hr style="border-color:#30363d;margin:12px 0">' + chatMarkdown(d.followup);
+    }
+    chatAppendMsg('assistant', replyHTML);
+
+    // Refresh dashboard stats after any action
+    if (d.action_results && d.action_results.length) {
+      refreshStats();
+    }
+  } catch (e) {
+    const container = document.getElementById('chat-messages');
+    container.removeChild(container.lastChild);
+    chatAppendMsg('assistant', '<span style="color:#f85149">Error: ' + esc(e.message) + '</span>');
+  } finally {
+    document.getElementById('chat-input').disabled = false;
+  }
+}
+function chatQuick(msg) { document.getElementById('chat-input').value = msg; sendChat(); }
+
+/* ── AI Conditioning ── */
+const COND_ICONS = {belief:'🌍', value:'💎', tone:'🎭', worldview:'🔭', rule:'📏'};
+
+async function loadConditioning() {
+  const el = document.getElementById('conditioning-list');
+  try {
+    const d = await api('/admin/conditioning');
+    const entries = d.entries || [];
+    if (!entries.length) {
+      el.innerHTML = '<p style="color:#484f58;font-style:italic">No conditioning set. The AI has a blank slate — add beliefs, values, and worldview to shape its perception.</p>';
+      return;
+    }
+    el.innerHTML = entries.map(e => {
+      const icon = COND_ICONS[e.category] || '📋';
+      const opacity = e.active ? '1' : '0.4';
+      const toggleLabel = e.active ? 'Pause' : 'Resume';
+      const catColor = {belief:'#58a6ff', value:'#3fb950', tone:'#d2a8ff', worldview:'#f0883e', rule:'#8b949e'}[e.category] || '#8b949e';
+      return `<div class="card" style="padding:12px;display:flex;align-items:flex-start;gap:10px;opacity:${opacity}">
+        <span style="font-size:1.3rem">${icon}</span>
+        <div style="flex:1;min-width:0">
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px">
+            <span style="background:${catColor}22;color:${catColor};padding:2px 8px;border-radius:4px;font-size:.7rem;text-transform:uppercase;font-weight:600">${e.category}</span>
+            <span style="color:#8b949e;font-size:.7rem">${new Date(e.created_at).toLocaleDateString()}</span>
+          </div>
+          <div style="color:#e6edf3;font-size:.9rem">${esc(e.directive)}</div>
+          ${e.detail ? `<div style="color:#8b949e;font-size:.8rem;margin-top:4px">${esc(e.detail)}</div>` : ''}
+        </div>
+        <div style="display:flex;gap:4px;flex-shrink:0">
+          <button class="btn btn-gray" style="padding:4px 8px;font-size:.75rem" onclick="toggleConditioning('${e.id}')">${toggleLabel}</button>
+          <button class="btn btn-gray" style="padding:4px 8px;font-size:.75rem;color:#f85149" onclick="deleteConditioning('${e.id}')">✕</button>
+        </div>
+      </div>`;
+    }).join('');
+  } catch (err) {
+    el.innerHTML = statusHTML('err', 'Failed to load conditioning: ' + err.message);
+  }
+}
+
+async function addConditioning() {
+  const cat = document.getElementById('condCategory').value;
+  const directive = document.getElementById('condDirective').value.trim();
+  const detail = document.getElementById('condDetail').value.trim();
+  const st = document.getElementById('conditioning-status');
+  if (!directive) { st.innerHTML = statusHTML('err', 'Enter a directive'); return; }
+
+  st.innerHTML = spinnerHTML('Adding...');
+  const d = await postJSON('/admin/conditioning', {category: cat, directive, detail});
+  if (d.status === 'ok') {
+    st.innerHTML = statusHTML('ok', `✅ Added ${cat} conditioning (${d.total} total)`);
+    document.getElementById('condDirective').value = '';
+    document.getElementById('condDetail').value = '';
+    loadConditioning();
+  } else {
+    st.innerHTML = statusHTML('err', d.error || 'Failed');
+  }
+}
+
+async function toggleConditioning(id) {
+  await postJSON(`/admin/conditioning/${id}/toggle`, {});
+  loadConditioning();
+}
+
+async function deleteConditioning(id) {
+  await api(`/admin/conditioning/${id}`, {method: 'DELETE'});
+  loadConditioning();
+}
+
+async function mlStabilize() {
+  const el = document.getElementById('ml-status');
+  el.innerHTML = spinnerHTML('Checking model stability…');
+  const d = await postJSON('/admin/ml/stabilize', {});
+  el.innerHTML = resultBox(d.status==='stable'?'success':'warning', `${d.message || d.status}\n\nAction: ${d.action}`);
+  loadMLEngine();
+}
+async function mlGrowthCheck() {
+  const el = document.getElementById('ml-status');
+  el.innerHTML = spinnerHTML('Checking growth needs…');
+  const d = await postJSON('/admin/ml/growth-check', {});
+  if (d.status === 'ok') {
+    let lines = [`Accuracy: ${(d.accuracy*100).toFixed(1)}% | Entries: ${d.entries} | Domains: ${d.domains}\n`];
+    if (d.suggestions.length) {
+      lines.push('Suggestions:');
+      for (const s of d.suggestions) { lines.push(`  [${s.priority}] ${s.message}`); }
+    } else { lines.push('✅ No growth needed — model is healthy!'); }
+    el.innerHTML = resultBox(d.needs_growth?'warning':'success', lines.join('\n'));
+  } else { el.innerHTML = resultBox('error', `❌ ${d.status}`); }
+}
+async function mlGrowthCycle() {
+  const el = document.getElementById('ml-status');
+  el.innerHTML = spinnerHTML('Running full growth cycle (assess → stabilize → optimize)… may take several minutes.');
+  const d = await postJSON('/admin/ml/growth-cycle', {});
+  if (d.status === 'success') {
+    let lines = [`Final Accuracy: ${(d.final_accuracy*100).toFixed(1)}%\nImprovement: ${d.improvement>=0?'+':''}${(d.improvement*100).toFixed(2)}%\n\nSteps:`];
+    for (const s of d.steps||[]) {
+      lines.push(`  ${s.step}: ${JSON.stringify(s)}`);
+    }
+    el.innerHTML = resultBox('success', `✅ Growth cycle complete!\n\n${lines.join('\n')}`);
+    refreshStats(); loadMLEngine();
+  } else { el.innerHTML = resultBox('error', `❌ ${d.status}`); }
+}
+
+/* ── Init ── */
+loadTopics();
+loadLearned();
+
+/* ── Learned Topics ── */
+async function loadLearned() {
+  const summaryEl = document.getElementById('learned-summary');
+  const topicsEl = document.getElementById('learned-topics');
+  const filesEl = document.getElementById('learned-files');
+  if (!summaryEl) return;
+
+  summaryEl.innerHTML = spinnerHTML('Loading learned knowledge…');
+  topicsEl.innerHTML = '';
+  filesEl.innerHTML = '';
+
+  try {
+    const d = await api('/admin/learned');
+    const s = d.summary || {};
+
+    summaryEl.innerHTML = `
+      <div class="cards">
+        <div class="card"><div class="label">Total Files</div><div class="value">${s.total_files || 0}</div></div>
+        <div class="card"><div class="label">Total Entries</div><div class="value green">${s.total_entries || 0}</div></div>
+        <div class="card"><div class="label">Topics</div><div class="value purple">${s.total_topics || 0}</div></div>
+        <div class="card"><div class="label">Sources</div><div class="value orange">${(s.source_types||[]).join(', ') || '—'}</div></div>
+      </div>`;
+
+    // Topics list
+    const topics = d.topics || [];
+    if (topics.length) {
+      topicsEl.innerHTML = '<h3 style="font-size:1rem;margin-bottom:12px">Topics &amp; Subtopics</h3>' +
+        topics.map(t => {
+          const domains = Object.entries(t.domains||{}).sort((a,b)=>b[1]-a[1]);
+          const domainTags = domains.map(([dom,cnt]) =>
+            `<span class="k-table .domain-tag" style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:.75rem;background:#1c2128;color:#58a6ff;margin-right:4px">${dom}: ${cnt}</span>`
+          ).join('');
+          return `<div style="background:#0d1117;border:1px solid #30363d;border-radius:6px;padding:12px;margin-bottom:8px">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+              <strong style="color:#e6edf3">${esc(t.topic)}</strong>
+              <span style="color:#8b949e;font-size:.85rem">${t.total_entries} entries · ${t.file_count} file(s) · ${(t.sources||[]).join(', ')}</span>
+            </div>
+            <div>${domainTags}</div>
+            ${t.latest ? `<div style="margin-top:4px;color:#8b949e;font-size:.8rem">Latest: ${t.latest}</div>` : ''}
+          </div>`;
+        }).join('');
+    } else {
+      topicsEl.innerHTML = '<p style="color:#8b949e">No learned topics yet. Upload files or paste text to teach the AI.</p>';
+    }
+
+    // Files list
+    const files = d.files || [];
+    if (files.length) {
+      filesEl.innerHTML = `<table class="k-table"><thead><tr>
+          <th>File</th><th>Source</th><th>Topic</th><th>Entries</th><th>Top Domain</th><th>Size</th><th>Date</th>
+        </tr></thead><tbody>` +
+        files.map(f => `<tr>
+          <td style="font-family:monospace;font-size:.8rem">${esc(f.filename)}</td>
+          <td>${esc(f.source_type)}</td>
+          <td>${esc(f.topic)}</td>
+          <td>${f.entries}</td>
+          <td><span class="k-table .domain-tag" style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:.75rem;background:#1c2128;color:#58a6ff">${esc(f.top_domain)}</span></td>
+          <td>${f.size_kb} KB</td>
+          <td style="font-size:.8rem">${f.timestamp || '—'}</td>
+        </tr>`).join('') +
+        '</tbody></table>';
+    }
+  } catch (e) {
+    summaryEl.innerHTML = statusHTML('err', 'Failed to load learned topics: ' + e.message);
+  }
+}
+</script>
+</html>

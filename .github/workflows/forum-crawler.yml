@@ -1,0 +1,85 @@
+name: Forum Knowledge Crawler
+
+on:
+  schedule:
+    # Every 15 minutes, staggered from wiki crawler
+    - cron: "3 * * * *"
+    - cron: "18 * * * *"
+    - cron: "33 * * * *"
+    - cron: "48 * * * *"
+  workflow_dispatch:
+    inputs:
+      topic:
+        description: "Specific topic to crawl (leave empty for all)"
+        type: string
+        required: false
+
+permissions:
+  contents: write
+
+jobs:
+  crawl-forums:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Check if enabled
+        id: enabled
+        run: |
+          python -c "
+          import json, sys
+          from pathlib import Path
+          cfg_path = Path('data/cron_config.json')
+          if cfg_path.exists():
+              cfg = json.loads(cfg_path.read_text())
+              wf = cfg.get('workflows', {}).get('forum_crawler', {})
+              if not wf.get('enabled', True):
+                  print('Forum crawler disabled via admin')
+                  sys.exit(0)
+          print('enabled=true')
+          " | tee /dev/stderr
+          echo "run=true" >> "$GITHUB_OUTPUT"
+
+      - name: Run forum crawler
+        if: steps.enabled.outputs.run == 'true'
+        run: |
+          python -c "
+          import sys
+          sys.path.insert(0, '.')
+          from forum_crawler import run_all_forum_crawlers, crawl_single_forum_topic
+          topic = '${{ inputs.topic }}'.strip()
+          if topic:
+              result = crawl_single_forum_topic(topic)
+              print(f'Single topic: {result}')
+          else:
+              result = run_all_forum_crawlers()
+              print(f'Total new entries: {result[\"total_new_entries\"]}')
+              for name, info in result['topics'].items():
+                  print(f'  {name}: {info[\"status\"]} ({info[\"entries\"]} entries)')
+          "
+
+      - name: Check for new knowledge files
+        id: check
+        run: |
+          if [ -n "$(git status data/ --porcelain 2>/dev/null)" ]; then
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit new knowledge
+        if: steps.check.outputs.has_changes == 'true'
+        run: |
+          git config user.name "libaix-forum-crawler[bot]"
+          git config user.email "forum-crawler@libaix.local"
+          git add data/
+          count=$(git diff --cached --numstat data/extra_knowledge/ | wc -l)
+          git commit -m "forum-crawler: add ${count} new knowledge file(s) [skip ci]"
+          git push

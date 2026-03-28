@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>libaix Admin — Login</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:#0d1117;color:#c9d1d9;display:flex;align-items:center;justify-content:center;min-height:100vh}
+.login-box{background:#161b22;border:1px solid #30363d;border-radius:12px;padding:40px;width:380px;box-shadow:0 8px 32px rgba(0,0,0,.4)}
+h1{text-align:center;margin-bottom:8px;color:#58a6ff;font-size:1.6rem}
+.subtitle{text-align:center;color:#8b949e;margin-bottom:28px;font-size:.9rem}
+label{display:block;margin-bottom:6px;color:#8b949e;font-size:.85rem}
+input[type=text],input[type=password]{width:100%;padding:10px 14px;border:1px solid #30363d;
+  border-radius:6px;background:#0d1117;color:#c9d1d9;font-size:1rem;margin-bottom:16px;outline:none}
+input:focus{border-color:#58a6ff}
+button{width:100%;padding:12px;background:#238636;color:#fff;border:none;border-radius:6px;
+  font-size:1rem;cursor:pointer;font-weight:600}
+button:hover{background:#2ea043}
+.flash{background:#da3633;color:#fff;padding:10px;border-radius:6px;margin-bottom:16px;text-align:center;font-size:.9rem}
+.logo{text-align:center;margin-bottom:20px;font-size:2rem}
+</style>
+</head>
+<body>
+<form class="login-box" method="POST" action="/admin/login">
+  <div class="logo">🧠</div>
+  <h1>libaix Admin</h1>
+  <p class="subtitle">Knowledge Management Portal</p>
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for msg in messages %}
+        <div class="flash">{{ msg }}</div>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+  <label for="username">Username</label>
+  <input type="text" id="username" name="username" required autocomplete="username">
+  <label for="password">Password</label>
+  <input type="password" id="password" name="password" required autocomplete="current-password">
+  <button type="submit">Sign In</button>
+</form>
+</body>
+</html>

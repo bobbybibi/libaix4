@@ -1,0 +1,48 @@
+{
+  "auto_optimize": true,
+  "auto_stabilize": true,
+  "auto_grow": true,
+  "min_accuracy_threshold": 0.9,
+  "confidence_threshold": 0.6,
+  "max_epochs_per_cycle": 10000,
+  "optimization_configs": [
+    {
+      "activation": "tanh",
+      "optimizer": "adam",
+      "lr": 0.01,
+      "epochs": 5000
+    },
+    {
+      "activation": "tanh",
+      "optimizer": "adam",
+      "lr": 0.005,
+      "epochs": 8000
+    },
+    {
+      "activation": "relu",
+      "optimizer": "adam",
+      "lr": 0.005,
+      "epochs": 5000
+    },
+    {
+      "activation": "tanh",
+      "optimizer": "adam",
+      "lr": 0.002,
+      "epochs": 15000
+    },
+    {
+      "activation": "tanh",
+      "optimizer": "adam",
+      "lr": 0.001,
+      "epochs": 20000
+    }
+  ],
+  "growth_targets": {
+    "min_entries": 200,
+    "min_domains": 8,
+    "target_accuracy": 0.98
+  },
+  "last_optimization": null,
+  "last_assessment": "2026-03-25T07:15:04.795936+00:00",
+  "cycle_count": 0
+}

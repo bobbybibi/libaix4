@@ -1,0 +1,82 @@
+name: ML Self-Growth Cycle
+
+on:
+  schedule:
+    # Run growth cycle every hour
+    - cron: "10 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  growth-cycle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Check if enabled
+        id: enabled
+        run: |
+          python -c "
+          import json, sys
+          from pathlib import Path
+          cfg_path = Path('data/cron_config.json')
+          if cfg_path.exists():
+              cfg = json.loads(cfg_path.read_text())
+              wf = cfg.get('workflows', {}).get('ml_growth', {})
+              if not wf.get('enabled', True):
+                  print('ML growth disabled via admin')
+                  sys.exit(0)
+          print('enabled=true')
+          " | tee /dev/stderr
+          echo "run=true" >> "$GITHUB_OUTPUT"
+
+      - name: Run ML growth cycle
+        if: steps.enabled.outputs.run == 'true'
+        run: |
+          python -c "
+          import json, sys
+          sys.path.insert(0, '.')
+          from ml_engine import run_growth_cycle, assess_model, get_engine_stats
+
+          # Assess first
+          assessment = assess_model()
+          if assessment.get('status') != 'ok':
+              print('No model to optimize')
+              sys.exit(0)
+
+          print(f'Current accuracy: {assessment[\"overall_accuracy\"]:.1%}')
+          print(f'Weak domains: {assessment.get(\"weak_domains\", [])}')
+
+          # Only run growth cycle if improvement is needed
+          if assessment['overall_accuracy'] >= 0.995 and not assessment.get('weak_domains'):
+              print('Model already optimal, skipping growth cycle')
+              sys.exit(0)
+
+          result = run_growth_cycle()
+          print(f'Growth cycle result: {result[\"status\"]}')
+          print(f'Final accuracy: {result.get(\"final_accuracy\", 0):.1%}')
+          print(f'Improvement: {result.get(\"improvement\", 0):+.2%}')
+          "
+
+      - name: Commit updated models
+        run: |
+          git config user.name "libaix-ml-engine[bot]"
+          git config user.email "ml-engine@libaix.local"
+          git add models/ data/ml_engine_config.json data/ml_engine_history.json
+          if git diff --cached --quiet; then
+            echo "No model changes to commit."
+          else
+            git commit -m "ml-engine: self-growth optimization cycle [skip ci]"
+            git push
+          fi

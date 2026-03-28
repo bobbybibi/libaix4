@@ -1,0 +1,154 @@
+{
+  "topics": [
+    {
+      "name": "Wi-Fi Security",
+      "keywords": [
+        "WPA3",
+        "802.1X authentication",
+        "wireless security",
+        "WPA2 enterprise",
+        "RADIUS server"
+      ],
+      "enabled": false,
+      "max_articles": 12
+    },
+    {
+      "name": "Network Protocols",
+      "keywords": [
+        "TCP/IP protocol",
+        "routing protocol",
+        "network protocol",
+        "BGP routing",
+        "OSPF"
+      ],
+      "enabled": true,
+      "max_articles": 12
+    },
+    {
+      "name": "Corporate Network Security",
+      "keywords": [
+        "enterprise security",
+        "zero trust architecture",
+        "NAC",
+        "network segmentation",
+        "SASE"
+      ],
+      "enabled": true,
+      "max_articles": 12
+    },
+    {
+      "name": "Network Troubleshooting",
+      "keywords": [
+        "Wi-Fi troubleshooting",
+        "network diagnostics",
+        "packet loss",
+        "latency optimization"
+      ],
+      "enabled": true,
+      "max_articles": 10
+    },
+    {
+      "name": "Cloud Networking",
+      "keywords": [
+        "cloud networking",
+        "SD-WAN",
+        "virtual private cloud",
+        "cloud firewall",
+        "AWS VPC"
+      ],
+      "enabled": true,
+      "max_articles": 10
+    },
+    {
+      "name": "DNS and Internet Infrastructure",
+      "keywords": [
+        "DNS server",
+        "DNSSEC",
+        "CDN",
+        "content delivery network",
+        "internet exchange point"
+      ],
+      "enabled": true,
+      "max_articles": 10
+    },
+    {
+      "name": "Firewall and IDS",
+      "keywords": [
+        "firewall technology",
+        "intrusion detection system",
+        "intrusion prevention",
+        "next-generation firewall"
+      ],
+      "enabled": true,
+      "max_articles": 10
+    },
+    {
+      "name": "VPN Technologies",
+      "keywords": [
+        "VPN protocol",
+        "IPsec",
+        "WireGuard",
+        "OpenVPN",
+        "SSL VPN"
+      ],
+      "enabled": true,
+      "max_articles": 10
+    },
+    {
+      "name": "IoT Networking",
+      "keywords": [
+        "IoT network security",
+        "MQTT protocol",
+        "IoT gateway",
+        "smart home network"
+      ],
+      "enabled": true,
+      "max_articles": 8
+    },
+    {
+      "name": "Wireless Standards",
+      "keywords": [
+        "Wi-Fi 6",
+        "Wi-Fi 7",
+        "802.11ax",
+        "802.11be",
+        "mesh networking"
+      ],
+      "enabled": true,
+      "max_articles": 10
+    },
+    {
+      "name": "Cybersecurity Fundamentals",
+      "keywords": [
+        "phishing attack",
+        "ransomware",
+        "DDoS attack",
+        "social engineering attack",
+        "malware analysis"
+      ],
+      "enabled": true,
+      "max_articles": 10
+    },
+    {
+      "name": "Network Hardware",
+      "keywords": [
+        "network switch",
+        "enterprise router",
+        "access point hardware",
+        "network interface card"
+      ],
+      "enabled": true,
+      "max_articles": 8
+    },
+    {
+      "name": "How can hackers get around my company’s Wi-Fi restrictions without them noticing?",
+      "keywords": [
+        "hackers"
+      ],
+      "enabled": true,
+      "max_articles": 8
+    }
+  ],
+  "last_crawl": "2026-03-25T07:16:43.677133+00:00",
+  "crawl_interval_hours": 0.25
+}

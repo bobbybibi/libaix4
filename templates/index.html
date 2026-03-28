@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>libaix — AI Knowledge Assistant</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:#0d1117;color:#e6edf3;min-height:100vh;display:flex;flex-direction:column}
+    /* ── Top nav / tabs ─── */
+    .topbar{display:flex;align-items:center;padding:.6rem 1.5rem;background:#161b22;border-bottom:1px solid #30363d}
+    .logo{font-size:1.2rem;font-weight:800;background:linear-gradient(135deg,#58a6ff,#bc8cff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-right:1.5rem}
+    .tabs{display:flex;gap:.3rem}
+    .tab{padding:.5rem 1rem;border:none;background:none;color:#8b949e;cursor:pointer;border-radius:6px 6px 0 0;font-size:.85rem;font-weight:600;transition:all .15s}
+    .tab:hover{color:#e6edf3;background:#21262d}
+    .tab.active{color:#e6edf3;background:#0d1117;border:1px solid #30363d;border-bottom-color:#0d1117}
+    .spacer{flex:1}
+    .stats-badge{font-size:.75rem;color:#8b949e;padding:.3rem .6rem;background:#21262d;border-radius:12px}
+
+    /* ── Pages ─── */
+    .page{display:none;flex:1;overflow:auto}
+    .page.active{display:flex;flex-direction:column}
+
+    /* ═══════ CHAT PAGE ═══════ */
+    .chat-container{flex:1;display:flex;flex-direction:column;max-width:800px;width:100%;margin:0 auto;padding:1rem}
+    .chat-messages{flex:1;overflow-y:auto;padding:1rem 0;display:flex;flex-direction:column;gap:.8rem}
+    .msg{max-width:85%;padding:.8rem 1rem;border-radius:12px;font-size:.9rem;line-height:1.5;word-wrap:break-word}
+    .msg.bot{align-self:flex-start;background:#161b22;border:1px solid #30363d}
+    .msg.user{align-self:flex-end;background:#1f6feb;color:#fff}
+    .msg .domain-tag{display:inline-block;font-size:.65rem;padding:.1rem .4rem;border-radius:4px;background:#30363d;color:#8b949e;margin-top:.4rem}
+    .msg .confidence{font-size:.7rem;color:#8b949e;margin-top:.2rem}
+    .msg.bot .suggestions{margin-top:.5rem;border-top:1px solid #30363d;padding-top:.4rem}
+    .msg.bot .suggestions summary{font-size:.75rem;color:#58a6ff;cursor:pointer}
+    .msg.bot .suggestions .alt{font-size:.8rem;color:#8b949e;padding:.2rem 0}
+    .chat-input-wrap{display:flex;gap:.5rem;padding:.5rem 0}
+    .chat-input{flex:1;padding:.7rem 1rem;border-radius:10px;border:1px solid #30363d;background:#161b22;color:#e6edf3;font-size:.9rem;outline:none}
+    .chat-input:focus{border-color:#58a6ff}
+    .chat-input::placeholder{color:#484f58}
+    .send-btn{padding:.7rem 1.2rem;border:none;border-radius:10px;background:linear-gradient(135deg,#1f6feb,#388bfd);color:#fff;font-weight:700;cursor:pointer;font-size:.9rem;transition:opacity .15s}
+    .send-btn:hover{opacity:.85}
+    .send-btn:disabled{opacity:.4;cursor:wait}
+    .quick-q{display:flex;flex-wrap:wrap;gap:.4rem;padding:.4rem 0}
+    .quick-q button{padding:.3rem .7rem;border:1px solid #30363d;border-radius:16px;background:#161b22;color:#8b949e;font-size:.75rem;cursor:pointer;transition:all .15s}
+    .quick-q button:hover{border-color:#58a6ff;color:#e6edf3}
+
+    /* ═══════ PLAYGROUND PAGE ═══════ */
+    .pg-container{padding:2rem 1rem;display:flex;flex-direction:column;align-items:center}
+    .pg-container .subtitle{color:#8b949e;font-size:.95rem;margin-bottom:1.5rem}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;width:100%;max-width:900px}
+    @media(max-width:640px){.grid{grid-template-columns:1fr}}
+    .card{background:#161b22;border:1px solid #30363d;border-radius:12px;padding:1.5rem}
+    .card h2{font-size:1rem;color:#8b949e;text-transform:uppercase;letter-spacing:.05em;margin-bottom:1rem}
+    .input-row{display:flex;align-items:center;justify-content:center;gap:1rem;margin-bottom:1rem}
+    .toggle-group{text-align:center}
+    .toggle-group label{display:block;font-size:.75rem;color:#8b949e;margin-bottom:.3rem;text-transform:uppercase;letter-spacing:.05em}
+    .toggle-btn{width:64px;height:64px;border-radius:10px;border:2px solid #30363d;background:#0d1117;color:#e6edf3;font-size:1.6rem;font-weight:700;cursor:pointer;transition:all .15s}
+    .toggle-btn:hover{border-color:#58a6ff}
+    .toggle-btn.active{background:#1f6feb;border-color:#58a6ff;color:#fff}
+    .op-symbol{font-size:1.4rem;color:#8b949e;margin-top:1rem;font-weight:600}
+    .ctrl-row{display:flex;gap:.6rem;margin-bottom:.8rem;flex-wrap:wrap}
+    .ctrl-row select,.ctrl-row input{padding:.45rem .6rem;border-radius:6px;border:1px solid #30363d;background:#0d1117;color:#e6edf3;font-size:.85rem;flex:1;min-width:0}
+    .ctrl-row label{font-size:.7rem;color:#8b949e;display:block;margin-bottom:.2rem}
+    .ctrl-col{flex:1;min-width:80px}
+    .btn{display:block;width:100%;padding:.7rem;border:none;border-radius:8px;color:#fff;font-size:.9rem;font-weight:600;cursor:pointer;transition:opacity .15s;margin-top:.5rem}
+    .btn:hover{opacity:.88}
+    .btn:disabled{opacity:.4;cursor:wait}
+    .btn-green{background:linear-gradient(135deg,#238636,#2ea043)}
+    .btn-blue{background:linear-gradient(135deg,#1f6feb,#388bfd)}
+    .result-box{margin-top:1rem;background:#0d1117;border:1px solid #30363d;border-radius:8px;padding:1rem;text-align:center;display:none}
+    .result-box.show{display:block}
+    .result-value{font-size:2.8rem;font-weight:800;margin:.2rem 0}
+    .result-value.zero{color:#f85149}
+    .result-value.one{color:#3fb950}
+    .result-detail{font-size:.8rem;color:#8b949e}
+    .chart-wrap{position:relative;width:100%;height:200px;margin-top:.5rem;background:#0d1117;border:1px solid #21262d;border-radius:8px;overflow:hidden}
+    .chart-wrap canvas{width:100%!important;height:100%!important}
+    .chart-placeholder{display:flex;align-items:center;justify-content:center;height:100%;color:#484f58;font-size:.85rem}
+    table{width:100%;border-collapse:collapse;font-size:.85rem;margin-top:.8rem}
+    th,td{padding:.4rem .6rem;text-align:center;border-bottom:1px solid #21262d}
+    th{color:#8b949e;font-weight:600}
+    td.correct{color:#3fb950}
+    td.wrong{color:#f85149}
+    .status{font-size:.8rem;color:#8b949e;margin-top:.5rem;min-height:1.2em}
+
+    .footer{padding:1rem;text-align:center;font-size:.7rem;color:#484f58}
+    .footer a{color:#58a6ff;text-decoration:none}
+  </style>
+</head>
+<body>
+  <!-- ── Top Bar ── -->
+  <div class="topbar">
+    <span class="logo">libaix</span>
+    <div class="tabs">
+      <button class="tab active" onclick="showPage('chat')">AI Chat</button>
+      <button class="tab" onclick="showPage('playground')">Playground</button>
+    </div>
+    <div class="spacer"></div>
+    <span class="stats-badge" id="statsBadge">Loading…</span>
+    <a href="/admin/" style="margin-left:.8rem;padding:.35rem .8rem;font-size:.75rem;font-weight:700;color:#e6edf3;background:#da3633;border-radius:8px;text-decoration:none;transition:opacity .15s" onmouseover="this.style.opacity='.8'" onmouseout="this.style.opacity='1'">⚙ Admin</a>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- CHAT PAGE                                                      -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="page active" id="page-chat">
+    <div class="chat-container">
+      <div class="chat-messages" id="chatMessages">
+        <div class="msg bot">
+          👋 Hello! I'm <strong>libaix</strong>, a neural network built from scratch with NumPy.<br>
+          I know about <strong>networking</strong>, <strong>internet</strong>, <strong>intranet</strong>, and <strong>security</strong>.<br>
+          Ask me anything! Type <em>help</em> for topic ideas.
+        </div>
+      </div>
+      <div class="quick-q" id="quickQuestions">
+        <button onclick="askQuick('What is TCP?')">What is TCP?</button>
+        <button onclick="askQuick('What is the OSI model?')">OSI model</button>
+        <button onclick="askQuick('What is HTTPS?')">HTTPS</button>
+        <button onclick="askQuick('What is a VPN?')">VPN</button>
+        <button onclick="askQuick('What is DNS?')">DNS</button>
+        <button onclick="askQuick('What is a firewall?')">Firewall</button>
+        <button onclick="askQuick('What is encryption?')">Encryption</button>
+        <button onclick="askQuick('Help')">Help</button>
+      </div>
+      <div class="chat-input-wrap">
+        <input type="text" class="chat-input" id="chatInput" placeholder="Ask me about networking, internet, security…" autocomplete="off">
+        <button class="send-btn" id="sendBtn" onclick="sendChat()">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- PLAYGROUND PAGE                                                -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="page" id="page-playground">
+    <div class="pg-container">
+      <p class="subtitle">Neural Network Playground — no ML libraries, just NumPy</p>
+      <div class="grid">
+        <!-- LEFT: Predict -->
+        <div class="card">
+          <h2>Predict</h2>
+          <div class="input-row">
+            <div class="toggle-group">
+              <label>Input A</label>
+              <button class="toggle-btn" id="btnA" onclick="toggle('A')">0</button>
+            </div>
+            <span class="op-symbol" id="opSymbol">⊕</span>
+            <div class="toggle-group">
+              <label>Input B</label>
+              <button class="toggle-btn" id="btnB" onclick="toggle('B')">0</button>
+            </div>
+          </div>
+          <div class="ctrl-row">
+            <div class="ctrl-col">
+              <label>Dataset</label>
+              <select id="selDataset">
+                <option value="xor" selected>XOR</option>
+                <option value="and">AND</option>
+                <option value="or">OR</option>
+                <option value="nand">NAND</option>
+              </select>
+            </div>
+          </div>
+          <button class="btn btn-green" id="predictBtn" onclick="predict()">Predict</button>
+          <div class="result-box" id="resultBox">
+            <div class="result-detail">Neural network says</div>
+            <div class="result-value" id="resultValue">—</div>
+            <div class="result-detail" id="resultRaw"></div>
+            <div class="result-detail" id="resultMeta"></div>
+          </div>
+          <table>
+            <thead><tr><th>A</th><th>B</th><th>Expected</th><th>Predicted</th></tr></thead>
+            <tbody id="ttBody"></tbody>
+          </table>
+        </div>
+
+        <!-- RIGHT: Train -->
+        <div class="card">
+          <h2>Train</h2>
+          <div class="ctrl-row">
+            <div class="ctrl-col">
+              <label>Dataset</label>
+              <select id="trainDataset">
+                <option value="xor" selected>XOR</option>
+                <option value="and">AND</option>
+                <option value="or">OR</option>
+                <option value="nand">NAND</option>
+              </select>
+            </div>
+            <div class="ctrl-col">
+              <label>Activation</label>
+              <select id="trainAct">
+                <option value="sigmoid" selected>Sigmoid</option>
+                <option value="tanh">Tanh</option>
+                <option value="relu">ReLU</option>
+              </select>
+            </div>
+          </div>
+          <div class="ctrl-row">
+            <div class="ctrl-col">
+              <label>Optimizer</label>
+              <select id="trainOpt">
+                <option value="sgd" selected>SGD</option>
+                <option value="momentum">Momentum</option>
+                <option value="adam">Adam</option>
+              </select>
+            </div>
+            <div class="ctrl-col">
+              <label>Learning Rate</label>
+              <input type="number" id="trainLR" value="1.0" min="0.001" max="10" step="0.1">
+            </div>
+            <div class="ctrl-col">
+              <label>Epochs</label>
+              <input type="number" id="trainEpochs" value="10000" min="100" max="100000" step="1000">
+            </div>
+          </div>
+          <button class="btn btn-blue" id="trainBtn" onclick="trainModel()">Train Network</button>
+          <div class="status" id="trainStatus"></div>
+          <div class="chart-wrap" id="chartWrap">
+            <div class="chart-placeholder" id="chartPlaceholder">Train a model to see the loss curve</div>
+            <canvas id="lossChart"></canvas>
+          </div>
+          <table id="trainResults" style="display:none">
+            <thead><tr><th>A</th><th>B</th><th>Expected</th><th>Predicted</th></tr></thead>
+            <tbody id="trainTBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">Powered by <a href="https://github.com/lindapot-art/libaix" target="_blank">libaix</a> — neural network built from scratch with NumPy</div>
+
+  <script>
+    /* ═══════ PAGE NAVIGATION ═══════ */
+    function showPage(name) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.getElementById('page-' + name).classList.add('active');
+      document.querySelector(`.tab[onclick="showPage('${name}')"]`).classList.add('active');
+      if (name === 'playground') loadTruthTable();
+    }
+
+    /* ═══════ STATS ═══════ */
+    fetch('/knowledge/stats').then(r=>r.json()).then(d=>{
+      const badge = document.getElementById('statsBadge');
+      if(d.loaded) badge.textContent = `${d.total_answers} topics · ${d.domains.join(', ')}`;
+      else badge.textContent = 'Model not loaded';
+    }).catch(()=>{});
+
+    /* ═══════ CHAT ═══════ */
+    const chatMessages = document.getElementById('chatMessages');
+    const chatInput = document.getElementById('chatInput');
+
+    chatInput.addEventListener('keydown', e => { if (e.key === 'Enter') sendChat(); });
+
+    function askQuick(q) { chatInput.value = q; sendChat(); }
+
+    function addMsg(text, isUser, extra) {
+      const div = document.createElement('div');
+      div.className = 'msg ' + (isUser ? 'user' : 'bot');
+      let html = text;
+      if (!isUser && extra) {
+        if (extra.domain) html += ` <span class="domain-tag">${extra.domain}</span>`;
+        if (extra.confidence !== undefined) html += `<div class="confidence">${(extra.confidence * 100).toFixed(1)}% confidence</div>`;
+        if (extra.suggestions && extra.suggestions.length > 1) {
+          html += '<details class="suggestions"><summary>Related answers</summary>';
+          for (let i = 1; i < extra.suggestions.length; i++) {
+            const s = extra.suggestions[i];
+            html += `<div class="alt">${s.answer} <span class="confidence">(${(s.confidence*100).toFixed(1)}%)</span></div>`;
+          }
+          html += '</details>';
+        }
+      }
+      div.innerHTML = html;
+      chatMessages.appendChild(div);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    async function sendChat() {
+      const q = chatInput.value.trim();
+      if (!q) return;
+      chatInput.value = '';
+      addMsg(q, true);
+      const btn = document.getElementById('sendBtn');
+      btn.disabled = true;
+      try {
+        const res = await fetch('/chat', {
+          method: 'POST', headers: {'Content-Type':'application/json'},
+          body: JSON.stringify({question: q})
+        });
+        const d = await res.json();
+        if (d.error) { addMsg('⚠️ ' + d.error, false); }
+        else { addMsg(d.answer, false, d); }
+      } catch(e) { addMsg('⚠️ Network error: ' + e.message, false); }
+      btn.disabled = false;
+      chatInput.focus();
+    }
+
+    /* ═══════ PLAYGROUND — Toggle buttons ═══════ */
+    const vals = { A: 0, B: 0 };
+    const OP_SYMBOLS = { xor: '⊕', and: '∧', or: '∨', nand: '⊼' };
+
+    function toggle(which) {
+      vals[which] ^= 1;
+      const btn = document.getElementById('btn' + which);
+      btn.textContent = vals[which];
+      btn.classList.toggle('active', vals[which] === 1);
+    }
+
+    document.getElementById('selDataset').addEventListener('change', e => {
+      document.getElementById('opSymbol').textContent = OP_SYMBOLS[e.target.value] || '⊕';
+      loadTruthTable();
+    });
+
+    /* ── Predict ── */
+    async function predict() {
+      const btn = document.getElementById('predictBtn');
+      btn.disabled = true; btn.textContent = 'Thinking…';
+      try {
+        const ds = document.getElementById('selDataset').value;
+        const res = await fetch('/predict', {
+          method:'POST', headers:{'Content-Type':'application/json'},
+          body: JSON.stringify({a:vals.A, b:vals.B, dataset:ds})
+        });
+        const data = await res.json();
+        const box = document.getElementById('resultBox');
+        box.classList.add('show');
+        const val = document.getElementById('resultValue');
+        val.textContent = data.result;
+        val.className = 'result-value ' + (data.result === 0 ? 'zero' : 'one');
+        document.getElementById('resultRaw').textContent = `Raw output: ${data.raw}`;
+        document.getElementById('resultMeta').textContent =
+          `${data.dataset.toUpperCase()} · ${data.activation} · ${data.optimizer}`;
+      } catch(e) { alert('Error: ' + e.message); }
+      btn.disabled = false; btn.textContent = 'Predict';
+    }
+
+    /* ── Truth table ── */
+    const EXPECTED = { xor:[0,1,1,0], and:[0,0,0,1], or:[0,1,1,1], nand:[1,1,1,0] };
+    const PAIRS = [[0,0],[0,1],[1,0],[1,1]];
+
+    async function loadTruthTable() {
+      const ds = document.getElementById('selDataset').value;
+      const exp = EXPECTED[ds];
+      const tbody = document.getElementById('ttBody');
+      tbody.innerHTML = '';
+      for (let i = 0; i < PAIRS.length; i++) {
+        const res = await fetch('/predict', {
+          method:'POST', headers:{'Content-Type':'application/json'},
+          body: JSON.stringify({a:PAIRS[i][0], b:PAIRS[i][1], dataset:ds})
+        });
+        const d = await res.json();
+        const ok = d.result === exp[i];
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td>${PAIRS[i][0]}</td><td>${PAIRS[i][1]}</td><td>${exp[i]}</td>
+          <td class="${ok?'correct':'wrong'}">${d.result} <small>(${d.raw})</small></td>`;
+        tbody.appendChild(tr);
+      }
+    }
+
+    /* ── Train ── */
+    async function trainModel() {
+      const btn = document.getElementById('trainBtn');
+      const status = document.getElementById('trainStatus');
+      btn.disabled = true; btn.textContent = 'Training…';
+      status.textContent = 'Training in progress…';
+      try {
+        const body = {
+          dataset: document.getElementById('trainDataset').value,
+          activation: document.getElementById('trainAct').value,
+          optimizer: document.getElementById('trainOpt').value,
+          lr: parseFloat(document.getElementById('trainLR').value),
+          epochs: parseInt(document.getElementById('trainEpochs').value),
+        };
+        const res = await fetch('/train', {
+          method:'POST', headers:{'Content-Type':'application/json'},
+          body: JSON.stringify(body)
+        });
+        const d = await res.json();
+        status.textContent = `Done — ${d.dataset.toUpperCase()} · ${d.activation} · ${d.optimizer} · final loss: ${d.final_loss}`;
+        drawChart(d.loss_curve);
+        fillTrainTable(d.predictions, d.expected);
+        if (document.getElementById('selDataset').value === d.dataset) loadTruthTable();
+      } catch(e) { status.textContent = 'Error: ' + e.message; }
+      btn.disabled = false; btn.textContent = 'Train Network';
+    }
+
+    function fillTrainTable(preds, expected) {
+      const tbl = document.getElementById('trainResults');
+      tbl.style.display = '';
+      const tbody = document.getElementById('trainTBody');
+      tbody.innerHTML = '';
+      for (let i = 0; i < PAIRS.length; i++) {
+        const p = preds[i][0], e = expected[i][0];
+        const r = Math.round(p), ok = r === e;
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td>${PAIRS[i][0]}</td><td>${PAIRS[i][1]}</td><td>${e}</td>
+          <td class="${ok?'correct':'wrong'}">${r} <small>(${p.toFixed(4)})</small></td>`;
+        tbody.appendChild(tr);
+      }
+    }
+
+    /* ── Loss chart (pure canvas) ── */
+    function drawChart(losses) {
+      document.getElementById('chartPlaceholder').style.display = 'none';
+      const canvas = document.getElementById('lossChart');
+      const wrap = document.getElementById('chartWrap');
+      canvas.width = wrap.clientWidth; canvas.height = wrap.clientHeight;
+      const ctx = canvas.getContext('2d');
+      const W = canvas.width, H = canvas.height;
+      const pad = {t:12, r:12, b:28, l:50};
+      const cW = W - pad.l - pad.r, cH = H - pad.t - pad.b;
+      ctx.clearRect(0, 0, W, H);
+      const maxL = Math.max(...losses, 1e-8);
+      const minL = Math.min(...losses, 0);
+      ctx.strokeStyle = '#21262d'; ctx.lineWidth = 1;
+      for (let i = 0; i <= 4; i++) {
+        const y = pad.t + cH * i / 4;
+        ctx.beginPath(); ctx.moveTo(pad.l, y); ctx.lineTo(pad.l + cW, y); ctx.stroke();
+        ctx.fillStyle = '#484f58'; ctx.font = '10px sans-serif'; ctx.textAlign = 'right';
+        const val = maxL - (maxL - minL) * i / 4;
+        ctx.fillText(val < 0.001 ? val.toExponential(1) : val.toFixed(3), pad.l - 6, y + 3);
+      }
+      ctx.beginPath(); ctx.strokeStyle = '#58a6ff'; ctx.lineWidth = 2;
+      for (let i = 0; i < losses.length; i++) {
+        const x = pad.l + cW * i / (losses.length - 1);
+        const y = pad.t + cH * (1 - (losses[i] - minL) / (maxL - minL || 1));
+        i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+      }
+      ctx.stroke();
+      ctx.fillStyle = '#484f58'; ctx.font = '10px sans-serif'; ctx.textAlign = 'center';
+      ctx.fillText('Epoch', pad.l + cW / 2, H - 4);
+      ctx.save(); ctx.translate(12, pad.t + cH / 2); ctx.rotate(-Math.PI/2);
+      ctx.fillText('Loss', 0, 0); ctx.restore();
+    }
+  </script>
+</body>
+</html>

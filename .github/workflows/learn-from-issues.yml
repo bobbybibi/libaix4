@@ -1,0 +1,73 @@
+name: Learn from Issues
+
+# Triggers when an issue with the "knowledge" label is closed.
+# Parses the issue body for Q&A entries, appends them to knowledge_base.py,
+# retrains the model, commits everything, and comments on the issue.
+
+on:
+  issues:
+    types: [closed]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  learn:
+    # Only run if the issue has the "knowledge" label
+    if: contains(github.event.issue.labels.*.name, 'knowledge')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Parse issue and add knowledge
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: python scripts/parse_knowledge_issue.py
+
+      - name: Retrain model
+        run: python train_knowledge.py --epochs 3000
+
+      - name: Run tests
+        run: python -m pytest tests/ -v
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add knowledge_base.py models/
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "feat(knowledge): learn from issue #${{ github.event.issue.number }}
+
+          Added knowledge from: ${{ github.event.issue.title }}
+          Issue: #${{ github.event.issue.number }}"
+            git push
+          fi
+
+      - name: Comment on issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            // Count entries from answer_map
+            const answers = JSON.parse(fs.readFileSync('models/answer_map.json', 'utf8'));
+            const count = Object.keys(answers).length;
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `✅ **Knowledge learned!**\n\nI've absorbed the knowledge from this issue and retrained my model.\n\n📊 **Stats:** ${count} total answer classes in the knowledge base.\n\n_— libaix bot_`
+            });
