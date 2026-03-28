@@ -2,40 +2,114 @@
   "topics": [
     {
       "name": "Wi-Fi Security",
-      "keywords": ["WPA3", "802.1X", "wireless security"],
+      "keywords": [
+        "WPA3",
+        "802.1X",
+        "wireless security"
+      ],
       "enabled": true,
       "max_per_source": 10,
-      "sources": ["stackexchange", "reddit", "hackernews", "devto"]
+      "sources": [
+        "stackexchange",
+        "reddit",
+        "hackernews",
+        "devto"
+      ]
     },
     {
       "name": "Network Troubleshooting",
-      "keywords": ["packet loss", "latency", "DNS resolution"],
+      "keywords": [
+        "packet loss",
+        "latency",
+        "DNS resolution"
+      ],
       "enabled": true,
       "max_per_source": 10,
-      "sources": ["stackexchange", "reddit", "hackernews", "devto"]
+      "sources": [
+        "stackexchange",
+        "reddit",
+        "hackernews",
+        "devto"
+      ]
     },
     {
       "name": "Firewall Configuration",
-      "keywords": ["iptables", "firewall rules", "pfSense", "next-gen firewall"],
+      "keywords": [
+        "iptables",
+        "firewall rules",
+        "pfSense",
+        "next-gen firewall"
+      ],
       "enabled": true,
       "max_per_source": 10,
-      "sources": ["stackexchange", "reddit", "hackernews", "devto"]
+      "sources": [
+        "stackexchange",
+        "reddit",
+        "hackernews",
+        "devto"
+      ]
     },
     {
       "name": "VPN Setup",
-      "keywords": ["WireGuard", "OpenVPN", "IPsec", "site-to-site VPN"],
+      "keywords": [
+        "WireGuard",
+        "OpenVPN",
+        "IPsec",
+        "site-to-site VPN"
+      ],
       "enabled": true,
       "max_per_source": 10,
-      "sources": ["stackexchange", "reddit", "hackernews", "devto"]
+      "sources": [
+        "stackexchange",
+        "reddit",
+        "hackernews",
+        "devto"
+      ]
     },
     {
       "name": "Network Monitoring",
-      "keywords": ["SNMP", "Nagios", "Zabbix", "network monitoring tools"],
+      "keywords": [
+        "SNMP",
+        "Nagios",
+        "Zabbix",
+        "network monitoring tools"
+      ],
       "enabled": true,
       "max_per_source": 10,
-      "sources": ["stackexchange", "reddit", "hackernews", "devto"]
+      "sources": [
+        "stackexchange",
+        "reddit",
+        "hackernews",
+        "devto"
+      ]
     }
   ],
-  "last_crawl": null,
-  "stats": {}
+  "last_crawl": "2026-03-28T10:08:37.772897+00:00",
+  "stats": {
+    "Wi-Fi Security": {
+      "total_crawled": 487,
+      "crawl_count": 1,
+      "last_crawl": "2026-03-28T10:08:37.772879+00:00"
+    },
+    "Network Troubleshooting": {
+      "total_crawled": 635,
+      "crawl_count": 1,
+      "last_crawl": "2026-03-28T10:08:37.772887+00:00"
+    },
+    "Firewall Configuration": {
+      "total_crawled": 522,
+      "crawl_count": 1,
+      "last_crawl": "2026-03-28T10:08:37.772891+00:00"
+    },
+    "VPN Setup": {
+      "total_crawled": 555,
+      "crawl_count": 1,
+      "last_crawl": "2026-03-28T10:08:37.772893+00:00"
+    },
+    "Network Monitoring": {
+      "total_crawled": 468,
+      "crawl_count": 1,
+      "last_crawl": "2026-03-28T10:08:37.772896+00:00"
+    }
+  }
 }
