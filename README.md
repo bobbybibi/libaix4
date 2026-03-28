@@ -4,7 +4,7 @@ A drag-and-drop AI chatbot and neural network platform. Drop the folder on any P
 
 ## 🚀 Quick Start (Drag & Drop)
 
-**Prerequisite:** Python 3.10+ installed ([download](https://python.org))
+**Prerequisite:** Python 3.10+ installed ([download](https://www.python.org))
 
 ### On your PC (Windows, Mac, Linux)
 

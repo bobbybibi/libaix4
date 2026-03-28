@@ -33,7 +33,7 @@ if %ERRORLEVEL% equ 0 (
     goto :end
 )
 
-echo ERROR: Python 3 not found. Install it from https://python.org
+echo ERROR: Python 3 not found. Install it from https://www.python.org
 echo.
 pause
 

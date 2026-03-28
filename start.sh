@@ -29,7 +29,7 @@ for cmd in python3 python; do
 done
 
 if [ -z "$PYTHON" ]; then
-    echo "ERROR: Python 3 not found. Install it from https://python.org"
+    echo "ERROR: Python 3 not found. Install it from https://www.python.org"
     exit 1
 fi
 

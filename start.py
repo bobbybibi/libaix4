@@ -104,9 +104,12 @@ def main() -> None:
         print("  Run: python start.py --retrain\n")
 
     # Start the app
+    display_host = "localhost" if args.host in ("0.0.0.0", "::") else args.host
     print(f"Starting libaix on http://{args.host}:{args.port}")
-    print(f"  Chat UI:  http://localhost:{args.port}/")
-    print(f"  Admin:    http://localhost:{args.port}/admin")
+    print(f"  Chat UI:  http://{display_host}:{args.port}/")
+    print(f"  Admin:    http://{display_host}:{args.port}/admin")
+    if args.host in ("0.0.0.0", "::"):
+        print("  (also accessible via your machine's IP address on your network)")
     print("  Press Ctrl+C to stop.\n")
 
     from app import app

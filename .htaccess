@@ -2,6 +2,12 @@
 #
 # This file tells cPanel/Passenger to route all requests to the Flask app.
 # Place it in the public directory that maps to your domain.
+#
+# IMPORTANT: Adjust PassengerAppRoot to match your actual hosting path.
+# Common patterns:
+#   /home/<username>/libaix
+#   /var/www/libaix
+#   /home/<username>/public_html/libaix
 
 PassengerEnabled on
 PassengerAppRoot /home/%{ENV:USER}/libaix
