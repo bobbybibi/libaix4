@@ -1,120 +1,140 @@
-# libaix — XOR Neural Network from Scratch
+# libaix — Self-Deploying AI Knowledge Engine
 
-A minimal, dependency-light neural network that learns the **XOR** problem using only **NumPy** — no TensorFlow, PyTorch, or scikit-learn.
+A drag-and-drop AI chatbot and neural network platform. Drop the folder on any PC or server, run one command, and it works. No manual setup.
+
+## 🚀 Quick Start (Drag & Drop)
+
+**Prerequisite:** Python 3.10+ installed ([download](https://www.python.org))
+
+### On your PC (Windows, Mac, Linux)
+
+```bash
+# Option 1: Double-click
+#   Windows → double-click start.bat
+#   Mac/Linux → double-click start.sh (or run ./start.sh)
+
+# Option 2: Command line
+python start.py
+```
+
+That's it. The launcher automatically:
+1. ✅ Installs all dependencies (numpy, flask, etc.)
+2. ✅ Trains the knowledge AI model (first time only)
+3. ✅ Starts the web server
+
+Then open **http://localhost:5000** in your browser.
+
+### Options
+
+```bash
+python start.py                  # Default (port 5000)
+python start.py --port 8080      # Custom port
+python start.py --host 127.0.0.1 # Localhost only (more secure)
+python start.py --retrain        # Force retrain the AI model
+```
+
+### On Shared Hosting (cPanel / Passenger)
+
+1. Upload the entire `libaix/` folder to your hosting account
+2. In cPanel → **Setup Python App**:
+   - Application root: `/home/<user>/libaix`
+   - Startup file: `passenger_wsgi.py`
+   - Entry point: `application`
+3. Open a terminal (SSH or cPanel Terminal) and run:
+   ```bash
+   cd ~/libaix
+   pip install -r requirements.txt
+   python train_knowledge.py
+   ```
+4. Restart the Python app in cPanel → done!
+
+Files included for hosting: `passenger_wsgi.py`, `.htaccess`
 
 ## Features
 
 | Feature | Details |
 |---|---|
-| **Forward propagation** | Configurable multi-layer feed-forward network with sigmoid activation |
-| **Back-propagation** | Full gradient descent with Xavier weight initialisation |
-| **No ML frameworks** | Only NumPy for matrix math |
-| **Single-command run** | `make run` installs deps, trains, and evaluates |
-| **Tests** | pytest suite covering init, forward, backward, and XOR convergence |
-
-## Quick Start
-
-```bash
-# Clone and enter the repo
-git clone https://github.com/lindapot-art/libaix.git
-cd libaix
-
-# Run everything (installs deps → trains → evaluates)
-make run
-```
-
-### Or step-by-step
-
-```bash
-pip install -r requirements.txt
-python train.py
-```
+| **AI Chat** | Knowledge Q&A chatbot (networking, security, internet, intranet, wifi) |
+| **Admin Dashboard** | `/admin` — manage knowledge, crawlers, file uploads, ML engine |
+| **ML Self-Optimization** | Auto-optimizes hyperparameters, stabilizes training, prevents forgetting |
+| **Knowledge Crawlers** | Wikipedia + forum crawlers (StackExchange, Reddit, HN) for auto-learning |
+| **Logic Gate Playground** | Interactive XOR/AND/OR/NAND neural network trainer |
+| **Local Scheduler** | Background automation for crawling, training, and ML growth cycles |
+| **Self-Deploying** | `start.py` / `start.sh` / `start.bat` — zero-config launch |
+| **No ML Frameworks** | Pure NumPy neural network — no TensorFlow/PyTorch needed |
 
 ## Project Assistant
-
-An interactive bash assistant (`assist.sh`) wraps every common task into a single command so you can do minimal work:
 
 ```bash
 ./assist.sh help      # show all commands
 ./assist.sh setup     # install dependencies
-./assist.sh train     # train the network
+./assist.sh train     # train the XOR network
 ./assist.sh test      # run tests
 ./assist.sh lint      # lint with ruff
-./assist.sh format    # auto-format code
 ./assist.sh check     # lint + tests
-./assist.sh clean     # remove caches
 ./assist.sh all       # full pipeline: setup → lint → test → train
 ```
 
-All the same targets are also available via `make`:
-
+Or via `make`:
 ```bash
 make help    # list targets
 make all     # full pipeline
 make check   # lint + tests
 ```
 
-### CI / Automation
+## CI / Automation
 
-A GitHub Actions workflow (`.github/workflows/ci.yml`) runs automatically on every push and PR to `main`:
+GitHub Actions (`.github/workflows/ci.yml`) runs on every push/PR:
+- Lints with **ruff**, runs **pytest**, smoke-tests training
+- Tests across Python 3.10, 3.11, 3.12
 
-- Lints with **ruff**
-- Runs the **pytest** suite
-- Smoke-tests training (`python train.py`)
-- Tests across Python 3.10, 3.11, and 3.12
-
-## Expected Output
-
-```
-==================================================
-  XOR Neural Network — Training
-==================================================
-Epoch   1000  |  Loss: 0.178432
-Epoch   2000  |  Loss: 0.021954
-...
-Epoch  10000  |  Loss: 0.000123
-
-==================================================
-  Results after training
-==================================================
-  Input: [0. 0.]  |  Target: 0  |  Prediction: 0.0102 → 0  ✓
-  Input: [0. 1.]  |  Target: 1  |  Prediction: 0.9891 → 1  ✓
-  Input: [1. 0.]  |  Target: 1  |  Prediction: 0.9889 → 1  ✓
-  Input: [1. 1.]  |  Target: 0  |  Prediction: 0.0134 → 0  ✓
-
-🎉  All XOR outputs learned correctly!
-```
-
-## Running Tests
-
-```bash
-make test
-# or
-python -m pytest tests/ -v
-```
+Local scheduler (`python local_scheduler.py`) provides offline automation:
+- Auto-trains knowledge model
+- Crawls Wikipedia & forums for new knowledge
+- Runs ML self-growth optimization cycles
 
 ## Project Structure
 
 ```
 libaix/
-├── assist.sh                   # Project assistant (bash)
-├── neural_network.py           # NeuralNetwork class (forward, backward, train, predict)
-├── train.py                    # Training script — run this!
-├── tests/
-│   └── test_neural_network.py
-├── requirements.txt            # numpy, pytest, ruff
-├── Makefile                    # make run / make test / make lint / …
-├── .github/workflows/ci.yml   # GitHub Actions CI
+├── start.py                  # ⭐ Self-deploying launcher (run this!)
+├── start.sh                  # One-click launcher (Linux/Mac)
+├── start.bat                 # One-click launcher (Windows)
+├── app.py                    # Flask web server (chat, playground, API)
+├── admin.py                  # Admin dashboard blueprint
+├── neural_network.py         # Core neural network (forward/backward/train)
+├── vectorizer.py             # Bag-of-words text vectorizer with TF-IDF
+├── knowledge_base.py         # Curated Q&A knowledge entries
+├── train_knowledge.py        # Knowledge classifier training pipeline
+├── ml_engine.py              # ML self-optimization engine
+├── crawler.py                # Wikipedia knowledge crawler
+├── forum_crawler.py          # Forum crawler (StackExchange, Reddit, etc.)
+├── local_scheduler.py        # Background job scheduler
+├── passenger_wsgi.py         # WSGI entry for shared hosting
+├── .htaccess                 # Apache/Passenger config
+├── models/                   # Trained model files
+├── data/                     # Config, knowledge data, crawler output
+├── templates/                # HTML templates (chat UI, admin dashboard)
+├── tests/                    # pytest test suite
+├── requirements.txt          # Python dependencies
+├── Makefile                  # Build/test/lint targets
+├── assist.sh                 # Project assistant (bash)
 └── README.md
 ```
 
 ## How It Works
 
-1. **Initialisation** — Weights are set via Xavier/Glorot initialisation; biases start at zero.
-2. **Forward pass** — Input flows through each layer: `z = x·W + b`, then `a = σ(z)`.
-3. **Loss** — Mean Squared Error between prediction and target.
-4. **Backward pass** — Error is propagated layer-by-layer; weights and biases are updated proportional to the learning rate.
-5. **Repeat** for 10 000 epochs until the network converges.
+1. **Knowledge Base** — Curated Q&A triples (question, answer, domain) plus crawled knowledge
+2. **Vectorization** — Bag-of-words with TF-IDF converts questions to numeric vectors
+3. **Neural Network** — Multi-layer softmax classifier maps vectors to answer classes
+4. **ML Engine** — Self-assesses accuracy, auto-optimizes hyperparameters, prevents forgetting
+5. **Web UI** — Flask serves the chat interface, admin dashboard, and logic-gate playground
+
+## Running Tests
+
+```bash
+python -m pytest tests/ -v    # or: make test
+```
 
 ## License
 
