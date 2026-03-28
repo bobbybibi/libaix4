@@ -62,7 +62,6 @@ from ml_engine import (
 from site_crawler import add_site_job, clear_site_jobs, get_site_crawl_stats
 from admin_chatbot import (
     get_chat_history,
-    get_conditioning_entries,
     load_conditioning,
     process_message,
     save_conditioning,
@@ -1103,7 +1102,7 @@ def _build_chat_followup(result: dict, actions: list[dict], query_data: dict) ->
         for k, v in wfs.items():
             status = "✅" if v.get("enabled") else "❌"
             lines.append(f"  {status} {k}: {v.get('runs_per_hour', 0)}/hr")
-        parts.append(f"\n⏱️ **Cron Jobs**\n" + "\n".join(lines))
+        parts.append("\n⏱️ **Cron Jobs**\n" + "\n".join(lines))
 
     return "\n\n".join(parts) if parts else ""
 

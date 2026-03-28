@@ -22,7 +22,7 @@ from flask import Flask, render_template, request, jsonify
 
 from admin import admin_bp
 from knowledge_base import KNOWLEDGE, get_domains
-from neural_network import NeuralNetwork
+from neural_network import ACTIVATIONS, OPTIMIZERS, NeuralNetwork
 from project_memory import (
     build_startup_context,
     cache_response,
@@ -131,8 +131,11 @@ def index():
 @app.route("/predict", methods=["POST"])
 def predict():
     data = request.get_json(force=True)
-    a = max(0, min(1, int(data.get("a", 0))))
-    b = max(0, min(1, int(data.get("b", 0))))
+    try:
+        a = max(0, min(1, int(data.get("a", 0))))
+        b = max(0, min(1, int(data.get("b", 0))))
+    except (ValueError, TypeError):
+        return jsonify({"error": "a and b must be integers (0 or 1)"}), 400
     dataset = data.get("dataset", "xor")
     if dataset not in TARGETS:
         return jsonify({"error": "unknown dataset"}), 400
@@ -150,10 +153,19 @@ def train_endpoint():
     dataset = data.get("dataset", "xor")
     activation = data.get("activation", "sigmoid")
     optimizer = data.get("optimizer", "sgd")
-    lr = float(data.get("lr", 1.0))
-    epochs = min(int(data.get("epochs", 10_000)), 100_000)
     if dataset not in TARGETS:
         return jsonify({"error": "unknown dataset"}), 400
+    if activation not in ACTIVATIONS:
+        return jsonify({"error": f"activation must be one of {list(ACTIVATIONS)}"}), 400
+    if optimizer not in OPTIMIZERS:
+        return jsonify({"error": f"optimizer must be one of {list(OPTIMIZERS)}"}), 400
+    try:
+        lr = float(data.get("lr", 1.0))
+        epochs = int(data.get("epochs", 10_000))
+    except (ValueError, TypeError):
+        return jsonify({"error": "lr must be a number and epochs an integer"}), 400
+    lr = max(1e-6, min(lr, 100.0))
+    epochs = max(1, min(epochs, 100_000))
     losses = _train(dataset, activation, optimizer, lr, epochs)
     step = max(1, len(losses) // 200)
     sampled = losses[::step]
@@ -188,6 +200,8 @@ def chat():
     question = str(data.get("question", "")).strip()
     if not question:
         return jsonify({"error": "Empty question"}), 400
+    if len(question) > 2000:
+        return jsonify({"error": "Question too long (max 2000 characters)"}), 400
 
     # Check response cache first
     cached = lookup_cached_response(question)
@@ -298,6 +312,17 @@ def memory_performance():
         return jsonify(get_performance_trend(n=20))
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
+
+@app.route("/api/health", methods=["GET"])
+def health():
+    """Health check endpoint for monitoring."""
+    return jsonify({
+        "status": "ok",
+        "knowledge_loaded": knowledge_model is not None,
+        "datasets": list(TARGETS.keys()),
+        "models_ready": list(models.keys()),
+    })
 
 
 if __name__ == "__main__":

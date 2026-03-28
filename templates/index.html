@@ -90,9 +90,9 @@
   <!-- ── Top Bar ── -->
   <div class="topbar">
     <span class="logo">libaix</span>
-    <div class="tabs">
-      <button class="tab active" onclick="showPage('chat')">AI Chat</button>
-      <button class="tab" onclick="showPage('playground')">Playground</button>
+    <div class="tabs" role="tablist">
+      <button class="tab active" role="tab" aria-selected="true" aria-controls="page-chat" onclick="showPage('chat')">AI Chat</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="page-playground" onclick="showPage('playground')">Playground</button>
     </div>
     <div class="spacer"></div>
     <span class="stats-badge" id="statsBadge">Loading…</span>
@@ -102,9 +102,9 @@
   <!-- ═══════════════════════════════════════════════════════════════ -->
   <!-- CHAT PAGE                                                      -->
   <!-- ═══════════════════════════════════════════════════════════════ -->
-  <div class="page active" id="page-chat">
+  <div class="page active" id="page-chat" role="tabpanel">
     <div class="chat-container">
-      <div class="chat-messages" id="chatMessages">
+      <div class="chat-messages" id="chatMessages" role="log" aria-live="polite" aria-label="Chat messages">
         <div class="msg bot">
           👋 Hello! I'm <strong>libaix</strong>, a neural network built from scratch with NumPy.<br>
           I know about <strong>networking</strong>, <strong>internet</strong>, <strong>intranet</strong>, and <strong>security</strong>.<br>
@@ -122,7 +122,7 @@
         <button onclick="askQuick('Help')">Help</button>
       </div>
       <div class="chat-input-wrap">
-        <input type="text" class="chat-input" id="chatInput" placeholder="Ask me about networking, internet, security…" autocomplete="off">
+        <input type="text" class="chat-input" id="chatInput" placeholder="Ask me about networking, internet, security…" autocomplete="off" aria-label="Ask a question">
         <button class="send-btn" id="sendBtn" onclick="sendChat()">Send</button>
       </div>
     </div>
@@ -131,7 +131,7 @@
   <!-- ═══════════════════════════════════════════════════════════════ -->
   <!-- PLAYGROUND PAGE                                                -->
   <!-- ═══════════════════════════════════════════════════════════════ -->
-  <div class="page" id="page-playground">
+  <div class="page" id="page-playground" role="tabpanel">
     <div class="pg-container">
       <p class="subtitle">Neural Network Playground — no ML libraries, just NumPy</p>
       <div class="grid">
@@ -234,9 +234,11 @@
     /* ═══════ PAGE NAVIGATION ═══════ */
     function showPage(name) {
       document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tab').forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
       document.getElementById('page-' + name).classList.add('active');
-      document.querySelector(`.tab[onclick="showPage('${name}')"]`).classList.add('active');
+      const activeTab = document.querySelector(`.tab[onclick="showPage('${name}')"]`);
+      activeTab.classList.add('active');
+      activeTab.setAttribute('aria-selected', 'true');
       if (name === 'playground') loadTruthTable();
     }
 
@@ -255,23 +257,33 @@
 
     function askQuick(q) { chatInput.value = q; sendChat(); }
 
+    function escapeHtml(str) {
+      const d = document.createElement('div');
+      d.textContent = str;
+      return d.innerHTML;
+    }
+
     function addMsg(text, isUser, extra) {
       const div = document.createElement('div');
       div.className = 'msg ' + (isUser ? 'user' : 'bot');
-      let html = text;
-      if (!isUser && extra) {
-        if (extra.domain) html += ` <span class="domain-tag">${extra.domain}</span>`;
-        if (extra.confidence !== undefined) html += `<div class="confidence">${(extra.confidence * 100).toFixed(1)}% confidence</div>`;
-        if (extra.suggestions && extra.suggestions.length > 1) {
-          html += '<details class="suggestions"><summary>Related answers</summary>';
-          for (let i = 1; i < extra.suggestions.length; i++) {
-            const s = extra.suggestions[i];
-            html += `<div class="alt">${s.answer} <span class="confidence">(${(s.confidence*100).toFixed(1)}%)</span></div>`;
+      if (isUser) {
+        div.textContent = text;
+      } else {
+        let html = escapeHtml(text);
+        if (extra) {
+          if (extra.domain) html += ` <span class="domain-tag">${escapeHtml(extra.domain)}</span>`;
+          if (extra.confidence !== undefined) html += `<div class="confidence">${(extra.confidence * 100).toFixed(1)}% confidence</div>`;
+          if (extra.suggestions && extra.suggestions.length > 1) {
+            html += '<details class="suggestions"><summary>Related answers</summary>';
+            for (let i = 1; i < extra.suggestions.length; i++) {
+              const s = extra.suggestions[i];
+              html += `<div class="alt">${escapeHtml(s.answer)} <span class="confidence">(${(s.confidence*100).toFixed(1)}%)</span></div>`;
+            }
+            html += '</details>';
           }
-          html += '</details>';
         }
+        div.innerHTML = html;
       }
-      div.innerHTML = html;
       chatMessages.appendChild(div);
       chatMessages.scrollTop = chatMessages.scrollHeight;
     }

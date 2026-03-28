@@ -60,7 +60,7 @@ class TestBagOfWords:
 
     def test_tfidf_weighting(self):
         bow = BagOfWords()
-        X = bow.fit_transform(["tcp protocol", "udp protocol"])
+        _X = bow.fit_transform(["tcp protocol", "udp protocol"])
         # "protocol" appears in both docs so gets lower IDF
         # "tcp" appears in 1 doc so gets higher IDF
         tcp_idx = bow.vocab["tcp"]

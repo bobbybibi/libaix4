@@ -26,9 +26,32 @@ STOP_WORDS = frozenset(
 )
 
 
+# Common compound terms to preserve during tokenization
+_COMPOUND_TERMS = {
+    "wi-fi": "wifi",
+    "wi fi": "wifi",
+    "tcp/ip": "tcpip",
+    "tcp ip": "tcpip",
+    "802.11": "80211",
+    "802.1x": "8021x",
+    "ipv4": "ipv4",
+    "ipv6": "ipv6",
+    "e-mail": "email",
+    "man-in-the-middle": "mitm",
+    "denial-of-service": "dos",
+    "end-to-end": "endtoend",
+    "point-to-point": "pointtopoint",
+    "wpa2": "wpa2",
+    "wpa3": "wpa3",
+}
+
+
 def tokenize(text: str) -> list[str]:
-    """Lowercase, strip punctuation, split into tokens, remove stop words."""
+    """Lowercase, preserve compound terms, strip punctuation, split, remove stop words."""
     text = text.lower()
+    # Preserve known compound terms before stripping punctuation
+    for compound, replacement in _COMPOUND_TERMS.items():
+        text = text.replace(compound, replacement)
     text = re.sub(r"[^a-z0-9\s]", " ", text)
     tokens = text.split()
     return [t for t in tokens if t not in STOP_WORDS and len(t) > 1]

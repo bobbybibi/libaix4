@@ -15,7 +15,6 @@ from __future__ import annotations
 
 import json
 import shutil
-import time
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -103,7 +102,7 @@ def _record_event(event_type: str, data: dict) -> None:
 
 def assess_model() -> dict:
     """Evaluate current model quality: accuracy, confidence, domain coverage."""
-    from knowledge_base import KNOWLEDGE, get_domains
+    from knowledge_base import KNOWLEDGE
     from neural_network import NeuralNetwork
     from vectorizer import BagOfWords
 
@@ -130,8 +129,8 @@ def assess_model() -> dict:
                 pass
 
     questions = [q for q, _, _ in all_knowledge]
-    answers = [a for _, a, _ in all_knowledge]
-    domains_list = [d for _, _, d in all_knowledge]
+    _answers = [a for _, a, _ in all_knowledge]
+    _domains_list = [d for _, _, d in all_knowledge]
 
     # Predict
     X = bow.transform(questions)

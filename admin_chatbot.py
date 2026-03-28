@@ -62,10 +62,10 @@ def apply_conditioning(reply: str) -> str:
         return reply
 
     # Build conditioning context
-    beliefs = [e for e in entries if e.get("category") == "belief"]
-    values = [e for e in entries if e.get("category") == "value"]
+    _beliefs = [e for e in entries if e.get("category") == "belief"]
+    _values = [e for e in entries if e.get("category") == "value"]
     tone_entries = [e for e in entries if e.get("category") == "tone"]
-    worldview = [e for e in entries if e.get("category") == "worldview"]
+    _worldview = [e for e in entries if e.get("category") == "worldview"]
     rules = [e for e in entries if e.get("category") == "rule"]
 
     # Prefix: add conditioning awareness markers
@@ -81,7 +81,7 @@ def apply_conditioning(reply: str) -> str:
     # Apply rule-based transformations
     for rule in rules:
         directive = rule.get("directive", "").lower()
-        replacement = rule.get("detail", "")
+        _replacement = rule.get("detail", "")
         # Simple word/phrase replacement rules
         if " → " in directive:
             old, new = directive.split(" → ", 1)

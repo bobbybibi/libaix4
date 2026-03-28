@@ -126,6 +126,8 @@ class NeuralNetwork:
             raise ValueError(f"loss must be one of {LOSS_FUNCTIONS}, got {loss!r}")
         if lr_schedule is not None and lr_schedule not in LR_SCHEDULES:
             raise ValueError(f"lr_schedule must be one of {LR_SCHEDULES}, got {lr_schedule!r}")
+        if not (0.0 <= dropout_rate < 1.0):
+            raise ValueError(f"dropout_rate must be in [0, 1), got {dropout_rate!r}")
 
         self.layer_sizes = layer_sizes
         self.learning_rate = learning_rate
@@ -229,10 +231,6 @@ class NeuralNetwork:
             if self.softmax_output:
                 deltas[-1] = output - y
             else:
-                deltas[-1] = error * self._act_deriv(output, self._zs[-1])
-            # MSE gradient sign: for MSE we want -(error)*deriv but our update adds,
-            # so for non-softmax MSE keep the old sign convention (error * deriv)
-            if not self.softmax_output:
                 deltas[-1] = error * self._act_deriv(output, self._zs[-1])
 
         for i in range(n_layers - 2, -1, -1):

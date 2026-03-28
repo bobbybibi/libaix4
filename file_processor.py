@@ -9,7 +9,6 @@ Original files are deleted by the caller after extraction (space preservation).
 from __future__ import annotations
 
 import csv
-import io
 import re
 from pathlib import Path
 

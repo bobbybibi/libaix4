@@ -1,4 +1,4 @@
-.PHONY: install run test lint format check clean all help
+.PHONY: install run test lint format check clean all help serve train-knowledge
 
 ## Install dependencies
 install:
@@ -26,6 +26,14 @@ check: lint test
 ## Full pipeline: install → lint → test → train
 all: install lint test run
 
+## Start the web server (port 5000)
+serve: install
+	python start.py
+
+## Train the knowledge AI model
+train-knowledge: install
+	python train_knowledge.py
+
 ## Remove cached files
 clean:
 	find . -type d -name __pycache__ -exec rm -rf {} + 2>/dev/null || true
@@ -36,13 +44,15 @@ clean:
 help:
 	@echo ""
 	@echo "Available targets:"
-	@echo "  make install   Install dependencies"
-	@echo "  make run       Train the XOR neural network"
-	@echo "  make test      Run the pytest test suite"
-	@echo "  make lint      Lint code with ruff"
-	@echo "  make format    Auto-format code with ruff"
-	@echo "  make check     Run lint + tests"
-	@echo "  make all       Full pipeline (install → lint → test → train)"
-	@echo "  make clean     Remove build artifacts"
-	@echo "  make help      Show this message"
+	@echo "  make install          Install dependencies"
+	@echo "  make run              Train the XOR neural network"
+	@echo "  make test             Run the pytest test suite"
+	@echo "  make lint             Lint code with ruff"
+	@echo "  make format           Auto-format code with ruff"
+	@echo "  make check            Run lint + tests"
+	@echo "  make all              Full pipeline (install → lint → test → train)"
+	@echo "  make serve            Start the web server"
+	@echo "  make train-knowledge  Train the knowledge AI model"
+	@echo "  make clean            Remove build artifacts"
+	@echo "  make help             Show this message"
 	@echo ""
