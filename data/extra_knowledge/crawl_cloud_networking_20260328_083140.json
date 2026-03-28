@@ -6,24 +6,6 @@
     "source": "wikipedia:Cloud computing"
   },
   {
-    "question": "Tell me about NIST",
-    "answer": "== Characteristics ==\nIn 2011, the National Institute of Standards and Technology (NIST) identified five \"essential characteristics\" for cloud systems.",
-    "domain": "networking",
-    "source": "wikipedia:Cloud computing"
-  },
-  {
-    "question": "What is Below?",
-    "answer": "Below are the exact definitions according to NIST:.",
-    "domain": "general",
-    "source": "wikipedia:Cloud computing"
-  },
-  {
-    "question": "Tell me about ISO",
-    "answer": "By 2023, the International Organization for Standardization (ISO) had expanded and refined the list.",
-    "domain": "networking",
-    "source": "wikipedia:Cloud computing"
-  },
-  {
     "question": "Tell me about RJE",
     "answer": "The history of cloud computing extends to the 1960s, with the initial concepts of time-sharing becoming popularized via remote job entry (RJE).",
     "domain": "internet",
@@ -48,26 +30,8 @@
     "source": "wikipedia:Cloud computing"
   },
   {
-    "question": "Tell me about AWS",
-    "answer": "In the 2000s, the application of cloud computing began to take shape with the establishment of Amazon Web Services (AWS) in 2002, which allowed developers to build applications independently.",
-    "domain": "internet",
-    "source": "wikipedia:Cloud computing"
-  },
-  {
     "question": "Tell me about Amazon Simple Storage Service",
     "answer": "In 2006 Amazon Simple Storage Service, known as Amazon S3, and the Amazon Elastic Compute Cloud (EC2) were released.",
-    "domain": "internet",
-    "source": "wikipedia:Cloud computing"
-  },
-  {
-    "question": "Tell me about NASA",
-    "answer": "In 2008 NASA's development of the first open-source software for deploying private and hybrid clouds.",
-    "domain": "internet",
-    "source": "wikipedia:Cloud computing"
-  },
-  {
-    "question": "Tell me about IBM",
-    "answer": "IBM introduced the IBM SmartCloud framework in 2011, and Oracle announced the Oracle Cloud in 2012.",
     "domain": "internet",
     "source": "wikipedia:Cloud computing"
   },
@@ -75,12 +39,6 @@
     "question": "What is Cloud environments operate under a shared responsibility model, where providers?",
     "answer": "Cloud environments operate under a shared responsibility model, where providers are typically responsible for infrastructure security, physical hardware, and software updates, while customers are accountable for data encryption, identity and access management (IAM), and application-level security.",
     "domain": "security",
-    "source": "wikipedia:Cloud computing"
-  },
-  {
-    "question": "Tell me about AI",
-    "answer": "Additionally, companies prioritizing global accessibility, remote workforce enablement, disaster recovery, and leveraging advanced services such as AI/ML and analytics are well-suited for the cloud.",
-    "domain": "internet",
     "source": "wikipedia:Cloud computing"
   },
   {
@@ -92,18 +50,6 @@
   {
     "question": "What is In practice, many organizations?",
     "answer": "In practice, many organizations are increasingly adopting hybrid cloud architectures, combining on-premises infrastructure with cloud services.",
-    "domain": "internet",
-    "source": "wikipedia:Cloud computing"
-  },
-  {
-    "question": "What does This approach provide?",
-    "answer": "This approach allows businesses to balance scalability, cost-effectiveness, and control, offering the benefits of both deployment models while mitigating their respective limitations.",
-    "domain": "general",
-    "source": "wikipedia:Cloud computing"
-  },
-  {
-    "question": "Tell me about GDPR",
-    "answer": "Cloud users also face compliance risks if they have to adhere to certain regulations or standards regarding data protection, such as GDPR or HIPAA.",
     "domain": "internet",
     "source": "wikipedia:Cloud computing"
   },
@@ -128,12 +74,6 @@
   {
     "question": "Tell me about Cloud Report",
     "answer": "=== Cloud migration challenges ===\nAccording to the 2024 State of the Cloud Report by Flexera, approximately 50% of respondents identified the following top challenges when migrating workloads to public clouds:.",
-    "domain": "internet",
-    "source": "wikipedia:Cloud computing"
-  },
-  {
-    "question": "Tell me about IT",
-    "answer": "=== Cloud cost overruns ===\nIn a report by Gartner, a survey of 200 IT leaders revealed that 69% experienced budget overruns in their organizations' cloud expenditures during 2023.",
     "domain": "internet",
     "source": "wikipedia:Cloud computing"
   },
@@ -165,12 +105,6 @@
     "question": "What is Customers should be aware of how deviations from SLAs?",
     "answer": "Customers should be aware of how deviations from SLAs are calculated, as these parameters may vary by service.",
     "domain": "general",
-    "source": "wikipedia:Cloud computing"
-  },
-  {
-    "question": "What is That?",
-    "answer": "That is permitted in their privacy policies, which users must agree to before they start using cloud services.",
-    "domain": "internet",
     "source": "wikipedia:Cloud computing"
   },
   {
@@ -210,12 +144,6 @@
     "source": "wikipedia:Cloud computing"
   },
   {
-    "question": "What is There?",
-    "answer": "There is the problem of legal ownership of the data (If a user stores some data in the cloud, can the cloud provider profit from it?).",
-    "domain": "internet",
-    "source": "wikipedia:Cloud computing"
-  },
-  {
     "question": "What is Many Terms of Service agreements?",
     "answer": "Many Terms of Service agreements are silent on the question of ownership.",
     "domain": "general",
@@ -224,12 +152,6 @@
   {
     "question": "What is Physical control of the computer equipment (private cloud)?",
     "answer": "Physical control of the computer equipment (private cloud) is more secure than having the equipment off-site and under someone else's control (public cloud).",
-    "domain": "internet",
-    "source": "wikipedia:Cloud computing"
-  },
-  {
-    "question": "What is This?",
-    "answer": "This is important now that cloud computing is common and required for some services to work, for example for an intelligent personal assistant (Apple's Siri or Google Assistant).",
     "domain": "internet",
     "source": "wikipedia:Cloud computing"
   },
@@ -318,32 +240,14 @@
     "source": "wikipedia:Cloud computing"
   },
   {
-    "question": "What is applications?",
-    "answer": "The applications are accessible from various client devices through either a thin client interface, such as a web browser (e.g., web-based email), or a program interface.",
-    "domain": "general",
-    "source": "wikipedia:Cloud computing"
-  },
-  {
     "question": "What is SaaS?",
     "answer": "SaaS is sometimes referred to as \"on-demand software\" and is usually priced on a pay-per-use basis or using a subscription fee.",
     "domain": "general",
     "source": "wikipedia:Cloud computing"
   },
   {
-    "question": "What is This process?",
-    "answer": "This process is transparent to the cloud user, who sees only a single access-point.",
-    "domain": "internet",
-    "source": "wikipedia:Cloud computing"
-  },
-  {
     "question": "What is pricing model for SaaS applications?",
     "answer": "The pricing model for SaaS applications is typically a monthly or yearly flat fee per user, so prices become scalable and adjustable if users are added or removed at any point.",
-    "domain": "general",
-    "source": "wikipedia:Cloud computing"
-  },
-  {
-    "question": "What does This provide?",
-    "answer": "This enables the business to reallocate IT operations costs away from hardware/software spending and from personnel expenses, towards meeting other goals.",
     "domain": "general",
     "source": "wikipedia:Cloud computing"
   },
@@ -384,12 +288,6 @@
     "source": "wikipedia:Cloud computing"
   },
   {
-    "question": "What is Architecturally, there?",
-    "answer": "Architecturally, there are few differences between public- and private-cloud services, but security concerns increase substantially when services (applications, storage, and other resources) are shared by multiple customers.",
-    "domain": "internet",
-    "source": "wikipedia:Cloud computing"
-  },
-  {
     "question": "What is Hybrid cloud?",
     "answer": "Hybrid cloud is a composition of a public cloud and a private environment, such as a private cloud or on-premises resources, that remain distinct entities but are bound together, offering the benefits of multiple deployment models.",
     "domain": "networking",
@@ -404,18 +302,6 @@
   {
     "question": "What is Another example of hybrid cloud?",
     "answer": "Another example of hybrid cloud is one where IT organizations use public cloud computing resources to meet temporary capacity needs that can not be met by the private cloud.",
-    "domain": "internet",
-    "source": "wikipedia:Cloud computing"
-  },
-  {
-    "question": "What does This capability provide?",
-    "answer": "This capability enables hybrid clouds to employ cloud bursting for scaling across clouds.",
-    "domain": "internet",
-    "source": "wikipedia:Cloud computing"
-  },
-  {
-    "question": "What is Cloud bursting?",
-    "answer": "Cloud bursting is an application deployment model in which an application runs in a private cloud or data center and \"bursts\" to a public cloud when the demand for computing capacity increases.",
     "domain": "internet",
     "source": "wikipedia:Cloud computing"
   },
@@ -462,12 +348,6 @@
     "source": "wikipedia:Cloud computing"
   },
   {
-    "question": "Tell me about The European Commission",
-    "answer": "The European Commission's 2012 Communication identified several issues which were impeding the development of the cloud computing market:.",
-    "domain": "internet",
-    "source": "wikipedia:Cloud computing"
-  },
-  {
     "question": "Tell me about EU",
     "answer": "fragmentation of the digital single market across the EU\nconcerns about contracts including reservations about data access and ownership, data portability, and change control\nvariations in standards applicable to cloud computing\nThe Communication set out a series of \"digital agenda actions\" which the Commission proposed to undertake in order to support the development of a fair and effective market for cloud computing services.",
     "domain": "internet",
@@ -477,18 +357,6 @@
     "question": "What is Alternative cloud providers?",
     "answer": "Alternative cloud providers are often part of multi-cloud strategies, where organizations use multiple cloud services—both from hyperscalers and specialized providers—to optimize performance, compliance, and cost efficiency.",
     "domain": "networking",
-    "source": "wikipedia:Cloud computing"
-  },
-  {
-    "question": "What does Virtualization provide?",
-    "answer": "Virtualization provides the agility required to speed up IT operations and reduces cost by increasing infrastructure utilization.",
-    "domain": "general",
-    "source": "wikipedia:Cloud computing"
-  },
-  {
-    "question": "What does Cloud computing provide?",
-    "answer": "Cloud computing uses concepts from utility computing to provide metrics for the services used.",
-    "domain": "internet",
     "source": "wikipedia:Cloud computing"
   },
   {
@@ -518,24 +386,6 @@
   {
     "question": "What is Hewlett Packard Enterprise Networking (abbreviated as HPE Networking)?",
     "answer": "Hewlett Packard Enterprise Networking (abbreviated as HPE Networking) is the Networking Products division of Hewlett Packard Enterprise (\"HP\").",
-    "domain": "general",
-    "source": "wikipedia:HPE Networking"
-  },
-  {
-    "question": "Tell me about HPE",
-    "answer": "HPE Networking and its predecessor entities have developed and sold networking products since 1979.",
-    "domain": "intranet",
-    "source": "wikipedia:HPE Networking"
-  },
-  {
-    "question": "What does Currently, it provide?",
-    "answer": "Currently, it offers networking and switching products  for small and medium sized businesses through its wholly owned subsidiary Aruba Networks.",
-    "domain": "networking",
-    "source": "wikipedia:HPE Networking"
-  },
-  {
-    "question": "Tell me about HP",
-    "answer": "Prior to 2015, the entity within HP which offered networking products was called HP Networking.",
     "domain": "general",
     "source": "wikipedia:HPE Networking"
   },
@@ -570,12 +420,6 @@
     "source": "wikipedia:HPE Networking"
   },
   {
-    "question": "Tell me about SDN",
-    "answer": "In turn, these changes have led to an increased demand for software-defined networking (SDN)technology from organizations.",
-    "domain": "general",
-    "source": "wikipedia:HPE Networking"
-  },
-  {
     "question": "What does Organized in March 2011, the foundation provide?",
     "answer": "Organized in March 2011, the foundation provides support for SDN and manages the OpenFlow standard.",
     "domain": "general",
@@ -591,12 +435,6 @@
     "question": "What is HP SDN Manager application?",
     "answer": "The HP SDN Manager application is intended to allow administrators to configure, monitor, and manage policies for SDN switches and controllers.",
     "domain": "networking",
-    "source": "wikipedia:HPE Networking"
-  },
-  {
-    "question": "What is HP Virtual Cloud Networking (VCN) SDN Application?",
-    "answer": "The HP Virtual Cloud Networking (VCN) SDN Application is designed to provide virtual network overlays to the OpenStack technology open source cloud computing software, serving as a bridge between the HP Helion OpenStack cloud computing platform and the HP VAN SDN controller.",
-    "domain": "internet",
     "source": "wikipedia:HPE Networking"
   },
   {
@@ -648,21 +486,9 @@
     "source": "wikipedia:HPE Networking"
   },
   {
-    "question": "What is technology?",
-    "answer": "The technology is designed to make networks faster and more flexible, scalable, and reliable.",
-    "domain": "general",
-    "source": "wikipedia:HPE Networking"
-  },
-  {
     "question": "What is Expected in fall 2014, the initial version?",
     "answer": "Expected in fall 2014, the initial version is an enhanced OpenStack-technology module in HP Helion OpenStack.",
     "domain": "general",
-    "source": "wikipedia:HPE Networking"
-  },
-  {
-    "question": "Tell me about LAN",
-    "answer": "Centrally orchestrated virtual LAN (VLAN) or VXLAN-based virtual networks provide multitenant isolation.",
-    "domain": "networking",
     "source": "wikipedia:HPE Networking"
   },
   {
@@ -684,21 +510,9 @@
     "source": "wikipedia:HPE Networking"
   },
   {
-    "question": "Tell me about UC",
-    "answer": "Unified communications (UC) products integrate multiple interactive, real-time enterprise communication methods, such as instant messaging, desktop sharing, and telephony with non-real-time communication services such as unified messaging (integrated voicemail, e-mail, SMS, and fax).",
-    "domain": "general",
-    "source": "wikipedia:HPE Networking"
-  },
-  {
     "question": "What is HP Trusted Network Transformation?",
     "answer": "HP Trusted Network Transformation is designed to help organizations that want to use private cloud.",
     "domain": "internet",
-    "source": "wikipedia:HPE Networking"
-  },
-  {
-    "question": "Tell me about Hewlett Packard Enterprise",
-    "answer": "Hewlett Packard Enterprise through Aruba Networks sells a range of products for businesses, schools, and government entities.",
-    "domain": "general",
     "source": "wikipedia:HPE Networking"
   },
   {
@@ -720,12 +534,6 @@
     "source": "wikipedia:HPE Networking"
   },
   {
-    "question": "Tell me about SFP",
-    "answer": "Transceivers and accessories: Transceivers include series for SFP 1G/100M, SFP+ 10G, X2 10G, XFP 10G, and GBIC.",
-    "domain": "intranet",
-    "source": "wikipedia:HPE Networking"
-  },
-  {
     "question": "Tell me about CAT",
     "answer": "Cables include CAT 5e, CX4, direct attach copper, and fiber optic.",
     "domain": "general",
@@ -741,12 +549,6 @@
     "question": "Tell me about DVPN",
     "answer": "Dynamic Virtual Private Network (DVPN): The HP DVPN service interconnects data centers, campuses, and branch offices with standards-based IPsec VPN encryption.",
     "domain": "security",
-    "source": "wikipedia:HPE Networking"
-  },
-  {
-    "question": "What is Software-defined networking: HP software-defined networking products?",
-    "answer": "Software-defined networking: HP software-defined networking products are designed to provide an end-to-end service to automate the network from data center to campus and branch.",
-    "domain": "general",
     "source": "wikipedia:HPE Networking"
   },
   {
@@ -798,12 +600,6 @@
     "source": "wikipedia:HPE Networking"
   },
   {
-    "question": "What is initiative?",
-    "answer": "The initiative is meant to speed innovation through simple software changes in telecommunications networks, wireless networks, data centers and other networking areas.",
-    "domain": "wifi",
-    "source": "wikipedia:HPE Networking"
-  },
-  {
     "question": "What is Computer network engineering?",
     "answer": "Computer network engineering is a technology discipline within engineering that deals with the design, implementation, and management of computer networks. These systems contain both physical components, such as routers, switches, cables, and some logical elements, such as protocols and network services.",
     "domain": "networking",
@@ -816,39 +612,9 @@
     "source": "wikipedia:Computer network engineering"
   },
   {
-    "question": "Tell me about ARPANET",
-    "answer": "This discipline originated in the 1960s with projects like ARPANET, which initiated important advancements in reliable data transmission.",
-    "domain": "networking",
-    "source": "wikipedia:Computer network engineering"
-  },
-  {
-    "question": "Tell me about TCP",
-    "answer": "The advent of protocols such as TCP/IP revolutionized networking by enabling interoperability among various systems, which, in turn, fueled the rapid growth of the Internet.",
-    "domain": "networking",
-    "source": "wikipedia:Computer network engineering"
-  },
-  {
-    "question": "Tell me about OSI",
-    "answer": "=== Physical infrastructure ===\nThe physical infrastructure consists of the hardware used to transmit data, which is represented by the first layer of the OSI model.",
-    "domain": "networking",
-    "source": "wikipedia:Computer network engineering"
-  },
-  {
     "question": "Tell me about LANs",
     "answer": "==== Cabling ====\nCopper cables such as ethernet over twisted pair are commonly used for short-distance connections, especially in local area networks (LANs), while fiber optic cables are favored for long-distance communication due to their high-speed transmission capabilities and lower susceptibility to interference.",
     "domain": "networking",
-    "source": "wikipedia:Computer network engineering"
-  },
-  {
-    "question": "Tell me about ISP",
-    "answer": "Fiber optics play a significant role in the backbone of large-scale networks, such as those used in data centers and internet service provider (ISP) infrastructures.",
-    "domain": "general",
-    "source": "wikipedia:Computer network engineering"
-  },
-  {
-    "question": "Tell me about RF",
-    "answer": "Wireless technologies use a range of transmission methods, including radio frequency (RF) waves, infrared signals, and laser-based communication, allowing devices to connect to the network.",
-    "domain": "wifi",
     "source": "wikipedia:Computer network engineering"
   },
   {
@@ -866,12 +632,6 @@
   {
     "question": "Tell me about Beyond Wi",
     "answer": "Beyond Wi-Fi, other wireless transmission methods, such as infrared and laser-based communication, are used in specific contexts, like short-range, line-of-sight links or secure point-to-point communication.",
-    "domain": "wifi",
-    "source": "wikipedia:Computer network engineering"
-  },
-  {
-    "question": "Tell me about WAP",
-    "answer": "In wireless networks, wireless access points (WAP) allow devices to connect to the network.",
     "domain": "wifi",
     "source": "wikipedia:Computer network engineering"
   },
@@ -924,38 +684,8 @@
     "source": "wikipedia:Computer network engineering"
   },
   {
-    "question": "What is Internet Protocol (IP)?",
-    "answer": "The Internet Protocol (IP) is critical for routing packets between different networks.",
-    "domain": "networking",
-    "source": "wikipedia:Computer network engineering"
-  },
-  {
-    "question": "Tell me about MPLS",
-    "answer": "In addition to traditional protocols, advanced protocols such as Multiprotocol Label Switching (MPLS) and Segment Routing (SR) enhance traffic management and routing efficiency.",
-    "domain": "networking",
-    "source": "wikipedia:Computer network engineering"
-  },
-  {
-    "question": "Tell me about OSPF",
-    "answer": "For intra-domain routing, protocols like Open Shortest Path First (OSPF) and Enhanced Interior Gateway Routing Protocol (EIGRP) provide dynamic routing capabilities.",
-    "domain": "networking",
-    "source": "wikipedia:Computer network engineering"
-  },
-  {
-    "question": "Tell me about IPsec",
-    "answer": "Furthermore, Internet Protocol Security (IPsec) and Transport Layer Security (TLS) secure communication channels, ensuring data integrity and confidentiality.",
-    "domain": "security",
-    "source": "wikipedia:Computer network engineering"
-  },
-  {
     "question": "Tell me about RTP",
     "answer": "For real-time applications, protocols such as Real-time Transport Protocol (RTP) and WebRTC provide low-latency communication, making them suitable for video conferencing and streaming services.",
-    "domain": "networking",
-    "source": "wikipedia:Computer network engineering"
-  },
-  {
-    "question": "Tell me about QUIC",
-    "answer": "Additionally, protocols like QUIC enhance web performance and security by establishing secure connections with reduced latency.",
     "domain": "networking",
     "source": "wikipedia:Computer network engineering"
   },
@@ -980,24 +710,6 @@
   {
     "question": "What is For secure remote access, Virtual Private Networks (VPNs)?",
     "answer": "For secure remote access, Virtual Private Networks (VPNs) are deployed, using technologies to create encrypted tunnels for data transmission over public networks.",
-    "domain": "security",
-    "source": "wikipedia:Computer network engineering"
-  },
-  {
-    "question": "What is These VPNs?",
-    "answer": "These VPNs are often used for maintaining security when remote users access corporate networks but are also used ion other settings.",
-    "domain": "security",
-    "source": "wikipedia:Computer network engineering"
-  },
-  {
-    "question": "Tell me about IDS",
-    "answer": "To enhance threat detection and response capabilities, network engineers implement Intrusion Detection Systems (IDS) and Intrusion Prevention Systems (IPS).",
-    "domain": "security",
-    "source": "wikipedia:Computer network engineering"
-  },
-  {
-    "question": "Tell me about SIEM",
-    "answer": "Additionally, they may employ Security Information and Event Management (SIEM) solutions that aggregate and analyze security data across the network.",
     "domain": "security",
     "source": "wikipedia:Computer network engineering"
   },
@@ -1029,12 +741,6 @@
     "question": "Tell me about IBN",
     "answer": "=== Intelligent load balancing and traffic engineering ===\nBeyond traditional load balancing, techniques such as intent-based networking (IBN) and AI-driven traffic optimization are now implemented to predict and adjust traffic distribution based on usage patterns, network failures, or infrastructure performance.",
     "domain": "general",
-    "source": "wikipedia:Computer network engineering"
-  },
-  {
-    "question": "Tell me about WAN",
-    "answer": "In hybrid cloud infrastructures, Software-Defined WAN (SD-WAN) optimizes connectivity between on-premises and cloud environments, dynamically managing routes and bandwidth allocation.",
-    "domain": "networking",
     "source": "wikipedia:Computer network engineering"
   },
   {
@@ -1176,20 +882,8 @@
     "source": "wikipedia:Jayshree Ullal"
   },
   {
-    "question": "Tell me about FDDI",
-    "answer": "In March 1992, Ullal joined Crescendo Communications, a maker of Fiber Distributed Data Interface (FDDI) network products, as vice-president of marketing.",
-    "domain": "general",
-    "source": "wikipedia:Jayshree Ullal"
-  },
-  {
     "question": "Tell me about CDDI",
     "answer": "She helped pioneer 100-Mbit/s Copper Distributed Data Interface (CDDI) products and worked on first-generation Ethernet switching.",
-    "domain": "networking",
-    "source": "wikipedia:Jayshree Ullal"
-  },
-  {
-    "question": "Tell me about In September",
-    "answer": "=== Cisco ===\nIn September 1993, Cisco Systems acquired Crescendo Communications, marking Cisco's first acquisition and first foray into the switching market.",
     "domain": "networking",
     "source": "wikipedia:Jayshree Ullal"
   },
@@ -1209,24 +903,6 @@
     "question": "Tell me about Catalyst Data Center Switching",
     "answer": "Responsibilities included the direction of the modular Nexus and Catalyst Data Center Switching and Application/Virtualization services which saw about $15 billion of direct and indirect revenue.",
     "domain": "networking",
-    "source": "wikipedia:Jayshree Ullal"
-  },
-  {
-    "question": "Tell me about CEO",
-    "answer": "=== Arista ===\nIn October 2008, co-founders Andy Bechtolsheim & David Cheriton named Ullal CEO & President of Arista Networks, a cloud networking company located in Santa Clara, CA.",
-    "domain": "internet",
-    "source": "wikipedia:Jayshree Ullal"
-  },
-  {
-    "question": "Tell me about Arista Networks",
-    "answer": "Ullal was named by Forbes magazine as \"one of the top five most influential people in the networking industry today\" for her work at Arista Networks.",
-    "domain": "general",
-    "source": "wikipedia:Jayshree Ullal"
-  },
-  {
-    "question": "Tell me about IPO",
-    "answer": "In June 2014, Ullal led Arista Networks to an IPO on the New York Stock Exchange under the symbol ANET.",
-    "domain": "general",
     "source": "wikipedia:Jayshree Ullal"
   },
   {
@@ -1260,12 +936,6 @@
     "source": "wikipedia:Vultr"
   },
   {
-    "question": "What does company provide?",
-    "answer": "The company provides cloud compute, cloud storage, cloud networking, GPU-as-a-service and bare metal-as-a-service.",
-    "domain": "internet",
-    "source": "wikipedia:Vultr"
-  },
-  {
     "question": "Tell me about Goldman Sachs",
     "answer": "In a funding round In 2025, Vultr secured an additional $329 million in credit financing from financial institutions, including Bank of America, Citi, and Goldman Sachs.",
     "domain": "general",
@@ -1275,18 +945,6 @@
     "question": "Tell me about COO",
     "answer": "Kardwell, COO David Gucker, CIO Anthony Quon, CMO Kevin Cochrane, SVP Global Finance and Accounting Matt Short, General Manager of AI and Enterprise Cloud Amit Rai, and SVP Engineering Nathan Goulding.",
     "domain": "networking",
-    "source": "wikipedia:Vultr"
-  },
-  {
-    "question": "Tell me about GPUs",
-    "answer": "== Operations ==\nVultr provides access to cloud infrastructure services and virtualized GPUs.",
-    "domain": "internet",
-    "source": "wikipedia:Vultr"
-  },
-  {
-    "question": "Tell me about North America",
-    "answer": "The company operates data centers across North America, South America, Europe, Asia, the Middle East, Sub-Saharan Africa, and Australia.",
-    "domain": "general",
     "source": "wikipedia:Vultr"
   },
   {
@@ -1314,12 +972,6 @@
     "source": "wikipedia:Arista Networks"
   },
   {
-    "question": "Tell me about In May",
-    "answer": "In May 2008, Jayshree Ullal left Cisco after 15 years at the firm.",
-    "domain": "general",
-    "source": "wikipedia:Arista Networks"
-  },
-  {
     "question": "Tell me about ANET",
     "answer": "In June 2014, Arista Networks had its initial public offering on the New York Stock Exchange under the symbol ANET.",
     "domain": "general",
@@ -1329,18 +981,6 @@
     "question": "Tell me about In December",
     "answer": "In December 2014, Cisco filed two lawsuits against Arista alleging intellectual property infringement., and the United States International Trade Commission issued limited exclusion and cease-and-desist orders concerning two of the features patented by Cisco and upheld an import ban on infringing products.",
     "domain": "networking",
-    "source": "wikipedia:Arista Networks"
-  },
-  {
-    "question": "Tell me about US",
-    "answer": "In August 2018, Arista agreed to pay Cisco US$400 million as part of a settlement that included a release for all claims of infringement by Cisco, dismissal of Arista's antitrust claims against Cisco, and a 5-year stand-down between the companies.",
-    "domain": "general",
-    "source": "wikipedia:Arista Networks"
-  },
-  {
-    "question": "Tell me about In August",
-    "answer": "In August 2022, Arista Networks acquired Pluribus Networks, a unified cloud network company, for an undisclosed sum.",
-    "domain": "internet",
     "source": "wikipedia:Arista Networks"
   },
   {
@@ -1359,12 +999,6 @@
     "question": "What is All the state of the switch and its various protocols?",
     "answer": "All the state of the switch and its various protocols is centralized in another process, called Sysdb.",
     "domain": "networking",
-    "source": "wikipedia:Arista Networks"
-  },
-  {
-    "question": "What is first?",
-    "answer": "The first is software fault containment, which means that if a software fault occurs, any damage is limited to one agent.",
-    "domain": "general",
     "source": "wikipedia:Arista Networks"
   },
   {
@@ -1428,20 +1062,8 @@
     "source": "wikipedia:Arista Networks"
   },
   {
-    "question": "What is Port-to-port latency?",
-    "answer": "Port-to-port latency is sub-380ns, regardless of the frame size.",
-    "domain": "networking",
-    "source": "wikipedia:Arista Networks"
-  },
-  {
     "question": "What does Layer 1 switching provide?",
     "answer": "Layer 1 switching enables mirroring and software-defined port routing with port-to-port latency starting from 4ns, depending on physical distance.",
-    "domain": "networking",
-    "source": "wikipedia:Arista Networks"
-  },
-  {
-    "question": "Tell me about FPGA",
-    "answer": "The E and L variants allow running custom FPGA applications directly on the switch with a port-to-FPGA latency as low as 3ns.",
     "domain": "networking",
     "source": "wikipedia:Arista Networks"
   },
@@ -1461,12 +1083,6 @@
     "question": "What is 7050X and 7060X Series?",
     "answer": "The 7050X and 7060X Series are based on Broadcom Trident and Tomahawk merchant silicon.",
     "domain": "general",
-    "source": "wikipedia:Arista Networks"
-  },
-  {
-    "question": "Tell me about GB",
-    "answer": "These switches use a Deep Buffer architecture, with 3 GB of packet memory.",
-    "domain": "networking",
     "source": "wikipedia:Arista Networks"
   },
   {
@@ -1491,12 +1107,6 @@
     "question": "What is switches?",
     "answer": "The switches are also capable of layer 3 or layer 4 equal-cost multi-path routing (ECMP), and applying per-port L3/L4 access-control lists (ACLs) entirely in hardware.",
     "domain": "networking",
-    "source": "wikipedia:Arista Networks"
-  },
-  {
-    "question": "Tell me about In November",
-    "answer": "In November 2013, Arista Networks introduced the Spline network, combining leaf and spine architectures into a single-tier network, aiming to cut operating costs.",
-    "domain": "general",
     "source": "wikipedia:Arista Networks"
   },
   {
@@ -1542,45 +1152,9 @@
     "source": "wikipedia:Cato Networks"
   },
   {
-    "question": "Tell me about SASE",
-    "answer": "is a Tel Aviv, Israel-based network security company that develops Secure Access Service Edge (SASE) technology, which combines enterprise communication and security capabilities into a single cloud-based platform.",
-    "domain": "internet",
-    "source": "wikipedia:Cato Networks"
-  },
-  {
-    "question": "Tell me about Cato Networks",
-    "answer": "== History ==\nCato Networks was founded in 2015 in Tel Aviv, Israel, by Shlomo Kramer, co-founder of Checkpoint and Imperva, and Gur Shatz, a co-founder of networking company Incapsula.",
-    "domain": "general",
-    "source": "wikipedia:Cato Networks"
-  },
-  {
-    "question": "Tell me about In June",
-    "answer": "In June 2018, the company added threat hunting capabilities to its networking service.",
-    "domain": "general",
-    "source": "wikipedia:Cato Networks"
-  },
-  {
     "question": "Tell me about Venture Partners",
     "answer": "Venture Partners, Aspect Capital, Singaporean fund Singtel's subsidiary Innov8, and hedge fund Coatue Management.",
     "domain": "internet",
-    "source": "wikipedia:Cato Networks"
-  },
-  {
-    "question": "Tell me about MDR",
-    "answer": "In June 2021, the company launched a new version of its managed detection and response (MDR) platform, used to detect security threats on its network.",
-    "domain": "general",
-    "source": "wikipedia:Cato Networks"
-  },
-  {
-    "question": "Tell me about In October",
-    "answer": "In October, the company announced it had raised $200 million at a $2.5 billion valuation.",
-    "domain": "general",
-    "source": "wikipedia:Cato Networks"
-  },
-  {
-    "question": "Tell me about CASB",
-    "answer": "In February 2022, the company added cloud access security broker (CASB) capabilities to protect cloud applications.",
-    "domain": "security",
     "source": "wikipedia:Cato Networks"
   },
   {
@@ -1626,39 +1200,15 @@
     "source": "wikipedia:Amazon Web Services"
   },
   {
-    "question": "What is AWS services?",
-    "answer": "AWS services are delivered to customers via a network of AWS server farms located throughout the world.",
-    "domain": "general",
-    "source": "wikipedia:Amazon Web Services"
-  },
-  {
     "question": "What is Fees?",
     "answer": "Fees are based on a combination of usage (known as a \"Pay-as-you-go\" model), hardware, operating system, software, and networking features chosen by the subscriber requiring various degrees of availability, redundancy, security, and service options.",
     "domain": "networking",
     "source": "wikipedia:Amazon Web Services"
   },
   {
-    "question": "What does Amazon provide?",
-    "answer": "Amazon provides select portions of security for subscribers (e.g.",
-    "domain": "general",
-    "source": "wikipedia:Amazon Web Services"
-  },
-  {
     "question": "What is physical security of the data centers) while other aspects of security?",
     "answer": "physical security of the data centers) while other aspects of security are the responsibility of the subscriber (e.g.",
     "domain": "general",
-    "source": "wikipedia:Amazon Web Services"
-  },
-  {
-    "question": "What is All services?",
-    "answer": "All services are billed based on usage, but each service measures usage in varying ways.",
-    "domain": "general",
-    "source": "wikipedia:Amazon Web Services"
-  },
-  {
-    "question": "Tell me about APIs",
-    "answer": "Services expose functionality through APIs for clients to use in their applications.",
-    "domain": "internet",
     "source": "wikipedia:Amazon Web Services"
   },
   {
@@ -1686,21 +1236,9 @@
     "source": "wikipedia:Amazon Web Services"
   },
   {
-    "question": "Tell me about In July",
-    "answer": "In July 2002 Amazon.com Web Services, managed by Colin Bryar, launched its first web services, opening up the Amazon.com platform to all developers.",
-    "domain": "general",
-    "source": "wikipedia:Amazon Web Services"
-  },
-  {
     "question": "Tell me about Andy Jassy",
     "answer": "By the summer of 2003, Andy Jassy had taken over Bryar's portfolio at Rick Dalzell's behest, after Vermeulen, who was Bezos' first pick, declined the offer.",
     "domain": "general",
-    "source": "wikipedia:Amazon Web Services"
-  },
-  {
-    "question": "Tell me about OS",
-    "answer": "Jassy subsequently mapped out the vision for an \"Internet OS\" made up of foundational infrastructure primitives that alleviated key impediments to shipping software applications faster.",
-    "domain": "troubleshooting",
     "source": "wikipedia:Amazon Web Services"
   },
   {
@@ -1718,12 +1256,6 @@
   {
     "question": "Tell me about Pi Corporation",
     "answer": "Pi Corporation, a startup Paul Maritz co-founded, was the first beta-user of EC2 outside of Amazon, while Microsoft was among EC2's first enterprise customers.",
-    "domain": "general",
-    "source": "wikipedia:Amazon Web Services"
-  },
-  {
-    "question": "Tell me about EBS",
-    "answer": "Some Amazon EBS features that help with data management, backups, and performance tuning include:.",
     "domain": "general",
     "source": "wikipedia:Amazon Web Services"
   },
@@ -1770,20 +1302,8 @@
     "source": "wikipedia:Amazon Web Services"
   },
   {
-    "question": "What is They?",
-    "answer": "They are available in six different sizes.",
-    "domain": "general",
-    "source": "wikipedia:Amazon Web Services"
-  },
-  {
     "question": "Tell me about DAX",
     "answer": "By 2019, it was reported that more than 80% of Germany's listed DAX companies used AWS.",
-    "domain": "general",
-    "source": "wikipedia:Amazon Web Services"
-  },
-  {
-    "question": "Tell me about In January",
-    "answer": "In January 2021, Amazon announced that it would suspend Parler from Amazon Web Services, stating Parler hosted “violent content” that violates its terms of service.",
     "domain": "general",
     "source": "wikipedia:Amazon Web Services"
   },
@@ -1791,18 +1311,6 @@
     "question": "Tell me about DISH",
     "answer": "Later in 2021, DISH Network announced it would develop and launch its 5G network on AWS.",
     "domain": "general",
-    "source": "wikipedia:Amazon Web Services"
-  },
-  {
-    "question": "Tell me about UK",
-    "answer": "It was also reported that spy agencies and government departments in the UK, such as GCHQ, MI5, MI6, and the Ministry of Defence, contracted AWS to host their classified materials.",
-    "domain": "general",
-    "source": "wikipedia:Amazon Web Services"
-  },
-  {
-    "question": "Tell me about United States Department",
-    "answer": "In 2022, Amazon shared a $9 billion contract from the United States Department of Defense for cloud computing with Google, Microsoft, and Oracle.",
-    "domain": "internet",
     "source": "wikipedia:Amazon Web Services"
   },
   {
@@ -1814,18 +1322,6 @@
   {
     "question": "Tell me about Elastic Block Store",
     "answer": "Parts of the Elastic Block Store service became \"stuck\" and could not fulfill read/write requests.",
-    "domain": "general",
-    "source": "wikipedia:Amazon Web Services"
-  },
-  {
-    "question": "Tell me about On October",
-    "answer": "On October 22, 2012, a major outage occurred, affecting many sites including Reddit, Foursquare, and Pinterest.",
-    "domain": "internet",
-    "source": "wikipedia:Amazon Web Services"
-  },
-  {
-    "question": "Tell me about On December",
-    "answer": "On December 7, 2021, an outage mainly affected the Eastern United States, disrupting delivery service and streaming.",
     "domain": "general",
     "source": "wikipedia:Amazon Web Services"
   },
@@ -1850,12 +1346,6 @@
   {
     "question": "Tell me about Availability Zones",
     "answer": "Each region has multiple \"Availability Zones\", which consist of one or more discrete data centers, each with redundant power, networking, and connectivity, housed in separate facilities.",
-    "domain": "general",
-    "source": "wikipedia:Amazon Web Services"
-  },
-  {
-    "question": "Tell me about Amazon Web Services",
-    "answer": "As of December 2014, Amazon Web Services operated an estimated 1.4 million servers across 11 regions and 28 availability zones.",
     "domain": "general",
     "source": "wikipedia:Amazon Web Services"
   },
@@ -1926,18 +1416,6 @@
     "source": "wikipedia:Amazon Web Services"
   },
   {
-    "question": "Tell me about Palo Alto Networks",
-    "answer": "However, researchers from Unit 42 at Palo Alto Networks identified critical security flaws in these patches that could be exploited for container escape and privilege escalation, potentially granting attackers unauthorized root-level access to the host system.",
-    "domain": "general",
-    "source": "wikipedia:Amazon Web Services"
-  },
-  {
-    "question": "Tell me about ALB",
-    "answer": "The issue stemmed from how some users configured ALB's authentication handoff to third-party services, potentially enabling unauthorized access to application data.",
-    "domain": "general",
-    "source": "wikipedia:Amazon Web Services"
-  },
-  {
     "question": "What is pricing structure?",
     "answer": "The pricing structure is influenced by several factors, including the source and destination of the data, the specific AWS services in use, and the underlying networking architecture.",
     "domain": "networking",
@@ -1980,21 +1458,9 @@
     "source": "wikipedia:SONiC (operating system)"
   },
   {
-    "question": "Tell me about BGP",
-    "answer": "Notable supported network features include Border Gateway Protocol (BGP), remote direct memory access (RDMA), QoS, and various other Ethernet/IP technologies.",
-    "domain": "networking",
-    "source": "wikipedia:SONiC (operating system)"
-  },
-  {
     "question": "What is Much of the protocol support?",
     "answer": "Much of the protocol support is provided through inclusion of the FRRouting suite of routing daemons.",
     "domain": "networking",
-    "source": "wikipedia:SONiC (operating system)"
-  },
-  {
-    "question": "Tell me about OEMs",
-    "answer": "The SONiC community includes cloud providers, service providers, and silicon and component suppliers, as well as networking hardware OEMs and ODMs.",
-    "domain": "internet",
     "source": "wikipedia:SONiC (operating system)"
   },
   {
@@ -2052,12 +1518,6 @@
     "source": "wikipedia:SD-WAN"
   },
   {
-    "question": "What is This concept?",
-    "answer": "This concept is similar to how software-defined networking implements virtualization technology to improve data center management and operation.",
-    "domain": "general",
-    "source": "wikipedia:SD-WAN"
-  },
-  {
     "question": "What is In practice, proprietary protocols?",
     "answer": "In practice, proprietary protocols are used to set up and manage an SD-WAN, meaning there is no decoupling of the hardware and its control mechanism.",
     "domain": "networking",
@@ -2082,26 +1542,8 @@
     "source": "wikipedia:SD-WAN"
   },
   {
-    "question": "Tell me about WANs",
-    "answer": "== History ==\nWANs were very important for the development of networking in general and for a long time one of the most important applications of networks both for military and enterprise applications.",
-    "domain": "general",
-    "source": "wikipedia:SD-WAN"
-  },
-  {
-    "question": "Tell me about ATM",
-    "answer": "Innovations like circuit and packet switching (in the form of X.25, ATM and later Internet Protocol or Multiprotocol Label Switching) allowed communication to become more dynamic, supporting ever-growing networks.",
-    "domain": "networking",
-    "source": "wikipedia:SD-WAN"
-  },
-  {
     "question": "Tell me about QOS",
     "answer": "The need for strict control, security and quality of service (QOS) meant that multinational corporations were very conservative in leasing and operating their WANs.",
-    "domain": "networking",
-    "source": "wikipedia:SD-WAN"
-  },
-  {
-    "question": "Tell me about SD",
-    "answer": "SD-WAN combines several networking aspects to create full-fledged private networks, with the ability to dynamically share network bandwidth across the connection points.",
     "domain": "networking",
     "source": "wikipedia:SD-WAN"
   },
@@ -2120,12 +1562,6 @@
   {
     "question": "What is SD-WAN products?",
     "answer": "SD-WAN products are designed to address these network problems.",
-    "domain": "networking",
-    "source": "wikipedia:SD-WAN"
-  },
-  {
-    "question": "Tell me about MEF",
-    "answer": "=== Components ===\nThe MEF Forum has defined an SD-WAN architecture consisting of an SD-WAN edge, SD-WAN gateway, SD-WAN controller and SD-WAN orchestrator.",
     "domain": "networking",
     "source": "wikipedia:SD-WAN"
   },
@@ -2178,18 +1614,6 @@
     "source": "wikipedia:Secure access service edge"
   },
   {
-    "question": "What is secure access service edge (SASE) (also secure access secure edge)?",
-    "answer": "A secure access service edge (SASE) (also secure access secure edge) is technology used to deliver wide area network (WAN) and security controls as a cloud computing service directly to the source of connection (user, device, Internet of things (IoT) device, or edge computing location) rather than a data center.",
-    "domain": "internet",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "What is Security?",
-    "answer": "Security is based on digital identity, real-time context, and company and regulatory compliance policies, rather than a security appliance like a firewall.",
-    "domain": "security",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
     "question": "Tell me about Neil Mac",
     "answer": "The term was coined in 2019 by market analyst, Neil MacDonald of Gartner.",
     "domain": "general",
@@ -2226,12 +1650,6 @@
     "source": "wikipedia:Secure access service edge"
   },
   {
-    "question": "What is Performance?",
-    "answer": "Performance is also increased by implementing all security functions with a single-pass architecture inside a single PoP, to avoid unnecessary routing.",
-    "domain": "networking",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
     "question": "What is Both analyst firms criticize SASE as a Gartner term that?",
     "answer": "Both analyst firms criticize SASE as a Gartner term that is neither a new market, technology nor product, but rather an integration of existing technology with a single source of management.",
     "domain": "general",
@@ -2241,12 +1659,6 @@
     "question": "Tell me about IHS",
     "answer": "Clifford Grossner of IHS Markit criticizes the lack of analytics, artificial intelligence and machine learning as part of the SASE concept and the likelihood that enterprises won't want to get all SD-WAN and security functions from a single vendor.",
     "domain": "networking",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "What does It also provide?",
-    "answer": "It also allows organizations to combine or replace private WAN connections with Internet broadband, LTE and/or 5g connections.",
-    "domain": "general",
     "source": "wikipedia:Secure access service edge"
   },
   {
@@ -2283,12 +1695,6 @@
     "question": "What is By contrast SASE?",
     "answer": "By contrast SASE is meant to be a single comprehensive secure SD-WAN solution for branch offices, mobile users, data centers and any other secure enterprise WAN requirement.",
     "domain": "networking",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "Tell me about SSE",
-    "answer": "Some vendors focus on the networking aspects while others focus on the security aspect which is now referred to as Secure Service Edge (SSE).",
-    "domain": "general",
     "source": "wikipedia:Secure access service edge"
   },
   {
@@ -2349,12 +1755,6 @@
     "question": "What is Another reason?",
     "answer": "Another reason is that vendors were concerned that creating standard application programming interfaces (APIs) between the control and data planes would result in increased competition.",
     "domain": "internet",
-    "source": "wikipedia:Software-defined networking"
-  },
-  {
-    "question": "Tell me about API",
-    "answer": "Ethane's simple switch design led to the creation of OpenFlow, and an API for OpenFlow was first created in 2008.",
-    "domain": "networking",
     "source": "wikipedia:Software-defined networking"
   },
   {
@@ -2424,12 +1824,6 @@
     "source": "wikipedia:Software-defined networking"
   },
   {
-    "question": "Tell me about As Internet",
-    "answer": "Energy use in large data centers\nAs Internet of things, cloud computing and SaaS emerged, the need for larger data centers has increased the energy consumption of those facilities.",
-    "domain": "internet",
-    "source": "wikipedia:Software-defined networking"
-  },
-  {
     "question": "What is One value of SDN lies in the expectation that the CDPI?",
     "answer": "One value of SDN lies in the expectation that the CDPI is implemented in an open, vendor-neutral and interoperable way.",
     "domain": "general",
@@ -2451,18 +1845,6 @@
     "question": "What is important parameter to consider while doing so?",
     "answer": "An important parameter to consider while doing so is the propagation delay between the controllers and the network devices, especially in the context of large networks.",
     "domain": "general",
-    "source": "wikipedia:Software-defined networking"
-  },
-  {
-    "question": "Tell me about TCAM",
-    "answer": "OpenFlow switches may use TCAM tables to route packet sequences (flows).",
-    "domain": "networking",
-    "source": "wikipedia:Software-defined networking"
-  },
-  {
-    "question": "Tell me about SDNs",
-    "answer": "To achieve the same traffic engineering capabilities of switch-based SDNs, host-based SDNs may require the use of carefully designed VLAN and spanning tree assignments.",
-    "domain": "networking",
     "source": "wikipedia:Software-defined networking"
   },
   {
@@ -2550,12 +1932,6 @@
     "source": "wikipedia:Software-defined networking"
   },
   {
-    "question": "Tell me about IPs",
-    "answer": "One application can for example periodically assign virtual IPs to hosts within the network, and the mapping virtual IP/real IP is then performed by the controller.",
-    "domain": "security",
-    "source": "wikipedia:Software-defined networking"
-  },
-  {
     "question": "What is SDN controller applications?",
     "answer": "SDN controller applications are mostly deployed in large-scale scenarios, which requires comprehensive checks of possible programming errors.",
     "domain": "general",
@@ -2601,12 +1977,6 @@
     "question": "What is These software-based services that run in an NFV environment?",
     "answer": "These software-based services that run in an NFV environment are called Virtual Network Functions (VNF).",
     "domain": "general",
-    "source": "wikipedia:Software-defined networking"
-  },
-  {
-    "question": "What does SDN provide?",
-    "answer": "SDN provides the agility of controlling the generic forwarding devices such as the routers and switches by using SDN controllers.",
-    "domain": "networking",
     "source": "wikipedia:Software-defined networking"
   },
   {
@@ -2658,26 +2028,8 @@
     "source": "wikipedia:Fortinet"
   },
   {
-    "question": "Tell me about NASDAQ",
-    "answer": "In November 2009, Fortinet had an initial public offering, opening on the NASDAQ Global Market under the ticker symbol FTNT.",
-    "domain": "general",
-    "source": "wikipedia:Fortinet"
-  },
-  {
     "question": "Tell me about NSE",
     "answer": "=== Recent history ===\nIn July 2014, Fortinet announced a technical certification program called the Network Security Expert (NSE) program.",
-    "domain": "general",
-    "source": "wikipedia:Fortinet"
-  },
-  {
-    "question": "Tell me about In March",
-    "answer": "In March 2016, Fortinet launched a Network Security Academy to help fill open cybersecurity jobs in the U.S.",
-    "domain": "general",
-    "source": "wikipedia:Fortinet"
-  },
-  {
-    "question": "Tell me about NSA",
-    "answer": "In January 2017, it was announced that Philip Quade, a former member of the NSA, would become the company's chief information security officer.",
     "domain": "general",
     "source": "wikipedia:Fortinet"
   },
@@ -2706,33 +2058,9 @@
     "source": "wikipedia:Fortinet"
   },
   {
-    "question": "Tell me about DLP",
-    "answer": "In August 2024, Fortinet acquired Next DLP, a cloud based DLP provider company for an undisclosed amount.",
-    "domain": "security",
-    "source": "wikipedia:Fortinet"
-  },
-  {
     "question": "Tell me about WIFI",
     "answer": "In 2025, Fortinet acquired Everest, an Indian company focus in WIFI access points for high density environments.",
     "domain": "wifi",
-    "source": "wikipedia:Fortinet"
-  },
-  {
-    "question": "Tell me about ASIC",
-    "answer": "FortiGate was updated later to use application-specific integrated circuit (ASIC) architecture.",
-    "domain": "general",
-    "source": "wikipedia:Fortinet"
-  },
-  {
-    "question": "Tell me about VMware",
-    "answer": "Initially, FortiGate was a physical, rack-mounted product but later became available as a virtual appliance that could run on virtualization platforms such as VMware vSphere.",
-    "domain": "general",
-    "source": "wikipedia:Fortinet"
-  },
-  {
-    "question": "Tell me about In April",
-    "answer": "In April 2016, Fortinet began building its Security Fabric architecture so multiple network security products could communicate as one platform.",
-    "domain": "general",
     "source": "wikipedia:Fortinet"
   },
   {
@@ -2756,24 +2084,6 @@
   {
     "question": "What does In February 2020, Fortinet released FortiAI, a threat-detection program that provide?",
     "answer": "In February 2020, Fortinet released FortiAI, a threat-detection program that uses artificial intelligence.",
-    "domain": "general",
-    "source": "wikipedia:Fortinet"
-  },
-  {
-    "question": "Tell me about BT",
-    "answer": "That year, BT Security selected Fortinet and other Threat Alliance members as Critical Partners.",
-    "domain": "general",
-    "source": "wikipedia:Fortinet"
-  },
-  {
-    "question": "Tell me about VPN",
-    "answer": "=== Vulnerabilities and credential leaks ===\nIn September 2021, almost 500,000 login names and passwords for Fortinet VPN devices were published on a hacking forum.",
-    "domain": "security",
-    "source": "wikipedia:Fortinet"
-  },
-  {
-    "question": "Tell me about CVE",
-    "answer": "The credentials were allegedly scraped from devices vulnerable to a 2018 exploit (CVE-2018-13379).",
     "domain": "general",
     "source": "wikipedia:Fortinet"
   },
@@ -2874,12 +2184,6 @@
     "source": "wikipedia:ZeroTier"
   },
   {
-    "question": "Tell me about NAT",
-    "answer": "Additional use cases include secure networking for Internet of Things (IoT) and edge devices, where ZeroTier can provide encrypted connectivity between devices that may be geographically distributed, intermittently connected, or located behind network address translation (NAT).",
-    "domain": "networking",
-    "source": "wikipedia:ZeroTier"
-  },
-  {
     "question": "What is software?",
     "answer": "The software is commonly deployed in development and testing environments to create temporary or ad-hoc private networks, as well as in operational technology (OT) and industrial settings to securely connect embedded systems, sensors, and remote equipment.",
     "domain": "general",
@@ -2900,12 +2204,6 @@
   {
     "question": "What is ZeroTier One, first released in 2013?",
     "answer": "ZeroTier One, first released in 2013, is a portable client application that provides connectivity to ZeroTier-based public or private virtual networks.",
-    "domain": "general",
-    "source": "wikipedia:ZeroTier"
-  },
-  {
-    "question": "Tell me about UI",
-    "answer": "Central, a web-based UI portal for managing ZeroTier networks.",
     "domain": "general",
     "source": "wikipedia:ZeroTier"
   },
@@ -2940,12 +2238,6 @@
     "source": "wikipedia:ZeroTier"
   },
   {
-    "question": "Tell me about On March",
-    "answer": "On March 23, 2026, ZeroTier launched ZeroTier Quantum, the first end-to-end quantum-secure networking platform.",
-    "domain": "general",
-    "source": "wikipedia:ZeroTier"
-  },
-  {
     "question": "Tell me about Available Clients",
     "answer": "== Available Clients & Containers ==\nZeroTier One is available on multiple platforms and in multiple packages:.",
     "domain": "general",
@@ -2960,12 +2252,6 @@
   {
     "question": "What is NetScaler?",
     "answer": "NetScaler is a line of networking products owned by Cloud Software Group. The products consist of NetScaler, an application delivery controller (ADC), NetScaler AppFirewall, an application firewall, NetScaler Unified Gateway, NetScaler Application Delivery Management (ADM), and NetScaler SD-WAN, which provides software-defined wide-area networking management. NetScaler was initially developed in 1997 by Michel K Susai and acquired by Citrix Systems in 2005.",
-    "domain": "networking",
-    "source": "wikipedia:NetScaler"
-  },
-  {
-    "question": "Tell me about ADC",
-    "answer": "The products consist of NetScaler, an application delivery controller (ADC), NetScaler AppFirewall, an application firewall, NetScaler Unified Gateway, NetScaler Application Delivery Management (ADM), and NetScaler SD-WAN, which provides software-defined wide-area networking management.",
     "domain": "networking",
     "source": "wikipedia:NetScaler"
   },
@@ -3002,12 +2288,6 @@
   {
     "question": "What does It can be made a server proxy, process SSL requests, and provide?",
     "answer": "It can be made a server proxy, process SSL requests, and offers VPN and micro-app VPN operations.",
-    "domain": "security",
-    "source": "wikipedia:NetScaler"
-  },
-  {
-    "question": "Tell me about SSL",
-    "answer": "It also includes NetScaler application firewall and SSL encryption capabilities.",
     "domain": "security",
     "source": "wikipedia:NetScaler"
   },
@@ -3174,18 +2454,6 @@
     "source": "wikipedia:Riverbed Technology"
   },
   {
-    "question": "Tell me about On July",
-    "answer": "On July 11, 2023, Riverbed was acquired by private-equity firm Vector Capital, with Dave Donatelli named as new chief executive officer.",
-    "domain": "networking",
-    "source": "wikipedia:Riverbed Technology"
-  },
-  {
-    "question": "Tell me about On February",
-    "answer": "== Acquisitions ==\nOn February 20, 2009, Riverbed completed the acquisition of Mazu Networks.",
-    "domain": "general",
-    "source": "wikipedia:Riverbed Technology"
-  },
-  {
     "question": "Tell me about The Mazu",
     "answer": "The Mazu products, which were initially renamed Cascade (and in 2014 became part of Riverbed SteelCentral), analyze network traffic to provide information about the interactions of and dependencies between users, applications and systems.",
     "domain": "general",
@@ -3282,12 +2550,6 @@
     "source": "wikipedia:Riverbed Technology"
   },
   {
-    "question": "Tell me about Fastest Growing Tech Companies",
-    "answer": "\"America's Fastest Growing Tech Companies: #2\", Forbes, 1 April 2010.",
-    "domain": "general",
-    "source": "wikipedia:Riverbed Technology"
-  },
-  {
     "question": "What is Masergy Communications?",
     "answer": "Masergy Communications ( MAY-sər-jee) is a software-defined networking services company founded in 2000 and headquartered in Plano, Texas. The services they provide include Managed SD-WAN, Unified Communications, Cloud Contact Center, and Managed Security. Masergy was acquired by Comcast on October 8, 2021.\nSome of Masergy's partners are Huisman, Pattonair, PRGX, Inc., Eurostar, Dolby Laboratories, and the Hallmark Channel.",
     "domain": "networking",
@@ -3318,12 +2580,6 @@
     "source": "wikipedia:Masergy Communications"
   },
   {
-    "question": "Tell me about ISC",
-    "answer": "In August 2019, Masergy launched an updated experience for its Intelligent Service Control (ISC) portal, simplifying and unifying network & application management.",
-    "domain": "general",
-    "source": "wikipedia:Masergy Communications"
-  },
-  {
     "question": "What is Tailscale?",
     "answer": "Tailscale Inc. is a software company based in Toronto, Ontario. Tailscale develops an open-source software-defined mesh virtual private network (VPN) and a web-based management service. The company provides a zero config VPN as a service under the same name.\nThe company's name was inspired by a 2013 Google research paper, The Tail at Scale.",
     "domain": "security",
@@ -3350,12 +2606,6 @@
   {
     "question": "What is IPv4 addresses given to clients?",
     "answer": "The IPv4 addresses given to clients are in the carrier-grade NAT reserved space.",
-    "domain": "networking",
-    "source": "wikipedia:Tailscale"
-  },
-  {
-    "question": "Tell me about SNAT",
-    "answer": "The Linux client can also send traffic to networks behind itself by disabling SNAT and routing directly to the source IPs.",
     "domain": "networking",
     "source": "wikipedia:Tailscale"
   },
@@ -3408,12 +2658,6 @@
     "source": "wikipedia:Silver Peak Systems"
   },
   {
-    "question": "Tell me about EMC",
-    "answer": "=== EMC ===\nEMC Corporation resold Silver Peak physical and virtual WAN optimization appliances, which were available through the EMC Select program.",
-    "domain": "general",
-    "source": "wikipedia:Silver Peak Systems"
-  },
-  {
     "question": "Tell me about WAwan",
     "answer": "Silver Peak’s WAwan optimization products were E-lab qualified on Symmetrix Remote Data Facility/Asynchronous (SRDF/A), Symmetrix Remote Data Facility/Data Mobility (SRDF/DM), SAN Copy, Celerra Replicator, Isilon SyncIQ, RecoverPoint, and Atmos.",
     "domain": "general",
@@ -3424,12 +2668,6 @@
     "answer": "=== Hitachi Data Systems ===\nHitachi Data Systems (HDS) resold Silver Peak's WAN optimization products.",
     "domain": "general",
     "source": "wikipedia:Silver Peak Systems"
-  },
-  {
-    "question": "What is Virtual private cloud?",
-    "answer": "A virtual private cloud (VPC) is an on-demand configurable pool of shared resources allocated within a public cloud environment, providing a certain level of isolation between the different organizations (denoted as users hereafter) using the resources.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private cloud"
   },
   {
     "question": "What is virtual private cloud (VPC)?",
@@ -3450,21 +2688,9 @@
     "source": "wikipedia:Virtual private cloud"
   },
   {
-    "question": "Tell me about RDS",
-    "answer": "EC2 and RDS instances running in a VPC can also be purchased using Reserved Instances, however will have a limitation on resources being guaranteed.",
-    "domain": "general",
-    "source": "wikipedia:Virtual private cloud"
-  },
-  {
     "question": "What is With Google Cloud, VPCs?",
     "answer": "With Google Cloud, VPCs are global resources and subnets within that VPC are regional resources.",
     "domain": "networking",
-    "source": "wikipedia:Virtual private cloud"
-  },
-  {
-    "question": "Tell me about VPCs",
-    "answer": "VPCs on Google Cloud leverage the security of Google's data centers.",
-    "domain": "internet",
     "source": "wikipedia:Virtual private cloud"
   },
   {
@@ -3477,12 +2703,6 @@
     "question": "What is Amazon Virtual Private Cloud?",
     "answer": "Amazon Virtual Private Cloud (VPC) is a commercial cloud computing service that provides a virtual private cloud, by provisioning a logically isolated section of Amazon Web Services (AWS) Cloud. Enterprise customers can access the Amazon Elastic Compute Cloud (EC2) over an IPsec based virtual private network. Unlike traditional EC2 instances which are allocated internal and external IP numbers by Amazon, the customer can assign IP numbers of their choosing from one or more subnets.",
     "domain": "networking",
-    "source": "wikipedia:Amazon Virtual Private Cloud"
-  },
-  {
-    "question": "What is Amazon Virtual Private Cloud (VPC)?",
-    "answer": "Amazon Virtual Private Cloud (VPC) is a commercial cloud computing service that provides a virtual private cloud, by provisioning a logically isolated section of Amazon Web Services (AWS) Cloud.",
-    "domain": "internet",
     "source": "wikipedia:Amazon Virtual Private Cloud"
   },
   {
@@ -3564,12 +2784,6 @@
     "source": "wikipedia:Amazon Virtual Private Cloud"
   },
   {
-    "question": "Tell me about CTO",
-    "answer": "== External links ==\nSeamlessly Extending the Data Center - Introducing Amazon Virtual Private Cloud⁣ – blog post by Amazon CTO Werner Vogels.",
-    "domain": "security",
-    "source": "wikipedia:Amazon Virtual Private Cloud"
-  },
-  {
     "question": "What is Virtual private server?",
     "answer": "A virtual private server (VPS) or virtual dedicated server (VDS)  is a virtual machine sold as a service by an Internet hosting company.\nA virtual private server runs its own copy of an operating system (OS), and customers may have superuser-level access to that operating system instance, so they can install almost any software that runs on that OS.",
     "domain": "general",
@@ -3588,12 +2802,6 @@
     "source": "wikipedia:Virtual private server"
   },
   {
-    "question": "Tell me about VPS",
-    "answer": "However, as virtual servers share the underlying physical hardware with other VPS, performance may be lower depending on the workload of any other executing virtual machines.",
-    "domain": "general",
-    "source": "wikipedia:Virtual private server"
-  },
-  {
     "question": "What is Although the resources?",
     "answer": "Although the resources are still shared, as under the time-sharing model, virtualization provides a higher level of security, dependent on the type of virtualization used, as the individual virtual servers are mostly isolated from each other and may run their own full-fledged operating system which can be independently rebooted as a virtual instance.",
     "domain": "general",
@@ -3608,12 +2816,6 @@
   {
     "question": "What is These guest operating systems?",
     "answer": "These guest operating systems are allocated a share of resources of the physical server, typically in a manner in which the guest is not aware of any other physical resources except for those allocated to it by the hypervisor.",
-    "domain": "general",
-    "source": "wikipedia:Virtual private server"
-  },
-  {
-    "question": "Tell me about VM",
-    "answer": "In hardware virtualization, a hypervisor such as the Kernel-based Virtual Machine allows each virtual machine (VM) to run its own independent kernel, providing greater isolation from the host system.",
     "domain": "general",
     "source": "wikipedia:Virtual private server"
   },
@@ -3684,18 +2886,6 @@
     "source": "wikipedia:VCloud Air"
   },
   {
-    "question": "Tell me about On May",
-    "answer": "On May 21, 2013, the early access program for vCloud Hybrid Service was launched.",
-    "domain": "internet",
-    "source": "wikipedia:VCloud Air"
-  },
-  {
-    "question": "Tell me about On August",
-    "answer": "On August 26, 2013, general availability was announced for vCloud Hybrid Service including features such as DRaaS and Direct Connect.",
-    "domain": "internet",
-    "source": "wikipedia:VCloud Air"
-  },
-  {
     "question": "Tell me about Cloud Hybrid Service",
     "answer": "vCloud Hybrid Service was rebranded to vCloud Air on August 21, 2014.",
     "domain": "internet",
@@ -3732,12 +2922,6 @@
     "source": "wikipedia:VCloud Air"
   },
   {
-    "question": "Tell me about Virtual Private Cloud On",
-    "answer": "== Virtual Private Cloud OnDemand ==\nVirtual Private Cloud OnDemand is self-service on-demand cloud computing platform from vCloud Air.",
-    "domain": "internet",
-    "source": "wikipedia:VCloud Air"
-  },
-  {
     "question": "What does This infrastructure-as-a-service (IaaS) pay-as-you-go offering provide?",
     "answer": "This infrastructure-as-a-service (IaaS) pay-as-you-go offering allows users to consume specific vCPU, storage, vRAM, Network, and IP as needed.",
     "domain": "general",
@@ -3746,12 +2930,6 @@
   {
     "question": "What does Additionally, the service provide?",
     "answer": "Additionally, the service allows adjusting of powered-on state virtual machines.",
-    "domain": "general",
-    "source": "wikipedia:VCloud Air"
-  },
-  {
-    "question": "Tell me about RAM",
-    "answer": "== Configurations ==\nThe most basic configuration includes a virtual machine with 1GB RAM, 1 vCPU, and 20GB SSD storage at $0.07 / hour.",
     "domain": "general",
     "source": "wikipedia:VCloud Air"
   },
@@ -3812,12 +2990,6 @@
   {
     "question": "What is end result?",
     "answer": "The end result is a mirror of the inventory that is nearly instantaneously up to date with respect to the original inventory managed by the provider.",
-    "domain": "general",
-    "source": "wikipedia:ManageIQ"
-  },
-  {
-    "question": "Tell me about CPU",
-    "answer": "If configured to do so, ManageIQ will also capture metrics like CPU and memory usage on the discovered inventory.",
     "domain": "general",
     "source": "wikipedia:ManageIQ"
   },
@@ -3900,21 +3072,9 @@
     "source": "wikipedia:Kamatera"
   },
   {
-    "question": "Tell me about SMBs",
-    "answer": "A review by Forbes described Kamatera as a good option for SMBs needing access to enterprise-level resources without the enterprise pricing.",
-    "domain": "general",
-    "source": "wikipedia:Kamatera"
-  },
-  {
     "question": "What is Kamatera's server infrastructure?",
     "answer": "Kamatera's server infrastructure is built on Intel Xeon Scalable platinum processors, with NVMe storage, DDR5 RAM, 25Gbit/s network interfaces, and customizable memory configurations.",
     "domain": "intranet",
-    "source": "wikipedia:Kamatera"
-  },
-  {
-    "question": "Tell me about Windows Server",
-    "answer": "It supports multiple operating systems, including Windows Server operating systems (versions 2008–2022).",
-    "domain": "general",
     "source": "wikipedia:Kamatera"
   },
   {
@@ -3936,12 +3096,6 @@
     "source": "wikipedia:Google Cloud Platform"
   },
   {
-    "question": "What does Google Cloud Platform provide?",
-    "answer": "Google Cloud Platform provides infrastructure as a service, platform as a service, and serverless computing environments.",
-    "domain": "internet",
-    "source": "wikipedia:Google Cloud Platform"
-  },
-  {
     "question": "Tell me about App Engine",
     "answer": "Since the announcement of App Engine, Google added multiple cloud services to the platform.",
     "domain": "internet",
@@ -3950,12 +3104,6 @@
   {
     "question": "What is Since at least 2022, Google's official materials have stated that \"Google Cloud\"?",
     "answer": "Since at least 2022, Google's official materials have stated that \"Google Cloud\" is the new name for \"Google Cloud Platform,\" which may cause naming confusion.",
-    "domain": "internet",
-    "source": "wikipedia:Google Cloud Platform"
-  },
-  {
-    "question": "Tell me about Google Cloud",
-    "answer": "== Products ==\nGoogle lists over 100 products under the Google Cloud brand.",
     "domain": "internet",
     "source": "wikipedia:Google Cloud Platform"
   },
@@ -3972,12 +3120,6 @@
     "source": "wikipedia:Google Cloud Platform"
   },
   {
-    "question": "What does It currently provide?",
-    "answer": "It currently supports GCP, AWS and VMware management.",
-    "domain": "general",
-    "source": "wikipedia:Google Cloud Platform"
-  },
-  {
     "question": "Tell me about ETL",
     "answer": "=== Big data ===\nBigQuery – Scalable, managed enterprise data warehouse for analytics\nCloud Dataflow – Managed service based on Apache Beam for stream and batch data processing\nCloud Data Fusion – A managed ETL service based on the Open Source Cask Data Application Platform\nDataproc – Big data platform for running Apache Hadoop and Apache Spark jobs\nCloud Composer – Managed workflow orchestration service built on Apache Airflow\nCloud Datalab – Tool for data exploration, analysis, visualization and machine learning.",
     "domain": "internet",
@@ -3990,12 +3132,6 @@
     "source": "wikipedia:Google Cloud Platform"
   },
   {
-    "question": "Tell me about TPU",
-    "answer": "=== Internet of things (IoT) ===\nCloud IoT Core – Secure device connection and management service for Internet of Things\nEdge TPU – Purpose-built ASIC designed to run inference at the edge.",
-    "domain": "internet",
-    "source": "wikipedia:Google Cloud Platform"
-  },
-  {
     "question": "What is zone?",
     "answer": "A zone is a deployment area for Google Cloud Platform resources within a region.",
     "domain": "internet",
@@ -4004,12 +3140,6 @@
   {
     "question": "What is As of Q1 2024, Google Cloud Platform?",
     "answer": "As of Q1 2024, Google Cloud Platform is available in 40 regions and 121 zones.",
-    "domain": "internet",
-    "source": "wikipedia:Google Cloud Platform"
-  },
-  {
-    "question": "Tell me about Google Cloud Platform",
-    "answer": "For those familiar with other notable cloud service providers, a comparison of similar services may be helpful in understanding Google Cloud Platform's offerings.",
     "domain": "internet",
     "source": "wikipedia:Google Cloud Platform"
   },
@@ -4068,12 +3198,6 @@
     "source": "wikipedia:Hybrid SaaS"
   },
   {
-    "question": "Tell me about Hybrid Cloud",
-    "answer": "Hybrid Cloud ==\nHybrid SaaS (Software-as-a-Service) and hybrid cloud are related but distinct concepts in the realm of cloud computing.",
-    "domain": "internet",
-    "source": "wikipedia:Hybrid SaaS"
-  },
-  {
     "question": "What is Hybrid SaaS primarily?",
     "answer": "Hybrid SaaS primarily refers to a software deployment model combining on-premises and cloud-based components, while hybrid cloud refers to the integration and utilization of both private and public cloud environments, encompassing infrastructure and services beyond just software applications.",
     "domain": "internet",
@@ -4122,12 +3246,6 @@
     "source": "wikipedia:HP Cloud"
   },
   {
-    "question": "What is Another method?",
-    "answer": "Another method is to select open standards for cloud computing.",
-    "domain": "internet",
-    "source": "wikipedia:HP Cloud"
-  },
-  {
     "question": "What is best practice for avoiding cloud migration problems?",
     "answer": "A best practice for avoiding cloud migration problems is to use a management platform that can support applications in any environment a user organization is likely to use.",
     "domain": "internet",
@@ -4172,12 +3290,6 @@
   {
     "question": "What is HP CloudSystem?",
     "answer": "HP CloudSystem is a component of HP Cloud.",
-    "domain": "internet",
-    "source": "wikipedia:HP Cloud"
-  },
-  {
-    "question": "What is This function?",
-    "answer": "This function is known as cloud bursting.",
     "domain": "internet",
     "source": "wikipedia:HP Cloud"
   },
@@ -4238,12 +3350,6 @@
   {
     "question": "What is Migration services?",
     "answer": "Migration services are for businesses that want to move to the SAP HANA platform.",
-    "domain": "general",
-    "source": "wikipedia:HP Cloud"
-  },
-  {
-    "question": "What is system?",
-    "answer": "The system is designed to enable businesses to analyze big data.",
     "domain": "general",
     "source": "wikipedia:HP Cloud"
   },
@@ -4320,12 +3426,6 @@
     "source": "wikipedia:HP Cloud"
   },
   {
-    "question": "What is HP Cloud Block Storage?",
-    "answer": "HP Cloud Block Storage is ideal for applications requiring frequent read/write access such as web applications.",
-    "domain": "internet",
-    "source": "wikipedia:HP Cloud"
-  },
-  {
     "question": "What is HP Cloud Relational Database?",
     "answer": "HP Cloud Relational Database is a managed, web-based service that provides users with on-demand access to a relational database in the cloud.",
     "domain": "internet",
@@ -4334,12 +3434,6 @@
   {
     "question": "What is HP Cloud Load Balancers?",
     "answer": "HP Cloud Load Balancers are a managed load balancing service that allow for the automatic distribution of incoming traffic across compute resources.",
-    "domain": "internet",
-    "source": "wikipedia:HP Cloud"
-  },
-  {
-    "question": "What is HP Cloud DNS?",
-    "answer": "HP Cloud DNS is an enterprise-grade domain name system featuring anycast routing.",
     "domain": "internet",
     "source": "wikipedia:HP Cloud"
   },
@@ -4380,18 +3474,6 @@
     "source": "wikipedia:Palo Alto Networks"
   },
   {
-    "question": "Tell me about NYSE",
-    "answer": "The company debuted on the NYSE on July 20, 2012, raising $260 million with its initial public offering, which was the 4th-largest tech IPO of 2012.",
-    "domain": "general",
-    "source": "wikipedia:Palo Alto Networks"
-  },
-  {
-    "question": "Tell me about Check Point",
-    "answer": "By 2018, the organization had 20 members including Cisco, Check Point, Juniper Networks, and Sophos.",
-    "domain": "general",
-    "source": "wikipedia:Palo Alto Networks"
-  },
-  {
     "question": "Tell me about Global Cyber Range Initiative",
     "answer": "In 2018, the company began opening cybersecurity training facilities around the world as part of the Global Cyber Range Initiative.",
     "domain": "general",
@@ -4428,18 +3510,6 @@
     "source": "wikipedia:Palo Alto Networks"
   },
   {
-    "question": "Tell me about FBI",
-    "answer": "According to the FBI, Palo Alto Networks Unit 42 has helped solve multiple cybercrime cases, such as the Mirai Botnet and Clickfraud Botnet cases, the LuminosityLink RAT case, and assisted with \"Operation Wire-Wire\".",
-    "domain": "networking",
-    "source": "wikipedia:Palo Alto Networks"
-  },
-  {
-    "question": "Tell me about United Kingdom",
-    "answer": "In 2018, Unit 42 discovered Gorgon, a hacking group believed to be operating out of Pakistan and targeting government organizations in the United Kingdom, Spain, Russia, and the United States.",
-    "domain": "general",
-    "source": "wikipedia:Palo Alto Networks"
-  },
-  {
     "question": "Tell me about Microsoft Word",
     "answer": "The group was detected sending spear-phishing emails attached to infected Microsoft Word documents using an exploit commonly used by cybercriminals and cyber-espionage campaigns.",
     "domain": "security",
@@ -4454,12 +3524,6 @@
   {
     "question": "Tell me about XMRig",
     "answer": "In October, Unit 42 warned of a new crypto mining malware, XMRig, that comes bundled with infected Adobe Flash updates.",
-    "domain": "security",
-    "source": "wikipedia:Palo Alto Networks"
-  },
-  {
-    "question": "What does malware provide?",
-    "answer": "The malware uses the victim's computer's resources to mine Monero cryptocurrency.",
     "domain": "security",
     "source": "wikipedia:Palo Alto Networks"
   },
@@ -4496,12 +3560,6 @@
   {
     "question": "What is company protects over 100,000 organizations globally and?",
     "answer": "The company protects over 100,000 organizations globally and is home to the Check Point Research team.",
-    "domain": "general",
-    "source": "wikipedia:Check Point"
-  },
-  {
-    "question": "Tell me about OEM",
-    "answer": "In 1994 Check Point signed an OEM agreement with Sun Microsystems, followed by a distribution agreement with HP in 1995.",
     "domain": "general",
     "source": "wikipedia:Check Point"
   },
@@ -4638,12 +3696,6 @@
     "source": "wikipedia:Check Point"
   },
   {
-    "question": "Tell me about Check Point Research\nBusiness",
-    "answer": "Corporate website\nCheck Point Research\nBusiness data for Check Point:.",
-    "domain": "general",
-    "source": "wikipedia:Check Point"
-  },
-  {
     "question": "What is Application firewall?",
     "answer": "An application firewall is a form of firewall that controls input/output or system calls of an application or service. It operates by monitoring and blocking communications based on a configured policy, generally with predefined rule sets to choose from. The two primary categories of application firewalls are network-based and host-based.",
     "domain": "security",
@@ -4656,27 +3708,9 @@
     "source": "wikipedia:Application firewall"
   },
   {
-    "question": "Tell me about AT",
-    "answer": "== History ==\nGene Spafford of Purdue University, Bill Cheswick at AT&T Laboratories, and Marcus Ranum described a third-generation firewall known as an application layer firewall.",
-    "domain": "security",
-    "source": "wikipedia:Application firewall"
-  },
-  {
     "question": "Tell me about Marcus Ranum",
     "answer": "Marcus Ranum's work, based on the firewall created by Paul Vixie, Brian Reid, and Jeff Mogul, spearheaded the creation of the first commercial product.",
     "domain": "security",
-    "source": "wikipedia:Application firewall"
-  },
-  {
-    "question": "Tell me about DEC",
-    "answer": "The product was released by DEC, named the DEC SEAL by Geoff Mulligan - Secure External Access Link.",
-    "domain": "general",
-    "source": "wikipedia:Application firewall"
-  },
-  {
-    "question": "Tell me about DARPA",
-    "answer": "Under a broader DARPA contract at TIS, Marcus Ranum, Wei Xu, and Peter Churchyard developed the Firewall Toolkit (FWTK) and made it freely available under license in October 1993.",
-    "domain": "networking",
     "source": "wikipedia:Application firewall"
   },
   {
@@ -4698,12 +3732,6 @@
     "source": "wikipedia:Application firewall"
   },
   {
-    "question": "Tell me about WAF",
-    "answer": "Encryption offloading \nIntrusion prevention system\nData loss prevention\nWeb application firewalls (WAF) are a specialized version of a network-based appliance that acts as a reverse proxy, inspecting traffic before being forwarded to an associated server.",
-    "domain": "security",
-    "source": "wikipedia:Application firewall"
-  },
-  {
     "question": "What is This gives more granularity and control, but?",
     "answer": "This gives more granularity and control, but is limited to only protecting the host it is running on.",
     "domain": "general",
@@ -4718,12 +3746,6 @@
   {
     "question": "What is Generally, prompts?",
     "answer": "Generally, prompts are used to define rules for processes that have not yet received a connection.",
-    "domain": "general",
-    "source": "wikipedia:Application firewall"
-  },
-  {
-    "question": "Tell me about ID",
-    "answer": "Further filtering can be done by examining the process ID of the owner of the data packets.",
     "domain": "general",
     "source": "wikipedia:Application firewall"
   },
@@ -4764,26 +3786,8 @@
     "source": "wikipedia:Application firewall"
   },
   {
-    "question": "Tell me about Web Application Firewall",
-    "answer": "== External links ==\nWeb Application Firewall, Open Web Application Security Project\nWeb Application Firewall Evaluation Criteria, from the Web Application Security Consortium\nSafety in the cloud(s): 'Vaporizing' the Web application firewall to secure cloud computing.",
-    "domain": "security",
-    "source": "wikipedia:Application firewall"
-  },
-  {
     "question": "What is Firewall (computing)?",
     "answer": "In computing, a firewall is a network security system that monitors and controls incoming and outgoing network traffic based on configurable security rules. A firewall typically establishes a barrier between a trusted network and an untrusted network, such as the Internet or between several VLANs. Firewalls can be categorized as network-based or host-based.",
-    "domain": "networking",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "What is In computing, a firewall?",
-    "answer": "In computing, a firewall is a network security system that monitors and controls incoming and outgoing network traffic based on configurable security rules.",
-    "domain": "security",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "Tell me about VLANs",
-    "answer": "A firewall typically establishes a barrier between a trusted network and an untrusted network, such as the Internet or between several VLANs.",
     "domain": "networking",
     "source": "wikipedia:Firewall (computing)"
   },
@@ -4800,44 +3804,14 @@
     "source": "wikipedia:Firewall (computing)"
   },
   {
-    "question": "Tell me about PIX",
-    "answer": "The PIX Firewall technology was coded by Brantley Coile as a consultant software developer.",
-    "domain": "security",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "What is Firewalls?",
-    "answer": "Firewalls are categorized as a network-based or a host-based system.",
-    "domain": "security",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
     "question": "What is Network-based firewalls?",
     "answer": "Network-based firewalls are positioned between two or more networks, typically between the local area network (LAN) and wide area network (WAN), their basic function being to control the flow of data between connected networks.",
     "domain": "networking",
     "source": "wikipedia:Firewall (computing)"
   },
   {
-    "question": "Tell me about DHCP",
-    "answer": "Firewall appliances may also offer non-firewall functionality, such as DHCP or VPN services.",
-    "domain": "security",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
     "question": "What is Host-based firewalls?",
     "answer": "Host-based firewalls are deployed directly on the host itself to control network traffic or other computing resources.",
-    "domain": "security",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "Tell me about BSD",
-    "answer": "In 1992, Steven McCanne and\nVan Jacobson released a paper on BSD Packet Filter (BPF) while at Lawrence Berkeley Laboratory.",
-    "domain": "general",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "Tell me about Trusted Information Systems",
-    "answer": "This became the basis for Gauntlet firewall at Trusted Information Systems.",
     "domain": "security",
     "source": "wikipedia:Firewall (computing)"
   },
@@ -4848,32 +3822,14 @@
     "source": "wikipedia:Firewall (computing)"
   },
   {
-    "question": "Tell me about DNS",
-    "answer": "It can also provide unified security management including enforced encrypted DNS and virtual private networking.",
-    "domain": "internet",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
     "question": "What does As of 2012, the next-generation firewall provide?",
     "answer": "As of 2012, the next-generation firewall provides a wider range of inspection at the application layer, extending deep packet inspection functionality to include, but is not limited to:.",
     "domain": "security",
     "source": "wikipedia:Firewall (computing)"
   },
   {
-    "question": "Tell me about TLS",
-    "answer": "Web filtering\nIntrusion prevention systems\nUser identity management\nWeb application firewall\nContent inspection and heuristic analysis\nTLS Inspection.",
-    "domain": "security",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
     "question": "What is Application firewalls that hook into socket calls?",
     "answer": "Application firewalls that hook into socket calls are also referred to as socket filters.",
-    "domain": "security",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "Tell me about Firewall Policies",
-    "answer": "== Firewall Policies ==\nAt the core of a firewall's operation are the policies that govern its decision-making process.",
     "domain": "security",
     "source": "wikipedia:Firewall (computing)"
   },
@@ -4902,39 +3858,15 @@
     "source": "wikipedia:Firewall (computing)"
   },
   {
-    "question": "Tell me about HTTP",
-    "answer": "Common examples include HTTP/HTTPS (web traffic) on ports 80 and 443, FTP (file transfer) on port 21, and SMTP (email) on port 25.",
-    "domain": "internet",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "What is Services?",
-    "answer": "Services are the engines behind the applications users depend on.",
-    "domain": "general",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
     "question": "What is From a security aspect, controlling access to services?",
     "answer": "From a security aspect, controlling access to services is crucial because services are common targets for exploitation.",
     "domain": "general",
     "source": "wikipedia:Firewall (computing)"
   },
   {
-    "question": "Tell me about FTP",
-    "answer": "For example, a firewall might be configured to block incoming FTP requests to prevent unauthorized file uploads but allow outgoing HTTPS requests for web browsing.",
-    "domain": "internet",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
     "question": "What is In network security, applications?",
     "answer": "In network security, applications are important because different types of traffic can pose varying security risks.",
     "domain": "general",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "Tell me about USER",
-    "answer": "=== USER ID ===\nImplementing firewall rules based on IP addresses alone is often insufficient due to the dynamic nature of user location and device usage.",
-    "domain": "networking",
     "source": "wikipedia:Firewall (computing)"
   },
   {
@@ -5022,18 +3954,6 @@
     "source": "wikipedia:NordLayer"
   },
   {
-    "question": "Tell me about AES",
-    "answer": "NordLayer employs the Advanced Encryption Standard (AES) with 256-bit keys and the ChaCha20 stream cipher.",
-    "domain": "security",
-    "source": "wikipedia:NordLayer"
-  },
-  {
-    "question": "Tell me about MITM",
-    "answer": "NordLayer prevents cyber threats like DDoS, Man-in-the-Middle (MITM) attacks, phishing, data leaks, and others with features such as two-factor authentication (2FA), Always-On VPN, kill switch, IP allowlisting, Cloud Firewall, Device Posture Security, and others.",
-    "domain": "security",
-    "source": "wikipedia:NordLayer"
-  },
-  {
     "question": "Tell me about Network Visibility",
     "answer": "NordLayer's Network Visibility features allow for the monitoring of network traffic and performance,  and devices connected to the network ensuring a thorough understanding of network dynamics.",
     "domain": "general",
@@ -5088,12 +4008,6 @@
     "source": "wikipedia:Cloud printing"
   },
   {
-    "question": "Tell me about PC",
-    "answer": "== Benefits ==\nConsumers can print easily to any printer from their PC, tablet or smartphone, while the Cloud print service monitors the supplies level.",
-    "domain": "internet",
-    "source": "wikipedia:Cloud printing"
-  },
-  {
     "question": "What does As for publishers and content owners, cloud printing provide?",
     "answer": "As for publishers and content owners, cloud printing allows them to \"avoid the cost and complexity of buying and managing the underlying hardware, software and processes\"  required for the production of professional print products.",
     "domain": "internet",
@@ -5103,12 +4017,6 @@
     "question": "What does Leveraging cloud print for print on demand also provide?",
     "answer": "Leveraging cloud print for print on demand also allows businesses to cut down on the costs associated with mass production.",
     "domain": "internet",
-    "source": "wikipedia:Cloud printing"
-  },
-  {
-    "question": "Tell me about VLAN",
-    "answer": "With Universal Print Microsoft has built a disrupting architecture with a value proposition commodifying printers, removing print servers and drivers, allowing to move printers to VLAN for security purpose and printing from anywhere.",
-    "domain": "networking",
     "source": "wikipedia:Cloud printing"
   },
   {
@@ -5202,12 +4110,6 @@
     "source": "wikipedia:Cloud printing"
   },
   {
-    "question": "Tell me about Zero Trust Access",
-    "answer": "Microsoft has implemented its Zero Trust Access security in its Universal Print service, it generates a unique certificate on printers compatible with its service.",
-    "domain": "security",
-    "source": "wikipedia:Cloud printing"
-  },
-  {
     "question": "Tell me about Other Cloud Printing Saa",
     "answer": "Other Cloud Printing SaaS providers have followed Microsoft on that High Security path.",
     "domain": "internet",
@@ -5274,26 +4176,8 @@
     "source": "wikipedia:DigitalOcean"
   },
   {
-    "question": "Tell me about CFO",
-    "answer": "In July 2019, Yancey Spruill, former CFO and COO of SendGrid (a fellow Techstars company), replaced Templeton as CEO.",
-    "domain": "general",
-    "source": "wikipedia:DigitalOcean"
-  },
-  {
-    "question": "Tell me about CSS",
-    "answer": "In March 2022, the company acquired CSS-Tricks, a learning website for front-end developers.",
-    "domain": "general",
-    "source": "wikipedia:DigitalOcean"
-  },
-  {
     "question": "Tell me about Apache Open",
     "answer": "Based on technology acquired from Nimbella and the open source Apache OpenWhisk project, DigitalOcean Functions is a serverless platform that allows developers to build and run applications without having to manage servers.",
-    "domain": "general",
-    "source": "wikipedia:DigitalOcean"
-  },
-  {
-    "question": "Tell me about GPU",
-    "answer": "In March 2025, Flexential announced a partnership with DigitalOcean to expand its GPU infrastructure.",
     "domain": "general",
     "source": "wikipedia:DigitalOcean"
   },
@@ -5313,12 +4197,6 @@
     "question": "Tell me about Hacker News",
     "answer": "Following a TechCrunch review, which was syndicated by Hacker News, DigitalOcean saw a rapid increase in customers.",
     "domain": "internet",
-    "source": "wikipedia:DigitalOcean"
-  },
-  {
-    "question": "Tell me about IA",
-    "answer": "=== Funding ===\nThe company's seed funding was led by IA Ventures and raised US$3.2 million in July 2013.",
-    "domain": "general",
     "source": "wikipedia:DigitalOcean"
   },
   {
@@ -5367,12 +4245,6 @@
     "question": "Tell me about TSMC",
     "answer": "== History ==\nAnnapurna Labs, named after the Annapurna Massif in the Himalayas, was co-founded in 2011 by Bilic \"Billy\" Hrvoje, a Bosnian Jewish refugee, Nafea Bshara, an Arab Israeli citizen, and Ronen Boneh with investments from the independent investors Avigdor Willenz, Manuel Alba, Andy Bechtolsheim, the venture capital firm Walden International, Arm Holdings, and TSMC.",
     "domain": "networking",
-    "source": "wikipedia:Annapurna Labs"
-  },
-  {
-    "question": "Tell me about CPUs",
-    "answer": "Following on from Nitro, Annapurna developed general-purpose CPUs under the Graviton family and machine-learning ASICs under the Trainium and Inferentia brands.",
-    "domain": "general",
     "source": "wikipedia:Annapurna Labs"
   },
   {
@@ -5430,12 +4302,6 @@
     "source": "wikipedia:AWS Lambda"
   },
   {
-    "question": "Tell me about NET",
-    "answer": ".NET 7 and .NET 8 support Ahead-of-Time (AOT) compilation, reducing cold start times by precompiling code.",
-    "domain": "general",
-    "source": "wikipedia:AWS Lambda"
-  },
-  {
     "question": "What is However, this benefit?",
     "answer": "However, this benefit is workload-dependent, and Rust's AOT compilation often provides better performance consistency, particularly for CPU-bound tasks.",
     "domain": "general",
@@ -5457,12 +4323,6 @@
     "question": "Tell me about Provisioned Concurrency",
     "answer": "Provisioned Concurrency, in contrast, maintains a specified number of pre-initialized execution environments, ensuring that the function does not experience cold starts and does not scale down to zero.",
     "domain": "general",
-    "source": "wikipedia:AWS Lambda"
-  },
-  {
-    "question": "Tell me about URL",
-    "answer": "=== Lambda Function URL ===\nThe Lambda Function URL gives Lambda a unique and permanent URL which can be accessed by authenticated and non-authenticated users alike.",
-    "domain": "internet",
     "source": "wikipedia:AWS Lambda"
   },
   {
@@ -5505,18 +4365,6 @@
     "question": "What is Amazon S3?",
     "answer": "Amazon Simple Storage Service (S3) is a service offered by Amazon Web Services (AWS) that provides object storage through a web service interface. Amazon S3 uses the same scalable storage infrastructure that Amazon.com uses to run its e-commerce network. Amazon S3 can store any type of object, which allows uses like storage for Internet applications, backups, disaster recovery, data archives, data lakes for analytics, and hybrid cloud storage.",
     "domain": "internet",
-    "source": "wikipedia:Amazon S3"
-  },
-  {
-    "question": "What is Amazon Simple Storage Service (S3)?",
-    "answer": "Amazon Simple Storage Service (S3) is a service offered by Amazon Web Services (AWS) that provides object storage through a web service interface.",
-    "domain": "general",
-    "source": "wikipedia:Amazon S3"
-  },
-  {
-    "question": "What does Amazon S3 provide?",
-    "answer": "Amazon S3 uses the same scalable storage infrastructure that Amazon.com uses to run its e-commerce network.",
-    "domain": "general",
     "source": "wikipedia:Amazon S3"
   },
   {
@@ -5634,12 +4482,6 @@
     "source": "wikipedia:Amazon S3"
   },
   {
-    "question": "What is Users?",
-    "answer": "Users are not required to go directly to Amazon as several storage providers such as Cloudian, Backblaze B2, Wasabi offer S3-compatible storage with options of on-premises and private cloud deployments.",
-    "domain": "internet",
-    "source": "wikipedia:Amazon S3"
-  },
-  {
     "question": "What does IBM Cloud Object Storage also provide?",
     "answer": "IBM Cloud Object Storage also offers a cloud-based S3-compatible option of Object Storage.",
     "domain": "internet",
@@ -5676,12 +4518,6 @@
     "source": "wikipedia:Amazon SageMaker"
   },
   {
-    "question": "What does In addition, it provide?",
-    "answer": "In addition, it offers a number of built-in ML algorithms that developers can train on their own data.",
-    "domain": "general",
-    "source": "wikipedia:Amazon SageMaker"
-  },
-  {
     "question": "Tell me about MXNet",
     "answer": "The platform also features managed instances of TensorFlow and Apache MXNet, where developers can create their own ML algorithms from scratch.",
     "domain": "general",
@@ -5691,12 +4527,6 @@
     "question": "What is Regardless of which level of abstraction?",
     "answer": "Regardless of which level of abstraction is used, a developer can connect their SageMaker-enabled ML models to other AWS services, such as the Amazon DynamoDB database for structured data storage, AWS Batch for offline batch processing, or Amazon Kinesis for real-time processing.",
     "domain": "general",
-    "source": "wikipedia:Amazon SageMaker"
-  },
-  {
-    "question": "What is First, there?",
-    "answer": "First, there is a web API that remotely controls a SageMaker server instance.",
-    "domain": "internet",
     "source": "wikipedia:Amazon SageMaker"
   },
   {
@@ -5751,12 +4581,6 @@
     "question": "What is Amazon Elastic Compute Cloud?",
     "answer": "Amazon Elastic Compute Cloud (EC2) is a part of Amazon's cloud-computing platform, Amazon Web Services (AWS), that allows users to rent virtual computers on which to run their own computer applications. EC2 encourages scalable deployment of applications by providing a web service through which a user can boot an Amazon Machine Image (AMI) to configure a virtual machine, which Amazon calls an \"instance\", containing any software desired.",
     "domain": "networking",
-    "source": "wikipedia:Amazon Elastic Compute Cloud"
-  },
-  {
-    "question": "What is Amazon Elastic Compute Cloud (EC2)?",
-    "answer": "Amazon Elastic Compute Cloud (EC2) is a part of Amazon's cloud-computing platform, Amazon Web Services (AWS), that allows users to rent virtual computers on which to run their own computer applications.",
-    "domain": "internet",
     "source": "wikipedia:Amazon Elastic Compute Cloud"
   },
   {
@@ -5874,12 +4698,6 @@
     "source": "wikipedia:Amazon Elastic Compute Cloud"
   },
   {
-    "question": "Tell me about Savings Plans",
-    "answer": "=== Savings Plans ===\nIn November 2019, Amazon announced Savings Plans.",
-    "domain": "general",
-    "source": "wikipedia:Amazon Elastic Compute Cloud"
-  },
-  {
     "question": "What is Savings Plans?",
     "answer": "Savings Plans are an alternative to Reserved Instances that come in two different plan types: Compute Savings Plans and EC2 Instances Savings Plans.",
     "domain": "networking",
@@ -5898,12 +4716,6 @@
     "source": "wikipedia:Amazon Elastic Compute Cloud"
   },
   {
-    "question": "What is AWS Savings Plans?",
-    "answer": "AWS Savings Plans are purchased based on hourly spend commitment.",
-    "domain": "internet",
-    "source": "wikipedia:Amazon Elastic Compute Cloud"
-  },
-  {
     "question": "What is This hourly commitment?",
     "answer": "This hourly commitment is made using the discounted pricing of the savings plan you are purchasing.",
     "domain": "internet",
@@ -5912,12 +4724,6 @@
   {
     "question": "Tell me about Compute Savings Plan",
     "answer": "For example, you could commit to spending $5 per hour, on a Compute Savings Plan, for a 3-year term.",
-    "domain": "general",
-    "source": "wikipedia:Amazon Elastic Compute Cloud"
-  },
-  {
-    "question": "Tell me about Sun Microsystems",
-    "answer": "When it launched in August 2006, the EC2 service offered Linux and later Sun Microsystems' OpenSolaris and Solaris Express Community Edition.",
     "domain": "general",
     "source": "wikipedia:Amazon Elastic Compute Cloud"
   },
@@ -5934,18 +4740,6 @@
     "source": "wikipedia:Amazon Elastic Compute Cloud"
   },
   {
-    "question": "Tell me about GNU",
-    "answer": "Version 2013.03 included: Linux kernel, Java OpenJDK Runtime Environment and GNU Compiler Collection.",
-    "domain": "general",
-    "source": "wikipedia:Amazon Elastic Compute Cloud"
-  },
-  {
-    "question": "Tell me about On November",
-    "answer": "On November 30, 2020, Amazon announced that it would be adding macOS to the EC2 service.",
-    "domain": "general",
-    "source": "wikipedia:Amazon Elastic Compute Cloud"
-  },
-  {
     "question": "Tell me about Mac Mini",
     "answer": "Initial support was announced for macOS Mojave and macOS Catalina running on Mac Mini.",
     "domain": "general",
@@ -5955,12 +4749,6 @@
     "question": "Tell me about ECR",
     "answer": "=== Managed Container and Kubernetes Services ===\nAmazon Elastic Container Registry (ECR) is a Docker registry service for Amazon EC2 instances to access repositories and images.",
     "domain": "networking",
-    "source": "wikipedia:Amazon Elastic Compute Cloud"
-  },
-  {
-    "question": "Tell me about EKS",
-    "answer": "Amazon Elastic Kubernetes Service (EKS) a managed Kubernetes service running on top of EC2 without needing to provision or manage instances.",
-    "domain": "general",
     "source": "wikipedia:Amazon Elastic Compute Cloud"
   },
   {
@@ -6021,12 +4809,6 @@
     "question": "What does RAID provide?",
     "answer": "RAID allows increases of speed and/or reliability of EBS.",
     "domain": "general",
-    "source": "wikipedia:Amazon Elastic Compute Cloud"
-  },
-  {
-    "question": "Tell me about GUI",
-    "answer": "The volumes support snapshots, which can be taken from a GUI tool or the API.",
-    "domain": "internet",
     "source": "wikipedia:Amazon Elastic Compute Cloud"
   },
   {
@@ -6158,18 +4940,6 @@
   {
     "question": "Tell me about Amazon Relational Database Service",
     "answer": "Higher-availability database services, like Amazon Relational Database Service run separately from EC2 instances.",
-    "domain": "general",
-    "source": "wikipedia:Amazon Elastic Compute Cloud"
-  },
-  {
-    "question": "Tell me about The Internet",
-    "answer": "The Internet group Anonymous attempted to attack EC2 in revenge; however, Amazon was not affected by the attack.",
-    "domain": "general",
-    "source": "wikipedia:Amazon Elastic Compute Cloud"
-  },
-  {
-    "question": "Tell me about An Amazon",
-    "answer": "An Amazon official later stated that it was due to a hardware failure.",
     "domain": "general",
     "source": "wikipedia:Amazon Elastic Compute Cloud"
   },

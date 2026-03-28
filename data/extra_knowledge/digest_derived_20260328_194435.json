@@ -1,0 +1,302 @@
+[
+  {
+    "question": "How does software relate to This software model?",
+    "answer": "software: The software is commonly deployed in development and testing environments to create temporary or ad-hoc private networks, as well as in operational technology (OT) and industrial settings to securely connect embedded systems, sensors, and remote equipment.  |  This software model: This software model is only for LAN networks.",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does Service Pack relate to Windows Vista Service Pack 1 adds back the ability to specify which volumes?",
+    "answer": "Service Pack: It is not enabled by default in the pre-Service Pack 1 version of Windows Vista, but enabled in SP1 and Windows Server 2008.  |  Windows Vista Service Pack 1 adds back the ability to specify which volumes: Windows Vista Service Pack 1 adds back the ability to specify which volumes are to be defragmented to the GUI.",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does Cloud printing relate to Google Cloud?",
+    "answer": "Cloud printing: There are, in essence, three kinds of Cloud printing.  |  Google Cloud: Installation involves running a command on its command-line interface, or in the case of installing on DigitalOcean or Google Cloud, its graphical user interface.",
+    "domain": "internet",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does In the common case of TCP and UDP, services relate to Is this the case or?",
+    "answer": "In the common case of TCP and UDP, services: In the common case of TCP and UDP, services are distinguished by port numbers.  |  Is this the case or: Is this the case or is this normally how it is done and I am just missing that part in some of the explanations.",
+    "domain": "networking",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does Host Naming Registry relate to HOST?",
+    "answer": "Host Naming Registry: She and her team managed the Host Naming Registry from 1972 to 1989.  |  HOST: Network administrators were asked to submit a note or place a phone call, \"describing the function and socket numbers of network service programs at each HOST\".",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does As a consequence, routing protocols relate to Routing protocol?",
+    "answer": "As a consequence, routing protocols: As a consequence, routing protocols are included in the application layer.  |  Routing protocol: A routing protocol specifies how routers communicate with each other to distribute information that enables them to select paths between nodes on a computer network.  Routers perform the traffic directing functions on the Internet; data packets are forwarded through the networks of the internet from router to router until they reach their destination computer.  Routing algorithms determine the specific choice of route. Each router has a prior knowledge only of networks attached to it directly.",
+    "domain": "networking",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does Routes in the topology table will not be inserted into the routing table if they relate to OSPF routing policies for constructing a route table?",
+    "answer": "Routes in the topology table will not be inserted into the routing table if they: Routes in the topology table will not be inserted into the routing table if they are active, are a feasible successor, or have a higher administrative distance than an equivalent path.  |  OSPF routing policies for constructing a route table: The OSPF routing policies for constructing a route table are governed by link metrics associated with each routing interface.",
+    "domain": "networking",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does commonly used cost relate to Three policies commonly used?",
+    "answer": "commonly used cost: A commonly used cost is the mean-squared error, which tries to minimize the average squared error between the network's output and the desired output.  |  Three policies commonly used: Three policies commonly used are tail drop, random early detection (RED), and weighted random early detection (WRED).",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does MAC relate to discussed about Discussion: Website claims to “require” Windows or Mac but doesn't block Linux?",
+    "answer": "MAC: Event Monitor tracks changes made to the medium access control (MAC), Address Resolution Protocol (ARP), and routing table in a local SQLite database for later querying using standard Structured Query Language (SQL) queries.  |  discussed about Discussion: Website claims to “require” Windows or Mac but doesn't block Linux: I may have discussed this at other places in the past.I run FreeBSD on my desktop, and am a customer of Chase Bank (along with a few others), mainly since my family set me up there.Chase claims to require Windows or macOS for their online banking, but doesn't block GNU/Linux or Chrome OS, while kicking out OSes like FreeBSD and OpenBSD. I could log in fine on multiple Linux distros fine, and on FreeBSD with a \"user agent switcher\".",
+    "domain": "networking",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does But when the tunnel relate to It's not a lot, but at the same time it?",
+    "answer": "But when the tunnel: But when the tunnel is up and (different) units on my lan try to traverse it it does not work properly.  |  It's not a lot, but at the same time it: It's not a lot, but at the same time it is a lot considering that WEP was deprecated in 2004.",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does New solutions relate to Problem Reports and Solutions?",
+    "answer": "New solutions: New solutions are emerging, allowing the same component to be used for CAN as well as CAN FD (see ).  |  Problem Reports and Solutions: Problem Reports and Solutions is a new control panel user interface for Windows Error Reporting which allows users to see previously sent problems and any solutions or additional information that is available.",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does What does Secure DNS (DNSSEC) provide relate to DNS protocol?",
+    "answer": "What does Secure DNS (DNSSEC) provide: Secure DNS (DNSSEC) uses cryptographic digital signatures signed with a trusted public key certificate to determine the authenticity of data.  |  DNS protocol: The DNS protocol is used by both IP protocols to resolve fully qualified domain names and IP addresses, but dual stack requires that the resolving DNS server can resolve both types of addresses.",
+    "domain": "networking",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does What does transport layer provide relate to This layer?",
+    "answer": "What does transport layer provide: The transport layer provides reliable and transparent data transfer in a cost-effective way as required by the selected quality of service.  |  This layer: This layer is also responsible for network congestion control.",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does What does Function-specific enterprise software provide relate to Function Discovery?",
+    "answer": "What does Function-specific enterprise software provide: Function-specific enterprise software uses include database management, customer relationship management, supply chain management and business process management.  |  Function Discovery: UPnP support has also been enhanced to include integration with PnP-X and Function Discovery.",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does Computer security, IT security, ICT security, and network security relate to Security theater?",
+    "answer": "Computer security, IT security, ICT security, and network security: Computer security, IT security, ICT security, and network security are thus all subdomains of information security.  |  Security theater: Security theater is a critical term for measures that change perceptions of security without necessarily affecting security itself.",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does Time exceeded messages relate to Keepalive messages?",
+    "answer": "Time exceeded messages: Time exceeded messages are used by the traceroute utility to identify gateways on the path between two hosts.  |  Keepalive messages: Keepalive messages are exchanged and, upon successful receipt, the router is placed into the Established state.",
+    "domain": "networking",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does What does Function-specific enterprise software provide relate to cost function?",
+    "answer": "What does Function-specific enterprise software provide: Function-specific enterprise software uses include database management, customer relationship management, supply chain management and business process management.  |  cost function: The cost function is dependent on the task (the model domain) and any a priori assumptions (the implicit properties of the model, its parameters and the observed variables).",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does Dynamic NAT, just like static NAT relate to Configuring the NAT 1:1 rules with pfsense?",
+    "answer": "Dynamic NAT, just like static NAT: Dynamic NAT, just like static NAT, is not common in smaller networks but is found within larger corporations with complex networks.  |  Configuring the NAT 1:1 rules with pfsense: I have two pfsense. One pfsense is on 192.168.0.1 and another pfsense is on 192.168.20.1. Basically I have installed 20.1 pfsense on one machine 192.168.0.180 which is in the network of 0.1 pfsense, and added the rules for that machine on 0.1 pfsense.\n\nNow what I am trying to achieve is that the system connected to 20.1 pfsense rules should also be able to connect to the systems on 0.1 which is happening. But when I am trying to connect from 0.x to let's say 20.y it's not able to connect.",
+    "domain": "networking",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does User protocols relate to USER?",
+    "answer": "User protocols: User protocols are used for actual user applications.  |  USER: 1077:20151125:170718.508 active check configuration \nupdate from [10.2.3.4:10051] started to fail \n(cannot connect to [[10.2.3.4]:10051]: [4] Interrupted system call)\nmysqladmin: unknown variable 'USER=zabbixuser'\nmysql: unknown variable 'USER=zabbixuser'.",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does community attribute relate to In such cases, the community name, which?",
+    "answer": "community attribute: The community attribute is transitive, but communities applied by the customer very rarely propagate outside the next-hop AS.  |  In such cases, the community name, which: In such cases, the community name, which is transmitted in cleartext, tends to be viewed as a de facto password, in spite of the original specification.",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does What does Its peering infrastructure provide relate to However, the stub AS may have peering with other autonomous systems that?",
+    "answer": "What does Its peering infrastructure provide: Its peering infrastructure enables networks to directly interconnect and exchange data traffic at a common point.  |  However, the stub AS may have peering with other autonomous systems that: However, the stub AS may have peering with other autonomous systems that is not reflected in public route-view servers.",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does common method relate to Another method?",
+    "answer": "common method: A common method is to place the IP address of the subject host into the sub-domain of a higher level domain name, and to resolve that name to a record that indicates a positive or a negative indication.  |  Another method: Another method is using a flood of syn or udp packets to cause controlled and predictable disruption in the game so that a player can gain an unfair advantage.",
+    "domain": "networking",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does What does Example provide relate to example of dual-homed devices?",
+    "answer": "What does Example provide: Example uses include a company that might prevent a list of software from running on its network, a school that might prevent access to a list of websites from its computers, or a business that wants to ensure their computer users are not choosing easily guessed, poor passwords.  |  example of dual-homed devices: An example of dual-homed devices are enthusiast computing motherboards that incorporate dual Ethernet network interface cards.",
+    "domain": "networking",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does Not branded to any one company, and relate to What does My company provide?",
+    "answer": "Not branded to any one company, and: Not branded to any one company, and is a better destination for open-source development of monitoring plugins.Anybody who really thought about it for a bit, must have known that Nagios LLC would eventually seize control of anything Nagios trademark related.  |  What does My company provide: My company uses trading application where latency is utmost important.",
+    "domain": "networking",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does Internet Protocol (IP) relate to Internet Stream Protocol?",
+    "answer": "Internet Protocol (IP): The Internet Protocol (IP) is the network layer communications protocol in the Internet protocol suite for relaying datagrams across network boundaries.  |  Internet Stream Protocol: Version number 5 was used by the Internet Stream Protocol, an experimental streaming protocol that was not adopted.",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does mesh Wi-Fi network relate to Wi-Fi 6 relate to 802.1X for Wi-FI?",
+    "answer": "mesh Wi-Fi network: A mesh Wi-Fi network uses multiple interconnected nodes (APs) that self-organize to provide seamless coverage. Nodes communicate via a wireless backhaul, and clients roam transparently. Enterprise examples: Cisco Meraki, Aruba Instant On.  |  Wi-Fi 6 relate to 802.1X for Wi-FI: Wi-Fi 6: Wi-Fi 6 (802.11ax) supports speeds up to 9.6 Gbps, uses OFDMA and MU-MIMO for better multi-device performance, includes Target Wake Time (TWT) for power savings, and uses WPA3 security by default.  |  802.1X for Wi-FI: I have a hidden SSID network. I know that although the SSID is hidden, someone can sniff the Wi-Fi channels to get my SSID, and with that SSID he can use some OpenWRT-ish things to spoof my Wi-Fi network to force me type my password to authenticate his device. That is unacceptable, and I am looking for better security for my Wi-Fi network.\n\nWhat options do I have? How can 802.1X be used, I need to keep it as simple as possible.",
+    "domain": "wifi",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does Broadcore Communications relate to communications partners?",
+    "answer": "Broadcore Communications: Masergy acquired Broadcore Communications for an undisclosed purchase price in July 2012.  |  communications partners: The communications partners are characterized by the application architecture, such as the client–server model and peer-to-peer networking.",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does Because routing relate to Link-state routing protocol?",
+    "answer": "Because routing: Because routing is dynamic, meaning every packet is treated independently, and because the network maintains no state based on the path of prior packets, different packets may be routed to the same destination via different paths, resulting in out-of-order delivery to the receiver.  |  Link-state routing protocol: Link-state routing protocols are one of the two main classes of routing protocols used in packet switching networks for computer communications, the others being distance-vector routing protocols. Examples of link-state routing protocols include Open Shortest Path First (OSPF) and Intermediate System to Intermediate System (IS-IS).\nThe link-state protocol is performed by every switching node in the network (i.e.",
+    "domain": "networking",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does Wi-Fi 6 relate to Fi Security Level?",
+    "answer": "Wi-Fi 6: Wi-Fi 6 (802.11ax) supports speeds up to 9.6 Gbps, uses OFDMA and MU-MIMO for better multi-device performance, includes Target Wake Time (TWT) for power savings, and uses WPA3 security by default.  |  Fi Security Level: Is it possible to classify Wi-Fi Security Level (such as Secure, Non-secure, etc.) without connect to Wi-Fi.",
+    "domain": "wifi",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does Because a routing metric relate to Because the source address?",
+    "answer": "Because a routing metric: Because a routing metric is specific to a given routing protocol, multi-protocol routers must use some external heuristic to select between routes learned from different routing protocols.  |  Because the source address: Because the source address is part of the same broadcast domain as the server, it will respond with a packet destined directly to the local computer on layer 2, without involving the router.",
+    "domain": "networking",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does As a consequence, routing protocols relate to Routing?",
+    "answer": "As a consequence, routing protocols: As a consequence, routing protocols are included in the application layer.  |  Routing: Routing is the process of selecting a path for traffic in a network or between or across multiple networks. Broadly, routing is performed in many types of networks, including circuit-switched networks, such as the public switched telephone network (PSTN), and computer networks, such as the Internet.",
+    "domain": "networking",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does Wireless networks relate to Eero (wireless networking brand)?",
+    "answer": "Wireless networks: Wireless networks are less secure than wired ones; in many offices intruders can easily visit and hook up their own computer to the wired network without problems, gaining access to the network, and it is also often possible for remote intruders to gain access to the network through backdoors like Back Orifice.  |  Eero (wireless networking brand): Eero (stylized as eero) is a line of wireless mesh networking systems developed by Eero LLC, a wholly owned subsidiary of Amazon. Eero aims to offer complete home Wi-Fi coverage through the use of multiple interconnected wireless nodes. Eero systems automatically route connected devices between nodes depending on signal strength. The first generation Eero router was released in February 2016, and since then, several generations have been released.",
+    "domain": "wifi",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does Packet loss concealment relate to Packet Loss Rate?",
+    "answer": "Packet loss concealment: Packet loss concealment (PLC) is a technique to mask the effects of packet loss in voice over IP (VoIP) communications. When the voice signal is sent as VoIP packets on an IP network, the packets may (and likely will) travel different routes. A packet therefore might arrive very late, might be corrupted, or simply might not arrive at all. One example case of the last situation could be, when a packet is rejected by a server which has a full buffer and cannot accept any more data.  |  Packet Loss Rate: I am confused on the definition of Packet Loss Rate.\n\nIs it the number of packets lost per unit of time?\n\nor\n\nIs is the number of packets lost per number of packets sent?",
+    "domain": "troubleshooting",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does If a given route relate to Periodically checks if a route?",
+    "answer": "If a given route: If a given route is withdrawn by a neighbor, and there is no other route to that destination, the route is removed from the Loc-RIB and no longer sent by BGP to the main routing table manager.  |  Periodically checks if a route: Periodically checks if a route is available, and propagates routing changes to neighboring routers if any changes have occurred.",
+    "domain": "networking",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does What does Layer 1 switching provide relate to Application layer protocols?",
+    "answer": "What does Layer 1 switching provide: Layer 1 switching enables mirroring and software-defined port routing with port-to-port latency starting from 4ns, depending on physical distance.  |  Application layer protocols: Application layer protocols are often associated with particular client–server applications, and common services have well-known port numbers reserved by the Internet Assigned Numbers Authority (IANA).",
+    "domain": "networking",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does NAME relate to Although 13 root name servers?",
+    "answer": "NAME: NAME is the fully qualified domain name of the node in the tree.  |  Although 13 root name servers: Although 13 root name servers are specified, this does not mean that there are only 13 physical servers; each operator uses redundant computer equipment so that it can continue providing reliable service even if server hardware or software fails.",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does Domain Name System relate to domain name consists of one or more parts, technically called labels, that?",
+    "answer": "Domain Name System: The Domain Name System (DNS) is a hierarchical and distributed name service that provides a naming system for computers, services, and other resources on the Internet or other Internet Protocol (IP) networks. It associates various information with domain names (identification strings) assigned to each of the associated entities.  |  domain name consists of one or more parts, technically called labels, that: A domain name consists of one or more parts, technically called labels, that are conventionally concatenated, and delimited by dots, such as example.com.",
+    "domain": "networking",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does WIFI relate to Internet test gateway and WiFi?",
+    "answer": "WIFI: In 2025, Fortinet acquired Everest, an Indian company focus in WIFI access points for high density environments.  |  Internet test gateway and WiFi: Internet test gateway and WiFi are network devices before a firewall (a PC and a wireless guest AP).",
+    "domain": "wifi",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does What does For example, HP Cloud provide relate to For example, the A record?",
+    "answer": "What does For example, HP Cloud provide: For example, HP Cloud supports all hypervisors, including those from VMware, Microsoft, and Red Hat.  |  For example, the A record: For example, the A record is used to translate from a domain name to an IPv4 address, the NS record lists which name servers can answer lookups on a DNS zone, and the MX record specifies the mail server used to handle mail for  a domain specified in an e-mail address.",
+    "domain": "internet",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does application layer in the TCP/IP model relate to What does TCP provide?",
+    "answer": "application layer in the TCP/IP model: The application layer in the TCP/IP model is often compared to a combination of the fifth (session), sixth (presentation), and seventh (application) layers of the OSI model.  |  What does TCP provide: TCP provides reliable, ordered, and error-checked delivery of a stream of octets (bytes) between applications running on hosts communicating via an IP network.",
+    "domain": "networking",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does DNS over HTTPS (DoH) relate to DNS over HTTPS server implementations?",
+    "answer": "DNS over HTTPS (DoH): DNS over HTTPS (DoH) is a protocol for performing remote Domain Name System (DNS) resolution via the HTTPS protocol.  |  DNS over HTTPS server implementations: DNS over HTTPS server implementations are already available free of charge by some public DNS providers.",
+    "domain": "internet",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does Manual Firewall Configuration on Redhat IPTables relate to Cannot find error in iptables firewall configuration?",
+    "answer": "Manual Firewall Configuration on Redhat IPTables: I'm trying to configure a complex firewall for my team.  We're looking at six interfaces with different types of security zones and flows.  \n\nI have a well-documented, clean firewall configuration script, but if I run iptables-save, the results will of course have no comments.  The results will also be out of sync with our documented policy.  |  Cannot find error in iptables firewall configuration: I'm struggling with a firewall problem on my Centos server.\n\nI have the following configuration which when I use it with a service iptables restart and I try to ssh to the server with putty, I cannot access the server - I just get a connection timeout error.\n\nHowever when I leave the final REJECT line out I can.\n\nI've opened the ports for ssh ie port 22. What am I doing wrong? Am I making a noobie mistake? Any help would be appreciated.",
+    "domain": "security",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does HTTPS relate to What does ASA ruled that HTTPS already provide?",
+    "answer": "HTTPS: HTTPS is HTTP over TLS/SSL, encrypting data in transit to protect confidentiality and integrity between browser and server.  |  What does ASA ruled that HTTPS already provide: The ASA ruled that HTTPS already provides \"a significant layer of security\" and that the impression the ad gave that users were at a significant risk from data theft was erroneous.",
+    "domain": "internet",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does This entire process relate to For the entire calculation, C?",
+    "answer": "This entire process: This entire process is repeated throughout the lifetime of a protected surface, which must be clearly defined in Step #1 of the methodology.  |  For the entire calculation, C: For the entire calculation, C is stored once (that's good), A is loaded into the cache once (assuming a stripe of A fits in the cache with a stripe of B), but B is loaded N/ib times, where ib is the size of the strip in the C matrix, for a total of N3/ib doubleword loads from main memory.",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does It reduces the risk of data breaches since data and applications relate to This data?",
+    "answer": "It reduces the risk of data breaches since data and applications: It reduces the risk of data breaches since data and applications are protected and users and devices are constantly being verified.  |  This data: This data is used by the host to match the message to the appropriate process.",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does In the common case of TCP and UDP, services relate to TCP, UDP), and the socket user?",
+    "answer": "In the common case of TCP and UDP, services: In the common case of TCP and UDP, services are distinguished by port numbers.  |  TCP, UDP), and the socket user: TCP, UDP), and the socket user is unaware of the existence of protocol headers that are broadcast with the payload.",
+    "domain": "networking",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does Risk relate to Perform Quantitative Risk Analysis?",
+    "answer": "Risk: The Risk management knowledge area, as defined by the Project Management Body of Knowledge PMBoK, consists of the following processes:.  |  Perform Quantitative Risk Analysis: Perform Quantitative Risk Analysis – numerical analysis of the effects.",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does \"The malware utilized relate to Stuxnet malware?",
+    "answer": "\"The malware utilized: \"The malware utilized is absolutely unsophisticated and uninteresting,\" says Jim Walter, director of threat intelligence operations at security technology company McAfee – meaning that the heists could have easily been stopped by existing antivirus software had administrators responded to the warnings.  |  Stuxnet malware: The Stuxnet malware is one example of this, highlighting the potential for disaster should a safety system become infected with malware (whether targeted at that system or accidentally infected).",
+    "domain": "security",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does System ID relate to When ID bit 4?",
+    "answer": "System ID: The System ID is six bytes long and the NSEL is one byte.  |  When ID bit 4: When ID bit 4 is transmitted, the node with the ID of 16 transmits a 1 (recessive) for its ID, and the node with the ID of 15 transmits a 0 (dominant) for its ID.",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does This address file relate to What does File Transfer Protocol in active mode, for example provide?",
+    "answer": "This address file: This address file is called named.cache in the BIND name server reference implementation.  |  What does File Transfer Protocol in active mode, for example provide: File Transfer Protocol in active mode, for example, uses separate connections for control traffic (commands) and for data traffic (file contents).",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  }
+]

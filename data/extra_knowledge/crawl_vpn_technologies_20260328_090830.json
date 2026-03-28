@@ -6,12 +6,6 @@
     "source": "wikipedia:ExpressVPN"
   },
   {
-    "question": "Tell me about VPN",
-    "answer": "is company that operates the ExpressVPN VPN service and the ExpressKeys password manager.",
-    "domain": "security",
-    "source": "wikipedia:ExpressVPN"
-  },
-  {
     "question": "What is Since 2021, it?",
     "answer": "Since 2021, it is a subsidiary of Kape Technologies.",
     "domain": "general",
@@ -20,30 +14,6 @@
   {
     "question": "Tell me about Peter Burchhardt",
     "answer": "== History ==\nExpressVPN was founded in 2009 by Peter Burchhardt and Dan Pomerantz, two serial entrepreneurs who were also Wharton School alumni.",
-    "domain": "security",
-    "source": "wikipedia:ExpressVPN"
-  },
-  {
-    "question": "Tell me about VPNs",
-    "answer": "Senators, Apple stated it removed the VPNs due to a request from the Chinese government.",
-    "domain": "networking",
-    "source": "wikipedia:ExpressVPN"
-  },
-  {
-    "question": "Tell me about In December",
-    "answer": "In December, ExpressVPN came into the spotlight in relation to the investigation of the assassination of Russian ambassador to Turkey, Andrei Karlov.",
-    "domain": "networking",
-    "source": "wikipedia:ExpressVPN"
-  },
-  {
-    "question": "Tell me about In May",
-    "answer": "In May 2020, the company released a new protocol it developed for ExpressVPN called Lightway, designed to improve connectivity speeds and reduce power consumption.",
-    "domain": "security",
-    "source": "wikipedia:ExpressVPN"
-  },
-  {
-    "question": "Tell me about In October",
-    "answer": "In October, Yale Privacy Lab founder Sean O'Brien joined the ExpressVPN Digital Security Lab to conduct original research in the areas of privacy and cybersecurity.",
     "domain": "security",
     "source": "wikipedia:ExpressVPN"
   },
@@ -66,24 +36,6 @@
     "source": "wikipedia:ExpressVPN"
   },
   {
-    "question": "Tell me about US",
-    "answer": "government without having a valid export license from the US government.",
-    "domain": "general",
-    "source": "wikipedia:ExpressVPN"
-  },
-  {
-    "question": "Tell me about DNS",
-    "answer": "=== DNS request leaks ===\nIn February 2024, it was revealed that ExpressVPN software had contained a bug for nearly two years that exposed the domains users were visiting.",
-    "domain": "security",
-    "source": "wikipedia:ExpressVPN"
-  },
-  {
-    "question": "Tell me about CA",
-    "answer": "The apps use a 4096-bit CA, AES-256-CBC encryption, and TLSv1.2 to secure user traffic.",
-    "domain": "security",
-    "source": "wikipedia:ExpressVPN"
-  },
-  {
     "question": "Tell me about In January",
     "answer": "In January 2022, ExpressVPN launched Parallel Connections, a backend feature which simultaneously runs multiple methods of connecting a user to a given server, automatically picking the one that connects a user first.",
     "domain": "security",
@@ -92,12 +44,6 @@
   {
     "question": "What is In theory, as soon as a computer?",
     "answer": "In theory, as soon as a computer is shut down, all information on the server vanishes and cannot be recovered; the next time the server reboots, a fresh version of the VPN infrastructure is spawned.",
-    "domain": "security",
-    "source": "wikipedia:ExpressVPN"
-  },
-  {
-    "question": "Tell me about In February",
-    "answer": "In February 2022, ExpressVPN announced a $100,000 bug bounty for anyone who was able to hack its in-house technology, TrustedServer.",
     "domain": "security",
     "source": "wikipedia:ExpressVPN"
   },
@@ -111,18 +57,6 @@
     "question": "What is It does not run in the operating system's kernel, but?",
     "answer": "It does not run in the operating system's kernel, but is lightweight to support auditing.",
     "domain": "general",
-    "source": "wikipedia:ExpressVPN"
-  },
-  {
-    "question": "Tell me about TCP",
-    "answer": "In 2021, as the protocol was leaving the beta phase, the company claimed it was at least 2.5% faster than OpenVPN and other older protocols, improved reliability by 40%, and supported TCP and UDP.",
-    "domain": "networking",
-    "source": "wikipedia:ExpressVPN"
-  },
-  {
-    "question": "Tell me about In August",
-    "answer": "In August 2021, ExpressVPN announced the full public release of Lightway as well as full open-sourcing of Lightway's code.",
-    "domain": "security",
     "source": "wikipedia:ExpressVPN"
   },
   {
@@ -168,33 +102,9 @@
     "source": "wikipedia:VPN service"
   },
   {
-    "question": "Tell me about OSes",
-    "answer": "This includes virtual network adapters on computer OSes and specialized \"VPN\" interfaces on mobile operating systems.",
-    "domain": "security",
-    "source": "wikipedia:VPN service"
-  },
-  {
     "question": "What is less common alternative?",
     "answer": "A less common alternative is to provide a SOCKS proxy interface.",
     "domain": "networking",
-    "source": "wikipedia:VPN service"
-  },
-  {
-    "question": "Tell me about TLS",
-    "answer": "As of June 2025, however, approximately 98% of human-generated internet traffic was encrypted using TLS through the HTTPS protocol; when TLS is used, network eavesdropping can only point out the IP addresses or hostnames a user is connecting to.",
-    "domain": "internet",
-    "source": "wikipedia:VPN service"
-  },
-  {
-    "question": "Tell me about SSL",
-    "answer": "SSL stripping, the practice of downgrading a connection to unencrypted HTTP, doesn't always result in a browser warning, although this has been partly mitigated by the implementation of HTTP Strict Transport Security.",
-    "domain": "security",
-    "source": "wikipedia:VPN service"
-  },
-  {
-    "question": "What is Users?",
-    "answer": "Users are commonly exposed to misinformation on the VPN services market, which makes it difficult for them to discern fact from false claims in advertisements.",
-    "domain": "security",
     "source": "wikipedia:VPN service"
   },
   {
@@ -207,12 +117,6 @@
     "question": "What is VPN services?",
     "answer": "VPN services are not sufficient for protection against browser fingerprinting.",
     "domain": "security",
-    "source": "wikipedia:VPN service"
-  },
-  {
-    "question": "Tell me about IP",
-    "answer": "Users can still be tracked through tracking cookies even if the user's IP address is hidden.",
-    "domain": "networking",
     "source": "wikipedia:VPN service"
   },
   {
@@ -264,12 +168,6 @@
     "source": "wikipedia:VPN service"
   },
   {
-    "question": "Tell me about PC",
-    "answer": "=== Privacy ===\nIn 2018 PC Magazine recommended that users consider choosing a provider based in a country with no data retention laws because that makes it easier for the service to keep a promise of no logging.",
-    "domain": "networking",
-    "source": "wikipedia:VPN service"
-  },
-  {
     "question": "What is Kape Technologies?",
     "answer": "Kape Technologies plc (formerly Crossrider Ltd.) is a British-Israeli company owned by businessman Teddy Sagi. Kape owns the VPN service and cybersecurity companies CyberGhost, Private Internet Access, ZenMate, ExpressVPN, and Intego.\nThe development center of Kape is located in the Azrieli Sarona Tower in Tel Aviv.",
     "domain": "security",
@@ -306,20 +204,8 @@
     "source": "wikipedia:Kape Technologies"
   },
   {
-    "question": "Tell me about In June",
-    "answer": "In June 2016, following the appointment of new management team, the company changed its strategy to focus to cyber-security with a focus on digital privacy and protection of digital data.",
-    "domain": "general",
-    "source": "wikipedia:Kape Technologies"
-  },
-  {
     "question": "Tell me about Kape Technologies",
     "answer": "=== 2018-current: Kape Technologies ===\nIn March 2018, the name of the company was changed to Kape Technologies plc.",
-    "domain": "general",
-    "source": "wikipedia:Kape Technologies"
-  },
-  {
-    "question": "Tell me about Wayback Machine",
-    "answer": "== External links ==\nOfficial website\nOfficial website (Crossrider) at the Wayback Machine (archived 2014-02-14).",
     "domain": "general",
     "source": "wikipedia:Kape Technologies"
   },
@@ -348,12 +234,6 @@
     "source": "wikipedia:OpenVPN"
   },
   {
-    "question": "Tell me about NATs",
-    "answer": "It is capable of traversing network address translators (NATs) and firewalls.",
-    "domain": "networking",
-    "source": "wikipedia:OpenVPN"
-  },
-  {
     "question": "What is It was written by James Yonan and?",
     "answer": "It was written by James Yonan and is free software, released under the terms of the GNU General Public License version 2 (GPLv2).",
     "domain": "general",
@@ -375,12 +255,6 @@
     "question": "What is Preshared secret key?",
     "answer": "Preshared secret key is the easiest, and certificate-based is the most robust and feature-rich.",
     "domain": "security",
-    "source": "wikipedia:OpenVPN"
-  },
-  {
-    "question": "Tell me about UDP",
-    "answer": "OpenVPN can run over User Datagram Protocol (UDP) or Transmission Control Protocol (TCP) transports, multiplexing created SSL tunnels on a single TCP/UDP port (RFC 3948 for UDP).",
-    "domain": "networking",
     "source": "wikipedia:OpenVPN"
   },
   {
@@ -432,12 +306,6 @@
     "source": "wikipedia:OpenVPN"
   },
   {
-    "question": "Tell me about AES",
-    "answer": "Additionally, OpenVPN can be configured with various encryption ciphers, such as ChaCha20 and AES-256.",
-    "domain": "security",
-    "source": "wikipedia:OpenVPN"
-  },
-  {
     "question": "Tell me about SELinux",
     "answer": "OpenVPN has the ability to drop root privileges, use mlockall to prevent swapping sensitive data to disk, enter a chroot jail after initialization, and apply a SELinux context after initialization.",
     "domain": "security",
@@ -462,12 +330,6 @@
     "source": "wikipedia:OpenVPN"
   },
   {
-    "question": "Tell me about LDAP",
-    "answer": "Several third-party plug-ins also exist to authenticate against LDAP or SQL databases such as SQLite and MySQL.",
-    "domain": "intranet",
-    "source": "wikipedia:OpenVPN"
-  },
-  {
     "question": "Tell me about QNX",
     "answer": "== Platforms ==\nIt is available on Solaris, Linux, OpenBSD, FreeBSD, NetBSD, QNX, macOS and Windows XP and later.",
     "domain": "general",
@@ -486,12 +348,6 @@
     "source": "wikipedia:OpenVPN"
   },
   {
-    "question": "Tell me about The Access Server",
-    "answer": "The Access Server edition relies heavily on iptables for load balancing and it has never been available on Windows for this reason.",
-    "domain": "general",
-    "source": "wikipedia:OpenVPN"
-  },
-  {
     "question": "What is This version?",
     "answer": "This version is also able to dynamically create client (\"OpenVPN Connect\") installers, which include a client profile for connecting to a particular Access Server instance.",
     "domain": "security",
@@ -501,18 +357,6 @@
     "question": "Tell me about Access Server",
     "answer": "However, the user does not need to have an Access Server client in order to connect to the Access Server instance; the client from the OpenVPN Community Edition can be used.",
     "domain": "security",
-    "source": "wikipedia:OpenVPN"
-  },
-  {
-    "question": "What is This?",
-    "answer": "This is particularly important when the use of VPN connections is prohibited in certain environments, for example, in countries where encrypted connections are banned, or under civil legislation when circumventing network blocks in corporate networks.",
-    "domain": "security",
-    "source": "wikipedia:OpenVPN"
-  },
-  {
-    "question": "Tell me about SSTP",
-    "answer": "OpenConnect\nOpenSSH\nSecure Socket Tunneling Protocol (SSTP)\nStunnel\nTunnelblick\nWireGuard.",
-    "domain": "networking",
     "source": "wikipedia:OpenVPN"
   },
   {
@@ -552,12 +396,6 @@
     "source": "wikipedia:Outline VPN"
   },
   {
-    "question": "What is Traffic?",
-    "answer": "Traffic is encrypted with the IETF ChaCha20 stream cipher (256-bit key) and authenticated with the IETF Poly1305 authenticator.",
-    "domain": "general",
-    "source": "wikipedia:Outline VPN"
-  },
-  {
     "question": "What is Outline?",
     "answer": "Outline is free and open-source, licensed under the Apache License 2.0, and was audited by Radically Open Security and claims not to log users' web traffic.",
     "domain": "general",
@@ -588,426 +426,6 @@
     "source": "wikipedia:Outline VPN"
   },
   {
-    "question": "What is Virtual private network?",
-    "answer": "A virtual private network (VPN) is an overlay network that uses network virtualization to extend a private network across a public network, such as the Internet, via the use of encryption and tunneling protocols. In a VPN, a tunneling protocol is used to transfer network messages from one network host to another. \nHost-to-network VPNs are commonly used by organizations to allow off-site users secure access to an office network over the Internet.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is virtual private network (VPN)?",
-    "answer": "A virtual private network (VPN) is an overlay network that uses network virtualization to extend a private network across a public network, such as the Internet, via the use of encryption and tunneling protocols.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is In a VPN, a tunneling protocol?",
-    "answer": "In a VPN, a tunneling protocol is used to transfer network messages from one network host to another.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is Host-to-network VPNs?",
-    "answer": "Host-to-network VPNs are commonly used by organizations to allow off-site users secure access to an office network over the Internet.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is network?",
-    "answer": "A network is a group of communicating computers known as hosts, which communicate data to other hosts via communication protocols, as facilitated by networking hardware.",
-    "domain": "general",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is Within a computer network, computers?",
-    "answer": "Within a computer network, computers are identified by network addresses, which allow rule-based systems such as Internet Protocol to locate and identify hosts.",
-    "domain": "general",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is Hosts may also have hostnames, memorable labels for the host nodes, which?",
-    "answer": "Hosts may also have hostnames, memorable labels for the host nodes, which are rarely changed after initial assignment.",
-    "domain": "general",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What does transmission medium that provide?",
-    "answer": "The transmission medium that supports information exchange includes wired media like copper cables, optical fibers, and wireless radio-frequency media.",
-    "domain": "wifi",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is arrangement of hosts and hardware within a network architecture?",
-    "answer": "The arrangement of hosts and hardware within a network architecture is known as the network topology.",
-    "domain": "general",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is network interface controller (NIC)?",
-    "answer": "The network interface controller (NIC) is computer hardware that connects the computer to the network media.",
-    "domain": "general",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "Tell me about NIC",
-    "answer": "In Ethernet networks, each NIC has a unique Media Access Control (MAC) address, usually stored in the controller's permanent memory.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is repeater?",
-    "answer": "A repeater is an electronic device that receives a network signal, cleans it of unnecessary noise and regenerates it.",
-    "domain": "general",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is signal?",
-    "answer": "The signal is retransmitted at a higher power level, or to the other side of obstruction so that the signal can cover longer distances without degradation.",
-    "domain": "general",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is Ethernet repeater with multiple ports?",
-    "answer": "An Ethernet repeater with multiple ports is known as an Ethernet hub.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "Tell me about LANs",
-    "answer": "Hubs and repeaters in LANs have been largely obsoleted by modern network switches.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is Network bridges?",
-    "answer": "Network bridges are analogous to a two-port switch.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "Tell me about OSI",
-    "answer": "Bridges and switches operate at the data link layer of the OSI model and bridge traffic between two or more network segments to form a single local network.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is Both?",
-    "answer": "Both are devices that forward frames of data between ports based on the destination MAC address in each frame.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is router?",
-    "answer": "A router is an internetworking device that forwards packets between networks by processing the addressing or routing information included in the packet.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is Modems (modulator-demodulator)?",
-    "answer": "Modems (modulator-demodulator) are used to connect network nodes via wire not originally designed for digital network traffic, or for wireless.",
-    "domain": "wifi",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is use of protocol layering?",
-    "answer": "The use of protocol layering is ubiquitous across the field of computer networking.",
-    "domain": "general",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is important example of a protocol stack?",
-    "answer": "An important example of a protocol stack is HTTP, the World Wide Web protocol.",
-    "domain": "internet",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "Tell me about HTTP",
-    "answer": "HTTP runs over TCP over IP, the Internet protocols, which in turn run over IEEE 802.11, the Wi-Fi protocol.",
-    "domain": "wifi",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is This stack?",
-    "answer": "This stack is used between a wireless router and a personal computer when accessing the web.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is network packet?",
-    "answer": "A network packet is a formatted unit of data carried by a packet-switched network.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What does control information provide?",
-    "answer": "The control information provides data the network needs to deliver the user data, for example, source and destination network addresses, error detection codes, and sequencing information.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is Typically, control information?",
-    "answer": "Typically, control information is found in packet headers and trailers, with payload data in between.",
-    "domain": "general",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is Internet protocol suite, also called TCP/IP?",
-    "answer": "The Internet protocol suite, also called TCP/IP, is the foundation of all modern networking and the defining set of protocols for the Internet.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "Tell me about Internet Protocol Version",
-    "answer": "At its core, the protocol suite defines the addressing, identification, and routing specifications for Internet Protocol Version 4 (IPv4) and for IPv6, the next generation of the protocol with a much enlarged addressing capability.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is Authentication may also occur after actual tunnels?",
-    "answer": "Authentication may also occur after actual tunnels are already active, for example, with a web captive portal.",
-    "domain": "wifi_security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is This connection state?",
-    "answer": "This connection state is usually facilitated through the simultaneous use of a LAN network interface controller (NIC), radio NIC, Wireless LAN NIC, and virtual private network client software application.",
-    "domain": "wifi",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is Split tunneling?",
-    "answer": "Split tunneling is most commonly configured via the use of a remote-access VPN client, which allows the user to simultaneously connect to a nearby wireless network, resources on an off-site corporate network, as well as websites over the internet.",
-    "domain": "wifi",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What does This type of extension provide?",
-    "answer": "This type of extension provides computer access to a local area network of a remote site, or any wider enterprise networks, such as an intranet.",
-    "domain": "general",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is Each computer?",
-    "answer": "Each computer is in charge of activating its own tunnel towards the network it wants to join.",
-    "domain": "general",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is joined network?",
-    "answer": "The joined network is only aware of a single remote host for each tunnel.",
-    "domain": "general",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is Tunneling?",
-    "answer": "Tunneling is only done between gateway devices located at each network location.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is In the context of site-to-site configurations, the terms intranet and extranet?",
-    "answer": "In the context of site-to-site configurations, the terms intranet and extranet are used to describe two different use cases.",
-    "domain": "intranet",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is limitation of traditional VPNs?",
-    "answer": "A limitation of traditional VPNs is that they are point-to-point connections and do not tend to support broadcast domains.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is Therefore, communication, software, and networking that?",
-    "answer": "Therefore, communication, software, and networking that are based on layer 2 and broadcast packets (such as NetBIOS used in Windows networking) may not be fully supported as on a local area network.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "Tell me about MPLS",
-    "answer": "Multiprotocol Label Switching (MPLS) often overlays trusted VPNs, often with quality-of-service control over a trusted delivery network.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is Mobile VPNs?",
-    "answer": "Mobile VPNs are widely used in public safety where they give law-enforcement officers access to applications such as computer-assisted dispatch and criminal databases, and in other organizations with similar requirements such as field service management and healthcare.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "Tell me about DMVPN",
-    "answer": "=== DMVPN ===\nDynamic Multipoint Virtual Private Network (DMVPN) is a dynamic tunneling form of a virtual private network supported on Cisco IOS-based routers, Huawei AR G3 routers, and Unix-like operating systems.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What does DMVPN provide?",
-    "answer": "DMVPN provides the capability for creating a dynamic-mesh VPN network without having to statically pre-configure all possible tunnel end-point peers, such as IPsec and ISAKMP peers.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is DMVPN?",
-    "answer": "DMVPN is initially configured to build a hub-and-spoke network by statically configuring the hubs (VPN headends) on the spokes; no change in the configuration on the hub is required to accept new spokes.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is Using this initial hub-and-spoke network, tunnels between spokes?",
-    "answer": "Using this initial hub-and-spoke network, tunnels between spokes are dynamically built on demand without additional configuration on the hubs or spokes.",
-    "domain": "general",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "Tell me about EVPN",
-    "answer": "=== EVPN ===\nEthernet VPN (EVPN) is a technology for carrying OSI layer 2 Ethernet traffic as a virtual private network using wide area network protocols.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is In practice, MPLS?",
-    "answer": "In practice, MPLS is mainly used to forward IP protocol data units and Virtual Private LAN Service Ethernet traffic.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is Major applications of MPLS?",
-    "answer": "Major applications of MPLS are telecommunications traffic engineering and MPLS VPN.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "Tell me about VPLS",
-    "answer": "=== VPLS ===\nVirtual Private LAN Service (VPLS) is a virtual private network technology that provides Ethernet-based multipoint-to-multipoint communication over IP or MPLS networks.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is There?",
-    "answer": "There are two IETF standards-track RFCs (RFC 4761 and RFC 4762) describing VPLS establishment.",
-    "domain": "general",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What does In contrast to L2TPv3, which provide?",
-    "answer": "In contrast to L2TPv3, which allows only point-to-point OSI layer 2 tunnels, VPLS allows any-to-any (multipoint) connectivity.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "Tell me about PPVPN",
-    "answer": "=== PPVPN ===\nA provider-provisioned VPN (PPVPN) is a virtual private network (VPN) implemented by a connectivity service provider or large enterprise on a network they operate on their own, as opposed to a \"customer-provisioned VPN\" where the VPN is implemented by the customer who acquires the connectivity service on top of the technical specificities of the provider.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "Tell me about IPSec",
-    "answer": "=== IPSec (1996) ===\nInternet Protocol Security (IPsec) is a standards-based security protocol, initially developed by the Internet Engineering Task Force (IETF) for IPv6, and was required in all standards-compliant implementations of IPv6 before RFC 6434 made it only a recommendation.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What does IPsec provide?",
-    "answer": "IPsec uses encryption, encapsulating an IP packet inside an IPsec packet.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is De-encapsulation happens at the end of the tunnel, where the original IP packet?",
-    "answer": "De-encapsulation happens at the end of the tunnel, where the original IP packet is decrypted and forwarded to its intended destination.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is IPsec?",
-    "answer": "IPsec is also often supported by network hardware accelerators, which makes IPsec VPN desirable for low-power scenarios, like always-on remote access VPN configurations.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is IPsec tunnels?",
-    "answer": "IPsec tunnels are set up by the Internet Key Exchange (IKE) protocol.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "Tell me about IKE",
-    "answer": "IKE version 2, which was created by Microsoft and Cisco, can be used alone to provide IPsec VPN functionality.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is Its primary advantages?",
-    "answer": "Its primary advantages are the native support for authenticating via the Extensible Authentication Protocol (EAP) and that the tunnel can be seamlessly restored when the IP address of the associated host is changing, which is typical of a roaming mobile device, whether on 3G or 4G LTE networks.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What does OpenSSH server provide?",
-    "answer": "OpenSSH server provides a limited number of concurrent tunnels.",
-    "domain": "internet",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is SSH?",
-    "answer": "SSH is more often used to remotely connect to machines or networks instead of a site to site VPN connection.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "Tell me about DTLS",
-    "answer": "=== Other ===\nDatagram Transport Layer Security (DTLS) – used in Cisco AnyConnect VPN and in OpenConnect VPN to solve the issues TLS has with tunneling over TCP (SSL/TLS are TCP-based, and tunneling TCP over TCP can lead to big delays and connection aborts).",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "Tell me about MPPE",
-    "answer": "Microsoft Point-to-Point Encryption (MPPE) works with the Point-to-Point Tunneling Protocol and in several compatible implementations on other platforms.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "Tell me about MPVPN",
-    "answer": "Ragula Systems Development Company owns the registered trademark \"MPVPN\".",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is Crypto IP Encapsulation (CIPE)?",
-    "answer": "Crypto IP Encapsulation (CIPE) is a free and open-source VPN implementation for tunneling IPv4 packets over UDP via encapsulation.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "Tell me about CIPE",
-    "answer": "CIPE was developed for Linux operating systems by Olaf Titz, with a Windows port implemented by Damion K.",
-    "domain": "general",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is L2TP which?",
-    "answer": "L2TP which is a standards-based replacement for two proprietary VPN protocols: Cisco's Layer 2 Forwarding (L2F) (obsolete as of 2009) and Microsoft's Point-to-Point Tunneling Protocol (PPTP).",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "Tell me about IPFire",
-    "answer": "In some cases, like in the open source operating systems devoted to firewalls and network devices (like OpenWrt, IPFire, PfSense or OPNsense), it is possible to add support for additional VPN protocols by installing missing software components or third-party apps.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is By 2027, this market?",
-    "answer": "By 2027, this market is projected to grow to $76 billion.",
-    "domain": "general",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is \"Necessity?",
-    "answer": "\"Necessity is the mother of VPN invention\".",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
     "question": "What is Surfshark VPN?",
     "answer": "Surfshark is a European VPN service and digital privacy tool founded in Lithuania. Surfshark is headquartered in Amsterdam with additional offices in Lithuania, Poland, and Germany.\nBesides its VPN service, Surfshark offers other services such as an antivirus, data leak detection tool, a private search tool, and an automated personal data removal system, a digital identity generator, and others.",
     "domain": "security",
@@ -1026,39 +444,15 @@
     "source": "wikipedia:Surfshark VPN"
   },
   {
-    "question": "Tell me about Financial Times",
-    "answer": "In 2024 and 2025, the Financial Times ranked Surfshark as one of the fastest-growing European companies.",
-    "domain": "general",
-    "source": "wikipedia:Surfshark VPN"
-  },
-  {
     "question": "Tell me about DQL",
     "answer": "In 2019, the company launched Surfshark Alert and Surfshark Search and started their research activities, releasing the first Digital Quality of Life (DQL) index.",
     "domain": "general",
     "source": "wikipedia:Surfshark VPN"
   },
   {
-    "question": "Tell me about RAM",
-    "answer": "In 2020, Surfshark moved to 100% RAM-only servers, introduced WireGuard, and became a founding member of the VPN Trust Initiative.",
-    "domain": "security",
-    "source": "wikipedia:Surfshark VPN"
-  },
-  {
     "question": "Tell me about Surfshark Antivirus",
     "answer": "In the same year, Surfshark launched Surfshark Antivirus and Incogni.",
     "domain": "general",
-    "source": "wikipedia:Surfshark VPN"
-  },
-  {
-    "question": "Tell me about Nord Security",
-    "answer": "In mid-2021, Surfshark began the process of merging with Nord Security, the parent company of the popular NordVPN.",
-    "domain": "security",
-    "source": "wikipedia:Surfshark VPN"
-  },
-  {
-    "question": "Tell me about GUI",
-    "answer": "That same year, Surfshark released Surfshark Nexus, together with Nord Security gained the Unicorn status, released Linux GUI, reached 100 different server country locations, and was included in CNET's 2022 Best Overall VPN list.",
-    "domain": "security",
     "source": "wikipedia:Surfshark VPN"
   },
   {
@@ -1089,18 +483,6 @@
     "question": "Tell me about Surfshark Alert",
     "answer": "That same year, Surfshark launched Surfshark Alert and Surfshark Search.",
     "domain": "general",
-    "source": "wikipedia:Surfshark VPN"
-  },
-  {
-    "question": "Tell me about ID",
-    "answer": "Later that year, Surfshark launched Alternative ID – a tool that generates a brand-new online identity and email.",
-    "domain": "networking",
-    "source": "wikipedia:Surfshark VPN"
-  },
-  {
-    "question": "Tell me about TV",
-    "answer": "In 2024, Surfshark launched its Apple TV app and Alternative Number.",
-    "domain": "networking",
     "source": "wikipedia:Surfshark VPN"
   },
   {
@@ -1164,105 +546,9 @@
     "source": "wikipedia:Surfshark VPN"
   },
   {
-    "question": "Tell me about In November",
-    "answer": "=== Audits ===\nIn November 2018, Surfshark's Chrome and Firefox browser extensions underwent an external audit by a German cybersecurity firm, Cure53.",
-    "domain": "general",
-    "source": "wikipedia:Surfshark VPN"
-  },
-  {
-    "question": "Tell me about In April",
-    "answer": "In April 2021, Surfshark's server infrastructure was audited, again by Cure53.",
-    "domain": "general",
-    "source": "wikipedia:Surfshark VPN"
-  },
-  {
-    "question": "What is Check Point?",
-    "answer": "Check Point Software Technologies is an Israeli cybersecurity company with operations in over 60 countries. Its headquarters are located in Tel Aviv, Israel, and the company maintains a significant presence in Redwood City, California, United States. The company protects over 100,000 organizations globally and is home to the Check Point Research team. It is a partner organization of the World Economic Forum.",
-    "domain": "general",
-    "source": "wikipedia:Check Point"
-  },
-  {
-    "question": "What is Check Point Software Technologies?",
-    "answer": "Check Point Software Technologies is an Israeli cybersecurity company with operations in over 60 countries.",
-    "domain": "general",
-    "source": "wikipedia:Check Point"
-  },
-  {
-    "question": "What is Its headquarters?",
-    "answer": "Its headquarters are located in Tel Aviv, Israel, and the company maintains a significant presence in Redwood City, California, United States.",
-    "domain": "general",
-    "source": "wikipedia:Check Point"
-  },
-  {
-    "question": "What is company protects over 100,000 organizations globally and?",
-    "answer": "The company protects over 100,000 organizations globally and is home to the Check Point Research team.",
-    "domain": "general",
-    "source": "wikipedia:Check Point"
-  },
-  {
-    "question": "Tell me about CEO",
-    "answer": "== History ==\nCheck Point was established in Ramat Gan, Israel in 1993, by Gil Shwed (CEO as of 2016), Marius Nacht (Chairman as of 2016) and Shlomo Kramer (who left Check Point in 2003).",
-    "domain": "wifi_security",
-    "source": "wikipedia:Check Point"
-  },
-  {
-    "question": "Tell me about Israel Defense Forces",
-    "answer": "Shwed developed the idea while serving in the Unit 8200 of the Israel Defense Forces, where he worked on securing classified networks.",
-    "domain": "general",
-    "source": "wikipedia:Check Point"
-  },
-  {
-    "question": "Tell me about OEM",
-    "answer": "In 1994 Check Point signed an OEM agreement with Sun Microsystems, followed by a distribution agreement with HP in 1995.",
-    "domain": "general",
-    "source": "wikipedia:Check Point"
-  },
-  {
-    "question": "Tell me about IDC",
-    "answer": "By February 1996, the company was named worldwide firewall market leader by IDC, with a market share of 40 percent.",
-    "domain": "security",
-    "source": "wikipedia:Check Point"
-  },
-  {
-    "question": "Tell me about NASDAQ",
-    "answer": "In June 1996 Check Point raised $67 million from its initial public offering on NASDAQ.",
-    "domain": "general",
-    "source": "wikipedia:Check Point"
-  },
-  {
-    "question": "Tell me about Check Point",
-    "answer": "In 1998, Check Point established a partnership with Nokia, which bundled Check Point's Software with Nokia's computer Network Security Appliances.",
-    "domain": "general",
-    "source": "wikipedia:Check Point"
-  },
-  {
     "question": "Tell me about On August",
     "answer": "On August 14, 2003, Check Point opened its branch in India's capital, Delhi (with the legal name Check Point Software Technologies India Pvt.",
     "domain": "internet",
-    "source": "wikipedia:Check Point"
-  },
-  {
-    "question": "Tell me about IT",
-    "answer": "During the first decade of the 21st century Check Point started acquiring other IT security companies, including Nokia's network security business unit in 2009.",
-    "domain": "general",
-    "source": "wikipedia:Check Point"
-  },
-  {
-    "question": "Tell me about Google Play Store",
-    "answer": "In 2018, the company discovered malware, which it named \"AdultSwine\", that was found programmed into around 60 apps on the Google Play Store, primarily those aimed at children.",
-    "domain": "security",
-    "source": "wikipedia:Check Point"
-  },
-  {
-    "question": "Tell me about Shlomo Kramer",
-    "answer": "These include Shlomo Kramer, who started Imperva; Nir Zuk, who founded Palo Alto Networks; Ruvi Kitov and Reuven Harrison of Tufin; Yonadav Leitersdorf, who founded Indeni; and Avi Shua, who founded Orca Security.",
-    "domain": "general",
-    "source": "wikipedia:Check Point"
-  },
-  {
-    "question": "Tell me about Nadav Zafrir",
-    "answer": "Nadav Zafrir joined Check Point as the new Chief Executive Officer.",
-    "domain": "general",
     "source": "wikipedia:Check Point"
   },
   {
@@ -1272,141 +558,9 @@
     "source": "wikipedia:Check Point"
   },
   {
-    "question": "Tell me about Quantum Force Firewalls",
-    "answer": "== Products ==\nQuantum Force Firewalls : Quantum is a portfolio of high-performance firewalls to secure enterprises of all sizes and in all enterprises.",
-    "domain": "security",
-    "source": "wikipedia:Check Point"
-  },
-  {
-    "question": "What is Check Point Quantum Remote Access VPN?",
-    "answer": "Check Point Quantum Remote Access VPN is an enterprise-grade solution that provides secure access to a host organization’s assets.",
-    "domain": "security",
-    "source": "wikipedia:Check Point"
-  },
-  {
-    "question": "What is When threats?",
-    "answer": "When threats are identified, Check Point’s dynamic policy engine enables automatic response through Check Point’s AI Security Management.",
-    "domain": "general",
-    "source": "wikipedia:Check Point"
-  },
-  {
-    "question": "What is Harmony Email & Collaboration: Harmony?",
-    "answer": "Harmony Email & Collaboration: Harmony is a unified cloud security platform combining firewall-as-a-service (FWaaS), secure web gateway, zero-trust network access (ZTNA), SaaS protection, and SD-WAN.",
-    "domain": "networking",
-    "source": "wikipedia:Check Point"
-  },
-  {
-    "question": "Tell me about AI",
-    "answer": "The platform, powered by Check Point’s ThreatCloud AI, boasts a 99% threat detection rate and AI-driven security capabilities to proactively block malware, phishing, and anomalous behaviour.",
-    "domain": "security",
-    "source": "wikipedia:Check Point"
-  },
-  {
-    "question": "Tell me about Check Point Cloud",
-    "answer": "CloudGuard: With a unique prevention-first security approach, Check Point CloudGuard allows organizations to expand in the cloud with confidence by seamlessly embedding security guardrails at development to reduce complexity, automatically detect and stop threats, block attacks, and secure connectivity across applications, networks, and workloads.",
-    "domain": "security",
-    "source": "wikipedia:Check Point"
-  },
-  {
-    "question": "What does Check Point CloudGuard Network Security provide?",
-    "answer": "Check Point CloudGuard Network Security provides 100% evasion protection, blocking all TCP, IP, and HTTP-based evasions, including network segmentation techniques, fragmentation manipulations, deceptive transfer encoding, padding, and header modifications.",
-    "domain": "internet",
-    "source": "wikipedia:Check Point"
-  },
-  {
-    "question": "What does Check Point CloudGuard WAF provide?",
-    "answer": "Check Point CloudGuard WAF provides precise threat prevention using contextual AI to protect applications against known and unknown threats.",
-    "domain": "internet",
-    "source": "wikipedia:Check Point"
-  },
-  {
-    "question": "Tell me about MOVEit",
-    "answer": "It does this without relying on signatures and continuously learning from vast threat data to block sophisticated attacks, including zero-day exploits like Log4j and MOVEit.",
-    "domain": "networking",
-    "source": "wikipedia:Check Point"
-  },
-  {
-    "question": "Tell me about CNAPP",
-    "answer": "A partnership between Check Point and cloud security provider Wiz, announced in February 2025, replaces CloudGuard CNAPP with Wiz’s offering inside the CloudGuard suite.",
-    "domain": "internet",
-    "source": "wikipedia:Check Point"
-  },
-  {
-    "question": "What is Infinity External Risk Management: Check Point Infinity External Risk Management?",
-    "answer": "Infinity External Risk Management: Check Point Infinity External Risk Management is a solution that protects against threats like credential theft, fraud, and brand impersonation.",
-    "domain": "networking",
-    "source": "wikipedia:Check Point"
-  },
-  {
-    "question": "What does combined platform provide?",
-    "answer": "The combined platform enables seamless integration with an ecosystem of more than 70 vendors, synergy with Wiz for cloud exposure insights, as well as safe and context-aware threat remediation.",
-    "domain": "internet",
-    "source": "wikipedia:Check Point"
-  },
-  {
-    "question": "Tell me about CERTs",
-    "answer": "== Check Point Research ==\nThe Check Point research team consists of over 200 analysts and researchers cooperating with other security vendors, law enforcement and various CERTs.",
-    "domain": "general",
-    "source": "wikipedia:Check Point"
-  },
-  {
-    "question": "Tell me about Check Point Research",
-    "answer": "In 2020, the Check Point Research team uncovered multiple vulnerabilities in the TikTok app that exposed users to having personal information scraped from their profile, including their phone number and profile settings.",
-    "domain": "general",
-    "source": "wikipedia:Check Point"
-  },
-  {
-    "question": "Tell me about Check Point Software",
-    "answer": "== Critics ==\nAs of December 2023, Check Point Software continues to operate in Russia, selling its cybersecurity products in the country.",
-    "domain": "general",
-    "source": "wikipedia:Check Point"
-  },
-  {
-    "question": "Tell me about Ware Technologies",
-    "answer": "== SofaWare legal battle ==\nSofaWare Technologies was founded in 1999, as a cooperation between Check Point and SofaWare's founders, Adi Ruppin and Etay Bogner, with the purpose of extending Check Point from the enterprise market to the small business, consumer and branch office market.",
-    "domain": "general",
-    "source": "wikipedia:Check Point"
-  },
-  {
-    "question": "Tell me about Adi Ruppin",
-    "answer": "SofaWare's co-founder Adi Ruppin said that his company wanted to make the technology simple to use and affordable, and to lift the burden of security management from end users while adding some features.",
-    "domain": "general",
-    "source": "wikipedia:Check Point"
-  },
-  {
-    "question": "Tell me about Etay Bogner",
-    "answer": "In 2004 Etay Bogner, co-founder of SofaWare, sought court approval to file a shareholder derivative suit, claiming Check Point was not transferring funds to SofaWare as required for its use of SofaWare's products and technology.",
-    "domain": "general",
-    "source": "wikipedia:Check Point"
-  },
-  {
-    "question": "Tell me about Tel Aviv District Court Judge",
-    "answer": "In 2006 the Tel Aviv District Court Judge ruled that Bogner SofaWare could sue Check Point by proxy for $5.1 million in alleged damage to SofaWare.",
-    "domain": "intranet",
-    "source": "wikipedia:Check Point"
-  },
-  {
-    "question": "Tell me about Israeli Supreme Court",
-    "answer": "In 2009 the Israeli Supreme Court ruled that a group of founders of SofaWare, which includes Bogner, had veto power over any decision of SofaWare.",
-    "domain": "general",
-    "source": "wikipedia:Check Point"
-  },
-  {
-    "question": "Tell me about Check Point Research\nBusiness",
-    "answer": "Corporate website\nCheck Point Research\nBusiness data for Check Point:.",
-    "domain": "general",
-    "source": "wikipedia:Check Point"
-  },
-  {
     "question": "What is Proton VPN?",
     "answer": "Proton VPN is a VPN service launched in 2017 and operated by the Swiss company Proton AG, the company behind the email service Proton Mail. According to its official website, Proton VPN and Proton Mail share the same management team, offices, and technical resources, and are operated from Proton's headquarters in Plan-les-Ouates, Switzerland. On June 17, 2024, the company announced that it will be transitioning to a non-profit structure under the Proton Foundation.",
     "domain": "security",
-    "source": "wikipedia:Proton VPN"
-  },
-  {
-    "question": "Tell me about On June",
-    "answer": "On June 17, 2024, the company announced that it will be transitioning to a non-profit structure under the Proton Foundation.",
-    "domain": "general",
     "source": "wikipedia:Proton VPN"
   },
   {
@@ -1446,36 +600,6 @@
     "source": "wikipedia:NordVPN"
   },
   {
-    "question": "Tell me about In March",
-    "answer": "In March 2019, it was reported that NordVPN received a directive from Russian authorities to join a state-sponsored registry of banned websites, which would prevent Russian NordVPN users from circumventing state censorship.",
-    "domain": "security",
-    "source": "wikipedia:NordVPN"
-  },
-  {
-    "question": "Tell me about On October",
-    "answer": "On October 29, 2019, NordVPN announced additional audits and a public bug bounty program.",
-    "domain": "security",
-    "source": "wikipedia:NordVPN"
-  },
-  {
-    "question": "Tell me about In September",
-    "answer": "In September 2023, the company grew and raised more funding, making it valued at $3 billion.",
-    "domain": "general",
-    "source": "wikipedia:NordVPN"
-  },
-  {
-    "question": "Tell me about In July",
-    "answer": "In July 2024, at the request of Roskomnadzor, Apple removed NordVPN from the Russian App Store.",
-    "domain": "security",
-    "source": "wikipedia:NordVPN"
-  },
-  {
-    "question": "Tell me about AG",
-    "answer": "In November 2018, NordVPN claimed that its no-log policy was verified through an audit by PricewaterhouseCoopers AG.",
-    "domain": "security",
-    "source": "wikipedia:NordVPN"
-  },
-  {
     "question": "What is RAM-based servers?",
     "answer": "The RAM-based servers are fully owned and operated by NordVPN in an attempt to keep full control.",
     "domain": "security",
@@ -1496,12 +620,6 @@
   {
     "question": "What is NordLynx?",
     "answer": "NordLynx is a VPN tool based on the WireGuard protocol, which aims for better performance than the IPsec and OpenVPN tunneling protocols.",
-    "domain": "security",
-    "source": "wikipedia:NordVPN"
-  },
-  {
-    "question": "Tell me about UK",
-    "answer": "According to tests performed by Wired UK, NordLynx produces \"speed boosts of hundreds of MB/s under some conditions.\"\nIn April 2020, NordVPN announced the gradual roll-out of the WireGuard-based NordLynx protocol on all its platforms.",
     "domain": "security",
     "source": "wikipedia:NordVPN"
   },
@@ -1530,27 +648,9 @@
     "source": "wikipedia:NordVPN"
   },
   {
-    "question": "Tell me about HTTPS",
-    "answer": "The cyberattack granted the attackers root access, which was used to generate an HTTPS certificate that enabled the attackers to perform man-in-the-middle attacks to intercept the communications of NordVPN users.",
-    "domain": "security",
-    "source": "wikipedia:NordVPN"
-  },
-  {
     "question": "What is In addition, experts state that there?",
     "answer": "In addition, experts state that there are no indications of any user's private information such as user credentials, billing details, or any other profile-related information being compromised during that event.",
     "domain": "general",
-    "source": "wikipedia:NordVPN"
-  },
-  {
-    "question": "Tell me about On November",
-    "answer": "On November 1, 2019, in a separate incident, it was reported that approximately 2,000 usernames and passwords of NordVPN accounts were exposed through credential stuffing.",
-    "domain": "security",
-    "source": "wikipedia:NordVPN"
-  },
-  {
-    "question": "Tell me about ASA",
-    "answer": "In 2019, the Advertising Standards Authority (United Kingdom) (ASA) advised NordVPN not to repeat claims that public WiFi is so insecure it is equivalent to handing out your personal information to the people around you.",
-    "domain": "wifi",
     "source": "wikipedia:NordVPN"
   },
   {
@@ -1572,18 +672,6 @@
     "source": "wikipedia:NordVPN"
   },
   {
-    "question": "What is Point-to-Point Tunneling Protocol?",
-    "answer": "The Point-to-Point Tunneling Protocol (PPTP) is an obsolete method for implementing virtual private networks. PPTP has many well known security issues.\nPPTP uses a TCP control channel and a Generic Routing Encapsulation tunnel to encapsulate PPP packets. Many modern VPNs use various forms of UDP for this same functionality.",
-    "domain": "networking",
-    "source": "wikipedia:Point-to-Point Tunneling Protocol"
-  },
-  {
-    "question": "What is Point-to-Point Tunneling Protocol (PPTP)?",
-    "answer": "The Point-to-Point Tunneling Protocol (PPTP) is an obsolete method for implementing virtual private networks.",
-    "domain": "general",
-    "source": "wikipedia:Point-to-Point Tunneling Protocol"
-  },
-  {
     "question": "What does PPTP provide?",
     "answer": "PPTP uses a TCP control channel and a Generic Routing Encapsulation tunnel to encapsulate PPP packets.",
     "domain": "networking",
@@ -1599,12 +687,6 @@
     "question": "What is intended use of this protocol?",
     "answer": "The intended use of this protocol is to provide security levels and remote access levels comparable with typical VPN products.",
     "domain": "security",
-    "source": "wikipedia:Point-to-Point Tunneling Protocol"
-  },
-  {
-    "question": "What is This TCP connection?",
-    "answer": "This TCP connection is then used to initiate and manage a GRE tunnel to the same peer.",
-    "domain": "networking",
     "source": "wikipedia:Point-to-Point Tunneling Protocol"
   },
   {
@@ -1632,12 +714,6 @@
     "source": "wikipedia:Point-to-Point Tunneling Protocol"
   },
   {
-    "question": "Tell me about PPP",
-    "answer": "In the Microsoft implementation, the tunneled PPP traffic can be authenticated with PAP, CHAP, MS-CHAP v1/v2, Extensible Authentication Protocol (EAP), or PEAP-MS-CHAP v2.",
-    "domain": "wifi_security",
-    "source": "wikipedia:Point-to-Point Tunneling Protocol"
-  },
-  {
     "question": "What is On Linux, the pptp program?",
     "answer": "On Linux, the pptp program is only responsible for setting up the GRE layer.",
     "domain": "general",
@@ -1653,18 +729,6 @@
     "question": "Tell me about PAP",
     "answer": "pppd can handle PAP, CHAP, MS-CHAP v1/v2, EAP (MD5-Challenge, SRP-SHA1, EAP-TLS, PEAP).",
     "domain": "wifi_security",
-    "source": "wikipedia:Point-to-Point Tunneling Protocol"
-  },
-  {
-    "question": "Tell me about MS",
-    "answer": "=== Authentication layer ===\nMS-CHAP-v1 is fundamentally insecure.",
-    "domain": "general",
-    "source": "wikipedia:Point-to-Point Tunneling Protocol"
-  },
-  {
-    "question": "Tell me about NT",
-    "answer": "Tools exist to trivially extract the NT Password hashes from a captured MSCHAP-v1 exchange.",
-    "domain": "general",
     "source": "wikipedia:Point-to-Point Tunneling Protocol"
   },
   {
@@ -1692,12 +756,6 @@
     "source": "wikipedia:Point-to-Point Tunneling Protocol"
   },
   {
-    "question": "What is EAP-TLS?",
-    "answer": "EAP-TLS are seen as the superior authentication choice for PPTP; however, it requires implementation of a public-key infrastructure (PKI) for both client and server certificates.",
-    "domain": "security",
-    "source": "wikipedia:Point-to-Point Tunneling Protocol"
-  },
-  {
     "question": "What does later PEAP also provide?",
     "answer": "The later PEAP also offers protection against capture of password hashes and response packets (making combinations such as PEAP-MS-CHAP secure), but also requires a PKI.",
     "domain": "wifi_security",
@@ -1716,20 +774,8 @@
     "source": "wikipedia:Mullvad"
   },
   {
-    "question": "What does It also provide?",
-    "answer": "It also supports Shadowsocks as a bridge protocol for censorship circumvention.",
-    "domain": "general",
-    "source": "wikipedia:Mullvad"
-  },
-  {
     "question": "What is Mullvad's VPN client software?",
     "answer": "Mullvad's VPN client software is publicly available under the GPLv3, a free and open-source software license.",
-    "domain": "security",
-    "source": "wikipedia:Mullvad"
-  },
-  {
-    "question": "Tell me about AB",
-    "answer": "== History ==\nMullvad was launched in March 2009 by Amagicom AB in Göteborg, and it had begun by supporting connections via the OpenVPN protocol in 2009.",
     "domain": "security",
     "source": "wikipedia:Mullvad"
   },
@@ -1760,12 +806,6 @@
   {
     "question": "Tell me about EPS",
     "answer": "Payment for the service can also be made via bank wire-transfer, credit card, Bitcoin, Bitcoin Cash, PayPal, Swish, EPS Transfer, Bancontact, iDEAL, Przelewy24, and vouchers sold by multiple resellers.",
-    "domain": "general",
-    "source": "wikipedia:Mullvad"
-  },
-  {
-    "question": "Tell me about EU",
-    "answer": "Mullvad has been actively campaigning against the EU's Regulation to Prevent and Combat Child Sexual Abuse (a.k.a.",
     "domain": "general",
     "source": "wikipedia:Mullvad"
   },
@@ -1806,12 +846,6 @@
     "source": "wikipedia:Mullvad"
   },
   {
-    "question": "Tell me about API",
-    "answer": "When a user inputs a web query, the service checks if it has a cache of the search before making a call to the Google Search or Brave Search API.",
-    "domain": "internet",
-    "source": "wikipedia:Mullvad"
-  },
-  {
     "question": "What is Secure Socket Tunneling Protocol?",
     "answer": "In computer networking, Secure Socket Tunneling Protocol (SSTP) is a form of virtual private network (VPN) tunnel that provides a mechanism to transport Point-to-Point Protocol (PPP) traffic through an SSL/TLS channel.",
     "domain": "security",
@@ -1845,12 +879,6 @@
     "question": "Tell me about RRAS",
     "answer": "It is fully integrated with the RRAS architecture in these operating systems, allowing its use with Winlogon or smart-card authentication, remote-access policies and the Windows VPN client.",
     "domain": "security",
-    "source": "wikipedia:Secure Socket Tunneling Protocol"
-  },
-  {
-    "question": "What is protocol?",
-    "answer": "The protocol is also used by Windows Azure for Point-to-Site Virtual Network.",
-    "domain": "general",
     "source": "wikipedia:Secure Socket Tunneling Protocol"
   },
   {
@@ -1892,12 +920,6 @@
   {
     "question": "Tell me about Apache License",
     "answer": "The license was switched to Apache License 2.0 on January 21, 2019.",
-    "domain": "networking",
-    "source": "wikipedia:SoftEther VPN"
-  },
-  {
-    "question": "What does SoftEther VPN provide?",
-    "answer": "SoftEther VPN supports NAT traversal, making it useful to run VPN servers on computers that are behind residential gateways, facility routers, and firewalls.",
     "domain": "networking",
     "source": "wikipedia:SoftEther VPN"
   },
@@ -1956,33 +978,9 @@
     "source": "wikipedia:SoftEther VPN"
   },
   {
-    "question": "What is When a user?",
-    "answer": "When a user is unable to use Windows or Linux with WINE, the user can alternatively use vpncmd to manage the VPN programs.",
-    "domain": "networking",
-    "source": "wikipedia:SoftEther VPN"
-  },
-  {
     "question": "What is vpncmd?",
     "answer": "vpncmd is also useful to execute a batch operation, such as creating many users on the Virtual Hub, or creating many Virtual Hubs on the VPN Server.",
     "domain": "security",
-    "source": "wikipedia:SoftEther VPN"
-  },
-  {
-    "question": "What is Virtual Hub?",
-    "answer": "A Virtual Hub is the software-emulated virtual Ethernet switch.",
-    "domain": "networking",
-    "source": "wikipedia:SoftEther VPN"
-  },
-  {
-    "question": "What is When there?",
-    "answer": "When there are several Virtual Hubs in a single instance of VPN Server, these Virtual Hubs are isolated for security.",
-    "domain": "security",
-    "source": "wikipedia:SoftEther VPN"
-  },
-  {
-    "question": "Tell me about ACLs",
-    "answer": "An administrator for a Virtual Hub can define user-objects and ACLs, limited only the delegated Virtual Hub.",
-    "domain": "general",
     "source": "wikipedia:SoftEther VPN"
   },
   {
@@ -2040,26 +1038,8 @@
     "source": "wikipedia:SoftEther VPN"
   },
   {
-    "question": "What does To do this, SoftEther VPN provide?",
-    "answer": "To do this, SoftEther VPN supports SSL-VPN and NAT Traversal.",
-    "domain": "security",
-    "source": "wikipedia:SoftEther VPN"
-  },
-  {
     "question": "What does HTTPS (HTTP over SSL) protocol provide?",
     "answer": "HTTPS (HTTP over SSL) protocol uses the TCP/IP port 443 (may vary) as destination.",
-    "domain": "networking",
-    "source": "wikipedia:SoftEther VPN"
-  },
-  {
-    "question": "What is When this function?",
-    "answer": "When this function is enabled, the logical VPN Session will consist of several TCP (HTTPS) connections.",
-    "domain": "internet",
-    "source": "wikipedia:SoftEther VPN"
-  },
-  {
-    "question": "Tell me about NAT",
-    "answer": "=== NAT traversal ===\nTraditional VPN systems require the user to ask the firewall's administrator of the company to open an endpoint (TCP or UDP port) on the firewall or NAT on the border between the company and the Internet.",
     "domain": "networking",
     "source": "wikipedia:SoftEther VPN"
   },
@@ -2106,26 +1086,8 @@
     "source": "wikipedia:IPsec"
   },
   {
-    "question": "Tell me about NSA",
-    "answer": "From 1986 to 1991, the NSA sponsored the development of security protocols for the Internet under its Secure Data Network Systems (SDNS) program.",
-    "domain": "internet",
-    "source": "wikipedia:IPsec"
-  },
-  {
-    "question": "Tell me about NIST",
-    "answer": "The work was openly published from about 1988 by NIST and, of these, Security Protocol at Layer 3 (SP3) would eventually morph into the ISO standard Network Layer Security Protocol (NLSP).",
-    "domain": "networking",
-    "source": "wikipedia:IPsec"
-  },
-  {
     "question": "Tell me about NRL",
     "answer": "Under NRL's DARPA-funded research effort, NRL developed the IETF standards-track specifications (RFC 1825 through RFC 1827) for IPsec.",
-    "domain": "security",
-    "source": "wikipedia:IPsec"
-  },
-  {
-    "question": "Tell me about IETF",
-    "answer": "The Internet Engineering Task Force (IETF) formed the IP Security Working Group in 1992 to standardize openly specified security extensions to IP, called IPsec.",
     "domain": "security",
     "source": "wikipedia:IPsec"
   },
@@ -2166,12 +1128,6 @@
     "source": "wikipedia:IPsec"
   },
   {
-    "question": "What is Authentication Header (AH)?",
-    "answer": "Authentication Header (AH) is a member of the IPsec protocol suite.",
-    "domain": "security",
-    "source": "wikipedia:IPsec"
-  },
-  {
     "question": "What is Mutable (and therefore unauthenticated) IPv4 header fields?",
     "answer": "Mutable (and therefore unauthenticated) IPv4 header fields are DSCP/ToS, ECN, Flags, Fragment Offset, TTL and Header Checksum.",
     "domain": "general",
@@ -2196,12 +1152,6 @@
     "source": "wikipedia:IPsec"
   },
   {
-    "question": "What is value?",
-    "answer": "The value is taken from the list of IP protocol numbers.",
-    "domain": "general",
-    "source": "wikipedia:IPsec"
-  },
-  {
     "question": "Tell me about Payload Len",
     "answer": "Payload Len: 8 bits\nThe length of this Authentication Header in 4-octet units, minus 2.",
     "domain": "general",
@@ -2220,12 +1170,6 @@
     "source": "wikipedia:IPsec"
   },
   {
-    "question": "Tell me about Sequence Number",
-    "answer": "Sequence Number: 32 bits\nA monotonic strictly increasing sequence number (incremented by 1 for every packet sent) to prevent replay attacks.",
-    "domain": "general",
-    "source": "wikipedia:IPsec"
-  },
-  {
     "question": "What is When replay detection?",
     "answer": "When replay detection is enabled, sequence numbers are never reused, because a new security association must be renegotiated before an attempt to increment the sequence number beyond its maximum value.",
     "domain": "intranet",
@@ -2241,12 +1185,6 @@
     "question": "Tell me about ESP",
     "answer": "This ESP was originally derived from the US Department of Defense SP3D protocol, rather than being derived from the ISO Network-Layer Security Protocol (NLSP).",
     "domain": "general",
-    "source": "wikipedia:IPsec"
-  },
-  {
-    "question": "What is Encapsulating Security Payload (ESP)?",
-    "answer": "Encapsulating Security Payload (ESP) is a member of the IPsec protocol suite.",
-    "domain": "security",
     "source": "wikipedia:IPsec"
   },
   {
@@ -2292,12 +1230,6 @@
     "source": "wikipedia:IPsec"
   },
   {
-    "question": "Tell me about ICV",
-    "answer": "Integrity Check Value (ICV): variable\nVariable length check value.",
-    "domain": "general",
-    "source": "wikipedia:IPsec"
-  },
-  {
     "question": "What does As such, IPsec provide?",
     "answer": "As such, IPsec provides a range of options once it has been determined whether AH or ESP is used.",
     "domain": "security",
@@ -2336,12 +1268,6 @@
   {
     "question": "What is ISAKMP?",
     "answer": "ISAKMP is implemented by manual configuration with pre-shared secrets, Internet Key Exchange (IKE and IKEv2), Kerberized Internet Negotiation of Keys (KINK), and the use of IPSECKEY DNS records.",
-    "domain": "security",
-    "source": "wikipedia:IPsec"
-  },
-  {
-    "question": "Tell me about RFC",
-    "answer": "RFC 5386 defines Better-Than-Nothing Security (BTNS) as an unauthenticated mode of IPsec using an extended IKE protocol.",
     "domain": "security",
     "source": "wikipedia:IPsec"
   },
@@ -2400,12 +1326,6 @@
     "source": "wikipedia:IPsec"
   },
   {
-    "question": "What is routing?",
-    "answer": "The routing is intact, since the IP header is neither modified nor encrypted; however, when the authentication header is used, the IP addresses cannot be modified by network address translation, as this always invalidates the hash value.",
-    "domain": "networking",
-    "source": "wikipedia:IPsec"
-  },
-  {
     "question": "What is transport and application layers?",
     "answer": "The transport and application layers are always secured by a hash, so they cannot be modified in any way, for example by translating the port numbers.",
     "domain": "networking",
@@ -2415,18 +1335,6 @@
     "question": "What is Tunnel mode?",
     "answer": "Tunnel mode is used to create virtual private networks for network-to-network communications (e.g.",
     "domain": "general",
-    "source": "wikipedia:IPsec"
-  },
-  {
-    "question": "Tell me about CBC",
-    "answer": "TripleDES-CBC for confidentiality\nAES-CBC and AES-CTR for confidentiality.",
-    "domain": "general",
-    "source": "wikipedia:IPsec"
-  },
-  {
-    "question": "Tell me about RSA",
-    "answer": "=== Authentication algorithms ===\nRSA\nECDSA (RFC 4754)\nPSK (RFC 6617)\nEdDSA (RFC 8420).",
-    "domain": "wifi_security",
     "source": "wikipedia:IPsec"
   },
   {
@@ -2448,20 +1356,8 @@
     "source": "wikipedia:IPsec"
   },
   {
-    "question": "What is Here IPsec?",
-    "answer": "Here IPsec is installed between the IP stack and the network drivers.",
-    "domain": "security",
-    "source": "wikipedia:IPsec"
-  },
-  {
     "question": "What is If a host or gateway has a separate cryptoprocessor, which?",
     "answer": "If a host or gateway has a separate cryptoprocessor, which is common in the military and can also be found in commercial systems, a so-called bump-in-the-wire (BITW) implementation of IPsec is possible.",
-    "domain": "security",
-    "source": "wikipedia:IPsec"
-  },
-  {
-    "question": "What is When IPsec?",
-    "answer": "When IPsec is implemented in the kernel, the key management and ISAKMP/IKE negotiation is carried out from user space.",
     "domain": "security",
     "source": "wikipedia:IPsec"
   },
@@ -2502,20 +1398,8 @@
     "source": "wikipedia:IPsec"
   },
   {
-    "question": "Tell me about PIX",
-    "answer": "The Cisco PIX and ASA firewalls had vulnerabilities that were used for wiretapping by the NSA.",
-    "domain": "security",
-    "source": "wikipedia:IPsec"
-  },
-  {
     "question": "What is This can be and apparently?",
     "answer": "This can be and apparently is targeted by the NSA using offline dictionary attacks.",
-    "domain": "general",
-    "source": "wikipedia:IPsec"
-  },
-  {
-    "question": "Tell me about RFCs",
-    "answer": "=== Experimental RFCs ===\nRFC 4478: Repeated Authentication in Internet Key Exchange (IKEv2) Protocol.",
     "domain": "general",
     "source": "wikipedia:IPsec"
   },
@@ -2640,12 +1524,6 @@
     "source": "wikipedia:Layer 2 Tunneling Protocol"
   },
   {
-    "question": "Tell me about SA",
-    "answer": "Negotiation and establishment of L2TP tunnel between the SA endpoints.",
-    "domain": "general",
-    "source": "wikipedia:Layer 2 Tunneling Protocol"
-  },
-  {
     "question": "What is When the process?",
     "answer": "When the process is complete, L2TP packets between the endpoints are encapsulated by IPsec.",
     "domain": "security",
@@ -2700,12 +1578,6 @@
     "source": "wikipedia:Layer 2 Tunneling Protocol"
   },
   {
-    "question": "Tell me about MMC",
-    "answer": "Windows Vista added 2 alternative tools, an MMC snap-in called \"Windows Firewall with Advanced Security\" (WFwAS) and the \"netsh advfirewall\" command-line tool.",
-    "domain": "networking",
-    "source": "wikipedia:Layer 2 Tunneling Protocol"
-  },
-  {
     "question": "What is One limitation with both of the WFwAS and netsh commands?",
     "answer": "One limitation with both of the WFwAS and netsh commands is that servers must be specified by IP address.",
     "domain": "networking",
@@ -2718,12 +1590,6 @@
     "source": "wikipedia:Layer 2 Tunneling Protocol"
   },
   {
-    "question": "Tell me about ISPs",
-    "answer": "== L2TP in ISPs' networks ==\nL2TP is often used by ISPs when internet service over for example ADSL or cable is being resold.",
-    "domain": "general",
-    "source": "wikipedia:Layer 2 Tunneling Protocol"
-  },
-  {
     "question": "Tell me about BRAS",
     "answer": "From the end user, packets travel over a wholesale network service provider's network to a server called a Broadband Remote Access Server (BRAS), a protocol converter and router combined.",
     "domain": "networking",
@@ -2732,12 +1598,6 @@
   {
     "question": "Tell me about RP",
     "answer": "=== Implementations ===\nCisco: Cisco L2TP documentation, also read Technology brief from Cisco\nOpen source and Linux: xl2tpd Archived 2010-09-23 at the Wayback Machine, Linux RP-L2TP, OpenL2TP, l2tpns, l2tpd (inactive), Linux L2TP/IPsec server Archived 2012-07-16 at the Wayback Machine, FreeBSD multi-link PPP daemon, OpenBSD npppd(8), ACCEL-PPP - PPTP/L2TP/PPPoE server for Linux\nMicrosoft: built-in client included with Windows 2000 and higher; Microsoft L2TP/IPsec VPN Client for Windows 98/Windows Me/Windows NT 4.0\nApple: built-in client included with Mac OS X 10.3 and higher.",
-    "domain": "security",
-    "source": "wikipedia:Layer 2 Tunneling Protocol"
-  },
-  {
-    "question": "Tell me about IANA",
-    "answer": "=== Other ===\nIANA assigned numbers for L2TP\nL2TP Extensions Working Group (l2tpext) - (where future standardization work is being coordinated)\nUsing Linux as an L2TP/IPsec VPN client\nL2TP/IPSec with OpenBSD and npppd\nComparison of L2TP, PPTP and OpenVPN.",
     "domain": "security",
     "source": "wikipedia:Layer 2 Tunneling Protocol"
   },
@@ -2756,12 +1616,6 @@
   {
     "question": "What is NAT traversal techniques?",
     "answer": "NAT traversal techniques are required for many network applications, such as peer-to-peer file sharing and voice over IP.",
-    "domain": "networking",
-    "source": "wikipedia:NAT traversal"
-  },
-  {
-    "question": "What does Network address translation typically provide?",
-    "answer": "Network address translation typically uses private IP addresses on private networks with a single public IP address for the router facing the Internet.",
     "domain": "networking",
     "source": "wikipedia:NAT traversal"
   },
@@ -2820,12 +1674,6 @@
     "source": "wikipedia:NAT traversal"
   },
   {
-    "question": "Tell me about STUN",
-    "answer": "It fills in some of the missing pieces and deficiencies that were not mentioned in the STUN specification.",
-    "domain": "general",
-    "source": "wikipedia:NAT traversal"
-  },
-  {
     "question": "What is NAT hole punching?",
     "answer": "NAT hole punching is a general technique that exploits how NATs handle some protocols (for example, UDP, TCP, or ICMP) to allow previously blocked packets through the NAT.",
     "domain": "networking",
@@ -2859,18 +1707,6 @@
     "question": "What is IPsec NAT-T patches?",
     "answer": "IPsec NAT-T patches are also available for Windows 2000, Windows NT and Windows 98.",
     "domain": "security",
-    "source": "wikipedia:NAT traversal"
-  },
-  {
-    "question": "What does NAT traversal provide?",
-    "answer": "NAT traversal allows systems behind NATs to request and establish secure connections on demand.",
-    "domain": "networking",
-    "source": "wikipedia:NAT traversal"
-  },
-  {
-    "question": "Tell me about SBC",
-    "answer": "== See also ==\nSession border controller (SBC)\nPort forwarding.",
-    "domain": "general",
     "source": "wikipedia:NAT traversal"
   },
   {
@@ -2924,12 +1760,6 @@
   {
     "question": "Tell me about Main Mode",
     "answer": "Main Mode protects the identity of the peers and the hash of the shared key by encrypting them; Aggressive Mode does not.",
-    "domain": "general",
-    "source": "wikipedia:Internet Key Exchange"
-  },
-  {
-    "question": "What is One example?",
-    "answer": "One example is Dead Peer Detection (DPD), which was implemented inconsistently across vendors.",
     "domain": "general",
     "source": "wikipedia:Internet Key Exchange"
   },
@@ -3030,12 +1860,6 @@
     "source": "wikipedia:IPv6"
   },
   {
-    "question": "What does This provide?",
-    "answer": "This uses 128-bit addresses, yielding an address space of  2128, 1038, or 340 undecillion total addresses.",
-    "domain": "general",
-    "source": "wikipedia:IPv6"
-  },
-  {
     "question": "What does IPv6 provide?",
     "answer": "IPv6 provides other technical benefits in addition to a larger addressing space.",
     "domain": "general",
@@ -3066,12 +1890,6 @@
     "source": "wikipedia:IPv6"
   },
   {
-    "question": "Tell me about DARPA",
-    "answer": "IPv4 was developed as a research project by the Defense Advanced Research Projects Agency (DARPA), a United States Department of Defense agency, before becoming the foundation for the Internet and the World Wide Web.",
-    "domain": "networking",
-    "source": "wikipedia:IPv6"
-  },
-  {
     "question": "What does IPv4 includes an addressing system that provide?",
     "answer": "IPv4 includes an addressing system that uses numerical identifiers consisting of 32 bits.",
     "domain": "general",
@@ -3093,18 +1911,6 @@
     "question": "Tell me about RIR",
     "answer": "At that point, each RIR still had available address pools and was expected to continue with standard address allocation policies until one /8 Classless Inter-Domain Routing (CIDR) block remained.",
     "domain": "networking",
-    "source": "wikipedia:IPv6"
-  },
-  {
-    "question": "Tell me about RIRs",
-    "answer": "After that, only blocks of 1,024 addresses (/22) were provided from the RIRs to a local Internet registry (LIR).",
-    "domain": "general",
-    "source": "wikipedia:IPv6"
-  },
-  {
-    "question": "Tell me about RIPE",
-    "answer": "RIPE NCC was the last to do so; it announced that it had fully run out of IPv4 addresses on 25 November 2019, and called for greater progress on the adoption of IPv6.",
-    "domain": "general",
     "source": "wikipedia:IPv6"
   },
   {
@@ -3138,20 +1944,8 @@
     "source": "wikipedia:IPv6"
   },
   {
-    "question": "Tell me about CIDR",
-    "answer": "In IPv4, complex Classless Inter-Domain Routing (CIDR) methods were developed to make the best use of the small address space.",
-    "domain": "networking",
-    "source": "wikipedia:IPv6"
-  },
-  {
     "question": "What is network identifier part of the address in IPv6?",
     "answer": "The network identifier part of the address in IPv6 is usually 264 addresses, about four billion times the size of the entire IPv4 address space.",
-    "domain": "general",
-    "source": "wikipedia:IPv6"
-  },
-  {
-    "question": "What is In IPv4 this?",
-    "answer": "In IPv4 this is an optional (although commonly implemented) feature.",
     "domain": "general",
     "source": "wikipedia:IPv6"
   },
@@ -3228,12 +2022,6 @@
     "source": "wikipedia:IPv6"
   },
   {
-    "question": "Tell me about CPU",
-    "answer": "Additionally, for many implementations, the use of Extension Headers causes packets to be processed by a router's CPU, leading to poor performance or even security issues.",
-    "domain": "networking",
-    "source": "wikipedia:IPv6"
-  },
-  {
     "question": "What is IPv4 header checksum?",
     "answer": "The IPv4 header checksum is calculated for the IPv4 header, and has to be recalculated by routers every time the time to live (called hop limit in the IPv6 protocol) is reduced by one.",
     "domain": "networking",
@@ -3258,20 +2046,8 @@
     "source": "wikipedia:IPv6"
   },
   {
-    "question": "Tell me about MTU",
-    "answer": "The use of jumbograms may improve performance over high-MTU links.",
-    "domain": "general",
-    "source": "wikipedia:IPv6"
-  },
-  {
     "question": "What is use of jumbograms?",
     "answer": "The use of jumbograms is indicated by the Jumbo Payload Option extension header.",
-    "domain": "general",
-    "source": "wikipedia:IPv6"
-  },
-  {
-    "question": "Tell me about This Next Header",
-    "answer": "This Next Header field tells the receiver how to interpret the data which follows the header.",
     "domain": "general",
     "source": "wikipedia:IPv6"
   },
@@ -3291,12 +2067,6 @@
     "question": "What is Extension headers carry options that?",
     "answer": "Extension headers carry options that are used for special treatment of a packet in the network, e.g., for routing, fragmentation, and for security using the IPsec framework.",
     "domain": "security",
-    "source": "wikipedia:IPv6"
-  },
-  {
-    "question": "Tell me about GB",
-    "answer": "With a Jumbo Payload option (in a Hop-By-Hop Options extension header), the payload must be less than 4 GB.",
-    "domain": "general",
     "source": "wikipedia:IPv6"
   },
   {
@@ -3354,26 +2124,8 @@
     "source": "wikipedia:IPv6"
   },
   {
-    "question": "Tell me about DHCP",
-    "answer": "The host can compute and assign the Interface identifier by itself without the presence or cooperation of an external network component like a DHCP server, in a process called link-local address autoconfiguration.",
-    "domain": "networking",
-    "source": "wikipedia:IPv6"
-  },
-  {
-    "question": "Tell me about MAC",
-    "answer": "The lower 64 bits of the link-local address (the suffix) were originally derived from the MAC address of the underlying network interface card.",
-    "domain": "networking",
-    "source": "wikipedia:IPv6"
-  },
-  {
     "question": "Tell me about NDP",
     "answer": "IPv6 implements the Neighbor Discovery Protocol (NDP, ND) in the link layer, which relies on ICMPv6 and multicast transmission.",
-    "domain": "networking",
-    "source": "wikipedia:IPv6"
-  },
-  {
-    "question": "Tell me about LAN",
-    "answer": "IPv6 hosts verify the uniqueness of their IPv6 addresses in a local area network (LAN) by sending a neighbor solicitation message asking for the link-layer address of the IP address.",
     "domain": "networking",
     "source": "wikipedia:IPv6"
   },
@@ -3386,12 +2138,6 @@
   {
     "question": "What is Once a unique link-local address?",
     "answer": "Once a unique link-local address is established, the IPv6 host determines whether the LAN is connected on this link to any router interface that supports IPv6.",
-    "domain": "networking",
-    "source": "wikipedia:IPv6"
-  },
-  {
-    "question": "What is If there?",
-    "answer": "If there is no answer after a predetermined number of attempts, the host concludes that no routers are connected.",
     "domain": "networking",
     "source": "wikipedia:IPv6"
   },
@@ -3540,12 +2286,6 @@
     "source": "wikipedia:IPv6"
   },
   {
-    "question": "What is address prefix 64:ff9b::/96?",
-    "answer": "The address prefix 64:ff9b::/96 is a class of IPv4-embedded IPv6 addresses for use in NAT64 transition methods.",
-    "domain": "networking",
-    "source": "wikipedia:IPv6"
-  },
-  {
     "question": "What is Shadow networks have occurred on business networks in which enterprises?",
     "answer": "Shadow networks have occurred on business networks in which enterprises are replacing Windows XP systems that do not have an IPv6 stack enabled by default, with Windows 7 systems, that do.",
     "domain": "general",
@@ -3582,12 +2322,6 @@
     "source": "wikipedia:IPv6"
   },
   {
-    "question": "Tell me about Internet Stream Protocol",
-    "answer": "(Version 5 was used by the experimental Internet Stream Protocol.).",
-    "domain": "general",
-    "source": "wikipedia:IPv6"
-  },
-  {
     "question": "What is RFC 8201?",
     "answer": "RFC 8201 is a related IPv6 standard that describes how to discover the most efficient network path from source to destination that has the largest packet size permitted to avoid IP packet fragmentation, and thus maintain packet transmission performance.",
     "domain": "networking",
@@ -3614,18 +2348,6 @@
   {
     "question": "Tell me about Summer Olympics",
     "answer": "In the same year, IPv6 was first used in a major world event during the Beijing 2008 Summer Olympics.",
-    "domain": "general",
-    "source": "wikipedia:IPv6"
-  },
-  {
-    "question": "Tell me about BGP",
-    "answer": "In 2018 only 25.3% of the about 54,000 autonomous systems advertised both IPv4 and IPv6 prefixes in the global Border Gateway Protocol (BGP) routing database.",
-    "domain": "networking",
-    "source": "wikipedia:IPv6"
-  },
-  {
-    "question": "Tell me about Middle East",
-    "answer": "Internet backbone transit networks offering IPv6 support existed in every country globally, except in parts of Africa, the Middle East and China.",
     "domain": "general",
     "source": "wikipedia:IPv6"
   },
@@ -3666,12 +2388,6 @@
     "source": "wikipedia:Null encryption"
   },
   {
-    "question": "What is Examples of this?",
-    "answer": "Examples of this are the \"eNULL\" and \"aNULL\" cipher suite in OpenSSL, and the \"NULL Encryption Algorithm\" in IPSec.",
-    "domain": "security",
-    "source": "wikipedia:Null encryption"
-  },
-  {
     "question": "What is IPsec cookie exchange?",
     "answer": "The cookie exchange in IPsec comes under the Oakley protocol, which is a protocol of key management. The cookie exchange requires that each side send a pseudorandom number, the cookie, in the initial message, which the other side acknowledges. This acknowledgement must be repeated in the first message of the Diffie–Hellman key exchange. If the source address was forged, the opponent gets no answer.",
     "domain": "networking",
@@ -3699,18 +2415,6 @@
     "question": "What is Network address translation?",
     "answer": "Network address translation (NAT) is a method of mapping an IP address space into another by modifying network address information in the IP header of packets while they are in transit across a traffic routing device.  The technique was initially used to bypass the need to assign a new address to every host when a network was moved, or when the upstream Internet service provider was replaced but could not route the network's address space.",
     "domain": "networking",
-    "source": "wikipedia:Network address translation"
-  },
-  {
-    "question": "What is Network address translation (NAT)?",
-    "answer": "Network address translation (NAT) is a method of mapping an IP address space into another by modifying network address information in the IP header of packets while they are in transit across a traffic routing device.",
-    "domain": "networking",
-    "source": "wikipedia:Network address translation"
-  },
-  {
-    "question": "Tell me about Internet Protocol",
-    "answer": "== History ==\nInternet Protocol version 4 (IPv4) uses 32-bit addresses, capable of uniquely addressing about 4.3 billion devices on the network.",
-    "domain": "general",
     "source": "wikipedia:Network address translation"
   },
   {
@@ -3810,12 +2514,6 @@
     "source": "wikipedia:Network address translation"
   },
   {
-    "question": "What is Another way?",
-    "answer": "Another way is to use various NAT traversal techniques.",
-    "domain": "networking",
-    "source": "wikipedia:Network address translation"
-  },
-  {
     "question": "What is For a given outgoing TCP communication, the same port numbers?",
     "answer": "For a given outgoing TCP communication, the same port numbers are used on both sides of the NAT.",
     "domain": "networking",
@@ -3843,12 +2541,6 @@
     "question": "What is Each of those packets?",
     "answer": "Each of those packets is encapsulated in an IP packet, whose IP header contains a source IP address and a destination IP address.",
     "domain": "networking",
-    "source": "wikipedia:Network address translation"
-  },
-  {
-    "question": "Tell me about SMTP",
-    "answer": "For example, port 443 connects through a socket to the web server software and port 465 to a mail server's SMTP daemon.",
-    "domain": "internet",
     "source": "wikipedia:Network address translation"
   },
   {
@@ -3900,18 +2592,6 @@
     "source": "wikipedia:Network address translation"
   },
   {
-    "question": "What is solution?",
-    "answer": "The solution is either renumbering to eliminate overlap or network address translation.",
-    "domain": "networking",
-    "source": "wikipedia:Network address translation"
-  },
-  {
-    "question": "Tell me about IEEE",
-    "answer": "== Related techniques ==\nIEEE Reverse Address and Port Translation (RAPT or RAT) allows a host whose real IP address changes from time to time to remain reachable as a server via a fixed home IP address.",
-    "domain": "networking",
-    "source": "wikipedia:Network address translation"
-  },
-  {
     "question": "What is Cisco's RAPT implementation?",
     "answer": "Cisco's RAPT implementation is PAT or NAT overloading and maps multiple private IP addresses to a single public IP address.",
     "domain": "networking",
@@ -3942,12 +2622,6 @@
     "source": "wikipedia:Network address translation"
   },
   {
-    "question": "Tell me about Internet Architecture Board",
-    "answer": "End-to-end connectivity has been a core principle of the Internet, supported, for example, by the Internet Architecture Board.",
-    "domain": "general",
-    "source": "wikipedia:Network address translation"
-  },
-  {
     "question": "What is Current Internet architectural documents observe that NAT?",
     "answer": "Current Internet architectural documents observe that NAT is a violation of the end-to-end principle, but that NAT does have a valid role in careful design.",
     "domain": "networking",
@@ -3957,12 +2631,6 @@
     "question": "What is Because the internal addresses?",
     "answer": "Because the internal addresses are all disguised behind one publicly accessible address, it is impossible for external hosts to directly initiate a connection to a particular internal host.",
     "domain": "general",
-    "source": "wikipedia:Network address translation"
-  },
-  {
-    "question": "Tell me about VOIP",
-    "answer": "Applications such as VOIP, videoconferencing, and other peer-to-peer applications must use NAT traversal techniques to function.",
-    "domain": "networking",
     "source": "wikipedia:Network address translation"
   },
   {
@@ -4050,12 +2718,6 @@
     "source": "wikipedia:Network address translation"
   },
   {
-    "question": "Tell me about SNAT",
-    "answer": "To enable two-way communication using the external address between these hosts, an SNAT rule must be configured.",
-    "domain": "networking",
-    "source": "wikipedia:Network address translation"
-  },
-  {
     "question": "What is This way, the response of the server will be sent to the router, which?",
     "answer": "This way, the response of the server will be sent to the router, which is then able to apply the reverse SNAT and DNAT transformations and send the expected response back to the local computer.",
     "domain": "networking",
@@ -4070,12 +2732,6 @@
   {
     "question": "What does File Transfer Protocol in active mode, for example provide?",
     "answer": "File Transfer Protocol in active mode, for example, uses separate connections for control traffic (commands) and for data traffic (file contents).",
-    "domain": "general",
-    "source": "wikipedia:Network address translation"
-  },
-  {
-    "question": "Tell me about SIP",
-    "answer": "SIP commonly controls voice over IP calls, and suffer the same problem.",
     "domain": "general",
     "source": "wikipedia:Network address translation"
   },
@@ -4118,12 +2774,6 @@
   {
     "question": "What is Other possibilities?",
     "answer": "Other possibilities are Port Control Protocol (PCP), NAT Port Mapping Protocol (NAT-PMP), or Internet Gateway Device Protocol but these require the NAT device to implement that protocol.",
-    "domain": "networking",
-    "source": "wikipedia:Network address translation"
-  },
-  {
-    "question": "What is In fact, avoiding NAT complications?",
-    "answer": "In fact, avoiding NAT complications is practically a requirement when designing new higher-layer protocols today.",
     "domain": "networking",
     "source": "wikipedia:Network address translation"
   },
@@ -4332,18 +2982,6 @@
     "source": "wikipedia:WireGuard"
   },
   {
-    "question": "Tell me about ARM",
-    "answer": "Donenfeld released an update of the Windows package improving installation, stability, ARM support, and enterprise features.",
-    "domain": "general",
-    "source": "wikipedia:WireGuard"
-  },
-  {
-    "question": "Tell me about CE",
-    "answer": "On 19 January 2021, WireGuard support was added for preview in pfSense Community Edition (CE) 2.5.0 development snapshots.",
-    "domain": "general",
-    "source": "wikipedia:WireGuard"
-  },
-  {
     "question": "Tell me about The Wire",
     "answer": "The WireGuard package for pfSense incorporates the ongoing kernel-mode WireGuard development work by Jason A.",
     "domain": "general",
@@ -4353,12 +2991,6 @@
     "question": "Tell me about Sovereign Tech Fund",
     "answer": "In 2023, WireGuard received over 209,000€ support from Germany's Sovereign Tech Fund.",
     "domain": "general",
-    "source": "wikipedia:WireGuard"
-  },
-  {
-    "question": "Tell me about SSH",
-    "answer": "== See also ==\nComparison of virtual private network services\nSecure Shell (SSH), a cryptographic network protocol used to secure services over an unsecured network.",
-    "domain": "internet",
     "source": "wikipedia:WireGuard"
   },
   {
@@ -4386,12 +3018,6 @@
     "source": "wikipedia:PfSense"
   },
   {
-    "question": "Tell me about SD",
-    "answer": "It can also be installed on embedded hardware using Compact Flash or SD cards, or as a virtual machine.",
-    "domain": "general",
-    "source": "wikipedia:PfSense"
-  },
-  {
     "question": "Tell me about Sense Plus",
     "answer": "== Release cadence and support ==\nSince 2021, pfSense Plus editions have followed an annual major version release cadence.",
     "domain": "general",
@@ -4404,82 +3030,10 @@
     "source": "wikipedia:PfSense"
   },
   {
-    "question": "Tell me about OPNsense",
-    "answer": "In January 2015, the OPNsense project was started by forking the version of pfSense at that time.",
-    "domain": "general",
-    "source": "wikipedia:PfSense"
-  },
-  {
     "question": "Tell me about Jason Donenfeld",
     "answer": "Support for WireGuard was temporarily removed in March 2021 after implementation issues were discovered by WireGuard founder Jason Donenfeld.",
     "domain": "general",
     "source": "wikipedia:PfSense"
-  },
-  {
-    "question": "What is Tailscale?",
-    "answer": "Tailscale Inc. is a software company based in Toronto, Ontario. Tailscale develops an open-source software-defined mesh virtual private network (VPN) and a web-based management service. The company provides a zero config VPN as a service under the same name.\nThe company's name was inspired by a 2013 Google research paper, The Tail at Scale.",
-    "domain": "security",
-    "source": "wikipedia:Tailscale"
-  },
-  {
-    "question": "What does company provide?",
-    "answer": "The company provides a zero config VPN as a service under the same name.",
-    "domain": "security",
-    "source": "wikipedia:Tailscale"
-  },
-  {
-    "question": "Tell me about The Tail",
-    "answer": "The company's name was inspired by a 2013 Google research paper, The Tail at Scale.",
-    "domain": "general",
-    "source": "wikipedia:Tailscale"
-  },
-  {
-    "question": "Tell me about Avery Pennarun",
-    "answer": "== History ==\nIn 2019, Google engineers Avery Pennarun, David Crawshaw, David Carney, and Brad Fitzpatrick founded Tailscale.",
-    "domain": "general",
-    "source": "wikipedia:Tailscale"
-  },
-  {
-    "question": "Tell me about DERP",
-    "answer": "If the software fails to establish direct communication, it falls back to using  DERP (Designated Encrypted Relay for Packets) protocol relays provided by the company.",
-    "domain": "networking",
-    "source": "wikipedia:Tailscale"
-  },
-  {
-    "question": "What is IPv4 addresses given to clients?",
-    "answer": "The IPv4 addresses given to clients are in the carrier-grade NAT reserved space.",
-    "domain": "networking",
-    "source": "wikipedia:Tailscale"
-  },
-  {
-    "question": "Tell me about The Tailscale",
-    "answer": "=== Supported platforms ===\nThe Tailscale client software supports a number of operating systems and embedded software systems:.",
-    "domain": "general",
-    "source": "wikipedia:Tailscale"
-  },
-  {
-    "question": "Tell me about QNAP",
-    "answer": "Windows\nmacOS\niOS and tvOS\nLinux\nAndroid\nSynology\nQNAP\nThe software also provides support for a Kubernetes operator and Docker images.",
-    "domain": "general",
-    "source": "wikipedia:Tailscale"
-  },
-  {
-    "question": "What is Its user facing functionality?",
-    "answer": "Its user facing functionality is similar to AirDrop on iOS or Quick Share on Android (operating system).",
-    "domain": "general",
-    "source": "wikipedia:Tailscale"
-  },
-  {
-    "question": "Tell me about Exit Nodes",
-    "answer": "=== Exit Nodes ===\nExit Nodes, in a setup similar to Tor (network), is a node where Tailscale connects to the rest of the internet.",
-    "domain": "internet",
-    "source": "wikipedia:Tailscale"
-  },
-  {
-    "question": "What is These can be configured on most devices with Tailscale installed, and when this?",
-    "answer": "These can be configured on most devices with Tailscale installed, and when this is done they act as the decryption point for your traffic.",
-    "domain": "general",
-    "source": "wikipedia:Tailscale"
   },
   {
     "question": "What is Amnezia VPN?",
@@ -4503,12 +3057,6 @@
     "question": "What is You cannot use encryption at all (this?",
     "answer": "You cannot use encryption at all (this is separately disabled).",
     "domain": "security",
-    "source": "wikipedia:Amnezia VPN"
-  },
-  {
-    "question": "Tell me about NGOs",
-    "answer": "The platform facilitates access to censored platforms such as Facebook, Instagram, X, Pastebin.com, WikiLeaks, and Booking.com, along with websites of independent media outlets and NGOs banned in Turkey.",
-    "domain": "general",
     "source": "wikipedia:Amnezia VPN"
   },
   {
@@ -4626,12 +3174,6 @@
     "source": "wikipedia:Psiphon"
   },
   {
-    "question": "Tell me about GNU",
-    "answer": "The original code (1.6) was made available under the GNU General Public License.",
-    "domain": "general",
-    "source": "wikipedia:Psiphon"
-  },
-  {
     "question": "Tell me about French Senate",
     "answer": "In 2008, Psiphon was awarded the Netexplorateur award by the French Senate.",
     "domain": "networking",
@@ -4725,18 +3267,6 @@
     "question": "What is VPNBook?",
     "answer": "VPNBook is a Web Proxy and VPN service offering servers in multiple countries.",
     "domain": "security",
-    "source": "wikipedia:VPNBook"
-  },
-  {
-    "question": "Tell me about VPNBook",
-    "answer": "VPNBook can be used to bypass some governmental restrictions.",
-    "domain": "security",
-    "source": "wikipedia:VPNBook"
-  },
-  {
-    "question": "Tell me about OS",
-    "answer": "The Mac OS X, iOS, Android, Ubuntu, and Windows operating systems all have PPTP support built in.",
-    "domain": "general",
     "source": "wikipedia:VPNBook"
   },
   {
@@ -4872,12 +3402,6 @@
     "source": "wikipedia:Datagram Transport Layer Security"
   },
   {
-    "question": "Tell me about Transport Layer Security",
-    "answer": "== External links ==\n\"Transport Layer Security (tls) - Charter\".",
-    "domain": "security",
-    "source": "wikipedia:Datagram Transport Layer Security"
-  },
-  {
     "question": "Tell me about Robin Seggelmann",
     "answer": "Robin Seggelmann's Sample Code: echo, character generator, and discard client/servers.",
     "domain": "general",
@@ -4890,21 +3414,9 @@
     "source": "wikipedia:SafeWeb"
   },
   {
-    "question": "Tell me about CIA",
-    "answer": "SafeWeb ran a free web anonymization service and built TriangleBoy, a censorship circumvention tool funded by the CIA's In-Q-Tel.",
-    "domain": "general",
-    "source": "wikipedia:SafeWeb"
-  },
-  {
     "question": "Tell me about Stephen Hsu",
     "answer": "=== Founding ===\nSafeWeb was co-founded by Stephen Hsu, Jon Chun, and James Hormuzdiar.",
     "domain": "general",
-    "source": "wikipedia:SafeWeb"
-  },
-  {
-    "question": "Tell me about URL",
-    "answer": "Users visited SafeWeb's website and entered a URL to browse anonymously through an encrypted proxy; no client software was required.",
-    "domain": "internet",
     "source": "wikipedia:SafeWeb"
   },
   {
@@ -4956,12 +3468,6 @@
     "source": "wikipedia:SafeWeb"
   },
   {
-    "question": "Tell me about Symantec Corporation",
-    "answer": "== Patents ==\nSafeWeb's technology resulted in multiple patents subsequently assigned to Symantec Corporation:.",
-    "domain": "general",
-    "source": "wikipedia:SafeWeb"
-  },
-  {
     "question": "Tell me about Jon Andre Chun",
     "answer": "Patent 7,730,528 B2, \"Intelligent secure data manipulation apparatus and method\" (inventors: Jon Andre Chun, Stephen Dao Hui Hsu, James Noshir Hormuzdiar; filed September 19, 2001; granted June 1, 2010)\nU.S.",
     "domain": "general",
@@ -4970,12 +3476,6 @@
   {
     "question": "What is Transport Layer Security?",
     "answer": "Transport Layer Security (TLS) is a cryptographic protocol designed to provide communications security over a computer network, such as the Internet. The protocol is widely used in applications such as email, instant messaging, and voice over IP, but its use in securing HTTPS remains the most publicly visible.",
-    "domain": "security",
-    "source": "wikipedia:Transport Layer Security"
-  },
-  {
-    "question": "What is Transport Layer Security (TLS)?",
-    "answer": "Transport Layer Security (TLS) is a cryptographic protocol designed to provide communications security over a computer network, such as the Internet.",
     "domain": "security",
     "source": "wikipedia:Transport Layer Security"
   },
@@ -4994,12 +3494,6 @@
   {
     "question": "What is In technical writing, references to \"(D)TLS\"?",
     "answer": "In technical writing, references to \"(D)TLS\" are often seen when it applies to both versions.",
-    "domain": "security",
-    "source": "wikipedia:Transport Layer Security"
-  },
-  {
-    "question": "What is TLS?",
-    "answer": "TLS is a proposed Internet Engineering Task Force (IETF) standard, first defined in 1999, and the current version is TLS 1.3, defined in August 2018.",
     "domain": "security",
     "source": "wikipedia:Transport Layer Security"
   },
@@ -5070,18 +3564,6 @@
     "source": "wikipedia:Transport Layer Security"
   },
   {
-    "question": "What is This authentication?",
-    "answer": "This authentication is required for the server and optional for the client.",
-    "domain": "general",
-    "source": "wikipedia:Transport Layer Security"
-  },
-  {
-    "question": "What does TLS provide?",
-    "answer": "TLS supports many different methods for exchanging keys, encrypting data, and authenticating message integrity.",
-    "domain": "security",
-    "source": "wikipedia:Transport Layer Security"
-  },
-  {
     "question": "What is Like the two previous versions, DTLS 1.3?",
     "answer": "Like the two previous versions, DTLS 1.3 is intended to provide \"equivalent security guarantees [to TLS 1.3] with the exception of order protection/non-replayability\".",
     "domain": "security",
@@ -5118,12 +3600,6 @@
     "source": "wikipedia:Transport Layer Security"
   },
   {
-    "question": "Tell me about ACM",
-    "answer": "Secure Network Programming won the 2004 ACM Software System Award.",
-    "domain": "general",
-    "source": "wikipedia:Transport Layer Security"
-  },
-  {
     "question": "Tell me about Paul Kocher",
     "answer": "Released in 1996, it was produced by Paul Kocher working with Netscape engineers Phil Karlton and Alan Freier, with a reference implementation by Christopher Allen and Tim Dierks of Certicom.",
     "domain": "general",
@@ -5133,24 +3609,6 @@
     "question": "What is As stated in the RFC, \"the differences between this protocol and SSL 3.0?",
     "answer": "As stated in the RFC, \"the differences between this protocol and SSL 3.0 are not dramatic, but they are significant enough to preclude interoperability between TLS 1.0 and SSL 3.0\".",
     "domain": "security",
-    "source": "wikipedia:Transport Layer Security"
-  },
-  {
-    "question": "Tell me about PCI",
-    "answer": "The PCI Council suggested that organizations migrate from TLS 1.0 to TLS 1.1 or higher before June 30, 2018.",
-    "domain": "security",
-    "source": "wikipedia:Transport Layer Security"
-  },
-  {
-    "question": "Tell me about IV",
-    "answer": "The implicit initialization vector (IV) was replaced with an explicit IV.",
-    "domain": "general",
-    "source": "wikipedia:Transport Layer Security"
-  },
-  {
-    "question": "Tell me about SHA",
-    "answer": "The MD5 and SHA-1 combination in the pseudorandom function (PRF) was replaced with SHA-256, with an option to use cipher suite specified PRFs.",
-    "domain": "networking",
     "source": "wikipedia:Transport Layer Security"
   },
   {
@@ -5220,18 +3678,6 @@
     "source": "wikipedia:Transport Layer Security"
   },
   {
-    "question": "What is TLS 1.0 and 1.1?",
-    "answer": "TLS 1.0 and 1.1 are disabled by default on the latest versions of all major browsers.",
-    "domain": "security",
-    "source": "wikipedia:Transport Layer Security"
-  },
-  {
-    "question": "Tell me about POODLE",
-    "answer": "Mitigations against POODLE attack: some browsers already prevent fallback to SSL 3.0; however, this mitigation needs to be supported by not only clients but also servers.",
-    "domain": "security",
-    "source": "wikipedia:Transport Layer Security"
-  },
-  {
     "question": "What is Google Chrome: complete (TLS_FALLBACK_SCSV?",
     "answer": "Google Chrome: complete (TLS_FALLBACK_SCSV is implemented since version 33, fallback to SSL 3.0 is disabled since version 39, SSL 3.0 itself is disabled by default since version 40.",
     "domain": "security",
@@ -5252,18 +3698,6 @@
   {
     "question": "What is RC4?",
     "answer": "RC4 is disabled since Chrome 48.",
-    "domain": "general",
-    "source": "wikipedia:Transport Layer Security"
-  },
-  {
-    "question": "Tell me about Internet Explorer",
-    "answer": "Internet Explorer for Windows 7/Server 2008 R2 and for Windows 8/Server 2012 have set the priority of RC4 to lowest and can also disable RC4 except as a fallback through registry settings.",
-    "domain": "general",
-    "source": "wikipedia:Transport Layer Security"
-  },
-  {
-    "question": "Tell me about IE",
-    "answer": "Edge [Legacy] and IE 11 disable RC4 completely in August 2016.",
     "domain": "general",
     "source": "wikipedia:Transport Layer Security"
   },
@@ -5394,12 +3828,6 @@
     "source": "wikipedia:Transport Layer Security"
   },
   {
-    "question": "What is All versions of TLS and SSL?",
-    "answer": "All versions of TLS and SSL are at risk from BREACH regardless of the encryption algorithm or cipher used.",
-    "domain": "security",
-    "source": "wikipedia:Transport Layer Security"
-  },
-  {
     "question": "Tell me about Lucky Thirteen",
     "answer": "A novel variant, called the Lucky Thirteen attack, was published in 2013.",
     "domain": "general",
@@ -5466,27 +3894,9 @@
     "source": "wikipedia:Transport Layer Security"
   },
   {
-    "question": "What is vulnerability?",
-    "answer": "The vulnerability is caused by a buffer over-read bug in the OpenSSL software, rather than a defect in the SSL or TLS protocol specification.",
-    "domain": "security",
-    "source": "wikipedia:Transport Layer Security"
-  },
-  {
-    "question": "Tell me about PKCS",
-    "answer": "In September 2014, a variant of Daniel Bleichenbacher's PKCS#1 v1.5 RSA Signature Forgery vulnerability was announced by Intel Security Advanced Threat Research.",
-    "domain": "networking",
-    "source": "wikipedia:Transport Layer Security"
-  },
-  {
     "question": "What is This attack, dubbed BERserk?",
     "answer": "This attack, dubbed BERserk, is a result of incomplete ASN.1 length decoding of public key signatures in some SSL implementations, and allows a man-in-the-middle attack by forging a public key signature.",
     "domain": "networking",
-    "source": "wikipedia:Transport Layer Security"
-  },
-  {
-    "question": "Tell me about HTML",
-    "answer": "In February 2017, an implementation error caused by a single mistyped character in code used to parse HTML created a buffer overflow error on Cloudflare servers.",
-    "domain": "internet",
     "source": "wikipedia:Transport Layer Security"
   },
   {
@@ -5547,12 +3957,6 @@
     "question": "What does interception also provide?",
     "answer": "The interception also allows the network operator, or persons who gain access to its interception system, to perform man-in-the-middle attacks against network users.",
     "domain": "general",
-    "source": "wikipedia:Transport Layer Security"
-  },
-  {
-    "question": "What is This protocol?",
-    "answer": "This protocol is used to exchange all the information required by both sides for the exchange of the actual application data by TLS.",
-    "domain": "security",
     "source": "wikipedia:Transport Layer Security"
   },
   {
@@ -5652,12 +4056,6 @@
     "source": "wikipedia:Transport Layer Security"
   },
   {
-    "question": "Tell me about IDs",
-    "answer": "===== Session IDs =====\nIn an ordinary full handshake, the server sends a session id as part of the ServerHello message.",
-    "domain": "security",
-    "source": "wikipedia:Transport Layer Security"
-  },
-  {
     "question": "What is In the RFCs, this type of handshake?",
     "answer": "In the RFCs, this type of handshake is called an abbreviated handshake.",
     "domain": "general",
@@ -5667,12 +4065,6 @@
     "question": "What is Included in the message?",
     "answer": "Included in the message is the session id from the previous TLS connection.",
     "domain": "security",
-    "source": "wikipedia:Transport Layer Security"
-  },
-  {
-    "question": "What does client provide?",
-    "answer": "The client uses this to recognize that a resumed handshake is being performed.",
-    "domain": "general",
     "source": "wikipedia:Transport Layer Security"
   },
   {
@@ -5922,12 +4314,6 @@
     "source": "wikipedia:Phineas Fisher"
   },
   {
-    "question": "Tell me about Distributed Denial",
-    "answer": "The archive was named MilicoLeaks by Distributed Denial of Secrets.",
-    "domain": "general",
-    "source": "wikipedia:Phineas Fisher"
-  },
-  {
     "question": "Tell me about The Chilean",
     "answer": "The Chilean military confirmed the breach in an official document via Twitter.",
     "domain": "general",
@@ -5954,12 +4340,6 @@
   {
     "question": "What is \"Subcowmandante Marcos\"?",
     "answer": "\"Subcowmandante Marcos\" is a word play on the former Zapatista Army of National Liberation spokesperson Subcomandante Marcos.",
-    "domain": "networking",
-    "source": "wikipedia:Phineas Fisher"
-  },
-  {
-    "question": "Tell me about ASCII",
-    "answer": "The Cayman National Bank hack communique featured ASCII art of a cow with a pipe reminiscent of a famous image of Marcos and used the well-known Zapatista slogan \"Para que nos vieran, nos tapamos el rostro\" (\"In order to be seen, we covered our faces\").",
     "domain": "networking",
     "source": "wikipedia:Phineas Fisher"
   },

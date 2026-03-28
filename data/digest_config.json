@@ -1,0 +1,22 @@
+{
+  "dedup_threshold": 0.85,
+  "quality_min_score": 0.3,
+  "cross_ref_min_shared_terms": 3,
+  "derive_similarity_range": [
+    0.3,
+    0.7
+  ],
+  "max_derived_per_cycle": 50,
+  "last_digest": "2026-03-28T19:44:35.990790+00:00",
+  "digest_count": 1,
+  "stats": {
+    "last_cross_ref": "20260328_194411",
+    "cross_ref_terms": 18397,
+    "cross_ref_clusters": 51,
+    "last_dedup": "20260328_194420",
+    "last_dedup_removed": 118297,
+    "last_derive": "20260328_194426",
+    "last_derived_count": 50,
+    "last_elapsed": 2.51
+  }
+}

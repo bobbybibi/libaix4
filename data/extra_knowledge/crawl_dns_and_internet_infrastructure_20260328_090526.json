@@ -48,38 +48,8 @@
     "source": "wikipedia:DNS root zone"
   },
   {
-    "question": "What is DNS servers?",
-    "answer": "The DNS servers are potential points of failure for the entire Internet.",
-    "domain": "internet",
-    "source": "wikipedia:DNS root zone"
-  },
-  {
     "question": "What is For this reason, multiple root servers?",
     "answer": "For this reason, multiple root servers are distributed worldwide.",
-    "domain": "general",
-    "source": "wikipedia:DNS root zone"
-  },
-  {
-    "question": "What is While it?",
-    "answer": "While it is possible to fit more entries into a packet of this size when using label compression, thirteen was chosen as a reliable limit.",
-    "domain": "general",
-    "source": "wikipedia:DNS root zone"
-  },
-  {
-    "question": "Tell me about Internet Protocol",
-    "answer": "Since the introduction of IPv6, the successor Internet Protocol to IPv4, previous practices are being modified and extra space is filled with IPv6 name servers.",
-    "domain": "intranet",
-    "source": "wikipedia:DNS root zone"
-  },
-  {
-    "question": "What is root name servers?",
-    "answer": "The root name servers are hosted in multiple secure sites with high-bandwidth access to accommodate the traffic load.",
-    "domain": "networking",
-    "source": "wikipedia:DNS root zone"
-  },
-  {
-    "question": "Tell me about United States",
-    "answer": "At first, all of these installations were located in the United States; however, the distribution has shifted and this is no longer the case.",
     "domain": "general",
     "source": "wikipedia:DNS root zone"
   },
@@ -144,12 +114,6 @@
     "source": "wikipedia:DNS root zone"
   },
   {
-    "question": "Tell me about RFC",
-    "answer": "RFC 2870 – Root Name Server Operational Requirements\nRFC 2826 – IAB Technical Comment on the Unique DNS Root.",
-    "domain": "internet",
-    "source": "wikipedia:DNS root zone"
-  },
-  {
     "question": "Tell me about Retrieved March",
     "answer": "Retrieved March 15, 2014.{{cite web}}:  CS1 maint: others (link).",
     "domain": "general",
@@ -162,867 +126,9 @@
     "source": "wikipedia:DNS root zone"
   },
   {
-    "question": "What is Domain Name System?",
-    "answer": "The Domain Name System (DNS) is a hierarchical and distributed name service that provides a naming system for computers, services, and other resources on the Internet or other Internet Protocol (IP) networks. It associates various information with domain names (identification strings) assigned to each of the associated entities.",
-    "domain": "networking",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is Domain Name System (DNS)?",
-    "answer": "The Domain Name System (DNS) is a hierarchical and distributed name service that provides a naming system for computers, services, and other resources on the Internet or other Internet Protocol (IP) networks.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about IP",
-    "answer": "Most prominently, it translates readily memorized domain names to the numerical IP addresses needed for locating and identifying computer services and devices with the underlying network protocols.",
-    "domain": "networking",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about The Domain Name System",
-    "answer": "The Domain Name System has been an essential component of the functionality of the Internet since 1985.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What does This mechanism provide?",
-    "answer": "This mechanism provides distributed and fault-tolerant service and was designed to avoid a single large central database.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What does Domain Name System maintains the domain name hierarchy and provide?",
-    "answer": "The Domain Name System maintains the domain name hierarchy and provides translation services between it and the address spaces.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about Domain Name System",
-    "answer": "Internet name servers and a communication protocol implement the Domain Name System.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is DNS name server?",
-    "answer": "A DNS name server is a server that stores the DNS records for a domain; a DNS name server responds with answers to queries against its database.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is most common types of records stored in the DNS database?",
-    "answer": "The most common types of records stored in the DNS database are for start of authority (SOA), IP addresses (A and AAAA), SMTP mail exchangers (MX), name servers (NS), pointers for reverse DNS lookups (PTR), and domain name aliases (CNAME).",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is DNS database?",
-    "answer": "The DNS database is conventionally stored in a structured text file, the zone file, but other database systems are common.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about UDP",
-    "answer": "The Domain Name System originally used the User Datagram Protocol (UDP) as transport over IP.",
-    "domain": "networking",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about TCP",
-    "answer": "Reliability, security, and privacy concerns spawned the use of the Transmission Control Protocol (TCP) as well as numerous other protocol developments.",
-    "domain": "networking",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about URLs",
-    "answer": "Users take advantage of this when they use meaningful Uniform Resource Locators (URLs) and e-mail addresses without having to know how the computer actually locates the services.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is important and ubiquitous function of the DNS?",
-    "answer": "An important and ubiquitous function of the DNS is its central role in distributed Internet services such as cloud services and content delivery networks.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about URL",
-    "answer": "When a user accesses a distributed Internet service using a URL, the domain name of the URL is translated to the IP address of a server that is proximal to the user.",
-    "domain": "networking",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is key functionality of the DNS exploited here?",
-    "answer": "The key functionality of the DNS exploited here is that different users can simultaneously receive different translations for the same domain name, a key point of divergence from a traditional phone-book view of the DNS.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is This process of using the DNS to assign proximal servers to users?",
-    "answer": "This process of using the DNS to assign proximal servers to users is key to providing faster and more reliable responses on the Internet and is widely used by most major Internet services.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is Each subdomain?",
-    "answer": "Each subdomain is a zone of administrative autonomy delegated to a manager.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is For zones operated by a registry, administrative information?",
-    "answer": "For zones operated by a registry, administrative information is often complemented by the registry's RDAP and WHOIS services.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about ARPANET",
-    "answer": "== History ==\nUsing a simpler, more memorable name in place of a host's numerical address dates back to the ARPANET era.",
-    "domain": "networking",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about SRI",
-    "answer": "The Stanford Research Institute (now SRI International) maintained a text file named HOSTS.TXT that mapped host names to the numerical addresses of computers on the ARPANET.",
-    "domain": "networking",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about ISI",
-    "answer": "Maintenance of numerical addresses, called the Assigned Numbers List, was handled by Jon Postel at the University of Southern California's Information Sciences Institute (ISI), whose team worked closely with SRI.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about WHOIS",
-    "answer": "Later, Feinler set up a WHOIS directory on a server in the NIC for retrieval of information about resources, contacts, and entities.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about Host Naming Registry",
-    "answer": "She and her team managed the Host Naming Registry from 1972 to 1989.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about Paul Mockapetris",
-    "answer": "Postel directed the task of forging a compromise between five competing proposals of solutions to Paul Mockapetris.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about UC",
-    "answer": "In 1984, four UC Berkeley students, Douglas Terry, Mark Painter, David Riggle, and Songnian Zhou, wrote the first Unix name server implementation for the Berkeley Internet Name Domain, commonly referred to as BIND.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about DEC",
-    "answer": "In 1985, Kevin Dunlap of DEC substantially revised the DNS implementation.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about BIND",
-    "answer": "Mike Karels, Phil Almquist, and Paul Vixie then took over BIND maintenance.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about RR",
-    "answer": "Each node or leaf in the tree has a label and zero or more resource records (RR), which hold information associated with the domain name.",
-    "domain": "intranet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is Authority over the new zone?",
-    "answer": "Authority over the new zone is said to be delegated to a designated name server.",
-    "domain": "networking",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is domain name consists of one or more parts, technically called labels, that?",
-    "answer": "A domain name consists of one or more parts, technically called labels, that are conventionally concatenated, and delimited by dots, such as example.com.",
-    "domain": "networking",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is For example, the label example specifies a subdomain of the com domain, and www?",
-    "answer": "For example, the label example specifies a subdomain of the com domain, and www is a subdomain of example.com.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is label may contain zero to 63 characters, because the length?",
-    "answer": "A label may contain zero to 63 characters, because the length is only allowed to take 6 bits.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is null label of length zero?",
-    "answer": "The null label of length zero is reserved for the root zone.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is 255 length?",
-    "answer": "255 length is only achieved with at least 6 labels (counting the last null label).",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is characters allowed in labels?",
-    "answer": "The characters allowed in labels are a subset of the ASCII character set, consisting of characters a through z, A through Z, digits 0 through 9, and hyphen.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is This rule?",
-    "answer": "This rule is known as the LDH rule (letters, digits, hyphen).",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is Domain names?",
-    "answer": "Domain names are interpreted in a case-independent manner.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about ASCII",
-    "answer": "The limited set of ASCII characters permitted in the DNS prevented the representation of names and words of many languages in their native alphabets or scripts.",
-    "domain": "networking",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about TLDs",
-    "answer": "In addition, many registries of the existing top-level domain names (TLDs) have adopted the IDNA system, guided by RFC 5890, RFC 5891, RFC 5892, RFC 5893.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is top of the hierarchy?",
-    "answer": "The top of the hierarchy is served by the root name servers, the servers to query when looking up (resolving) a TLD.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is primary server?",
-    "answer": "A primary server is a server that stores the original copies of all zone records.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What does secondary server provide?",
-    "answer": "A secondary server uses a special automatic updating mechanism in the DNS protocol in communication with its primary to maintain an identical copy of the primary records.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is This set of servers?",
-    "answer": "This set of servers is stored in the parent domain zone with name server (NS) records.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about AA",
-    "answer": "An authoritative server indicates its status of supplying definitive answers, deemed authoritative, by setting a protocol flag, called the \"Authoritative Answer\" (AA) bit in its responses.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is This flag?",
-    "answer": "This flag is usually reproduced prominently in the output of DNS administration query tools, such as dig, to indicate that the responding name server is an authority for the domain name in question.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is When a name server?",
-    "answer": "When a name server is designated as the authoritative server for a domain name for which it does not have authoritative data, it presents a type of error called a \"lame delegation\" or \"lame response\".",
-    "domain": "networking",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is For proper operation of its domain name resolver, a network host?",
-    "answer": "For proper operation of its domain name resolver, a network host is configured with an initial cache (hints) of the known addresses of the root name servers.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is hints?",
-    "answer": "The hints are updated periodically by an administrator by retrieving a dataset from a reliable source.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is diagram illustrates this process for the host that?",
-    "answer": "The diagram illustrates this process for the host that is named by the fully qualified domain name \"www.wikipedia.org\".",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is In practice caching?",
-    "answer": "In practice caching is used in DNS servers to off-load the root servers, and as a result, root name servers actually are involved in only a relatively small fraction of all requests.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is combination of DNS caching and recursive functions in a name server?",
-    "answer": "The combination of DNS caching and recursive functions in a name server is not mandatory; the functions can be implemented independently in servers for special purposes.",
-    "domain": "networking",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about ISP",
-    "answer": "Internet service providers (ISP) typically provide recursive and caching name servers for their customers.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is resolver?",
-    "answer": "A resolver is responsible for initiating and sequencing the queries that ultimately lead to a full resolution (translation) of the resource sought, e.g., translation of a domain name into an IP address.",
-    "domain": "networking",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is DNS resolvers?",
-    "answer": "DNS resolvers are classified by a variety of query methods, such as recursive, non-recursive, and iterative.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What does In a non-recursive query, a DNS resolver queries a DNS server that provide?",
-    "answer": "In a non-recursive query, a DNS resolver queries a DNS server that provides a record either for which the server is authoritative, or it provides a partial result without querying other servers.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is recursive query?",
-    "answer": "A recursive query is one for which the DNS server answers the query completely by querying other name servers as needed.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is iterative query procedure?",
-    "answer": "The iterative query procedure is a process in which a DNS resolver queries a chain of one or more DNS servers.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is If the name given in the delegation?",
-    "answer": "If the name given in the delegation is a subdomain of the domain for which the delegation is being provided, there is a circular dependency.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What does delegating name server provide?",
-    "answer": "The delegating name server provides this glue in the form of records in the additional section of the DNS response, and provides the delegation in the authority section of the response.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is glue record?",
-    "answer": "A glue record is a combination of the name server and IP address.",
-    "domain": "networking",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is For example, if the authoritative name server for example.org?",
-    "answer": "For example, if the authoritative name server for example.org is ns1.example.org, a computer trying to resolve www.example.org first resolves ns1.example.org.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is As ns1?",
-    "answer": "As ns1 is contained in example.org, this requires resolving example.org first, which presents a circular dependency.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is glue records?",
-    "answer": "The glue records are address records that provide IP addresses for ns1.example.org.",
-    "domain": "networking",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What does resolver provide?",
-    "answer": "The resolver uses one or more of these IP addresses to query one of the domain's authoritative servers, which allows it to complete the DNS query.",
-    "domain": "networking",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is This TTL?",
-    "answer": "This TTL is determined by the administrator of the authoritative DNS server and can range from a few seconds to several days or even weeks.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What does Some resolvers may override TTL values, as the protocol provide?",
-    "answer": "Some resolvers may override TTL values, as the protocol supports caching for up to sixty-eight years or no caching at all.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is caching of the fact of non-existence of a record?",
-    "answer": "the caching of the fact of non-existence of a record, is determined by name servers authoritative for a zone which must include the Start of Authority (SOA) record when reporting no data of the requested type exists.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is value of the minimum field of the SOA record and the TTL of the SOA itself?",
-    "answer": "The value of the minimum field of the SOA record and the TTL of the SOA itself is used to establish the TTL for the negative answer.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is IP address?",
-    "answer": "The IP address is represented as a name in reverse-ordered octet representation for IPv4, and reverse-ordered nibble representation for IPv6.",
-    "domain": "networking",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is For example, assuming the IPv4 address 208.80.152.2?",
-    "answer": "For example, assuming the IPv4 address 208.80.152.2 is assigned to Wikimedia, it is represented as a DNS name in reverse order: 2.152.80.208.in-addr.arpa.",
-    "domain": "networking",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about ARIN",
-    "answer": "ARIN's servers delegate 152.80.208.in-addr.arpa to Wikimedia to which the resolver sends another query for 2.152.80.208.in-addr.arpa, which results in an authoritative response.",
-    "domain": "networking",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
     "question": "Tell me about ISPs",
     "answer": "==== Broken resolvers ====\nSome large ISPs have configured their DNS servers to violate rules, such as by disobeying TTLs, or by indicating that a domain name does not exist just because one of its name servers does not respond.",
     "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about IE",
-    "answer": "Internet Explorer represents a notable exception: versions up to IE 3.x cache DNS records for 24 hours by default.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is Hostnames and IP addresses?",
-    "answer": "Hostnames and IP addresses are not required to match in a one-to-one relationship.",
-    "domain": "networking",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is Multiple hostnames may correspond to a single IP address, which?",
-    "answer": "Multiple hostnames may correspond to a single IP address, which is useful in virtual hosting, in which many web sites are served from a single host.",
-    "domain": "networking",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is DNS?",
-    "answer": "The DNS is used for efficient storage and distribution of IP addresses of block-listed email hosts.",
-    "domain": "networking",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is common method?",
-    "answer": "A common method is to place the IP address of the subject host into the sub-domain of a higher level domain name, and to resolve that name to a record that indicates a positive or a negative indication.",
-    "domain": "networking",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is address 203.0.113.6?",
-    "answer": "The address 203.0.113.6 is not block-listed and points to 6.113.0.203.blocklist.example.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is This hostname?",
-    "answer": "This hostname is either not configured, or resolves to 127.0.0.2.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is Many such block lists, either subscription-based or free of cost?",
-    "answer": "Many such block lists, either subscription-based or free of cost, are available for use by email administrators and anti-spam software.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about RRs",
-    "answer": "The header section consists of the following fields: Identification, Flags, Number of questions, Number of answers, Number of authority resource records (RRs), and Number of additional RRs.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is Each field?",
-    "answer": "Each field is 16 bits long, and appears in the order given.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is identification field?",
-    "answer": "The identification field is used to match responses with queries.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about ID",
-    "answer": "Transaction ID: 16 bits\nTransaction ID\nFlags: 16 bits\nThe flag field consists of sub-fields as follows:\nQR: 1 bit\nIndicates if the message is a query (0) or a reply (1).",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about OPCODE",
-    "answer": "OPCODE: 4 bits\nThe type can be QUERY (standard query, 0), IQUERY (inverse query, 1), or STATUS (server status request, 2).",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about TC",
-    "answer": "TC: 1 bit\nTrunCation, indicates that this message was truncated due to excessive length.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about RD",
-    "answer": "RD: 1 bit\nRecursion Desired, indicates if the client means a recursive query.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about RA",
-    "answer": "RA: 1 bit\nRecursion Available, in a response, indicates if the replying DNS server supports recursion.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about AD",
-    "answer": "AD: 1 bit\nAuthentic Data, in a response, indicates if the replying DNS server verified the data.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about CD",
-    "answer": "CD: 1 bit\nChecking Disabled, in a query, indicates that non-verified data is acceptable in a response.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about RCODE",
-    "answer": "RCODE: 4 bits\nResponse code, can be NOERROR (0), FORMERR (1, Format error), SERVFAIL (2), NXDOMAIN (3, Nonexistent domain), etc.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is Each question record (there?",
-    "answer": "Each question record (there is usually just one in the section) contains the following fields:.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is domain name?",
-    "answer": "The domain name is broken into discrete labels which are concatenated; each label is prefixed by the length of that label.",
-    "domain": "networking",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is types of information elements?",
-    "answer": "The types of information elements are categorized and organized with a list of DNS record types, the resource records (RRs).",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is Resource records of the same type?",
-    "answer": "Resource records of the same type are described as a resource record set (RRset), having no special ordering.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is NAME?",
-    "answer": "NAME is the fully qualified domain name of the node in the tree.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is For example, the A record?",
-    "answer": "For example, the A record is used to translate from a domain name to an IPv4 address, the NS record lists which name servers can answer lookups on a DNS zone, and the MX record specifies the mail server used to handle mail for  a domain specified in an e-mail address.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is RDATA?",
-    "answer": "RDATA is data of type-specific relevance, such as the IP address for address records, or the priority and hostname for MX records.",
-    "domain": "networking",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about RDATA",
-    "answer": "Well known record types may use label compression in the RDATA field, but \"unknown\" record types must not (RFC 3597).",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is CLASS of a record?",
-    "answer": "The CLASS of a record is set to IN (for Internet) for common DNS records involving Internet hostnames, servers, or IP addresses.",
-    "domain": "networking",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is Each class?",
-    "answer": "Each class is an independent name space with potentially different delegations of DNS zones.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is AAAA record for a.x.example?",
-    "answer": "The AAAA record for a.x.example is needed to specify the mail exchanger IP address.",
-    "domain": "networking",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about MX",
-    "answer": "As this has the result of excluding this domain name and its subdomains from the wildcard matches, an additional MX record for the subdomain a.x.example, as well as a wildcarded MX record for all of its subdomains, must also be defined in the DNS zone.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about OPT",
-    "answer": "This was accomplished through the OPT pseudo-resource record that only exists in wire transmissions of the protocol, but not in any zone files.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is This facility?",
-    "answer": "This facility is useful to register network clients into the DNS when they boot or become otherwise available on the network.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is Use of DNS over UDP?",
-    "answer": "Use of DNS over UDP is limited by, among other things, its lack of transport-layer encryption, authentication, reliable delivery, and message length.",
-    "domain": "networking",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What does Via fragmentation of long replies, TCP provide?",
-    "answer": "Via fragmentation of long replies, TCP allows longer responses, reliable delivery, and re-use of long-lived connections between clients and servers.",
-    "domain": "networking",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is This method?",
-    "answer": "This method is not the same as DNS over HTTP/3.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about Oblivious Do",
-    "answer": "Apple and Cloudflare subsequently deployed the technology in the context of DoH, as Oblivious DoH (ODoH).",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about ODNS",
-    "answer": "ODoH combines ingress/egress separation (invented in ODNS) with DoH's HTTPS tunneling and TLS transport-layer encryption in a single protocol.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about DNSCrypt",
-    "answer": "The DNSCrypt protocol, which was developed in 2011 outside the IETF standards framework, introduced DNS encryption on the downstream side of recursive resolvers, wherein clients encrypt query payloads using servers' public keys, which are published in the DNS (rather than relying upon third-party certificate authorities) and which may in turn be protected by DNSSEC signatures.",
-    "domain": "security",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What does DNSCrypt provide?",
-    "answer": "DNSCrypt uses either TCP port 443, the same port as HTTPS encrypted web traffic, or UDP port 443.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is Privacy of user/query pairs?",
-    "answer": "Privacy of user/query pairs is created, since the ingress node does not know the content of the query, while the egress node does not know the identity of the client.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is There?",
-    "answer": "There are several free and open source software implementations that additionally integrate ODoH.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is One such issue?",
-    "answer": "One such issue is DNS cache poisoning, in which data is distributed to caching resolvers under the pretense of being an authoritative origin server, thereby polluting the data store with potentially false information and long expiration times (time-to-live).",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about TSIG",
-    "answer": "Other extensions, such as TSIG, add support for cryptographic authentication between trusted peers and are commonly used to authorize zone transfer or dynamic update operations.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is DNS can also \"leak\" from otherwise secure or private connections, if attention?",
-    "answer": "DNS can also \"leak\" from otherwise secure or private connections, if attention is not paid to their configuration, and at times DNS has been used to bypass firewalls by malicious persons, and exfiltrate data, since it is often seen as innocuous.",
-    "domain": "security",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is For example, paypal.com and paypa1.com?",
-    "answer": "For example, paypal.com and paypa1.com are different names, yet users may be unable to distinguish them in a graphical user interface depending on the user's chosen typeface.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is This problem, known as the IDN homograph attack?",
-    "answer": "This problem, known as the IDN homograph attack, is acute in systems that support internationalized domain names, as many character codes in ISO 10646 may appear identical on typical computer screens.",
-    "domain": "networking",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is This vulnerability?",
-    "answer": "This vulnerability is occasionally exploited in phishing.",
-    "domain": "security",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about DNSMessenger",
-    "answer": "=== DNSMessenger ===\nDNSMessenger is a type of cyber attack technique that uses the  DNS to communicate and control malware remotely without relying on conventional protocols that might raise red flags.",
-    "domain": "security",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is DNSMessenger attack?",
-    "answer": "The DNSMessenger attack is covert because DNS is primarily used for domain name resolution and is often not closely monitored by network security tools, making it an effective channel for attackers to exploit.",
-    "domain": "wifi",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is This form of malware communication?",
-    "answer": "This form of malware communication is stealthy, as DNS requests are usually allowed through firewalls, and because DNS traffic is often seen as benign, these communications can bypass many network security defenses.",
-    "domain": "security",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is Understanding and defending against such methods?",
-    "answer": "Understanding and defending against such methods are crucial for maintaining robust cybersecurity.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is User queries and nameserver responses?",
-    "answer": "User queries and nameserver responses are sent unencrypted, enabling network packet sniffing, DNS hijacking, DNS cache poisoning and man-in-the-middle attacks.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is This deficiency?",
-    "answer": "This deficiency is commonly used by cybercriminals and network operators for marketing purposes, user authentication on captive portals and censorship.",
-    "domain": "wifi_security",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is User privacy?",
-    "answer": "User privacy is further exposed by proposals for increasing the level of client IP information in DNS queries (RFC 7871) for the benefit of content delivery networks.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is main approaches that?",
-    "answer": "The main approaches that are in use to counter privacy issues with DNS include:.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about VPNs",
-    "answer": "VPNs, which move DNS resolution to the VPN operator and hide user traffic from the local ISP.",
-    "domain": "security",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is Public DNS servers?",
-    "answer": "Public DNS servers are also criticized for contributing to the centralization of the Internet by placing control over DNS resolution in the hands of the few large companies which can afford to run public resolvers.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is Google?",
-    "answer": "Google is the dominant provider of the platform in Android, the browser in Chrome, and the DNS resolver in the 8.8.8.8 service.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is In addition to ICANN, each top-level domain (TLD)?",
-    "answer": "In addition to ICANN, each top-level domain (TLD) is maintained and serviced technically by an administrative organization, operating a registry.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is registry?",
-    "answer": "A registry is responsible for operating the database of names within its authoritative zone, although the term is most often used for TLDs.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is registrant?",
-    "answer": "A registrant is a person or organization who asked for domain registration.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is Registrant information associated with domain names?",
-    "answer": "Registrant information associated with domain names is maintained in an online database accessible with the WHOIS service.",
-    "domain": "intranet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about COM",
-    "answer": "For top-level domains on COM and NET, a thin registry model is used.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about PDR",
-    "answer": "The domain registry (GoDaddy, BigRock and PDR, VeriSign, etc.) holds basic WHOIS data (i.e., registrar and name servers, etc.).",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is On the other hand, organizations, i.e., registrants using ORG?",
-    "answer": "On the other hand, organizations, i.e., registrants using ORG, are on the Public Interest Registry exclusively.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about NIC",
-    "answer": "Some domain name registries, often called network information centers (NIC), also function as registrars to end-users, in addition to providing access to the WHOIS datasets.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is registrants (users of a domain name)?",
-    "answer": "The registrants (users of a domain name) are customers of the registrar, in some cases through additional subcontracting of resellers.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about Broad Band",
-    "answer": "Broad Band: The Untold Story of the Women Who Made the Internet.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about RFCs",
-    "answer": "(See under Informational RFCs)\nRFC 7830 – \"The EDNS(0) Padding Option,\" Proposed Standard.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about PDF",
-    "answer": "\"Internet Governance and the Domain Name System: Issues for Congress\" (PDF).",
-    "domain": "general",
     "source": "wikipedia:Domain Name System"
   },
   {
@@ -1092,12 +198,6 @@
     "source": "wikipedia:DNS over HTTPS"
   },
   {
-    "question": "What is This?",
-    "answer": "This is an application of a security principle called decoupling or privacy partitioning.",
-    "domain": "general",
-    "source": "wikipedia:DNS over HTTPS"
-  },
-  {
     "question": "What is In ODoH and ODNS, all DNS requests and responses?",
     "answer": "In ODoH and ODNS, all DNS requests and responses are routed via a proxy, hiding the client's address from the resolver.",
     "domain": "internet",
@@ -1152,12 +252,6 @@
     "source": "wikipedia:DNS over HTTPS"
   },
   {
-    "question": "Tell me about BSD",
-    "answer": "Unbound runs on most operating systems, including distributions of Linux, BSD, MacOS, and Windows.",
-    "domain": "general",
-    "source": "wikipedia:DNS over HTTPS"
-  },
-  {
     "question": "What is When enabled, and the operating system?",
     "answer": "When enabled, and the operating system is configured with a supported DNS server, Chrome will upgrade DNS queries to be encrypted.",
     "domain": "internet",
@@ -1188,21 +282,9 @@
     "source": "wikipedia:DNS over HTTPS"
   },
   {
-    "question": "Tell me about NSA",
-    "answer": "In January 2021, NSA warned enterprises against using external DoH resolvers because they prevent DNS query filtering, inspection, and audit.",
-    "domain": "internet",
-    "source": "wikipedia:DNS over HTTPS"
-  },
-  {
     "question": "Tell me about ISPA",
     "answer": "The Internet Service Providers Association (ISPA)—a trade association representing British ISPs—and the also British body Internet Watch Foundation have criticized Mozilla, developer of the Firefox web browser, for supporting DoH, as they believe that it will undermine web blocking programs in the country, including ISP default filtering of adult content, and mandatory court-ordered filtering of copyright violations.",
     "domain": "intranet",
-    "source": "wikipedia:DNS over HTTPS"
-  },
-  {
-    "question": "Tell me about UK",
-    "answer": "Mozilla subsequently stated that DoH will not be used by default in the British market until further discussion with relevant stakeholders, but stated that it \"would offer real security benefits to UK citizens\".",
-    "domain": "general",
     "source": "wikipedia:DNS over HTTPS"
   },
   {
@@ -1218,12 +300,6 @@
     "source": "wikipedia:List of Internet top-level domains"
   },
   {
-    "question": "What is This list of Internet top-level domains  (TLD) contains top-level domains, which?",
-    "answer": "This list of Internet top-level domains  (TLD) contains top-level domains, which are those domains in the DNS root zone of the Domain Name System of the Internet.",
-    "domain": "internet",
-    "source": "wikipedia:List of Internet top-level domains"
-  },
-  {
     "question": "What is list of the top-level domains by the Internet Assigned Numbers Authority (IANA)?",
     "answer": "A list of the top-level domains by the Internet Assigned Numbers Authority (IANA) is maintained at the Root Zone Database.",
     "domain": "general",
@@ -1233,12 +309,6 @@
     "question": "What is This database also includes 156 that?",
     "answer": "This database also includes 156 that are not assigned (revoked or retired) and 11 test domains, all of which are not represented in IANA's TLD listing nor in the root.zone file (the file also includes one root domain).",
     "domain": "general",
-    "source": "wikipedia:List of Internet top-level domains"
-  },
-  {
-    "question": "Tell me about ARPA",
-    "answer": "infrastructure top-level domain (ARPA)\ngeneric top-level domains (gTLD)\ngeneric-restricted top-level domains (grTLD)\nsponsored top-level domains (sTLD)\ncountry code top-level domains (ccTLD)\ntest top-level domains (tTLD).",
-    "domain": "networking",
     "source": "wikipedia:List of Internet top-level domains"
   },
   {
@@ -1284,18 +354,6 @@
     "source": "wikipedia:DNS over TLS"
   },
   {
-    "question": "Tell me about IETF",
-    "answer": "Subsequent IETF efforts specify the use of DoT between recursive and authoritative servers (\"Authoritative DNS over TLS\" or \"ADoT\") and a related implementation between authoritative servers (Zone Transfer-over-TLS or \"xfr-over-TLS\").",
-    "domain": "internet",
-    "source": "wikipedia:DNS over TLS"
-  },
-  {
-    "question": "Tell me about OS",
-    "answer": "Apple's iOS 14 introduced OS-level support for DNS over TLS (and DNS over HTTPS).",
-    "domain": "internet",
-    "source": "wikipedia:DNS over TLS"
-  },
-  {
     "question": "What is systemd-resolved?",
     "answer": "systemd-resolved is a Linux-only implementation that can be configured to use DNS over TLS, by editing /etc/systemd/resolved.conf and enabling the setting DNSOverTLS.",
     "domain": "internet",
@@ -1323,12 +381,6 @@
     "question": "What is DNS hijacking, DNS poisoning, or DNS redirection?",
     "answer": "DNS hijacking, DNS poisoning, or DNS redirection is the practice of subverting the resolution of Domain Name System (DNS) queries.",
     "domain": "internet",
-    "source": "wikipedia:DNS hijacking"
-  },
-  {
-    "question": "What is This functionality?",
-    "answer": "This functionality is defined in various formal internet standards that define the protocol in considerable detail.",
-    "domain": "general",
     "source": "wikipedia:DNS hijacking"
   },
   {
@@ -1368,12 +420,6 @@
     "source": "wikipedia:DNS hijacking"
   },
   {
-    "question": "Tell me about VPN",
-    "answer": "If a client switches between a home network and a VPN, false entries may remain cached, thereby creating a service outage on the VPN connection.",
-    "domain": "networking",
-    "source": "wikipedia:DNS hijacking"
-  },
-  {
     "question": "Tell me about DNSBL",
     "answer": "DNSBL anti-spam solutions rely on DNS; false DNS results therefore interfere with their operation.",
     "domain": "internet",
@@ -1398,12 +444,6 @@
     "source": "wikipedia:DNS hijacking"
   },
   {
-    "question": "Tell me about HTTP",
-    "answer": "Applications other than web browsers cannot be opted out of the scheme using cookies as the opt-out targets only the HTTP protocol, when the scheme is actually implemented in the protocol-neutral DNS.",
-    "domain": "internet",
-    "source": "wikipedia:DNS hijacking"
-  },
-  {
     "question": "Tell me about AG",
     "answer": "In Germany, in 2019 it was revealed that the Deutsche Telekom AG not only manipulated their DNS servers, but also transmitted network traffic (such as non-secure cookies when users did not use HTTPS) to a third-party company because the web portal T-Online, at which users were redirected due to the DNS manipulation, was not (any more) owned by the Deutsche Telekom.",
     "domain": "internet",
@@ -1416,21 +456,9 @@
     "source": "wikipedia:DNS hijacking"
   },
   {
-    "question": "What is One limitation of this approach?",
-    "answer": "One limitation of this approach is that some providers block or rewrite outside DNS requests.",
-    "domain": "internet",
-    "source": "wikipedia:DNS hijacking"
-  },
-  {
     "question": "What is OpenDNS, owned by Cisco?",
     "answer": "OpenDNS, owned by Cisco, is a similar popular service which does not alter NXDOMAIN responses.",
     "domain": "internet",
-    "source": "wikipedia:DNS hijacking"
-  },
-  {
-    "question": "Tell me about TXT",
-    "answer": "For example, setting a TXT record of \"unused\" on their wildcard address (e.g.",
-    "domain": "general",
     "source": "wikipedia:DNS hijacking"
   },
   {
@@ -1478,12 +506,6 @@
   {
     "question": "What is Historically, it?",
     "answer": "Historically, it is defined in the zone file, an operating system text file that starts with the special DNS record type Start of Authority (SOA) and contains all records for the resources described within the zone.",
-    "domain": "internet",
-    "source": "wikipedia:DNS zone"
-  },
-  {
-    "question": "What is As each domain?",
-    "answer": "As each domain is further divided into sub-domains, each becoming a DNS zone with its own set of administrators and DNS servers, the tree grows with the largest number of leaf nodes at the bottom.",
     "domain": "internet",
     "source": "wikipedia:DNS zone"
   },
@@ -1544,12 +566,6 @@
   {
     "question": "Tell me about ENUM",
     "answer": "For example,  8.8.2.5.5.2.2.0.0.8.1.e164.arpa., which might represent an E.164 telephone number in the ENUM system, might be sub-delegated at suitable boundaries of the name.",
-    "domain": "networking",
-    "source": "wikipedia:DNS zone"
-  },
-  {
-    "question": "What is example of an IP addresses in the reverse DNS zone?",
-    "answer": "An example of an IP addresses in the reverse DNS zone is 166.188.77.208.in-addr.arpa, which represents the address 208.77.188.166 and resolves to the domain name www.example.com.",
     "domain": "networking",
     "source": "wikipedia:DNS zone"
   },
@@ -1638,12 +654,6 @@
     "source": "wikipedia:Top-level domain"
   },
   {
-    "question": "Tell me about Saudi Arabia",
-    "answer": "The first set was a group of Arabic names for the countries of Egypt, Saudi Arabia, and the United Arab Emirates.",
-    "domain": "general",
-    "source": "wikipedia:Top-level domain"
-  },
-  {
     "question": "What is For historical reasons, .arpa?",
     "answer": "For historical reasons, .arpa is sometimes considered to be a generic top-level domain.",
     "domain": "networking",
@@ -1653,18 +663,6 @@
     "question": "Tell me about Internet Engineering Task Force",
     "answer": "== Reserved domains ==\nA set of domain names is reserved by the Internet Engineering Task Force as special-use domain names.",
     "domain": "general",
-    "source": "wikipedia:Top-level domain"
-  },
-  {
-    "question": "Tell me about NATO",
-    "answer": "In the late 1980s, InterNIC created the .nato domain for use by NATO.",
-    "domain": "networking",
-    "source": "wikipedia:Top-level domain"
-  },
-  {
-    "question": "Tell me about TLD",
-    "answer": "Soon after this addition, however, InterNIC also created the .int TLD for the use by international organizations in general, and persuaded NATO to use the second level domain nato.int instead.",
-    "domain": "networking",
     "source": "wikipedia:Top-level domain"
   },
   {
@@ -1734,27 +732,9 @@
     "source": "wikipedia:Top-level domain"
   },
   {
-    "question": "Tell me about ISBN",
-    "answer": "== Further reading ==\nAddressing the World: National Identity and Internet Country Code Domains, edited by Erica Schlesinger Wass (Rowman & Littlefield, 2003, ISBN 0-7425-2810-3) examines connections between cultures and their ccTLDs.",
-    "domain": "networking",
-    "source": "wikipedia:Top-level domain"
-  },
-  {
-    "question": "Tell me about MIT",
-    "answer": "Ruling the Root by Milton Mueller (MIT Press, 2001, ISBN 0-262-13412-8) discusses TLDs and domain name policy more generally.",
-    "domain": "general",
-    "source": "wikipedia:Top-level domain"
-  },
-  {
     "question": "What is Google Public DNS?",
     "answer": "Google Public DNS is a Domain Name System (DNS) service offered to Internet users worldwide by Google. It functions as a recursive name server. Google Public DNS was announced on December 3, 2009, in an effort described as \"making the web faster and more secure.\" As of 2018, it is the largest public DNS service in the world, handling over a trillion queries per day. Google Public DNS is distinct from Google Cloud DNS, a DNS hosting service.",
     "domain": "internet",
-    "source": "wikipedia:Google Public DNS"
-  },
-  {
-    "question": "What is These addresses?",
-    "answer": "These addresses are mapped to the nearest operational server by anycast routing.",
-    "domain": "networking",
     "source": "wikipedia:Google Public DNS"
   },
   {
@@ -1794,12 +774,6 @@
     "source": "wikipedia:Internet Assigned Numbers Authority"
   },
   {
-    "question": "What is Internet Assigned Numbers Authority (IANA)?",
-    "answer": "The Internet Assigned Numbers Authority (IANA) is a standards organization that oversees global IP address allocation, autonomous system number allocation, root zone management in the Domain Name System (DNS), media types, and other Internet Protocol–related symbols and Internet numbers.",
-    "domain": "networking",
-    "source": "wikipedia:Internet Assigned Numbers Authority"
-  },
-  {
     "question": "What is Currently it?",
     "answer": "Currently it is a function of ICANN, a nonprofit private American corporation established in 1998 primarily for this purpose under a United States Department of Commerce contract.",
     "domain": "general",
@@ -1820,12 +794,6 @@
   {
     "question": "What is IANA?",
     "answer": "IANA is responsible for assignment of Internet numbers, which are numerical identifiers assigned to an Internet resource or used in the networking protocols of the Internet Protocol Suite.",
-    "domain": "general",
-    "source": "wikipedia:Internet Assigned Numbers Authority"
-  },
-  {
-    "question": "Tell me about RIR",
-    "answer": "Each RIR allocates addresses for a different area of the world.",
     "domain": "general",
     "source": "wikipedia:Internet Assigned Numbers Authority"
   },
@@ -1860,18 +828,6 @@
     "source": "wikipedia:Internet Assigned Numbers Authority"
   },
   {
-    "question": "Tell me about FTP",
-    "answer": "decision caused the shutdown of the FTP server which had previously been the primary source of the database.",
-    "domain": "internet",
-    "source": "wikipedia:Internet Assigned Numbers Authority"
-  },
-  {
-    "question": "Tell me about UCLA",
-    "answer": "Reynolds performed at the University of California at Los Angeles (UCLA) and at the University of Southern California's Information Sciences Institute.",
-    "domain": "general",
-    "source": "wikipedia:Internet Assigned Numbers Authority"
-  },
-  {
     "question": "Tell me about HOST",
     "answer": "Network administrators were asked to submit a note or place a phone call, \"describing the function and socket numbers of network service programs at each HOST\".",
     "domain": "general",
@@ -1880,12 +836,6 @@
   {
     "question": "What is first reference to the name \"IANA\" in the RFC series?",
     "answer": "The first reference to the name \"IANA\" in the RFC series is in RFC 1083, published in December 1988 by Postel at USC-ISI, referring to Joyce K.",
-    "domain": "general",
-    "source": "wikipedia:Internet Assigned Numbers Authority"
-  },
-  {
-    "question": "Tell me about US",
-    "answer": "In January 1998, Postel was threatened by US Presidential science advisor Ira Magaziner with the statement \"You'll never work on the Internet again\" after Postel collaborated with root server operators to test using a root server other than Network Solutions' \"A\" root to act as the authority over the root zone.",
     "domain": "general",
     "source": "wikipedia:Internet Assigned Numbers Authority"
   },
@@ -1902,20 +852,8 @@
     "source": "wikipedia:Internet Assigned Numbers Authority"
   },
   {
-    "question": "Tell me about On October",
-    "answer": "On October 7, 2013 the Montevideo Statement on the Future of Internet Cooperation was released by the leaders of a number of organizations involved in coordinating the Internet's global technical infrastructure, loosely known as the \"I*\" (or \"I-star\") group.",
-    "domain": "networking",
-    "source": "wikipedia:Internet Assigned Numbers Authority"
-  },
-  {
     "question": "What is This desire to move away from a United States centric approach?",
     "answer": "This desire to move away from a United States centric approach is seen as a reaction to the ongoing NSA surveillance scandal.",
-    "domain": "general",
-    "source": "wikipedia:Internet Assigned Numbers Authority"
-  },
-  {
-    "question": "Tell me about CEO",
-    "answer": "In October 2013, Fadi Chehadé, current President and CEO of ICANN, met with Brazilian President Dilma Rousseff in Brasilia.",
     "domain": "general",
     "source": "wikipedia:Internet Assigned Numbers Authority"
   },
@@ -1965,12 +903,6 @@
     "question": "What is Name server?",
     "answer": "A name server is a computer application that implements a network service for providing responses to queries against a directory service. It translates an often humanly meaningful, text-based identifier to a system-internal, often numeric identification or addressing component. This service is performed by the server in response to a service protocol request.\nAn example of a name server is the server component of the Domain Name System (DNS), the core namespaces of the Internet.",
     "domain": "internet",
-    "source": "wikipedia:Name server"
-  },
-  {
-    "question": "What is This service?",
-    "answer": "This service is performed by the server in response to a service protocol request.",
-    "domain": "general",
     "source": "wikipedia:Name server"
   },
   {
@@ -2112,28 +1044,10 @@
     "source": "wikipedia:Unbound (DNS server)"
   },
   {
-    "question": "Tell me about NLnet",
-    "answer": "In 2006, the prototype was re-written for high-performance in the C programming language by NLnet Labs.",
-    "domain": "general",
-    "source": "wikipedia:Unbound (DNS server)"
-  },
-  {
-    "question": "Tell me about POSIX",
-    "answer": "Originally written for POSIX-compatible Unix-like operating system, it runs on FreeBSD, OpenBSD, NetBSD, macOS, and Linux, as well as Microsoft Windows.",
-    "domain": "networking",
-    "source": "wikipedia:Unbound (DNS server)"
-  },
-  {
     "question": "Tell me about NSD",
     "answer": "== See also ==\nNSD, an authoritative name server, also from NLnet Labs\nComparison of DNS server software.",
     "domain": "internet",
     "source": "wikipedia:Unbound (DNS server)"
-  },
-  {
-    "question": "What is Comparison of DNS server software?",
-    "answer": "This article presents a comparison of the features, platform support, and packaging of many independent implementations of Domain Name System (DNS) name server software.",
-    "domain": "internet",
-    "source": "wikipedia:Comparison of DNS server software"
   },
   {
     "question": "What is Excluded from consideration?",
@@ -2145,24 +1059,6 @@
     "question": "What is These servers?",
     "answer": "These servers are listed as being at the top of the authority chain for their respective domains, and are capable of providing a definitive answer.",
     "domain": "general",
-    "source": "wikipedia:Comparison of DNS server software"
-  },
-  {
-    "question": "Tell me about Most Internet",
-    "answer": "Most Internet users access a recursive server provided by their internet service provider to locate internet hosts such as www.example.com.",
-    "domain": "general",
-    "source": "wikipedia:Comparison of DNS server software"
-  },
-  {
-    "question": "Tell me about BIG",
-    "answer": "=== BIG-IP DNS ===\nF5 Networks BIG-IP product line offers DNS as an authoritative or recursive server and adds additional security measures.",
-    "domain": "internet",
-    "source": "wikipedia:Comparison of DNS server software"
-  },
-  {
-    "question": "What is Key advantage?",
-    "answer": "Key advantage is to use the same application delivery controller to support DNS and application acceleration.",
-    "domain": "internet",
     "source": "wikipedia:Comparison of DNS server software"
   },
   {
@@ -2184,12 +1080,6 @@
     "source": "wikipedia:Comparison of DNS server software"
   },
   {
-    "question": "Tell me about ISC",
-    "answer": "Its first release was in April 2010, but ISC involvement concluded with the release of BIND 10 version 1.2 in April 2014.",
-    "domain": "general",
-    "source": "wikipedia:Comparison of DNS server software"
-  },
-  {
     "question": "Tell me about CNR",
     "answer": "=== Cisco Network Registrar ===\nCNR includes a commercial DNS server from Cisco Systems usually used in conjunction with the CNR DHCP (Dynamic Host Configuration Protocol) server.",
     "domain": "networking",
@@ -2199,18 +1089,6 @@
     "question": "What is It can serve the names of local machines which?",
     "answer": "It can serve the names of local machines which are not in the global DNS.",
     "domain": "internet",
-    "source": "wikipedia:Comparison of DNS server software"
-  },
-  {
-    "question": "Tell me about In March",
-    "answer": "In March 2009, Bernstein paid $1000 to the first person finding a security hole in djbdns.",
-    "domain": "internet",
-    "source": "wikipedia:Comparison of DNS server software"
-  },
-  {
-    "question": "What is source code?",
-    "answer": "The source code is not centrally maintained and was released into the public domain in 2007.",
-    "domain": "general",
     "source": "wikipedia:Comparison of DNS server software"
   },
   {
@@ -2246,18 +1124,6 @@
   {
     "question": "What does Modular architecture provide?",
     "answer": "Modular architecture provides a state-machine like API for extensions, such as C and Lua modules.",
-    "domain": "internet",
-    "source": "wikipedia:Comparison of DNS server software"
-  },
-  {
-    "question": "What is software?",
-    "answer": "The software is integrated with Active Directory which makes it the default DNS software for many enterprise networks that are based on Active Directory.",
-    "domain": "internet",
-    "source": "wikipedia:Comparison of DNS server software"
-  },
-  {
-    "question": "What does It also provide?",
-    "answer": "It also allows creating zones by the standard DNS zone file.",
     "domain": "internet",
     "source": "wikipedia:Comparison of DNS server software"
   },
@@ -2316,12 +1182,6 @@
     "source": "wikipedia:Comparison of DNS server software"
   },
   {
-    "question": "What is version?",
-    "answer": "A version is also available in OpenBSD version 5.6 and beyond.",
-    "domain": "general",
-    "source": "wikipedia:Comparison of DNS server software"
-  },
-  {
     "question": "Tell me about YADIFA",
     "answer": "=== YADIFA ===\nYADIFA  is a BSD-licensed, memory-efficient DNS server written in C.",
     "domain": "internet",
@@ -2342,12 +1202,6 @@
   {
     "question": "What is Another important qualifier?",
     "answer": "Another important qualifier is the server architecture.",
-    "domain": "general",
-    "source": "wikipedia:Comparison of DNS server software"
-  },
-  {
-    "question": "What is Others?",
-    "answer": "Others are divided into smaller programs, each implementing a subsystem of the server.",
     "domain": "general",
     "source": "wikipedia:Comparison of DNS server software"
   },
@@ -2412,12 +1266,6 @@
     "source": "wikipedia:Comparison of DNS server software"
   },
   {
-    "question": "Tell me about DHCP",
-    "answer": "== See also ==\nComparison of DHCP server software\nDNS management software\nPublic recursive name server.",
-    "domain": "networking",
-    "source": "wikipedia:Comparison of DNS server software"
-  },
-  {
     "question": "What is DNS spoofing?",
     "answer": "DNS spoofing, also referred to as DNS cache poisoning, is a form of computer security hacking in which corrupt Domain Name System data is introduced into the DNS resolver's cache, causing the name server to return an incorrect result record, e.g. an IP address. This results in traffic being diverted to any computer that the attacker chooses.",
     "domain": "networking",
@@ -2460,18 +1308,6 @@
     "source": "wikipedia:DNS spoofing"
   },
   {
-    "question": "Tell me about NAT",
-    "answer": "However, when routers, firewalls, proxies, and other gateway devices perform network address translation (NAT), or more specifically, port address translation (PAT), they may rewrite source ports in order to track connection state.",
-    "domain": "networking",
-    "source": "wikipedia:DNS spoofing"
-  },
-  {
-    "question": "Tell me about PAT",
-    "answer": "When modifying source ports, PAT devices may remove source port randomness implemented by nameservers and stub resolvers.",
-    "domain": "general",
-    "source": "wikipedia:DNS spoofing"
-  },
-  {
     "question": "What does Secure DNS (DNSSEC) provide?",
     "answer": "Secure DNS (DNSSEC) uses cryptographic digital signatures signed with a trusted public key certificate to determine the authenticity of data.",
     "domain": "networking",
@@ -2487,12 +1323,6 @@
     "question": "What is common example of this?",
     "answer": "A common example of this is the use of Transport Layer Security and digital signatures.",
     "domain": "networking",
-    "source": "wikipedia:DNS spoofing"
-  },
-  {
-    "question": "Tell me about HTTPS",
-    "answer": "For example, by using HTTPS (the secure version of HTTP), users may check whether the server's digital certificate is valid and belongs to a website's expected owner.",
-    "domain": "internet",
     "source": "wikipedia:DNS spoofing"
   },
   {
@@ -2598,18 +1428,6 @@
     "source": "wikipedia:DNS rebinding"
   },
   {
-    "question": "What is These?",
-    "answer": "These are permitted by the same-origin policy.",
-    "domain": "general",
-    "source": "wikipedia:DNS rebinding"
-  },
-  {
-    "question": "Tell me about SPF",
-    "answer": "Normally, mail servers perform various queries of this kind, either according to local configuration or following external directives, such as the SPF's EXISTS mechanism.",
-    "domain": "general",
-    "source": "wikipedia:DNS rebinding"
-  },
-  {
     "question": "What does This technique may block some legitimate provide?",
     "answer": "This technique may block some legitimate uses of Dynamic DNS, and may not work against all attacks.",
     "domain": "internet",
@@ -2624,12 +1442,6 @@
   {
     "question": "What is Domain Name System Security Extensions?",
     "answer": "The Domain Name System Security Extensions (DNSSEC) is a suite of extension specifications by the Internet Engineering Task Force (IETF) for securing data exchanged in the Domain Name System (DNS) in Internet Protocol (IP) networks. The protocol provides cryptographic authentication of data, authenticated denial of existence, and data integrity, but not availability or confidentiality. As of 2025, DNSSEC deployment is spotty.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System Security Extensions"
-  },
-  {
-    "question": "What is Domain Name System Security Extensions (DNSSEC)?",
-    "answer": "The Domain Name System Security Extensions (DNSSEC) is a suite of extension specifications by the Internet Engineering Task Force (IETF) for securing data exchanged in the Domain Name System (DNS) in Internet Protocol (IP) networks.",
     "domain": "internet",
     "source": "wikipedia:Domain Name System Security Extensions"
   },
@@ -2760,12 +1572,6 @@
     "source": "wikipedia:Domain Name System Security Extensions"
   },
   {
-    "question": "Tell me about DO",
-    "answer": "The process starts when a security-aware resolver sets the \"DO\" (\"DNSSEC OK\") flag bit in a DNS query.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System Security Extensions"
-  },
-  {
     "question": "What is Since the DO bit?",
     "answer": "Since the DO bit is in the extended flag bits defined by Extension Mechanisms for DNS (EDNS), RFC 6891, all DNSSEC transactions must support EDNS.",
     "domain": "internet",
@@ -2880,12 +1686,6 @@
     "source": "wikipedia:Domain Name System Security Extensions"
   },
   {
-    "question": "Tell me about RSA",
-    "answer": "A good example of this would be migrating from Algorithm 8 (RSA/SHA-256) to Algorithm 13 (ECDSA/SHA-256).",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System Security Extensions"
-  },
-  {
     "question": "What is migration of the root domain from Algorithm 8 to Algorithm 13?",
     "answer": "The migration of the root domain from Algorithm 8 to Algorithm 13 is currently in planning as of early 2024.",
     "domain": "general",
@@ -2931,24 +1731,6 @@
     "question": "What is This means that a little data?",
     "answer": "This means that a little data is pushed to the parent, instead of massive amounts of data being exchanged between the parent and children.",
     "domain": "general",
-    "source": "wikipedia:Domain Name System Security Extensions"
-  },
-  {
-    "question": "What is new version?",
-    "answer": "The new version is published in RFC4033-4035.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System Security Extensions"
-  },
-  {
-    "question": "Tell me about GPUs",
-    "answer": "Over time, advancements in hashing using GPUs and dedicated hardware meant that NSEC3 responses could be cheaply brute forced using offline dictionary attacks.",
-    "domain": "wifi_security",
-    "source": "wikipedia:Domain Name System Security Extensions"
-  },
-  {
-    "question": "What is first?",
-    "answer": "The first is a variation on the \"white lies\" approach, called \"black lies\", which exploits common DNS client behavior to state the nonexistence more compactly.",
-    "domain": "internet",
     "source": "wikipedia:Domain Name System Security Extensions"
   },
   {
@@ -3012,18 +1794,6 @@
     "source": "wikipedia:Domain Name System Security Extensions"
   },
   {
-    "question": "Tell me about NIST",
-    "answer": "On June 3, 2009, the National Institute of Standards and Technology (NIST) announced plans to sign the root by the end of 2009, in conjunction with ICANN, VeriSign and the NTIA.",
-    "domain": "networking",
-    "source": "wikipedia:Domain Name System Security Extensions"
-  },
-  {
-    "question": "Tell me about RIPE",
-    "answer": "On October 6, 2009, at the 59th RIPE Conference meeting, ICANN and VeriSign announced the planned deployment timeline for deploying DNSSEC within the root zone.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System Security Extensions"
-  },
-  {
     "question": "Tell me about DURZ",
     "answer": "During the incremental roll-out period the root zone will serve a Deliberately Unvalidatable Root Zone (DURZ) that uses dummy keys, with the final DNSKEY record not being distributed until July 1, 2010.",
     "domain": "internet",
@@ -3044,12 +1814,6 @@
   {
     "question": "What is Root trust anchors?",
     "answer": "Root trust anchors are available from IANA.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System Security Extensions"
-  },
-  {
-    "question": "What does List of Internet top-level domains provide?",
-    "answer": "The List of Internet top-level domains provides details about which of the existing top-level domains have been signed and linked to the root.",
     "domain": "general",
     "source": "wikipedia:Domain Name System Security Extensions"
   },
@@ -3114,12 +1878,6 @@
     "source": "wikipedia:Domain Name System Security Extensions"
   },
   {
-    "question": "Tell me about APNIC",
-    "answer": "According to a study at APNIC, the proportion of clients who exclusively use DNS resolvers that perform DNSSEC validation rose to 8.3% in May 2013.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System Security Extensions"
-  },
-  {
     "question": "What does BIND, the most popular DNS management software provide?",
     "answer": "BIND, the most popular DNS management software, enables DNSSEC support by default since version 9.5.",
     "domain": "internet",
@@ -3141,12 +1899,6 @@
     "question": "What is In 2025, Dutch registry SIDN argued against the claim that DNSSEC?",
     "answer": "In 2025, Dutch registry SIDN argued against the claim that DNSSEC is complex when compared to other internet protocols.",
     "domain": "internet",
-    "source": "wikipedia:Domain Name System Security Extensions"
-  },
-  {
-    "question": "Tell me about Windows Server",
-    "answer": "Windows 7 and Windows Server 2008 R2 include a \"security-aware\" stub resolver that is able to differentiate between secure and non-secure responses by a recursive name server.",
-    "domain": "general",
     "source": "wikipedia:Domain Name System Security Extensions"
   },
   {
@@ -3186,12 +1938,6 @@
     "source": "wikipedia:Split-horizon DNS"
   },
   {
-    "question": "What is latter?",
-    "answer": "The latter is a common feature of many server software implementations of the DNS protocol (cf.",
-    "domain": "internet",
-    "source": "wikipedia:Split-horizon DNS"
-  },
-  {
     "question": "What is Comparison of DNS server software) and?",
     "answer": "Comparison of DNS server software) and is sometimes the implied meaning of the term split-horizon DNS, since all other forms of implementation can be achieved with any DNS server software.",
     "domain": "internet",
@@ -3204,39 +1950,15 @@
     "source": "wikipedia:Split-horizon DNS"
   },
   {
-    "question": "What does This provide?",
-    "answer": "This allows for critical local client machines to access a server directly through the local network, without the need to pass through a router.",
-    "domain": "networking",
-    "source": "wikipedia:Split-horizon DNS"
-  },
-  {
     "question": "What is DNS-based Authentication of Named Entities?",
     "answer": "DNS-based Authentication of Named Entities (DANE) is an Internet security protocol to allow X.509 digital certificates, commonly used for Transport Layer Security (TLS), to be bound to domain names using Domain Name System Security Extensions (DNSSEC).\nIt is proposed in RFC 6698 as a way to authenticate TLS client and server entities without a certificate authority (CA). It is updated with operational and deployment guidance in RFC 7671.",
     "domain": "internet",
     "source": "wikipedia:DNS-based Authentication of Named Entities"
   },
   {
-    "question": "What is DNS-based Authentication of Named Entities (DANE)?",
-    "answer": "DNS-based Authentication of Named Entities (DANE) is an Internet security protocol to allow X.509 digital certificates, commonly used for Transport Layer Security (TLS), to be bound to domain names using Domain Name System Security Extensions (DNSSEC).",
-    "domain": "security",
-    "source": "wikipedia:DNS-based Authentication of Named Entities"
-  },
-  {
     "question": "What is Application specific usage of DANE?",
     "answer": "Application specific usage of DANE is defined in RFC 7672 for SMTP and RFC 7673 for using DANE with Service (SRV) records.",
     "domain": "internet",
-    "source": "wikipedia:DNS-based Authentication of Named Entities"
-  },
-  {
-    "question": "Tell me about TLS",
-    "answer": "== Rationale ==\nTLS/SSL encryption is currently based on certificates issued by certificate authorities (CAs).",
-    "domain": "security",
-    "source": "wikipedia:DNS-based Authentication of Named Entities"
-  },
-  {
-    "question": "Tell me about CA",
-    "answer": "Within the last few years, a number of CA providers suffered serious security breaches, allowing the issuance of certificates for well-known domains to those who don't own those domains.",
-    "domain": "security",
     "source": "wikipedia:DNS-based Authentication of Named Entities"
   },
   {
@@ -3279,12 +2001,6 @@
     "question": "What is According to Adam Langley the code was written and, although it?",
     "answer": "According to Adam Langley the code was written and, although it is not in Chrome today, it remains available in add-on form.",
     "domain": "general",
-    "source": "wikipedia:DNS-based Authentication of Named Entities"
-  },
-  {
-    "question": "Tell me about APIs",
-    "answer": "It can no longer be implemented with the more recent, more restrictive Firefox-extension APIs.",
-    "domain": "internet",
     "source": "wikipedia:DNS-based Authentication of Named Entities"
   },
   {
@@ -3360,12 +2076,6 @@
     "source": "wikipedia:List of DNS record types"
   },
   {
-    "question": "What is Some?",
-    "answer": "Some are marked obsolete in the list, some are for very obscure services, some are for older versions of services, and some have special notes saying they are \"not right\".",
-    "domain": "general",
-    "source": "wikipedia:List of DNS record types"
-  },
-  {
     "question": "What is .de?",
     "answer": ".de is the country code top-level domain (ccTLD) for Germany. DENIC (the Network Information Centre responsible for .de domains) does not require specific second-level domains, and there are no official ccSLDs under .de ccTLD, as it is the case with the .uk domain range which until 2014 required .co.uk domain for example.",
     "domain": "general",
@@ -3374,12 +2084,6 @@
   {
     "question": "Tell me about DENIC",
     "answer": "DENIC (the Network Information Centre responsible for .de domains) does not require specific second-level domains, and there are no official ccSLDs under .de ccTLD, as it is the case with the .uk domain range which until 2014 required .co.uk domain for example.",
-    "domain": "general",
-    "source": "wikipedia:.de"
-  },
-  {
-    "question": "Tell me about ISO",
-    "answer": "Prior to 1990, East Germany had a separate ISO 3166-1 code (dd), and had never delegated a ccTLD, .dd.",
     "domain": "general",
     "source": "wikipedia:.de"
   },
@@ -3408,12 +2112,6 @@
     "source": "wikipedia:.de"
   },
   {
-    "question": "Tell me about European Union",
-    "answer": "== See also ==\nInternet in Germany\n.dd\n.ag\n.eu –ccTLD for the European Union.",
-    "domain": "general",
-    "source": "wikipedia:.de"
-  },
-  {
     "question": "What is Web of trust?",
     "answer": "In cryptography, a web of trust is a concept used in PGP, GnuPG, and other OpenPGP-compatible systems to establish the authenticity of the binding between a public key and its owner. Its decentralized trust model is an alternative to the centralized trust model of a public key infrastructure (PKI), which relies exclusively on a certificate authority (or a hierarchy of such).",
     "domain": "security",
@@ -3438,12 +2136,6 @@
     "source": "wikipedia:Web of trust"
   },
   {
-    "question": "Tell me about PGP",
-    "answer": "The web of trust concept was first put forth by PGP creator Phil Zimmermann in 1992 in the manual for PGP version 2.0:.",
-    "domain": "general",
-    "source": "wikipedia:Web of trust"
-  },
-  {
     "question": "Tell me about All Open",
     "answer": "== Operation of a web of trust ==\nAll OpenPGP-compliant implementations include a certificate vetting scheme to assist with this; its operation has been termed a web of trust.",
     "domain": "security",
@@ -3464,24 +2156,6 @@
   {
     "question": "What is Essentially all PKI designs?",
     "answer": "Essentially all PKI designs are less flexible and require users to follow the trust endorsement of the PKI generated, certificate authority (CA)-signed, certificates.",
-    "domain": "security",
-    "source": "wikipedia:Web of trust"
-  },
-  {
-    "question": "Tell me about PKI",
-    "answer": "== Contrast with typical PKI ==\nUnlike WOT, a typical X.509 PKI enables each certificate to be signed by a single party: a certificate authority (CA).",
-    "domain": "security",
-    "source": "wikipedia:Web of trust"
-  },
-  {
-    "question": "What is They?",
-    "answer": "They are for instance, distributed with such applications as browsers and email clients.",
-    "domain": "general",
-    "source": "wikipedia:Web of trust"
-  },
-  {
-    "question": "Tell me about SSL",
-    "answer": "In this way SSL/TLS-protected Web pages, email messages, etc.",
     "domain": "security",
     "source": "wikipedia:Web of trust"
   },
@@ -3606,12 +2280,6 @@
     "source": "wikipedia:Web of trust"
   },
   {
-    "question": "Tell me about Bruce Schneier",
-    "answer": "== Further reading ==\nFerguson, Niels; Bruce Schneier (2003).",
-    "domain": "general",
-    "source": "wikipedia:Web of trust"
-  },
-  {
     "question": "What is Content delivery network?",
     "answer": "A content delivery network (CDN) or content distribution network is a geographically distributed network of proxy servers and corresponding data centers. CDNs provide high availability and performance (\"speed\") through geographical distribution  relative to end users, and arose in the late 1990s to alleviate the performance bottlenecks of the Internet as it was becoming a critical medium.",
     "domain": "internet",
@@ -3690,12 +2358,6 @@
     "source": "wikipedia:Content delivery network"
   },
   {
-    "question": "Tell me about The Internet",
-    "answer": "== Content networking techniques ==\nThe Internet was designed according to the end-to-end principle.",
-    "domain": "general",
-    "source": "wikipedia:Content delivery network"
-  },
-  {
     "question": "What is As a result, the core network?",
     "answer": "As a result, the core network is specialized, optimized, and simplified to only forward data packets.",
     "domain": "general",
@@ -3723,12 +2385,6 @@
     "question": "What does Server-load balancing provide?",
     "answer": "Server-load balancing uses one or more techniques including service-based (global load balancing) or hardware-based (i.e.",
     "domain": "general",
-    "source": "wikipedia:Content delivery network"
-  },
-  {
-    "question": "What is Here the switch?",
-    "answer": "Here the switch is assigned a single virtual IP address.",
-    "domain": "networking",
     "source": "wikipedia:Content delivery network"
   },
   {
@@ -3828,12 +2484,6 @@
     "source": "wikipedia:Content delivery network"
   },
   {
-    "question": "What is While this?",
-    "answer": "While this is a sound approach in many situations, this leads to poor client performance if the client uses a non-local recursive DNS resolver that is far away.",
-    "domain": "internet",
-    "source": "wikipedia:Content delivery network"
-  },
-  {
     "question": "What is Indeed, a recent study showed that in many countries where public DNS resolvers?",
     "answer": "Indeed, a recent study showed that in many countries where public DNS resolvers are in popular use, the median distance between the clients and their recursive DNS resolvers can be as high as a thousand miles.",
     "domain": "internet",
@@ -3921,12 +2571,6 @@
     "question": "What is With currently available mobile CDN solutions, nodes?",
     "answer": "With currently available mobile CDN solutions, nodes are deployed at the edge of the network and in multiple locations, often over multiple backbones directly connected or peered with Mobile Network Operators (MNOs).",
     "domain": "internet",
-    "source": "wikipedia:Mobile CDN"
-  },
-  {
-    "question": "Tell me about LTE",
-    "answer": "However, a number of network-centric alternatives have been proposed including Fast Dormancy, increasing bandwidth capacity with upgrades to 4G/LTE, and offloading traffic to other networks such as Wi-Fi.",
-    "domain": "networking",
     "source": "wikipedia:Mobile CDN"
   },
   {
@@ -4032,12 +2676,6 @@
     "source": "wikipedia:House of Commons of Canada"
   },
   {
-    "question": "Tell me about United Kingdom",
-    "answer": "Canada and the United Kingdom remain the only countries to use the name \"House of Commons\" for a lower house of parliament.",
-    "domain": "general",
-    "source": "wikipedia:House of Commons of Canada"
-  },
-  {
     "question": "Tell me about The Honourable",
     "answer": "The body's formal name is: The Honourable the Commons of Canada in Parliament assembled (French: l’Honorable Chambre des communes du Canada, en Parlement assemblée).",
     "domain": "general",
@@ -4131,12 +2769,6 @@
     "question": "What is term member of Parliament?",
     "answer": "The term member of Parliament is usually just used only to refer to elected members of the House of Commons, even though the Senate is also a part of Parliament.",
     "domain": "networking",
-    "source": "wikipedia:House of Commons of Canada"
-  },
-  {
-    "question": "Tell me about MP",
-    "answer": "Members of the House of Commons may use the post-nominal letters \"MP\".",
-    "domain": "general",
     "source": "wikipedia:House of Commons of Canada"
   },
   {
@@ -4260,12 +2892,6 @@
     "source": "wikipedia:House of Commons of Canada"
   },
   {
-    "question": "Tell me about The Act",
-    "answer": "The Act also prohibits certain officials from standing for the House of Commons.",
-    "domain": "general",
-    "source": "wikipedia:House of Commons of Canada"
-  },
-  {
     "question": "Tell me about Elections Canada",
     "answer": "The chief electoral officer (the head of Elections Canada, the federal agency responsible for conducting elections) is prohibited from standing as a candidate and, until recently, was prohibited from voting.",
     "domain": "general",
@@ -4352,12 +2978,6 @@
   {
     "question": "What is Proceedings?",
     "answer": "Proceedings are broadcast over cable and satellite television and over live streaming video on the Internet by CPAC owned by a consortium of Canadian cable companies.",
-    "domain": "general",
-    "source": "wikipedia:House of Commons of Canada"
-  },
-  {
-    "question": "Tell me about The Constitution Act",
-    "answer": "The Constitution Act, 1867 establishes a quorum of twenty members (including the member presiding) for the House of Commons.",
     "domain": "general",
     "source": "wikipedia:House of Commons of Canada"
   },
@@ -4602,12 +3222,6 @@
     "source": "wikipedia:House of Commons of Canada"
   },
   {
-    "question": "Tell me about The Department",
-    "answer": "The Department of Public Works and Government Services undertook work during the 41st Parliament to determine how the seating arrangement could be modified to accommodate the additional 30 seats added in the 2015 election.",
-    "domain": "general",
-    "source": "wikipedia:House of Commons of Canada"
-  },
-  {
     "question": "Tell me about Parliament Hill",
     "answer": "Like the Senate, the House of Commons meets on Parliament Hill in Ottawa.",
     "domain": "networking",
@@ -4722,12 +3336,6 @@
     "source": "wikipedia:Static web page"
   },
   {
-    "question": "Tell me about Static Site Generators",
-    "answer": "== External links ==\nThe definitive listing of Static Site Generators, a community-curated list of static site generators.",
-    "domain": "general",
-    "source": "wikipedia:Static web page"
-  },
-  {
     "question": "What is Cdnjs?",
     "answer": "cdnjs is a free and open-source software (FOSS) content delivery network (CDN) hosted by Cloudflare. As of May 2021, it serves 4,013 JavaScript and CSS libraries, which are stored publicly on GitHub. It is included in millions of websites, or 12.4% of the websites on the Internet, making it the second most popular CDN for JavaScript.",
     "domain": "internet",
@@ -4736,12 +3344,6 @@
   {
     "question": "What is As of May 2021, it serves 4,013 JavaScript and CSS libraries, which?",
     "answer": "As of May 2021, it serves 4,013 JavaScript and CSS libraries, which are stored publicly on GitHub.",
-    "domain": "general",
-    "source": "wikipedia:Cdnjs"
-  },
-  {
-    "question": "Tell me about In January",
-    "answer": "== History ==\nIn January 2011, Ryan Kirkman and Thomas Davis created the service, launching it on GitHub on February 25, 2011.",
     "domain": "general",
     "source": "wikipedia:Cdnjs"
   },
@@ -4848,12 +3450,6 @@
     "source": "wikipedia:Indian Wells, California"
   },
   {
-    "question": "Tell me about On July",
-    "answer": "On July 14, 1967, Indian Wells became California's 400th city and the 16th in Riverside County.",
-    "domain": "general",
-    "source": "wikipedia:Indian Wells, California"
-  },
-  {
     "question": "Tell me about The Census",
     "answer": "The Census reported that 4,952 people (99.9% of the population) lived in households, 6 (0.1%) lived in non-institutionalized group quarters, and 0 (0%) were institutionalized.",
     "domain": "general",
@@ -4902,12 +3498,6 @@
     "source": "wikipedia:Indian Wells, California"
   },
   {
-    "question": "Tell me about II",
-    "answer": "Boswell II† – former CEO of the J.G Boswell cotton company\nRobert \"Bob\" Cummings† – actor\nTony Curtis† – actor\nErnest E.",
-    "domain": "general",
-    "source": "wikipedia:Indian Wells, California"
-  },
-  {
     "question": "Tell me about Los Angeles City Council",
     "answer": "Debs† – Los Angeles City Council member and Los Angeles County supervisor\nBob Einstein† – actor, comedy writer and producer\nDwight D.",
     "domain": "general",
@@ -4922,12 +3512,6 @@
   {
     "question": "Tell me about Howard Lester",
     "answer": "Howard Lester† – businessman\nCargill MacMillan Jr.† – businessman†\nCurt Massey† – musician\nJoanna Moore† - actress\nCharles Peebler† – advertising executive\nRoger Perry† – actor\nRobert Prescott† – founder of the Flying Tiger Line\nCharles H.",
-    "domain": "general",
-    "source": "wikipedia:Indian Wells, California"
-  },
-  {
-    "question": "Tell me about Air Force",
-    "answer": "Air Force veteran and basketball player; husband of Colleen Kay Hutchins\nSam B.",
     "domain": "general",
     "source": "wikipedia:Indian Wells, California"
   },
@@ -5214,18 +3798,6 @@
     "source": "wikipedia:Akamai Technologies"
   },
   {
-    "question": "Tell me about BBN",
-    "answer": "In late 1998 and early 1999, a group of business professionals and scientists joined the founding team—most notably, Paul Sagan, former president of New Media for Time Inc., and George Conrades, former chairman and chief executive officer of BBN Corp.",
-    "domain": "general",
-    "source": "wikipedia:Akamai Technologies"
-  },
-  {
-    "question": "Tell me about NASDAQ",
-    "answer": "The company launched its commercial service in April 1999 and was listed on the NASDAQ Stock Market from October 29, 1999.",
-    "domain": "general",
-    "source": "wikipedia:Akamai Technologies"
-  },
-  {
     "question": "Tell me about American Airlines Flight",
     "answer": "Lewin died in the September 11 attacks at the age of 31, when he was stabbed by one of the hijackers aboard American Airlines Flight 11, the first plane to crash into the World Trade Center.",
     "domain": "general",
@@ -5256,20 +3828,8 @@
     "source": "wikipedia:Akamai Technologies"
   },
   {
-    "question": "Tell me about On February",
-    "answer": "On February 9, 2021, Akamai announced that it would reorganize into two internal groups –  Security Technology and Edge Technology.",
-    "domain": "general",
-    "source": "wikipedia:Akamai Technologies"
-  },
-  {
     "question": "Tell me about Robert Blumofe",
     "answer": "It also re-established the role of chief technology officer and named Robert Blumofe to that role.",
-    "domain": "general",
-    "source": "wikipedia:Akamai Technologies"
-  },
-  {
-    "question": "Tell me about CSO",
-    "answer": "Long-time chief security officer (CSO) Andy Ellis announced he would leave in March 2021.",
     "domain": "general",
     "source": "wikipedia:Akamai Technologies"
   },
@@ -5304,12 +3864,6 @@
     "source": "wikipedia:Akamai Technologies"
   },
   {
-    "question": "What is Akamai server?",
-    "answer": "The Akamai server is automatically chosen depending on the type of content and the user's network location.",
-    "domain": "general",
-    "source": "wikipedia:Akamai Technologies"
-  },
-  {
     "question": "What is servers?",
     "answer": "The servers are located in more than 200 countries and territories.",
     "domain": "general",
@@ -5322,12 +3876,6 @@
     "source": "wikipedia:Akamai Technologies"
   },
   {
-    "question": "Tell me about OPEN",
-    "answer": "=== OPEN Initiative ===\nOn October 9, 2013, Akamai announced its Open Initiative at the 2013 Akamai Edge Conference.",
-    "domain": "general",
-    "source": "wikipedia:Akamai Technologies"
-  },
-  {
     "question": "What does OPEN provide?",
     "answer": "OPEN allows customers and partners to develop and customize how they interact with the Akamai Intelligent Platform.",
     "domain": "general",
@@ -5336,18 +3884,6 @@
   {
     "question": "Tell me about Consistent Hashing",
     "answer": "\"Consistent Hashing and Random Trees: Distributed Caching Protocols for Relieving Hot Spots on the World Wide Web\".",
-    "domain": "general",
-    "source": "wikipedia:Akamai Technologies"
-  },
-  {
-    "question": "Tell me about IEEE",
-    "answer": "\"Globally Distributed Content Delivery\", IEEE Internet Computing, September/October 2002, pp.",
-    "domain": "general",
-    "source": "wikipedia:Akamai Technologies"
-  },
-  {
-    "question": "Tell me about ACM",
-    "answer": "ACM SIGCOMM Computer Communication Review, Volume=45, Issue=3, 2015.",
     "domain": "general",
     "source": "wikipedia:Akamai Technologies"
   },
@@ -5580,12 +4116,6 @@
     "source": "wikipedia:Content delivery network interconnection"
   },
   {
-    "question": "What is After the content?",
-    "answer": "After the content is delivered a log of delivery actions is provided to the uCDN.",
-    "domain": "internet",
-    "source": "wikipedia:Content delivery network interconnection"
-  },
-  {
     "question": "What is Large objects?",
     "answer": "Large objects are broken into a sequence of small, independent chunks, e.g.",
     "domain": "general",
@@ -5610,21 +4140,9 @@
     "source": "wikipedia:Content delivery network interconnection"
   },
   {
-    "question": "What is security?",
-    "answer": "The security is enforced by switching to secure versions of protocols deployed in the CDNI, e.g.",
-    "domain": "networking",
-    "source": "wikipedia:Content delivery network interconnection"
-  },
-  {
     "question": "What is Usually, if a CDNI?",
     "answer": "Usually, if a CDNI is established via secure protocols, secure protocols are also used for content acquisition and distribution.",
     "domain": "internet",
-    "source": "wikipedia:Content delivery network interconnection"
-  },
-  {
-    "question": "Tell me about ETSI",
-    "answer": "The first one, the interconnection control, seems to map on the union of ETSI's control and logging interfaces.",
-    "domain": "general",
     "source": "wikipedia:Content delivery network interconnection"
   },
   {
@@ -5676,12 +4194,6 @@
     "source": "wikipedia:Digital supply chain"
   },
   {
-    "question": "Tell me about Content Provider",
-    "answer": "=== Content Provider ===\nThe content provider provides the actual content that will ultimately be consumed by the end-user.",
-    "domain": "general",
-    "source": "wikipedia:Digital supply chain"
-  },
-  {
     "question": "What does content provider provide?",
     "answer": "The content provider provides the content in a variety of formats - including film, tape, CD, DVD, hard disks and digital files.",
     "domain": "general",
@@ -5714,12 +4226,6 @@
   {
     "question": "What is Quality, however, often becomes an issue at this stage and great care?",
     "answer": "Quality, however, often becomes an issue at this stage and great care is taken to ensure the quality of the medium is of the highest possible quality for its intended deliver method.",
-    "domain": "general",
-    "source": "wikipedia:Digital supply chain"
-  },
-  {
-    "question": "Tell me about PC",
-    "answer": "For example, a video encoded for streaming to mobile devices requires a much higher level of compression than would for a PC download, so the quality of the video will not be nearly as good.",
     "domain": "general",
     "source": "wikipedia:Digital supply chain"
   },
@@ -5820,12 +4326,6 @@
     "source": "wikipedia:Content delivery platform"
   },
   {
-    "question": "Tell me about CDP",
-    "answer": "Instead of the installation of software on client servers, a CDP feeds content through embedded code snippets, typically via JavaScript widget, Flash widget or server-side Ajax.",
-    "domain": "general",
-    "source": "wikipedia:Content delivery platform"
-  },
-  {
     "question": "What is Content delivery platforms?",
     "answer": "Content delivery platforms are not content delivery networks, which are utilized for large web media and do not depend on embedded software code.",
     "domain": "general",
@@ -5856,12 +4356,6 @@
     "source": "wikipedia:Fastly"
   },
   {
-    "question": "Tell me about San Francisco",
-    "answer": "is an American company based in San Francisco, which describes itself as a cloud computing company.",
-    "domain": "internet",
-    "source": "wikipedia:Fastly"
-  },
-  {
     "question": "What does Fastly provide?",
     "answer": "Fastly provides content delivery network services, image optimization, and load balancing services.",
     "domain": "general",
@@ -5874,18 +4368,6 @@
     "source": "wikipedia:Fastly"
   },
   {
-    "question": "Tell me about In September",
-    "answer": "In September 2014, Fastly raised a further $40 million in Series C funding, followed by a $75 million Series D round in August 2015.",
-    "domain": "general",
-    "source": "wikipedia:Fastly"
-  },
-  {
-    "question": "Tell me about In April",
-    "answer": "In April 2017, Fastly launched its edge cloud platform along with image optimization, load balancing, and a web application firewall.",
-    "domain": "security",
-    "source": "wikipedia:Fastly"
-  },
-  {
     "question": "Tell me about In August",
     "answer": "In August 2020, Fastly announced it was acquiring cybersecurity company Signal Sciences for $775 million ($200 million in cash and $575 million in stock).",
     "domain": "general",
@@ -5895,12 +4377,6 @@
     "question": "Tell me about CFO",
     "answer": "Kisling, previously employed by Alphabet as the CFO of the Fitbit division, was hired to serve as Fastly's CFO, succeeding Adriel Lares.",
     "domain": "general",
-    "source": "wikipedia:Fastly"
-  },
-  {
-    "question": "Tell me about API",
-    "answer": "In August 2023, it was announced Fastly has acquired the domain status API provider, Domainr.",
-    "domain": "internet",
     "source": "wikipedia:Fastly"
   },
   {
@@ -5946,12 +4422,6 @@
     "source": "wikipedia:Ramesh Sitaraman"
   },
   {
-    "question": "What is Currently, he?",
-    "answer": "Currently, he is a distinguished professor in the computer science department at University of Massachusetts, Amherst.",
-    "domain": "intranet",
-    "source": "wikipedia:Ramesh Sitaraman"
-  },
-  {
     "question": "What is His current research?",
     "answer": "His current research is focused on energy efficiency of Internet-scale distributed networks.",
     "domain": "general",
@@ -5988,12 +4458,6 @@
     "source": "wikipedia:Cache (computing)"
   },
   {
-    "question": "Tell me about GHz",
-    "answer": "it can take hundreds of clock cycles for a modern 4 GHz processor to reach DRAM.",
-    "domain": "intranet",
-    "source": "wikipedia:Cache (computing)"
-  },
-  {
     "question": "What does use of a cache also provide?",
     "answer": "The use of a cache also allows for higher throughput from the underlying resource, by assembling multiple fine-grain transfers into larger, more efficient requests.",
     "domain": "general",
@@ -6006,12 +4470,6 @@
     "source": "wikipedia:Cache (computing)"
   },
   {
-    "question": "Tell me about CPUs",
-    "answer": "Central processing units (CPUs), solid-state drives (SSDs) and hard disk drives (HDDs) frequently include hardware-based cache, while web browsers and web servers commonly rely on software caching.",
-    "domain": "internet",
-    "source": "wikipedia:Cache (computing)"
-  },
-  {
     "question": "What is cache?",
     "answer": "A cache is made up of a pool of entries.",
     "domain": "general",
@@ -6021,12 +4479,6 @@
     "question": "What is Each entry has associated data, which?",
     "answer": "Each entry has associated data, which is a copy of the same data in some backing store.",
     "domain": "intranet",
-    "source": "wikipedia:Cache (computing)"
-  },
-  {
-    "question": "Tell me about CPU",
-    "answer": "When the cache client (a CPU, web browser, operating system) needs to access data presumed to exist in the backing store, it first checks the cache.",
-    "domain": "general",
     "source": "wikipedia:Cache (computing)"
   },
   {
@@ -6150,20 +4602,8 @@
     "source": "wikipedia:Cache (computing)"
   },
   {
-    "question": "Tell me about RAM",
-    "answer": "A few operating systems go further with a loader that always pre-loads the entire executable into RAM.",
-    "domain": "general",
-    "source": "wikipedia:Cache (computing)"
-  },
-  {
     "question": "What is Some examples of caches with a specific function?",
     "answer": "Some examples of caches with a specific function are the D-cache, I-cache and the translation lookaside buffer for the memory management unit (MMU).",
-    "domain": "general",
-    "source": "wikipedia:Cache (computing)"
-  },
-  {
-    "question": "Tell me about GPU",
-    "answer": "=== GPU cache ===\nEarlier graphics processing units (GPUs) often had limited read-only texture caches and used swizzling to improve 2D locality of reference.",
     "domain": "general",
     "source": "wikipedia:Cache (computing)"
   },
@@ -6258,12 +4698,6 @@
     "source": "wikipedia:Cache (computing)"
   },
   {
-    "question": "What is If content?",
-    "answer": "If content is highly popular, it is pushed into the privileged partition.",
-    "domain": "general",
-    "source": "wikipedia:Cache (computing)"
-  },
-  {
     "question": "What is Replacement of the privileged partition?",
     "answer": "Replacement of the privileged partition is done by first evicting content from the unprivileged partition, then pushing content from the privileged partition to the unprivileged partition, and finally inserting new content into the privileged partition.",
     "domain": "general",
@@ -6279,12 +4713,6 @@
     "question": "What is basic idea?",
     "answer": "The basic idea is to cache the locally popular content with the ALFU scheme and push the popular content to the privileged partition.",
     "domain": "general",
-    "source": "wikipedia:Cache (computing)"
-  },
-  {
-    "question": "Tell me about GPS",
-    "answer": "An optimization by edge-servers to truncate the GPS coordinates to fewer decimal places meant that the cached results from a nearby query would be used.",
-    "domain": "networking",
     "source": "wikipedia:Cache (computing)"
   },
   {
@@ -6468,12 +4896,6 @@
     "source": "wikipedia:Internet exchange point"
   },
   {
-    "question": "Tell me about IXP",
-    "answer": "Furthermore, the increased number of paths available through the IXP improves routing efficiency (by allowing routers to select shorter paths) and fault-tolerance.",
-    "domain": "networking",
-    "source": "wikipedia:Internet exchange point"
-  },
-  {
     "question": "Tell me about NAPs",
     "answer": "Internet exchange points began as Network Access Points or NAPs, a key component of Al Gore's National Information Infrastructure (NII) plan, which defined the transition from the US Government-paid-for NSFNET era (when Internet access was government sponsored and commercial traffic was prohibited) to the commercial Internet of today.",
     "domain": "networking",
@@ -6630,12 +5052,6 @@
     "source": "wikipedia:List of Internet exchange points"
   },
   {
-    "question": "What is Additionally, there?",
-    "answer": "Additionally, there are Internet exchange point associations that publish lists of member IXPs.",
-    "domain": "intranet",
-    "source": "wikipedia:List of Internet exchange points"
-  },
-  {
     "question": "What is Some of the Internet exchange point associations?",
     "answer": "Some of the Internet exchange point associations are loosely grouped into the Internet Exchange Point Federation.",
     "domain": "intranet",
@@ -6684,12 +5100,6 @@
     "source": "wikipedia:Uganda Internet Exchange Point"
   },
   {
-    "question": "What is Amsterdam Internet Exchange?",
-    "answer": "The Amsterdam Internet Exchange (AMS-IX) is an Internet exchange point based in Amsterdam, in the Netherlands. Established in the early 1990s, AMS-IX is a non-profit, neutral and independent peering point.",
-    "domain": "general",
-    "source": "wikipedia:Amsterdam Internet Exchange"
-  },
-  {
     "question": "What is Amsterdam Internet Exchange (AMS-IX)?",
     "answer": "The Amsterdam Internet Exchange (AMS-IX) is an Internet exchange point based in Amsterdam, in the Netherlands.",
     "domain": "general",
@@ -6702,12 +5112,6 @@
     "source": "wikipedia:Amsterdam Internet Exchange"
   },
   {
-    "question": "Tell me about CERN",
-    "answer": "In February 1994, a layer 2 shared infrastructure, used between academic institutes, was connected with CERN to exchange traffic.",
-    "domain": "networking",
-    "source": "wikipedia:Amsterdam Internet Exchange"
-  },
-  {
     "question": "Tell me about AMS",
     "answer": "Other Internet service providers were allowed to connect and the name AMS-IX was first used.",
     "domain": "general",
@@ -6717,12 +5121,6 @@
     "question": "Tell me about Neutral Internet Exchange",
     "answer": "In 2002, the Neutral Internet Exchange was founded as an alternative or backup for the Amsterdam Internet Exchange.",
     "domain": "networking",
-    "source": "wikipedia:Amsterdam Internet Exchange"
-  },
-  {
-    "question": "Tell me about TB",
-    "answer": "in November 2008 The total amount of data transferred by month was 75,940 TB (Avg.",
-    "domain": "general",
     "source": "wikipedia:Amsterdam Internet Exchange"
   },
   {
@@ -6764,12 +5162,6 @@
   {
     "question": "What is core consists of two Brocade NetIron MLX-32 switches, to which all edge switches?",
     "answer": "The core consists of two Brocade NetIron MLX-32 switches, to which all edge switches are connected using 10 gigabit aggregated connections and WDM technology.",
-    "domain": "networking",
-    "source": "wikipedia:Amsterdam Internet Exchange"
-  },
-  {
-    "question": "Tell me about VPLS",
-    "answer": "With the new VPLS/MPLS setup; the BigIron RX and legacy BigIron 15000 are no longer in-use.",
     "domain": "networking",
     "source": "wikipedia:Amsterdam Internet Exchange"
   },
@@ -6906,12 +5298,6 @@
     "source": "wikipedia:London Internet Exchange"
   },
   {
-    "question": "Tell me about MAN",
-    "answer": "In January 1999, it pioneered the implementation of a Metropolitan Area Network (MAN) running over gigabit Ethernet connections.",
-    "domain": "networking",
-    "source": "wikipedia:London Internet Exchange"
-  },
-  {
     "question": "Tell me about Malcolm Hutty",
     "answer": "In 2003, Roland was succeeded by Malcolm Hutty when Roland left to form his own advisory group.",
     "domain": "general",
@@ -6920,12 +5306,6 @@
   {
     "question": "What does LINX also actively and financially provide?",
     "answer": "LINX also actively and financially supports the Internet Watch Foundation which, since 1996, has worked to eradicate child abuse images from the UK Internet.",
-    "domain": "general",
-    "source": "wikipedia:London Internet Exchange"
-  },
-  {
-    "question": "Tell me about IX",
-    "answer": "2013 – Two additional local exchanges, IX Scotland in Edinburgh and LINX NOVA in North Virginia, USA, were launched.",
     "domain": "general",
     "source": "wikipedia:London Internet Exchange"
   },
@@ -6945,12 +5325,6 @@
     "question": "Tell me about EGM",
     "answer": "Voting on the constitutional revision took place during a hastily called Extraordinary General Meeting (EGM) on 21 February; although a majority supported the change the number attending was too small for the motion to be carried.",
     "domain": "general",
-    "source": "wikipedia:London Internet Exchange"
-  },
-  {
-    "question": "What is These networks?",
-    "answer": "These networks are deployed over ten locations, each connected by multiple 100 Gigabit Ethernet or 10 Gigabit Ethernet connections over fibre networks.",
-    "domain": "networking",
     "source": "wikipedia:London Internet Exchange"
   },
   {
@@ -6999,12 +5373,6 @@
     "question": "Tell me about Ice Colo",
     "answer": "A new design extends the network to two new sites – M247's Ice Colo & Joule House and brings in completely new hardware from Extreme Networks.",
     "domain": "general",
-    "source": "wikipedia:London Internet Exchange"
-  },
-  {
-    "question": "Tell me about EAPS",
-    "answer": "The new network will be configured as an EAPS protected ring, topology currently used for the secondary LINX LAN in London.",
-    "domain": "wifi_security",
     "source": "wikipedia:London Internet Exchange"
   },
   {
@@ -7059,12 +5427,6 @@
     "question": "What is Examples of large peering points without public data?",
     "answer": "Examples of large peering points without public data are NAP of the Americas or PacketExchange.",
     "domain": "general",
-    "source": "wikipedia:List of Internet exchange points by size"
-  },
-  {
-    "question": "Tell me about Border Gateway Protocol\nInternet",
-    "answer": "== See also ==\nAutonomous system (Internet)\nBorder Gateway Protocol\nInternet exchange point\nList of Internet exchange points\nPeering.",
-    "domain": "networking",
     "source": "wikipedia:List of Internet exchange points by size"
   },
   {
@@ -7134,12 +5496,6 @@
     "source": "wikipedia:Peering"
   },
   {
-    "question": "What is Internet?",
-    "answer": "The Internet is based on the principle of global or end-to-end reachability, which means that any Internet user can transparently exchange traffic with any other Internet user.",
-    "domain": "general",
-    "source": "wikipedia:Peering"
-  },
-  {
     "question": "What is Therefore, a network?",
     "answer": "Therefore, a network is connected to the Internet if and only if it buys transit, or peers with every other network which also does not purchase transit (which together constitute a \"default free zone\" or \"DFZ\").",
     "domain": "general",
@@ -7178,12 +5534,6 @@
   {
     "question": "What is few exchange points, particularly in the United States?",
     "answer": "A few exchange points, particularly in the United States, are operated by commercial carrier-neutral third parties which often are data centers, which are critical for achieving cost-effective data center connectivity.",
-    "domain": "general",
-    "source": "wikipedia:Peering"
-  },
-  {
-    "question": "Tell me about SONET",
-    "answer": "Early in the history of the Internet, many private peers occurred across \"telco\" provisioned SONET circuits between individual carrier-owned facilities.",
     "domain": "general",
     "source": "wikipedia:Peering"
   },
@@ -7242,18 +5592,6 @@
     "source": "wikipedia:Peering"
   },
   {
-    "question": "What is goal?",
-    "answer": "The goal is to force the depeering network to have so many customer complaints that they are willing to restore peering.",
-    "domain": "internet",
-    "source": "wikipedia:Peering"
-  },
-  {
-    "question": "Tell me about BGP",
-    "answer": "=== Multilateral peering ===\nThe majority of BGP AS-AS adjacencies are the product of multilateral peering agreements, or MLPAs.",
-    "domain": "networking",
-    "source": "wikipedia:Peering"
-  },
-  {
     "question": "What is multilateral peering?",
     "answer": "The multilateral peering is typically technically instantiated in a route server or route reflector (which differ from looking glasses in that they serve routes back out to participants, rather than just listening to inbound routes) to redistribute routes via a BGP hub-and-spoke topology, rather than a partial-mesh topology.",
     "domain": "networking",
@@ -7278,21 +5616,9 @@
     "source": "wikipedia:Peering"
   },
   {
-    "question": "Tell me about The United States",
-    "answer": "The United States, with a historically larger focus on private peering and commercial public peering, has much less traffic visible on public peering switch-fabrics compared to other regions that are dominated by non-profit membership exchange points.",
-    "domain": "networking",
-    "source": "wikipedia:Peering"
-  },
-  {
     "question": "What is Collectively, the many exchange points operated by Equinix?",
     "answer": "Collectively, the many exchange points operated by Equinix are generally considered to be the largest, though traffic figures are not generally published.",
     "domain": "general",
-    "source": "wikipedia:Peering"
-  },
-  {
-    "question": "What does BGP provide?",
-    "answer": "BGP allows operators to define a policy that determines where traffic is routed.",
-    "domain": "networking",
     "source": "wikipedia:Peering"
   },
   {
@@ -7314,12 +5640,6 @@
     "source": "wikipedia:Peering"
   },
   {
-    "question": "Tell me about MEDs",
-    "answer": "When networks interconnect in several locations, MEDs can be used to reference that network's interior gateway protocol cost.",
-    "domain": "networking",
-    "source": "wikipedia:Peering"
-  },
-  {
     "question": "What is Hot-potato or nearest-exit routing, which?",
     "answer": "Hot-potato or nearest-exit routing, which is typically the normal behavior on the Internet, is where traffic destined to another network is delivered to the closest interconnection point.",
     "domain": "networking",
@@ -7328,12 +5648,6 @@
   {
     "question": "What is Perhaps the most dramatic example of this?",
     "answer": "Perhaps the most dramatic example of this is the attempted MCI Worldcom/Sprint merger.",
-    "domain": "general",
-    "source": "wikipedia:Peering"
-  },
-  {
-    "question": "Tell me about MCI",
-    "answer": "In this case, the Department of Justice blocked the merger specifically because of the impact of the merger on the Internet backbone market (thereby requiring MCI to divest itself of its successful \"internetMCI\" business to gain approval).",
     "domain": "general",
     "source": "wikipedia:Peering"
   },

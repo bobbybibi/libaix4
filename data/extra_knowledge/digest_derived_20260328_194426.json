@@ -1,0 +1,296 @@
+[
+  {
+    "question": "How does Dahua Technology relate to Zeus Technology?",
+    "answer": "Dahua Technology: government sanctions, such as Hikvision and Dahua Technology, which have been accused to enabling mass surveillance and human rights abuses in China and elsewhere.  |  Zeus Technology: === Zeus Technology ===\nIn connection with Riverbed's July 2011 acquisition of the outstanding securities of Zeus Technology Limited, the share purchase agreement provided for certain additional potential payments (acquisition-related contingent consideration) totaling up to $27.0 million in cash, based on achievement of certain bookings targets related to Zeus products for the period from July 20, 2011, through July 31, 2012 (the Zeus earn-out period).",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does client isolation on Wi-Fi relate to Wi-Fi acceptable use policy?",
+    "answer": "client isolation on Wi-Fi: Client isolation (also called AP isolation or peer-to-peer blocking) prevents wireless clients on the same SSID from communicating with each other. Essential on guest networks to stop lateral attacks between untrusted devices.  |  Wi-Fi acceptable use policy: A Wi-Fi acceptable use policy (AUP) defines permitted and prohibited activities on the corporate wireless network: no unauthorized APs, no sharing credentials, personal devices must comply with BYOD policy, company may monitor traffic, violations may result in termination.",
+    "domain": "wifi_policy",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does SSL certificate relate to When I checked the certificate it?",
+    "answer": "SSL certificate: An SSL/TLS certificate authenticates a website's identity and enables encrypted connections. Issued by Certificate Authorities (CAs), it contains the public key.  |  When I checked the certificate it: When I checked the certificate it is issued by a different authority.",
+    "domain": "security",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does If, in contrast, four child squares relate to In contrast, because there?",
+    "answer": "If, in contrast, four child squares: If, in contrast, four child squares are homogeneous, they are merged as several connected components (the merging process).  |  In contrast, because there: In contrast, because there is no shared memory, communicating systems have to communicate with each other using a shared transmission medium.",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does x+1, and the sequence number that the server chooses for the packet relate to Sequence Number?",
+    "answer": "x+1, and the sequence number that the server chooses for the packet: x+1, and the sequence number that the server chooses for the packet is another random number, y.  |  Sequence Number: Type must be set to 13\nCode must be set to 0\nIdentifier and Sequence Number can be used by the client to match the timestamp reply with the timestamp request.",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does Routing Information Protocol relate to Zone Routing Protocol, or  ZRP?",
+    "answer": "Routing Information Protocol: The Routing Information Protocol (RIP) is one of the oldest distance-vector routing protocols which employs the hop count as a routing metric. RIP prevents routing loops by implementing a limit on the number of hops allowed in a path from source to destination. The largest number of hops allowed for RIP is 15, which limits the size of networks that RIP can support.  |  Zone Routing Protocol, or  ZRP: Zone Routing Protocol, or  ZRP is a hybrid wireless networking routing protocol that uses both proactive and reactive routing protocols when sending information over the network.",
+    "domain": "networking",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does Most Wi-Fi security relate to How safe are Wi-Fi Hotspots? Because WPA 2 is compromised, is there any other security protocol for Wi-Fi?",
+    "answer": "Most Wi-Fi security: Most Wi-Fi security is focussed on blocking authorised access to the network providing a wireless access point; but considering the smorgasbord of background app-to-cloud communication on a mobile phone, connecting to verified Wi-Fi access points is as least as important as SSL/TLS website verification.  |  How safe are Wi-Fi Hotspots? Because WPA 2 is compromised, is there any other security protocol for Wi-Fi: WPA 2 can be cracked using Aircrack-ng in Kali Linux. Is there any other security protocol for Wi-Fi which is not compromised?",
+    "domain": "wifi",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does What does In this way, UDP provide relate to way it works?",
+    "answer": "What does In this way, UDP provide: In this way, UDP provides application multiplexing.  |  way it works: The way it works is when a bandwidth threshold is reached (10 MB) the secondary connection kicks on.",
+    "domain": "networking",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does So, the goal relate to Note that a goal or target value?",
+    "answer": "So, the goal: So, the goal is to find objects with good borders.  |  Note that a goal or target value: Note that a goal or target value is not specified for any objective here, which makes it different from the Lexicographic Goal Programming method.",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does Arista's devices relate to Some NAT devices?",
+    "answer": "Arista's devices: Arista's devices are multilayer switches, which support a range of layer 3 protocols, including IGMP, Virtual Router Redundancy Protocol (VRRP), Routing Information Protocol (RIP), Border Gateway Protocol (BGP), Open Shortest Path First (OSPF), IS-IS, and OpenFlow.  |  Some NAT devices: Some NAT devices are not compliant with RFC 4787 as they treat NAT mapping and filtering in the same way, so that their configuration option for changing the NAT filtering method also changes the NAT mapping method (e.g., Netgate TNSR).",
+    "domain": "networking",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does 802.1X relate to WPA2-Enterprise uses 802.1X to facilitate authentication, but when and how?",
+    "answer": "802.1X: 802.1X is a port-based network access control standard. It uses three roles: supplicant (client), authenticator (AP/switch), and authentication server (RADIUS). The client must authenticate before gaining network access.  |  WPA2-Enterprise uses 802.1X to facilitate authentication, but when and how: WPA2-Enterprise uses 802.1X to facilitate authentication, but when and how is CCMP/AES used to encrypt the data after the authentication is completed?.",
+    "domain": "wifi_security",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does design process relate to Process Fieldbus?",
+    "answer": "design process: The design process is generally reproducible.\" The key attributes of security architecture are:.  |  Process Fieldbus: Catching the Process Fieldbus: An Introduction to Profibus and Profinet.",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does Internet protocols relate to Lists of network protocols?",
+    "answer": "Internet protocols: Internet protocols are designed for simplicity and modularity and fit into a coarse hierarchy of functional layers defined in the Internet Protocol Suite.  |  Lists of network protocols: This is a list of articles that list different types or classifications of communication protocols used in computer networks.",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does AWS services relate to What does AWS provide?",
+    "answer": "AWS services: AWS services are delivered to customers via a network of AWS server farms located throughout the world.  |  What does AWS provide: AWS uses the Cost Explorer to automatically calculate recommendations for the commitments you should make how that commitment will look like as a monthly charge on your AWS bill.",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does National Institute relate to National Arts Centre?",
+    "answer": "National Institute: The National Institute of Standards and Technology recognized three cloud service models in 2011: Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS).  |  National Arts Centre: == Arts ==\nNational Arts Centre, Canada\nNational Arts Club, New York, United States\nNational Arts Council, Singapore, a statutory board of the Singapore government\nNarodowe Archiwum Cyfrowe, Polish National Digital Archives\nNew adult contemporary, a name once used for the smooth jazz radio format.",
+    "domain": "networking",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does In fact, avoiding NAT complications relate to NAT?",
+    "answer": "In fact, avoiding NAT complications: In fact, avoiding NAT complications is practically a requirement when designing new higher-layer protocols today.  |  NAT: This kind of knee-jerk \"the password should not be stored in plaintext\" seems to come from people who are rotely applying advice for services, not clients, without actually thinking out the threat model.Overall this analysis is very shallow and I think fails to get at by far the largest and most concerning attack surface on these devices, the cloud and NAT negotiation services used by the first party mobile apps.",
+    "domain": "networking",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does Stephen Checkoway relate to Stephen Hsu?",
+    "answer": "Stephen Checkoway: Stephen Checkoway was quoted in Wired that \"If this backdoor was not intentional, then, in my opinion, it's an amazing coincidence.\"\nIn December 2015, Juniper Systems announced that they had discovered \"unauthorized code\" in the ScreenOS software that underlies their NetScreen devices, present from 2012 onwards.  |  Stephen Hsu: === Founding ===\nSafeWeb was co-founded by Stephen Hsu, Jon Chun, and James Hormuzdiar.",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does What does protocol also provide relate to What does Agilus Diagnostics also provide?",
+    "answer": "What does protocol also provide: The protocol also supports login with user ID and password, hierarchical folders and file management (including rename, delete, upload, download, download with overwrite, and download with append).  |  What does Agilus Diagnostics also provide: Agilus Diagnostics also offers tests in pathology covering biochemistry, immunology, herpetology, clinical pathology, histopathology and immunohistochemistry, microbiology, molecular biology, cytogenetics, and flow cytometry.",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does Port numbers 0 through 1023 relate to For these protocols, the port numbers?",
+    "answer": "Port numbers 0 through 1023: Port numbers 0 through 1023 are used for common, well-known services.  |  For these protocols, the port numbers: For these protocols, the port numbers are changed so that the combination of IP address (within the IP header) and port number (within the Transport Layer header) on the returned packet can be unambiguously mapped to the corresponding private network destination.",
+    "domain": "networking",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does If the host relate to If IPv4?",
+    "answer": "If the host: If the host is already active and configured to allow replies to incoming ICMP Echo Request packets, the returned reply should include the same payload.  |  If IPv4: If IPv4 is still used in the local area network (LAN), however, and the ISP can only provide one public-facing IPv6 address, the IPv4 LAN addresses are translated into the public facing IPv6 address using NAT64, a network address translation (NAT) mechanism.",
+    "domain": "networking",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does What does Network management: The HP Intelligent Management Center provide relate to Digital Rights Management?",
+    "answer": "What does Network management: The HP Intelligent Management Center provide: Network management: The HP Intelligent Management Center provides network monitoring and configuration management functions for a heterogeneous network.  |  Digital Rights Management: === Digital Rights Management ===\nAn important aspect of the digital supply chain is the process of encrypting the content so that it cannot be played back without the proper license which is often acquired via purchase of content or subscription.",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does What does Surfshark also provide relate to Also the times?",
+    "answer": "What does Surfshark also provide: Surfshark also allows unlimited simultaneous connections.  |  Also the times: Also the times are in sync between the server and the client.",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does Cyber Resilience Act relate to ACT?",
+    "answer": "Cyber Resilience Act: The Cyber Resilience Act stresses security throughout the life cycles of products in the European Union, which is in line with SbD principles.  |  ACT: I also remember an ACT prep website as a teen which only allowed Windows or Mac when I used FreeBSD (w/o plugins), but that aged very poorly in today's era of Chrome OS-based schools.",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does Firewall Policies vs Firewall Rules relate to As the rules?",
+    "answer": "Firewall Policies vs Firewall Rules: I just want to understand some concepts related to the firewall. Is there any difference between saying firewall policies and firewall rules? Can we say a firewall includes a set of policies each of which defines a set of special rules?\n\nThank you.  |  As the rules: As the rules are defined usually by 5 tuple for IPv4, a firewall has to match each incoming packet and transport header fields against the stored rule set.",
+    "domain": "security",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does example of an IP addresses in the reverse DNS zone relate to Addresses\nThe?",
+    "answer": "example of an IP addresses in the reverse DNS zone: An example of an IP addresses in the reverse DNS zone is 166.188.77.208.in-addr.arpa, which represents the address 208.77.188.166 and resolves to the domain name www.example.com.  |  Addresses\nThe: Addresses\nThe routing of network packets requires two network addresses, the source address of the sending host, and the destination address of the receiving host.",
+    "domain": "networking",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does What does In contrast to L2TPv3, which provide relate to In contrast, TCP?",
+    "answer": "What does In contrast to L2TPv3, which provide: In contrast to L2TPv3, which allows only point-to-point OSI layer 2 tunnels, VPLS allows any-to-any (multipoint) connectivity.  |  In contrast, TCP: In contrast, TCP is a stream-oriented protocol, transporting streams of bytes reliably and in order.",
+    "domain": "networking",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does Update Packet relate to packet?",
+    "answer": "Update Packet: === Update Packet ===\nOnly changes are sent, after initial exchange, only difference (add/change/removed) are sent.  |  packet: The packet is then forwarded to the external network.",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does OpenVPN kill switch on Linux relate to I read about kill switch, but after some internet searches I found out that?",
+    "answer": "OpenVPN kill switch on Linux: How to prevent IP leak on Linux when OpenVPN fails to connect to the server while I am surfing on the net?  \n\nI read about kill switch, but after some internet searches I found out that is not implemented in OpenVPN.  |  I read about kill switch, but after some internet searches I found out that: I read about kill switch, but after some internet searches I found out that is not implemented in OpenVPN.",
+    "domain": "networking",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does Would UDP over VPN eliminate packet loss relate to How to define packet loss?",
+    "answer": "Would UDP over VPN eliminate packet loss: I am receiving a MPTS UDP stream from a remote location and I am experiencing packet loss. I would like to know if there's any way to eliminate this packet loss while still using the UDP protocol?\n\nI thought of using UDP over VPN. Is this even technically possible and, if so, will it eliminate packet loss in UDP?\n\nThank you in advance.  |  How to define packet loss: I found that \"Packet loss describes lost packets of data not reaching their destination after being transmitted across a network.\" So, we can say that it is a portion of transmitted packets gets lost.\nNow, in a wireless network, if packet drops out at the sending end due to queue overflow, that will also cause packet loss.",
+    "domain": "networking",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does Zone Routing Protocol relate to Default-free zone?",
+    "answer": "Zone Routing Protocol: Zone Routing Protocol, or  ZRP is a hybrid wireless networking routing protocol that uses both proactive and reactive routing protocols when sending information over the network.  ZRP was designed to speed up delivery and reduce processing overhead by selecting the most efficient type of protocol to use throughout the route.  |  Default-free zone: In Internet routing, the default-free zone (DFZ) is the collection of all Internet routers that do not require a default route to route a packet to any destination, most commonly at the core of autonomous systems. Conceptually, DFZ routers have a \"complete\" Border Gateway Protocol table, sometimes referred to as the Internet routing table, global routing table or global BGP table.",
+    "domain": "networking",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does Wi-Fi 6 relate to 802.1X for Wi-FI?",
+    "answer": "Wi-Fi 6: Wi-Fi 6 (802.11ax) supports speeds up to 9.6 Gbps, uses OFDMA and MU-MIMO for better multi-device performance, includes Target Wake Time (TWT) for power savings, and uses WPA3 security by default.  |  802.1X for Wi-FI: I have a hidden SSID network. I know that although the SSID is hidden, someone can sniff the Wi-Fi channels to get my SSID, and with that SSID he can use some OpenWRT-ish things to spoof my Wi-Fi network to force me type my password to authenticate his device. That is unacceptable, and I am looking for better security for my Wi-Fi network.\n\nWhat options do I have? How can 802.1X be used, I need to keep it as simple as possible.",
+    "domain": "wifi",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does application layer relate to One application for this?",
+    "answer": "application layer: The application layer is the scope within which applications, or processes, create user data and communicate this data to other applications on another or the same host.  |  One application for this: One application for this is when using route reflectors (RRs), because then the RR can advertise all known route paths to its clients, instead of sending only a single route it selected based on its local decision process, which is likely not the best path for all of its clients.",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does For example, if the IP address prefix relate to address prefix 64:ff9b::/96?",
+    "answer": "For example, if the IP address prefix: For example, if the IP address prefix is 10.0.0.0/16 and the maximum length is 22, the AS is authorised to advertise any prefix under 10.0.0.0/16, as long as it is no more specific than /22.  |  address prefix 64:ff9b::/96: The address prefix 64:ff9b::/96 is a class of IPv4-embedded IPv6 addresses for use in NAT64 transition methods.",
+    "domain": "networking",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does Distributed solutions relate to What does distributed cache provide?",
+    "answer": "Distributed solutions: Distributed solutions are more suitable for supporting adaptive SDN applications.  |  What does distributed cache provide: A distributed cache uses networked hosts to provide scalability, reliability and performance to the application.",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does How to plan enterprise Wi-Fi for a building relate to Most Wi-Fi security?",
+    "answer": "How to plan enterprise Wi-Fi for a building: Enterprise Wi-Fi planning: 1) Define requirements (users, devices, apps), 2) Get floor plans, 3) Conduct predictive survey (Ekahau), 4) Place APs for -67 dBm coverage with 15-20% cell overlap, 5) Assign channels (1/6/11 on 2.4 GHz, plan 5 GHz), 6) Configure VLANs and security, 7) Validate with post-deployment survey.  |  Most Wi-Fi security: Most Wi-Fi security is focussed on blocking authorised access to the network providing a wireless access point; but considering the smorgasbord of background app-to-cloud communication on a mobile phone, connecting to verified Wi-Fi access points is as least as important as SSL/TLS website verification.",
+    "domain": "wifi",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does AWS services relate to Migration services?",
+    "answer": "AWS services: AWS services are delivered to customers via a network of AWS server farms located throughout the world.  |  Migration services: Migration services are for businesses that want to move to the SAP HANA platform.",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does common mistake that users make relate to They provide the same security mechanism for all users no matter if users?",
+    "answer": "common mistake that users make: A common mistake that users make is saving their user id/password in their browsers to make it easier to log in to banking sites.  |  They provide the same security mechanism for all users no matter if users: They provide the same security mechanism for all users no matter if users are companies or an individual person.",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does Do relate to OPCODE?",
+    "answer": "Do: The DoS attack in itself does little to expose organizational data to a malicious attacker, since the interruption of the network prevents the flow of data and actually indirectly protects data by preventing it from being transmitted.  |  OPCODE: OPCODE: 4 bits\nThe type can be QUERY (standard query, 0), IQUERY (inverse query, 1), or STATUS (server status request, 2).",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does EAP-TLS relate to This new version of EAP?",
+    "answer": "EAP-TLS: EAP-TLS uses mutual certificate-based authentication — both the client and RADIUS server present X.509 certificates. It's the gold standard for enterprise Wi-Fi security, eliminating password-based attacks entirely.  |  This new version of EAP: This new version of EAP is now called Extended EAP and is available in several versions; these include: EAP-MD5, PEAPv0, PEAPv1, EAP-MSCHAPv2, LEAP, EAP-FAST, EAP-TLS, EAP-TTLS, MSCHAPv2, and EAP-SIM.",
+    "domain": "wifi_security",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does principle relate to secondary bombs work on a similar principle; they?",
+    "answer": "principle: The principle is that users and devices should not be trusted by default, even if they are connected to a privileged network such as a corporate LAN and even if they were previously verified.  |  secondary bombs work on a similar principle; they: The secondary bombs work on a similar principle; they are obtained by collecting circles with corresponding letters in them.",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does main functions of intrusion prevention systems relate to Host-based anomalous intrusion detection systems?",
+    "answer": "main functions of intrusion prevention systems: The main functions of intrusion prevention systems are to identify malicious activity, log information about this activity, report it and attempt to block or stop it..  |  Host-based anomalous intrusion detection systems: Host-based anomalous intrusion detection systems are one of the last layers of defense and reside on computer end points.",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does IP address of a public server relate to Thus, fixed IP address?",
+    "answer": "IP address of a public server: The IP address of a public server is also important, similar in global uniqueness to a postal address or telephone number.  |  Thus, fixed IP address: Thus, fixed IP address is not possible on Home Server.",
+    "domain": "networking",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does Network segmentation in computer networking relate to In computer networking, the metric?",
+    "answer": "Network segmentation in computer networking: Network segmentation in computer networking is the act or practice of splitting a computer network into subnetworks, each being a network segment.  |  In computer networking, the metric: In computer networking, the metric is computed by a routing algorithm, and can cover information such as bandwidth, network delay, hop count, path cost, load, maximum transmission unit, reliability, and communication cost.",
+    "domain": "networking",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does To secure a computer system, it relate to What does computer provide?",
+    "answer": "To secure a computer system, it: To secure a computer system, it is important to understand the attacks that can be made against it, and these threats can typically be classified into one of the following categories:.  |  What does computer provide: The computer uses these reports to update its estimates of which solutions have the highest probability of fixing that particular set of symptoms.",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does MAC address relate to Which IP address?",
+    "answer": "MAC address: A MAC (Media Access Control) address is a unique 48-bit hardware identifier assigned to a network interface card (NIC), written as six hex pairs like AA:BB:CC:DD:EE:FF.  |  Which IP address: Which IP address is returned as a result depends, among other factors, on either the localisation of the end user or the surrogate server's load.",
+    "domain": "networking",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does What does CLOUD Act provide relate to What does HP Cloud Operation Services – provide?",
+    "answer": "What does CLOUD Act provide: The CLOUD Act allows United States authorities to request data from cloud providers, and courts can impose nondisclosure requirements preventing providers from notifying affected users.  |  What does HP Cloud Operation Services – provide: HP Cloud Operation Services – Provides support services for a company's cloud environment.",
+    "domain": "internet",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does User protocols relate to Certain protocols?",
+    "answer": "User protocols: User protocols are used for actual user applications.  |  Certain protocols: Certain protocols are designed with the specific purpose of bridging differences at the lower layers, so that common agreements are not required there.",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does WEB relate to common web browsing blacklist?",
+    "answer": "WEB: The challenge of consistent user experience across desktop, mobile device both mobile App and mobile WEB are critical.  |  common web browsing blacklist: A common web browsing blacklist is Google's Safe Browsing, which is installed by default in Firefox, Safari, and Chrome.",
+    "domain": "general",
+    "source": "digest_derived:comparison"
+  },
+  {
+    "question": "How does router relate to If the physical router that?",
+    "answer": "router: A router is a Layer 3 device that forwards packets between different networks by examining destination IP addresses and using routing tables.  |  If the physical router that: If the physical router that is routing packets on behalf of the virtual router fails, another physical router is selected to automatically replace it.",
+    "domain": "networking",
+    "source": "digest_derived:comparison"
+  }
+]

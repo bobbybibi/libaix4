@@ -12,21 +12,9 @@
     "source": "stackexchange:serverfault:315088"
   },
   {
-    "question": "What is Home Server?",
-    "answer": "Home Server is behind several layers of un-accessible and un-modifiable routers.",
-    "domain": "networking",
-    "source": "stackexchange:serverfault:315088"
-  },
-  {
     "question": "What is Thus, fixed IP address?",
     "answer": "Thus, fixed IP address is not possible on Home Server.",
     "domain": "networking",
-    "source": "stackexchange:serverfault:315088"
-  },
-  {
-    "question": "Tell me about VPN",
-    "answer": "I plan to setup a VPN server on Cloud Server to receive incoming VPN requests from both Laptop and Home Server.",
-    "domain": "security",
     "source": "stackexchange:serverfault:315088"
   },
   {
@@ -42,27 +30,9 @@
     "source": "stackexchange:serverfault:445503"
   },
   {
-    "question": "Tell me about ADSL",
-    "answer": "ADSL modem/router - mikrotik router -> private community network (CTWUG).",
-    "domain": "networking",
-    "source": "stackexchange:serverfault:445503"
-  },
-  {
-    "question": "Tell me about IP",
-    "answer": "IP range at home is a subset of the larger CTWUG network range : 172.18.107.224/28\nThe CTWUG network rage : 172.18.0.0/16.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:445503"
-  },
-  {
     "question": "Tell me about CTWUG",
     "answer": "The problem and question is: I am able to access the complete CTWUG range 172.16.0.0/16 except my home range 172.18.107.224/28.",
     "domain": "general",
-    "source": "stackexchange:serverfault:445503"
-  },
-  {
-    "question": "What is There?",
-    "answer": "There is just no packets returning over the VPN.",
-    "domain": "security",
     "source": "stackexchange:serverfault:445503"
   },
   {
@@ -75,12 +45,6 @@
     "question": "Tell me about VNet",
     "answer": "In \"subscription 1\" I have a VNet with a Virtual Network Gateway with Point-To-Site configuration.",
     "domain": "networking",
-    "source": "stackexchange:serverfault:939231"
-  },
-  {
-    "question": "Tell me about VM",
-    "answer": "And I can ssh into this VM when connected to VPN - all as expected.",
-    "domain": "security",
     "source": "stackexchange:serverfault:939231"
   },
   {
@@ -108,51 +72,15 @@
     "source": "stackexchange:serverfault:1012374"
   },
   {
-    "question": "Tell me about VPNs",
-    "answer": "I have been trying to follow tutorials to setup VPNs on Windows Server 2016.",
-    "domain": "security",
-    "source": "stackexchange:serverfault:1012374"
-  },
-  {
-    "question": "What is However, they?",
-    "answer": "However, they are not really the case for setting up VPN for a server behind router.",
-    "domain": "networking",
-    "source": "stackexchange:serverfault:1012374"
-  },
-  {
     "question": "Road Warrior VPN Setup?",
     "answer": "I apologise up front for the rather open ended nature of this question but I've got well out of my depth and could really do with some pointers.\n\nI need to set up a road warrior VPN solution which will allow our customers to securely access a number of services we provide for them. Customer machines will be running a variety of Windows versions from XP onwards with a variety of patch levels. Typically they will connect from the clients main offices but not always.",
     "domain": "networking",
     "source": "stackexchange:serverfault:393656"
   },
   {
-    "question": "Tell me about XP",
-    "answer": "Customer machines will be running a variety of Windows versions from XP onwards with a variety of patch levels.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:393656"
-  },
-  {
     "question": "Tell me about NATs",
     "answer": "It is safe to assume that all clients will be behind NATs but we may occasionally see a connection that isn't NAT'ed.",
     "domain": "networking",
-    "source": "stackexchange:serverfault:393656"
-  },
-  {
-    "question": "Tell me about NAT",
-    "answer": "Customer Laptop -- Router (NAT) -- Internet -- VPN Server + Firewall -- Server (Win 2008 R2, Non-routable IP).",
-    "domain": "networking",
-    "source": "stackexchange:serverfault:393656"
-  },
-  {
-    "question": "Tell me about IT",
-    "answer": "I've had a quick look at OpenVPN and liked what I saw but I think it's unlikely our customers IT departments would allow the client to be installed.",
-    "domain": "security",
-    "source": "stackexchange:serverfault:393656"
-  },
-  {
-    "question": "Tell me about ASA",
-    "answer": "Finally I've looked at the Cisco ASA range but I'm on a fairly tight budget so this is less preferable but it looks like it would work pretty much out of the box.",
-    "domain": "general",
     "source": "stackexchange:serverfault:393656"
   },
   {
@@ -171,12 +99,6 @@
     "question": "What is This, I think?",
     "answer": "This, I think, is confirmed as the VPN server event logs shows success audits (that is, logon events).",
     "domain": "security",
-    "source": "stackexchange:serverfault:167072"
-  },
-  {
-    "question": "Tell me about ID",
-    "answer": "Subject:\n    Security ID:        [DomainName]\\[UserName]\n    Account Name:       [UserName]\n    Account Domain:     [DomainName]\n    Logon ID:       0x[xxxxxx].",
-    "domain": "general",
     "source": "stackexchange:serverfault:167072"
   },
   {
@@ -204,12 +126,6 @@
     "source": "stackexchange:serverfault:167072"
   },
   {
-    "question": "Tell me about ICMP",
-    "answer": "I don't see any ICMP on either side when I do a ping to the VPN public interface (I assume this is because it is encapsulated on the GRE packets).",
-    "domain": "networking",
-    "source": "stackexchange:serverfault:167072"
-  },
-  {
     "question": "What is However the following?",
     "answer": "However the following is interesting (which I can't explain):.",
     "domain": "internet",
@@ -228,18 +144,6 @@
     "source": "stackexchange:serverfault:167072"
   },
   {
-    "question": "Tell me about RRAS",
-    "answer": "I changed RRAS to single NIC setup and the no resources problem went away - I can seemingly ping the client from all machines, but can't ping anything from the client.",
-    "domain": "troubleshooting",
-    "source": "stackexchange:serverfault:167072"
-  },
-  {
-    "question": "Tell me about ISP",
-    "answer": "I say seemingly as when I ping the client it takes less than 1 ms (bear in mind this is across the Internet and different ISP's) and I don't see any ICMP traffic on the VPN server - plus when I disconnect the client, it is still pingable!?!.",
-    "domain": "networking",
-    "source": "stackexchange:serverfault:167072"
-  },
-  {
     "question": "What is (As if the VPN server?",
     "answer": "(As if the VPN server is replying to pings on the client's behalf.) Whilst this is happening the VPN server gets timeouts when it pings the disconnected client.",
     "domain": "security",
@@ -248,12 +152,6 @@
   {
     "question": "L2TP/IPSec VPN setup Windows Server 2012 R2?",
     "answer": "I am trying to setup a VPN server in Microsoft Azure to use for private/secure browsing. I found many tutorials on how to setup L2TP/IPSec on Windows Server and I was able to set it up and connect to it. However, I think I am missing a few steps to make client internet traffic go through the VPN server. \n\nAll the tutorials I found are work-related VPNs so they're not mentioning those extra steps. I think it has something to do with enabling NAT but I am not exactly sure what to do.",
-    "domain": "security",
-    "source": "stackexchange:serverfault:804841"
-  },
-  {
-    "question": "Tell me about IPSec",
-    "answer": "I found many tutorials on how to setup L2TP/IPSec on Windows Server and I was able to set it up and connect to it.",
     "domain": "security",
     "source": "stackexchange:serverfault:804841"
   },
@@ -267,12 +165,6 @@
     "question": "Cannot setup WireGuard VPN?",
     "answer": "My goal is to create a VPN so\n\n\nClients have static IP addresses.\nClients are able to communicate with each other and the server,\nClients can reach global Internet through the VPN.\nAlso, I'd like to setup DNS and private domain names (working with NginX).\n\n\nHere is config of the server:\n\n[Interface]\nAddress = 10.0.0.1/24\nListenPort = 5555\nPrivateKey = xxxxx\n\n[Peer]\nPublicKey = xxxxx\nAllowedIPs = 0.0.0.0/0\n\n\nAnd client's config:\n\n[Interface]\nPrivateKey = xxxxx\nListenPort = 5555\nAddress = 10.0.0.",
     "domain": "security",
-    "source": "stackexchange:serverfault:1006595"
-  },
-  {
-    "question": "Tell me about DNS",
-    "answer": "Also, I'd like to setup DNS and private domain names (working with NginX).",
-    "domain": "internet",
     "source": "stackexchange:serverfault:1006595"
   },
   {
@@ -297,12 +189,6 @@
     "question": "What is Neither iptables nor firewalls?",
     "answer": "Neither iptables nor firewalls are installed on the server, so it can't be a problem.",
     "domain": "security",
-    "source": "stackexchange:serverfault:1006595"
-  },
-  {
-    "question": "Tell me about OS",
-    "answer": "OS is Ubuntu 18.04.4 LTS, Kernel: 4.15.0-20-generic, WG: wireguard-tools v1.0.20200206.",
-    "domain": "general",
     "source": "stackexchange:serverfault:1006595"
   },
   {
@@ -333,18 +219,6 @@
     "question": "What is iptable rules (in /etc/rc.local) and verified?",
     "answer": "iptable rules (in /etc/rc.local) and verified is loaded using iptables -L.",
     "domain": "general",
-    "source": "stackexchange:serverfault:473380"
-  },
-  {
-    "question": "Tell me about FORWARD",
-    "answer": "iptables -A FORWARD -i ppp+ -o eth0 -s 192.168.1.0/24 -m state --state NEW -j ACCEPT.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:473380"
-  },
-  {
-    "question": "Tell me about PPTP",
-    "answer": "We've enabled PPTP, IPSEC and L2TP passthrough on the dd-wrt router (under Security -> VPN Passthrough).",
-    "domain": "security",
     "source": "stackexchange:serverfault:473380"
   },
   {
@@ -402,12 +276,6 @@
     "source": "stackexchange:serverfault:102152"
   },
   {
-    "question": "What is issue?",
-    "answer": "The issue is that as the server connects from an external network it simply hangs for a few seconds then faults.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:102152"
-  },
-  {
     "question": "Mikrotik PPTP VPN Setup?",
     "answer": "I have attempted and followed many guides and am still having issues allowing traffic from my VPN to access devices on the LAN.\n\nhttps://rbgeek.wordpress.com/2014/08/26/pptp-server-setup-on-mikrotik/\nIs an example of one guide I have followed, and although I can connect, and ping from LAN > VPN I am unable to ping from VPN > LAN\n\nI have the following setup:\n\nRouterboard 750\nWebFig v6.35.1 (stable)\n\nLAN 192.168.88.0/24\n\nPPTP Pool 192.168.200.10-192.168.200.",
     "domain": "networking",
@@ -432,20 +300,8 @@
     "source": "stackexchange:networkengineering:73885"
   },
   {
-    "question": "What is These servers?",
-    "answer": "These servers are streaming data from internet (ca.50Mb/s, though this could increase in future) and need to send data mostly just to each other.",
-    "domain": "general",
-    "source": "stackexchange:networkengineering:73885"
-  },
-  {
     "question": "What is Did I understand this situation correctly or?",
     "answer": "Did I understand this situation correctly or are there other solutions?.",
-    "domain": "general",
-    "source": "stackexchange:networkengineering:73885"
-  },
-  {
-    "question": "What is What?",
-    "answer": "What are the benefits of option A and B?.",
     "domain": "general",
     "source": "stackexchange:networkengineering:73885"
   },
@@ -510,12 +366,6 @@
     "source": "stackexchange:networkengineering:18734"
   },
   {
-    "question": "What is Users?",
-    "answer": "Users are coming in with cisco anyconnect.",
-    "domain": "general",
-    "source": "stackexchange:networkengineering:18734"
-  },
-  {
     "question": "What is As I think of it, I think the only way to do it?",
     "answer": "As I think of it, I think the only way to do it is to make a cluster with a master and users pointing to a VIP?.",
     "domain": "general",
@@ -524,12 +374,6 @@
   {
     "question": "AWS - VPC/VPN - new non-redundant VPN connections notification?",
     "answer": "Apologies if this isn't the place. \n\nI have an AWS VPC VPN issue whereby I am getting a notification in the site-to-site VPN tab under VPC stating that I have new non-redundant VPN connections (please see attached image).\n\nThe reason I am confused is that we only have one VPN connection defined with 2 redundant tunnels as set up by default.",
-    "domain": "security",
-    "source": "stackexchange:networkengineering:56837"
-  },
-  {
-    "question": "Tell me about AWS",
-    "answer": "I have an AWS VPC VPN issue whereby I am getting a notification in the site-to-site VPN tab under VPC stating that I have new non-redundant VPN connections (please see attached image).",
     "domain": "security",
     "source": "stackexchange:networkengineering:56837"
   },
@@ -570,20 +414,8 @@
     "source": "stackexchange:networkengineering:41231"
   },
   {
-    "question": "Tell me about IGMP",
-    "answer": "I was hoping to just enable IGMP and everything would work, but it doesn't seem to be that easy.",
-    "domain": "troubleshooting",
-    "source": "stackexchange:networkengineering:41231"
-  },
-  {
     "question": "Tell me about LAN",
     "answer": "multicast-source---LAN---SRX@remote1          SRX@hub1---LAN---multicast-receiver\n192.168.1.100/24      192.168.1.1/24        192.168.2.1/24    192.168.2.100/24\n                           10.50.1.1/8--WAN--10.50.1.2/8.",
-    "domain": "general",
-    "source": "stackexchange:networkengineering:41231"
-  },
-  {
-    "question": "Tell me about WAN",
-    "answer": "(Ignore the fact that I'm using a private 10 network on the WAN right now).",
     "domain": "general",
     "source": "stackexchange:networkengineering:41231"
   },
@@ -630,12 +462,6 @@
     "source": "stackexchange:networkengineering:12588"
   },
   {
-    "question": "Tell me about CN",
-    "answer": "where you could change userPrincipalName to maybe the computer CN and base-dn to the Computers container?.",
-    "domain": "general",
-    "source": "stackexchange:networkengineering:12588"
-  },
-  {
     "question": "Juniper SRX320 Dynamic VPN, cannot route to Remote-Protected-Resource?",
     "answer": "Multiple VPNs setup with a Juniper SRX320.\n\nThe SRX320 has an irb interface as follows:\n\n  irb {\n    unit 0 {\n        family inet {\n            address 192.168.120.1/24;\n        }\n    }\n}\n\n\nI've setup a dynamic VPN that I'm connecting to over the JuneOS Pulse software, using the same pool as all physically connected devices:\n\npool pool1 {\n        family inet {\n            network 192.168.120.0/24;\n            dhcp-attributes {\n                name-server {\n                    192.168.120.",
     "domain": "networking",
@@ -648,20 +474,8 @@
     "source": "stackexchange:networkengineering:57166"
   },
   {
-    "question": "What is They?",
-    "answer": "They are unaware of the route because that subnet is not being routed.",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:57166"
-  },
-  {
     "question": "Two Gateways on a single network - VPN into 1 gateway, but limited access?",
     "answer": "I have two gateway routers as I have two different internet providers, I have one for high speed/normal use (Gateway 1), and the other slower speed, but dedicated IP's (Gateway 2).  It is all working great.\n\nI have VPN setup on Router (Gateway) 2 with my phone.  The problem is I can only access devices attached to Gateway 2, not Gateway 1.  I need to also access Gateway 1.",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:42450"
-  },
-  {
-    "question": "What is problem?",
-    "answer": "The problem is I can only access devices attached to Gateway 2, not Gateway 1.",
     "domain": "networking",
     "source": "stackexchange:networkengineering:42450"
   },
@@ -672,63 +486,15 @@
     "source": "stackexchange:networkengineering:42450"
   },
   {
-    "question": "Latency-sensitive channel bonding?",
-    "answer": "One of our satellite offices is connected by a Satellite connection with no other high bandwidth option. Reliability is good and bandwidth is acceptable (50/10 MB/s), but latency is making, ssh, VPN and HTTPS miserable. I've noticed I can get a low latency 4G LTE signal at this location, but bandwidth is poor.\n\nI control Linux servers on both sides of the connection, and I'd like to setup something akin to latency-sensitive channel bonding. E.g.",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:51894"
-  },
-  {
-    "question": "What is One of our satellite offices?",
-    "answer": "One of our satellite offices is connected by a Satellite connection with no other high bandwidth option.",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:51894"
-  },
-  {
-    "question": "What is Reliability?",
-    "answer": "Reliability is good and bandwidth is acceptable (50/10 MB/s), but latency is making, ssh, VPN and HTTPS miserable.",
-    "domain": "internet",
-    "source": "stackexchange:networkengineering:51894"
-  },
-  {
-    "question": "Tell me about LTE",
-    "answer": "I've noticed I can get a low latency 4G LTE signal at this location, but bandwidth is poor.",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:51894"
-  },
-  {
-    "question": "What is perhaps a VPN setup where connections?",
-    "answer": "perhaps a VPN setup where connections are established over LTE, and switch over to satellite once they've transmitted more than some threshold size (say 500kb).",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:51894"
-  },
-  {
-    "question": "Tell me about UDP",
-    "answer": "One thought was if I had a UDP VPN that transmitted/received everything to both interfaces, and whichever receives a packet first wins....",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:51894"
-  },
-  {
     "question": "Why do I need to setup VPN on my router to protect a DVR from outside access?",
     "answer": "I am being recommended to setup a VPN on the router that will connect a DVR to the internet so that I can monitor it remotely. The idea is that by doing this VPN setup it would be harder for an unauthorized party to gain access to the DVR. However I couldn't find any explanation as to why - what does a VPN router do to protect the DVR?",
     "domain": "networking",
     "source": "stackexchange:security:172062"
   },
   {
-    "question": "What is idea?",
-    "answer": "The idea is that by doing this VPN setup it would be harder for an unauthorized party to gain access to the DVR.",
-    "domain": "security",
-    "source": "stackexchange:security:172062"
-  },
-  {
     "question": "Setup a private VPN for family in China?",
     "answer": "I have family in China. During the past weeks their internet connection was severely limited. VPNs such as Astrill and similar weren't working anymore.\n\nIs it possible to setup my own VPN (or alternative), either on AWS or at home, in a way that would be more efficient for them than Astrill?\n\nIf VPNs all get blocked by some machine-learning chinese wizardry, what about a more custom solution like payload hidden in pictures? (steganography)\n\nMy thinking is that if I do it for a few people it woul.",
     "domain": "networking",
-    "source": "stackexchange:security:117748"
-  },
-  {
-    "question": "What is My thinking?",
-    "answer": "My thinking is that if I do it for a few people it would pass under the radar.",
-    "domain": "general",
     "source": "stackexchange:security:117748"
   },
   {
@@ -746,12 +512,6 @@
   {
     "question": "What is I've got a yearly subscription to a VPN service which?",
     "answer": "I've got a yearly subscription to a VPN service which is real quick and from the research I did at the time seems to be pretty legitimate, but are there any disadvantages or scenarios where you perhaps shouldn't use a VPN?.",
-    "domain": "security",
-    "source": "stackexchange:security:86806"
-  },
-  {
-    "question": "Tell me about UK",
-    "answer": "I'm from the UK and I usually just have the VPN setup to automatically route everything through a VPN server located in London.",
     "domain": "security",
     "source": "stackexchange:security:86806"
   },
@@ -788,18 +548,6 @@
   {
     "question": "What is This question?",
     "answer": "This question is kind of asked already but it was asked with different context:.",
-    "domain": "general",
-    "source": "stackexchange:security:60871"
-  },
-  {
-    "question": "Tell me about DD",
-    "answer": "Say I am using DD-WRT flashed router which connects as a client to VPN server #1.",
-    "domain": "networking",
-    "source": "stackexchange:security:60871"
-  },
-  {
-    "question": "Tell me about UPDATE",
-    "answer": "UPDATE: just to clarify my question: did anyone try this setup?.",
     "domain": "general",
     "source": "stackexchange:security:60871"
   },
@@ -852,12 +600,6 @@
     "source": "stackexchange:security:259644"
   },
   {
-    "question": "Tell me about CA",
-    "answer": "\"mydomain CA\" (certificate authority), LT, since i run my own CA\n\"vpn-client-group-1\", KT, this is the cert the client is connecting with (with Key on this end)\n\"vpn.mydomain.com\", KT, this cert has Alt name DNS:vpn.mydomain.com (and includes key).",
-    "domain": "security",
-    "source": "stackexchange:security:259644"
-  },
-  {
     "question": "Remote Desktop over VPN to access other VPN?",
     "answer": "My current situation is:\n\nSite 2 can connect to site 1 via VPN. I'm on site 3. IT at site 1 doesn't allow creating a new VPN to site 1.\n\nI'm thinking of using a Remote Desktop via VPN from site 3 to site 2, and the remote PC (in site 2) will connect to site 1. \n\nMy questions are:\n\n\nIs this possible? \nWhat kind of configuration do I need to setup in site 1 and site 2?",
     "domain": "security",
@@ -872,12 +614,6 @@
   {
     "question": "What is I used Pi-Hole in the past, but AdGuardHome's UI?",
     "answer": "I used Pi-Hole in the past, but AdGuardHome's UI is from this century at least.",
-    "domain": "general",
-    "source": "hackernews"
-  },
-  {
-    "question": "What is This?",
-    "answer": "This is very helpful and I appreciate all the comments as it highlights how some things are clear in our head but we don't end up sharing that with anyone reading.",
     "domain": "general",
     "source": "hackernews"
   },
@@ -948,12 +684,6 @@
     "source": "hackernews:41814480"
   },
   {
-    "question": "What does Additionally, it provide?",
-    "answer": "Additionally, it supports multi-region deployments and offers DPI (Deep Packet Inspection) bypass to ensure reliable VPN access in restrictive network environments.",
-    "domain": "security",
-    "source": "hackernews"
-  },
-  {
     "question": "What is discussed about PSA: Chrom{e,ium} CORS breaks when using certain VPN setups?",
     "answer": "TL;DR: Chrome introduced a new feature that in certain scenarios blocks \"private network\" access which in turn break CORS unless you grant the \"Local network access\" permission (!!!) on the website.In this particular case, GH Actions didn't show the logs because those are stored on Azure Blob storage - which was routed via the VPN in our setup, and since the IP is considered \"private network\" by Chrome it gets blocked unless the user gives an explicit additional. Safari and Firefox were fine.",
     "domain": "internet",
@@ -972,32 +702,14 @@
     "source": "hackernews:42036879"
   },
   {
-    "question": "Tell me about MITM",
-    "answer": "Hey all,I’m working on a MITM tool tailored for real-time mobile traffic analysis that might fill some gaps left by existing options like mitmproxy or Charles.",
-    "domain": "intranet",
-    "source": "hackernews"
-  },
-  {
     "question": "Ubuntu 18.04.1, cannot add PPA wireguard/ubuntu/wireguard?",
     "answer": "I'm trying to install WireGurad on my fresh vanilla Ubuntu 18.04.1 machine, by following the instructions from WireGuard website. But when I try to execute very first command:\n\nsudo add-apt-repository ppa:wireguard/wireguard\n\n\nI'm getting the following error:\n\nCannot add PPA: 'ppa:~wireguard/ubuntu/wireguard'.\nERROR: '~wireguard' user or team does not exist.\n\n\nAlthough there is WireGuard page at launchpad.net: https://launchpad.net/~wireguard/+archive/ubuntu/wireguard.",
     "domain": "internet",
     "source": "stackexchange:serverfault:948826"
   },
   {
-    "question": "What is Although there?",
-    "answer": "Although there is WireGuard page at launchpad.net: https://launchpad.net/~wireguard/+archive/ubuntu/wireguard.",
-    "domain": "internet",
-    "source": "stackexchange:serverfault:948826"
-  },
-  {
     "question": "Wireguard not completing handshake?",
     "answer": "I have two Debian GNU/Linux systems (bullseye/sid), both running wireguard on port 23456, both behind NAT. Both run a kernel version > 5.6 (wireguard mainlined).\nSystem A is the server, and it dynamically updates a dedicated \"A record\" in the authoritative nameserver for its internet domain, with the correct public IP address its internet facing router A (ZyWALL USG 100 firewall) is assigned with.",
-    "domain": "networking",
-    "source": "stackexchange:serverfault:1040165"
-  },
-  {
-    "question": "Tell me about GNU",
-    "answer": "I have two Debian GNU/Linux systems (bullseye/sid), both running wireguard on port 23456, both behind NAT.",
     "domain": "networking",
     "source": "stackexchange:serverfault:1040165"
   },
@@ -1026,12 +738,6 @@
     "source": "stackexchange:serverfault:1040165"
   },
   {
-    "question": "What is Here?",
-    "answer": "Here is the relevant configuration screen:.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:1040165"
-  },
-  {
     "question": "Tell me about POSTROUTING",
     "answer": "Here is the server A wireguard configuration file (keys in this snippet, despite being valid, aren't the real ones):\n[Interface]\nAddress = 10.31.33.100/24, fc00:31:33::1/64\nListenPort = 23456\nPrivateKey = iJE/5Qy4uO55uUQg8nnDKQ/dFT1MEq+tDfFXrGNj3GY=\n# PreUp = iptables -t nat -A POSTROUTING -s 10.31.33.0/24  -o enp1s0 -j MASQUERADE; ip6tables -t nat -A POSTROUTING -s fc00:31:33::/64 -o enp1s0 -j MASQUERADE\n# PostDown = iptables -t nat -D POSTROUTING -s 10.31.33.0/24  -o enp1s0 -j MASQUERADE; ip6tables -t nat -D POSTROUTING -s fc00:31:33::/64 -o enp1s0 -j MASQUERADE.",
     "domain": "networking",
@@ -1040,12 +746,6 @@
   {
     "question": "Tell me about LOG",
     "answer": "Activating debug messages on the client and adding a LOG rule into iptables, that logs OUTPUT packets, I get lots of these:\n[414414.454367] IN= OUT=wlp4s0 SRC=10.150.44.32 DST=1.2.3.4 LEN=176 TOS=0x08 PREC=0x80 TTL=64 ID=2797 PROTO=UDP SPT=36883 DPT=33456 LEN=156 \n[414419.821744] wireguard: wg0-simon: Handshake for peer 3 (1.2.3.4:33456) did not complete after 5 seconds, retrying (try 2)\n[414419.821786] wireguard: wg0-simon: Sending handshake initiation to peer 3 (1.2.3.4:33456).",
-    "domain": "networking",
-    "source": "stackexchange:serverfault:1040165"
-  },
-  {
-    "question": "Tell me about INPUT",
-    "answer": "root@wgserver ~ # iptables -t nat -I INPUT 1 -p udp --dport 23456 -j LOG.",
     "domain": "networking",
     "source": "stackexchange:serverfault:1040165"
   },
@@ -1071,12 +771,6 @@
     "question": "Tell me about LTS",
     "answer": "Xubuntu 24.04.1 LTS\n64GB RAM\nPi-hole installed via install script (non-dockerized)\nWireguard installed via install script (non-dockerized)\nUFW enabled, udp allow 47111/udp done.",
     "domain": "networking",
-    "source": "stackexchange:serverfault:1165210"
-  },
-  {
-    "question": "Tell me about QR",
-    "answer": "GrapheneOS / Android 14\nWireguard F-Droid\nconfig parsed via QR code.",
-    "domain": "general",
     "source": "stackexchange:serverfault:1165210"
   },
   {
@@ -1113,12 +807,6 @@
     "question": "Nginx reverse proxy through wireguard tunnel?",
     "answer": "I set up a wireguard tunnel between an AWS instance (acting as server) and a personal computer acting as client. Wireguard is installed on both in a docker container (using linuxserver image). On the local computer I have a website that I would like to access from the server using a proxy with Nginx. Basically I want to connect to the ip of the AWS instance and be redirected through the Wireguard tunnel to the website on my local machine.",
     "domain": "internet",
-    "source": "stackexchange:serverfault:1104101"
-  },
-  {
-    "question": "What is Wireguard?",
-    "answer": "Wireguard is installed on both in a docker container (using linuxserver image).",
-    "domain": "general",
     "source": "stackexchange:serverfault:1104101"
   },
   {
@@ -1164,12 +852,6 @@
     "source": "stackexchange:networkengineering:84758"
   },
   {
-    "question": "Tell me about TCP",
-    "answer": "(It's important, for TCP continuity, that packets from the router all arrive at the centre with the same (Wireguard) IP address.)\nIf so, do I need one wgX interface for each link, or does it handle all this magically?.",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:84758"
-  },
-  {
     "question": "Wireguard protocol understanding source of the received packet?",
     "answer": "From the docs,\n\n\n  WireGuard associates tunnel IP addresses with public keys and remote endpoints. When the interface sends a packet to a peer, it does the following:\n  \n  \n  This packet is meant for 192.168.30.8. Which peer is that? Let me look... Okay, it's for peer ABCDEFGH. (Or if it's not for any configured peer, drop the packet.)\n  Encrypt entire IP packet using peer ABCDEFGH's public key.\n  What is the remote endpoint of peer ABCDEFGH? Let me look...",
     "domain": "networking",
@@ -1209,12 +891,6 @@
     "question": "Pinging packets greater than 1500 between two proper configured machines on proper configured networks, always possible?",
     "answer": "Given the following 3 subnet topology, I will give names to them to simplify it, I am using planets, I see it as a perfect geographic enumeration.\nSites\n\nOffice on Earth 172.1.x FiOS, default MTU\nOffice on Moon 172.2.x DSL, MTU 1410 MRU 1410\nOffice on Mars 172.3.x FiOS MTU 1450\nOffice on Saturn 172.4.",
     "domain": "networking",
-    "source": "stackexchange:networkengineering:85261"
-  },
-  {
-    "question": "Tell me about MTU",
-    "answer": "Office on Earth 172.1.x FiOS, default MTU\nOffice on Moon 172.2.x DSL, MTU 1410 MRU 1410\nOffice on Mars 172.3.x FiOS MTU 1450\nOffice on Saturn 172.4.x DSL default MTU.",
-    "domain": "general",
     "source": "stackexchange:networkengineering:85261"
   },
   {
@@ -1275,12 +951,6 @@
     "question": "How dangerous is Class E, really?",
     "answer": "On a bar conversation, someone told an anecdote about not being able to jump on a vpn as the private space was the same as the free wifi at the airport. And, after a thinly veiled competition of who knew more lesser known private IP ranges, Class E was mentioned and nobody had any actual evidence against it.\nThere are a lot of urban legends around Class E. And my limited testing found no problem so far.",
     "domain": "networking",
-    "source": "stackexchange:networkengineering:86514"
-  },
-  {
-    "question": "What is So?",
-    "answer": "So, is Class E the ultimate wireguard private IPv4 range or will I find issues somewhere?.",
-    "domain": "general",
     "source": "stackexchange:networkengineering:86514"
   },
   {
@@ -1392,18 +1062,6 @@
     "source": "stackexchange:security:237391"
   },
   {
-    "question": "Tell me about CVE",
-    "answer": "Now I've found some troubling information about CVE-2019-14899:.",
-    "domain": "general",
-    "source": "stackexchange:security:237391"
-  },
-  {
-    "question": "Tell me about HTML",
-    "answer": "This would allow an attacker to feed your device fake HTML content for\nthat particular stream.",
-    "domain": "general",
-    "source": "stackexchange:security:237391"
-  },
-  {
     "question": "What is Why does it matter if the \"TCP connection?",
     "answer": "Why does it matter if the \"TCP connection is unencrypted inside the VPN tunnel\"?.",
     "domain": "networking",
@@ -1464,12 +1122,6 @@
     "source": "stackexchange:security:252424"
   },
   {
-    "question": "Tell me about HTTP",
-    "answer": "For example, if 10.0.0.1 connects to 10.0.0.2 over unencrypted HTTP, who could intercept or modify or spoof the communication?.",
-    "domain": "internet",
-    "source": "stackexchange:security:252424"
-  },
-  {
     "question": "What is discussed about WireGuard is now in Linus' tree?",
     "answer": "Glad to see it finally officially accepted. I've been using it on all my devices for over a year now and it's been rock solid. The ease of setup and initial connection speed alone blow any of the alternatives (that I'm aware of, at least) out of the water. Long may it continue! I’ve been nothing but happy with WireGuard. Connecting from my iPhone to my home and it works great, it’s fast and reliable. I’m never waiting to connect. Switching between WiFi, mobile, and sleeping go unnoticed.",
     "domain": "security",
@@ -1492,12 +1144,6 @@
     "answer": "That is a fantastic showcase how to respond to negative criticism in a friendly, constructive and polite manner. Good work, Jason. May I suggest to @dang to update the title with something just a little bit more informative without much editorialization, like:WireGuard Developer Response to \"Great protocol, skip the Mac app\" blogpost As a Mac admin VPP/App Store distribution is still quite finicky. I don’t understand why Apple has to flex and restrict NetworkExtension/VPN apps to Mac App Store.",
     "domain": "internet",
     "source": "hackernews:25759477"
-  },
-  {
-    "question": "What is That?",
-    "answer": "That is a fantastic showcase how to respond to negative criticism in a friendly, constructive and polite manner.",
-    "domain": "general",
-    "source": "hackernews"
   },
   {
     "question": "Tell me about VPP",
@@ -1528,12 +1174,6 @@
     "answer": "Is there a version of Ubuntu that has GUI NetworkManager support for WireGuard? I’m missing the convenience of toggling the VPN on and off from the system menu. I hope WireGuard can come to feature parity with TincVPN will be nice. Especially automatic routing and mesh VPN formation, it can really help our multi-cloud container clusters connected using TincVPN to be bit more performant.The difference is WireGuard is part of Linux kernel so speed of processing packets is faster than TincVPN.",
     "domain": "security",
     "source": "hackernews:22464765"
-  },
-  {
-    "question": "Tell me about GUI",
-    "answer": "Is there a version of Ubuntu that has GUI NetworkManager support for WireGuard?.",
-    "domain": "general",
-    "source": "hackernews"
   },
   {
     "question": "What is While I don't believe WireGuard?",
@@ -1608,21 +1248,9 @@
     "source": "hackernews:28039956"
   },
   {
-    "question": "What is Otherwise, it?",
-    "answer": "Otherwise, it is perfect as compared to the OpenVPN mess.",
-    "domain": "security",
-    "source": "hackernews"
-  },
-  {
     "question": "Tell me about TX",
     "answer": "Very impressive performance:> While performance is quite good right now (~7.5Gbps TX on my small test box),\nnot a lot of effort has yet been spent on optimizing it> Jonathan Tooker reported to me that, on his system with an Intel AC9560 WiFi card, he gets\n~600Mbps without WireGuard, ~600Mbps with wireguard-go/Wintun over Ethernet,\n~95Mbps with wireguard-go/Wintun over WiFi, and ~600Mbps with WireGuardNT over\nWiFi.Congratulations to Simon and Jason!.",
     "domain": "networking",
-    "source": "hackernews"
-  },
-  {
-    "question": "Tell me about Red Hat",
-    "answer": "for example, these Red Hat versions: https://www.catalog.update.microsoft.com/Search.aspx?q=Red%2...",
-    "domain": "internet",
     "source": "hackernews"
   },
   {
@@ -1704,12 +1332,6 @@
     "source": "stackexchange:serverfault:571592"
   },
   {
-    "question": "What is My server?",
-    "answer": "My server is running Ubuntu 12.04.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:571592"
-  },
-  {
     "question": "Should I use tap or tun for openvpn?",
     "answer": "What are the differences between using dev tap and dev tun for openvpn? I know the different modes cannot inter-operate.  What is the technical differences, other then just layer 2 vs 3 operation.  Are there different performance characteristics, or different levels of overhead.  Which mode is better.  What functionality is exclusively available in each mode.",
     "domain": "networking",
@@ -1746,21 +1368,9 @@
     "source": "stackexchange:serverfault:416708"
   },
   {
-    "question": "What is After VPN?",
-    "answer": "After VPN is disconnected, I switch back to default.",
-    "domain": "networking",
-    "source": "stackexchange:serverfault:416708"
-  },
-  {
     "question": "OpenVPN issue - TLS key negotiation failed to occur within 60 seconds?",
     "answer": "I'm configuring an OpenVPN (version 2.3.10) server on a Windows 2012 server but I cannot make it to work.\n\nThe server is behind a router and I opened the 1194 port and created a rule to forward traffic on this port to the server.\n\nHere is the log I see on the server when I try to connect from a client:\n\nMon Mar 21 11:11:47 2016 XX.XX.XX.XX:57804 TLS: Initial packet from [AF_INET]XX.XX.XX.XX:57804, sid=fdf7a7ac 0264c7f3\nMon Mar 21 11:12:38 2016 XX.XX.XX.",
     "domain": "security",
-    "source": "stackexchange:serverfault:765521"
-  },
-  {
-    "question": "What is server?",
-    "answer": "The server is behind a router and I opened the 1194 port and created a rule to forward traffic on this port to the server.",
-    "domain": "networking",
     "source": "stackexchange:serverfault:765521"
   },
   {
@@ -1812,18 +1422,6 @@
     "source": "stackexchange:serverfault:709860"
   },
   {
-    "question": "Tell me about SMB",
-    "answer": "I am configuring OpenVPN 2.3.6-1 on my Arch Linux server in order to encrypt SMB traffic over the public Internet.",
-    "domain": "security",
-    "source": "stackexchange:serverfault:709860"
-  },
-  {
-    "question": "Tell me about TLS",
-    "answer": "When I test the setup on one of my Linux virtual machine clients, I get the error: TLS Error: TLS handshake failed.",
-    "domain": "security",
-    "source": "stackexchange:serverfault:709860"
-  },
-  {
     "question": "Tell me about Arch Linux",
     "answer": "Server: Arch Linux (up to date) connected directly to gateway via ethernet cable.",
     "domain": "networking",
@@ -1846,72 +1444,6 @@
     "answer": "All information is here: https://pastebin.com/tGspNefn.",
     "domain": "internet",
     "source": "stackexchange:serverfault:648118"
-  },
-  {
-    "question": "Tell me about AES",
-    "answer": "client\ndev tun\nproto udp\nremote x.x.x.x <port number>\nresolv-retry infinite\nnobind\npersist-key\npersist-tun\nca ca.crt\ncert vpnclient.crt\nkey vpnclient.key\ntls-auth ta.key 1\nns-cert-type server\ncipher AES-256-CBC\ncomp-lzo\nverb 3.",
-    "domain": "networking",
-    "source": "stackexchange:serverfault:648118"
-  },
-  {
-    "question": "Access pfSense LAN through OpenVPN?",
-    "answer": "I'm trying to access a LAN through OpenVPN.\n\nMy current setup is that I have one machine (Linux (old)) that can successfully connect to OpenVPN running on a pfSense (2.3.2) machine. Behind the pfSense machine is a LAN with a third machine attached.\n\nThe subnet used for OpenVPN clients is 10.0.8.0/24. The client I'm testing with has the IP 10.0.8.3.\n\nThe subnet used for the LAN is X.Y.Z.0/24. The machine that's on the LAN has the IP X.Y.Z.12, and it can ping its gateway, X.Y.Z.254.",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:37522"
-  },
-  {
-    "question": "What is My current setup?",
-    "answer": "My current setup is that I have one machine (Linux (old)) that can successfully connect to OpenVPN running on a pfSense (2.3.2) machine.",
-    "domain": "security",
-    "source": "stackexchange:networkengineering:37522"
-  },
-  {
-    "question": "What is Behind the pfSense machine?",
-    "answer": "Behind the pfSense machine is a LAN with a third machine attached.",
-    "domain": "general",
-    "source": "stackexchange:networkengineering:37522"
-  },
-  {
-    "question": "What is In the pfSense configuration for the OpenVPN server, there?",
-    "answer": "In the pfSense configuration for the OpenVPN server, there is an option \"IPv4 Local network(s)\", which implies that the VPN clients should have access to the specified subnets.",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:37522"
-  },
-  {
-    "question": "What does I also added a firewall rule that provide?",
-    "answer": "I also added a firewall rule that allows all traffic from hosts on 10.0.8.0/24 to hosts on X.Y.Z.0/24.",
-    "domain": "security",
-    "source": "stackexchange:networkengineering:37522"
-  },
-  {
-    "question": "What is last bit of configuration I did?",
-    "answer": "The last bit of configuration I did is I manually added routing rules on the OpenVPN client, since they are not added successfully by the OpenVPN client (likely due to a version mismatch?).",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:37522"
-  },
-  {
-    "question": "What is Following?",
-    "answer": "Following are the current (relevant) routing rules on the OpenVPN client:.",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:37522"
-  },
-  {
-    "question": "What is 10.0.8.1?",
-    "answer": "10.0.8.1 is the gateway that the OpenVPN connection command outputs on the client, although I am unable to ping it.",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:37522"
-  },
-  {
-    "question": "What is When multiple OpenVPN clients?",
-    "answer": "When multiple OpenVPN clients are connected, they can ping each other.",
-    "domain": "security",
-    "source": "stackexchange:networkengineering:37522"
-  },
-  {
-    "question": "What is Is there an error in my configuration, or?",
-    "answer": "Is there an error in my configuration, or is there an additional step I need to take to access the LAN from an OpenVPN client?.",
-    "domain": "security",
-    "source": "stackexchange:networkengineering:37522"
   },
   {
     "question": "How to setup OpenVPN to PFsense?",
@@ -1948,18 +1480,6 @@
     "answer": "The SSH tunnel just hangs, no HTTP is served anymore, it doesn't even respond to ping.",
     "domain": "internet",
     "source": "stackexchange:networkengineering:18711"
-  },
-  {
-    "question": "What is OpenVPN?",
-    "answer": "This question can appear trivial, but a lot of sites define OpenVPN like a protocol, other sites define it just like a software.\nIs it possibile define it as both (i.e. because it uses a custom security protocol by using SSL/TLS at Transport Layer)?\nWhat is the correct definition about this?",
-    "domain": "security",
-    "source": "stackexchange:networkengineering:46458"
-  },
-  {
-    "question": "What does because it provide?",
-    "answer": "because it uses a custom security protocol by using SSL/TLS at Transport Layer)?.",
-    "domain": "security",
-    "source": "stackexchange:networkengineering:46458"
   },
   {
     "question": "What are the downsides of OpenVPN?",
@@ -2052,12 +1572,6 @@
     "source": "stackexchange:security:42415"
   },
   {
-    "question": "What is Why?",
-    "answer": "Why is the value 1024 suggested by the examples?.",
-    "domain": "general",
-    "source": "stackexchange:security:42415"
-  },
-  {
     "question": "What is RSA 1024 bit keys?",
     "answer": "RSA 1024 bit keys are now considered weak, and it is often suggested that to use 2048 bit or higher.",
     "domain": "general",
@@ -2088,12 +1602,6 @@
     "source": "stackexchange:security:97666"
   },
   {
-    "question": "What is My assumption?",
-    "answer": "My assumption is that since the client also has their common CA's cert, when the server will present its certificate, a client will try to verify it with the CA's cert.",
-    "domain": "security",
-    "source": "stackexchange:security:97666"
-  },
-  {
     "question": "OpenVPN Traffic Capture?",
     "answer": "Forgive me if this is not the appropriate place to ask this.\n\nI was capturing some traffic on my home server during an active OpenVPN session using Mullvad recently and I noticed that the traffic is predominantly UDP which would make sense per the .conf file: \n\nclient\ndev tun\nproto udp\n\n\nHowever I noticed that there was some traffic using TCP and TLSv1.2 to an IP address that I do not recognize.",
     "domain": "networking",
@@ -2112,20 +1620,8 @@
     "source": "stackexchange:security:183695"
   },
   {
-    "question": "What is Also, for what it?",
-    "answer": "Also, for what it is worth I did have at least a couple of other services running during these captures, namely Transmission, Plex, and obviously SSH.",
-    "domain": "internet",
-    "source": "stackexchange:security:183695"
-  },
-  {
     "question": "OpenVPN kill switch on Linux?",
     "answer": "How to prevent IP leak on Linux when OpenVPN fails to connect to the server while I am surfing on the net?  \n\nI read about kill switch, but after some internet searches I found out that is not implemented in OpenVPN.",
-    "domain": "networking",
-    "source": "stackexchange:security:183177"
-  },
-  {
-    "question": "What is I read about kill switch, but after some internet searches I found out that?",
-    "answer": "I read about kill switch, but after some internet searches I found out that is not implemented in OpenVPN.",
     "domain": "networking",
     "source": "stackexchange:security:183177"
   },
@@ -2220,12 +1716,6 @@
     "source": "stackexchange:security:40321"
   },
   {
-    "question": "What is If this?",
-    "answer": "If this is the case, then how does the Squid Server know how to decrypt the traffic to send plaintext to stackexchange.com?.",
-    "domain": "general",
-    "source": "stackexchange:security:40321"
-  },
-  {
     "question": "What is If that?",
     "answer": "If that is the case, then when it does come back to my computer, does Putty somehow decrypt it to plaintext on my computer, then encrypt it again before sending to SSH server?.",
     "domain": "internet",
@@ -2240,12 +1730,6 @@
   {
     "question": "Is OpenVPN actually forwarded over TLS?",
     "answer": "I'm investigating behavior of SSL decryptors on OpenVPN connections to port 443 and I noticed that device I use as decryption proxy doesn't recognize OpenVPN connections as TLS thus doesn't decrypt them. The question is then - how does OpenVPN protocol differ from standard TLS?",
-    "domain": "security",
-    "source": "stackexchange:security:170947"
-  },
-  {
-    "question": "What is question?",
-    "answer": "The question is then - how does OpenVPN protocol differ from standard TLS?.",
     "domain": "security",
     "source": "stackexchange:security:170947"
   },
@@ -2334,12 +1818,6 @@
     "source": "hackernews"
   },
   {
-    "question": "What is Vulnerability #2?",
-    "answer": "Vulnerability #2 is a good example of why OpenSSL is a minefield even for a competent coder.",
-    "domain": "security",
-    "source": "hackernews"
-  },
-  {
     "question": "What is For such a security-critical library it's pretty insane that the API?",
     "answer": "For such a security-critical library it's pretty insane that the API is so unfriendly, bordering on hostile.> The correct way to do this is to call GENERAL_NAMES_free.",
     "domain": "internet",
@@ -2364,52 +1842,10 @@
     "source": "hackernews:13351973"
   },
   {
-    "question": "What is discussed about Show HN: Firezone, an open-source WireGuard-based alternative to OpenVPN AS?",
-    "answer": "I created Firezone to make it easier to host and manage your own WireGuard VPN server. While working at Cisco as a security automation engineer I experienced a lot of unnecessary pain managing secure network-level access into our cloud VPCs. I tried OpenVPN Access Server but I personally feel that security software should be open source to be validated (and improved) by the community.",
-    "domain": "security",
-    "source": "hackernews:28683231"
-  },
-  {
-    "question": "Tell me about VPCs",
-    "answer": "While working at Cisco as a security automation engineer I experienced a lot of unnecessary pain managing secure network-level access into our cloud VPCs.",
-    "domain": "internet",
-    "source": "hackernews"
-  },
-  {
-    "question": "Tell me about Access Server",
-    "answer": "I tried OpenVPN Access Server but I personally feel that security software should be open source to be validated (and improved) by the community.",
-    "domain": "security",
-    "source": "hackernews"
-  },
-  {
-    "question": "Tell me about UI",
-    "answer": "So I built some convenience functionality on top, added a simple Web UI, and open sourced it.Firezone is packaged with Chef Omnibus so the only dependencies are a recent Linux kernel (4.19+) and the WireGuard module.",
-    "domain": "general",
-    "source": "hackernews"
-  },
-  {
-    "question": "What is Web UI?",
-    "answer": "The Web UI is built with Elixir/Phoenix (I’m a recovering full-stack Rails engineer) and runs as an unprivileged user.",
-    "domain": "general",
-    "source": "hackernews"
-  },
-  {
-    "question": "What is firewall application?",
-    "answer": "The firewall application is essentially a frontend to nftables and currently functions as a simple egress firewall to block outbound traffic to specific hosts/CIDRs (in your private network or elsewhere).In the near term I’m planning to polish it up a bit and add more security features.",
-    "domain": "security",
-    "source": "hackernews"
-  },
-  {
     "question": "What is discussed about Successful private key extraction from OpenVPN using Heartbleed?",
     "answer": "Hi HN,We have successfully extracted private key material multiple times from an OpenVPN server by exploiting the Heartbleed Bug. The material we found was sufficient for us to recreate the private key and impersonate the server.As you may know, OpenVPN has an SSL/TLS mode where certificates are used for authentication. OpenVPN multiplexes the SSL/TLS session used for authentication and key exchange with the actual encrypted tunnel data stream. The default TLS library for OpenVPN is OpenSSL.",
     "domain": "security",
     "source": "hackernews:7598616"
-  },
-  {
-    "question": "Tell me about HN",
-    "answer": "Hi HN,We have successfully extracted private key material multiple times from an OpenVPN server by exploiting the Heartbleed Bug.",
-    "domain": "security",
-    "source": "hackernews"
   },
   {
     "question": "What does Since OpenVPN provide?",
@@ -2428,12 +1864,6 @@
     "answer": "I normally just do my tunneling with ssh -D. Is there an advantage of using SSH VPN instead of SSH as a SOCKS proxy? Good timing - I just had this thought \"in the shower\" a day or two ago.  I wouldn't utilize a VPN enough to make some of the more traditional providers cost-effective, so something along these lines is probably Just Right. Why not just setup something like PFsense ( http://www.pfsense.org/ ) at home with OpenVPN configured? It's worth noting that the quoted \"$0.",
     "domain": "internet",
     "source": "hackernews:1966021"
-  },
-  {
-    "question": "Tell me about PFsense",
-    "answer": "Why not just setup something like PFsense ( http://www.pfsense.org/ ) at home with OpenVPN configured?.",
-    "domain": "security",
-    "source": "hackernews"
   },
   {
     "question": "What is discussed about Ansible playbooks for installing OpenVPN, IPsec, Tor, etc. on popular clouds?",
@@ -2568,12 +1998,6 @@
     "source": "stackexchange:serverfault:463440"
   },
   {
-    "question": "What is point?",
-    "answer": "The point is to have a certain port which will be accessible only via IPSEC and inaccessible to the rest of the world.",
-    "domain": "security",
-    "source": "stackexchange:serverfault:463440"
-  },
-  {
     "question": "Routing with ipsec tunnel?",
     "answer": "We are trying to determine how to route traffic from our office 1 worker subnet through the office 1 server subnet over the IPSec tunnel to our office 2 server subnet.\nWe want the office 2 worker subnet to pass through the office 2 server subnet to reach the office 1 server subnet.\nThe attached image demonstrates that the server subnets are capable of communicating through the IPSec tunnel at present.",
     "domain": "networking",
@@ -2612,18 +2036,6 @@
   {
     "question": "Putting a middle host between two firewall devices?",
     "answer": "Here is the network topology that I have:\n\nPrivate network 1 --> IPFire Firewall 1 <---> IPFire Firewall 2 <-- Private network 2 \n\nI can ping from private network 1 to private network 2, that is after creating an IPsec tunnel between the two IPFire devices.",
-    "domain": "security",
-    "source": "stackexchange:networkengineering:9450"
-  },
-  {
-    "question": "Tell me about IPFire",
-    "answer": "Private network 1 --> IPFire Firewall 1 <---> IPFire Firewall 2 <-- Private network 2.",
-    "domain": "security",
-    "source": "stackexchange:networkengineering:9450"
-  },
-  {
-    "question": "What is I can ping from private network 1 to private network 2, that?",
-    "answer": "I can ping from private network 1 to private network 2, that is after creating an IPsec tunnel between the two IPFire devices.",
     "domain": "security",
     "source": "stackexchange:networkengineering:9450"
   },
@@ -2670,20 +2082,8 @@
     "source": "stackexchange:networkengineering:39003"
   },
   {
-    "question": "Tell me about RFC",
-    "answer": "The RFC seems to acknowledge that this drop CAN happen and implementations MAY provide a solution for this.",
-    "domain": "general",
-    "source": "stackexchange:networkengineering:39003"
-  },
-  {
     "question": "What is Our IP stack?",
     "answer": "Our IP stack is proprietary, however I would like to know if these drops are seen on other implementations like cisco or juniper and so on.",
-    "domain": "general",
-    "source": "stackexchange:networkengineering:39003"
-  },
-  {
-    "question": "What is Also, what?",
-    "answer": "Also, what is normally the lifetime configured for an SA?.",
     "domain": "general",
     "source": "stackexchange:networkengineering:39003"
   },
@@ -2697,12 +2097,6 @@
     "question": "IPSec: Does it make sense to use conntrack state on ESP in an iptable rule?",
     "answer": "Does it make sense to have an iptable rule as below?\n\n-A INPUT -p esp -m state --state NEW,RELATED,ESTABLISHED -j ACCEPT\n\nI could not find any documentation that would explain the meaning of \"states\" on an ESP flow. TCP/UDP/ICMP are explained in this link (http://www.iptables.info/en/connection-state.html).",
     "domain": "networking",
-    "source": "stackexchange:networkengineering:39365"
-  },
-  {
-    "question": "Tell me about ESP",
-    "answer": "I could not find any documentation that would explain the meaning of \"states\" on an ESP flow.",
-    "domain": "general",
     "source": "stackexchange:networkengineering:39365"
   },
   {
@@ -2790,12 +2184,6 @@
     "source": "stackexchange:networkengineering:44660"
   },
   {
-    "question": "Tell me about AH",
-    "answer": "Unlike Authentication Header (AH), ESP in transport mode does not provide integrity and authentication for the entire IP packet.",
-    "domain": "general",
-    "source": "stackexchange:networkengineering:44660"
-  },
-  {
     "question": "Under what conditions are IPSEC P2 SA's built, broken down, and/or re-created?",
     "answer": "Under what conditions are IPSEC P2 SA's built, broken down, and/or re-created?\n\nI'm trying to root out the science under the phase 2 SA creation and mechanics so I can answer for myself what is the most efficient way to design our VPN tunnels.  I always get subjective answers when I've asked before, so I'm coming at it different asking about HOW they work at a granular level.  Thanks in advance.",
     "domain": "security",
@@ -2804,12 +2192,6 @@
   {
     "question": "What is Under what conditions?",
     "answer": "Under what conditions are IPSEC P2 SA's built, broken down, and/or re-created?.",
-    "domain": "security",
-    "source": "stackexchange:networkengineering:10246"
-  },
-  {
-    "question": "Tell me about SA",
-    "answer": "I'm trying to root out the science under the phase 2 SA creation and mechanics so I can answer for myself what is the most efficient way to design our VPN tunnels.",
     "domain": "security",
     "source": "stackexchange:networkengineering:10246"
   },
@@ -2976,12 +2358,6 @@
     "source": "stackexchange:security:90021"
   },
   {
-    "question": "What is IPSec?",
-    "answer": "IPSec is an IETF defined set of security services that use open standards to provide data confidentiality, integrity, and authentication between peers.",
-    "domain": "security",
-    "source": "stackexchange:security:90021"
-  },
-  {
     "question": "IPSec sequence number?",
     "answer": "I was going through a study of IPsec and I found that there are redundant sequence numbers: one in the AH or ESP header, and the other is in the TCP header for a communication. \n\nIs it not an inefficient use of sequence numbers as we are using the same number again and again? What is the need of this redundancy of sequence numbers?",
     "domain": "security",
@@ -3034,12 +2410,6 @@
     "answer": "Anyone want to start a pool? I'm definitely a \"no\". I have a hard time imagining the FBI putting a crypto backdoor in and securing it with an expiring NDA. Why would the FBI put a backdoor into an ipsec stack?  That's the NSA's job. Holy shit:\"This is also probably the reason why you lost your DARPA funding, they\nmore than likely caught wind of the fact that those backdoors were\npresent and didn't want to create any derivative products based upon\nthe same.",
     "domain": "security",
     "source": "hackernews:2006128"
-  },
-  {
-    "question": "Tell me about FBI",
-    "answer": "I have a hard time imagining the FBI putting a crypto backdoor in and securing it with an expiring NDA.",
-    "domain": "general",
-    "source": "hackernews"
   },
   {
     "question": "Tell me about DARPA",
@@ -3099,12 +2469,6 @@
     "question": "What does >Algo provide?",
     "answer": ">Algo supports DigitalOcean (most user friendly), Amazon Lightsail, Amazon EC2, Microsoft Azure, Google Compute Engine, Scaleway and OpenStack.four of the seven listed are cloud providers that actively encourage censorship for the sake of their business model.",
     "domain": "internet",
-    "source": "hackernews"
-  },
-  {
-    "question": "Tell me about Raspberry Pi",
-    "answer": "Shamless blog post on setting it up on a Raspberry Pi 3 - https://blog.elasticbyte.net/setting-up-a-native-cisco-ipsec...",
-    "domain": "security",
     "source": "hackernews"
   },
   {
@@ -3228,12 +2592,6 @@
     "source": "hackernews"
   },
   {
-    "question": "Tell me about IV",
-    "answer": "Attacker now knows the IV for the next message before the message is encrypted.",
-    "domain": "general",
-    "source": "hackernews"
-  },
-  {
     "question": "Tell me about XOR",
     "answer": "Here's what can happen: if attacker can get the target to encrypt something for it†, the attacker can use for that block known-iv XOR cipherblock-prior-to-any-target-block XOR guessed-plaintext-of-target-block.",
     "domain": "general",
@@ -3276,21 +2634,9 @@
     "source": "hackernews:17513973"
   },
   {
-    "question": "Tell me about XDP",
-    "answer": "`man ip-xfrm` https://www.netdevconf.org/0x12/session.html?toward-an-ebpf-...This will be great, power of XDP in simple interface.",
-    "domain": "internet",
-    "source": "hackernews"
-  },
-  {
     "question": "What is Great post!One nice thing about having the data path in kernel?",
     "answer": "Great post!One nice thing about having the data path in kernel is that you aren’t context switching to userspace and back, nor doing the associated copyin/copyout to move data between address spaces.",
     "domain": "networking",
-    "source": "hackernews"
-  },
-  {
-    "question": "Tell me about NIC",
-    "answer": "This can be further leveraged to do inline crypto offload, with Chelsio’s T6 NIC and Intel QuickAssist chipsets.",
-    "domain": "security",
     "source": "hackernews"
   },
   {
@@ -3309,12 +2655,6 @@
     "question": "Tell me about INL",
     "answer": "How many people at INL have worked on SCADA security research?.",
     "domain": "general",
-    "source": "hackernews"
-  },
-  {
-    "question": "Tell me about US",
-    "answer": "Because Theo believed that a US commit tainting the IPSEC source code could subject IPSEC to US export controls.What's the \"coincidence\" you think you've found?.",
-    "domain": "security",
     "source": "hackernews"
   },
   {
