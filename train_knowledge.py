@@ -82,6 +82,11 @@ def train(
     seed: int = 42,
     augment: bool = True,
     verbose: bool = True,
+    early_stopping: bool = False,
+    patience: int = 300,
+    dropout_rate: float = 0.0,
+    grad_clip: float | None = None,
+    lr_schedule: str | None = None,
 ) -> tuple[NeuralNetwork, BagOfWords, dict[int, str]]:
     """Train the knowledge classifier.  Returns (model, vectorizer, answer_map)."""
 
@@ -141,15 +146,35 @@ def train(
         loss="cross_entropy",
         softmax_output=True,
         seed=seed,
+        dropout_rate=dropout_rate,
+        grad_clip=grad_clip,
+        lr_schedule=lr_schedule,
     )
 
     if verbose:
         print(f"Network: {' → '.join(map(str, layer_sizes))}")
         print(f"Activation: {activation} | Optimizer: {optimizer} | LR: {lr}")
+        extras = []
+        if early_stopping:
+            extras.append(f"early_stop(patience={patience})")
+        if dropout_rate > 0:
+            extras.append(f"dropout={dropout_rate}")
+        if grad_clip is not None:
+            extras.append(f"grad_clip={grad_clip}")
+        if lr_schedule:
+            extras.append(f"lr_schedule={lr_schedule}")
+        if extras:
+            print(f"Enhancements: {', '.join(extras)}")
         print(f"Training for {epochs} epochs…\n")
 
     log_every = max(1, epochs // 10)
-    losses = nn.train(X, labels, epochs=epochs, log_every=log_every if verbose else 0)
+    losses = nn.train(
+        X, labels,
+        epochs=epochs,
+        log_every=log_every if verbose else 0,
+        early_stopping=early_stopping,
+        patience=patience,
+    )
 
     # Evaluate accuracy
     preds = nn.predict(X)
@@ -160,6 +185,8 @@ def train(
     if verbose:
         print(f"\nTraining accuracy: {accuracy:.1%}")
         print(f"Final loss: {losses[-1]:.6f}")
+        if early_stopping and len(losses) < epochs:
+            print(f"Stopped early at epoch {len(losses)}")
 
     # Save
     MODEL_DIR.mkdir(exist_ok=True)
@@ -174,6 +201,28 @@ def train(
         print(f"Vectorizer saved to {VECTORIZER_PATH}")
         print(f"Answer map saved to {ANSWER_MAP_PATH}")
 
+    # Remember training result in project memory
+    try:
+        from project_memory import remember_training_result
+        remember_training_result(
+            accuracy=float(accuracy),
+            entries=n_samples,
+            domains=len(get_domains()),
+            config={
+                "activation": activation,
+                "optimizer": optimizer,
+                "lr": lr,
+                "epochs": len(losses),
+                "hidden": hidden,
+                "dropout_rate": dropout_rate,
+                "grad_clip": grad_clip,
+                "lr_schedule": lr_schedule,
+                "final_loss": float(losses[-1]),
+            },
+        )
+    except Exception:
+        pass  # memory system not critical
+
     return nn, bow, answer_map
 
 
@@ -186,6 +235,14 @@ def main() -> None:
     parser.add_argument("--hidden", type=int, default=128)
     parser.add_argument("--no-augment", action="store_true")
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--early-stopping", action="store_true", help="Enable early stopping")
+    parser.add_argument("--patience", type=int, default=300, help="Early stopping patience")
+    parser.add_argument("--dropout", type=float, default=0.0, help="Dropout rate (0-1)")
+    parser.add_argument("--grad-clip", type=float, default=None, help="Gradient clipping norm")
+    parser.add_argument(
+        "--lr-schedule", choices=["step", "cosine"], default=None,
+        help="Learning rate schedule",
+    )
     args = parser.parse_args()
 
     train(
@@ -196,6 +253,11 @@ def main() -> None:
         hidden=args.hidden,
         seed=args.seed,
         augment=not args.no_augment,
+        early_stopping=args.early_stopping,
+        patience=args.patience,
+        dropout_rate=args.dropout,
+        grad_clip=args.grad_clip,
+        lr_schedule=args.lr_schedule,
     )
 
 

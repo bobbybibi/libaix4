@@ -23,6 +23,13 @@ from flask import Flask, render_template, request, jsonify
 from admin import admin_bp
 from knowledge_base import KNOWLEDGE, get_domains
 from neural_network import NeuralNetwork
+from project_memory import (
+    build_startup_context,
+    cache_response,
+    lookup_cached_response,
+    remember,
+    update_project_fingerprint,
+)
 from vectorizer import BagOfWords
 
 app = Flask(__name__)
@@ -87,6 +94,28 @@ if _load_knowledge_model():
           f"domains: {', '.join(knowledge_domains)}")
 else:
     print("Warning: Knowledge model not found. Run 'python train_knowledge.py' first.")
+
+# Load project memory context
+try:
+    _ctx = build_startup_context()
+    if _ctx.get("project_changed"):
+        print("Project files changed since last run — updating fingerprint.")
+        update_project_fingerprint()
+    else:
+        print("Project unchanged — using cached context.")
+    remember("project", "structure", {
+        "datasets": list(TARGETS.keys()),
+        "domains": knowledge_domains,
+        "answers": len(knowledge_answer_map),
+    })
+    if _ctx.get("cache_size", 0) > 0:
+        print(f"Response cache: {_ctx['cache_size']} entries loaded.")
+    perf = _ctx.get("performance", {})
+    if perf.get("entries", 0) > 0:
+        print(f"Performance trend: {perf.get('latest_accuracy', 'N/A')} accuracy "
+              f"({'↑ improving' if perf.get('improving') else '→ stable'})")
+except Exception as _e:
+    print(f"Note: Project memory init skipped ({_e})")
 print()
 
 
@@ -160,6 +189,17 @@ def chat():
     if not question:
         return jsonify({"error": "Empty question"}), 400
 
+    # Check response cache first
+    cached = lookup_cached_response(question)
+    if cached and cached.get("confidence", 0) >= 0.15:
+        return jsonify({
+            "answer": cached["answer"],
+            "confidence": cached["confidence"],
+            "domain": cached.get("domain", "general"),
+            "suggestions": [],
+            "cached": True,
+        })
+
     # Vectorize user query
     vec = knowledge_bow.transform([question])
 
@@ -195,6 +235,9 @@ def chat():
         answer = ("I'm not sure about that. Try asking about networking, internet, "
                   "intranet, or security topics. Type 'help' for examples.")
         domain = "general"
+
+    # Cache the response for future lookups
+    cache_response(question, answer, confidence, domain)
 
     return jsonify({
         "answer": answer,
@@ -233,6 +276,26 @@ def retrain_knowledge():
             "total_answers": len(knowledge_answer_map),
             "domains": knowledge_domains,
         })
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route("/memory/context", methods=["GET"])
+def memory_context():
+    """Return the current project memory context."""
+    try:
+        ctx = build_startup_context()
+        return jsonify(ctx)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route("/memory/performance", methods=["GET"])
+def memory_performance():
+    """Return model performance history."""
+    try:
+        from project_memory import get_performance_trend
+        return jsonify(get_performance_trend(n=20))
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
