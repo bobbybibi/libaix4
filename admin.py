@@ -74,6 +74,44 @@ ALLOWED_EXTENSIONS = {
     ".txt", ".md", ".pdf", ".csv", ".log", ".conf",
     ".cfg", ".ini", ".json", ".xml", ".html",
 }
+_URL_PATTERN = re.compile(r'https?://[^\s<>"\'`,;)\]]+', re.IGNORECASE)
+
+# Blocklist for SSRF protection — reject URLs targeting internal/cloud-metadata IPs
+_SSRF_BLOCKED_HOSTS = {
+    "localhost", "127.0.0.1", "[::1]", "0.0.0.0",
+    "169.254.169.254",  # AWS/GCP/Azure metadata
+    "metadata.google.internal",
+}
+_SSRF_BLOCKED_PREFIXES = (
+    "http://10.", "https://10.",
+    "http://172.16.", "https://172.16.", "http://172.17.", "https://172.17.",
+    "http://172.18.", "https://172.18.", "http://172.19.", "https://172.19.",
+    "http://172.20.", "https://172.20.", "http://172.21.", "https://172.21.",
+    "http://172.22.", "https://172.22.", "http://172.23.", "https://172.23.",
+    "http://172.24.", "https://172.24.", "http://172.25.", "https://172.25.",
+    "http://172.26.", "https://172.26.", "http://172.27.", "https://172.27.",
+    "http://172.28.", "https://172.28.", "http://172.29.", "https://172.29.",
+    "http://172.30.", "https://172.30.", "http://172.31.", "https://172.31.",
+    "http://192.168.", "https://192.168.",
+)
+MAX_PASTE_LENGTH = 500_000  # 500KB max for pasted text
+
+
+def _is_safe_url(url: str) -> bool:
+    """Check if a URL is safe to crawl (not targeting internal networks)."""
+    url_lower = url.lower()
+    # Extract host from URL
+    try:
+        # Simple host extraction: skip scheme, get host before path/port
+        after_scheme = url_lower.split("://", 1)[1] if "://" in url_lower else url_lower
+        host = after_scheme.split("/")[0].split(":")[0].split("?")[0]
+    except (IndexError, ValueError):
+        return False
+    if host in _SSRF_BLOCKED_HOSTS:
+        return False
+    if url_lower.startswith(_SSRF_BLOCKED_PREFIXES):
+        return False
+    return True
 
 # Credentials — override via env vars ADMIN_USER / ADMIN_PASS
 _admin_user = os.environ.get("ADMIN_USER", "kakababa")
@@ -147,8 +185,11 @@ def api_stats():
     forum_config = load_forum_config()
     site_stats = get_site_crawl_stats()
     engine_stats = get_engine_stats()
+    from digest_engine import get_digest_stats
+    digest_stats = get_digest_stats()
     learning_stats = get_learning_stats()
     cron_config = _load_cron_config()
+    learning_topics = _load_learning_topics()
 
     # Source breakdown from extra knowledge files
     source_breakdown = _get_source_breakdown()
@@ -171,8 +212,10 @@ def api_stats():
         },
         "site_crawler": site_stats,
         "ml_engine": engine_stats,
+        "digest": digest_stats,
         "learning": learning_stats,
         "cron": cron_config,
+        "learning_topics": learning_topics,
     })
 
 
@@ -243,8 +286,16 @@ def paste_text():
         return jsonify({"error": "No text provided"}), 400
 
     text = data["text"]
+    if len(text) > MAX_PASTE_LENGTH:
+        return jsonify({"error": f"Text too long ({len(text)} chars). Max: {MAX_PASTE_LENGTH}"}), 400
     text_len = len(text)
     entries = process_pasted_text(text, data.get("domain", ""))
+
+    # Detect URLs in the pasted text
+    urls_found = _URL_PATTERN.findall(text)
+    urls_found = [u.rstrip('.,;:!?)') for u in urls_found]
+    urls_found = list(dict.fromkeys(urls_found))  # deduplicate preserving order
+
     if entries:
         save_path = _save_knowledge(entries, "paste")
         domain_breakdown = _entries_domain_breakdown(entries)
@@ -257,17 +308,88 @@ def paste_text():
             "saved_to": str(save_path),
             "domain_breakdown": domain_breakdown,
             "topics": topics,
+            "urls_found": urls_found,
             "message": f"Extracted {len(entries)} entries from {text_len} characters of pasted text.",
         })
     return jsonify({
         "status": "warning",
         "entries_extracted": 0,
         "text_length": text_len,
+        "urls_found": urls_found,
         "message": (
             "No Q&A entries could be extracted. Tips:\n"
             "• Include definitions like 'X is a Y' or 'X provides Y'\n"
             "• Use sentences longer than 30 characters\n"
             "• Paste structured content (articles, docs, wiki text)"
+        ),
+    })
+
+
+@admin_bp.route("/paste-and-crawl", methods=["POST"])
+@login_required
+def paste_and_crawl():
+    """Paste text: extract Q&A entries + detect URLs and crawl them for knowledge."""
+    data = request.get_json()
+    if not data or not data.get("text"):
+        return jsonify({"error": "No text provided"}), 400
+
+    text = data["text"]
+    if len(text) > MAX_PASTE_LENGTH:
+        return jsonify({"error": f"Text too long ({len(text)} chars). Max: {MAX_PASTE_LENGTH}"}), 400
+    topic = data.get("topic", "")
+
+    # Step 1: Extract Q&A from text directly
+    entries = process_pasted_text(text, data.get("domain", ""))
+    if entries:
+        _save_knowledge(entries, "paste")
+
+    # Step 2: Find URLs in text
+    urls_found = _URL_PATTERN.findall(text)
+    urls_found = [u.rstrip('.,;:!?)') for u in urls_found]
+    urls_found = list(dict.fromkeys(urls_found))  # deduplicate preserving order
+
+    # Step 3: Crawl found URLs (with SSRF protection)
+    crawl_results = []
+    total_crawled_entries = 0
+    for url in urls_found[:10]:  # Limit to 10 URLs
+        if not _is_safe_url(url):
+            crawl_results.append({
+                "url": url,
+                "status": "blocked",
+                "error": "URL targets an internal or reserved network address",
+            })
+            continue
+        try:
+            result = add_site_job(
+                url=url,
+                topic=topic or classify_domain(text[:500]),
+                keywords=[],
+                max_pages=10,
+                max_depth=1,
+            )
+            crawl_results.append({
+                "url": url,
+                "status": result.get("status", "queued"),
+                "entries": result.get("entries", 0),
+            })
+            total_crawled_entries += result.get("entries", 0)
+        except Exception as exc:
+            crawl_results.append({
+                "url": url,
+                "status": "error",
+                "error": str(exc),
+            })
+
+    return jsonify({
+        "status": "success",
+        "text_entries": len(entries),
+        "urls_found": urls_found,
+        "urls_crawled": len(crawl_results),
+        "crawl_results": crawl_results,
+        "total_entries": len(entries) + total_crawled_entries,
+        "message": (
+            f"Extracted {len(entries)} entries from text. "
+            f"Found {len(urls_found)} URLs, crawled {len(crawl_results)}."
         ),
     })
 
@@ -709,6 +831,9 @@ def site_crawl():
     # Basic URL validation
     if not url.startswith(("http://", "https://")):
         return jsonify({"error": "URL must start with http:// or https://"}), 400
+    # SSRF protection
+    if not _is_safe_url(url):
+        return jsonify({"error": "URL targets an internal or reserved network address"}), 400
     result = add_site_job(
         url=url,
         topic=data["topic"],
@@ -799,6 +924,48 @@ def ml_config():
         save_engine_config(config)
         return jsonify({"status": "success", "config": config})
     return jsonify(load_engine_config())
+
+
+# ── Digest Engine controls ────────────────────────────────────────────
+
+@admin_bp.route("/digest/stats")
+@login_required
+def digest_stats():
+    """Return digest engine statistics."""
+    from digest_engine import get_digest_stats
+    return jsonify(get_digest_stats())
+
+
+@admin_bp.route("/digest/run", methods=["POST"])
+@login_required
+def digest_run():
+    """Run a full digest cycle."""
+    from digest_engine import run_digest_cycle
+    return jsonify(run_digest_cycle())
+
+
+@admin_bp.route("/digest/dedup", methods=["POST"])
+@login_required
+def digest_dedup():
+    """Run deduplication only."""
+    from digest_engine import deduplicate_entries
+    return jsonify(deduplicate_entries())
+
+
+@admin_bp.route("/digest/cross-ref", methods=["POST"])
+@login_required
+def digest_cross_ref():
+    """Run cross-referencing only."""
+    from digest_engine import cross_reference_entries
+    return jsonify(cross_reference_entries())
+
+
+@admin_bp.route("/digest/derive", methods=["POST"])
+@login_required
+def digest_derive():
+    """Generate derived knowledge entries."""
+    from digest_engine import generate_derived_knowledge
+    return jsonify(generate_derived_knowledge())
 
 
 # ── Admin Chatbot ─────────────────────────────────────────────────────
@@ -994,6 +1161,108 @@ def toggle_conditioning(entry_id: str):
     return jsonify({"error": "Entry not found"}), 404
 
 
+# ── Learning Topics ──────────────────────────────────────────────────
+
+@admin_bp.route("/learning-topics", methods=["GET"])
+@login_required
+def get_learning_topics():
+    """Return configured learning topics."""
+    config = _load_learning_topics()
+    return jsonify(config)
+
+
+@admin_bp.route("/learning-topics", methods=["POST"])
+@login_required
+def add_learning_topic():
+    """Add a new learning topic."""
+    data = request.get_json()
+    if not data or not data.get("name"):
+        return jsonify({"error": "Topic name is required"}), 400
+
+    name = str(data["name"]).strip()
+    if not name:
+        return jsonify({"error": "Topic name is required"}), 400
+    if len(name) > 200:
+        return jsonify({"error": "Topic name too long (max 200 chars)"}), 400
+
+    priority = data.get("priority", "medium")
+    if priority not in ("high", "medium", "low"):
+        return jsonify({"error": "Priority must be high, medium, or low"}), 400
+
+    enabled = bool(data.get("enabled", True))
+
+    config = _load_learning_topics()
+
+    # Prevent duplicates (case-insensitive)
+    for t in config.get("topics", []):
+        if t["name"].lower() == name.lower():
+            return jsonify({"error": f"Topic '{name}' already exists"}), 409
+
+    config["topics"].append({
+        "name": name,
+        "priority": priority,
+        "enabled": enabled,
+        "added_at": datetime.now(timezone.utc).isoformat(),
+    })
+    config["last_updated"] = datetime.now(timezone.utc).isoformat()
+    _save_learning_topics(config)
+
+    return jsonify({"status": "ok", "topics": config["topics"]})
+
+
+@admin_bp.route("/learning-topics/<topic_name>", methods=["DELETE"])
+@login_required
+def remove_learning_topic(topic_name: str):
+    """Remove a learning topic."""
+    config = _load_learning_topics()
+    original_len = len(config.get("topics", []))
+    config["topics"] = [
+        t for t in config.get("topics", [])
+        if t["name"].lower() != topic_name.lower()
+    ]
+    if len(config["topics"]) == original_len:
+        return jsonify({"error": f"Topic '{topic_name}' not found"}), 404
+
+    config["last_updated"] = datetime.now(timezone.utc).isoformat()
+    _save_learning_topics(config)
+    return jsonify({"status": "ok", "topics": config["topics"]})
+
+
+@admin_bp.route("/learning-topics/<topic_name>/toggle", methods=["POST"])
+@login_required
+def toggle_learning_topic(topic_name: str):
+    """Toggle a learning topic enabled/disabled."""
+    config = _load_learning_topics()
+    for t in config.get("topics", []):
+        if t["name"].lower() == topic_name.lower():
+            t["enabled"] = not t.get("enabled", True)
+            config["last_updated"] = datetime.now(timezone.utc).isoformat()
+            _save_learning_topics(config)
+            return jsonify({"status": "ok", "enabled": t["enabled"], "topic": t["name"]})
+    return jsonify({"error": f"Topic '{topic_name}' not found"}), 404
+
+
+@admin_bp.route("/learning-topics/<topic_name>/priority", methods=["POST"])
+@login_required
+def set_learning_topic_priority(topic_name: str):
+    """Set priority for a learning topic. Body: {"priority": "high|medium|low"}"""
+    data = request.get_json()
+    if not data or "priority" not in data:
+        return jsonify({"error": "Priority is required"}), 400
+
+    priority = data["priority"]
+    if priority not in ("high", "medium", "low"):
+        return jsonify({"error": "Priority must be high, medium, or low"}), 400
+
+    config = _load_learning_topics()
+    for t in config.get("topics", []):
+        if t["name"].lower() == topic_name.lower():
+            t["priority"] = priority
+            config["last_updated"] = datetime.now(timezone.utc).isoformat()
+            _save_learning_topics(config)
+            return jsonify({"status": "ok", "priority": priority, "topic": t["name"]})
+    return jsonify({"error": f"Topic '{topic_name}' not found"}), 404
+
 
 def _build_chat_followup(result: dict, actions: list[dict], query_data: dict) -> str:
     """Build a human-readable followup from action/query results."""
@@ -1138,6 +1407,18 @@ CRON_REDLINES = {
         "max_absolute_per_hour": 2,
         "note": "Each cycle trains multiple models. Very CPU-heavy. 1/hr is optimal.",
     },
+    "digest": {
+        "label": "Digestive Mode",
+        "max_safe_per_hour": 2,
+        "max_absolute_per_hour": 4,
+        "note": "Processes existing data. CPU-moderate. 1-2/hr is optimal.",
+    },
+    "topic_learner": {
+        "label": "Topic Auto-Learner",
+        "max_safe_per_hour": 4,
+        "max_absolute_per_hour": 6,
+        "note": "Crawls for priority topics. Rate-limited by API sources.",
+    },
 }
 
 
@@ -1149,7 +1430,7 @@ def cron_config_endpoint():
         if not data:
             return jsonify({"error": "No data provided"}), 400
         config = _load_cron_config()
-        for wf_key in ["auto_train", "wiki_crawler", "forum_crawler", "ml_growth"]:
+        for wf_key in ["auto_train", "wiki_crawler", "forum_crawler", "ml_growth", "digest", "topic_learner"]:
             if wf_key in data:
                 wf_data = data[wf_key]
                 if "enabled" in wf_data:
@@ -1198,6 +1479,38 @@ def _save_cron_config(config: dict) -> None:
     )
 
 
+LEARNING_TOPICS_PATH = Path("data/learning_topics.json")
+
+
+def _load_learning_topics() -> dict:
+    """Load learning topics config, creating defaults on first access."""
+    if LEARNING_TOPICS_PATH.exists():
+        try:
+            return json.loads(LEARNING_TOPICS_PATH.read_text(encoding="utf-8"))
+        except Exception:
+            pass
+    defaults = {
+        "topics": [
+            {"name": "network security", "priority": "high", "enabled": True, "added_at": None},
+            {"name": "cloud networking", "priority": "medium", "enabled": True, "added_at": None},
+            {"name": "wireless protocols", "priority": "medium", "enabled": True, "added_at": None},
+        ],
+        "auto_discover": True,
+        "last_updated": None,
+    }
+    _save_learning_topics(defaults)
+    return defaults
+
+
+def _save_learning_topics(config: dict) -> None:
+    """Save learning topics config to file."""
+    LEARNING_TOPICS_PATH.parent.mkdir(parents=True, exist_ok=True)
+    LEARNING_TOPICS_PATH.write_text(
+        json.dumps(config, indent=2, ensure_ascii=False, default=str),
+        encoding="utf-8",
+    )
+
+
 def _default_cron_config() -> dict:
     return {
         "workflows": {
@@ -1205,6 +1518,8 @@ def _default_cron_config() -> dict:
             "wiki_crawler": {"enabled": True, "runs_per_hour": 4},
             "forum_crawler": {"enabled": True, "runs_per_hour": 4},
             "ml_growth": {"enabled": True, "runs_per_hour": 1},
+            "digest": {"enabled": True, "runs_per_hour": 1},
+            "topic_learner": {"enabled": True, "runs_per_hour": 2},
         },
         "updated_at": None,
     }

@@ -115,6 +115,8 @@ textarea{min-height:120px;resize:vertical}
   <a href="#" onclick="showSection('learn')" id="nav-learn">🎓 AI Learning</a>
   <a href="#" onclick="showSection('mlengine')" id="nav-mlengine">⚙️ ML Engine</a>
   <a href="#" onclick="showSection('cron')" id="nav-cron">⏱️ Cron Controls</a>
+  <a href="#" onclick="showSection('topics')" id="nav-topics">🎯 Learning Topics</a>
+  <a href="#" onclick="showSection('digest')" id="nav-digest">🧬 Digest Mode</a>
   <a href="#" onclick="showSection('activity')" id="nav-activity">📡 Live Activity</a>
   <a href="#" onclick="showSection('knowledge')" id="nav-knowledge">📚 Knowledge Browser</a>
   <a href="#" onclick="showSection('learned')" id="nav-learned">📖 Learned Topics</a>
@@ -324,6 +326,7 @@ Type <code>help</code> for full command list, or just tell me what you need!</di
   <label for="pasteDomain">Domain hint (optional)</label>
   <input type="text" id="pasteDomain" placeholder="e.g. wifi, troubleshooting...">
   <button class="btn btn-primary" onclick="submitPaste()">🧠 Extract Knowledge from Text</button>
+  <button class="btn btn-blue" onclick="submitPasteAndCrawl()">🔗 Extract + Crawl URLs</button>
   <div id="paste-status"></div>
 
   <hr style="border-color:#30363d;margin:24px 0">
@@ -521,6 +524,65 @@ Crawl for network segmentation best practices"></textarea>
   <div id="ml-events"></div>
 </div>
 
+<!-- ══════════════ LEARNING TOPICS ══════════════ -->
+<div class="section" id="sec-topics">
+  <h2>🎯 Learning Topics Priority</h2>
+  <p style="margin-bottom:16px;color:#8b949e">
+    Set priority topics for the AI to focus on. High-priority topics are crawled first by the automated topic learner.
+  </p>
+
+  <!-- Add new topic form -->
+  <div style="display:flex;gap:12px;align-items:flex-end;margin-bottom:20px">
+    <div style="flex:2">
+      <label for="ltName">Topic Name</label>
+      <input type="text" id="ltName" placeholder="e.g. zero trust architecture">
+    </div>
+    <div style="flex:1">
+      <label for="ltPriority">Priority</label>
+      <select id="ltPriority">
+        <option value="high">🔴 High</option>
+        <option value="medium" selected>🟡 Medium</option>
+        <option value="low">🟢 Low</option>
+      </select>
+    </div>
+    <button class="btn btn-primary" onclick="addLearningTopic()">+ Add Topic</button>
+  </div>
+  <div id="lt-status"></div>
+
+  <!-- Topics list -->
+  <h3 style="font-size:1rem;margin-bottom:12px">Configured Topics</h3>
+  <div id="lt-list"></div>
+
+  <hr style="border-color:#30363d;margin:24px 0">
+  <div style="display:flex;gap:8px">
+    <button class="btn btn-blue" onclick="loadLearningTopics()">🔄 Refresh</button>
+  </div>
+</div>
+
+<!-- ══════════════ DIGEST MODE ══════════════ -->
+<div class="section" id="sec-digest">
+  <h2>🧬 Digestive Mode — Data Crunching</h2>
+  <p style="margin-bottom:16px;color:#8b949e">
+    Process existing knowledge data: deduplicate entries, score quality, cross-reference related knowledge, and generate derived Q&amp;A.
+    This runs automatically via the digest cron job, or you can trigger it manually.
+  </p>
+
+  <!-- Action buttons -->
+  <div style="margin-bottom:20px">
+    <button class="btn btn-primary" onclick="runDigest()">🧬 Run Full Digest Cycle</button>
+    <button class="btn btn-blue" onclick="runDedup()">🔍 Deduplicate Only</button>
+    <button class="btn btn-blue" onclick="runCrossRef()">🔗 Cross-Reference Only</button>
+    <button class="btn btn-blue" onclick="runDerive()">💡 Generate Derived Knowledge</button>
+  </div>
+  <div id="digest-status"></div>
+
+  <hr style="border-color:#30363d;margin:24px 0">
+
+  <!-- Digest stats -->
+  <h3 style="font-size:1rem;margin-bottom:12px">Digest Statistics</h3>
+  <div id="digest-stats"></div>
+</div>
+
 <!-- ══════════════ CRON CONTROLS ══════════════ -->
 <div class="section" id="sec-cron">
   <h2>⏱️ Cron Job Controls &amp; Redline Warnings</h2>
@@ -606,6 +668,8 @@ function showSection(name) {
   if (name === 'mlengine') loadMLEngine();
   if (name === 'learned') loadLearned();
   if (name === 'chatbot') { document.getElementById('chat-input').focus(); loadConditioning(); }
+  if (name === 'topics') loadLearningTopics();
+  if (name === 'digest') loadDigestStats();
   if (name === 'cron') loadCronConfig();
   if (name === 'activity') loadActivity();
   if (name === 'dashboard') loadDashboardGrowth();
@@ -765,6 +829,9 @@ async function submitPaste() {
     }
     if (d.samples && d.samples.length) {
       details += `\n<strong>Sample entries:</strong>\n${(d.samples).map(s => `  Q: ${s.question}\n  A: ${s.answer}`).join('\n\n')}`;
+    }
+    if (d.urls_found && d.urls_found.length) {
+      details += `\n<strong>URLs detected:</strong> ${d.urls_found.join(', ')}\n<em>Tip: Use "Extract + Crawl URLs" to also crawl these links.</em>`;
     }
     el.innerHTML = resultBox('success', details);
     refreshStats();
@@ -1071,7 +1138,7 @@ async function loadDashboardGrowth() {
   const cron = d.cron || {};
   const wfs = cron.workflows || {};
   const activeWfs = Object.entries(wfs).filter(([,v]) => v.enabled).length;
-  ga.innerHTML = `<strong style="color:#3fb950">${activeWfs}/4</strong> workflows active | Learning ${d.learning?.learning_velocity?.toFixed(1)||0} entries/hr`;
+  ga.innerHTML = `<strong style="color:#3fb950">${activeWfs}/${Object.keys(wfs).length}</strong> workflows active | Learning ${d.learning?.learning_velocity?.toFixed(1)||0} entries/hr`;
 
   // Stabilization notes
   const sn = document.getElementById('stabilization-notes');
@@ -1541,6 +1608,153 @@ async function loadLearned() {
   } catch (e) {
     summaryEl.innerHTML = statusHTML('err', 'Failed to load learned topics: ' + e.message);
   }
+}
+
+/* ── Learning Topics ── */
+async function loadLearningTopics() {
+  const d = await api('/admin/learning-topics');
+  const el = document.getElementById('lt-list');
+  const topics = d.topics || [];
+  if (!topics.length) {
+    el.innerHTML = '<p style="color:#8b949e">No learning topics configured. Add topics above.</p>';
+    return;
+  }
+  const priorityColors = {high:'#f85149', medium:'#d29922', low:'#3fb950'};
+  const priorityIcons = {high:'🔴', medium:'🟡', low:'🟢'};
+  el.innerHTML = topics.map(t => `
+    <div class="topic-item">
+      <span class="name">${esc(t.name)}</span>
+      <select style="background:#0d1117;color:#c9d1d9;border:1px solid #30363d;border-radius:4px;padding:4px 8px;font-size:.85rem"
+        onchange="setTopicPriority('${esc(t.name)}', this.value)">
+        <option value="high" ${t.priority==='high'?'selected':''}>🔴 High</option>
+        <option value="medium" ${t.priority==='medium'?'selected':''}>🟡 Medium</option>
+        <option value="low" ${t.priority==='low'?'selected':''}>🟢 Low</option>
+      </select>
+      <span class="badge ${t.enabled?'badge-on':'badge-off'}" style="cursor:pointer"
+        onclick="toggleLearningTopic('${esc(t.name)}')">${t.enabled?'ON':'OFF'}</span>
+      <span style="color:#8b949e;font-size:.8rem">${t.added_at ? new Date(t.added_at).toLocaleDateString() : '—'}</span>
+      <button class="btn btn-red" style="padding:4px 10px;font-size:.8rem;margin:0"
+        onclick="removeLearningTopic('${esc(t.name)}')">✕</button>
+    </div>
+  `).join('');
+}
+async function addLearningTopic() {
+  const name = document.getElementById('ltName').value.trim();
+  if (!name) return;
+  const priority = document.getElementById('ltPriority').value;
+  const el = document.getElementById('lt-status');
+  el.innerHTML = spinnerHTML('Adding topic…');
+  const d = await postJSON('/admin/learning-topics', {name, priority});
+  if (d.status === 'success') {
+    el.innerHTML = statusHTML('ok', `✅ Added "${name}" with ${priority} priority`);
+    document.getElementById('ltName').value = '';
+    loadLearningTopics();
+  } else {
+    el.innerHTML = statusHTML('err', `❌ ${d.error}`);
+  }
+}
+async function removeLearningTopic(name) {
+  if (!confirm(`Remove learning topic "${name}"?`)) return;
+  await api(`/admin/learning-topics/${encodeURIComponent(name)}`, {method:'DELETE'});
+  loadLearningTopics();
+}
+async function toggleLearningTopic(name) {
+  await postJSON(`/admin/learning-topics/${encodeURIComponent(name)}/toggle`, {});
+  loadLearningTopics();
+}
+async function setTopicPriority(name, priority) {
+  await postJSON(`/admin/learning-topics/${encodeURIComponent(name)}/priority`, {priority});
+  loadLearningTopics();
+}
+
+/* ── Digest Mode ── */
+async function loadDigestStats() {
+  const el = document.getElementById('digest-stats');
+  el.innerHTML = spinnerHTML('Loading digest stats…');
+  try {
+    const d = await api('/admin/digest/stats');
+    const s = d.stats || {};
+    el.innerHTML = `
+      <div class="cards" style="margin-bottom:16px">
+        <div class="card"><div class="label">Digest Cycles</div><div class="value">${d.digest_count || 0}</div></div>
+        <div class="card"><div class="label">Duplicates Removed</div><div class="value green">${s.duplicates_removed || 0}</div></div>
+        <div class="card"><div class="label">Derived Entries</div><div class="value purple">${s.derived_generated || 0}</div></div>
+        <div class="card"><div class="label">Cross-references</div><div class="value orange">${s.connections_found || 0}</div></div>
+      </div>
+      <div class="result-box">${d.last_digest ? 'Last digest: ' + new Date(d.last_digest).toLocaleString() : 'No digest cycles run yet.'}\nAvg Quality Score: ${s.avg_quality ? s.avg_quality.toFixed(3) : '—'}</div>
+    `;
+  } catch (e) {
+    el.innerHTML = statusHTML('err', 'Failed to load digest stats: ' + e.message);
+  }
+}
+async function runDigest() {
+  const el = document.getElementById('digest-status');
+  el.innerHTML = spinnerHTML('Running full digest cycle (dedup → score → cross-ref → derive)… may take a minute.');
+  try {
+    const d = await postJSON('/admin/digest/run', {});
+    if (d.status === 'success') {
+      const steps = d.steps || [];
+      let details = '✅ Digest cycle complete!\n\n';
+      for (const s of steps) {
+        details += `${s.step}: ${JSON.stringify(s, null, 0)}\n`;
+      }
+      el.innerHTML = resultBox('success', details);
+      loadDigestStats(); refreshStats();
+    } else {
+      el.innerHTML = resultBox('error', `❌ ${d.error || d.status}`);
+    }
+  } catch (e) {
+    el.innerHTML = resultBox('error', '❌ ' + e.message);
+  }
+}
+async function runDedup() {
+  const el = document.getElementById('digest-status');
+  el.innerHTML = spinnerHTML('Deduplicating entries…');
+  try {
+    const d = await postJSON('/admin/digest/dedup', {});
+    el.innerHTML = resultBox('success', `✅ Deduplication: ${d.duplicates_removed || 0} duplicates removed from ${d.files_modified || 0} files`);
+    refreshStats();
+  } catch (e) { el.innerHTML = resultBox('error', '❌ ' + e.message); }
+}
+async function runCrossRef() {
+  const el = document.getElementById('digest-status');
+  el.innerHTML = spinnerHTML('Building knowledge graph…');
+  try {
+    const d = await postJSON('/admin/digest/cross-ref', {});
+    el.innerHTML = resultBox('success', `✅ Cross-reference: ${d.connections || 0} connections, ${d.clusters || 0} clusters, ${d.key_terms || 0} key terms`);
+  } catch (e) { el.innerHTML = resultBox('error', '❌ ' + e.message); }
+}
+async function runDerive() {
+  const el = document.getElementById('digest-status');
+  el.innerHTML = spinnerHTML('Generating derived knowledge…');
+  try {
+    const d = await postJSON('/admin/digest/derive', {});
+    el.innerHTML = resultBox('success', `✅ Derived: ${d.entries_generated || 0} new entries generated\n\nSamples:\n${(d.samples || []).map(s => `Q: ${s.question}\nA: ${s.answer?.substring(0, 150)}…`).join('\n\n')}`);
+    refreshStats();
+  } catch (e) { el.innerHTML = resultBox('error', '❌ ' + e.message); }
+}
+
+/* ── Paste & Crawl ── */
+async function submitPasteAndCrawl() {
+  const text = document.getElementById('pasteText').value.trim();
+  if (!text) return;
+  const el = document.getElementById('paste-status');
+  el.innerHTML = spinnerHTML(`Extracting knowledge and crawling URLs from ${text.length} characters…`);
+  const d = await postJSON('/admin/paste-and-crawl', {text, domain: document.getElementById('pasteDomain').value, topic: document.getElementById('pasteDomain').value});
+  let details = `✅ Extracted <strong>${d.text_entries || 0}</strong> entries from text\n`;
+  details += `🔗 Found <strong>${(d.urls_found||[]).length}</strong> URLs\n`;
+  if (d.urls_found && d.urls_found.length) {
+    details += `\n<strong>URLs found:</strong>\n${d.urls_found.map(u => `  ${u}`).join('\n')}\n`;
+  }
+  if (d.crawl_results && d.crawl_results.length) {
+    details += `\n<strong>Crawl results:</strong>\n`;
+    for (const cr of d.crawl_results) {
+      details += `  ${cr.url}: ${cr.status} (${cr.entries || 0} entries)\n`;
+    }
+  }
+  details += `\nTotal: <strong>${d.total_entries || 0}</strong> entries`;
+  el.innerHTML = resultBox('success', details);
+  refreshStats();
 }
 </script>
 </html>

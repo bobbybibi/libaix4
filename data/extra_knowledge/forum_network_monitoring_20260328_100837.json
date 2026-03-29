@@ -6,12 +6,6 @@
     "source": "stackexchange:serverfault:389946"
   },
   {
-    "question": "What is There?",
-    "answer": "There are a host of open source network monitoring systems available.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:389946"
-  },
-  {
     "question": "What is thing?",
     "answer": "The thing is most networking monitors are written in either PHP or Perl.",
     "domain": "general",
@@ -39,12 +33,6 @@
     "question": "Tell me about Possible Duplicate",
     "answer": "Possible Duplicate:\n  What tool do you use to monitor your servers?.",
     "domain": "general",
-    "source": "stackexchange:serverfault:1259"
-  },
-  {
-    "question": "Tell me about DNS",
-    "answer": "We have a main server which acts as a DNS among other services.",
-    "domain": "internet",
     "source": "stackexchange:serverfault:1259"
   },
   {
@@ -92,12 +80,6 @@
   {
     "question": "What is I'm looking for an ENTERPRISE Networking monitoring tool, CACTI?",
     "answer": "I'm looking for an ENTERPRISE Networking monitoring tool, CACTI is great but we want more.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:220204"
-  },
-  {
-    "question": "Tell me about SNMP",
-    "answer": "I'm looking for some features like:\n- Cisco monitoring (SNMP)\n- Cisco Netflow\n- Threshold alarms\n- Notifications.",
     "domain": "general",
     "source": "stackexchange:serverfault:220204"
   },
@@ -174,18 +156,6 @@
     "source": "stackexchange:serverfault:536964"
   },
   {
-    "question": "Tell me about TCP",
-    "answer": "C:\\>Nmcap.exe /network * /capture KerberosV5 || TCP.port==389 || UDP.port==389 file c:\\temp\\capture.chn:200mb\n'Nmcap.exe' is not recognized as an internal or external command,\noperable program or batch file.",
-    "domain": "networking",
-    "source": "stackexchange:serverfault:536964"
-  },
-  {
-    "question": "Tell me about UDP",
-    "answer": "'UDP.port' is not recognized as an internal or external command,\noperable program or batch file.",
-    "domain": "networking",
-    "source": "stackexchange:serverfault:536964"
-  },
-  {
     "question": "Network monitoring tool for FreeBSD?",
     "answer": "I am using FreeBSD 6.1 as router.\nNow I looking for Network Traffic Monitoring software to see what's happening with internet link.\nI have two installed LAN cards in my system, one for lan and other for wan traffic I also have a static IP address on wan side and do not have X system installed (only console).\nI sow a lot of things at Fresh Ports for FreeBSD but I can't decide what is best for me.",
     "domain": "networking",
@@ -198,33 +168,15 @@
     "source": "stackexchange:serverfault:21926"
   },
   {
-    "question": "Tell me about LAN",
-    "answer": "I have two installed LAN cards in my system, one for lan and other for wan traffic I also have a static IP address on wan side and do not have X system installed (only console).",
-    "domain": "networking",
-    "source": "stackexchange:serverfault:21926"
-  },
-  {
     "question": "Tell me about Fresh Ports",
     "answer": "I sow a lot of things at Fresh Ports for FreeBSD but I can't decide what is best for me.",
     "domain": "general",
     "source": "stackexchange:serverfault:21926"
   },
   {
-    "question": "Tell me about IP",
-    "answer": "-And regarding to my earlier question to I can see whats happening in my local network \n and what site visiting each one local IP address with minor of statistic for it.",
-    "domain": "networking",
-    "source": "stackexchange:serverfault:21926"
-  },
-  {
     "question": "ARP Network monitoring and debugging:?",
     "answer": "I am reading the RFC 826, however I am unable to get the context behind the Network monitoring and debugging section:\n\n\n  Network monitoring and debugging:\n  \n  The above Address Resolution protocol allows a machine to gain\n  knowledge about the higher level protocol activity (e.g., CHAOS,\n  Internet, PUP, DECnet) on an Ethernet cable.  It can determine which\n  Ethernet protocol type fields are in use (by value) and the protocol\n  addresses within each protocol type.",
     "domain": "networking",
-    "source": "stackexchange:networkengineering:26165"
-  },
-  {
-    "question": "Tell me about RFC",
-    "answer": "I am reading the RFC 826, however I am unable to get the context behind the Network monitoring and debugging section:.",
-    "domain": "troubleshooting",
     "source": "stackexchange:networkengineering:26165"
   },
   {
@@ -252,26 +204,8 @@
     "source": "stackexchange:networkengineering:26165"
   },
   {
-    "question": "Tell me about ARP",
-    "answer": "I apologize for this vague question, however I am not able to understand what the difference between the ARP module and this process for monitor and debugging.",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:26165"
-  },
-  {
     "question": "Why vlan is mandatory for rspan network monitoring?",
     "answer": "Context :- For network monitoring/packet mirrioring techniques like SPAN and RSPAN. \n\nWhy is it mandatory to have a dedicated vlan for RSPAN ? why can't we mirror the packets received in a port and send it directly to a specific destination,  why to forward it as vlan only ?",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:12849"
-  },
-  {
-    "question": "Tell me about SPAN",
-    "answer": "Context :- For network monitoring/packet mirrioring techniques like SPAN and RSPAN.",
-    "domain": "general",
-    "source": "stackexchange:networkengineering:12849"
-  },
-  {
-    "question": "What is Why?",
-    "answer": "Why is it mandatory to have a dedicated vlan for RSPAN ?.",
     "domain": "networking",
     "source": "stackexchange:networkengineering:12849"
   },
@@ -312,12 +246,6 @@
     "source": "stackexchange:networkengineering:44891"
   },
   {
-    "question": "Tell me about SCTP",
-    "answer": "Problem background: Our application communicates with multiple other nodes over SCTP.",
-    "domain": "general",
-    "source": "stackexchange:networkengineering:44891"
-  },
-  {
     "question": "What is One approach I'm planning to take?",
     "answer": "One approach I'm planning to take is monitoring SCTP Re-transmission using a network sniffer, tcpdump, ngrep, wireshark etc every 1-2 minutes dump 15-30 seconds of data in a file and check if re-transmissions are above a certain threshold then trigger above actions.",
     "domain": "networking",
@@ -332,12 +260,6 @@
   {
     "question": "Tell me about IPFIX",
     "answer": "Recently I'm investigating the solutions for ip flow monitoring, and come across a lot of pages talking about different solutions and trade-offs between netflow, sflow, IPFIX, etc.",
-    "domain": "general",
-    "source": "stackexchange:networkengineering:72395"
-  },
-  {
-    "question": "What is Also, there?",
-    "answer": "Also, there are trends of adding the ip flow monitoring on individual hosts themselves like what Cumulus NetQ solution does.",
     "domain": "general",
     "source": "stackexchange:networkengineering:72395"
   },
@@ -368,12 +290,6 @@
   {
     "question": "What is What tools?",
     "answer": "What tools are able to provide an almost real time weather map of usage and average traffic per timeframe going over the different links?.",
-    "domain": "general",
-    "source": "stackexchange:networkengineering:42"
-  },
-  {
-    "question": "What is What?",
-    "answer": "What are some ways or solutions to actively monitor my network and provide alerts on heavy network usage over a prolonged period?.",
     "domain": "general",
     "source": "stackexchange:networkengineering:42"
   },
@@ -414,12 +330,6 @@
     "source": "stackexchange:security:121670"
   },
   {
-    "question": "Tell me about NMS",
-    "answer": "I believe it depends on the configuration of the NMS system, and what traffic is flowing across.",
-    "domain": "general",
-    "source": "stackexchange:security:121670"
-  },
-  {
     "question": "Is this a reasonable approach of continous network monitoring?",
     "answer": "I'm currently implementing some mechanisms to continuously monitor our network. Most of this is done through OSSIM but I also extended it by some self written monitoring scripts.",
     "domain": "networking",
@@ -441,12 +351,6 @@
     "question": "how to monitor a Wifi (802.11) network?",
     "answer": "How to capture a sequential stream of data between two machines, making no assumptions about network layer protocols? On wired network, one can do it by ARP spoofing and then sniff the network. One wireless network, could it be possible? Or could one disguise its MAC and receiving data from both S and D at the same time? \n\nIn addition, some WiFi has password on it, and some doesn't. It is said that using a WiFi that doesn't have a password is significantly insecure.",
     "domain": "wifi",
-    "source": "stackexchange:security:35345"
-  },
-  {
-    "question": "Tell me about MAC",
-    "answer": "Or could one disguise its MAC and receiving data from both S and D at the same time?.",
-    "domain": "general",
     "source": "stackexchange:security:35345"
   },
   {
@@ -498,12 +402,6 @@
     "source": "stackexchange:security:29824"
   },
   {
-    "question": "Tell me about Resource Monitor",
-    "answer": "Is it possible for malware to hide their network activity from tools like the Resource Monitor that ships with windows?.",
-    "domain": "security",
-    "source": "stackexchange:security:29824"
-  },
-  {
     "question": "What is How much effort?",
     "answer": "How much effort is it for a malware developer to implement such functionality?.",
     "domain": "security",
@@ -528,21 +426,9 @@
     "source": "stackexchange:security:230096"
   },
   {
-    "question": "What is One application?",
-    "answer": "One application is deployed at the admin computer and one application is deployed at the client computer (which is being monitored).",
-    "domain": "general",
-    "source": "stackexchange:security:230096"
-  },
-  {
     "question": "What is client application?",
     "answer": "The client application is responsible for making permission in effect.",
     "domain": "general",
-    "source": "stackexchange:security:230096"
-  },
-  {
-    "question": "Tell me about USB",
-    "answer": "-Whether the USB Port should be enabled for disabled ( as they should be disabled during examination).",
-    "domain": "networking",
     "source": "stackexchange:security:230096"
   },
   {
@@ -642,12 +528,6 @@
     "source": "hackernews:11042353"
   },
   {
-    "question": "Tell me about SSL",
-    "answer": "How does the \"Fidelis SSL Inspector\" work from page 10 of Professor Ligon's slides?.",
-    "domain": "security",
-    "source": "hackernews"
-  },
-  {
     "question": "Tell me about CA",
     "answer": "So long as an 'endpoint-trusted CA certificate' has been installed?Does this really break SSL on all traffic that is diverted to the device, or does one of the endpoints need to have some 'registration' on it to permit this?[1] https://www.documentcloud.org/documents/2703887-Ucop-Monitor...",
     "domain": "internet",
@@ -682,12 +562,6 @@
     "answer": "Fritzboxes have the best non-OpenWRT OS IMHO Slightly off-topic:  \"an\" should not be used with words beginning with H, unless the H is unvoiced, such as \"an homage\". This is neat.A word of caution, depending on how the network is laid out, this could cause severe bandwidth overhead if there isn't a dedicated, and unmonitored, interface for the capture to flow over.",
     "domain": "internet",
     "source": "hackernews:34170868"
-  },
-  {
-    "question": "Tell me about OS",
-    "answer": "Fritzboxes have the best non-OpenWRT OS IMHO Slightly off-topic:  \"an\" should not be used with words beginning with H, unless the H is unvoiced, such as \"an homage\".",
-    "domain": "general",
-    "source": "hackernews"
   },
   {
     "question": "What is This?",
@@ -756,22 +630,10 @@
     "source": "hackernews:4517742"
   },
   {
-    "question": "Tell me about VM",
-    "answer": "If you want something more flexible hosted on site you should look into my company's free downloadable VM [1].",
-    "domain": "general",
-    "source": "hackernews"
-  },
-  {
     "question": "What is discussed about Peep, the Network Auralizer: Monitoring Your Network with Sound (2000)?",
     "answer": "Had this exact idea last summer! This is so cool I have often mentioned this project to others over the years, when talking about audio cues and using audio to help understand large data sets. Around 1995 when I worked at the AG Group (now WildPackets / now Savvius), we sold a product that played sounds based on network traffic (via etherpeek as the underlying engine). It was very cool, but never took off in popularity.",
     "domain": "networking",
     "source": "hackernews:10188193"
-  },
-  {
-    "question": "Tell me about AG",
-    "answer": "Around 1995 when I worked at the AG Group (now WildPackets / now Savvius), we sold a product that played sounds based on network traffic (via etherpeek as the underlying engine).",
-    "domain": "general",
-    "source": "hackernews"
   },
   {
     "question": "What is Funny thing?",
@@ -864,12 +726,6 @@
     "source": "stackexchange:serverfault:440285"
   },
   {
-    "question": "Tell me about MIBs",
-    "answer": "If snmp doesn't even like the distro-included MIBs, what chance to I have of getting my own used?.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:440285"
-  },
-  {
     "question": "What is (I get the same form of error with my own MIB, on a different machine, which?",
     "answer": "(I get the same form of error with my own MIB, on a different machine, which is why I set up a clean install to test the distro's sanity.).",
     "domain": "general",
@@ -918,38 +774,14 @@
     "source": "stackexchange:serverfault:471728"
   },
   {
-    "question": "Tell me about Windows Server",
-    "answer": "What exactly does \"deprecated\" mean in terms of Windows Server (is it standardized)?.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:471728"
-  },
-  {
     "question": "What is If so, how long until SNMP?",
     "answer": "If so, how long until SNMP is no longer available (i.e.",
     "domain": "general",
     "source": "stackexchange:serverfault:471728"
   },
   {
-    "question": "What is Also?",
-    "answer": "Also, is anyone aware of other organizations deprecating SNMP in favor of something else?.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:471728"
-  },
-  {
     "question": "SNMP access with encryption?",
     "answer": "I'd like to configure my SNMP v3 (NET-SNMP) agent to limited user range with encryption. Could you give me a short hint how to setup encryption with NET-SNMP? Do you have any experiences in using AES/3DES encryption algorithms with NET-SNMP? My NET-SNMP version is 5.6.",
-    "domain": "security",
-    "source": "stackexchange:serverfault:695241"
-  },
-  {
-    "question": "Tell me about NET",
-    "answer": "Could you give me a short hint how to setup encryption with NET-SNMP?.",
-    "domain": "security",
-    "source": "stackexchange:serverfault:695241"
-  },
-  {
-    "question": "Tell me about AES",
-    "answer": "Do you have any experiences in using AES/3DES encryption algorithms with NET-SNMP?.",
     "domain": "security",
     "source": "stackexchange:serverfault:695241"
   },
@@ -978,20 +810,8 @@
     "source": "stackexchange:serverfault:604330"
   },
   {
-    "question": "Tell me about BEGIN",
-    "answer": "#!/bin/bash\nps aux | awk '\nBEGIN { c=0 }\n/processname$/ { c=c+1 }\nEND { print $c }'.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:604330"
-  },
-  {
     "question": "What is \"Next OID\"?",
     "answer": "\"Next OID\" is the name of my tool, and not numeric at all.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:604330"
-  },
-  {
-    "question": "What is But this?",
-    "answer": "But this is not the OID I expected to query to find the output.",
     "domain": "general",
     "source": "stackexchange:serverfault:604330"
   },
@@ -1068,12 +888,6 @@
     "source": "stackexchange:networkengineering:28845"
   },
   {
-    "question": "What is These commands?",
-    "answer": "These commands are actually querying the central database for information and sending it to the MASTER.",
-    "domain": "general",
-    "source": "stackexchange:networkengineering:28845"
-  },
-  {
     "question": "Tell me about MASTER",
     "answer": "MASTER can update this central database by using a snmpset command.",
     "domain": "general",
@@ -1110,12 +924,6 @@
     "source": "stackexchange:networkengineering:32310"
   },
   {
-    "question": "Tell me about DES",
-    "answer": "#\ncreateUser -e 0x0102030405 myuser MD5 mypassword DES myotherpassword\ncreateUser -e 0x0102030405 myuser2 MD5 mypassword DES myotherpassword\ncreateUser -e 0x0102030406 myuser2 MD5 mypassword DES myotherpassword\ncreateUser cisco SHA cisco123 DES cisco123\nauthUser log,execute myuser\nauthUser log,execute myuser2\nauthUser log,execute cisco\nauthCommunity   log,execute public\nperl do \"/usr/local/share/snmp/snmptrapdhandler.pl\";.",
-    "domain": "general",
-    "source": "stackexchange:networkengineering:32310"
-  },
-  {
     "question": "Cisco Switch triggers config trap on reboot?",
     "answer": "We have a cisco switch in our network that is configured to send config change traps on a specific host. But when the device reboots due to some physical issue, the device triggers the config traps. Can some body explain why the switch is triggering the config trap even when there is no config change.",
     "domain": "networking",
@@ -1137,12 +945,6 @@
     "question": "SNMP traps for RF systems: where to start?",
     "answer": "I've been given the task of taking various status bits from an embedded RF device and asked to turn them into SNMP Traps. I have the SNMP library but I lack the knowledge on where to get or create the OIDs. Here's an snmptrap as a point of reference:\n\n\n  snmptrap -v 2c -c public 192.168.1.1:162 \\\n    .1.3.6.1.6.3.1.1.5.3 .1.3.6.1.6.3.1.1.5.3 \\\n    ifIndex i 2 ifAdminStatus i 1 ifOperStatus i 1\n\n\nNormally I'm on the receiving end of these traps and rely on the manufacturer-provided MIBs.",
     "domain": "security",
-    "source": "stackexchange:networkengineering:53378"
-  },
-  {
-    "question": "Tell me about RF",
-    "answer": "I've been given the task of taking various status bits from an embedded RF device and asked to turn them into SNMP Traps.",
-    "domain": "general",
     "source": "stackexchange:networkengineering:53378"
   },
   {
@@ -1179,18 +981,6 @@
     "question": "Tell me about INTEGER",
     "answer": "snmpbulkwalk -c public -v 2c switch 1.3.6.1.2.1.17.4.3.1.2 | grep \"INTEGER: 123\"\n0.34.107.48.216.142 = INTEGER: 123\n^^^^^^^^^^^^^^^^^^^ MAC Address in decimal on port 123.",
     "domain": "networking",
-    "source": "stackexchange:networkengineering:13307"
-  },
-  {
-    "question": "Tell me about CPU",
-    "answer": "That way you would not have to snmpwalk the switch but could concisely query for a certain port, which would certainly alleviate the load on the switch's CPU and also accelerate the queries.",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:13307"
-  },
-  {
-    "question": "Tell me about NAC",
-    "answer": "I'm currently trying to find out what kind of burden a NAC (Network Access Control device) performing a MAC authentication would put on the devices.",
-    "domain": "wifi_security",
     "source": "stackexchange:networkengineering:13307"
   },
   {
@@ -1236,12 +1026,6 @@
     "source": "stackexchange:security:11430"
   },
   {
-    "question": "Tell me about PIX",
-    "answer": "On a Cisco PIX firewall, I wanted to check if SNMP is enabled:.",
-    "domain": "security",
-    "source": "stackexchange:security:11430"
-  },
-  {
     "question": "Nmap snmp-info.nse Security Name?",
     "answer": "I'm attempting to issue an snmpget request to a device but i'm unable to determine the security name. Running the Nmap snmp-info.nse is successful and no Security Name is required to successfully run the script. Is there any way of retrieving the Security Name from this NSE script? I've checked the contents and there is no Security Name parameter anywhere.",
     "domain": "general",
@@ -1254,12 +1038,6 @@
     "source": "stackexchange:security:122262"
   },
   {
-    "question": "Tell me about NSE",
-    "answer": "Is there any way of retrieving the Security Name from this NSE script?.",
-    "domain": "general",
-    "source": "stackexchange:security:122262"
-  },
-  {
     "question": "What is I've checked the contents and there?",
     "answer": "I've checked the contents and there is no Security Name parameter anywhere.",
     "domain": "general",
@@ -1268,12 +1046,6 @@
   {
     "question": "IPsec down with unusual SNMP traffic?",
     "answer": "Time to time IPSec tunnel status become down, with unusual SNMP Traffic. when I disable and enable port manually, it become normal. \n\nI am using 200E fortigate firewall.\n\nHave you any idea or previous experience with this issue?",
-    "domain": "security",
-    "source": "stackexchange:security:200603"
-  },
-  {
-    "question": "Tell me about IPSec",
-    "answer": "Time to time IPSec tunnel status become down, with unusual SNMP Traffic.",
     "domain": "security",
     "source": "stackexchange:security:200603"
   },
@@ -1296,12 +1068,6 @@
     "source": "stackexchange:security:226059"
   },
   {
-    "question": "Tell me about RAM",
-    "answer": "Kali Linux 2019.4 (64-bit) : attacker machine, 4GB of RAM, 4 vCPUs, fully up-to-date, NAT network 10.10.10.0/24 with address 10.10.10.11\nWindows Server 2012R2 (64-bit) : target machine, 5GB of RAM, 2 vCPUs, fully up-to-date, same NAT network 10.10.10.0/24 with address 10.10.10.12.",
-    "domain": "networking",
-    "source": "stackexchange:security:226059"
-  },
-  {
     "question": "Tell me about Kali Linux",
     "answer": "I need to use the following command : nmap -sU -p 161 --script=snmp-brute 10.10.10.12 on Kali Linux to brute-force the community string of the target machine.",
     "domain": "general",
@@ -1320,21 +1086,9 @@
     "source": "stackexchange:security:226059"
   },
   {
-    "question": "Tell me about Windows Firewall",
-    "answer": "Edit : Just to be sure that it has nothing to do with Windows Firewall on the target machine, I deactivated it.",
-    "domain": "security",
-    "source": "stackexchange:security:226059"
-  },
-  {
     "question": "Any legitimate reason for notepad.exe to make network connections?",
     "answer": "Is there any known legitimate reason that notepad.exe would make network connections to a domain controller? I observed this behavior. The first connection was to port 135 and the second was to one of the Microsoft RPC dynamic ports. In addition I also observed an SNMP request (port 161 udp) to some random device where sysmon reported the source process as C:\\windows\\system32\\notepad.",
     "domain": "networking",
-    "source": "stackexchange:security:255004"
-  },
-  {
-    "question": "Tell me about RPC",
-    "answer": "The first connection was to port 135 and the second was to one of the Microsoft RPC dynamic ports.",
-    "domain": "general",
     "source": "stackexchange:security:255004"
   },
   {
@@ -1358,12 +1112,6 @@
   {
     "question": "Is it safe to monitor java process via JMX?",
     "answer": "I'm using java application server behind web application firewall (nginx with TLS & mod_security).\n\nJava application is running in Internal network segment behind WAF.\nRequests from the Internet comes to java application server only via WAF which is running on different host in DMZ.\n\nI want to monitor various metrics of java application.",
-    "domain": "security",
-    "source": "stackexchange:security:141143"
-  },
-  {
-    "question": "Tell me about TLS",
-    "answer": "I'm using java application server behind web application firewall (nginx with TLS & mod_security).",
     "domain": "security",
     "source": "stackexchange:security:141143"
   },
@@ -1406,12 +1154,6 @@
   {
     "question": "Tell me about GNS",
     "answer": "So I thought there could be some project aiming to emulate some of them (well, we have GNS for Cisco, so why not?).",
-    "domain": "general",
-    "source": "stackexchange:security:84806"
-  },
-  {
-    "question": "Tell me about MS",
-    "answer": "I must clarify: I'm not talking about some virtual printer shared from MS Windows host or about a generic linux box with some general purpose printing daemon listening on port 9100.",
     "domain": "general",
     "source": "stackexchange:security:84806"
   },
@@ -1464,12 +1206,6 @@
     "source": "hackernews:26453917"
   },
   {
-    "question": "Tell me about NAS",
-    "answer": "I made this to serve my own need (which it does), to allow my Synology NAS a clean shutdown in case of a power cut.",
-    "domain": "general",
-    "source": "hackernews"
-  },
-  {
     "question": "Tell me about UPS",
     "answer": "My UPS is not recognized if plugged into the NAS via USB, so it is plugged into a different (SBC) computer instead, which runs this.Speaking of prior art, I am only aware of this one: https://github.com/luizluca/nut-snmpagent\nI am not a fan of Ruby and I only trust software I wrote (a.k.a.: I prefer my own bugs in critical pieces of my infra), so here it is.Posting in case someone else finds it useful, but will answer more general questions (should they come up) as well.",
     "domain": "internet",
@@ -1503,18 +1239,6 @@
     "question": "What is 'Security Not My Problem' often used.SNMP Concepts?",
     "answer": "'Security Not My Problem' often used.SNMP Concepts are not only excellent but essential:* A curated listed of universal codes for monitoring common attributes* Some sort of standardized plug/play protocol that can allow things from one thing to monitor things from another thing* Oh and it's UDP It's dead as in no one runs a network anymore.But maybe the last people that DO run a network use it.",
     "domain": "networking",
-    "source": "hackernews"
-  },
-  {
-    "question": "Tell me about AWS",
-    "answer": "(AWS, Google, others?) Some ISPs, when pressed for refunds from downtime or poor service, ask if you have any reports.",
-    "domain": "general",
-    "source": "hackernews"
-  },
-  {
-    "question": "What is SNMP?",
-    "answer": "SNMP is how PDUs let us monitor power consumption over a telco's whole hosting infrastructure (hundreds of sites).",
-    "domain": "general",
     "source": "hackernews"
   },
   {
@@ -1560,12 +1284,6 @@
     "source": "stackexchange:serverfault:97270"
   },
   {
-    "question": "What is Which?",
-    "answer": "Which is better for which task and what do you recommend to use?.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:97270"
-  },
-  {
     "question": "What is main problem we have with Nagios?",
     "answer": "The main problem we have with Nagios is that setup takes too long and isn't very straightforward.",
     "domain": "general",
@@ -1605,12 +1323,6 @@
     "question": "Tell me about HOSTADDRESS",
     "answer": "define command{\n        command_name    mycommand\n        command_line    $USER1$/check_by_ssh -p $ARG1$ -l nagios -i /etc/nagios2/keys/key1 -H $HOSTADDRESS$ -v -C 'source $USER10$ ; command.py -a get --alert-name $ARG2$ -q'\n        }.",
     "domain": "internet",
-    "source": "stackexchange:serverfault:377305"
-  },
-  {
-    "question": "What is problem?",
-    "answer": "The problem is that it seems that nagios is parsing the command with the semicolon, and producing garbage which can not be executed.",
-    "domain": "general",
     "source": "stackexchange:serverfault:377305"
   },
   {
@@ -1716,12 +1428,6 @@
     "source": "stackexchange:serverfault:542267"
   },
   {
-    "question": "What is Maybe there?",
-    "answer": "Maybe there is an easier way like slave/master configuration, without using NSCA plugin.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:542267"
-  },
-  {
     "question": "What is Real situation?",
     "answer": "Real situation is that we have 1 host that uses GPRS, so it's IP is dynamic so we need to send monitoring information to a static IP Nagios server.",
     "domain": "general",
@@ -1746,39 +1452,9 @@
     "source": "stackexchange:networkengineering:2457"
   },
   {
-    "question": "What is configuration?",
-    "answer": "The configuration is just two 10GE links between our business partner dmz and our inside network.",
-    "domain": "intranet",
-    "source": "stackexchange:networkengineering:2457"
-  },
-  {
-    "question": "What is switches?",
-    "answer": "The switches are 6500 Sup2T with 12.2.",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:2457"
-  },
-  {
     "question": "What is Our maximum traffic?",
     "answer": "Our maximum traffic is about 1.8Gbps between the switches and the CPU load on the ASA is very low.",
     "domain": "networking",
-    "source": "stackexchange:networkengineering:2457"
-  },
-  {
-    "question": "What is packet loss?",
-    "answer": "The packet loss is growing very fast, but we do not know why.",
-    "domain": "troubleshooting",
-    "source": "stackexchange:networkengineering:2457"
-  },
-  {
-    "question": "What is These?",
-    "answer": "These are the nagios ping failures we see through the firewall.",
-    "domain": "security",
-    "source": "stackexchange:networkengineering:2457"
-  },
-  {
-    "question": "What is strange thing?",
-    "answer": "The strange thing is that if we use mtr from the nagios server, the packet loss isn't very bad.",
-    "domain": "troubleshooting",
     "source": "stackexchange:networkengineering:2457"
   },
   {
@@ -1790,12 +1466,6 @@
   {
     "question": "What is When we ping between the switches, we don't loose many packets, but it?",
     "answer": "When we ping between the switches, we don't loose many packets, but it is obvious the problem starts somewhere between the switches.",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:2457"
-  },
-  {
-    "question": "Tell me about ICMP",
-    "answer": "Sending 500000, 100-byte ICMP Echos to 10.4.2.10, timeout is 2 seconds:\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!.",
     "domain": "networking",
     "source": "stackexchange:networkengineering:2457"
   },
@@ -1818,38 +1488,8 @@
     "source": "stackexchange:networkengineering:16223"
   },
   {
-    "question": "Tell me about NTP",
-    "answer": "re-sending request to peer 0\nNTP CRITICAL: No response from NTP server.",
-    "domain": "general",
-    "source": "stackexchange:networkengineering:16223"
-  },
-  {
-    "question": "Tell me about ACL",
-    "answer": "Note that the ACL works, as PING from specific hosts have to be explicitly allowed by adding new access rules.",
-    "domain": "troubleshooting",
-    "source": "stackexchange:networkengineering:16223"
-  },
-  {
     "question": "Weird packet lost. Looking for some input?",
     "answer": "Like me start by saying I'm not an network expert but this situation got me scratching my head and you guys might be able to help.\n\nThe infrastructure is 4 switches (Dell 2848). 2 For the LAN and 2 for the DMZ (for redundancy. Different subnets). Each switch goes into the firewall (Watchguard) into their own NIC. (With link-aggregation).\n\nThis setup has been working fine for 2 years. Since last week we get intermittent high latency then loss of connection.",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:53516"
-  },
-  {
-    "question": "What is infrastructure?",
-    "answer": "The infrastructure is 4 switches (Dell 2848).",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:53516"
-  },
-  {
-    "question": "Tell me about NIC",
-    "answer": "Each switch goes into the firewall (Watchguard) into their own NIC.",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:53516"
-  },
-  {
-    "question": "Tell me about DMZ",
-    "answer": "We lose connection to both DMZ switches and all servers inside the said DMZ.",
     "domain": "networking",
     "source": "stackexchange:networkengineering:53516"
   },
@@ -1896,42 +1536,6 @@
     "source": "stackexchange:networkengineering:5343"
   },
   {
-    "question": "Tell me about VLAN",
-    "answer": "In the past we have only had 1 VLAN so we just used IGMP querier and snooper and this met our needs.",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:5343"
-  },
-  {
-    "question": "Tell me about VLANs",
-    "answer": "In the new office that we just moved into we have segregated the network into multiple VLANs.",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:5343"
-  },
-  {
-    "question": "Tell me about PIM",
-    "answer": "I understand that we will need to use PIM to accomplish what we want.",
-    "domain": "general",
-    "source": "stackexchange:networkengineering:5343"
-  },
-  {
-    "question": "Tell me about Dell Power",
-    "answer": "We are currently a Dell PowerConnect shop with a pretty simple layout.",
-    "domain": "general",
-    "source": "stackexchange:networkengineering:5343"
-  },
-  {
-    "question": "Tell me about OSPF",
-    "answer": "Should we setup on our core network switch OSPF with a router ID of 1.1.1.1 and then not set any OSPF settings on any other switch?.",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:5343"
-  },
-  {
-    "question": "Tell me about PDF",
-    "answer": "I initially looked at this PDF for sample configurations but they use PIM Dense and following this paper didn't work at all.",
-    "domain": "general",
-    "source": "stackexchange:networkengineering:5343"
-  },
-  {
     "question": "Tell me about VLC",
     "answer": "Update: Have been doing some more testing with VLC player trying to get this working.",
     "domain": "general",
@@ -1974,12 +1578,6 @@
     "source": "stackexchange:security:18228"
   },
   {
-    "question": "Tell me about SSH",
-    "answer": "In order to perform checks on the servers, they often need password-less SSH logins.",
-    "domain": "internet",
-    "source": "stackexchange:security:18228"
-  },
-  {
     "question": "Does Web Apps and Databases running on AWS EC2 need a IDS/IPS?",
     "answer": "I have googled around for information about Web Apps or Databases running on AWS EC2 needing a IDS/IPS or not.\n\nI will present my findings so far here, but it will be good if you guys can confirm these findings, or comment on them.\n\n\nNetword based IPS/IDS systems are not necessary because:\n\n\n\n  Packets are only delivered to the destination addresses and no other\n  devices will ever see that packet.",
     "domain": "internet",
@@ -1988,24 +1586,6 @@
   {
     "question": "What is Netword based IPS/IDS systems?",
     "answer": "Netword based IPS/IDS systems are not necessary because:.",
-    "domain": "security",
-    "source": "stackexchange:security:33312"
-  },
-  {
-    "question": "Tell me about NIDS",
-    "answer": "While that eliminates many\n  traditional threat vectors, it also makes intrusion detection\n  approaches like NIDS/NIPS basically useless in AWS.",
-    "domain": "security",
-    "source": "stackexchange:security:33312"
-  },
-  {
-    "question": "Tell me about IDS",
-    "answer": "People tend to use nagios for IDS purposes on AWS: https://forums.aws.amazon.com/thread.jspa?messageID=176652&#176652\nHow to do it.",
-    "domain": "internet",
-    "source": "stackexchange:security:33312"
-  },
-  {
-    "question": "Tell me about IPS",
-    "answer": "People use host-based(software) IPS/IDS in AWS EC2, like OSSEC.",
     "domain": "security",
     "source": "stackexchange:security:33312"
   },
@@ -2031,12 +1611,6 @@
     "question": "CSP: no sandbox, or sandbox with Access-Control-Allow-Origin: \"null\"?",
     "answer": "I host two public sites with WordPress, using different themes (but official ones, named \"twenty-something\") on an Apache server (Debian Bookworm), and I'm updating my CSP.\nIf I enable sandbox, I get a bunch of (silently) failed requests for (local I guess) fonts files due to \"CORS Missing Allow Origin\", because the origin of those requests becomes null due to the sandboxing. To prevent them, I can either disable sandbox, or enable it and add the header Access-Control-Allow-Origin: \"null\".",
     "domain": "security",
-    "source": "stackexchange:security:280024"
-  },
-  {
-    "question": "Tell me about CSP",
-    "answer": "I host two public sites with WordPress, using different themes (but official ones, named \"twenty-something\") on an Apache server (Debian Bookworm), and I'm updating my CSP.",
-    "domain": "general",
     "source": "stackexchange:security:280024"
   },
   {
@@ -2112,12 +1686,6 @@
     "source": "hackernews"
   },
   {
-    "question": "Tell me about OK",
-    "answer": "OK we'll fork and BTW we're taking the name with us so on the other side of the planet, people will be installing nails using our hammer shaped fork of Screwdriver(tm) what could possibly go wrong?.",
-    "domain": "general",
-    "source": "hackernews"
-  },
-  {
     "question": "What is I wonder if that system?",
     "answer": "I wonder if that system is still running at ex-employer?.",
     "domain": "general",
@@ -2158,12 +1726,6 @@
     "answer": "At least the community had the good sense to distribute under the GPL.  Its harder to dump a community with that license, so they at least have a chance. This is pretty serious! It appears that Nagios did some very underhanded things to gain control of that project.The bigger concern is that the new maintainers have no reputation and no proven track recording quality, commitment, skills or experience on this project. I would not be happy accepting updates from them.",
     "domain": "networking",
     "source": "hackernews:7084155"
-  },
-  {
-    "question": "Tell me about GPL",
-    "answer": "At least the community had the good sense to distribute under the GPL.",
-    "domain": "general",
-    "source": "hackernews"
   },
   {
     "question": "What is plugins hosted on the site?",
@@ -2220,12 +1782,6 @@
     "source": "hackernews"
   },
   {
-    "question": "Tell me about IMO",
-    "answer": "Zenoss had a (IMO) better structured web interface and also more options for log-filtering/monitoring.",
-    "domain": "general",
-    "source": "hackernews"
-  },
-  {
     "question": "What is Also it's based on Python so easier for me to extend.The only drawback of Zenoss?",
     "answer": "Also it's based on Python so easier for me to extend.The only drawback of Zenoss is that it is a bit of a memory hog, which eventually became a problem as it was running on a cheap VPS...Icanga does sound promising, as it looks like it redesigned Nagios from a bag of old perl scripts to a better-integrated solution.",
     "domain": "wifi_security",
@@ -2268,12 +1824,6 @@
     "source": "hackernews"
   },
   {
-    "question": "Tell me about UI",
-    "answer": "The UI takes getting used to, but it's full featured and dependable.",
-    "domain": "general",
-    "source": "hackernews"
-  },
-  {
     "question": "Ask HN: What do you wish monit/cacti/nagios/zabbix/etc would do?",
     "answer": "My co-workers and I have been writing some software to monitor the activity and health of our servers at work. We found that many of the available solutions were either painful to deal with and setup or expensive. We were hoping to find some sort of agent-based hosted solution similar to most of the current web analytics services. We couldn't find one we liked so we're creating one. We're at the point where we're just pre-processing the incoming data that we're tracking.",
     "domain": "troubleshooting",
@@ -2301,12 +1851,6 @@
     "question": "What is All zabbix monitored servers?",
     "answer": "All zabbix monitored servers are linked to a security group with two inbound rules for port 10050 and 10051 for the zabbix-server IP.",
     "domain": "general",
-    "source": "stackexchange:serverfault:739353"
-  },
-  {
-    "question": "Tell me about SELinux",
-    "answer": "Server: Amazon Linux (Centos like)\nInstalled file: http://repo.zabbix.com/zabbix/2.2/rhel/6/x86_64/zabbix-release-2.2-1.el6.noarch.rpm\nSELinux is disabled on all these agents and on the server.",
-    "domain": "internet",
     "source": "stackexchange:serverfault:739353"
   },
   {
@@ -2406,12 +1950,6 @@
     "source": "stackexchange:serverfault:301985"
   },
   {
-    "question": "Tell me about GUI",
-    "answer": "However when we access the Zabbix GUI and browse through the GUI, we see that the error/trigger Zabbix_server is not running on {HOSTNAME} appears on our node.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:301985"
-  },
-  {
     "question": "Import database Zabbix 6.0.40 into Zabbix 7.4.2 -> fails due to table already exists?",
     "answer": "I upgraded a Zabbix installation (VM) by cloning that VM, updating the OS, database, PHP and zabbix.\nAfter the cloned Zabbix installation worked, I wanted to import the database from the old VM, so that i do not have a gap in the collected data.\nAfter importing the database from the Zabbix 6.0.40 installation into the Zabbix  7.4.2 installation, it throws an error.\nBoth installations are working, both on debian and with a MariaDB datatabase.\nold Zabbix:\nZabbix 6.0.40\ndebian 11.",
     "domain": "security",
@@ -2420,12 +1958,6 @@
   {
     "question": "What is Both installations?",
     "answer": "Both installations are working, both on debian and with a MariaDB datatabase.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:1192373"
-  },
-  {
-    "question": "Tell me about NOT",
-    "answer": "After starting the Zabbix daemon again, it does NOT convert the database to the new version as it normally happens when doing a update on the same installation, instead it throws errors:.",
     "domain": "general",
     "source": "stackexchange:serverfault:1192373"
   },
@@ -2442,12 +1974,6 @@
     "source": "stackexchange:serverfault:695045"
   },
   {
-    "question": "Tell me about Zabbix Web Scenario",
-    "answer": "I have attempted to implement my scenarios based on the Zabbix Web Scenario section in the manual, but I can't manage to get Zabbix to login to the page.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:695045"
-  },
-  {
     "question": "What is In the Zabbix tutorial, they?",
     "answer": "In the Zabbix tutorial, they are using the namefield in the HTML to designate where to enter the data.",
     "domain": "networking",
@@ -2460,27 +1986,9 @@
     "source": "stackexchange:serverfault:695045"
   },
   {
-    "question": "Tell me about HTML",
-    "answer": "How can I get Zabbix to login to these pages without the name field being present in the HTML code?.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:695045"
-  },
-  {
     "question": "Zabbix Application Monitoring?",
     "answer": "We operate a SAAS business, and we have hundreds of processes which can roam from server to server. They are .net processes which can be created (started) on any one of a bank of machines, run for a period of time (typically weeks), and then be migrated to another machine.\n\nThese processes have many different time-series outputs (which are broadcast using RabbitMQ) and we have our own bespoke system for monitoring the application processes.",
     "domain": "networking",
-    "source": "stackexchange:serverfault:741754"
-  },
-  {
-    "question": "Tell me about SAAS",
-    "answer": "We operate a SAAS business, and we have hundreds of processes which can roam from server to server.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:741754"
-  },
-  {
-    "question": "What is They?",
-    "answer": "They are .net processes which can be created (started) on any one of a bank of machines, run for a period of time (typically weeks), and then be migrated to another machine.",
-    "domain": "general",
     "source": "stackexchange:serverfault:741754"
   },
   {
@@ -2580,12 +2088,6 @@
     "source": "stackexchange:networkengineering:19146"
   },
   {
-    "question": "Tell me about APs",
-    "answer": "I need to generate a notification for APs that have lost connectivity so that we can proactively dispatch a tech to troubleshoot.",
-    "domain": "troubleshooting",
-    "source": "stackexchange:networkengineering:19146"
-  },
-  {
     "question": "Tell me about PRTG",
     "answer": "Looked into Cacti and PRTG, but they don't seem to be able generate notifications for the subordinate \"objects\".",
     "domain": "networking",
@@ -2600,12 +2102,6 @@
   {
     "question": "What is We need to monitor BFD flaps on our Cisco Nexus devices but the problem?",
     "answer": "We need to monitor BFD flaps on our Cisco Nexus devices but the problem is that Zabbix do SNMP polling every 1 minute, and we can't detect, for example, 5 sec BFD flaps.",
-    "domain": "general",
-    "source": "stackexchange:networkengineering:75811"
-  },
-  {
-    "question": "Tell me about BFD",
-    "answer": "Maybe BFD have some up/down counter or other mechanism which help us to monitor flaps?.",
     "domain": "general",
     "source": "stackexchange:networkengineering:75811"
   },
@@ -2655,12 +2151,6 @@
     "question": "SNMP returns strange \"bits sent/received\" values on a particular port, why?",
     "answer": "I have a HP V1910 Switch in my office. I have set up monitoring via SNMP on my local Zabbix server, and everything looks really good on almost all ports (for example, when I use iperf to test throughput or just send a big file between 2 machines connected to 2 different ports). \n\nThere is one port though that gives me very odd (too low) figures on incoming and outgoing traffic, even though it gets plenty of traffic, my local PoE Switch (UniFi Switch 8 POE-150W): https://www.ubnt.",
     "domain": "networking",
-    "source": "stackexchange:networkengineering:51526"
-  },
-  {
-    "question": "What is latter?",
-    "answer": "The latter is sending all the traffic that goes to the wi-fi access points.",
-    "domain": "wifi",
     "source": "stackexchange:networkengineering:51526"
   },
   {

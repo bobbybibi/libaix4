@@ -6,12 +6,6 @@
     "source": "stackexchange:serverfault:144378"
   },
   {
-    "question": "What is issue?",
-    "answer": "The issue is outside of my network on one of the hops in my local area.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:144378"
-  },
-  {
     "question": "Troubleshooting a \"slow\" network?",
     "answer": "We've all had a complaint that the \"network\" is \"slow\" at some point: might be localized to one room (switch) or one computer, might just be Internet (DNS? Browser issue?), might be just one application (long-running SQL queries? AV scan running?).",
     "domain": "networking",
@@ -24,20 +18,8 @@
     "source": "stackexchange:serverfault:154004"
   },
   {
-    "question": "Tell me about SQL",
-    "answer": "Browser issue?), might be just one application (long-running SQL queries?.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:154004"
-  },
-  {
     "question": "What is What do you do to make sure the physical network?",
     "answer": "What do you do to make sure the physical network is ok at an unknown environment?.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:154004"
-  },
-  {
-    "question": "Tell me about SNMP",
-    "answer": "Must-have features and tools (port mirroring, SNMP, monitoring, etc.) for all sizes of networks?.",
     "domain": "general",
     "source": "stackexchange:serverfault:154004"
   },
@@ -78,26 +60,8 @@
     "source": "stackexchange:serverfault:324753"
   },
   {
-    "question": "Tell me about URL",
-    "answer": "Tracert to the web page will work every time I've tried it, even when I am consistently getting page load errors on every second or third new URL.",
-    "domain": "internet",
-    "source": "stackexchange:serverfault:324753"
-  },
-  {
     "question": "What is Sometimes the second hop fails, although this may simply reflect that ICMP?",
     "answer": "Sometimes the second hop fails, although this may simply reflect that ICMP is blocked by that IP address.",
-    "domain": "networking",
-    "source": "stackexchange:serverfault:324753"
-  },
-  {
-    "question": "Tell me about MB",
-    "answer": "Meanwhile, overall network usage appears to be normal, well below the limit of the 10 MB pipe.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:324753"
-  },
-  {
-    "question": "Tell me about IT",
-    "answer": "Once when I was out and received an emergency call, I suggested to our IT staff to restart either the router or the firewall.",
     "domain": "networking",
     "source": "stackexchange:serverfault:324753"
   },
@@ -108,45 +72,9 @@
     "source": "stackexchange:serverfault:324753"
   },
   {
-    "question": "What is port?",
-    "answer": "The port is configured to full duplex 100 megabit.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:324753"
-  },
-  {
-    "question": "What is Some users?",
-    "answer": "Some users are plugged in directly to this switch via an IDF, other users on different floors have a separate switch, connected to the primary switch via fiber, and go from there to an IDF.",
-    "domain": "networking",
-    "source": "stackexchange:serverfault:324753"
-  },
-  {
     "question": "What is way it works?",
     "answer": "The way it works is when a bandwidth threshold is reached (10 MB) the secondary connection kicks on.",
     "domain": "networking",
-    "source": "stackexchange:serverfault:324753"
-  },
-  {
-    "question": "What is It also?",
-    "answer": "It also is used if the primary connection dies completely.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:324753"
-  },
-  {
-    "question": "Tell me about ISP",
-    "answer": "Any guesses as to what type of problem I'm encountering here--cable, switch, firewall, or ISP?.",
-    "domain": "networking",
-    "source": "stackexchange:serverfault:324753"
-  },
-  {
-    "question": "What is What?",
-    "answer": "What are some tools that can help me test the various components involved here?.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:324753"
-  },
-  {
-    "question": "What is problem?",
-    "answer": "The problem is tough because it is intermittent.",
-    "domain": "general",
     "source": "stackexchange:serverfault:324753"
   },
   {
@@ -200,24 +128,6 @@
   {
     "question": "What is Doctors who?",
     "answer": "Doctors who are on EMR mostly screaming.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:111602"
-  },
-  {
-    "question": "What is Connection?",
-    "answer": "Connection is lost between all switches, servers, applications etc.",
-    "domain": "networking",
-    "source": "stackexchange:serverfault:111602"
-  },
-  {
-    "question": "What is Firewall same?",
-    "answer": "Firewall same is fault tolerant and does load balancing and these are some of the errors on our exchangeand on our firewall.",
-    "domain": "security",
-    "source": "stackexchange:serverfault:111602"
-  },
-  {
-    "question": "Tell me about ID",
-    "answer": "Event ID 1135 — Cluster Service Startup Updated: November 25, 2009 Applies To: Windows Server 2008 R2.",
     "domain": "general",
     "source": "stackexchange:serverfault:111602"
   },
@@ -372,33 +282,9 @@
     "source": "stackexchange:serverfault:507237"
   },
   {
-    "question": "Tell me about TP",
-    "answer": "We have one switch (TP-Link TL-SF1008D Ethernet Switch) and three routers that function as AP (TP-Link TD-W891ND), with one of the routers functioning as the modem.",
-    "domain": "networking",
-    "source": "stackexchange:serverfault:507237"
-  },
-  {
-    "question": "Tell me about APs",
-    "answer": "A lot of people can't connect to the APs, reliably, and even when they do, the connection is slow.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:507237"
-  },
-  {
     "question": "Troubleshooting debian 7 network config?",
     "answer": "I'm setting up a proxmox host, to manage a couple VMs, but I'm having problems with the network configuration.\nAfter install, I ended up with a bridged configuration that worked well for the VMs, but the host could not reach the internet.\nI could ping other machines on the lan (my laptop), but could't ping the router (?!?!).",
     "domain": "networking",
-    "source": "stackexchange:serverfault:512972"
-  },
-  {
-    "question": "Tell me about VMs",
-    "answer": "I'm setting up a proxmox host, to manage a couple VMs, but I'm having problems with the network configuration.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:512972"
-  },
-  {
-    "question": "Tell me about IP",
-    "answer": "It was as stupid as having another device with the IP of the server!.",
-    "domain": "general",
     "source": "stackexchange:serverfault:512972"
   },
   {
@@ -426,32 +312,8 @@
     "source": "stackexchange:serverfault:394705"
   },
   {
-    "question": "Tell me about XP",
-    "answer": "1.) For older machines, running Windows XP, server 2003, etc, with a 100Mbps Ethernet card and 72 ms typical latency, does 0.8 MB/s sound at all reasonable?.",
-    "domain": "networking",
-    "source": "stackexchange:serverfault:394705"
-  },
-  {
-    "question": "Tell me about TCP",
-    "answer": "2.)  The classic \"mathematical fastest speed\" of \"throughput = TCP window / latency,\" is, in our case, calculated to 0.8 MB/s (64Kb / 72 ms).",
-    "domain": "networking",
-    "source": "stackexchange:serverfault:394705"
-  },
-  {
     "question": "What is My understanding?",
     "answer": "My understanding is that is an upper bounds; that you would never expect to reach (due to overhead) let alone surpass that speed.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:394705"
-  },
-  {
-    "question": "What is There?",
-    "answer": "There are Steelhead accelerators scattered around the network, could those account for such a higher transfer rate?.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:394705"
-  },
-  {
-    "question": "Tell me about OS",
-    "answer": "Indeed, as expected, packet captures show both being used depending on the OS versions in play, as we would expect.",
     "domain": "general",
     "source": "stackexchange:serverfault:394705"
   },
@@ -459,12 +321,6 @@
     "question": "Troubleshooting (or tracing) Windows network logon problems?",
     "answer": "I've got a situation where a client computer (Windows Vista) doesn't seem to be sending the right password to a server (Windows Server 2003). \n\nThe event log records the logon failure, but as far as I can tell the client has the right password - so I'd really like to know what is actually being sent back & forth between the two computers as they try to negotiate the logon.",
     "domain": "troubleshooting",
-    "source": "stackexchange:serverfault:4695"
-  },
-  {
-    "question": "Tell me about Windows Vista",
-    "answer": "I've got a situation where a client computer (Windows Vista) doesn't seem to be sending the right password to a server (Windows Server 2003).",
-    "domain": "general",
     "source": "stackexchange:serverfault:4695"
   },
   {
@@ -480,21 +336,9 @@
     "source": "stackexchange:serverfault:4695"
   },
   {
-    "question": "What is client computer?",
-    "answer": "The client computer is not a member of the domain.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:4695"
-  },
-  {
     "question": "What is server computer?",
     "answer": "The server computer is the DNS server - and the client computer can correctly resolve the server's address without any problems.",
     "domain": "internet",
-    "source": "stackexchange:serverfault:4695"
-  },
-  {
-    "question": "Tell me about NTLM",
-    "answer": "The user name specified in the event is the user name I'm using\nThe \"logon type\" is \"3\"\nThe logon process is \"NtLmSsp\"\nThe authentication package is NTLM.",
-    "domain": "intranet",
     "source": "stackexchange:serverfault:4695"
   },
   {
@@ -507,18 +351,6 @@
     "question": "Troubleshooting Website problems within the local network?",
     "answer": "Have an external website which opens fine on some PC's, yet seems to time out (or symptoms of timing out, but never actually does) on others.\n\nSeems to only affect (some) of our newer HP Pro 3305 MT Workstations. All of which are running Win7 32bit SP1 with all updates. Older PC's (Win7 32bit SP1 & WinXP) are unaffected.\n\nUsing Google Chrome & Firefox makes no difference. Opening the website in IE9 Compatibility Mode has exactly the same symptoms.",
     "domain": "networking",
-    "source": "stackexchange:serverfault:405365"
-  },
-  {
-    "question": "Tell me about PC",
-    "answer": "Have an external website which opens fine on some PC's, yet seems to time out (or symptoms of timing out, but never actually does) on others.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:405365"
-  },
-  {
-    "question": "Tell me about HP",
-    "answer": "Seems to only affect (some) of our newer HP Pro 3305 MT Workstations.",
-    "domain": "general",
     "source": "stackexchange:serverfault:405365"
   },
   {
@@ -552,12 +384,6 @@
     "source": "stackexchange:serverfault:405365"
   },
   {
-    "question": "Tell me about HTTP",
-    "answer": "Update:\nUsed Fiddler2 to monitor the HTTP request, seems its not getting fulfilled for some reason?!.",
-    "domain": "internet",
-    "source": "stackexchange:serverfault:405365"
-  },
-  {
     "question": "Tell me about GET",
     "answer": "GET http://www.rhs.org.uk/ HTTP/1.1\nHost: www.rhs.org.uk\nConnection: keep-alive\nUser-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.47 Safari/536.11\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\nAccept-Encoding: gzip,deflate,sdch\nAccept-Language: en-GB,en-US;q=0.8,en;q=0.6\nAccept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.3.",
     "domain": "internet",
@@ -579,12 +405,6 @@
     "question": "Tell me about ACTUAL",
     "answer": "ACTUAL PERFORMANCE\n--------------\nClientConnected:    17:02:33.720\nClientBeginRequest: 17:02:39.118\nGotRequestHeaders:  17:02:39.118\nClientDoneRequest:  17:02:39.118\nDetermine Gateway:  0ms\nDNS Lookup:         0ms\nTCP/IP Connect: 46ms\nHTTPS Handshake:    0ms\nServerConnected:    17:02:39.165\nFiddlerBeginRequest:    17:02:39.165\nServerGotRequest:   17:02:39.165\nServerBeginResponse:    00:00:00.000\nGotResponseHeaders: 00:00:00.000\nServerDoneResponse: 00:00:00.000\nClientBeginResponse:    00:00:00.000\nClientDoneResponse: 00:00:00.000.",
     "domain": "internet",
-    "source": "stackexchange:serverfault:405365"
-  },
-  {
-    "question": "Tell me about RESPONSE",
-    "answer": "RESPONSE BYTES (by Content-Type)\n--------------\n~headers~:  0.",
-    "domain": "general",
     "source": "stackexchange:serverfault:405365"
   },
   {
@@ -624,12 +444,6 @@
     "source": "stackexchange:networkengineering:7699"
   },
   {
-    "question": "Tell me about OSPF",
-    "answer": "When I changed the network type on the both sides to non-broadcast, for any unreasonable reason, the adjacency dropped and everything collapsed :) I know about OSPF network types and am also well aware of the troubleshooting process.",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:7699"
-  },
-  {
     "question": "IPv6 link-local only core network?",
     "answer": "When planning an IPv6 strategy is it possible to have link-local only addresses within the core transit network (sort of analogous to a BGP-free MPLS core)? \n\nIf not why not?\n\nIf yes are there any disadvantages to using this model; maybe the potential of making troubleshooting a little more difficult, such a traceroutes not working?\n\nAre there similar deployment models that should be considered (such as a ULA core)?",
     "domain": "networking",
@@ -648,12 +462,6 @@
     "source": "stackexchange:networkengineering:34156"
   },
   {
-    "question": "Tell me about ULA",
-    "answer": "Are there similar deployment models that should be considered (such as a ULA core)?.",
-    "domain": "general",
-    "source": "stackexchange:networkengineering:34156"
-  },
-  {
     "question": "Packet loss within private network (server to server). No packet loss between gateway and server?",
     "answer": "I am troubleshooting a bizarre case of packet loss. We have a cabinet of servers with a top of cabinet switch (Brocade FESX648-PREM). That switch runs BGP sessions with our transit providers.\n\nWe have one server (referred to below as the \"bad server\") that's experiencing 50% packet loss. The server is running Windows Server 2012 R2 and it's been running for months without issue until this morning.",
     "domain": "networking",
@@ -666,27 +474,9 @@
     "source": "stackexchange:networkengineering:23145"
   },
   {
-    "question": "What is server?",
-    "answer": "The server is running Windows Server 2012 R2 and it's been running for months without issue until this morning.",
-    "domain": "general",
-    "source": "stackexchange:networkengineering:23145"
-  },
-  {
-    "question": "What is This?",
-    "answer": "This is what I've checked so far to rule out the cause of the packet loss on the bad server:.",
-    "domain": "troubleshooting",
-    "source": "stackexchange:networkengineering:23145"
-  },
-  {
     "question": "What is No other servers in the cabinet?",
     "answer": "No other servers in the cabinet are experiencing packet loss.",
     "domain": "troubleshooting",
-    "source": "stackexchange:networkengineering:23145"
-  },
-  {
-    "question": "What is No VPN setup?",
-    "answer": "No VPN setup is in effect (i.e., routing table on the bad server just has the default route).",
-    "domain": "networking",
     "source": "stackexchange:networkengineering:23145"
   },
   {
@@ -744,12 +534,6 @@
     "source": "stackexchange:networkengineering:5990"
   },
   {
-    "question": "Tell me about RA",
-    "answer": "I corrected them\nRA's tunnel 0 interface had the wrong source and destination addresses.",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:5990"
-  },
-  {
     "question": "Tell me about LINEPROTO",
     "answer": "%LINEPROTO-5-UPDOWN: Line protocol on Interface Tunnel0, changed state to up\n %ADJ-5-PARENT: Midchain parent maintenance for IP midchain out of 0 65E900C0 - looped chain attempting to stack\n %TUN-5-RECURDOWN: 0 temporarily disabled due to recursive routing.",
     "domain": "networking",
@@ -762,20 +546,8 @@
     "source": "stackexchange:networkengineering:5990"
   },
   {
-    "question": "What is Gateway of last resort?",
-    "answer": "Gateway of last resort is 0.0.0.0 to network 0.0.0.0.",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:5990"
-  },
-  {
     "question": "What is **//EDIT: ** The task which needs to be fullfilled?",
     "answer": "**//EDIT: ** The task which needs to be fullfilled is that traffic from the 172.31.x.x networks on both sides needs to be tunneled.",
-    "domain": "general",
-    "source": "stackexchange:networkengineering:5990"
-  },
-  {
-    "question": "What is Here?",
-    "answer": "Here are the steps taken so far:.",
     "domain": "general",
     "source": "stackexchange:networkengineering:5990"
   },
@@ -804,12 +576,6 @@
     "source": "stackexchange:networkengineering:44162"
   },
   {
-    "question": "Tell me about BGP",
-    "answer": "Furthermore, does BGP dynamically advertise its routes like OSPF or the network statement command should be configured?.",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:44162"
-  },
-  {
     "question": "Is it possible to tell if a firewall is present on my network path?",
     "answer": "If I am sitting at the command line of a host and have an IP and port for a destination, is there any way to tell if the network path involves a firewall, or if it's being evaluated by a ruleset of some kind? I assume there's no way to tell because a network path that's not dropped (that's allowed by a firewall ruleset) would appear exactly the same as a network path with no firewall evaluation involved, but looking to confirm that.",
     "domain": "networking",
@@ -818,12 +584,6 @@
   {
     "question": "What is Maybe more generally?",
     "answer": "Maybe more generally, is a firewall always involved (at some level) when I have multiple VLANs on my network, or could traffic route between VLANs (with different gateway IP addresses) without being evaluated by firewall rules?.",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:29552"
-  },
-  {
-    "question": "Tell me about VLAN",
-    "answer": "I'm trying to determine how early to involve our InfoSec team in troubleshooting efforts when we lose connectivity - in some cases, we're crossing VLAN boundaries but the two different VLANs have open access to each other (all traffic allowed).",
     "domain": "networking",
     "source": "stackexchange:networkengineering:29552"
   },
@@ -849,12 +609,6 @@
     "question": "Website returns different certificate on my home network to mobile hotspot?",
     "answer": "This is a \"should I be worried\" question.  I access a website on my laptop via my home network/router.  My Edge browser gives me a \"Your connection isn't private\" warning page and a NET::ERR_CERT_AUTHORITY_INVALID error.  When I check the certificate it looks ok, at least within validity period, hasn't been revoked and seems to have been issued by a valid issuer.\nI change my network to my mobile phone as a personal hotspot, when I now access the site it is fine.",
     "domain": "networking",
-    "source": "stackexchange:security:272423"
-  },
-  {
-    "question": "Tell me about NET",
-    "answer": "My Edge browser gives me a \"Your connection isn't private\" warning page and a NET::ERR_CERT_AUTHORITY_INVALID error.",
-    "domain": "general",
     "source": "stackexchange:security:272423"
   },
   {
@@ -894,26 +648,8 @@
     "source": "stackexchange:security:14803"
   },
   {
-    "question": "What is One?",
-    "answer": "One is Nessus and other is a Juniper EX2200.",
-    "domain": "general",
-    "source": "stackexchange:security:14803"
-  },
-  {
-    "question": "Tell me about NIC",
-    "answer": "When I'm running the two together, the NIC on my HP MiniTower 6200 Pro shuts down completely.",
-    "domain": "general",
-    "source": "stackexchange:security:14803"
-  },
-  {
     "question": "What is My environment?",
     "answer": "My environment is that I have a Juniper switch set up along with SSG-5, which provides the gateway for the lab-test environment.",
-    "domain": "networking",
-    "source": "stackexchange:security:14803"
-  },
-  {
-    "question": "What is Firewall?",
-    "answer": "Firewall is working in NAT mode.",
     "domain": "networking",
     "source": "stackexchange:security:14803"
   },
@@ -930,12 +666,6 @@
     "source": "stackexchange:security:14803"
   },
   {
-    "question": "Tell me about VMWare",
-    "answer": "I just resolved the problem as I just found that VMWare networking service was sending in VTP updates through my machine access port, doing so resulted in core switch putting my port into blocking mode.",
-    "domain": "networking",
-    "source": "stackexchange:security:14803"
-  },
-  {
     "question": "What is With this solved?",
     "answer": "With this solved, is there a way I can prevent this from happening at the switch level instead of just disabling VMWare services?.",
     "domain": "networking",
@@ -945,12 +675,6 @@
     "question": "How do start looking for software that shouldnt be on my pc?",
     "answer": "Pardon my lack of security savvy- I dont know all the terminology. I've taken the comment below and updated. I get nightly DOS (browser) - this means I see the following attached picture on any browser - server not found or DNS not found. this usually lasts for hours. This happens for all browsers I use and all 3 pcs. I do get port scans also but i'm not as concerned about those, except they do happen very frequently for a non-wifi network. I hope this is clear enough re the symptoms.",
     "domain": "networking",
-    "source": "stackexchange:security:146609"
-  },
-  {
-    "question": "Tell me about DOS",
-    "answer": "I get nightly DOS (browser) - this means I see the following attached picture on any browser - server not found or DNS not found.",
-    "domain": "internet",
     "source": "stackexchange:security:146609"
   },
   {
@@ -1020,26 +744,8 @@
     "source": "hackernews:46841450"
   },
   {
-    "question": "Tell me about MSP",
-    "answer": "I work at an MSP, and we often deal with poorly labelled cables and limited documentation.",
-    "domain": "general",
-    "source": "hackernews"
-  },
-  {
     "question": "What is common question during troubleshooting is: which switch and port?",
     "answer": "A common question during troubleshooting is: which switch and port is this computer connected to?.",
-    "domain": "networking",
-    "source": "hackernews"
-  },
-  {
-    "question": "Tell me about CLI",
-    "answer": "Is the link negotiating at Gigabit, or has it fallen back to Fast Ethernet (100 Mbps) or even 10 Mbps due to a bad cable or port?To make basic network troubleshooting faster, I built a small cross-platform CLI tool that bundles common checks in one place.",
-    "domain": "networking",
-    "source": "hackernews"
-  },
-  {
-    "question": "Tell me about LLDP",
-    "answer": "It supports:- LLDP discovery (useful when switch ports aren’t labelled)- DHCP checks (including detecting multiple replies, e.g.",
     "domain": "networking",
     "source": "hackernews"
   },
@@ -1065,12 +771,6 @@
     "question": "VMWare vSphere packet loss?",
     "answer": "I have a Dell Blade Enclosure with 14 blades and ESXi 5.5 on it. On blade 7 and 14 I have round about 65 % packet loss when I ping the ESXi Management interface. On all other blades there ist no packet loss.\nThe strange thing is, I have this packet loss when I ping from:\n\nblade 1 to blade 7 = 65% packet loss\n\nbut, when I ping from blade 7 to blade 1 at the same time I ping from blade 1 to blade 7 I have no packet loss at all ...",
     "domain": "troubleshooting",
-    "source": "stackexchange:serverfault:761011"
-  },
-  {
-    "question": "Tell me about ESXi",
-    "answer": "I have a Dell Blade Enclosure with 14 blades and ESXi 5.5 on it.",
-    "domain": "general",
     "source": "stackexchange:serverfault:761011"
   },
   {
@@ -1110,12 +810,6 @@
     "source": "stackexchange:serverfault:362889"
   },
   {
-    "question": "Tell me about SYN",
-    "answer": "If it times  out (packet loss or just slow) waiting for SYN-ACK, it resends it.",
-    "domain": "troubleshooting",
-    "source": "stackexchange:serverfault:362889"
-  },
-  {
     "question": "Packet loss rate with iperf and tcpdump?",
     "answer": "I tested a line for its link quality with iperf. The measured speed (UDP port 9005) was 96Mbps, which is fine, because both servers are connected with 100Mbps to the internet. On the other hand the datagram loss rate was shown to be 3.3-3.7%, which I found a little too much. Using a high-speed transfer protocol I recorded the packets on both sides with tcpdump. Than I calculated the packet loss - average 0.25%.",
     "domain": "networking",
@@ -1136,12 +830,6 @@
   {
     "question": "Tell me about MPTS",
     "answer": "I am receiving a MPTS UDP stream from a remote location and I am experiencing packet loss.",
-    "domain": "networking",
-    "source": "stackexchange:serverfault:643176"
-  },
-  {
-    "question": "Tell me about UDP",
-    "answer": "I would like to know if there's any way to eliminate this packet loss while still using the UDP protocol?.",
     "domain": "networking",
     "source": "stackexchange:serverfault:643176"
   },
@@ -1200,12 +888,6 @@
     "source": "stackexchange:serverfault:419819"
   },
   {
-    "question": "Tell me about HOST",
-    "answer": "HOST: thetransitapp               Loss%   Snt   Last   Avg  Best  Wrst StDev\n  1.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:419819"
-  },
-  {
     "question": "Tell me about HWaddr",
     "answer": "eth0      Link encap:Ethernet  HWaddr c8:60:00:bd:2f:9d  \n          inet addr:5.9.43.98  Bcast:5.9.43.127  Mask:255.255.255.224\n          inet6 addr: fe80::ca60:ff:febd:2f9d/64 Scope:Link\n          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1\n          RX packets:3521 errors:0 dropped:0 overruns:0 frame:0\n          TX packets:2117 errors:0 dropped:0 overruns:0 carrier:0\n          collisions:0 txqueuelen:1000 \n          RX bytes:2882770 (2.7 MiB)  TX bytes:910907 (889.5 KiB)\n          Interrupt:30 Base address:0x8000.",
     "domain": "networking",
@@ -1236,12 +918,6 @@
     "source": "stackexchange:serverfault:545489"
   },
   {
-    "question": "Tell me about MAC",
-    "answer": "Total Packets Received with MAC Errors\nRx FCS Errors\nAlignment Errors.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:545489"
-  },
-  {
     "question": "How to define packet loss?",
     "answer": "I found that \"Packet loss describes lost packets of data not reaching their destination after being transmitted across a network.\" So, we can say that it is a portion of transmitted packets gets lost.\nNow, in a wireless network, if packet drops out at the sending end due to queue overflow, that will also cause packet loss.",
     "domain": "networking",
@@ -1252,72 +928,6 @@
     "answer": "I am confused on the definition of Packet Loss Rate.\n\nIs it the number of packets lost per unit of time?\n\nor\n\nIs is the number of packets lost per number of packets sent?",
     "domain": "troubleshooting",
     "source": "stackexchange:networkengineering:7353"
-  },
-  {
-    "question": "Finding transparent firewall packet loss?",
-    "answer": "We use the Cisco ASA 5585 in a layer2 transparent mode.  The configuration is just two 10GE links between our business partner dmz and our inside network.  A simple map looks like this.\n\n10.4.2.9/30                    10.4.2.10/30\ncore01-----------ASA1----------dmzsw\n\n\nThe ASA has 8.2(4) and SSP20.  The switches are 6500 Sup2T with 12.2.  There are no packet drops on any switch or ASA interface!!  Our maximum traffic is about 1.8Gbps between the switches and the CPU load on the ASA is very low.",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:2457"
-  },
-  {
-    "question": "What is configuration?",
-    "answer": "The configuration is just two 10GE links between our business partner dmz and our inside network.",
-    "domain": "intranet",
-    "source": "stackexchange:networkengineering:2457"
-  },
-  {
-    "question": "What is switches?",
-    "answer": "The switches are 6500 Sup2T with 12.2.",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:2457"
-  },
-  {
-    "question": "What is Our maximum traffic?",
-    "answer": "Our maximum traffic is about 1.8Gbps between the switches and the CPU load on the ASA is very low.",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:2457"
-  },
-  {
-    "question": "What is packet loss?",
-    "answer": "The packet loss is growing very fast, but we do not know why.",
-    "domain": "troubleshooting",
-    "source": "stackexchange:networkengineering:2457"
-  },
-  {
-    "question": "What is These?",
-    "answer": "These are the nagios ping failures we see through the firewall.",
-    "domain": "security",
-    "source": "stackexchange:networkengineering:2457"
-  },
-  {
-    "question": "Tell me about Fri Jul",
-    "answer": "My traceroute  [v0.75]\nnagios    (0.0.0.0)                                    Fri Jul 19 03:43:38 2013\nKeys:  Help   Display mode   Restart statistics   Order of fields   quit\n                                  Packets               Pings\n Host                           Loss%   Snt Drop   Last  Best   Avg  Wrst StDev\n 1.",
-    "domain": "troubleshooting",
-    "source": "stackexchange:networkengineering:2457"
-  },
-  {
-    "question": "What is When we ping between the switches, we don't loose many packets, but it?",
-    "answer": "When we ping between the switches, we don't loose many packets, but it is obvious the problem starts somewhere between the switches.",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:2457"
-  },
-  {
-    "question": "Tell me about ICMP",
-    "answer": "Sending 500000, 100-byte ICMP Echos to 10.4.2.10, timeout is 2 seconds:\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!.",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:2457"
-  },
-  {
-    "question": "What is Cisco TAC?",
-    "answer": "Cisco TAC is going in circles on this problem, they keep asking for show tech from so many different switches and it is obvious that the problem is betwen core01 and dmzsw.",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:2457"
-  },
-  {
-    "question": "Tell me about ASA",
-    "answer": "It looks like my manager wants to upgrade our ASA so we don't have this problem again.",
-    "domain": "general",
-    "source": "stackexchange:networkengineering:2457"
   },
   {
     "question": "Outer routing switch - collisions and packet loss?",
@@ -1368,12 +978,6 @@
     "source": "stackexchange:networkengineering:38265"
   },
   {
-    "question": "Tell me about GRE",
-    "answer": "I tested a GRE tunnel on a lousy link, and all traffic seems lagging and slow, but when I switch to a healthy link, everything run smoothly.",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:38265"
-  },
-  {
     "question": "Why isn't there packet loss when WiFi scan during packet transmitting?",
     "answer": "Android devices perform periodical (about 10s as period) WiFi scanning in the background. Let's say there is a Infrastructure BSS with 2 stations connected, one of the stations, staA, is a Android device, we call another station staB. Now we ping staA from staB in a period of 1s. When staA scans, it will transmit Probe Request Frame in each channel, which means it will leave the channel of current BSS for a while.",
     "domain": "networking",
@@ -1406,12 +1010,6 @@
   {
     "question": "Suspect MTR showing incorrect packet loss through router; other tools are not showing loss?",
     "answer": "Using MTR (sending TCP with or without SYN), I'm consistently seeing packet loss on one intermediate router in the path. UDP does the same. I'm use TCP to avoid the ICMP packet flood limits set.\nI highly suspect the packet loss shown by MTR is not real, as many other tools, ie, TCPing.exe, hping3, PRTG QOS, do not show TCP loss (only ICMP loss, which is normal).",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:69841"
-  },
-  {
-    "question": "Tell me about MTR",
-    "answer": "Using MTR (sending TCP with or without SYN), I'm consistently seeing packet loss on one intermediate router in the path.",
     "domain": "networking",
     "source": "stackexchange:networkengineering:69841"
   },
@@ -1482,12 +1080,6 @@
     "source": "stackexchange:security:24548"
   },
   {
-    "question": "Tell me about VPN",
-    "answer": "I know how to get around this online, use a VPN, use disposable virtual machines, Tor, etc.",
-    "domain": "security",
-    "source": "stackexchange:security:24548"
-  },
-  {
     "question": "What is But I kind of want to know IF they?",
     "answer": "But I kind of want to know IF they are spying on my data and what they are doing with it?.",
     "domain": "general",
@@ -1518,26 +1110,8 @@
     "source": "stackexchange:security:171628"
   },
   {
-    "question": "Tell me about KRACK",
-    "answer": "As I understand it, when exploited against Linux and Android the KRACK attack results in the encryption key for the session being zeroed out on the device, so an eavesdropper can easily decrypt the messages.",
-    "domain": "wifi_security",
-    "source": "stackexchange:security:171628"
-  },
-  {
-    "question": "Tell me about AP",
-    "answer": "For encryption to work, both parties must have agreed on the same key, but the attack has changed the encryption key on the client (to all zero) but not the AP (which continues to use the originally negotiated key).",
-    "domain": "security",
-    "source": "stackexchange:security:171628"
-  },
-  {
     "question": "Software suggestions on building a \"passive\" and \"active\" WAN simulation and fuzzing device?",
     "answer": "I want to build a more-or-less self-contained box that I can plug two or more endpoints into (routers, mainly) that will simulate a WAN. I want to be able to mess up traffic in all sorts of ways, both \"passive\" (for example, natural network problems like latency, packet loss, bandwidth restrictions) and \"active\" (such as DoS attacks, MiTM attacks, and other more nefarious actions).",
-    "domain": "networking",
-    "source": "stackexchange:security:7832"
-  },
-  {
-    "question": "Tell me about WAN",
-    "answer": "I want to build a more-or-less self-contained box that I can plug two or more endpoints into (routers, mainly) that will simulate a WAN.",
     "domain": "networking",
     "source": "stackexchange:security:7832"
   },
@@ -1578,12 +1152,6 @@
     "source": "stackexchange:security:76332"
   },
   {
-    "question": "Tell me about SSH",
-    "answer": "Compared with SSH/HTTPS level SSL with handshakes, 128-bit private and public keys, et cetera, which is more secure?.",
-    "domain": "internet",
-    "source": "stackexchange:security:76332"
-  },
-  {
     "question": "Tell me about HTTPS",
     "answer": "That is, if I do HTTPS at some dodgy internet cafe, the owner can pull some tricks to make 'secure' connections between their loan computers and GMail, for instance, to make my traffic Wireshark-style sniffable, whereas, if an internet cafe owner looks at a packet capture of (+42, reverse) encoding, they would likely be at a loss for decrypting it.",
     "domain": "internet",
@@ -1593,12 +1161,6 @@
     "question": "How can an IPS\\IDS detect SQLi \\ XSS (or other application layer) attacks?",
     "answer": "I've been thinking about how an IPS works, and as far as I know it inspects the packets on the TCP\\IP layer.\n\nHow can it detect attacks on higher levels without harming the user experience? How does it address the fact that there is a loss of information and re-transmissions?  \n\nIn the end, there could be a long request that splits over a few TCP packets. Does it build the information and then run a check on the request?\n\nI would like to know what happens from network level and forward.\n\nThanks.",
     "domain": "security",
-    "source": "stackexchange:security:10483"
-  },
-  {
-    "question": "Tell me about IPS",
-    "answer": "I've been thinking about how an IPS works, and as far as I know it inspects the packets on the TCP\\IP layer.",
-    "domain": "networking",
     "source": "stackexchange:security:10483"
   },
   {
@@ -1620,50 +1182,14 @@
     "source": "stackexchange:security:158714"
   },
   {
-    "question": "What is TLS?",
-    "answer": "TLS is the next logical step, which provides encryption1.",
-    "domain": "security",
-    "source": "stackexchange:security:158714"
-  },
-  {
-    "question": "Tell me about CA",
-    "answer": "We cannot use a CA, so our PKI would look different and I don't know what security holes are introduced by manually managing certificates.",
-    "domain": "security",
-    "source": "stackexchange:security:158714"
-  },
-  {
-    "question": "Tell me about WPS",
-    "answer": "Would some kind of pairing process (similar to Bluetooth or WPS) solve the issue with unvalidated certificates?.",
-    "domain": "security",
-    "source": "stackexchange:security:158714"
-  },
-  {
-    "question": "Tell me about MITM",
-    "answer": "This first connection would be susceptible to a MITM-attack, but subsequent connections would not.",
-    "domain": "general",
-    "source": "stackexchange:security:158714"
-  },
-  {
     "question": "What is discussed about Google Cloud: Major packet loss between multiple regions – Europe and Asia?",
     "answer": "affecting other T1 providers too, NTT, Arelion (ex-Telia) also cloud providers OVH who have dark fibers between EU <-> Asia Another day, another huge GCP outage that impacts every region. I had issues between Sydney and Eu earlier in AWS. I am pretty sure Google Ads, search core business, Gmail (workspace), YouTube, and their main web properties are not affected.",
     "domain": "internet",
     "source": "hackernews:31654863"
   },
   {
-    "question": "Tell me about NTT",
-    "answer": "affecting other T1 providers too, NTT, Arelion (ex-Telia) also cloud providers OVH who have dark fibers between EU <-> Asia Another day, another huge GCP outage that impacts every region.",
-    "domain": "internet",
-    "source": "hackernews"
-  },
-  {
     "question": "Tell me about Google Ads",
     "answer": "I am pretty sure Google Ads, search core business, Gmail (workspace), YouTube, and their main web properties are not affected.",
-    "domain": "general",
-    "source": "hackernews"
-  },
-  {
-    "question": "Tell me about IDC",
-    "answer": "Does that mean they use a different network/IDC for Google properties?.",
     "domain": "general",
     "source": "hackernews"
   },
@@ -1692,12 +1218,6 @@
     "source": "hackernews"
   },
   {
-    "question": "What is Since it?",
-    "answer": "Since it is so stable under lossy conditions it might be a good candidate for VoIP applications.",
-    "domain": "general",
-    "source": "hackernews"
-  },
-  {
     "question": "What is protocol du jour for VoIP?",
     "answer": "The protocol du jour for VoIP is UDP because you really want to just drop your packets and move on rather than try to retransmit most of the time, but since the transfer speed in this case seems to be immune to the effects of packet loss and it performs just as well as UDP in a 0% packet loss environment it seems like it would produce superior call quality more consistently than either TCP or UDP.",
     "domain": "networking",
@@ -1720,12 +1240,6 @@
     "answer": "The submitted article suggests the failure is an AT&T failure. Apps Status Dashboard has some info\nhttp://www.google.com/appsstatus#rm:0/di:8/do:1/ddo:1 Looking at the last update, I always chuckle when a tweet notifies about something being offline. Gets kinda ironic :) Apparently those poor packets were on a slow boat from China: http://googleblog.blogspot.com/2009/05/this-is-your-pilot-sp... I understand Twitter now.",
     "domain": "internet",
     "source": "hackernews:609016"
-  },
-  {
-    "question": "Tell me about AT",
-    "answer": "The submitted article suggests the failure is an AT&T failure.",
-    "domain": "general",
-    "source": "hackernews"
   },
   {
     "question": "Tell me about Apps Status Dashboard",
@@ -1780,12 +1294,6 @@
     "answer": "I'm currently seeing >99% packet loss to news.ycombinator.com (2606:7100:1:67::26):  13. br06-te1-2.lwdc.americanis.net                   0.0%   231   14.3  17.2  14.0 172.5  19.5\n  14. sdtc.sd-me01.te0-1.host1.20546.americanis.net   99.6%   231   12.9  12.9  12.9  12.9   0.0\n  15. 2606:7100:1:67::26                              99.1%   231   11.8  11.8  11.8  11.8   0.0\n\nChecked from both US and EU connections, same result, would be a very odd coincidence if it was a problem on my end.",
     "domain": "networking",
     "source": "hackernews:44972745"
-  },
-  {
-    "question": "Tell me about US",
-    "answer": "Checked from both US and EU connections, same result, would be a very odd coincidence if it was a problem on my end.",
-    "domain": "general",
-    "source": "hackernews"
   },
   {
     "question": "What is Trace looks like the uplink provider?",
@@ -1860,12 +1368,6 @@
     "source": "stackexchange:serverfault:31970"
   },
   {
-    "question": "Tell me about SONET",
-    "answer": "Is there published documentation on best-case and worst-case latency added by SONET ADM equipment?.",
-    "domain": "networking",
-    "source": "stackexchange:serverfault:31970"
-  },
-  {
     "question": "Tell me about MSPP",
     "answer": "Fujitsu FlashWave 4500 MSPP\nCienna 1600 DWDM\nNortel OC-48 Classic\nNortel OC-192 Transparent.",
     "domain": "general",
@@ -1880,18 +1382,6 @@
   {
     "question": "Raid 1 and Latency?",
     "answer": "I am aware that RAID comes with certain write penalties, etc and that varies at different levels. I am trying to figure out how latency is affected in RAID 1. From my SAN, I can look at the number of writes, reads, bytes, and latency in individual HDD. While others match, latency slightly varies. I am trying to figure out the following.\n\nRAID 1\nHDD 1 Write Latency: 24ms\nHDD 2 Write Latency: 28ms\n\nDoes that mean the total write latency = 24ms + 28ms? Or just 28ms? or (24+28/2)ms.",
-    "domain": "networking",
-    "source": "stackexchange:serverfault:476718"
-  },
-  {
-    "question": "Tell me about RAID",
-    "answer": "I am aware that RAID comes with certain write penalties, etc and that varies at different levels.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:476718"
-  },
-  {
-    "question": "Tell me about SAN",
-    "answer": "From my SAN, I can look at the number of writes, reads, bytes, and latency in individual HDD.",
     "domain": "networking",
     "source": "stackexchange:serverfault:476718"
   },
@@ -1956,12 +1446,6 @@
     "source": "stackexchange:serverfault:36795"
   },
   {
-    "question": "Tell me about SSID",
-    "answer": "The repeater consisting of a receiver, which then immediately repeats the signal to an access point, but under a different SSID(I do not need this to all work as one network).",
-    "domain": "wifi",
-    "source": "stackexchange:serverfault:36795"
-  },
-  {
     "question": "What is Assuming the software?",
     "answer": "Assuming the software is as fast as the hardware, could there be any latency probelms with this also assuming that all the repeaters were within full-speed distance of each other?.",
     "domain": "networking",
@@ -1974,20 +1458,8 @@
     "source": "stackexchange:serverfault:20037"
   },
   {
-    "question": "Tell me about NFS",
-    "answer": "How can I achieve low latency for NFS exports in order to e.g.",
-    "domain": "networking",
-    "source": "stackexchange:serverfault:20037"
-  },
-  {
     "question": "Understanding Latency and Jitter?",
     "answer": "Analyzed 2 different internet connection. Details are as:\n\nNet-1:\n\nDownload Speed: 2699 kbps (337.4 KB/sec transfer rate)\nUpload Speed: 4737 kbps (592.1 KB/sec transfer rate)\nLatency: 172 ms\nJitter: 50 ms\n\nNet-2:\n\nDownload Speed: 1711 kbps (337.4 KB/sec transfer rate)\nUpload Speed: 505 kbps (592.1 KB/sec transfer rate)\nLatency: 40 ms\nJitter: 19 ms\n\n\nWhat I know about \"Latency\" is that it's good if less and same goes for \"Jitter\".",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:22822"
-  },
-  {
-    "question": "Tell me about KB",
-    "answer": "Download Speed: 2699 kbps (337.4 KB/sec transfer rate)\nUpload Speed: 4737 kbps (592.1 KB/sec transfer rate)\nLatency: 172 ms\nJitter: 50 ms.",
     "domain": "networking",
     "source": "stackexchange:networkengineering:22822"
   },
@@ -2004,21 +1476,9 @@
     "source": "stackexchange:networkengineering:24675"
   },
   {
-    "question": "Tell me about AS",
-    "answer": "So I have a small topology ( 4 AS ), and I tested it on a real environment (College Lab) with Cisco routers (2000 series).",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:24675"
-  },
-  {
     "question": "What is So this?",
     "answer": "So this is the GNS3 topology, I use my own Windows loopback interface for PC1, and Ubuntu VM on PC2.",
     "domain": "general",
-    "source": "stackexchange:networkengineering:24675"
-  },
-  {
-    "question": "Tell me about PCs",
-    "answer": "In the real environment I use 2 different PCs (and of course, different routers).",
-    "domain": "networking",
     "source": "stackexchange:networkengineering:24675"
   },
   {
@@ -2034,21 +1494,9 @@
     "source": "stackexchange:networkengineering:70949"
   },
   {
-    "question": "Tell me about Google Cloud",
-    "answer": "The following article on Google Cloud describes measuring latency, and uses ping and netperf.",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:70949"
-  },
-  {
     "question": "Tell me about Clarification\nThe",
     "answer": "Clarification\nThe article explains the discrepancy between the tools, and when configuring to use the same intervals, produced the graph.",
     "domain": "general",
-    "source": "stackexchange:networkengineering:70949"
-  },
-  {
-    "question": "What is question?",
-    "answer": "The question is regarding the increased latency at higher intervals - regardless of tool used.",
-    "domain": "networking",
     "source": "stackexchange:networkengineering:70949"
   },
   {
@@ -2094,12 +1542,6 @@
     "source": "stackexchange:networkengineering:51894"
   },
   {
-    "question": "Tell me about LTE",
-    "answer": "I've noticed I can get a low latency 4G LTE signal at this location, but bandwidth is poor.",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:51894"
-  },
-  {
     "question": "What is perhaps a VPN setup where connections?",
     "answer": "perhaps a VPN setup where connections are established over LTE, and switch over to satellite once they've transmitted more than some threshold size (say 500kb).",
     "domain": "networking",
@@ -2120,12 +1562,6 @@
   {
     "question": "How to measure the firewall latency?",
     "answer": "I want to make a lab experiment to measure the firewall (a hardware) latency. This firewall can do Deep Packet Inspection (DPI) on some industrial protocols (you can consider as TCP payload inspection). Hence, I want to measure the firewall's latency when inspecting the payload.\n\nAssume I have a sender PC and a receiver PC. The firewall is connected in between.",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:37089"
-  },
-  {
-    "question": "Tell me about DPI",
-    "answer": "This firewall can do Deep Packet Inspection (DPI) on some industrial protocols (you can consider as TCP payload inspection).",
     "domain": "networking",
     "source": "stackexchange:networkengineering:37089"
   },
@@ -2238,20 +1674,8 @@
     "source": "stackexchange:security:108429"
   },
   {
-    "question": "What is Also?",
-    "answer": "Also are there any known implementations of this idea?.",
-    "domain": "general",
-    "source": "stackexchange:security:108429"
-  },
-  {
     "question": "Security for a low latency online multiplayer game?",
     "answer": "I am designing an online multiplayer game and I am looking for a good tradeoff of secure communications with minimal CPU and bandwidth utilization. My ideal solution would only use UDP packets since TCP is a poor choice for the realtime requirement of the game. However, I have no problem falling back on TCP for the login server.\n\nHere is my idea.\n\n\n\nWhen users first login to the service:\n\n\nUsers connect to an authentication server (which holds a Verisign cerficate) via SSL.",
-    "domain": "networking",
-    "source": "stackexchange:security:9418"
-  },
-  {
-    "question": "Tell me about CPU",
-    "answer": "I am designing an online multiplayer game and I am looking for a good tradeoff of secure communications with minimal CPU and bandwidth utilization.",
     "domain": "networking",
     "source": "stackexchange:security:9418"
   },
@@ -2262,20 +1686,8 @@
     "source": "stackexchange:security:9418"
   },
   {
-    "question": "Tell me about SSL",
-    "answer": "Users connect to an authentication server (which holds a Verisign cerficate) via SSL.",
-    "domain": "security",
-    "source": "stackexchange:security:9418"
-  },
-  {
     "question": "What is If the login?",
     "answer": "If the login is valid, then two 256-bit AES public/private key pairs are generated by the server.",
-    "domain": "general",
-    "source": "stackexchange:security:9418"
-  },
-  {
-    "question": "What is user?",
-    "answer": "The user is sent one private key and one public key to remember, which can later be used for symmetric communication.",
     "domain": "general",
     "source": "stackexchange:security:9418"
   },
@@ -2306,18 +1718,6 @@
   {
     "question": "What is Sending the data in the clear?",
     "answer": "Sending the data in the clear is dangerous due to trivial packet replay and man-in-the-middle attacks.",
-    "domain": "general",
-    "source": "stackexchange:security:9418"
-  },
-  {
-    "question": "Tell me about AES",
-    "answer": "However, I believe that performing the AES encryption for every such packet would be too CPU intensive.",
-    "domain": "security",
-    "source": "stackexchange:security:9418"
-  },
-  {
-    "question": "Tell me about XOR",
-    "answer": "Instead, I am considering a simple XOR cipher obfuscation as follows:.",
     "domain": "general",
     "source": "stackexchange:security:9418"
   },
@@ -2364,12 +1764,6 @@
     "source": "stackexchange:security:126374"
   },
   {
-    "question": "What is Below?",
-    "answer": "Below is an example of the command I'm running and its output:.",
-    "domain": "general",
-    "source": "stackexchange:security:126374"
-  },
-  {
     "question": "Tell me about PORT",
     "answer": "PORT     STATE  SERVICE\n80/tcp   closed http\n135/tcp  open   msrpc\n9100/tcp closed jetdirect.",
     "domain": "networking",
@@ -2394,12 +1788,6 @@
     "source": "stackexchange:security:110723"
   },
   {
-    "question": "Tell me about OK",
-    "answer": "00000000  client's request executed with status \"OK\", other values correspond to specific error messages.",
-    "domain": "general",
-    "source": "stackexchange:security:110723"
-  },
-  {
     "question": "Is SSL + DNScrypt enough to hide visited domains from my ISP?",
     "answer": "I've been using VPN lately which I configured on Ubuntu machine in Germany, and I do not feel comfortable using it because of high latency. So I found DNScrypt. Since I only want to keep my browsing activity mine.\n\nIf I am visiting only SSL protected websites (these days sites that have SSL are rapidly increasing) and using DNScrypt (which protects my DNS lookups from being spoofed), is there any way my ISP can determine web addresses I am visiting?",
     "domain": "security",
@@ -2415,12 +1803,6 @@
     "question": "nmap's -sn flag works when a single target is specified, but, not when multiple targets are?",
     "answer": "When I specify an individual target,\n\n\n>nmap -v3 -sn 172.18.188.209\n\n\nI get the correct and expected nmap response\n\n\nStarting Nmap 7.70 ( https://nmap.org ) at 2019-11-08 11:16 India Standard Time\nInitiating Ping Scan at 11:16\nScanning 172.18.188.209 [2 ports]\nCompleted Ping Scan at 11:16, 1.00s elapsed (1 total hosts)\nInitiating Parallel DNS resolution of 1 host. at 11:16\nCompleted Parallel DNS resolution of 1 host. at 11:16, 5.62s elapsed\nDNS resolution of 1 IPs took 5.62s.",
     "domain": "networking",
-    "source": "stackexchange:security:220864"
-  },
-  {
-    "question": "Tell me about DNS",
-    "answer": "Starting Nmap 7.70 ( https://nmap.org ) at 2019-11-08 11:16 India Standard Time\nInitiating Ping Scan at 11:16\nScanning 172.18.188.209 [2 ports]\nCompleted Ping Scan at 11:16, 1.00s elapsed (1 total hosts)\nInitiating Parallel DNS resolution of 1 host.",
-    "domain": "internet",
     "source": "stackexchange:security:220864"
   },
   {
@@ -2462,18 +1844,6 @@
   {
     "question": "Do I need to use TLS if data is already encrypted and gets decrypted client-side?",
     "answer": "We are serving static content over the internet, and have a business requirement that the data must be encrypted at rest. Currently it is stored in AWS S3, where it can be accessed by authorized clients over HTTP. We could proxy this through Cloudfront or Nginx to use TLS, but would only do so if it is necessary. The decryption key is retrieved by frontend client via a separate HTTPS request.",
-    "domain": "internet",
-    "source": "stackexchange:security:257071"
-  },
-  {
-    "question": "What is Currently it?",
-    "answer": "Currently it is stored in AWS S3, where it can be accessed by authorized clients over HTTP.",
-    "domain": "internet",
-    "source": "stackexchange:security:257071"
-  },
-  {
-    "question": "Tell me about TLS",
-    "answer": "We could proxy this through Cloudfront or Nginx to use TLS, but would only do so if it is necessary.",
     "domain": "internet",
     "source": "stackexchange:security:257071"
   },
@@ -2610,12 +1980,6 @@
     "source": "hackernews"
   },
   {
-    "question": "Tell me about Big Sur",
-    "answer": "I just tried this myself and can't replicate on a 2019 i7 running Big Sur.",
-    "domain": "general",
-    "source": "hackernews"
-  },
-  {
     "question": "Tell me about Apple Maps",
     "answer": "Also, the Apple Maps thing didn't seem to change anything for me, either.",
     "domain": "general",
@@ -2636,12 +2000,6 @@
   {
     "question": "What is Free servers and a way better chat system ate Mumble's use case.TeamSpeak?",
     "answer": "Free servers and a way better chat system ate Mumble's use case.TeamSpeak is still used by milsim/flightsim communities because it support plugins which integrate the in-sim radios with the VoIP system.EDIT: Got Vent and TS mixed up I really appreciate Mumble's dedication to lowering latency.Latency is a silent killer of conversation quality.",
-    "domain": "networking",
-    "source": "hackernews"
-  },
-  {
-    "question": "Tell me about VOIP",
-    "answer": "To my ears, 2010-era Skype had lower latency than any VOIP software in mainstream use today, including Skype.",
     "domain": "networking",
     "source": "hackernews"
   },
@@ -2670,20 +2028,8 @@
     "source": "hackernews"
   },
   {
-    "question": "Tell me about SSD",
-    "answer": "According to this all latencies improved dramatically except for SSD random read (disk seek only improved by 10x as well).",
-    "domain": "general",
-    "source": "hackernews"
-  },
-  {
     "question": "What is Reading 1 million bytes sequentially from SSD improved 1000x and?",
     "answer": "Reading 1 million bytes sequentially from SSD improved 1000x and is now only 2-3x slower than a random read and for disk reading 1 million bytes is faster than a seek.",
-    "domain": "general",
-    "source": "hackernews"
-  },
-  {
-    "question": "Tell me about IO",
-    "answer": "Conclusion: avoid random IO where performance matters.CPU and RAM latencies stopped improving in 2005 but storage and network kept improving.",
     "domain": "general",
     "source": "hackernews"
   },
@@ -2692,12 +2038,6 @@
     "answer": "Note that the results will differ between compositors, different GPUs, and different configurations. This is somewhat less the case with X11 since there is only one X server implementation (that Linux desktop systems use, anyhow.)I think there may still be the issue that many compositor/GPU combinations don't get hardware cursor planes, which would definitely cause a latency discrepancy like this.",
     "domain": "networking",
     "source": "hackernews:42831509"
-  },
-  {
-    "question": "Tell me about GPUs",
-    "answer": "Note that the results will differ between compositors, different GPUs, and different configurations.",
-    "domain": "networking",
-    "source": "hackernews"
   },
   {
     "question": "What is If Wayland?",
@@ -2736,12 +2076,6 @@
     "source": "hackernews"
   },
   {
-    "question": "Tell me about CDN",
-    "answer": "I'm guessing it would need to be hosted behind a CDN or so to provide this oracle that can be benchmarked against?.",
-    "domain": "internet",
-    "source": "hackernews"
-  },
-  {
     "question": "DNS resolution speed?",
     "answer": "I'm trying to speed up my webpage load time in distant locations.\n\nMy server is located in Germany and I installed the second one in LA, CA. \n\nThen I configured BIND to return LA IP for clients from Americas and German IP for clients from Europe and Asia.\n\nThough it seems there is still room to reduce response time by some dozens of ms with DNS and name servers.",
     "domain": "internet",
@@ -2750,12 +2084,6 @@
   {
     "question": "What is My server?",
     "answer": "My server is located in Germany and I installed the second one in LA, CA.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:735403"
-  },
-  {
-    "question": "Tell me about BIND",
-    "answer": "Then I configured BIND to return LA IP for clients from Americas and German IP for clients from Europe and Asia.",
     "domain": "general",
     "source": "stackexchange:serverfault:735403"
   },
@@ -2820,12 +2148,6 @@
     "source": "stackexchange:serverfault:609572"
   },
   {
-    "question": "What is OpenVPN?",
-    "answer": "OpenVPN is running on pfSense, and remote clients are able to successfully connect.",
-    "domain": "security",
-    "source": "stackexchange:serverfault:609572"
-  },
-  {
     "question": "Tell me about NAS",
     "answer": "However, after connecting, you can access the NAS at \\\\10.1.10.2, clients can't connect via using the short DNS name (nor the FQDN) of \\\\nnh, or \\\\nnh.local, respectively.",
     "domain": "internet",
@@ -2868,12 +2190,6 @@
     "source": "stackexchange:serverfault:609572"
   },
   {
-    "question": "Tell me about DHCP",
-    "answer": ": fe80::9218:7cff:fe48:faa2%10\n                                       192.168.43.1\n   DHCP Server .",
-    "domain": "networking",
-    "source": "stackexchange:serverfault:609572"
-  },
-  {
     "question": "Intermittent DNS resolution problems?",
     "answer": "Of ~140 PCs, a few PCs (no determined pattern) are consistently unable to resolve the AD DS domain name during boot and intermittently unable to resolve AD DS DNS names post-boot. This can be temporarily resolved by restarting the Windows service DNS Client / dnscache and/or rebooting the PC until it works.",
     "domain": "networking",
@@ -2910,27 +2226,9 @@
     "source": "stackexchange:serverfault:858510"
   },
   {
-    "question": "What is No traffic?",
-    "answer": "No traffic is blocked by the firewall during reboot.",
-    "domain": "security",
-    "source": "stackexchange:serverfault:858510"
-  },
-  {
     "question": "Tell me about XG",
     "answer": "Updating the Sophos XG firmware from version 16.05.3 MR-3 to version 16.05.5 MR-5 didn't resolve the problem.",
     "domain": "general",
-    "source": "stackexchange:serverfault:858510"
-  },
-  {
-    "question": "Tell me about LAN",
-    "answer": "Created a network firewall rule to allow LAN-to-any, PC's IP address-to-any using any ports / services didn't resolve the problem.",
-    "domain": "networking",
-    "source": "stackexchange:serverfault:858510"
-  },
-  {
-    "question": "Tell me about AD",
-    "answer": "Post-boot, pinging the AD domain name and any server hostname successfully resolves and transmits but RSoP still reports that computer-side (not user-side) Group Policy Infrastructure failed to apply because The specified domain either does not exist or could not be contacted.",
-    "domain": "intranet",
     "source": "stackexchange:serverfault:858510"
   },
   {
@@ -2973,18 +2271,6 @@
     "question": "Tell me about XXX",
     "answer": "@              A        XXX.XXX.XXX.XXX\nwww            CNAME    mydomain.parentdomain.com.",
     "domain": "general",
-    "source": "stackexchange:serverfault:811302"
-  },
-  {
-    "question": "Tell me about CNAME",
-    "answer": "if I remove both A and CNAME, users would not be able to resolve and would fallback to ns.parentdomain.com for resolution attempt.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:811302"
-  },
-  {
-    "question": "What is If this?",
-    "answer": "If this is true, would this mean that I deferred a resolution completely to CloudFlare?.",
-    "domain": "internet",
     "source": "stackexchange:serverfault:811302"
   },
   {
@@ -3054,12 +2340,6 @@
     "source": "stackexchange:serverfault:105231"
   },
   {
-    "question": "Tell me about PING",
-    "answer": "$ ping example\nPING example.co.uk (80.94.32.224): 56 data bytes\n64 bytes from 80.94.32.224: icmp_seq=0 ttl=56 time=62.077 ms.",
-    "domain": "networking",
-    "source": "stackexchange:serverfault:105231"
-  },
-  {
     "question": "Where does DNS resolution fit within the TCP/IP stack?",
     "answer": "I know that it's possible to whitelist/blacklist IP addresses (for example, only allowing a few external IP addresses to be contacted from within a VPN). But since IP address destinations are the result of the recursive DNS resolution process (from what what I understand at least).",
     "domain": "networking",
@@ -3090,12 +2370,6 @@
     "source": "stackexchange:networkengineering:6820"
   },
   {
-    "question": "Tell me about FQDN",
-    "answer": "Can I use FQDN's in crypto maps when setting a peer (where I'd normally use an IP), and can I use FQDN's when defining an LDAP Server or any other AAA Server in a server group?.",
-    "domain": "intranet",
-    "source": "stackexchange:networkengineering:6820"
-  },
-  {
     "question": "What is If the answer?",
     "answer": "If the answer is yes, please provide a quick example of how to do that.",
     "domain": "general",
@@ -3114,12 +2388,6 @@
     "source": "stackexchange:networkengineering:41269"
   },
   {
-    "question": "What is idea?",
-    "answer": "The idea is that if my local server (10.110.176.12) becomes unresponsive, I can still get results from Google's public DNS.",
-    "domain": "internet",
-    "source": "stackexchange:networkengineering:41269"
-  },
-  {
     "question": "What is However, despite my configuration, it appears that the timeout?",
     "answer": "However, despite my configuration, it appears that the timeout is still 3 seconds, and the retry is 3.",
     "domain": "general",
@@ -3135,12 +2403,6 @@
     "question": "What is It's only the DNS Server portion of IOS which?",
     "answer": "It's only the DNS Server portion of IOS which is ignoring these values.",
     "domain": "internet",
-    "source": "stackexchange:networkengineering:41269"
-  },
-  {
-    "question": "Tell me about RELEASE",
-    "answer": "Cisco1921/K9 running Cisco Version 15.0(1r)M9, RELEASE SOFTWARE (fc1).",
-    "domain": "general",
     "source": "stackexchange:networkengineering:41269"
   },
   {
@@ -3204,24 +2466,6 @@
     "source": "stackexchange:networkengineering:64199"
   },
   {
-    "question": "Tell me about VLANs",
-    "answer": "I recently installed an Adtran Netvanta 4430 to perform some basic VLANs on a network with a little bit of inter-VLAN routing, and I'm having a few odd issues, probably attributed to my inexperience on routers.",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:64199"
-  },
-  {
-    "question": "What is setup?",
-    "answer": "The setup is that on interface 0/1 I have the uplink to an ONT, and on interface 0/2 it is connected to a switch.",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:64199"
-  },
-  {
-    "question": "What is switch?",
-    "answer": "The switch is a very basic setup (for each port, switchport access vlan (blah) and a single switchport mode trunk) but the router is where it gets a little confusing in my opinion, as it's my first I've ever set up I've done lots of reading and research and I hate asking for help that basically looks like \"I don't understand it, fix my config for me\" (which I am trying not to do)...",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:64199"
-  },
-  {
     "question": "What is but I'm at a big loss now and any help?",
     "answer": "but I'm at a big loss now and any help is appreciated greatly!.",
     "domain": "general",
@@ -3258,18 +2502,6 @@
     "source": "stackexchange:networkengineering:5836"
   },
   {
-    "question": "Tell me about Wireless Bridge Mode",
-    "answer": "I've read that both the airRouter and the Netgear needs to be set into Wireless Bridge Mode.",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:5836"
-  },
-  {
-    "question": "Tell me about SOHO",
-    "answer": "Trying to set the airRouter to bridge instead of SOHO mode seems to disable NAT which is required to be on (according to my employer).",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:5836"
-  },
-  {
     "question": "What is How would I assure that the routers?",
     "answer": "How would I assure that the routers are connected to each other?.",
     "domain": "networking",
@@ -3291,12 +2523,6 @@
     "question": "What is I'd like to know the nitty gritty details of how VPN Remote Clients?",
     "answer": "I'd like to know the nitty gritty details of how VPN Remote Clients are given Private IP Addresses on a Remote Network when they connect to the StrongSWAN or OpenVPN VPN Server that's embedded in VyOS Routers, as well as how Virtual IP Address Pools fit in the process.",
     "domain": "networking",
-    "source": "stackexchange:networkengineering:46877"
-  },
-  {
-    "question": "What is What exactly?",
-    "answer": "What exactly are \"VIPAPs\" why do they exist?.",
-    "domain": "general",
     "source": "stackexchange:networkengineering:46877"
   },
   {
@@ -3332,12 +2558,6 @@
   {
     "question": "What is I currently have an issue where the IPv6 default route?",
     "answer": "I currently have an issue where the IPv6 default route is not being installed from the CMTS RA.",
-    "domain": "general",
-    "source": "stackexchange:networkengineering:57817"
-  },
-  {
-    "question": "Tell me about SRX",
-    "answer": "Try as I might, I cannot get the SRX to pick up and install the default route.",
     "domain": "general",
     "source": "stackexchange:networkengineering:57817"
   },
@@ -3462,12 +2682,6 @@
     "source": "stackexchange:security:231476"
   },
   {
-    "question": "Tell me about ARP",
-    "answer": "Scenario\nThe attackers launches an ARP spoof attack to redirect all target traffic to the attacker.",
-    "domain": "networking",
-    "source": "stackexchange:security:231476"
-  },
-  {
     "question": "What is For all the other domains the queries?",
     "answer": "For all the other domains the queries are not answered and not even forwarded.",
     "domain": "general",
@@ -3534,22 +2748,10 @@
     "source": "stackexchange:security:17562"
   },
   {
-    "question": "Tell me about DDOS",
-    "answer": "What measures could be recommended to such providers to best deal with a DDOS?.",
-    "domain": "security",
-    "source": "stackexchange:security:17562"
-  },
-  {
     "question": "What is discussed about DNSSEC KSK rollover breaks DNS resolution for .nz domains?",
     "answer": "If a safety upgrade to driving a car made people crash their cars more, you'd call that a bug. For DNS it's a feature called DNSSEC. I hope the situation gets resolved swiftly, and lessons learned from this incident can contribute to stronger and more reliable DNSSEC practices in the future. Been there, done that, albeit on a smaller scale. And I don't envy the people running the .nz registry at all, and they have my best wishes. DNSSEC designers screwed up by making rollovers to be atomic.",
     "domain": "internet",
     "source": "hackernews:36118856"
-  },
-  {
-    "question": "Tell me about DNSSEC",
-    "answer": "I hope the situation gets resolved swiftly, and lessons learned from this incident can contribute to stronger and more reliable DNSSEC practices in the future.",
-    "domain": "internet",
-    "source": "hackernews"
   },
   {
     "question": "What is discussed about Java's URL.equals() Performs DNS Resolution?",
@@ -3567,18 +2769,6 @@
     "question": "What is > \"Two hosts?",
     "answer": "> \"Two hosts are considered equivalent if both host names can be resolved into the same IP addresses\"Uhmm...",
     "domain": "networking",
-    "source": "hackernews"
-  },
-  {
-    "question": "What is Why?",
-    "answer": "Why are they resolving anything?.",
-    "domain": "general",
-    "source": "hackernews"
-  },
-  {
-    "question": "What is URL?",
-    "answer": "A URL is a string, this should just be doing a string comparison.",
-    "domain": "internet",
     "source": "hackernews"
   },
   {
@@ -3600,12 +2790,6 @@
     "source": "hackernews"
   },
   {
-    "question": "Tell me about URI",
-    "answer": "We can't change it now.> However, to address URI parsing in general, we introduced a new class called URI in Merlin (jdk1.4).",
-    "domain": "general",
-    "source": "hackernews"
-  },
-  {
     "question": "What is People?",
     "answer": "People are encouraged to use URI for parsing and URI comparison, and leave URL class for accessing the URI itself, getting at the protocol handler, interacting with the protocol etc.",
     "domain": "internet",
@@ -3616,12 +2800,6 @@
     "answer": "And of course Route 53 still has a green checkmark. Nothing listed on AWS Personal Health Dashboard related to this incident. Also nothing abnormal listed on the AWS status page under S3, which is seemingly having DNS resolution issues for buckets with the `[bucket_name].s3.amazonaws.com` pattern. In our case the issue is affecting DNS resolution of 'only' S3 related hostnames (my-bucket.s3.amazonaws.",
     "domain": "internet",
     "source": "hackernews:21327980"
-  },
-  {
-    "question": "Tell me about AWS",
-    "answer": "Nothing listed on AWS Personal Health Dashboard related to this incident.",
-    "domain": "general",
-    "source": "hackernews"
   },
   {
     "question": "What is Also nothing abnormal listed on the AWS status page under S3, which?",
@@ -3672,27 +2850,9 @@
     "source": "hackernews"
   },
   {
-    "question": "Tell me about URLs",
-    "answer": "Lawful filtering: Filtering of URLs leading to illegal content based on legal requirements applicable in the EU or in national jurisdictions (e.g.",
-    "domain": "networking",
-    "source": "hackernews"
-  },
-  {
-    "question": "Tell me about EU",
-    "answer": "based on court orders), in full compliance with EU rules.But yeah, it's the sort of thing that it's better done at EU level rather than in 27 different, weak and uncoordinated ways.",
-    "domain": "networking",
-    "source": "hackernews"
-  },
-  {
     "question": "What is Even if the censorship implications?",
     "answer": "Even if the censorship implications are a bit obvious, it's good that:- we have more alternatives- we add to the global network for resilience- we increase our independence from the USA for something so critical- we get more control over our little part of the internet in case of a digital attackProvided we can always switch to an alternative DNS server from inside the EU if we need to, it's a net positive.",
     "domain": "networking",
-    "source": "hackernews"
-  },
-  {
-    "question": "What is The EU?",
-    "answer": "The EU is on a roll today with some really drastic changes in such a short span.",
-    "domain": "general",
     "source": "hackernews"
   },
   {
@@ -3736,12 +2896,6 @@
     "answer": "> The Kubernetes DNS resolves A-B-C-D.N.pod.cluster.local to A.B.C.D, as long as A.B.C.D is a valid IP address and N is an existing namespace. Let’s be honest: I don’t know how this serves any purpose, but if you do, please let me know!You can use that to- test weird dns setups- to issue proper TLS certificates (you can do that technically, but it's less known fact and some services like let's encrypt forbid that as their rule)- to utilize single IP and same port for multiple services (so just a.",
     "domain": "internet",
     "source": "hackernews:43451861"
-  },
-  {
-    "question": "Tell me about UNIX",
-    "answer": "It's bit curious that traditionally UNIX systems did not run local DNS resolver daemons and instead the resolv.conf (and nsswitch.conf) persisted for so long.",
-    "domain": "networking",
-    "source": "hackernews"
   },
   {
     "question": "What is .dev?",

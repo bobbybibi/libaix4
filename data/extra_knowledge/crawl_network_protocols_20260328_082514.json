@@ -30,24 +30,6 @@
     "source": "wikipedia:Communication protocol"
   },
   {
-    "question": "What is Internet communication protocols?",
-    "answer": "Internet communication protocols are published by the Internet Engineering Task Force (IETF).",
-    "domain": "general",
-    "source": "wikipedia:Communication protocol"
-  },
-  {
-    "question": "Tell me about IEEE",
-    "answer": "The IEEE (Institute of Electrical and Electronics Engineers) handles wired and wireless networking and the International Organization for Standardization (ISO) handles other types.",
-    "domain": "networking",
-    "source": "wikipedia:Communication protocol"
-  },
-  {
-    "question": "Tell me about ITU",
-    "answer": "The ITU-T handles telecommunications protocols and formats for the public switched telephone network (PSTN).",
-    "domain": "networking",
-    "source": "wikipedia:Communication protocol"
-  },
-  {
     "question": "What is As the PSTN and Internet converge, the standards?",
     "answer": "As the PSTN and Internet converge, the standards are also being driven towards convergence.",
     "domain": "general",
@@ -57,12 +39,6 @@
     "question": "Tell me about NPL",
     "answer": "The first use of the term protocol in a modern data communication context occurs in April 1967 in a memorandum entitled A Protocol for Use in the NPL Data Communications Network.",
     "domain": "general",
-    "source": "wikipedia:Communication protocol"
-  },
-  {
-    "question": "Tell me about ARPANET",
-    "answer": "On the ARPANET, the starting point for host-to-host communication in 1969 was the 1822 protocol, written by Bob Kahn, which defined the transmission of messages to an IMP.",
-    "domain": "networking",
     "source": "wikipedia:Communication protocol"
   },
   {
@@ -84,51 +60,15 @@
     "source": "wikipedia:Communication protocol"
   },
   {
-    "question": "Tell me about PARC",
-    "answer": "Bob Metcalfe and others at Xerox PARC outlined the idea of Ethernet and the PARC Universal Packet (PUP) for internetworking.",
-    "domain": "networking",
-    "source": "wikipedia:Communication protocol"
-  },
-  {
-    "question": "Tell me about RFC",
-    "answer": "Its RFC 675 specification was written by Cerf with Yogen Dalal and Carl Sunshine in December 1974, still a monolithic design at this time.",
-    "domain": "general",
-    "source": "wikipedia:Communication protocol"
-  },
-  {
     "question": "Tell me about CCITT",
     "answer": "The International Network Working Group agreed on a connectionless datagram standard, which was presented to the CCITT in 1975 but was not adopted by the CCITT nor by the ARPANET.",
     "domain": "networking",
     "source": "wikipedia:Communication protocol"
   },
   {
-    "question": "Tell me about IBM",
-    "answer": "Computer manufacturers developed proprietary protocols such as IBM's Systems Network Architecture (SNA), Digital Equipment Corporation's DECnet and Xerox Network Systems.",
-    "domain": "general",
-    "source": "wikipedia:Communication protocol"
-  },
-  {
     "question": "Tell me about SATNET",
     "answer": "This was installed on SATNET in 1982 and on the ARPANET in January 1983.",
     "domain": "networking",
-    "source": "wikipedia:Communication protocol"
-  },
-  {
-    "question": "Tell me about OSI",
-    "answer": "International work on a reference model for communication standards led to the OSI model, published in 1984.",
-    "domain": "networking",
-    "source": "wikipedia:Communication protocol"
-  },
-  {
-    "question": "What is Protocols?",
-    "answer": "Protocols are to communication what algorithms or programming languages are to computations.",
-    "domain": "general",
-    "source": "wikipedia:Communication protocol"
-  },
-  {
-    "question": "What is This communication?",
-    "answer": "This communication is governed by well-understood protocols, which can be embedded in the process code itself.",
-    "domain": "general",
     "source": "wikipedia:Communication protocol"
   },
   {
@@ -216,12 +156,6 @@
     "source": "wikipedia:Communication protocol"
   },
   {
-    "question": "Tell me about HTTP",
-    "answer": "Binary have been used in the normative documents describing modern standards like EbXML, HTTP/2, HTTP/3 and EDOC.",
-    "domain": "internet",
-    "source": "wikipedia:Communication protocol"
-  },
-  {
     "question": "Tell me about UML",
     "answer": "An interface in UML may also be considered a binary protocol.",
     "domain": "general",
@@ -282,18 +216,6 @@
     "source": "wikipedia:Communication protocol"
   },
   {
-    "question": "Tell me about IP",
-    "answer": "For instance, to translate a logical IP address specified by the application to an Ethernet MAC address.",
-    "domain": "networking",
-    "source": "wikipedia:Communication protocol"
-  },
-  {
-    "question": "What is This?",
-    "answer": "This is referred to as address mapping.",
-    "domain": "troubleshooting",
-    "source": "wikipedia:Communication protocol"
-  },
-  {
     "question": "Tell me about Routing\nWhen",
     "answer": "Routing\nWhen systems are not directly connected, intermediary systems along the route to the intended receiver(s) need to forward messages on behalf of the sender.",
     "domain": "networking",
@@ -314,12 +236,6 @@
   {
     "question": "What is In a common approach, a CRC of the data area?",
     "answer": "In a common approach, a CRC of the data area is added to the end of packets, making it possible for the receiver to detect differences caused by corruption.",
-    "domain": "general",
-    "source": "wikipedia:Communication protocol"
-  },
-  {
-    "question": "Tell me about CRC",
-    "answer": "The receiver rejects the packets on CRC differences and arranges somehow for retransmission.",
     "domain": "general",
     "source": "wikipedia:Communication protocol"
   },
@@ -474,12 +390,6 @@
     "source": "wikipedia:Communication protocol"
   },
   {
-    "question": "Tell me about ISO",
-    "answer": "=== Formal specification ===\nPopular formal methods of describing communication syntax are Abstract Syntax Notation One (an ISO standard) and augmented Backus–Naur form (an IETF standard).",
-    "domain": "general",
-    "source": "wikipedia:Communication protocol"
-  },
-  {
     "question": "What is Finite-state machine models?",
     "answer": "Finite-state machine models are used to formally describe the possible interactions of the protocol.",
     "domain": "general",
@@ -518,18 +428,6 @@
   {
     "question": "What is BSC?",
     "answer": "BSC is an early link-level protocol used to connect two separate nodes.",
-    "domain": "general",
-    "source": "wikipedia:Communication protocol"
-  },
-  {
-    "question": "What is There?",
-    "answer": "There are more than 50 variants of the original bi-sync protocol.",
-    "domain": "general",
-    "source": "wikipedia:Communication protocol"
-  },
-  {
-    "question": "What is Such protocols?",
-    "answer": "Such protocols are referred to as de facto standards.",
     "domain": "general",
     "source": "wikipedia:Communication protocol"
   },
@@ -636,12 +534,6 @@
     "source": "wikipedia:Communication protocol"
   },
   {
-    "question": "What is quality of service?",
-    "answer": "The quality of service is negotiated between network and transport entities at the time the connection is set up.",
-    "domain": "general",
-    "source": "wikipedia:Communication protocol"
-  },
-  {
     "question": "What is This layer?",
     "answer": "This layer is also responsible for network congestion control.",
     "domain": "general",
@@ -668,12 +560,6 @@
   {
     "question": "What is Connection-oriented networks?",
     "answer": "Connection-oriented networks are more suitable for wide area networks and connectionless networks are more suitable for local area networks.",
-    "domain": "general",
-    "source": "wikipedia:Communication protocol"
-  },
-  {
-    "question": "Tell me about IETF",
-    "answer": "At the time, the IETF had to cope with this and the fact that the Internet needed protocols that simply were not there.",
     "domain": "general",
     "source": "wikipedia:Communication protocol"
   },
@@ -1026,12 +912,6 @@
     "source": "wikipedia:Network Time Protocol"
   },
   {
-    "question": "What is They?",
-    "answer": "They are also referred to as primary time servers.",
-    "domain": "general",
-    "source": "wikipedia:Network Time Protocol"
-  },
-  {
     "question": "What is upper limit for stratum?",
     "answer": "The upper limit for stratum is 15; stratum 16 is used to indicate that a device is unsynchronized.",
     "domain": "general",
@@ -1050,21 +930,9 @@
     "source": "wikipedia:Network Time Protocol"
   },
   {
-    "question": "What is For IPv4, this?",
-    "answer": "For IPv4, this is simply the 32-bit address; for IPv6, it would be the first 32 bits of the MD5 hash of the source address.",
-    "domain": "general",
-    "source": "wikipedia:Network Time Protocol"
-  },
-  {
     "question": "What is refid field?",
     "answer": "The refid field is filled with status words in the case of kiss-o'-death (KoD) packets, which tell the client to stop sending requests so that the server can rest.",
     "domain": "internet",
-    "source": "wikipedia:Network Time Protocol"
-  },
-  {
-    "question": "What is Some examples?",
-    "answer": "Some examples are INIT (initialization), STEP (step time change), and RATE (client requesting too fast).",
-    "domain": "general",
     "source": "wikipedia:Network Time Protocol"
   },
   {
@@ -1074,20 +942,8 @@
     "source": "wikipedia:Network Time Protocol"
   },
   {
-    "question": "Tell me about IANA",
-    "answer": "The IANA maintains a registry for refid source names and KoD codes.",
-    "domain": "general",
-    "source": "wikipedia:Network Time Protocol"
-  },
-  {
     "question": "What is Reference clocks?",
     "answer": "Reference clocks are supported and their offsets are filtered and analysed in the same way as remote servers, although they are usually polled more frequently.",
-    "domain": "general",
-    "source": "wikipedia:Network Time Protocol"
-  },
-  {
-    "question": "Tell me about XP",
-    "answer": "The network time server in Windows 2000 Server (and Windows XP) does not implement NTP disciplined synchronization, only locally disciplined synchronization with NTP/SNTP correction.",
     "domain": "general",
     "source": "wikipedia:Network Time Protocol"
   },
@@ -1137,12 +993,6 @@
     "question": "What is It is versatile enough for ordinary computers, which?",
     "answer": "It is versatile enough for ordinary computers, which are unstable, go into sleep mode or have intermittent connection to the Internet.",
     "domain": "general",
-    "source": "wikipedia:Network Time Protocol"
-  },
-  {
-    "question": "Tell me about LAN",
-    "answer": "It is able to achieve improved precision on LAN connections, using hardware timestamping on the network adapter.",
-    "domain": "troubleshooting",
     "source": "wikipedia:Network Time Protocol"
   },
   {
@@ -1230,12 +1080,6 @@
     "source": "wikipedia:Network Time Protocol"
   },
   {
-    "question": "Tell me about DNS",
-    "answer": "Similar to the DNS amplification attack, the server responds with a much larger reply that allows an attacker to substantially increase the amount of data being sent to the target.",
-    "domain": "internet",
-    "source": "wikipedia:Network Time Protocol"
-  },
-  {
     "question": "What is NTPv3 supports a symmetric key mode, which?",
     "answer": "NTPv3 supports a symmetric key mode, which is not useful against MITM.",
     "domain": "general",
@@ -1260,39 +1104,15 @@
     "source": "wikipedia:Network Time Protocol"
   },
   {
-    "question": "Tell me about MITM",
-    "answer": "If the server goes down, previous users would still be able to fetch time without fear of MITM.",
-    "domain": "general",
-    "source": "wikipedia:Network Time Protocol"
-  },
-  {
     "question": "What is NTS?",
     "answer": "NTS is supported by several NTP servers including Cloudflare and Netnod.",
     "domain": "internet",
     "source": "wikipedia:Network Time Protocol"
   },
   {
-    "question": "Tell me about MS",
-    "answer": "Microsoft also has an approach to authenticate NTPv3/SNTPv4 packets using a Windows domain identity, known as MS-SNTP.",
-    "domain": "general",
-    "source": "wikipedia:Network Time Protocol"
-  },
-  {
-    "question": "What is This system?",
-    "answer": "This system is implemented in the reference ntpd and chrony, using samba for the domain connection.",
-    "domain": "general",
-    "source": "wikipedia:Network Time Protocol"
-  },
-  {
     "question": "Tell me about LI",
     "answer": "LI (Leap Indicator): 2 bits\nWarning of leap second insertion or deletion:\n0 = no warning\n1 = last minute has 61 seconds\n2 = last minute has 59 seconds\n3 = unknown (clock unsynchronized)\nVN (Version Number): 3 bits\nNTP version number, typically 4.",
     "domain": "wifi_security",
-    "source": "wikipedia:Network Time Protocol"
-  },
-  {
-    "question": "Tell me about ID",
-    "answer": "Reference ID: 32 bits\nIdentifies the specific server or reference clock; interpretation depends on Stratum.",
-    "domain": "general",
     "source": "wikipedia:Network Time Protocol"
   },
   {
@@ -1323,12 +1143,6 @@
     "question": "What is 64-bit second value?",
     "answer": "The 64-bit second value is enough to provide unambiguous time representation until the universe goes dim.\".",
     "domain": "general",
-    "source": "wikipedia:Network Time Protocol"
-  },
-  {
-    "question": "Tell me about DHCP",
-    "answer": "=== Time zone configuration via DHCP ===\nWhile the Network Time Protocol (NTP) is responsible for synchronising system clocks to Coordinated Universal Time (UTC), it does not distribute local time zone information.",
-    "domain": "networking",
     "source": "wikipedia:Network Time Protocol"
   },
   {
@@ -1374,12 +1188,6 @@
     "source": "wikipedia:Network Time Protocol"
   },
   {
-    "question": "What does DHCP provide?",
-    "answer": "DHCP provides IP configuration and time zone information.",
-    "domain": "networking",
-    "source": "wikipedia:Network Time Protocol"
-  },
-  {
     "question": "Tell me about IRIG",
     "answer": "== See also ==\nAllan variance – Measure of frequency stability in clocks and oscillators\nClock network – Set of clocks that synchronized to same time\nInternational Atomic Time – Time standard based on atomic clocks\nIRIG timecode – Standard formats for transferring time information\nNITZ – Mechanism for time synchronisation on mobile devices\nNTP pool – Networked computers providing time synchronization\nNtpdate – Software to synchronize computer time\nPrecision Time Protocol – Network time synchronization protocol.",
     "domain": "networking",
@@ -1404,12 +1212,6 @@
     "source": "wikipedia:List of network protocols (OSI model)"
   },
   {
-    "question": "What is This list?",
-    "answer": "This list is not exclusive to only the OSI protocol family.",
-    "domain": "networking",
-    "source": "wikipedia:List of network protocols (OSI model)"
-  },
-  {
     "question": "What is Many of these protocols?",
     "answer": "Many of these protocols are originally based on the Internet Protocol Suite (TCP/IP) and other models and they often do not fit neatly into OSI layers.",
     "domain": "networking",
@@ -1419,18 +1221,6 @@
     "question": "Tell me about VEN",
     "answer": "Virtual Extended Network (VEN) a protocol developed by iQuila.",
     "domain": "general",
-    "source": "wikipedia:List of network protocols (OSI model)"
-  },
-  {
-    "question": "Tell me about ATM",
-    "answer": "== Network Topology ==\nAsynchronous Transfer Mode (ATM)\nIS-IS, Intermediate System - Intermediate System (OSI)\nSPB Shortest Path Bridging\nMTP Message Transfer Part\nNSP Network Service Part\nTRILL (TRansparent Interconnection of Lots of Links).",
-    "domain": "networking",
-    "source": "wikipedia:List of network protocols (OSI model)"
-  },
-  {
-    "question": "Tell me about ARP",
-    "answer": "== Layer 2.5 ==\nARP Address Resolution Protocol\nMPLS Multiprotocol Label Switching\nPPPoE Point-to-Point Protocol over Ethernet\nTIPC Transparent Inter-process Communication.",
-    "domain": "networking",
     "source": "wikipedia:List of network protocols (OSI model)"
   },
   {
@@ -1464,12 +1254,6 @@
     "source": "wikipedia:List of network protocols (OSI model)"
   },
   {
-    "question": "Tell me about ASN",
-    "answer": "== Protocol description languages ==\nAbstract Syntax Notation One (ASN.1).",
-    "domain": "general",
-    "source": "wikipedia:List of network protocols (OSI model)"
-  },
-  {
     "question": "Tell me about SNA",
     "answer": "== See also ==\nList of automation protocols\nSystems Network Architecture (SNA) developed by IBM\nDistributed System Security Architecture (DSSA)\nOSI model.",
     "domain": "networking",
@@ -1486,432 +1270,6 @@
     "answer": "Network Protocols Acronyms and Abbreviations - list of network protocols with abbreviations order by index.",
     "domain": "general",
     "source": "wikipedia:List of network protocols (OSI model)"
-  },
-  {
-    "question": "What is Virtual private network?",
-    "answer": "A virtual private network (VPN) is an overlay network that uses network virtualization to extend a private network across a public network, such as the Internet, via the use of encryption and tunneling protocols. In a VPN, a tunneling protocol is used to transfer network messages from one network host to another. \nHost-to-network VPNs are commonly used by organizations to allow off-site users secure access to an office network over the Internet.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is virtual private network (VPN)?",
-    "answer": "A virtual private network (VPN) is an overlay network that uses network virtualization to extend a private network across a public network, such as the Internet, via the use of encryption and tunneling protocols.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is In a VPN, a tunneling protocol?",
-    "answer": "In a VPN, a tunneling protocol is used to transfer network messages from one network host to another.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is Host-to-network VPNs?",
-    "answer": "Host-to-network VPNs are commonly used by organizations to allow off-site users secure access to an office network over the Internet.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "Tell me about VPNs",
-    "answer": "Site-to-site VPNs connect two networks, such as an office network and a datacenter.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is network?",
-    "answer": "A network is a group of communicating computers known as hosts, which communicate data to other hosts via communication protocols, as facilitated by networking hardware.",
-    "domain": "general",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is Within a computer network, computers?",
-    "answer": "Within a computer network, computers are identified by network addresses, which allow rule-based systems such as Internet Protocol to locate and identify hosts.",
-    "domain": "general",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is Hosts may also have hostnames, memorable labels for the host nodes, which?",
-    "answer": "Hosts may also have hostnames, memorable labels for the host nodes, which are rarely changed after initial assignment.",
-    "domain": "general",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What does transmission medium that provide?",
-    "answer": "The transmission medium that supports information exchange includes wired media like copper cables, optical fibers, and wireless radio-frequency media.",
-    "domain": "wifi",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is arrangement of hosts and hardware within a network architecture?",
-    "answer": "The arrangement of hosts and hardware within a network architecture is known as the network topology.",
-    "domain": "general",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is network interface controller (NIC)?",
-    "answer": "The network interface controller (NIC) is computer hardware that connects the computer to the network media.",
-    "domain": "general",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "Tell me about NIC",
-    "answer": "In Ethernet networks, each NIC has a unique Media Access Control (MAC) address, usually stored in the controller's permanent memory.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is repeater?",
-    "answer": "A repeater is an electronic device that receives a network signal, cleans it of unnecessary noise and regenerates it.",
-    "domain": "general",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is signal?",
-    "answer": "The signal is retransmitted at a higher power level, or to the other side of obstruction so that the signal can cover longer distances without degradation.",
-    "domain": "general",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is Ethernet repeater with multiple ports?",
-    "answer": "An Ethernet repeater with multiple ports is known as an Ethernet hub.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "Tell me about LANs",
-    "answer": "Hubs and repeaters in LANs have been largely obsoleted by modern network switches.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is Network bridges?",
-    "answer": "Network bridges are analogous to a two-port switch.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is Both?",
-    "answer": "Both are devices that forward frames of data between ports based on the destination MAC address in each frame.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is router?",
-    "answer": "A router is an internetworking device that forwards packets between networks by processing the addressing or routing information included in the packet.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is Modems (modulator-demodulator)?",
-    "answer": "Modems (modulator-demodulator) are used to connect network nodes via wire not originally designed for digital network traffic, or for wireless.",
-    "domain": "wifi",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is use of protocol layering?",
-    "answer": "The use of protocol layering is ubiquitous across the field of computer networking.",
-    "domain": "general",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is important example of a protocol stack?",
-    "answer": "An important example of a protocol stack is HTTP, the World Wide Web protocol.",
-    "domain": "internet",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is This stack?",
-    "answer": "This stack is used between a wireless router and a personal computer when accessing the web.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is network packet?",
-    "answer": "A network packet is a formatted unit of data carried by a packet-switched network.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What does control information provide?",
-    "answer": "The control information provides data the network needs to deliver the user data, for example, source and destination network addresses, error detection codes, and sequencing information.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is Typically, control information?",
-    "answer": "Typically, control information is found in packet headers and trailers, with payload data in between.",
-    "domain": "general",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is Internet protocol suite, also called TCP/IP?",
-    "answer": "The Internet protocol suite, also called TCP/IP, is the foundation of all modern networking and the defining set of protocols for the Internet.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "Tell me about Internet Protocol Version",
-    "answer": "At its core, the protocol suite defines the addressing, identification, and routing specifications for Internet Protocol Version 4 (IPv4) and for IPv6, the next generation of the protocol with a much enlarged addressing capability.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "Tell me about VPN",
-    "answer": "Data packets travelling across a VPN may also be secured by tamper proofing via a message authentication code, prevents the message from being altered or tampered without being rejected, enhancing data integrity.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is Authentication may also occur after actual tunnels?",
-    "answer": "Authentication may also occur after actual tunnels are already active, for example, with a web captive portal.",
-    "domain": "wifi_security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is This connection state?",
-    "answer": "This connection state is usually facilitated through the simultaneous use of a LAN network interface controller (NIC), radio NIC, Wireless LAN NIC, and virtual private network client software application.",
-    "domain": "wifi",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is Split tunneling?",
-    "answer": "Split tunneling is most commonly configured via the use of a remote-access VPN client, which allows the user to simultaneously connect to a nearby wireless network, resources on an off-site corporate network, as well as websites over the internet.",
-    "domain": "wifi",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What does This type of extension provide?",
-    "answer": "This type of extension provides computer access to a local area network of a remote site, or any wider enterprise networks, such as an intranet.",
-    "domain": "general",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is Each computer?",
-    "answer": "Each computer is in charge of activating its own tunnel towards the network it wants to join.",
-    "domain": "general",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is joined network?",
-    "answer": "The joined network is only aware of a single remote host for each tunnel.",
-    "domain": "general",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is Tunneling?",
-    "answer": "Tunneling is only done between gateway devices located at each network location.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is In the context of site-to-site configurations, the terms intranet and extranet?",
-    "answer": "In the context of site-to-site configurations, the terms intranet and extranet are used to describe two different use cases.",
-    "domain": "intranet",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is limitation of traditional VPNs?",
-    "answer": "A limitation of traditional VPNs is that they are point-to-point connections and do not tend to support broadcast domains.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is Therefore, communication, software, and networking that?",
-    "answer": "Therefore, communication, software, and networking that are based on layer 2 and broadcast packets (such as NetBIOS used in Windows networking) may not be fully supported as on a local area network.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "Tell me about MPLS",
-    "answer": "Multiprotocol Label Switching (MPLS) often overlays trusted VPNs, often with quality-of-service control over a trusted delivery network.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is Mobile VPNs?",
-    "answer": "Mobile VPNs are widely used in public safety where they give law-enforcement officers access to applications such as computer-assisted dispatch and criminal databases, and in other organizations with similar requirements such as field service management and healthcare.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "Tell me about DMVPN",
-    "answer": "=== DMVPN ===\nDynamic Multipoint Virtual Private Network (DMVPN) is a dynamic tunneling form of a virtual private network supported on Cisco IOS-based routers, Huawei AR G3 routers, and Unix-like operating systems.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What does DMVPN provide?",
-    "answer": "DMVPN provides the capability for creating a dynamic-mesh VPN network without having to statically pre-configure all possible tunnel end-point peers, such as IPsec and ISAKMP peers.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is DMVPN?",
-    "answer": "DMVPN is initially configured to build a hub-and-spoke network by statically configuring the hubs (VPN headends) on the spokes; no change in the configuration on the hub is required to accept new spokes.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is Using this initial hub-and-spoke network, tunnels between spokes?",
-    "answer": "Using this initial hub-and-spoke network, tunnels between spokes are dynamically built on demand without additional configuration on the hubs or spokes.",
-    "domain": "general",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "Tell me about EVPN",
-    "answer": "=== EVPN ===\nEthernet VPN (EVPN) is a technology for carrying OSI layer 2 Ethernet traffic as a virtual private network using wide area network protocols.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is In practice, MPLS?",
-    "answer": "In practice, MPLS is mainly used to forward IP protocol data units and Virtual Private LAN Service Ethernet traffic.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is Major applications of MPLS?",
-    "answer": "Major applications of MPLS are telecommunications traffic engineering and MPLS VPN.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "Tell me about VPLS",
-    "answer": "=== VPLS ===\nVirtual Private LAN Service (VPLS) is a virtual private network technology that provides Ethernet-based multipoint-to-multipoint communication over IP or MPLS networks.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What does In contrast to L2TPv3, which provide?",
-    "answer": "In contrast to L2TPv3, which allows only point-to-point OSI layer 2 tunnels, VPLS allows any-to-any (multipoint) connectivity.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "Tell me about PPVPN",
-    "answer": "=== PPVPN ===\nA provider-provisioned VPN (PPVPN) is a virtual private network (VPN) implemented by a connectivity service provider or large enterprise on a network they operate on their own, as opposed to a \"customer-provisioned VPN\" where the VPN is implemented by the customer who acquires the connectivity service on top of the technical specificities of the provider.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "Tell me about IPSec",
-    "answer": "=== IPSec (1996) ===\nInternet Protocol Security (IPsec) is a standards-based security protocol, initially developed by the Internet Engineering Task Force (IETF) for IPv6, and was required in all standards-compliant implementations of IPv6 before RFC 6434 made it only a recommendation.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What does IPsec provide?",
-    "answer": "IPsec uses encryption, encapsulating an IP packet inside an IPsec packet.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is De-encapsulation happens at the end of the tunnel, where the original IP packet?",
-    "answer": "De-encapsulation happens at the end of the tunnel, where the original IP packet is decrypted and forwarded to its intended destination.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is IPsec?",
-    "answer": "IPsec is also often supported by network hardware accelerators, which makes IPsec VPN desirable for low-power scenarios, like always-on remote access VPN configurations.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is IPsec tunnels?",
-    "answer": "IPsec tunnels are set up by the Internet Key Exchange (IKE) protocol.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "Tell me about IKE",
-    "answer": "IKE version 2, which was created by Microsoft and Cisco, can be used alone to provide IPsec VPN functionality.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is Its primary advantages?",
-    "answer": "Its primary advantages are the native support for authenticating via the Extensible Authentication Protocol (EAP) and that the tunnel can be seamlessly restored when the IP address of the associated host is changing, which is typical of a roaming mobile device, whether on 3G or 4G LTE networks.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What does OpenSSH server provide?",
-    "answer": "OpenSSH server provides a limited number of concurrent tunnels.",
-    "domain": "internet",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is SSH?",
-    "answer": "SSH is more often used to remotely connect to machines or networks instead of a site to site VPN connection.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "Tell me about AES",
-    "answer": "It supports perfect forward-secrecy, and most modern secure cipher suites, like AES, Serpent, TwoFish, etc.",
-    "domain": "general",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "Tell me about SSTP",
-    "answer": "=== SSTP (2007) ===\nSecure Socket Tunneling Protocol (SSTP) is a form of VPN tunnel that provides a mechanism to transport Point-to-Point Protocol (PPP) traffic through an SSL/TLS channel.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "Tell me about DTLS",
-    "answer": "=== Other ===\nDatagram Transport Layer Security (DTLS) – used in Cisco AnyConnect VPN and in OpenConnect VPN to solve the issues TLS has with tunneling over TCP (SSL/TLS are TCP-based, and tunneling TCP over TCP can lead to big delays and connection aborts).",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "Tell me about MPPE",
-    "answer": "Microsoft Point-to-Point Encryption (MPPE) works with the Point-to-Point Tunneling Protocol and in several compatible implementations on other platforms.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "Tell me about MPVPN",
-    "answer": "Ragula Systems Development Company owns the registered trademark \"MPVPN\".",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is Crypto IP Encapsulation (CIPE)?",
-    "answer": "Crypto IP Encapsulation (CIPE) is a free and open-source VPN implementation for tunneling IPv4 packets over UDP via encapsulation.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "Tell me about CIPE",
-    "answer": "CIPE was developed for Linux operating systems by Olaf Titz, with a Windows port implemented by Damion K.",
-    "domain": "general",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is L2TP which?",
-    "answer": "L2TP which is a standards-based replacement for two proprietary VPN protocols: Cisco's Layer 2 Forwarding (L2F) (obsolete as of 2009) and Microsoft's Point-to-Point Tunneling Protocol (PPTP).",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "Tell me about IPFire",
-    "answer": "In some cases, like in the open source operating systems devoted to firewalls and network devices (like OpenWrt, IPFire, PfSense or OPNsense), it is possible to add support for additional VPN protocols by installing missing software components or third-party apps.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is By 2027, this market?",
-    "answer": "By 2027, this market is projected to grow to $76 billion.",
-    "domain": "general",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is \"Necessity?",
-    "answer": "\"Necessity is the mother of VPN invention\".",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
   },
   {
     "question": "What is Thread (network protocol)?",
@@ -1934,18 +1292,6 @@
   {
     "question": "What does Thread Group provide?",
     "answer": "Thread Group provides certification for components and products to ensure adherence to the spec.",
-    "domain": "general",
-    "source": "wikipedia:Thread (network protocol)"
-  },
-  {
-    "question": "Tell me about ARM",
-    "answer": "Initial members were ARM Holdings, Big Ass Solutions, NXP Semiconductors/Freescale, Google-subsidiary Nest Labs, OSRAM, Samsung, Silicon Labs, Somfy, Tyco International, Qualcomm, and the Yale lock company.",
-    "domain": "networking",
-    "source": "wikipedia:Thread (network protocol)"
-  },
-  {
-    "question": "Tell me about In August",
-    "answer": "In August 2018, Apple joined the group, and released its first Thread product, the HomePod Mini, in late 2020.",
     "domain": "general",
     "source": "wikipedia:Thread (network protocol)"
   },
@@ -2010,18 +1356,6 @@
     "source": "wikipedia:Internet protocol suite"
   },
   {
-    "question": "Tell me about DARPA",
-    "answer": "Early versions of this networking model were known as the Department of Defense (DoD) Internet Architecture Model because the research and development were funded by the Defense Advanced Research Projects Agency (DARPA) of the  United States Department of Defense.",
-    "domain": "networking",
-    "source": "wikipedia:Internet protocol suite"
-  },
-  {
-    "question": "What does Internet protocol suite provide?",
-    "answer": "The Internet protocol suite provides end-to-end data communication specifying how data should be packetized, addressed, transmitted, routed, and received.",
-    "domain": "general",
-    "source": "wikipedia:Internet protocol suite"
-  },
-  {
     "question": "What is This functionality?",
     "answer": "This functionality is organized into four abstraction layers, which classify all related protocols according to each protocol's scope of networking.",
     "domain": "general",
@@ -2037,12 +1371,6 @@
     "question": "Tell me about INWG",
     "answer": "They drew on the experience the international research community, through the International Network Working Group (INWG), chaired by Cerf, which included researchers from the ARPANET community, Xerox PARC, the United Kingdom and France.",
     "domain": "networking",
-    "source": "wikipedia:Internet protocol suite"
-  },
-  {
-    "question": "Tell me about Transmission Control Program",
-    "answer": "The first specification of this Transmission Control Program was written in December 1974 by Cerf, Yogen Dalal and Carl Sunshine at Stanford University.",
-    "domain": "general",
     "source": "wikipedia:Internet protocol suite"
   },
   {
@@ -2064,12 +1392,6 @@
     "source": "wikipedia:Internet protocol suite"
   },
   {
-    "question": "Tell me about US",
-    "answer": "=== Adoption ===\nIn March 1982, the US Department of Defense declared TCP/IP as the standard for all military computer networking.",
-    "domain": "networking",
-    "source": "wikipedia:Internet protocol suite"
-  },
-  {
     "question": "Tell me about NORSAR",
     "answer": "In the same year, Norway (NORSAR and NDRE) and Peter Kirstein's research group at University College London adopted the protocol.",
     "domain": "general",
@@ -2082,32 +1404,8 @@
     "source": "wikipedia:Internet protocol suite"
   },
   {
-    "question": "Tell me about FTP",
-    "answer": "At the same time, several smaller companies, such as FTP Software and the Wollongong Group, began offering TCP/IP stacks for DOS and Microsoft Windows.",
-    "domain": "networking",
-    "source": "wikipedia:Internet protocol suite"
-  },
-  {
-    "question": "Tell me about VM",
-    "answer": "The first VM/CMS TCP/IP stack came from the University of Wisconsin.",
-    "domain": "networking",
-    "source": "wikipedia:Internet protocol suite"
-  },
-  {
     "question": "What is Some programmers?",
     "answer": "Some programmers are notable for early TCP/IP stack implementations.",
-    "domain": "networking",
-    "source": "wikipedia:Internet protocol suite"
-  },
-  {
-    "question": "Tell me about MIT",
-    "answer": "In 1984, Donald Gillies at MIT wrote a ntcp multi-connection TCP which runs atop the IP/PacketDriver layer maintained by John Romkey at MIT in 1983–84.",
-    "domain": "networking",
-    "source": "wikipedia:Internet protocol suite"
-  },
-  {
-    "question": "Tell me about PC",
-    "answer": "For Windows 3.1, the dominant PC operating system among consumers in the first half of the 1990s, Peter Tattam's release of the Trumpet Winsock TCP/IP stack was key to bringing the Internet to home users.",
     "domain": "networking",
     "source": "wikipedia:Internet protocol suite"
   },
@@ -2124,12 +1422,6 @@
     "source": "wikipedia:Internet protocol suite"
   },
   {
-    "question": "Tell me about Internet Protocol",
-    "answer": "A successor Internet Protocol version 6 (IPv6) was developed to address issues such as IPv4 address exhaustion.",
-    "domain": "intranet",
-    "source": "wikipedia:Internet protocol suite"
-  },
-  {
     "question": "What is Encapsulation?",
     "answer": "Encapsulation is usually aligned with the division of the protocol suite into layers of general functionality.",
     "domain": "general",
@@ -2138,12 +1430,6 @@
   {
     "question": "What does In general, an application (the highest level of the model) provide?",
     "answer": "In general, an application (the highest level of the model) uses a set of protocols to send its data down the layers.",
-    "domain": "general",
-    "source": "wikipedia:Internet protocol suite"
-  },
-  {
-    "question": "What is data?",
-    "answer": "The data is further encapsulated at each level.",
     "domain": "general",
     "source": "wikipedia:Internet protocol suite"
   },
@@ -2169,12 +1455,6 @@
     "question": "What is Processes?",
     "answer": "Processes are addressed via ports which essentially represent services.",
     "domain": "general",
-    "source": "wikipedia:Internet protocol suite"
-  },
-  {
-    "question": "What is User Datagram Protocol (UDP)?",
-    "answer": "The User Datagram Protocol (UDP) is the most basic transport layer protocol, providing an unreliable connectionless datagram service.",
-    "domain": "networking",
     "source": "wikipedia:Internet protocol suite"
   },
   {
@@ -2226,12 +1506,6 @@
     "source": "wikipedia:Internet protocol suite"
   },
   {
-    "question": "What is This process?",
-    "answer": "This process is called routing and is supported by host addressing and identification using the hierarchical IP addressing system.",
-    "domain": "networking",
-    "source": "wikipedia:Internet protocol suite"
-  },
-  {
     "question": "What does internet layer provide?",
     "answer": "The internet layer provides an unreliable datagram transmission facility between hosts located on potentially different IP networks by forwarding datagrams to an appropriate next-hop router for further relaying to its destination.",
     "domain": "networking",
@@ -2268,12 +1542,6 @@
     "source": "wikipedia:Internet protocol suite"
   },
   {
-    "question": "What is TCP?",
-    "answer": "TCP is a connection-oriented protocol that addresses numerous reliability issues in providing a reliable byte stream:.",
-    "domain": "networking",
-    "source": "wikipedia:Internet protocol suite"
-  },
-  {
     "question": "Tell me about SCTP",
     "answer": "data arrives in-order\ndata has minimal error (i.e., correctness)\nduplicate data is discarded\nlost or discarded packets are resent\nincludes traffic congestion control\nThe newer Stream Control Transmission Protocol (SCTP) is also a reliable, connection-oriented transport mechanism.",
     "domain": "general",
@@ -2286,20 +1554,8 @@
     "source": "wikipedia:Internet protocol suite"
   },
   {
-    "question": "What does It also provide?",
-    "answer": "It also provides multihoming support, in which a connection end can be represented by multiple IP addresses (representing multiple physical interfaces), such that if one fails, the connection is not interrupted.",
-    "domain": "networking",
-    "source": "wikipedia:Internet protocol suite"
-  },
-  {
     "question": "What is Like IP, it?",
     "answer": "Like IP, it is a best-effort, unreliable protocol.",
-    "domain": "general",
-    "source": "wikipedia:Internet protocol suite"
-  },
-  {
-    "question": "What is Reliability?",
-    "answer": "Reliability is addressed through error detection using a checksum algorithm.",
     "domain": "general",
     "source": "wikipedia:Internet protocol suite"
   },
@@ -2382,24 +1638,6 @@
     "source": "wikipedia:Internet protocol suite"
   },
   {
-    "question": "What is example?",
-    "answer": "An example is the Resource Reservation Protocol (RSVP).",
-    "domain": "general",
-    "source": "wikipedia:Internet protocol suite"
-  },
-  {
-    "question": "Tell me about NAT",
-    "answer": "It is also sometimes necessary for Applications affected by NAT to consider the application payload.",
-    "domain": "networking",
-    "source": "wikipedia:Internet protocol suite"
-  },
-  {
-    "question": "Tell me about The Internet",
-    "answer": "== Layering evolution and representations in the literature ==\nThe Internet protocol suite evolved through research and development funded over a period of time.",
-    "domain": "general",
-    "source": "wikipedia:Internet protocol suite"
-  },
-  {
     "question": "Tell me about International Organization",
     "answer": "In particular, efforts in the International Organization for Standardization led to a similar goal, but with a wider scope of networking in general.",
     "domain": "networking",
@@ -2415,12 +1653,6 @@
     "question": "What is application layer, the presentation layer and the session layer?",
     "answer": "the application layer, the presentation layer and the session layer, are not distinguished separately in the TCP/IP model which only has an application layer above the transport layer.",
     "domain": "networking",
-    "source": "wikipedia:Internet protocol suite"
-  },
-  {
-    "question": "Tell me about NFS",
-    "answer": "For example, the NFS application protocol runs over the External Data Representation (XDR) presentation protocol, which, in turn, runs over a protocol called Remote Procedure Call (RPC).",
-    "domain": "general",
     "source": "wikipedia:Internet protocol suite"
   },
   {
@@ -2532,20 +1764,8 @@
     "source": "wikipedia:List of wireless network protocols"
   },
   {
-    "question": "Tell me about WLAN",
-    "answer": "For wider area communications, wireless local area network (WLAN) is used.",
-    "domain": "wifi",
-    "source": "wikipedia:List of wireless network protocols"
-  },
-  {
     "question": "What is WLANs?",
     "answer": "WLANs are often known by their commercial product name Wi-Fi.",
-    "domain": "wifi",
-    "source": "wikipedia:List of wireless network protocols"
-  },
-  {
-    "question": "What is These systems?",
-    "answer": "These systems are used to provide wireless access to other systems on the local network such as other computers, shared printers, and other such devices or even the internet.",
     "domain": "wifi",
     "source": "wikipedia:List of wireless network protocols"
   },
@@ -2576,12 +1796,6 @@
   {
     "question": "What is Cellular network technologies?",
     "answer": "Cellular network technologies are often split into 2nd generation 2G, 3G and 4G networks.",
-    "domain": "general",
-    "source": "wikipedia:List of wireless network protocols"
-  },
-  {
-    "question": "Tell me about GSM",
-    "answer": "Typical 2G standards include GSM and IS-95 with extensions via GPRS, EDGE and 1xRTT, providing Internet access to users of originally voice centric 2G networks.",
     "domain": "general",
     "source": "wikipedia:List of wireless network protocols"
   },
@@ -2631,12 +1845,6 @@
     "question": "Tell me about OFDM",
     "answer": "Flash-OFDM: FLASH (Fast Low-latency Access with Seamless Handoff)-OFDM (Orthogonal Frequency Division Multiplexing)\nGPRS\nHSPA D and U standards.",
     "domain": "networking",
-    "source": "wikipedia:List of wireless network protocols"
-  },
-  {
-    "question": "Tell me about LTE",
-    "answer": "Lorawan\nLTE\nRTT\nUMTS over W-CDMA\nUMTS-TDD\nWiMAX: 802.16 standard\nNarrowband IoT\nNR.",
-    "domain": "general",
     "source": "wikipedia:List of wireless network protocols"
   },
   {
@@ -2712,12 +1920,6 @@
     "source": "wikipedia:List of wireless network protocols"
   },
   {
-    "question": "Tell me about II",
-    "answer": "== External links ==\nMobile WiMAX - Part I: A Technical Overview and Performance Evaluation\nMobile WiMAX – Part II: A Comparative Analysis\nA Comparison of Bluetooth and IEEE 802.11\nWLAN Trainer at different speeds\nIEEE 802.11 Standard Overview.",
-    "domain": "wifi",
-    "source": "wikipedia:List of wireless network protocols"
-  },
-  {
     "question": "What is Overlay network?",
     "answer": "An overlay network is a logical computer network that is layered on top of a physical network. The concept of overlay networking is distinct from the traditional model of OSI layered networks, and almost always assumes that the underlay network is an IP network of some kind.\nSome examples of overlay networking technologies are, VXLAN, BGP VPNs, and IP-over-IP technologies, such as GRE, IPSEC tunnels, or SD-WAN.",
     "domain": "networking",
@@ -2727,12 +1929,6 @@
     "question": "What is concept of overlay networking?",
     "answer": "The concept of overlay networking is distinct from the traditional model of OSI layered networks, and almost always assumes that the underlay network is an IP network of some kind.",
     "domain": "networking",
-    "source": "wikipedia:Overlay network"
-  },
-  {
-    "question": "Tell me about VXLAN",
-    "answer": "Some examples of overlay networking technologies are, VXLAN, BGP VPNs, and IP-over-IP technologies, such as GRE, IPSEC tunnels, or SD-WAN.",
-    "domain": "security",
     "source": "wikipedia:Overlay network"
   },
   {
@@ -2748,33 +1944,9 @@
     "source": "wikipedia:Overlay network"
   },
   {
-    "question": "Tell me about WANs",
-    "answer": "In the networks that connect physically diverse sites (wide area networks, WANs), one common overlay network technology is BGP VPNs.",
-    "domain": "networking",
-    "source": "wikipedia:Overlay network"
-  },
-  {
-    "question": "What is These VPNs?",
-    "answer": "These VPNs are provided in the form of a service to enterprises to connect their own sites and applications.",
-    "domain": "security",
-    "source": "wikipedia:Overlay network"
-  },
-  {
     "question": "What is advantage of these kinds of overlay networks?",
     "answer": "The advantage of these kinds of overlay networks is that the telecom operator does not need to manage addressing or other enterprise-specific network attributes.",
     "domain": "general",
-    "source": "wikipedia:Overlay network"
-  },
-  {
-    "question": "What is Internet?",
-    "answer": "The Internet is the basis for more overlaid networks that can be constructed in order to permit routing of messages to destinations not specified by an IP address.",
-    "domain": "networking",
-    "source": "wikipedia:Overlay network"
-  },
-  {
-    "question": "What is overlay has no control over how packets?",
-    "answer": "The overlay has no control over how packets are routed in the underlying network between two overlay nodes, but it can control, for example, the sequence of overlay nodes a message traverses before reaching its destination.",
-    "domain": "networking",
     "source": "wikipedia:Overlay network"
   },
   {
@@ -2852,12 +2024,6 @@
   {
     "question": "What is Protocol stack?",
     "answer": "The protocol stack or network stack is an implementation of a computer networking protocol suite or protocol family.  Some of these terms are used interchangeably, but strictly speaking, the suite is the definition of the communication protocols, and the stack is the software implementation of them.\nIndividual protocols within a suite are often designed with a single purpose in mind. This modularization simplifies design and evaluation.",
-    "domain": "general",
-    "source": "wikipedia:Protocol stack"
-  },
-  {
-    "question": "What is protocol stack or network stack?",
-    "answer": "The protocol stack or network stack is an implementation of a computer networking protocol suite or protocol family.",
     "domain": "general",
     "source": "wikipedia:Protocol stack"
   },
@@ -2961,12 +2127,6 @@
     "question": "What is But there?",
     "answer": "But there are many different ways that a spanning layer can be crafted.",
     "domain": "general",
-    "source": "wikipedia:Protocol stack"
-  },
-  {
-    "question": "Tell me about Internet Protocol Suite",
-    "answer": "In the  Internet protocol stack, the Internet Protocol Suite constitutes a spanning layer that defines a best-effort service for global routing of datagrams at Layer 3.",
-    "domain": "networking",
     "source": "wikipedia:Protocol stack"
   },
   {
@@ -3099,18 +2259,6 @@
     "question": "What is Some authentication choices?",
     "answer": "Some authentication choices are Password Authentication Protocol (PAP), Challenge Handshake Authentication Protocol (CHAP), and Extensible Authentication Protocol (EAP).",
     "domain": "wifi_security",
-    "source": "wikipedia:Point-to-Point Protocol"
-  },
-  {
-    "question": "What is Authentication?",
-    "answer": "Authentication is explained in the next section.",
-    "domain": "general",
-    "source": "wikipedia:Point-to-Point Protocol"
-  },
-  {
-    "question": "What is In addition, there?",
-    "answer": "In addition, there are compression settings for control packets and header fields.",
-    "domain": "general",
     "source": "wikipedia:Point-to-Point Protocol"
   },
   {
@@ -3252,18 +2400,6 @@
     "source": "wikipedia:Point-to-Point Protocol"
   },
   {
-    "question": "Tell me about PPTP",
-    "answer": "=== Derived protocols ===\nPPTP (Point-to-Point Tunneling Protocol) is a form of PPP between two hosts via GRE using encryption (MPPE) and compression (MPPC).",
-    "domain": "security",
-    "source": "wikipedia:Point-to-Point Protocol"
-  },
-  {
-    "question": "Tell me about SSL",
-    "answer": "Some of them, like SSL, SSH, or L2TP create virtual network interfaces and give the impression of direct physical connections between the tunnel endpoints.",
-    "domain": "security",
-    "source": "wikipedia:Point-to-Point Protocol"
-  },
-  {
     "question": "What is As there?",
     "answer": "As there are only two endpoints on a tunnel, the tunnel is a point-to-point connection and PPP is a natural choice as a data link layer protocol between the virtual network interfaces.",
     "domain": "networking",
@@ -3326,12 +2462,6 @@
   {
     "question": "Tell me about CONNECT",
     "answer": "Because this creates a security hole, CONNECT-capable HTTP proxies commonly restrict access to the CONNECT method.",
-    "domain": "internet",
-    "source": "wikipedia:Tunneling protocol"
-  },
-  {
-    "question": "What does proxy provide?",
-    "answer": "The proxy allows connections only to specific ports, such as 443 for HTTPS.",
     "domain": "internet",
     "source": "wikipedia:Tunneling protocol"
   },
@@ -3408,27 +2538,9 @@
     "source": "wikipedia:Tunneling protocol"
   },
   {
-    "question": "Tell me about SSH",
-    "answer": "== Secure Shell tunneling ==\nA Secure Shell (SSH) tunnel consists of an encrypted tunnel created through an SSH protocol connection.",
-    "domain": "internet",
-    "source": "wikipedia:Tunneling protocol"
-  },
-  {
     "question": "What is It is a software-based approach to network security and the result?",
     "answer": "It is a software-based approach to network security and the result is transparent encryption.",
     "domain": "security",
-    "source": "wikipedia:Tunneling protocol"
-  },
-  {
-    "question": "Tell me about SMB",
-    "answer": "For example, Microsoft Windows machines can share files using the Server Message Block (SMB) protocol, a non-encrypted protocol.",
-    "domain": "general",
-    "source": "wikipedia:Tunneling protocol"
-  },
-  {
-    "question": "Tell me about Microsoft Windows",
-    "answer": "If one were to mount a Microsoft Windows file-system remotely through the Internet, someone snooping on the connection could see transferred files.",
-    "domain": "troubleshooting",
     "source": "wikipedia:Tunneling protocol"
   },
   {
@@ -3456,12 +2568,6 @@
     "source": "wikipedia:Tunneling protocol"
   },
   {
-    "question": "What does This provide?",
-    "answer": "This allows normal network management and routing to be used, and when used on routers, the traffic for an entire subnetwork can be tunneled.",
-    "domain": "networking",
-    "source": "wikipedia:Tunneling protocol"
-  },
-  {
     "question": "Tell me about GPRS",
     "answer": "== See also ==\nGPRS Tunnelling Protocol (GTP)\nHTTP tunnel\nICMP tunnel\nNVGRE\nOSI model (Diagram)\nPseudo-wire\nStunnel\nTunnel broker\nVirtual Extensible LAN (VXLAN)\nVirtual private network (VPN).",
     "domain": "networking",
@@ -3470,12 +2576,6 @@
   {
     "question": "What is Transmission Control Protocol?",
     "answer": "The Transmission Control Protocol (TCP) is one of the main protocols of the Internet protocol suite. It originated in the initial network implementation in which it complemented the Internet Protocol (IP). Therefore, the entire suite is commonly referred to as TCP/IP. TCP provides reliable, ordered, and error-checked delivery of a stream of octets (bytes) between applications running on hosts communicating via an IP network.",
-    "domain": "networking",
-    "source": "wikipedia:Transmission Control Protocol"
-  },
-  {
-    "question": "What is Transmission Control Protocol (TCP)?",
-    "answer": "The Transmission Control Protocol (TCP) is one of the main protocols of the Internet protocol suite.",
     "domain": "networking",
     "source": "wikipedia:Transmission Control Protocol"
   },
@@ -3492,45 +2592,9 @@
     "source": "wikipedia:Transmission Control Protocol"
   },
   {
-    "question": "What is However, there?",
-    "answer": "However, there are vulnerabilities in TCP, including denial of service, connection hijacking, TCP veto, and reset attack.",
-    "domain": "networking",
-    "source": "wikipedia:Transmission Control Protocol"
-  },
-  {
-    "question": "Tell me about In May",
-    "answer": "== Historical origin ==\nIn May 1974, Vint Cerf and Bob Kahn described an internetworking protocol for sharing resources using packet switching among network nodes.",
-    "domain": "networking",
-    "source": "wikipedia:Transmission Control Protocol"
-  },
-  {
-    "question": "Tell me about The Transmission Control Program",
-    "answer": "The Transmission Control Program incorporated both connection-oriented links and datagram services between hosts.",
-    "domain": "general",
-    "source": "wikipedia:Transmission Control Protocol"
-  },
-  {
-    "question": "Tell me about The Transmission Control Protocol",
-    "answer": "== Network function ==\nThe Transmission Control Protocol provides a communication service at an intermediate level between an application program and the Internet Protocol.",
-    "domain": "general",
-    "source": "wikipedia:Transmission Control Protocol"
-  },
-  {
     "question": "What is If the data still remains undelivered, the source?",
     "answer": "If the data still remains undelivered, the source is notified of this failure.",
     "domain": "general",
-    "source": "wikipedia:Transmission Control Protocol"
-  },
-  {
-    "question": "What is Therefore, it?",
-    "answer": "Therefore, it is not particularly suitable for real-time applications such as voice over IP.",
-    "domain": "general",
-    "source": "wikipedia:Transmission Control Protocol"
-  },
-  {
-    "question": "Tell me about RTP",
-    "answer": "For such applications, protocols like the Real-time Transport Protocol (RTP) operating over the User Datagram Protocol (UDP) are usually recommended instead.",
-    "domain": "networking",
     "source": "wikipedia:Transmission Control Protocol"
   },
   {
@@ -3552,12 +2616,6 @@
     "source": "wikipedia:Transmission Control Protocol"
   },
   {
-    "question": "What is TCP segment?",
-    "answer": "The TCP segment is then encapsulated into an Internet Protocol (IP) datagram, and exchanged with peers.",
-    "domain": "networking",
-    "source": "wikipedia:Transmission Control Protocol"
-  },
-  {
     "question": "What is data section follows the header and?",
     "answer": "The data section follows the header and is the payload data carried for the application.",
     "domain": "general",
@@ -3566,18 +2624,6 @@
   {
     "question": "What is length of the data section?",
     "answer": "The length of the data section is not specified in the segment header; it can be calculated by subtracting the combined length of the segment header and IP header from the total IP datagram length specified in the IP header.",
-    "domain": "general",
-    "source": "wikipedia:Transmission Control Protocol"
-  },
-  {
-    "question": "Tell me about SYN",
-    "answer": "Sequence Number: 32 bits\nHas a dual role:\nIf the SYN flag is set (1), then this is the initial sequence number.",
-    "domain": "general",
-    "source": "wikipedia:Transmission Control Protocol"
-  },
-  {
-    "question": "Tell me about ACK",
-    "answer": "The sequence number of the actual first data byte and the acknowledged number in the corresponding ACK are then this sequence number plus 1.",
     "domain": "general",
     "source": "wikipedia:Transmission Control Protocol"
   },
@@ -3603,18 +2649,6 @@
     "question": "What is This field gets its name from the fact that it?",
     "answer": "This field gets its name from the fact that it is also the offset from the start of the TCP segment to the actual data.",
     "domain": "networking",
-    "source": "wikipedia:Transmission Control Protocol"
-  },
-  {
-    "question": "Tell me about NS",
-    "answer": "From 2003 to 2017, the last bit (bit 103 of the header) was defined as the NS (Nonce Sum) flag by the experimental RFC 3540, ECN-nonce.",
-    "domain": "general",
-    "source": "wikipedia:Transmission Control Protocol"
-  },
-  {
-    "question": "Tell me about ECN",
-    "answer": "ECN-nonce never gained widespread use and the RFC was moved to Historic status.",
-    "domain": "general",
     "source": "wikipedia:Transmission Control Protocol"
   },
   {
@@ -3738,12 +2772,6 @@
     "source": "wikipedia:Transmission Control Protocol"
   },
   {
-    "question": "What is After data transfer?",
-    "answer": "After data transfer is completed, the connection termination closes the connection and releases all allocated resources.",
-    "domain": "networking",
-    "source": "wikipedia:Transmission Control Protocol"
-  },
-  {
     "question": "What is TCP connection?",
     "answer": "A TCP connection is managed by an operating system through a resource that represents the local end-point for communications, the Internet socket.",
     "domain": "networking",
@@ -3758,24 +2786,6 @@
   {
     "question": "What is SYN: The active open?",
     "answer": "SYN: The active open is performed by the client sending a SYN to the server.",
-    "domain": "general",
-    "source": "wikipedia:Transmission Control Protocol"
-  },
-  {
-    "question": "What is acknowledgment number?",
-    "answer": "The acknowledgment number is set to one more than the received sequence number i.e.",
-    "domain": "general",
-    "source": "wikipedia:Transmission Control Protocol"
-  },
-  {
-    "question": "What is x+1, and the sequence number that the server chooses for the packet?",
-    "answer": "x+1, and the sequence number that the server chooses for the packet is another random number, y.",
-    "domain": "general",
-    "source": "wikipedia:Transmission Control Protocol"
-  },
-  {
-    "question": "What is sequence number?",
-    "answer": "The sequence number is set to the received acknowledgment value i.e.",
     "domain": "general",
     "source": "wikipedia:Transmission Control Protocol"
   },
@@ -3972,18 +2982,6 @@
     "source": "wikipedia:Transmission Control Protocol"
   },
   {
-    "question": "What is As a result, there?",
-    "answer": "As a result, there are a number of TCP congestion avoidance algorithm variations.",
-    "domain": "networking",
-    "source": "wikipedia:Transmission Control Protocol"
-  },
-  {
-    "question": "Tell me about MSS",
-    "answer": "=== Maximum segment size ===\nThe maximum segment size (MSS) is the largest amount of data, specified in bytes, that TCP is willing to receive in a single segment.",
-    "domain": "networking",
-    "source": "wikipedia:Transmission Control Protocol"
-  },
-  {
     "question": "What is To accomplish this, typically the MSS?",
     "answer": "To accomplish this, typically the MSS is announced by each side using the MSS option when the TCP connection is established.",
     "domain": "networking",
@@ -4065,12 +3063,6 @@
     "question": "What is result?",
     "answer": "The result is non-stable traffic that may be very slow.",
     "domain": "general",
-    "source": "wikipedia:Transmission Control Protocol"
-  },
-  {
-    "question": "What is problem?",
-    "answer": "The problem is visible on some sites behind a defective router.",
-    "domain": "networking",
     "source": "wikipedia:Transmission Control Protocol"
   },
   {
@@ -4230,12 +3222,6 @@
     "source": "wikipedia:Transmission Control Protocol"
   },
   {
-    "question": "What is TCP Fast Open?",
-    "answer": "TCP Fast Open is an extension to speed up the opening of successive TCP connections between two endpoints.",
-    "domain": "networking",
-    "source": "wikipedia:Transmission Control Protocol"
-  },
-  {
     "question": "What is Proposed in May 2013, Proportional Rate Reduction (PRR)?",
     "answer": "Proposed in May 2013, Proportional Rate Reduction (PRR) is a TCP extension developed by Google engineers.",
     "domain": "networking",
@@ -4245,12 +3231,6 @@
     "question": "What is PRR ensures that the TCP window size after recovery?",
     "answer": "PRR ensures that the TCP window size after recovery is as close to the slow start threshold as possible.",
     "domain": "networking",
-    "source": "wikipedia:Transmission Control Protocol"
-  },
-  {
-    "question": "What is algorithm?",
-    "answer": "The algorithm is designed to improve the speed of recovery and is the default congestion control algorithm in Linux 3.2+ kernels.",
-    "domain": "general",
     "source": "wikipedia:Transmission Control Protocol"
   },
   {
@@ -4404,12 +3384,6 @@
     "source": "wikipedia:Transmission Control Protocol"
   },
   {
-    "question": "Tell me about SANs",
-    "answer": "For historical and performance reasons, most storage area networks (SANs) use Fibre Channel Protocol (FCP) over Fibre Channel connections.",
-    "domain": "wifi",
-    "source": "wikipedia:Transmission Control Protocol"
-  },
-  {
     "question": "What is Tricks such as transmitting data between two hosts that?",
     "answer": "Tricks such as transmitting data between two hosts that are both behind NAT (using STUN or similar systems) are far simpler without a relatively complex protocol like TCP in the way.",
     "domain": "networking",
@@ -4425,12 +3399,6 @@
     "question": "What is Stream Control Transmission Protocol (SCTP)?",
     "answer": "Stream Control Transmission Protocol (SCTP) is another protocol that provides reliable stream-oriented services similar to TCP.",
     "domain": "networking",
-    "source": "wikipedia:Transmission Control Protocol"
-  },
-  {
-    "question": "What is However, it?",
-    "answer": "However, it is especially designed to be used in situations where reliability and near-real-time considerations are important.",
-    "domain": "general",
     "source": "wikipedia:Transmission Control Protocol"
   },
   {
@@ -4506,12 +3474,6 @@
     "source": "wikipedia:Transmission Control Protocol"
   },
   {
-    "question": "Tell me about CPU",
-    "answer": "This may reduce CPU load associated with calculating the checksum, potentially increasing overall network performance.",
-    "domain": "intranet",
-    "source": "wikipedia:Transmission Control Protocol"
-  },
-  {
     "question": "What is This feature may cause packet analyzers that?",
     "answer": "This feature may cause packet analyzers that are unaware or uncertain about the use of checksum offload to report invalid checksums in outbound packets that have not yet reached the network adapter.",
     "domain": "general",
@@ -4520,12 +3482,6 @@
   {
     "question": "What is This will only occur for packets that?",
     "answer": "This will only occur for packets that are intercepted before being transmitted by the network adapter; all packets transmitted by the network adaptor on the wire will have valid checksums.",
-    "domain": "general",
-    "source": "wikipedia:Transmission Control Protocol"
-  },
-  {
-    "question": "Tell me about Internet Transmission Control Program",
-    "answer": "Specification of Internet Transmission Control Program, December 1974 Version.",
     "domain": "general",
     "source": "wikipedia:Transmission Control Protocol"
   },
@@ -4566,12 +3522,6 @@
     "source": "wikipedia:Internet Control Message Protocol"
   },
   {
-    "question": "What is Internet Control Message Protocol (ICMP)?",
-    "answer": "The Internet Control Message Protocol (ICMP) is a supporting protocol in the Internet protocol suite.",
-    "domain": "networking",
-    "source": "wikipedia:Internet Control Message Protocol"
-  },
-  {
     "question": "What is For example, an error?",
     "answer": "For example, an error is indicated when a requested service is not available or that a host or router could not be reached.",
     "domain": "networking",
@@ -4580,12 +3530,6 @@
   {
     "question": "What is ICMP differs from transport protocols such as TCP and UDP in that it?",
     "answer": "ICMP differs from transport protocols such as TCP and UDP in that it is not typically used to exchange data between systems, nor is it regularly employed by end-user network applications (with the exception of some diagnostic tools like ping and traceroute).",
-    "domain": "networking",
-    "source": "wikipedia:Internet Control Message Protocol"
-  },
-  {
-    "question": "Tell me about Internet Control Message Protocol",
-    "answer": "A separate Internet Control Message Protocol (called ICMPv6) is used with IPv6.",
     "domain": "networking",
     "source": "wikipedia:Internet Control Message Protocol"
   },
@@ -4620,12 +3564,6 @@
     "source": "wikipedia:Internet Control Message Protocol"
   },
   {
-    "question": "What does ICMP provide?",
-    "answer": "ICMP uses the basic support of IP as if it were a higher-level protocol; however, ICMP is actually an integral part of IP.",
-    "domain": "networking",
-    "source": "wikipedia:Internet Control Message Protocol"
-  },
-  {
     "question": "What is Although ICMP messages?",
     "answer": "Although ICMP messages are contained within standard IP packets, they are usually processed as a special case, distinguished from normal IP processing.",
     "domain": "networking",
@@ -4634,12 +3572,6 @@
   {
     "question": "What is In many cases, it?",
     "answer": "In many cases, it is necessary to inspect the contents of the ICMP message and deliver the appropriate error message to the application responsible for transmitting the IP packet that prompted the ICMP message to be sent.",
-    "domain": "networking",
-    "source": "wikipedia:Internet Control Message Protocol"
-  },
-  {
-    "question": "What is ICMP?",
-    "answer": "ICMP is a network-layer protocol; this makes it a layer 3 protocol in the seven-layer OSI model.",
     "domain": "networking",
     "source": "wikipedia:Internet Control Message Protocol"
   },
@@ -4806,12 +3738,6 @@
     "source": "wikipedia:Internet Control Message Protocol"
   },
   {
-    "question": "Tell me about MTU",
-    "answer": "Contains the MTU of the next-hop network if a code 4 error occurs.",
-    "domain": "general",
-    "source": "wikipedia:Internet Control Message Protocol"
-  },
-  {
     "question": "What is If this message?",
     "answer": "If this message is extended, then this field must contain at least 128 bytes of original datagram data (padded with zeroes if necessary).These data are included to allow the client to match the reply with the request that caused the Destination unreachable reply.",
     "domain": "networking",
@@ -4844,12 +3770,6 @@
   {
     "question": "What does TCP usually provide?",
     "answer": "TCP usually uses port numbers that match the services of the corresponding UDP implementations, if they exist, and vice versa.",
-    "domain": "networking",
-    "source": "wikipedia:List of TCP and UDP port numbers"
-  },
-  {
-    "question": "What is Internet Assigned Numbers Authority (IANA)?",
-    "answer": "The Internet Assigned Numbers Authority (IANA) is responsible for maintaining the official assignments of port numbers for specific uses.",
     "domain": "networking",
     "source": "wikipedia:List of TCP and UDP port numbers"
   },
@@ -4896,12 +3816,6 @@
     "source": "wikipedia:User Datagram Protocol"
   },
   {
-    "question": "What does UDP provide?",
-    "answer": "UDP provides checksums for data integrity, and port numbers for addressing different functions at the source and destination of the datagram.",
-    "domain": "networking",
-    "source": "wikipedia:User Datagram Protocol"
-  },
-  {
     "question": "What is If error-correction facilities?",
     "answer": "If error-correction facilities are needed at the network interface level, an application may instead use Transmission Control Protocol (TCP) or Stream Control Transmission Protocol (SCTP), which are designed for this purpose.",
     "domain": "networking",
@@ -4932,18 +3846,6 @@
     "source": "wikipedia:User Datagram Protocol"
   },
   {
-    "question": "Tell me about Domain Name System",
-    "answer": "It is transaction-oriented, suitable for simple query-response protocols such as the Domain Name System or the Network Time Protocol.",
-    "domain": "general",
-    "source": "wikipedia:User Datagram Protocol"
-  },
-  {
-    "question": "Tell me about IPTV",
-    "answer": "It is stateless, suitable for very large numbers of clients, such as in streaming media applications like IPTV.",
-    "domain": "general",
-    "source": "wikipedia:User Datagram Protocol"
-  },
-  {
     "question": "What is Because it supports multicast, it?",
     "answer": "Because it supports multicast, it is suitable for broadcast information, such as in many kinds of service discovery and shared information such as Precision Time Protocol and Routing Information Protocol.",
     "domain": "networking",
@@ -4964,18 +3866,6 @@
   {
     "question": "What is port?",
     "answer": "A port is a software structure that is identified by the port number, a 16-bit integer value, allowing for port numbers between 0 and 65535.",
-    "domain": "networking",
-    "source": "wikipedia:User Datagram Protocol"
-  },
-  {
-    "question": "What is Port 0?",
-    "answer": "Port 0 is reserved, but is a permissible source port value if the sending process does not expect messages in response.",
-    "domain": "general",
-    "source": "wikipedia:User Datagram Protocol"
-  },
-  {
-    "question": "What is Port numbers 0 through 1023?",
-    "answer": "Port numbers 0 through 1023 are used for common, well-known services.",
     "domain": "networking",
     "source": "wikipedia:User Datagram Protocol"
   },
@@ -5130,12 +4020,6 @@
     "source": "wikipedia:User Datagram Protocol"
   },
   {
-    "question": "Tell me about Transmission Control Protocol",
-    "answer": "For applications demanding a high degree of reliability, an alternative protocol such as the Transmission Control Protocol may be used instead.",
-    "domain": "networking",
-    "source": "wikipedia:User Datagram Protocol"
-  },
-  {
     "question": "What is Streaming media, real-time multiplayer games and voice over IP (VoIP)?",
     "answer": "Streaming media, real-time multiplayer games and voice over IP (VoIP) are typical applications that leverage UDP.",
     "domain": "networking",
@@ -5178,12 +4062,6 @@
     "source": "wikipedia:User Datagram Protocol"
   },
   {
-    "question": "What does HTTP/3 provide?",
-    "answer": "HTTP/3 uses QUIC as opposed to earlier versions of HTTPS which use a combination of TCP and TLS to ensure reliability and security respectively.",
-    "domain": "internet",
-    "source": "wikipedia:User Datagram Protocol"
-  },
-  {
     "question": "What does This means that HTTP/3 provide?",
     "answer": "This means that HTTP/3 uses a single handshake to set up a connection, rather than having two separate handshakes for TCP and TLS, meaning the overall time to establish a connection is reduced.",
     "domain": "internet",
@@ -5220,12 +4098,6 @@
     "source": "wikipedia:User Datagram Protocol"
   },
   {
-    "question": "What is Not ordered – If two messages?",
-    "answer": "Not ordered – If two messages are sent to the same recipient, the order in which they arrive cannot be guaranteed.",
-    "domain": "general",
-    "source": "wikipedia:User Datagram Protocol"
-  },
-  {
     "question": "What is Lightweight – There?",
     "answer": "Lightweight – There is no ordering of messages, no tracking connections, etc.",
     "domain": "general",
@@ -5256,26 +4128,8 @@
     "source": "wikipedia:Multipath TCP"
   },
   {
-    "question": "Tell me about API",
-    "answer": "Some applications could benefit from an enhanced API to control the underlying Multipath TCP stack.",
-    "domain": "networking",
-    "source": "wikipedia:Multipath TCP"
-  },
-  {
-    "question": "Tell me about APIs",
-    "answer": "Two different APIs have been proposed to expose some of features of the Multipath TCP stack to applications: an API that extends Netlink on Linux and an enhanced socket API.",
-    "domain": "networking",
-    "source": "wikipedia:Multipath TCP"
-  },
-  {
     "question": "Tell me about AI",
     "answer": "Linux kernel (new reference implementation) introduced in the mainlined kernel in v5.6\nLinux kernel (initial reference implementation) fork from Université catholique de Louvain researchers and other collaborators\nFreeBSD (IPv4 only) from Swinburne University of Technology and AI/ML-based from Deakin University\nF5 Networks BIG-IP LTM\nCitrix Netscaler\nApple iOS 7, released on September 18, 2013 is the first large scale commercial deployment of Multipath TCP.",
-    "domain": "networking",
-    "source": "wikipedia:Multipath TCP"
-  },
-  {
-    "question": "Tell me about OS",
-    "answer": "Apple Mac OS X 10.10, released on October 16, 2014\nAlcatel-Lucent released MPTCP proxy version 0.9 source code on October 26, 2012\nIn July 2014, Oracle reported that an implementation on Solaris was being developed.",
     "domain": "networking",
     "source": "wikipedia:Multipath TCP"
   },
@@ -5289,18 +4143,6 @@
     "question": "What does Apple provide?",
     "answer": "Apple uses Multipath TCP to support the Siri application on iPhone.",
     "domain": "networking",
-    "source": "wikipedia:Multipath TCP"
-  },
-  {
-    "question": "Tell me about HTTPS",
-    "answer": "Siri sends voice samples over an HTTPS session to Apple servers.",
-    "domain": "internet",
-    "source": "wikipedia:Multipath TCP"
-  },
-  {
-    "question": "What is Another example?",
-    "answer": "Another example are the Hybrid Access Networks that are deployed by network operators willing to combine xDSL and LTE networks.",
-    "domain": "general",
     "source": "wikipedia:Multipath TCP"
   },
   {
@@ -5324,18 +4166,6 @@
   {
     "question": "What is core idea of multipath TCP?",
     "answer": "The core idea of multipath TCP is to define a way to build a connection between two hosts and not between two interfaces (as standard TCP does).",
-    "domain": "networking",
-    "source": "wikipedia:Multipath TCP"
-  },
-  {
-    "question": "What is Each TCP connection?",
-    "answer": "Each TCP connection is identified by a four-tuple (source and destination addresses and ports).",
-    "domain": "networking",
-    "source": "wikipedia:Multipath TCP"
-  },
-  {
-    "question": "What does Multipath TCP provide?",
-    "answer": "Multipath TCP allows the connection to use several paths simultaneously.",
     "domain": "networking",
     "source": "wikipedia:Multipath TCP"
   },
@@ -5469,12 +4299,6 @@
     "question": "What is At the time of creation with the API, a network socket?",
     "answer": "At the time of creation with the API, a network socket is bound to the combination of a type of network protocol to be used for transmissions, a network address of the host, and a port number.",
     "domain": "networking",
-    "source": "wikipedia:Network socket"
-  },
-  {
-    "question": "What is Ports?",
-    "answer": "Ports are numbered resources that represent another type of software structure of the node.",
-    "domain": "general",
     "source": "wikipedia:Network socket"
   },
   {
@@ -5622,18 +4446,6 @@
     "source": "wikipedia:Network socket"
   },
   {
-    "question": "Tell me about UC",
-    "answer": "Only in 1989, however, could UC Berkeley release versions of its operating system and networking library free from the licensing constraints of AT&T's copyright-protected Unix.",
-    "domain": "general",
-    "source": "wikipedia:Network socket"
-  },
-  {
-    "question": "Tell me about AT",
-    "answer": "1987, AT&T introduced the STREAMS-based Transport Layer Interface (TLI) in UNIX System V Release 3 (SVR3).",
-    "domain": "general",
-    "source": "wikipedia:Network socket"
-  },
-  {
     "question": "Tell me about TOPS",
     "answer": "Other early implementations were written for TOPS-20, MVS, VM, IBM-DOS (PCIP).",
     "domain": "general",
@@ -5688,12 +4500,6 @@
     "source": "wikipedia:Session Initiation Protocol"
   },
   {
-    "question": "Tell me about URI",
-    "answer": "The syntax of the URI follows the general standard syntax also used in Web services and e-mail.",
-    "domain": "general",
-    "source": "wikipedia:Session Initiation Protocol"
-  },
-  {
     "question": "What is URI scheme used for SIP?",
     "answer": "The URI scheme used for SIP is sip and a typical SIP URI has the form sip:username@domainname or sip:username@hostport, where domainname requires DNS SRV records to locate the servers for SIP domain while hostport can be an IP address or a fully qualified domain name of the host and port.",
     "domain": "networking",
@@ -5732,12 +4538,6 @@
   {
     "question": "Tell me about UAS",
     "answer": "The user agent server (UAS) receives requests and returns a SIP response.",
-    "domain": "general",
-    "source": "wikipedia:Session Initiation Protocol"
-  },
-  {
-    "question": "Tell me about UAC",
-    "answer": "The roles of UAC and UAS only last for the duration of a SIP transaction.",
     "domain": "general",
     "source": "wikipedia:Session Initiation Protocol"
   },
@@ -5898,12 +4698,6 @@
     "source": "wikipedia:Session Initiation Protocol"
   },
   {
-    "question": "Tell me about NIST",
-    "answer": "National Institute of Standards and Technology (NIST), Advanced Networking Technologies Division provides a public-domain Java implementation that serves as a reference implementation for the standard.",
-    "domain": "networking",
-    "source": "wikipedia:Session Initiation Protocol"
-  },
-  {
     "question": "What is SIP-I and SIP-T?",
     "answer": "SIP-I and SIP-T are two protocols with similar features, notably to allow ISUP messages to be transported over SIP networks.",
     "domain": "general",
@@ -6000,12 +4794,6 @@
     "source": "wikipedia:Internet Protocol"
   },
   {
-    "question": "What is payload?",
-    "answer": "The payload is the data that is transported.",
-    "domain": "general",
-    "source": "wikipedia:Internet Protocol"
-  },
-  {
     "question": "What is This method of nesting the data payload in a packet with a header?",
     "answer": "This method of nesting the data payload in a packet with a header is called encapsulation.",
     "domain": "general",
@@ -6030,12 +4818,6 @@
     "source": "wikipedia:Internet Protocol"
   },
   {
-    "question": "Tell me about Vint Cerf",
-    "answer": "The paper's authors, Vint Cerf and Bob Kahn, described an internetworking protocol for sharing resources using packet switching among network nodes.",
-    "domain": "networking",
-    "source": "wikipedia:Internet Protocol"
-  },
-  {
     "question": "What is IP header?",
     "answer": "The IP header is different from the modern IPv4 header.",
     "domain": "general",
@@ -6044,12 +4826,6 @@
   {
     "question": "What is IEN 54 Internetwork Protocol Specification Version 4 (September 1978)?",
     "answer": "IEN 54 Internetwork Protocol Specification Version 4 (September 1978) is the first description of IPv4 using the header that would become standardized in 1980 as RFC 760.",
-    "domain": "general",
-    "source": "wikipedia:Internet Protocol"
-  },
-  {
-    "question": "What is IPv4?",
-    "answer": "IPv4 is defined in RFC 791 (1981).",
     "domain": "general",
     "source": "wikipedia:Internet Protocol"
   },
@@ -6132,12 +4908,6 @@
     "source": "wikipedia:Internet Protocol"
   },
   {
-    "question": "What does IPv4 provide?",
-    "answer": "IPv4 provides safeguards to ensure that the header of an IP packet is error-free.",
-    "domain": "general",
-    "source": "wikipedia:Internet Protocol"
-  },
-  {
     "question": "What does Although the Internet Control Message Protocol (ICMP) provide?",
     "answer": "Although the Internet Control Message Protocol (ICMP) provides notification of errors, a routing node is not required to notify either end node of errors.",
     "domain": "networking",
@@ -6147,12 +4917,6 @@
     "question": "What is One of the technical constraints?",
     "answer": "One of the technical constraints is the size of data packets possible on a given link.",
     "domain": "general",
-    "source": "wikipedia:Internet Protocol"
-  },
-  {
-    "question": "Tell me about ICANN",
-    "answer": "ICANN\nIP routing\nList of IP protocol numbers\nList of IP version numbers\nNext-generation network\nNew IP (proposal)\nTimeline of the history of the Internet.",
-    "domain": "networking",
     "source": "wikipedia:Internet Protocol"
   },
   {
@@ -6210,12 +4974,6 @@
     "source": "wikipedia:NetBIOS"
   },
   {
-    "question": "Tell me about IPX",
-    "answer": "Its services were encapsulated within NetWare's IPX/SPX protocol using the NetBIOS over IPX/SPX (NBX) protocol.",
-    "domain": "general",
-    "source": "wikipedia:NetBIOS"
-  },
-  {
     "question": "What is Microsoft officially dropped support starting with Windows XP, but it?",
     "answer": "Microsoft officially dropped support starting with Windows XP, but it is included on the Windows XP CD-ROM and can be installed manually.",
     "domain": "general",
@@ -6260,12 +5018,6 @@
   {
     "question": "What is NetBIOS names?",
     "answer": "NetBIOS names are 16 octets in length and vary based on the particular implementation.",
-    "domain": "general",
-    "source": "wikipedia:NetBIOS"
-  },
-  {
-    "question": "What is Internet Protocol Version 6 (IPv6)?",
-    "answer": "Internet Protocol Version 6 (IPv6) is not supported by the NetBIOS name resolution protocol.",
     "domain": "general",
     "source": "wikipedia:NetBIOS"
   },
@@ -6402,12 +5154,6 @@
     "source": "wikipedia:NetBIOS"
   },
   {
-    "question": "Tell me about ISBN",
-    "answer": "ISBN 99914-57-34-8\nSilberschatz, Abraham; Galvin, Peter Baer; Gagne, Greg (2004).",
-    "domain": "general",
-    "source": "wikipedia:NetBIOS"
-  },
-  {
     "question": "Tell me about Visual Basic",
     "answer": "Windows 7 NetBIOS Library in Visual Basic - Coder Bliss – Jon Reedholm.",
     "domain": "general",
@@ -6428,12 +5174,6 @@
   {
     "question": "What is Many routing protocols?",
     "answer": "Many routing protocols are defined in technical standards documents called RFCs.",
-    "domain": "networking",
-    "source": "wikipedia:Routing protocol"
-  },
-  {
-    "question": "Tell me about OSPF",
-    "answer": "Interior gateway protocols type 1, link-state routing protocols, such as OSPF and IS-IS\nInterior gateway protocols type 2, distance-vector routing protocols, such as Routing Information Protocol, RIPv2, IGRP.",
     "domain": "networking",
     "source": "wikipedia:Routing protocol"
   },
@@ -6459,18 +5199,6 @@
     "question": "What is IGRP, and EIGRP?",
     "answer": "IGRP, and EIGRP are directly encapsulated in IP.",
     "domain": "general",
-    "source": "wikipedia:Routing protocol"
-  },
-  {
-    "question": "What does EIGRP provide?",
-    "answer": "EIGRP uses its own reliable transmission mechanism, while IGRP assumed an unreliable transport.",
-    "domain": "general",
-    "source": "wikipedia:Routing protocol"
-  },
-  {
-    "question": "Tell me about RIP",
-    "answer": "Routing Information Protocol (RIP) runs over the User Datagram Protocol (UDP).",
-    "domain": "networking",
     "source": "wikipedia:Routing protocol"
   },
   {
@@ -6552,12 +5280,6 @@
     "source": "wikipedia:Routing Information Protocol"
   },
   {
-    "question": "Tell me about UNIX",
-    "answer": "The 1982 Berkeley Software Distribution of the UNIX operating system implemented RIP in the routed daemon.",
-    "domain": "general",
-    "source": "wikipedia:Routing Information Protocol"
-  },
-  {
     "question": "What is hop count 0 denotes a network that?",
     "answer": "The hop count 0 denotes a network that is directly connected to the router.",
     "domain": "networking",
@@ -6602,12 +5324,6 @@
   {
     "question": "Tell me about VLSM",
     "answer": "The periodic routing updates do not carry subnet information, lacking support for variable length subnet masks (VLSM).",
-    "domain": "networking",
-    "source": "wikipedia:Routing Information Protocol"
-  },
-  {
-    "question": "Tell me about CIDR",
-    "answer": "It included the ability to carry subnet information, thus supporting Classless Inter-Domain Routing (CIDR).",
     "domain": "networking",
     "source": "wikipedia:Routing Information Protocol"
   },
@@ -6696,12 +5412,6 @@
     "source": "wikipedia:Routing Information Protocol"
   },
   {
-    "question": "Tell me about ADSL",
-    "answer": "Huawei HG633 ADSL/VDSL routers support passive and active routing with RIP v1 & v2 on the LAN and WAN side.",
-    "domain": "networking",
-    "source": "wikipedia:Routing Information Protocol"
-  },
-  {
     "question": "Tell me about IGRP",
     "answer": "== Similar protocols ==\nCisco's proprietary Interior Gateway Routing Protocol (IGRP) was a somewhat more capable protocol than RIP.",
     "domain": "networking",
@@ -6729,18 +5439,6 @@
     "question": "What is IPv6 Routing Protocol for Low-Power and Lossy Networks?",
     "answer": "Routing Protocol for Low-Power and Lossy Networks is a routing protocol for wireless networks with low power consumption and generally susceptible to packet loss. It is a proactive protocol based on distance vectors and operates on IEEE 802.15.4,  optimized for multi-hop and many-to-one communication, but also supports one-to-one messages.\nThis protocol is specified in RFC 6550 with special applications in RFCs 5867, 5826, 5673 and 5548.",
     "domain": "networking",
-    "source": "wikipedia:IPv6 Routing Protocol for Low-Power and Lossy Networks"
-  },
-  {
-    "question": "What is Routing Protocol for Low-Power and Lossy Networks?",
-    "answer": "Routing Protocol for Low-Power and Lossy Networks is a routing protocol for wireless networks with low power consumption and generally susceptible to packet loss.",
-    "domain": "networking",
-    "source": "wikipedia:IPv6 Routing Protocol for Low-Power and Lossy Networks"
-  },
-  {
-    "question": "What is This protocol?",
-    "answer": "This protocol is specified in RFC 6550 with special applications in RFCs 5867, 5826, 5673 and 5548.",
-    "domain": "general",
     "source": "wikipedia:IPv6 Routing Protocol for Low-Power and Lossy Networks"
   },
   {
@@ -6834,26 +5532,8 @@
     "source": "wikipedia:Path-vector routing protocol"
   },
   {
-    "question": "What is Border Gateway Protocol (BGP)?",
-    "answer": "Border Gateway Protocol (BGP) is an example of a path vector protocol.",
-    "domain": "networking",
-    "source": "wikipedia:Path-vector routing protocol"
-  },
-  {
-    "question": "Tell me about BGP",
-    "answer": "In BGP, the autonomous system boundary routers (ASBR) send path-vector messages to advertise the reachability of networks.",
-    "domain": "networking",
-    "source": "wikipedia:Path-vector routing protocol"
-  },
-  {
     "question": "What is It modifies the routing table to maintain the autonomous systems that?",
     "answer": "It modifies the routing table to maintain the autonomous systems that are traversed in order to reach the destination system.",
-    "domain": "networking",
-    "source": "wikipedia:Path-vector routing protocol"
-  },
-  {
-    "question": "Tell me about AS",
-    "answer": "It modifies the message to add its AS number and to replace the next router entry with its identification.",
     "domain": "networking",
     "source": "wikipedia:Path-vector routing protocol"
   },
@@ -6876,21 +5556,9 @@
     "source": "wikipedia:Link-state routing protocol"
   },
   {
-    "question": "What is link-state protocol?",
-    "answer": "The link-state protocol is performed by every switching node in the network (i.e., nodes which are prepared to forward packets; in the Internet, these are called routers).",
-    "domain": "networking",
-    "source": "wikipedia:Link-state routing protocol"
-  },
-  {
     "question": "What is basic concept of link-state routing?",
     "answer": "The basic concept of link-state routing is that every node constructs a map of the connectivity to the network in the form of a graph, showing which nodes are connected to which other nodes.",
     "domain": "networking",
-    "source": "wikipedia:Link-state routing protocol"
-  },
-  {
-    "question": "What is In a link-state protocol, the only information passed between nodes?",
-    "answer": "In a link-state protocol, the only information passed between nodes is connectivity related.",
-    "domain": "general",
     "source": "wikipedia:Link-state routing protocol"
   },
   {
@@ -6948,18 +5616,6 @@
     "source": "wikipedia:Link-state routing protocol"
   },
   {
-    "question": "What is This message?",
-    "answer": "This message is sent to all the nodes on a network.",
-    "domain": "general",
-    "source": "wikipedia:Link-state routing protocol"
-  },
-  {
-    "question": "What is When a link-state advertisement?",
-    "answer": "When a link-state advertisement is received at a node, the node looks up the sequence number it has stored for the source of that link-state message; if this message is newer (i.e., has a higher sequence number), it is saved, the sequence number is updated, and a copy is sent in turn to each of that node's neighbors.",
-    "domain": "general",
-    "source": "wikipedia:Link-state routing protocol"
-  },
-  {
     "question": "What is link-state message giving information about the neighbors?",
     "answer": "The link-state message giving information about the neighbors is recomputed and then flooded throughout the network whenever there is a change in the connectivity between the node and its neighbors, e.g., when a link fails.",
     "domain": "general",
@@ -6969,12 +5625,6 @@
     "question": "What is All neighbour nodes which?",
     "answer": "All neighbour nodes which are directly connected to the node are just added to the tree (excepting any nodes which are already in either the tree or the candidate list).",
     "domain": "general",
-    "source": "wikipedia:Link-state routing protocol"
-  },
-  {
-    "question": "What is rest?",
-    "answer": "The rest are added to the second (candidate) list.",
-    "domain": "internet",
     "source": "wikipedia:Link-state routing protocol"
   },
   {
@@ -7122,18 +5772,6 @@
     "source": "wikipedia:Distance-vector routing protocol"
   },
   {
-    "question": "Tell me about Routing Information Protocol",
-    "answer": "== Development of distance-vector routing ==\nThe oldest routing protocol, and the oldest distance-vector protocol, is version 1 of the Routing Information Protocol (RIPv1).",
-    "domain": "networking",
-    "source": "wikipedia:Distance-vector routing protocol"
-  },
-  {
-    "question": "What is RIP?",
-    "answer": "RIP is an interior gateway protocol, so it can be used in local area networks (LANs) on interior or border routers.",
-    "domain": "networking",
-    "source": "wikipedia:Distance-vector routing protocol"
-  },
-  {
     "question": "What is RIPv1?",
     "answer": "RIPv1 is not suitable for large networks as it limits the number of hops to 15.",
     "domain": "general",
@@ -7142,12 +5780,6 @@
   {
     "question": "What is distance-vector protocol designed for use in wide area networks (WANs)?",
     "answer": "The distance-vector protocol designed for use in wide area networks (WANs) is the Border Gateway Protocol (BGP).",
-    "domain": "networking",
-    "source": "wikipedia:Distance-vector routing protocol"
-  },
-  {
-    "question": "What is BGP?",
-    "answer": "BGP is an exterior gateway protocol and therefore implemented on border and exterior routers on the Internet.",
     "domain": "networking",
     "source": "wikipedia:Distance-vector routing protocol"
   },
@@ -7242,12 +5874,6 @@
     "source": "wikipedia:Zone Routing Protocol"
   },
   {
-    "question": "What is What?",
-    "answer": "What is called the Inter-zone Routing Protocol (IERP), or a reactive routing protocol, is used between routing zones.",
-    "domain": "networking",
-    "source": "wikipedia:Zone Routing Protocol"
-  },
-  {
     "question": "What is Since this table?",
     "answer": "Since this table is already stored, this is considered a proactive protocol.",
     "domain": "general",
@@ -7320,12 +5946,6 @@
     "source": "wikipedia:Routing"
   },
   {
-    "question": "What is Intermediate nodes?",
-    "answer": "Intermediate nodes are typically network hardware devices such as routers, gateways, firewalls, or switches.",
-    "domain": "networking",
-    "source": "wikipedia:Routing"
-  },
-  {
     "question": "What is Routing, in a narrower sense of the term, often?",
     "answer": "Routing, in a narrower sense of the term, often refers to IP routing and is contrasted with bridging.",
     "domain": "networking",
@@ -7389,12 +6009,6 @@
     "question": "What is This node?",
     "answer": "This node is called the speaker node.",
     "domain": "general",
-    "source": "wikipedia:Routing"
-  },
-  {
-    "question": "What is idea?",
-    "answer": "The idea is the same as distance vector routing except that only speaker nodes in each autonomous system can communicate with each other.",
-    "domain": "networking",
     "source": "wikipedia:Routing"
   },
   {
@@ -7464,12 +6078,6 @@
     "source": "wikipedia:Routing"
   },
   {
-    "question": "What is This approach?",
-    "answer": "This approach is also referred to as context-aware routing.",
-    "domain": "networking",
-    "source": "wikipedia:Routing"
-  },
-  {
     "question": "What is First, AS-level paths?",
     "answer": "First, AS-level paths are selected via the BGP protocol that produces a sequence of ASs through which packets flow.",
     "domain": "networking",
@@ -7500,12 +6108,6 @@
     "source": "wikipedia:Routing"
   },
   {
-    "question": "Tell me about ISPs",
-    "answer": "Suppose both ISPs have trans-Atlantic links that connect their two networks, but A's link has latency 100 ms and B's has latency 120 ms.",
-    "domain": "networking",
-    "source": "wikipedia:Routing"
-  },
-  {
     "question": "What is Monitoring routing in a network?",
     "answer": "Monitoring routing in a network is achieved using route analytics tools and techniques.",
     "domain": "networking",
@@ -7515,12 +6117,6 @@
     "question": "Tell me about WAN",
     "answer": "This has been used by large internet companies that operate many data centers in different geographical locations attached using private optical links, examples of which include Microsoft's Global WAN, Facebook's Express Backbone, and Google's B4.",
     "domain": "general",
-    "source": "wikipedia:Routing"
-  },
-  {
-    "question": "Tell me about IT",
-    "answer": "Archived from the original on 2015-09-25., ways of avoiding the count-to-infinity problem\nCisco IT Case Studies about Routing and Switching\n\"IP Routing and Subnets\".",
-    "domain": "networking",
     "source": "wikipedia:Routing"
   },
   {
@@ -7538,12 +6134,6 @@
   {
     "question": "What is In contrast, the Internet application of the protocol?",
     "answer": "In contrast, the Internet application of the protocol is called Exterior Border Gateway Protocol (EBGP).",
-    "domain": "networking",
-    "source": "wikipedia:Border Gateway Protocol"
-  },
-  {
-    "question": "Tell me about Cisco Systems",
-    "answer": "A photocopy of these three sheets of paper now hangs on the wall of a routing protocol development area at Cisco Systems in Milpitas, California.",
     "domain": "networking",
     "source": "wikipedia:Border Gateway Protocol"
   },
@@ -7650,18 +6240,6 @@
     "source": "wikipedia:Border Gateway Protocol"
   },
   {
-    "question": "What is If it?",
-    "answer": "If it is unsuccessful again, the FSM is reset to the Idle state.",
-    "domain": "general",
-    "source": "wikipedia:Border Gateway Protocol"
-  },
-  {
-    "question": "What is If there?",
-    "answer": "If there is an error it is because one of the fields in the Open message does not match between the peers, e.g., BGP version mismatch, the peering router expects a different My AS, etc.",
-    "domain": "networking",
-    "source": "wikipedia:Border Gateway Protocol"
-  },
-  {
     "question": "Tell me about Confirm State",
     "answer": "OpenConfirm State:\nThe peer is listening for a Keepalive message from its peer.",
     "domain": "general",
@@ -7761,18 +6339,6 @@
     "question": "What is For example, the community attribute (see below)?",
     "answer": "For example, the community attribute (see below) is not directly used by the BGP selection process.",
     "domain": "networking",
-    "source": "wikipedia:Border Gateway Protocol"
-  },
-  {
-    "question": "What is While it?",
-    "answer": "While it is common to say that BGP allows an administrator to set policies on how prefixes are handled by ISPs, this is generally not possible, strictly speaking.",
-    "domain": "networking",
-    "source": "wikipedia:Border Gateway Protocol"
-  },
-  {
-    "question": "Tell me about ISP",
-    "answer": "Instead, an ISP generally publishes a list of well-known or proprietary communities with a description for each one, which essentially becomes an agreement of how prefixes are to be treated.",
-    "domain": "general",
     "source": "wikipedia:Border Gateway Protocol"
   },
   {
@@ -7908,12 +6474,6 @@
     "source": "wikipedia:Border Gateway Protocol"
   },
   {
-    "question": "Tell me about Enhanced Route Refresh Capability",
-    "answer": "Fine-grained routing updates may be acquired when the capability 'Enhanced Route Refresh Capability (70)' is also given.",
-    "domain": "networking",
-    "source": "wikipedia:Border Gateway Protocol"
-  },
-  {
     "question": "Tell me about AFI",
     "answer": "Address Family Identifier (AFI): 16 bits\nAn identifier for the address family (IPv4, IPv6, IPX, AppleTalk, etc.) This list is maintained by IANA.",
     "domain": "general",
@@ -7932,18 +6492,6 @@
     "source": "wikipedia:Border Gateway Protocol"
   },
   {
-    "question": "Tell me about RRs",
-    "answer": "=== Route reflectors ===\nRoute reflectors (RRs) reduce the number of connections required in an AS.",
-    "domain": "general",
-    "source": "wikipedia:Border Gateway Protocol"
-  },
-  {
-    "question": "Tell me about RR",
-    "answer": "A single router (or two for redundancy) can be made an RR: other routers in the AS need only be configured as peers to them.",
-    "domain": "networking",
-    "source": "wikipedia:Border Gateway Protocol"
-  },
-  {
     "question": "What does An RR provide?",
     "answer": "An RR offers an alternative to the logical full-mesh requirement of iBGP.",
     "domain": "networking",
@@ -7952,12 +6500,6 @@
   {
     "question": "What does This approach, similar to OSPF's  DR/BDR feature provide?",
     "answer": "This approach, similar to OSPF's  DR/BDR feature, provides large networks with added iBGP scalability.",
-    "domain": "networking",
-    "source": "wikipedia:Border Gateway Protocol"
-  },
-  {
-    "question": "Tell me about CLI",
-    "answer": "In a fully meshed iBGP network of 10 routers, 90 individual CLI statements (spread throughout all routers in the topology) are needed just to define the remote-AS of each peer: this quickly becomes a headache to manage.",
     "domain": "networking",
     "source": "wikipedia:Border Gateway Protocol"
   },
@@ -8028,12 +6570,6 @@
     "source": "wikipedia:Border Gateway Protocol"
   },
   {
-    "question": "What is If a router?",
-    "answer": "If a router is misconfigured or mismanaged then it may get into a rapid cycle between down and up states.",
-    "domain": "networking",
-    "source": "wikipedia:Border Gateway Protocol"
-  },
-  {
     "question": "What is BGP design?",
     "answer": "The BGP design is such that delivery of traffic may not function while routes are being updated.",
     "domain": "networking",
@@ -8076,18 +6612,6 @@
     "source": "wikipedia:Border Gateway Protocol"
   },
   {
-    "question": "Tell me about On August",
-    "answer": "On August 12, 2014, outages resulting from full tables hit eBay, LastPass and Microsoft Azure among others.",
-    "domain": "networking",
-    "source": "wikipedia:Border Gateway Protocol"
-  },
-  {
-    "question": "Tell me about TCAM",
-    "answer": "A number of Cisco routers commonly in use had TCAM, a form of high-speed content-addressable memory, for storing BGP advertised routes.",
-    "domain": "networking",
-    "source": "wikipedia:Border Gateway Protocol"
-  },
-  {
     "question": "Tell me about Verizon Autonomous Systems",
     "answer": "Almost all of these routes were to Verizon Autonomous Systems 701 and 705, created as a result of deaggregation of larger blocks, introducing thousands of new /24 routes, and making the routing table reach 515,000 entries.",
     "domain": "networking",
@@ -8126,12 +6650,6 @@
   {
     "question": "What does Whereas standard BGP provide?",
     "answer": "Whereas standard BGP supports only IPv4 unicast addresses, Multiprotocol BGP supports IPv4 and IPv6 addresses and it supports unicast and multicast variants of each.",
-    "domain": "networking",
-    "source": "wikipedia:Border Gateway Protocol"
-  },
-  {
-    "question": "What does Multiprotocol BGP provide?",
-    "answer": "Multiprotocol BGP allows information about the topology of IP multicast-capable routers to be exchanged separately from the topology of normal IPv4 unicast routers.",
     "domain": "networking",
     "source": "wikipedia:Border Gateway Protocol"
   },
@@ -8190,12 +6708,6 @@
     "source": "wikipedia:Border Gateway Protocol"
   },
   {
-    "question": "Tell me about SOHO",
-    "answer": "== Implementations ==\nRouters, especially small ones intended for small office/home office (SOHO) use, may not include BGP capability.",
-    "domain": "networking",
-    "source": "wikipedia:Border Gateway Protocol"
-  },
-  {
     "question": "What does Other commercial routers may need a specific software executable image that provide?",
     "answer": "Other commercial routers may need a specific software executable image that supports BGP, or a license that enables it.",
     "domain": "networking",
@@ -8232,21 +6744,9 @@
     "source": "wikipedia:Border Gateway Protocol"
   },
   {
-    "question": "Tell me about GNU",
-    "answer": "GNU Zebra, a GPL routing suite supporting BGP4 (decommissioned).",
-    "domain": "networking",
-    "source": "wikipedia:Border Gateway Protocol"
-  },
-  {
     "question": "Tell me about XORP",
     "answer": "XORP, the eXtensible Open Router Platform, a BSD-licensed suite of routing protocols.",
     "domain": "networking",
-    "source": "wikipedia:Border Gateway Protocol"
-  },
-  {
-    "question": "Tell me about Agilent Technologies",
-    "answer": "Agilent Technologies\nGNS3 open source network simulator\nIxia\nSpirent.",
-    "domain": "general",
     "source": "wikipedia:Border Gateway Protocol"
   },
   {
@@ -8274,38 +6774,8 @@
     "source": "wikipedia:Virtual Router Redundancy Protocol"
   },
   {
-    "question": "What is If the physical router that?",
-    "answer": "If the physical router that is routing packets on behalf of the virtual router fails, another physical router is selected to automatically replace it.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual Router Redundancy Protocol"
-  },
-  {
-    "question": "What is physical router that?",
-    "answer": "The physical router that is forwarding packets at any given time is called the primary/active router.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual Router Redundancy Protocol"
-  },
-  {
-    "question": "What does VRRP provide?",
-    "answer": "VRRP provides information on the state of a router, not the routes processed and exchanged by that router.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual Router Redundancy Protocol"
-  },
-  {
     "question": "What is Each VRRP instance?",
     "answer": "Each VRRP instance is limited, in scope, to a single subnet.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual Router Redundancy Protocol"
-  },
-  {
-    "question": "Tell me about VRRP",
-    "answer": "VRRP can be used in Ethernet, MPLS and Token Ring networks with Internet Protocol Version 4 (IPv4), as well as IPv6.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual Router Redundancy Protocol"
-  },
-  {
-    "question": "Tell me about XX",
-    "answer": "== Implementation ==\nA virtual router must use 00-00-5E-00-01-XX as its media access control (MAC) address.",
     "domain": "networking",
     "source": "wikipedia:Virtual Router Redundancy Protocol"
   },
@@ -8346,18 +6816,6 @@
     "source": "wikipedia:Virtual Router Redundancy Protocol"
   },
   {
-    "question": "Tell me about MAC",
-    "answer": "It will then take responsibility for routing packets sent to the virtual gateway's MAC address.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual Router Redundancy Protocol"
-  },
-  {
-    "question": "What is Security?",
-    "answer": "Security is achieved by responding only to first hop packets, though other mechanisms are provided to reinforce this, particularly against local attacks.",
-    "domain": "general",
-    "source": "wikipedia:Virtual Router Redundancy Protocol"
-  },
-  {
     "question": "What is election process?",
     "answer": "The election process is made orderly through the use of skew time, derived from a router's priority, and used to reduce the chance of the thundering herd problem occurring during the election.",
     "domain": "networking",
@@ -8367,12 +6825,6 @@
     "question": "What is skew time?",
     "answer": "The skew time is given by the formula (256 − Priority) / 256 (expressed in milliseconds).",
     "domain": "general",
-    "source": "wikipedia:Virtual Router Redundancy Protocol"
-  },
-  {
-    "question": "What is VRRP?",
-    "answer": "VRRP is an open standard, but Cisco claimed that their Hot Standby Router Protocol (HSRP), a similar but proprietary protocol with essentially the same facility, is patented and licensed.",
-    "domain": "networking",
     "source": "wikipedia:Virtual Router Redundancy Protocol"
   },
   {
@@ -8402,18 +6854,6 @@
   {
     "question": "What is Enhanced Interior Gateway Routing Protocol?",
     "answer": "Enhanced Interior Gateway Routing Protocol (EIGRP) is an advanced distance-vector routing protocol that is used on a computer network for automating routing decisions and configuration. The protocol was designed by Cisco Systems as a proprietary protocol, available only on Cisco routers.",
-    "domain": "networking",
-    "source": "wikipedia:Enhanced Interior Gateway Routing Protocol"
-  },
-  {
-    "question": "What is Enhanced Interior Gateway Routing Protocol (EIGRP)?",
-    "answer": "Enhanced Interior Gateway Routing Protocol (EIGRP) is an advanced distance-vector routing protocol that is used on a computer network for automating routing decisions and configuration.",
-    "domain": "networking",
-    "source": "wikipedia:Enhanced Interior Gateway Routing Protocol"
-  },
-  {
-    "question": "What is EIGRP?",
-    "answer": "EIGRP is used on a router to share routes with other routers within the same autonomous system.",
     "domain": "networking",
     "source": "wikipedia:Enhanced Interior Gateway Routing Protocol"
   },
@@ -8448,12 +6888,6 @@
     "source": "wikipedia:Enhanced Interior Gateway Routing Protocol"
   },
   {
-    "question": "What is topology table?",
-    "answer": "The topology table is never used by the router to forward traffic.",
-    "domain": "networking",
-    "source": "wikipedia:Enhanced Interior Gateway Routing Protocol"
-  },
-  {
     "question": "What is Routes in the topology table will not be inserted into the routing table if they?",
     "answer": "Routes in the topology table will not be inserted into the routing table if they are active, are a feasible successor, or have a higher administrative distance than an equivalent path.",
     "domain": "networking",
@@ -8472,12 +6906,6 @@
     "source": "wikipedia:Enhanced Interior Gateway Routing Protocol"
   },
   {
-    "question": "What is This behavior?",
-    "answer": "This behavior is more inline with link-state routing protocols, thus EIGRP is mostly considered a hybrid protocol.",
-    "domain": "networking",
-    "source": "wikipedia:Enhanced Interior Gateway Routing Protocol"
-  },
-  {
     "question": "What is When a router running EIGRP?",
     "answer": "When a router running EIGRP is connected to another router also running EIGRP, information is exchanged between the two routers.",
     "domain": "networking",
@@ -8492,12 +6920,6 @@
   {
     "question": "What is Periodically checks if a route?",
     "answer": "Periodically checks if a route is available, and propagates routing changes to neighboring routers if any changes have occurred.",
-    "domain": "networking",
-    "source": "wikipedia:Enhanced Interior Gateway Routing Protocol"
-  },
-  {
-    "question": "Tell me about IOS",
-    "answer": "=== Cisco IOS example ===\nExample of setting up EIGRP on a Cisco IOS router for a private network.",
     "domain": "networking",
     "source": "wikipedia:Enhanced Interior Gateway Routing Protocol"
   },
@@ -8694,18 +7116,6 @@
     "source": "wikipedia:Enhanced Interior Gateway Routing Protocol"
   },
   {
-    "question": "Tell me about NX",
-    "answer": "Even Cisco NX-OS for example does not support unequal cost load balancing.",
-    "domain": "general",
-    "source": "wikipedia:Enhanced Interior Gateway Routing Protocol"
-  },
-  {
-    "question": "Tell me about CCNA",
-    "answer": "Lammle, Todd (2007), CCNA Cisco Certified Network Associate Study Guide (Sixth ed.), Indianapolis, Indiana: Wiley Publishing, ISBN 978-0-470-11008-9.",
-    "domain": "intranet",
-    "source": "wikipedia:Enhanced Interior Gateway Routing Protocol"
-  },
-  {
     "question": "What is AT Protocol?",
     "answer": "The AT Protocol (Authenticated Transfer Protocol, pronounced \"at protocol\", commonly shortened to ATproto or \"ATP\") is a protocol and set of open standards for decentralized publishing and distribution of self-authenticating data within the social web.",
     "domain": "networking",
@@ -8736,12 +7146,6 @@
     "source": "wikipedia:AT Protocol"
   },
   {
-    "question": "Tell me about DIDs",
-    "answer": "DIDs resolve to DID documents, which contain references to key user metadata, such as the user's handle, public keys, and data repository.",
-    "domain": "networking",
-    "source": "wikipedia:AT Protocol"
-  },
-  {
     "question": "Tell me about DID",
     "answer": "While any DID method could, in theory, be used by the protocol if its components provide support for the method, in practice only two methods are supported ('blessed') by the protocol's reference implementations: did:plc and did:web.",
     "domain": "general",
@@ -8762,12 +7166,6 @@
   {
     "question": "What does protocol's dual identifier system provide?",
     "answer": "The protocol's dual identifier system provides both user-friendly identifiers for use in end-user services and consistent cryptographic identities within the protocol, while also providing a robust TCP/IP-based account verification mechanism at the protocol level.",
-    "domain": "networking",
-    "source": "wikipedia:AT Protocol"
-  },
-  {
-    "question": "What is Each user?",
-    "answer": "Each user is associated with a single repository, over which they have exclusive management rights.",
     "domain": "networking",
     "source": "wikipedia:AT Protocol"
   },
@@ -8904,12 +7302,6 @@
     "source": "wikipedia:AT Protocol"
   },
   {
-    "question": "Tell me about In January",
-    "answer": "In January 2026, the charter for the working group tasked with the standardization was published.",
-    "domain": "general",
-    "source": "wikipedia:AT Protocol"
-  },
-  {
     "question": "Tell me about Personal Data Servers",
     "answer": "The social network itself opened federation with other Personal Data Servers in late February 2024, as it had launched without the ability to federate with other servers not run by Bluesky Social.",
     "domain": "general",
@@ -8976,24 +7368,6 @@
     "source": "wikipedia:Simple Network Management Protocol"
   },
   {
-    "question": "What is Simple Network Management Protocol (SNMP)?",
-    "answer": "Simple Network Management Protocol (SNMP) is an Internet Standard protocol for collecting and organizing information about managed devices on IP networks and for modifying that information to change device behavior.",
-    "domain": "general",
-    "source": "wikipedia:Simple Network Management Protocol"
-  },
-  {
-    "question": "Tell me about SNMP",
-    "answer": "Devices that typically support SNMP include cable modems, routers, network switches, servers, workstations, printers, and more.",
-    "domain": "networking",
-    "source": "wikipedia:Simple Network Management Protocol"
-  },
-  {
-    "question": "What is SNMP?",
-    "answer": "SNMP is widely used in network management for network monitoring.",
-    "domain": "general",
-    "source": "wikipedia:Simple Network Management Protocol"
-  },
-  {
     "question": "What is SNMPv1?",
     "answer": "SNMPv1 is the original version of the protocol.",
     "domain": "general",
@@ -9048,12 +7422,6 @@
     "source": "wikipedia:Simple Network Management Protocol"
   },
   {
-    "question": "Tell me about OID",
-    "answer": "Each OID identifies a variable that can be read or set via SNMP.",
-    "domain": "general",
-    "source": "wikipedia:Simple Network Management Protocol"
-  },
-  {
     "question": "What is All SNMP messages?",
     "answer": "All SNMP messages are transported via User Datagram Protocol (UDP).",
     "domain": "networking",
@@ -9062,12 +7430,6 @@
   {
     "question": "What is agent response?",
     "answer": "The agent response is sent back to the source port on the manager.",
-    "domain": "general",
-    "source": "wikipedia:Simple Network Management Protocol"
-  },
-  {
-    "question": "Tell me about Transport Layer Security",
-    "answer": "When used with Transport Layer Security or Datagram Transport Layer Security, requests are received on port 10161 and notifications are sent to port 10162.",
     "domain": "general",
     "source": "wikipedia:Simple Network Management Protocol"
   },
@@ -9105,18 +7467,6 @@
     "question": "What is Changes to all specified variables?",
     "answer": "Changes to all specified variables are to be made as an atomic operation by the agent.",
     "domain": "general",
-    "source": "wikipedia:Simple Network Management Protocol"
-  },
-  {
-    "question": "Tell me about MIB",
-    "answer": "Returns a Response with variable binding for the lexicographically next variable in the MIB.",
-    "domain": "general",
-    "source": "wikipedia:Simple Network Management Protocol"
-  },
-  {
-    "question": "Tell me about OIDs",
-    "answer": "Rows of a table can be read by specifying column OIDs in the variable bindings of the request.",
-    "domain": "security",
     "source": "wikipedia:Simple Network Management Protocol"
   },
   {
@@ -9188,12 +7538,6 @@
   {
     "question": "What is Community-Based Simple Network Management Protocol version 2, or SNMPv2c?",
     "answer": "Community-Based Simple Network Management Protocol version 2, or SNMPv2c, is defined in RFC 1901–RFC 1908.",
-    "domain": "general",
-    "source": "wikipedia:Simple Network Management Protocol"
-  },
-  {
-    "question": "What is This version?",
-    "answer": "This version is one of relatively few standards to meet the IETF's Draft Standard maturity level, and was widely considered the de facto SNMPv2 standard.",
     "domain": "general",
     "source": "wikipedia:Simple Network Management Protocol"
   },
@@ -9324,12 +7668,6 @@
     "source": "wikipedia:Simple Network Management Protocol"
   },
   {
-    "question": "What is SNMP v3?",
-    "answer": "SNMP v3 is implemented on Cisco IOS since release 12.0(3)T.",
-    "domain": "general",
-    "source": "wikipedia:Simple Network Management Protocol"
-  },
-  {
     "question": "What does SNMPv3 provide?",
     "answer": "SNMPv3 allows both providing random uniformly distributed cryptographic keys and generating cryptographic keys from a password supplied by the user.",
     "domain": "general",
@@ -9398,12 +7736,6 @@
   {
     "question": "Tell me about Baylor College",
     "answer": "Barber from the Baylor College of Medicine and Erik Fair of Apple Computer.",
-    "domain": "general",
-    "source": "wikipedia:Network News Transfer Protocol"
-  },
-  {
-    "question": "Tell me about UUCP",
-    "answer": "Usenet was originally designed based on the UUCP network, with most article transfers taking place over direct point-to-point telephone links between news servers, which were powerful time-sharing systems.",
     "domain": "general",
     "source": "wikipedia:Network News Transfer Protocol"
   },
@@ -9546,12 +7878,6 @@
     "source": "wikipedia:BGP hijacking"
   },
   {
-    "question": "Tell me about Hurricane Electric",
-    "answer": "Several peering partners, such as Hurricane Electric, blindly propagated the announcements.",
-    "domain": "general",
-    "source": "wikipedia:BGP hijacking"
-  },
-  {
     "question": "Tell me about Iran Telecommunication Company",
     "answer": "July 2018: Iran Telecommunication Company (AS58224) originated 10 prefixes of Telegram Messenger.",
     "domain": "networking",
@@ -9584,12 +7910,6 @@
   {
     "question": "What is His academic background?",
     "answer": "His academic background is in computer engineering, and he was a signals specialist in the U.S.",
-    "domain": "general",
-    "source": "wikipedia:Doug Madory"
-  },
-  {
-    "question": "Tell me about Air Force",
-    "answer": "Air Force, before arriving at his present specialty, which has occupied his professional career.",
     "domain": "general",
     "source": "wikipedia:Doug Madory"
   },
@@ -9648,12 +7968,6 @@
     "source": "wikipedia:Router (computing)"
   },
   {
-    "question": "Tell me about ASICs",
-    "answer": "More sophisticated devices use application-specific integrated circuits (ASICs) to increase performance or add advanced filtering and firewall functionality.",
-    "domain": "security",
-    "source": "wikipedia:Router (computing)"
-  },
-  {
     "question": "Tell me about IMPs",
     "answer": "The first interface computer was implemented at the National Physical Laboratory in the United Kingdom in early 1969, followed later that year by the IMPs at the University of California, Los Angeles, the Stanford Research Institute, the University of California, Santa Barbara, and the University of Utah School of Computing in the United States.",
     "domain": "networking",
@@ -9663,12 +7977,6 @@
     "question": "Tell me about Donald Davies",
     "answer": "This particular idea, the end-to-end principle, was contained in the work of Donald Davies.",
     "domain": "general",
-    "source": "wikipedia:Router (computing)"
-  },
-  {
-    "question": "Tell me about UCL",
-    "answer": "University College London (UCL) provided a gateway between British research groups and the ARPANET from 1973 until the late 1980s, latterly using SATNET.",
-    "domain": "networking",
     "source": "wikipedia:Router (computing)"
   },
   {
@@ -9711,12 +8019,6 @@
     "question": "What is Static and dynamic routes?",
     "answer": "Static and dynamic routes are stored in the routing table.",
     "domain": "networking",
-    "source": "wikipedia:Router (computing)"
-  },
-  {
-    "question": "Tell me about FIB",
-    "answer": "The control-plane logic then strips non-essential directives from the table and builds a forwarding information base (FIB) to be used by the forwarding plane.",
-    "domain": "security",
     "source": "wikipedia:Router (computing)"
   },
   {
@@ -9770,12 +8072,6 @@
   {
     "question": "What is router in a local area network (LAN) of a single organization?",
     "answer": "A router in a local area network (LAN) of a single organization is called an interior router.",
-    "domain": "networking",
-    "source": "wikipedia:Router (computing)"
-  },
-  {
-    "question": "What is router that?",
-    "answer": "A router that is operated in the Internet backbone is described as exterior router.",
     "domain": "networking",
     "source": "wikipedia:Router (computing)"
   },
@@ -9876,21 +8172,9 @@
     "source": "wikipedia:Router (computing)"
   },
   {
-    "question": "What is Another function a router performs?",
-    "answer": "Another function a router performs is traffic classification and deciding which packet should be processed first.",
-    "domain": "networking",
-    "source": "wikipedia:Router (computing)"
-  },
-  {
     "question": "What is Yet another function a router performs?",
     "answer": "Yet another function a router performs is called policy-based routing, where special rules are constructed to override the rules derived from the routing table when a packet forwarding decision is made.",
     "domain": "networking",
-    "source": "wikipedia:Router (computing)"
-  },
-  {
-    "question": "Tell me about ASIC",
-    "answer": "Some of the functions may be performed through an application-specific integrated circuit (ASIC) to avoid the overhead of scheduling CPU time to process the packets.",
-    "domain": "general",
     "source": "wikipedia:Router (computing)"
   },
   {
@@ -9942,24 +8226,6 @@
     "source": "wikipedia:Autonomous system (Internet)"
   },
   {
-    "question": "What is As of 2025, there?",
-    "answer": "As of 2025, there are roughly 120,000 allocated ASNs.",
-    "domain": "general",
-    "source": "wikipedia:Autonomous system (Internet)"
-  },
-  {
-    "question": "Tell me about RIR",
-    "answer": "The appropriate RIR then assigns ASNs to entities within its designated area from the block assigned by IANA.",
-    "domain": "networking",
-    "source": "wikipedia:Autonomous system (Internet)"
-  },
-  {
-    "question": "Tell me about RIRs",
-    "answer": "RIRs, as part of NRO, can revoke AS numbers as part of their Internet governance abilities.",
-    "domain": "general",
-    "source": "wikipedia:Autonomous system (Internet)"
-  },
-  {
     "question": "Tell me about APNIC",
     "answer": "APNIC: https://ftp.apnic.net/stats/apnic/\nRIPE NCC: https://ftp.ripe.net/ripe/stats/\nAFRINIC: https://ftp.afrinic.net/pub/stats/afrinic/\nARIN: https://ftp.arin.net/pub/stats/arin/\nLACNIC: https://ftp.lacnic.net/pub/stats/lacnic/.",
     "domain": "internet",
@@ -9999,12 +8265,6 @@
     "question": "What is IXP ASNs?",
     "answer": "IXP ASNs are usually transparent.",
     "domain": "general",
-    "source": "wikipedia:Autonomous system (Internet)"
-  },
-  {
-    "question": "Tell me about IXP",
-    "answer": "By having presence at an IXP, ASes shorten the transit path to other participating ASes, thereby reducing network latency and improving round-trip delay.",
-    "domain": "networking",
     "source": "wikipedia:Autonomous system (Internet)"
   },
   {
@@ -10158,12 +8418,6 @@
     "source": "wikipedia:Resource Public Key Infrastructure"
   },
   {
-    "question": "What does Juniper provide?",
-    "answer": "Juniper offers support on all platforms that run version 12.2 or newer.",
-    "domain": "general",
-    "source": "wikipedia:Resource Public Key Infrastructure"
-  },
-  {
     "question": "What does RTRlib provide?",
     "answer": "The RTRlib provides an open source C implementation of the RTR protocol and prefix origin verification.",
     "domain": "general",
@@ -10218,18 +8472,6 @@
     "source": "wikipedia:Default-free zone"
   },
   {
-    "question": "Tell me about NSFNET",
-    "answer": "Before the current commercial Internet evolved, the NSFNET, which interconnected five US government funded supercomputer centers, could have been considered the high-speed Internet core.",
-    "domain": "general",
-    "source": "wikipedia:Default-free zone"
-  },
-  {
-    "question": "Tell me about IXPs",
-    "answer": "Four IXPs supported NSFNET, but these IXPs evolved into a model where commercial traffic could meet there.",
-    "domain": "general",
-    "source": "wikipedia:Default-free zone"
-  },
-  {
     "question": "What is Especially if there?",
     "answer": "Especially if there is more than one router connected to the same ISP, a common practice, it will receive more routes than are in the DFZ.",
     "domain": "networking",
@@ -10244,12 +8486,6 @@
   {
     "question": "What does As an enhancement of BGP-4, MP-BGP provide?",
     "answer": "As an enhancement of BGP-4, MP-BGP provides routing information for various protocols, such as IPv6 (BGP4+) and multicast:.",
-    "domain": "networking",
-    "source": "wikipedia:Multiprotocol BGP"
-  },
-  {
-    "question": "Tell me about MP",
-    "answer": "MP-BGP maintains unicast and multicast routing information, and stores both types in different routing tables to ensure their separation.",
     "domain": "networking",
     "source": "wikipedia:Multiprotocol BGP"
   },
@@ -10316,18 +8552,6 @@
   {
     "question": "Tell me about LSR",
     "answer": "It uses a link state routing (LSR) algorithm and falls into the group of interior gateway protocols (IGPs), operating within a single autonomous system (AS).",
-    "domain": "networking",
-    "source": "wikipedia:Open Shortest Path First"
-  },
-  {
-    "question": "What is topology?",
-    "answer": "The topology is presented as a routing table to the internet layer for routing packets by their destination IP address.",
-    "domain": "networking",
-    "source": "wikipedia:Open Shortest Path First"
-  },
-  {
-    "question": "What does OSPF provide?",
-    "answer": "OSPF supports Internet Protocol version 4 (IPv4) and Internet Protocol version 6 (IPv6) networks and is widely used in large enterprise networks.",
     "domain": "networking",
     "source": "wikipedia:Open Shortest Path First"
   },
@@ -10400,18 +8624,6 @@
   {
     "question": "Tell me about PIM",
     "answer": "Protocol Independent Multicast (PIM) in conjunction with OSPF or other IGPs, is widely deployed.",
-    "domain": "networking",
-    "source": "wikipedia:Open Shortest Path First"
-  },
-  {
-    "question": "What is This detection?",
-    "answer": "This detection is initiated when a router identifies itself in a hello protocol packet.",
-    "domain": "networking",
-    "source": "wikipedia:Open Shortest Path First"
-  },
-  {
-    "question": "Tell me about DR",
-    "answer": "The routers in an Ethernet or Frame Relay network select a designated router (DR) and a backup designated router (BDR), which act as a hub to reduce traffic between routers.",
     "domain": "networking",
     "source": "wikipedia:Open Shortest Path First"
   },
@@ -10572,12 +8784,6 @@
     "source": "wikipedia:Open Shortest Path First"
   },
   {
-    "question": "What is However, they?",
-    "answer": "However, they are not IP addresses and may duplicate, without conflict, any IPv4 address.",
-    "domain": "networking",
-    "source": "wikipedia:Open Shortest Path First"
-  },
-  {
     "question": "What is When dotted formatting?",
     "answer": "When dotted formatting is omitted, most implementations expand area 1 to the area identifier 0.0.0.1, but some have been known to expand it as 1.0.0.0.",
     "domain": "general",
@@ -10650,12 +8856,6 @@
     "source": "wikipedia:Open Shortest Path First"
   },
   {
-    "question": "Tell me about IA",
-    "answer": "However, this area does not allow summary routes in addition to not having external routes; that is, inter-area (IA) routes are not summarized into totally stubby areas.",
-    "domain": "general",
-    "source": "wikipedia:Open Shortest Path First"
-  },
-  {
     "question": "What is only way for traffic to get routed outside the area?",
     "answer": "The only way for traffic to get routed outside the area is a default route, which is the only Type-3 LSA advertised into the area.",
     "domain": "general",
@@ -10707,12 +8907,6 @@
     "question": "Tell me about In Cisco",
     "answer": "In Cisco's implementation, the external routes can be summarized before injecting them into the totally stubby area.",
     "domain": "general",
-    "source": "wikipedia:Open Shortest Path First"
-  },
-  {
-    "question": "Tell me about IR",
-    "answer": "Internal router (IR)\nAn internal router has all its interfaces belonging to the same area.",
-    "domain": "networking",
     "source": "wikipedia:Open Shortest Path First"
   },
   {
@@ -10848,26 +9042,8 @@
     "source": "wikipedia:Open Shortest Path First"
   },
   {
-    "question": "What is Below?",
-    "answer": "Below is a matrix of accepted LSAs.",
-    "domain": "general",
-    "source": "wikipedia:Open Shortest Path First"
-  },
-  {
-    "question": "What is In practice, it?",
-    "answer": "In practice, it is determined by comparing the speed of the interface to a reference-bandwidth for the OSPF process.",
-    "domain": "networking",
-    "source": "wikipedia:Open Shortest Path First"
-  },
-  {
     "question": "What is cost?",
     "answer": "The cost is determined by dividing the reference bandwidth by the interface speed (although the cost for any interface can be manually overridden).",
-    "domain": "networking",
-    "source": "wikipedia:Open Shortest Path First"
-  },
-  {
-    "question": "What is Here?",
-    "answer": "Here is an example table that shows the routing metric or 'cost calculation' on an interface.",
     "domain": "networking",
     "source": "wikipedia:Open Shortest Path First"
   },
@@ -11034,12 +9210,6 @@
     "source": "wikipedia:Link-state advertisement"
   },
   {
-    "question": "What is OSPF?",
-    "answer": "OSPF is designed for scalability, so some LSAs are not flooded out on all interfaces, but only on those that belong to the appropriate area.",
-    "domain": "networking",
-    "source": "wikipedia:Link-state advertisement"
-  },
-  {
     "question": "What is opaque LSAs, types 9, 10, and 11?",
     "answer": "The opaque LSAs, types 9, 10, and 11, are designated for upgrades to OSPF for application-specific purposes.",
     "domain": "networking",
@@ -11067,12 +9237,6 @@
     "question": "What is Each router link?",
     "answer": "Each router link is defined as one of four types: type 1, 2, 3, or 4.",
     "domain": "networking",
-    "source": "wikipedia:Link-state advertisement"
-  },
-  {
-    "question": "Tell me about In Hello",
-    "answer": "In Hello packet, a mismatch, will result in reject of neighbor.",
-    "domain": "general",
     "source": "wikipedia:Link-state advertisement"
   },
   {
@@ -11160,20 +9324,8 @@
     "source": "wikipedia:Administrative distance"
   },
   {
-    "question": "Tell me about AD",
-    "answer": "== Overview ==\nThe administrative distance (AD) value is assigned by the router on a per-protocol basis.",
-    "domain": "networking",
-    "source": "wikipedia:Administrative distance"
-  },
-  {
     "question": "What is While a router may run multiple routing protocols on the same device, it?",
     "answer": "While a router may run multiple routing protocols on the same device, it is necessary for the router to implement a process to ensure that multiple routes, pointing to the same destination do not simultaneously exist in the routing table.",
-    "domain": "networking",
-    "source": "wikipedia:Administrative distance"
-  },
-  {
-    "question": "What does router provide?",
-    "answer": "The router uses this value to determine which route should be used.",
     "domain": "networking",
     "source": "wikipedia:Administrative distance"
   },
@@ -11250,18 +9402,6 @@
     "source": "wikipedia:Interior gateway protocol"
   },
   {
-    "question": "What is By contrast, exterior gateway protocols?",
-    "answer": "By contrast, exterior gateway protocols are used to exchange routing information between autonomous systems and rely on IGPs to resolve routes within an autonomous system.",
-    "domain": "networking",
-    "source": "wikipedia:Interior gateway protocol"
-  },
-  {
-    "question": "What is One example?",
-    "answer": "One example is Enhanced Interior Gateway Routing Protocol (EIGRP).",
-    "domain": "networking",
-    "source": "wikipedia:Interior gateway protocol"
-  },
-  {
     "question": "What is IP packet?",
     "answer": "An IP packet is the smallest message entity exchanged via the Internet Protocol across an IP network.",
     "domain": "general",
@@ -11292,12 +9432,6 @@
     "source": "wikipedia:IP header"
   },
   {
-    "question": "What is IPv6?",
-    "answer": "IPv6 is the successor to IPv4 and has a different header layout.",
-    "domain": "intranet",
-    "source": "wikipedia:IP header"
-  },
-  {
     "question": "What is It was defined in 1998 and?",
     "answer": "It was defined in 1998 and is in various stages of production deployment.",
     "domain": "general",
@@ -11318,12 +9452,6 @@
   {
     "question": "What is Intermediate System to Intermediate System  (IS-IS, also written ISIS)?",
     "answer": "Intermediate System to Intermediate System  (IS-IS, also written ISIS) is a link-state interior gateway protocol (IGP) used to exchange routing information within a network.",
-    "domain": "networking",
-    "source": "wikipedia:IS-IS"
-  },
-  {
-    "question": "What is IS-IS protocol?",
-    "answer": "The IS-IS protocol is defined in ISO/IEC 10589:2002 as an international standard within the Open Systems Interconnection (OSI) reference design.",
     "domain": "networking",
     "source": "wikipedia:IS-IS"
   },
@@ -11424,12 +9552,6 @@
     "source": "wikipedia:IS-IS"
   },
   {
-    "question": "Tell me about NET",
-    "answer": "On a single intermediate system there can be up to 3 NET addresses.",
-    "domain": "general",
-    "source": "wikipedia:IS-IS"
-  },
-  {
     "question": "What is This may be useful during migration of an?",
     "answer": "This may be useful during migration of an IS from one area to another.",
     "domain": "general",
@@ -11448,12 +9570,6 @@
     "source": "wikipedia:IS-IS"
   },
   {
-    "question": "What is Because IS-IS?",
-    "answer": "Because IS-IS is not an IP-based protocol, it has hostname resolution built into the standard.",
-    "domain": "general",
-    "source": "wikipedia:IS-IS"
-  },
-  {
     "question": "What is Level 1 routers?",
     "answer": "Level 1 routers are internal to an area, and only maintain a Link State Database (LSDB) for that area.",
     "domain": "networking",
@@ -11462,12 +9578,6 @@
   {
     "question": "What is Level 1/Level 2 routers?",
     "answer": "Level 1/Level 2 routers are on the boundaries between L1 and L2 routers, and participate in both intra-area and inter-area routing, maintaining separate L1 and L2 LSDBs.",
-    "domain": "networking",
-    "source": "wikipedia:IS-IS"
-  },
-  {
-    "question": "Tell me about ATT",
-    "answer": "L1/L2 routers advertise their status as boundary routers by setting the Attached Bit (ATT), in its L1 LSP.",
     "domain": "networking",
     "source": "wikipedia:IS-IS"
   },
@@ -11526,12 +9636,6 @@
     "source": "wikipedia:IS-IS"
   },
   {
-    "question": "What is When BGP?",
-    "answer": "When BGP is finished establishing neighborship, the overload bit is cleared and this router joins the MPLS VPN.",
-    "domain": "networking",
-    "source": "wikipedia:IS-IS"
-  },
-  {
     "question": "What is IS type bits – 2nd and 1st bits, indicate the?",
     "answer": "IS type bits – 2nd and 1st bits, indicate the IS type of the originator.",
     "domain": "networking",
@@ -11571,12 +9675,6 @@
     "question": "Tell me about NLPID",
     "answer": "In order to display supported Layer 3 protocols, also called NLPID (Network Layer Protocol ID), TLV 129 is used.",
     "domain": "networking",
-    "source": "wikipedia:IS-IS"
-  },
-  {
-    "question": "What is If multi-topology?",
-    "answer": "If multi-topology is enabled, IS-IS will calculate separate SPF tree for IPv4 and IPv6.",
-    "domain": "general",
     "source": "wikipedia:IS-IS"
   },
   {
@@ -11649,12 +9747,6 @@
     "question": "What is Bidirectional Forwarding Detection (BFD)?",
     "answer": "Bidirectional Forwarding Detection (BFD) is a network protocol that is used to detect faults between two routers or switches connected by a link.",
     "domain": "networking",
-    "source": "wikipedia:Bidirectional Forwarding Detection"
-  },
-  {
-    "question": "What is session?",
-    "answer": "The session is established with a three-way handshake, and is torn down the same way.",
-    "domain": "general",
     "source": "wikipedia:Bidirectional Forwarding Detection"
   },
   {

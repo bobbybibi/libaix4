@@ -49,6 +49,8 @@ def _load_cron_config() -> dict:
             "wiki_crawler": {"enabled": True, "runs_per_hour": 4},
             "forum_crawler": {"enabled": True, "runs_per_hour": 4},
             "ml_growth": {"enabled": True, "runs_per_hour": 1},
+            "digest": {"enabled": True, "runs_per_hour": 1},
+            "topic_learner": {"enabled": True, "runs_per_hour": 2},
         }
     }
 
@@ -124,11 +126,70 @@ def _run_ml_growth() -> dict:
         return {"status": "error", "error": str(e)}
 
 
+def _run_digest() -> dict:
+    """Run digestive mode — process existing data."""
+    log.info("Running digest cycle…")
+    try:
+        from digest_engine import run_digest_cycle
+        result = run_digest_cycle()
+        log.info("Digest: %s", result.get("status", "unknown"))
+        return result
+    except Exception as e:
+        log.error("Digest failed: %s", e)
+        return {"status": "error", "error": str(e)}
+
+
+def _run_topic_learner() -> dict:
+    """Auto-learn from priority topics."""
+    log.info("Running topic learner…")
+    try:
+        # Load learning topics
+        topics_path = Path("data/learning_topics.json")
+        if not topics_path.exists():
+            return {"status": "no_topics"}
+        config = json.loads(topics_path.read_text(encoding="utf-8"))
+        topics = [t for t in config.get("topics", []) if t.get("enabled", True)]
+        if not topics:
+            return {"status": "no_enabled_topics"}
+
+        # Sort by priority: high first, then medium, then low
+        priority_order = {"high": 0, "medium": 1, "low": 2}
+        topics.sort(key=lambda t: priority_order.get(t.get("priority", "medium"), 1))
+
+        # Pick the top priority topic
+        topic = topics[0]
+        topic_name = topic["name"]
+        keywords = topic.get("keywords", [])
+
+        from crawler import crawl_single_topic
+        from forum_crawler import crawl_single_forum_topic
+
+        wiki_result = crawl_single_topic(topic_name, keywords, max_articles=5)
+        forum_result = crawl_single_forum_topic(
+            topic_name, keywords, max_per_source=5,
+            sources=["stackexchange", "reddit"],
+        )
+
+        total = 0
+        if wiki_result.get("status") == "success":
+            total += wiki_result.get("entries", 0)
+        if forum_result.get("status") == "success":
+            total += forum_result.get("entries", 0)
+
+        log.info("Topic learner: %d entries for '%s'", total, topic_name)
+        return {"status": "success", "topic": topic_name, "entries": total}
+    except Exception as e:
+        log.error("Topic learner failed: %s", e)
+        return {"status": "error", "error": str(e)}
+
+
 JOB_RUNNERS = {
     "auto_train": _run_auto_train,
     "wiki_crawler": _run_wiki_crawler,
     "forum_crawler": _run_forum_crawler,
     "ml_growth": _run_ml_growth,
+    "digest": _run_digest,
+    "topic_learner": _run_topic_learner,
 }
 
 

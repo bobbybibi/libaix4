@@ -1,0 +1,96 @@
+{
+  "topics": [
+    {
+      "name": "network security",
+      "priority": "high",
+      "enabled": true,
+      "added_at": null
+    },
+    {
+      "name": "cloud networking",
+      "priority": "medium",
+      "enabled": true,
+      "added_at": null
+    },
+    {
+      "name": "wireless protocols",
+      "priority": "medium",
+      "enabled": true,
+      "added_at": null
+    },
+    {
+      "name": "test_topic_pytest",
+      "priority": "low",
+      "enabled": true,
+      "added_at": "2026-03-28T19:57:19.282193+00:00"
+    },
+    {
+      "name": "duplicate_test",
+      "priority": "low",
+      "enabled": true,
+      "added_at": "2026-03-28T19:57:19.361852+00:00"
+    },
+    {
+      "name": "toggle_test",
+      "priority": "medium",
+      "enabled": true,
+      "added_at": "2026-03-28T19:57:19.442505+00:00"
+    },
+    {
+      "name": "test_topic_b30f24c8",
+      "priority": "low",
+      "enabled": true,
+      "added_at": "2026-03-28T19:58:16.553029+00:00"
+    },
+    {
+      "name": "dup_test_dfdee4be",
+      "priority": "low",
+      "enabled": true,
+      "added_at": "2026-03-28T19:58:16.632754+00:00"
+    },
+    {
+      "name": "toggle_test_37e0825d",
+      "priority": "medium",
+      "enabled": false,
+      "added_at": "2026-03-28T19:58:16.712875+00:00"
+    },
+    {
+      "name": "test_topic_ca2f7373",
+      "priority": "low",
+      "enabled": true,
+      "added_at": "2026-03-28T19:58:51.263360+00:00"
+    },
+    {
+      "name": "dup_test_68173ce6",
+      "priority": "low",
+      "enabled": true,
+      "added_at": "2026-03-28T19:58:51.342744+00:00"
+    },
+    {
+      "name": "toggle_test_4a4932f9",
+      "priority": "medium",
+      "enabled": false,
+      "added_at": "2026-03-28T19:58:51.423265+00:00"
+    },
+    {
+      "name": "test_topic_4cfde062",
+      "priority": "low",
+      "enabled": true,
+      "added_at": "2026-03-28T20:04:59.849333+00:00"
+    },
+    {
+      "name": "dup_test_24fd20e0",
+      "priority": "low",
+      "enabled": true,
+      "added_at": "2026-03-28T20:04:59.928156+00:00"
+    },
+    {
+      "name": "toggle_test_7e370f2a",
+      "priority": "medium",
+      "enabled": false,
+      "added_at": "2026-03-28T20:05:00.008932+00:00"
+    }
+  ],
+  "auto_discover": true,
+  "last_updated": "2026-03-28T20:05:00.009874+00:00"
+}

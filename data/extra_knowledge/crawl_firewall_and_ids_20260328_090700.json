@@ -12,18 +12,6 @@
     "source": "wikipedia:Cybersecurity engineering"
   },
   {
-    "question": "Tell me about LANs",
-    "answer": "During the 1980s, the expansion of local area networks (LANs) and the emergence of multi-user operating systems, such as UNIX, highlighted the need for more sophisticated access controls and system audits.",
-    "domain": "general",
-    "source": "wikipedia:Cybersecurity engineering"
-  },
-  {
-    "question": "Tell me about NIST",
-    "answer": "The integration of frameworks such as the NIST Cybersecurity Framework allowed for a more comprehensive approach that has included technical defense, prevention, response, and incident recovery.",
-    "domain": "general",
-    "source": "wikipedia:Cybersecurity engineering"
-  },
-  {
     "question": "What is Incident response and recovery: effective incident response planning?",
     "answer": "Incident response and recovery: effective incident response planning is crucial for managing potential security breaches.",
     "domain": "general",
@@ -32,18 +20,6 @@
   {
     "question": "What is This forward-thinking strategy ensures that security?",
     "answer": "This forward-thinking strategy ensures that security is embedded within the infrastructure rather than bolted on as an afterthought.",
-    "domain": "general",
-    "source": "wikipedia:Cybersecurity engineering"
-  },
-  {
-    "question": "What is Penetration testing?",
-    "answer": "Penetration testing is another essential component of their work.",
-    "domain": "security",
-    "source": "wikipedia:Cybersecurity engineering"
-  },
-  {
-    "question": "Tell me about ISO",
-    "answer": "Moreover, cybersecurity engineers ensure that systems comply with regulatory and industry standards, such as ISO 27001 and NIST guidelines.",
     "domain": "general",
     "source": "wikipedia:Cybersecurity engineering"
   },
@@ -60,21 +36,9 @@
     "source": "wikipedia:Cybersecurity engineering"
   },
   {
-    "question": "Tell me about IPS",
-    "answer": "Intrusion Prevention Systems (IPS) enhance these measures by not only detecting threats but also actively blocking them in real-time, creating a more proactive security posture.",
-    "domain": "security",
-    "source": "wikipedia:Cybersecurity engineering"
-  },
-  {
     "question": "What is This process ensures that data?",
     "answer": "This process ensures that data is rendered unreadable to unauthorized users, safeguarding both data at rest—such as files stored on servers—and data in transit—like information sent over the internet.",
     "domain": "internet",
-    "source": "wikipedia:Cybersecurity engineering"
-  },
-  {
-    "question": "Tell me about SIEM",
-    "answer": "=== Security Information and Event Management (SIEM) ===\nSIEM systems play a crucial role in modern cybersecurity engineering by aggregating and analyzing data from various sources across an organization's IT environment.",
-    "domain": "security",
     "source": "wikipedia:Cybersecurity engineering"
   },
   {
@@ -90,18 +54,6 @@
     "source": "wikipedia:Cybersecurity engineering"
   },
   {
-    "question": "Tell me about Distributed Denial",
-    "answer": "=== Traffic control and Quality of Service (QoS) ===\nTraffic control measures in cybersecurity engineering are designed to optimize the flow of data within networks, mitigating risks such as Distributed Denial of Service (DDoS) attacks.",
-    "domain": "wifi_policy",
-    "source": "wikipedia:Cybersecurity engineering"
-  },
-  {
-    "question": "Tell me about WAF",
-    "answer": "By utilizing technologies like Web Application Firewalls (WAF) and load balancers, organizations can ensure secure and efficient traffic distribution.",
-    "domain": "security",
-    "source": "wikipedia:Cybersecurity engineering"
-  },
-  {
     "question": "Tell me about EDR",
     "answer": "=== Endpoint detection and response (EDR) and extended detection and response (XDR) ===\nEDR tools focus on monitoring and analyzing endpoint activities, such as those on laptops and mobile devices, to detect threats in real time.",
     "domain": "security",
@@ -110,18 +62,6 @@
   {
     "question": "Tell me about XDR",
     "answer": "XDR expands on EDR by integrating multiple security products, such as network analysis tools, providing a more holistic view of an organization's security posture.",
-    "domain": "general",
-    "source": "wikipedia:Cybersecurity engineering"
-  },
-  {
-    "question": "Tell me about United States",
-    "answer": "In the United States, specific regulations play a critical role in safeguarding sensitive information.",
-    "domain": "general",
-    "source": "wikipedia:Cybersecurity engineering"
-  },
-  {
-    "question": "Tell me about HIPAA",
-    "answer": "The Health Insurance Portability and Accountability Act (HIPAA) outlines stringent standards for protecting health information, ensuring that healthcare organizations maintain the confidentiality and integrity of patient data.",
     "domain": "general",
     "source": "wikipedia:Cybersecurity engineering"
   },
@@ -162,12 +102,6 @@
     "source": "wikipedia:Cybersecurity engineering"
   },
   {
-    "question": "Tell me about CISSP",
-    "answer": "Certified Information Systems Security Professional (CISSP): Globally recognized for security professionals.",
-    "domain": "general",
-    "source": "wikipedia:Cybersecurity engineering"
-  },
-  {
     "question": "Tell me about CISM",
     "answer": "Certified Information Security Manager (CISM): Focuses on security management.",
     "domain": "general",
@@ -182,12 +116,6 @@
   {
     "question": "What is Intrusion detection system?",
     "answer": "An intrusion detection system (IDS) is a device or software application that monitors a network or systems for malicious activity or policy violations. Any intrusion activity or violation is typically either reported to an administrator or collected centrally using a security information and event management (SIEM) system. A SIEM system combines outputs from multiple sources and uses alarm filtering techniques to distinguish malicious activity from false alarms.",
-    "domain": "security",
-    "source": "wikipedia:Intrusion detection system"
-  },
-  {
-    "question": "What is intrusion detection system (IDS)?",
-    "answer": "An intrusion detection system (IDS) is a device or software application that monitors a network or systems for malicious activity or policy violations.",
     "domain": "security",
     "source": "wikipedia:Intrusion detection system"
   },
@@ -234,12 +162,6 @@
     "source": "wikipedia:Intrusion detection system"
   },
   {
-    "question": "What is This?",
-    "answer": "This is traditionally achieved by examining network communications, identifying heuristics and patterns (often known as signatures) of common computer attacks, and taking action to alert operators.",
-    "domain": "networking",
-    "source": "wikipedia:Intrusion detection system"
-  },
-  {
     "question": "What is system that terminates connections?",
     "answer": "A system that terminates connections is called an intrusion prevention system, and performs access control like an application layer firewall.",
     "domain": "networking",
@@ -279,18 +201,6 @@
     "question": "What is Artificial Neural Network (ANN) based IDS?",
     "answer": "Artificial Neural Network (ANN) based IDS are capable of analyzing huge volumes of data due to the hidden layers and non-linear modeling, however this process requires time due its complex structure.",
     "domain": "security",
-    "source": "wikipedia:Intrusion detection system"
-  },
-  {
-    "question": "What does This provide?",
-    "answer": "This allows IDS to more efficiently recognize intrusion patterns.",
-    "domain": "security",
-    "source": "wikipedia:Intrusion detection system"
-  },
-  {
-    "question": "Tell me about DOS",
-    "answer": "This system can average 99.9% detection and classification rate, based on research results of 24 network attacks, divided in four categories: DOS, Probe, Remote-to-Local, and user-to-root.",
-    "domain": "general",
     "source": "wikipedia:Intrusion detection system"
   },
   {
@@ -342,12 +252,6 @@
     "source": "wikipedia:Intrusion detection system"
   },
   {
-    "question": "Tell me about IDSs",
-    "answer": "Most of the existing IDSs suffer from the time-consuming during detection process that degrades the performance of IDSs.",
-    "domain": "security",
-    "source": "wikipedia:Intrusion detection system"
-  },
-  {
     "question": "What is New types of what could be called anomaly-based intrusion detection systems?",
     "answer": "New types of what could be called anomaly-based intrusion detection systems are being viewed by Gartner as User and Entity Behavior Analytics (UEBA) (an evolution of the user behavior analytics category) and network traffic analysis (NTA).",
     "domain": "general",
@@ -390,27 +294,9 @@
     "source": "wikipedia:Intrusion detection system"
   },
   {
-    "question": "Tell me about WIPS",
-    "answer": "Wireless intrusion prevention system (WIPS): monitor a wireless network for suspicious traffic by analyzing wireless networking protocols.",
-    "domain": "wifi",
-    "source": "wikipedia:Intrusion detection system"
-  },
-  {
-    "question": "Tell me about NBA",
-    "answer": "Network behavior analysis (NBA): examines network traffic to identify threats that generate unusual traffic flows, such as distributed denial of service (DDoS) attacks, certain forms of malware and policy violations.",
-    "domain": "security",
-    "source": "wikipedia:Intrusion detection system"
-  },
-  {
     "question": "Tell me about HIPS",
     "answer": "Host-based intrusion prevention system (HIPS): an installed software package which monitors a single host for suspicious activity by analyzing events occurring within that host.",
     "domain": "security",
-    "source": "wikipedia:Intrusion detection system"
-  },
-  {
-    "question": "What is While it?",
-    "answer": "While it is the simplest and most effective method, it fails to detect unknown attacks and variants of known attacks.",
-    "domain": "general",
     "source": "wikipedia:Intrusion detection system"
   },
   {
@@ -438,12 +324,6 @@
     "source": "wikipedia:Intrusion detection system"
   },
   {
-    "question": "What does This practice provide?",
-    "answer": "This practice provides the IDS with high visibility of traffic entering your network and will not receive any traffic between users on the network.",
-    "domain": "security",
-    "source": "wikipedia:Intrusion detection system"
-  },
-  {
     "question": "What is edge of the network?",
     "answer": "The edge of the network is the point in which a network connects to the extranet.",
     "domain": "intranet",
@@ -465,12 +345,6 @@
     "question": "What is Another option for IDS placement?",
     "answer": "Another option for IDS placement is within the actual network.",
     "domain": "security",
-    "source": "wikipedia:Intrusion detection system"
-  },
-  {
-    "question": "Tell me about DNS",
-    "answer": "Bad packets generated from software bugs, corrupt DNS data, and local packets that escaped can create a significantly high false-alarm rate.",
-    "domain": "internet",
     "source": "wikipedia:Intrusion detection system"
   },
   {
@@ -516,21 +390,9 @@
     "source": "wikipedia:Intrusion detection system"
   },
   {
-    "question": "Tell me about TCP",
-    "answer": "Invalid data and TCP/IP stack attacks may cause a NIDS to crash.",
-    "domain": "networking",
-    "source": "wikipedia:Intrusion detection system"
-  },
-  {
     "question": "What is They provide the same security mechanism for all users no matter if users?",
     "answer": "They provide the same security mechanism for all users no matter if users are companies or an individual person.",
     "domain": "general",
-    "source": "wikipedia:Intrusion detection system"
-  },
-  {
-    "question": "What is There?",
-    "answer": "There are a number of techniques which attackers are using, the following are considered 'simple' measures which can be taken to evade IDS:.",
-    "domain": "security",
     "source": "wikipedia:Intrusion detection system"
   },
   {
@@ -566,12 +428,6 @@
   {
     "question": "Tell me about IDES",
     "answer": "IDES had a dual approach with a rule-based Expert System to detect known types of intrusions plus a statistical anomaly detection component based on profiles of users, host systems, and target systems.",
-    "domain": "general",
-    "source": "wikipedia:Intrusion detection system"
-  },
-  {
-    "question": "Tell me about SRI",
-    "answer": "SRI followed IDES in 1993 with the Next-generation Intrusion Detection Expert System (NIDES).",
     "domain": "general",
     "source": "wikipedia:Intrusion detection system"
   },
@@ -612,12 +468,6 @@
     "source": "wikipedia:Intrusion detection system"
   },
   {
-    "question": "Tell me about AT",
-    "answer": "ComputerWatch at AT&T Bell Labs used statistics and rules for audit data reduction and intrusion detection.",
-    "domain": "general",
-    "source": "wikipedia:Intrusion detection system"
-  },
-  {
     "question": "Tell me about DIDS",
     "answer": "Then, in 1991, researchers at the University of California, Davis created a prototype Distributed Intrusion Detection System (DIDS), which was also an expert system.",
     "domain": "security",
@@ -654,24 +504,6 @@
     "source": "wikipedia:Intrusion detection system"
   },
   {
-    "question": "Tell me about CPU",
-    "answer": "The proposal applies machine learning for anomaly detection, providing energy-efficiency to a Decision Tree, Naive-Bayes, and k-Nearest Neighbors classifiers implementation in an Atom CPU and its hardware-friendly implementation in a FPGA.",
-    "domain": "internet",
-    "source": "wikipedia:Intrusion detection system"
-  },
-  {
-    "question": "Tell me about NPRM",
-    "answer": "The December 2024 Notice of proposed rulemaking (NPRM) to overhaul the HIPAA Security Rule would explicitly mandate deployment of intrusion detection and intrusion prevention systems, along with continuous monitoring of all information systems containing electronic protected health information.",
-    "domain": "general",
-    "source": "wikipedia:Intrusion detection system"
-  },
-  {
-    "question": "Tell me about PCI",
-    "answer": "The Payment Card Industry Data Security Standard (PCI DSS) requires the use of intrusion detection or intrusion prevention techniques to detect or prevent intrusions into networks handling cardholder data (Requirement 11.5).",
-    "domain": "general",
-    "source": "wikipedia:Intrusion detection system"
-  },
-  {
     "question": "Tell me about APIDS",
     "answer": "== See also ==\nApplication protocol-based intrusion detection system (APIDS)\nArtificial immune system\nBypass switch\nDenial-of-service attack\nDNS analytics\nExtrusion detection\nIntrusion Detection Message Exchange Format\nProtocol-based intrusion detection system (PIDS)\nReal-time adaptive security\nSecurity management\nShieldsUp\nSoftware-defined protection.",
     "domain": "internet",
@@ -684,12 +516,6 @@
     "source": "wikipedia:Intrusion detection system"
   },
   {
-    "question": "Tell me about PDF",
-    "answer": "Guide to Intrusion Detection and Prevention Systems, SP800-94 (PDF).",
-    "domain": "general",
-    "source": "wikipedia:Intrusion detection system"
-  },
-  {
     "question": "Tell me about Architectural Issues",
     "answer": "\"Architectural Issues of Intrusion Detection Infrastructure in Large Enterprises (Revision 0.82)\".",
     "domain": "general",
@@ -698,12 +524,6 @@
   {
     "question": "Tell me about Benjamin Lowry",
     "answer": "Hansen, James V.; Benjamin Lowry, Paul; Meservy, Rayman; McDonald, Dan (2007).",
-    "domain": "general",
-    "source": "wikipedia:Intrusion detection system"
-  },
-  {
-    "question": "Tell me about Network Intrusion Detection System",
-    "answer": "\"Implementation of Network Intrusion Detection System using Deep Learning\".",
     "domain": "general",
     "source": "wikipedia:Intrusion detection system"
   },
@@ -726,254 +546,14 @@
     "source": "wikipedia:Intrusion detection system"
   },
   {
-    "question": "What is Firewall (computing)?",
-    "answer": "In computing, a firewall is a network security system that monitors and controls incoming and outgoing network traffic based on configurable security rules. A firewall typically establishes a barrier between a trusted network and an untrusted network, such as the Internet or between several VLANs. Firewalls can be categorized as network-based or host-based.",
-    "domain": "networking",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "What is In computing, a firewall?",
-    "answer": "In computing, a firewall is a network security system that monitors and controls incoming and outgoing network traffic based on configurable security rules.",
-    "domain": "security",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "Tell me about VLANs",
-    "answer": "A firewall typically establishes a barrier between a trusted network and an untrusted network, such as the Internet or between several VLANs.",
-    "domain": "networking",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "What does Later provide?",
-    "answer": "Later uses refer to similar structures, such as the metal sheet separating the engine compartment of a vehicle or aircraft from the passenger compartment.",
-    "domain": "general",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "Tell me about John Badham",
-    "answer": "Before it was used in real-life computing, the term appeared in John Badham's 1983 computer‑hacking movie WarGames, spoken by the bearded and bespectacled programmer named Paul Richter, which possibly inspired its later use.",
-    "domain": "general",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "Tell me about NAT",
-    "answer": "One of the earliest commercially successful firewall and network address translation (NAT) products was the PIX (Private Internet eXchange) Firewall, invented in 1994 by Network Translation Inc., a startup founded and run by John Mayes.",
-    "domain": "networking",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "Tell me about PIX",
-    "answer": "The PIX Firewall technology was coded by Brantley Coile as a consultant software developer.",
-    "domain": "security",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "Tell me about Cisco Systems",
-    "answer": "Cisco Systems, seeking to expand into the rapidly growing network security market, subsequently acquired Network Translation Inc.",
-    "domain": "internet",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "What is Firewalls?",
-    "answer": "Firewalls are categorized as a network-based or a host-based system.",
-    "domain": "security",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "What is Network-based firewalls?",
-    "answer": "Network-based firewalls are positioned between two or more networks, typically between the local area network (LAN) and wide area network (WAN), their basic function being to control the flow of data between connected networks.",
-    "domain": "networking",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
     "question": "What is They?",
     "answer": "They are either a software appliance running on general-purpose hardware, a hardware appliance running on special-purpose hardware, or a virtual appliance running on a virtual host controlled by a hypervisor.",
     "domain": "general",
     "source": "wikipedia:Firewall (computing)"
   },
   {
-    "question": "Tell me about DHCP",
-    "answer": "Firewall appliances may also offer non-firewall functionality, such as DHCP or VPN services.",
-    "domain": "security",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "What is Host-based firewalls?",
-    "answer": "Host-based firewalls are deployed directly on the host itself to control network traffic or other computing resources.",
-    "domain": "security",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "Tell me about IP",
-    "answer": "Packets may be filtered by source and destination IP addresses, protocol, or source and destination ports.",
-    "domain": "networking",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
     "question": "Tell me about DEC",
     "answer": "The first paper published on firewall technology was in 1987 when engineers from Digital Equipment Corporation (DEC) developed filter systems known as packet filter firewalls.",
-    "domain": "security",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "Tell me about BSD",
-    "answer": "In 1992, Steven McCanne and\nVan Jacobson released a paper on BSD Packet Filter (BPF) while at Lawrence Berkeley Laboratory.",
-    "domain": "general",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "Tell me about FWTK",
-    "answer": "Marcus Ranum, Wei Xu, and Peter Churchyard released an application firewall known as Firewall Toolkit (FWTK) in October 1993.",
-    "domain": "security",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "Tell me about Trusted Information Systems",
-    "answer": "This became the basis for Gauntlet firewall at Trusted Information Systems.",
-    "domain": "security",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "What is key benefit of application layer filtering?",
-    "answer": "The key benefit of application layer filtering is that it can understand certain applications and protocols such as File Transfer Protocol (FTP), Domain Name System (DNS), or Hypertext Transfer Protocol (HTTP).",
-    "domain": "internet",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "What does As of 2012, the next-generation firewall provide?",
-    "answer": "As of 2012, the next-generation firewall provides a wider range of inspection at the application layer, extending deep packet inspection functionality to include, but is not limited to:.",
-    "domain": "security",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "Tell me about TLS",
-    "answer": "Web filtering\nIntrusion prevention systems\nUser identity management\nWeb application firewall\nContent inspection and heuristic analysis\nTLS Inspection.",
-    "domain": "security",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "Tell me about ID",
-    "answer": "Application firewalls filter connections by examining the process ID of data packets against a rule set for the local process involved in the data transmission.",
-    "domain": "security",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "What is Application firewalls that hook into socket calls?",
-    "answer": "Application firewalls that hook into socket calls are also referred to as socket filters.",
-    "domain": "security",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "Tell me about Firewall Policies",
-    "answer": "== Firewall Policies ==\nAt the core of a firewall's operation are the policies that govern its decision-making process.",
-    "domain": "security",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "What is These policies, collectively known as firewall rules?",
-    "answer": "These policies, collectively known as firewall rules, are the specific guidelines that determine the traffic allowed or blocked across a network's boundaries.",
-    "domain": "security",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "What is Firewall rules?",
-    "answer": "Firewall rules are based on the evaluation of network packets against predetermined security criteria.",
-    "domain": "security",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "Tell me about WAN",
-    "answer": "By partitioning a network into zones, such as \"Technical\", \"WAN\", \"LAN\", \"Public,\" \"Private,\" \"DMZ\", and \"Wireless,\" administrators can enforce policies that control the flow of traffic between them.",
-    "domain": "wifi",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "What is Each zone has its own level of trust and?",
-    "answer": "Each zone has its own level of trust and is governed by specific firewall rules that regulate the ingress and egress of data.",
-    "domain": "security",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "What is typical default?",
-    "answer": "A typical default is to allow all traffic from LAN to WAN, and to drop all traffic from WAN to LAN.",
-    "domain": "general",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "Tell me about HTTP",
-    "answer": "Common examples include HTTP/HTTPS (web traffic) on ports 80 and 443, FTP (file transfer) on port 21, and SMTP (email) on port 25.",
-    "domain": "internet",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "What is Services?",
-    "answer": "Services are the engines behind the applications users depend on.",
-    "domain": "general",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "What is From a security aspect, controlling access to services?",
-    "answer": "From a security aspect, controlling access to services is crucial because services are common targets for exploitation.",
-    "domain": "general",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "Tell me about FTP",
-    "answer": "For example, a firewall might be configured to block incoming FTP requests to prevent unauthorized file uploads but allow outgoing HTTPS requests for web browsing.",
-    "domain": "internet",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "What is In network security, applications?",
-    "answer": "In network security, applications are important because different types of traffic can pose varying security risks.",
-    "domain": "general",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "Tell me about USER",
-    "answer": "=== USER ID ===\nImplementing firewall rules based on IP addresses alone is often insufficient due to the dynamic nature of user location and device usage.",
-    "domain": "networking",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "What does User ID provide?",
-    "answer": "User ID allows firewall rules to be crafted based on individual user identities, rather than just fixed source or destination IP addresses.",
-    "domain": "networking",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "What is User ID technology?",
-    "answer": "The User ID technology is typically integrated into firewall systems through the use of directory services such as Active Directory, LDAP, RADIUS or TACACS+.",
-    "domain": "intranet",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "Tell me about Directory Service Configuration",
-    "answer": "Directory Service Configuration — First, the firewall must be configured to communicate with the directory service that stores user group memberships.",
-    "domain": "security",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "Tell me about Define User Groups",
-    "answer": "Define User Groups — Within the firewall's management interface, define user groups based on the directory service.",
-    "domain": "security",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "Tell me about LAN",
-    "answer": "All other traffic, starting from LAN interfaces, will be allowed.",
-    "domain": "general",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "What is Firewall policies?",
-    "answer": "Firewall policies are typically configured according to the type of network in use, such as public or private environments.",
-    "domain": "security",
-    "source": "wikipedia:Firewall (computing)"
-  },
-  {
-    "question": "Tell me about Firewall Industry",
-    "answer": "== External links ==\nEvolution of the Firewall Industry – discusses different architectures, how packets are processed and provides a timeline of the evolution.",
     "domain": "security",
     "source": "wikipedia:Firewall (computing)"
   },
@@ -987,12 +567,6 @@
     "question": "What is Martin?",
     "answer": "Martin is the original author and lead developer of the Snort Intrusion Detection and Prevention System , a pioneering Open Source Software project released in 1998 that rapidly became the global standard for network-based attack definition and detection.",
     "domain": "internet",
-    "source": "wikipedia:Martin Roesch"
-  },
-  {
-    "question": "Tell me about CEO",
-    "answer": "He was the CEO from inception until May 2002, then CTO until June 2012, when he returned to the CEO role until the company was acquired by Cisco Systems on October 7, 2013 for $2.7B.",
-    "domain": "general",
     "source": "wikipedia:Martin Roesch"
   },
   {
@@ -1044,12 +618,6 @@
     "source": "wikipedia:Suricata (software)"
   },
   {
-    "question": "What does It also provide?",
-    "answer": "It also supports conditional pcap logging where only the traffic of flow where a rule matched is logged.",
-    "domain": "general",
-    "source": "wikipedia:Suricata (software)"
-  },
-  {
     "question": "Tell me about JSON",
     "answer": "=== Event Format ===\nSuricata logs events in the JSON format, which can be easily parsed and analyzed by other tools.",
     "domain": "general",
@@ -1080,387 +648,9 @@
     "source": "wikipedia:Suricata (software)"
   },
   {
-    "question": "What is McAfee?",
-    "answer": "McAfee Corp. ( MAK-ə-fee), formerly known as McAfee Associates, Inc. from 1987 to 1997 and 2004 to 2014, Network Associates Inc. from 1997 to 2004, and Intel Security Group from 2014 to 2017, is an American proprietary software company focused on online protection for consumers worldwide headquartered in San Jose, California.\nThe company was purchased by Intel in February 2011; with this acquisition, it became part of the Intel Security division.",
-    "domain": "networking",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "What is from 1997 to 2004, and Intel Security Group from 2014 to 2017?",
-    "answer": "from 1997 to 2004, and Intel Security Group from 2014 to 2017, is an American proprietary software company focused on online protection for consumers worldwide headquartered in San Jose, California.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about Intel Security",
-    "answer": "The company was purchased by Intel in February 2011; with this acquisition, it became part of the Intel Security division.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about TPG",
-    "answer": "In 2017, Intel had a strategic deal with TPG Capital and converted Intel Security into a joint venture between both companies called McAfee.",
-    "domain": "internet",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about Thoma Bravo",
-    "answer": "Thoma Bravo took a minority stake in the new company, and Intel retained a 49% stake.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about NASDAQ",
-    "answer": "The owners took McAfee public on the NASDAQ in 2020, and in 2022 an investor group led by Advent International Corporation took it private again.",
-    "domain": "networking",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about Afee Associates",
-    "answer": "=== 1987–1999 ===\nThe company was founded in 1987 as McAfee Associates, named for its founder John McAfee, who resigned from the company in 1994.",
-    "domain": "intranet",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about PGP",
-    "answer": "Network Associates was formed in 1997 as a merger of McAfee Associates, Network General, PGP Corporation and Helix Software.",
-    "domain": "intranet",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about FSA",
-    "answer": "In 1996, McAfee acquired Calgary, Alberta, Canada-based FSA Corporation, which helped the company diversify its security offerings away from just client-based antivirus software by bringing on board its own network and desktop encryption technologies.",
-    "domain": "security",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about Dean Huxley",
-    "answer": "While those product lines had their own individual successes including PowerBroker (written by Dean Huxley and Dan Freedman and now sold by BeyondTrust), the growth of antivirus ware always outpaced the growth of the other security product lines.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "What is Among other companies bought and sold by McAfee?",
-    "answer": "Among other companies bought and sold by McAfee is Trusted Information Systems, which developed the Firewall Toolkit, the free software foundation for the commercial Gauntlet Firewall, which was later sold to Secure Computing Corporation.",
-    "domain": "security",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about TIS",
-    "answer": "McAfee, as a result of brief ownership of TIS Labs/NAI Labs/Network Associates Laboratories/McAfee Research, was highly influential in the world of open-source software, as that organization produced portions of the Linux, FreeBSD, and Darwin operating systems, and developed portions of the BIND name server software and SNMP version 3.",
-    "domain": "intranet",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about ILOVEYOU",
-    "answer": "=== 2000–2009 ===\nIn 2000, McAfee/Network Associates was the leading authority in educating and protecting people against the Love Bug or ILOVEYOU virus, one of the most destructive computer viruses in history.",
-    "domain": "intranet",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about BMC",
-    "answer": "It restructured, beginning with the sale of its Magic Solutions business to Remedy, a subsidiary of BMC Software early in the year.",
-    "domain": "internet",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about Sniffer Technologies",
-    "answer": "In mid-2004, the company sold the Sniffer Technologies business to a venture capital backed firm named Network General (the same name as the original owner of Sniffer Technologies), and changed its name back to McAfee to reflect its focus on security-related technologies.",
-    "domain": "internet",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about SIA",
-    "answer": "In 2007, McAfee launched the Security Innovation Alliance (SIA), a program focused on cultivating partnerships with other tech companies and integrating third-party technology with McAfee's security and compliance risk management technology.",
-    "domain": "security",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about US",
-    "answer": "On March 11, 2008, McAfee announced a license agreement with the US Department of Defense.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about Virus Scan Enterprise",
-    "answer": "This agreement allowed the DoD to integrate McAfee's Virus Scan Enterprise and Anti-Spyware Enterprise into the Defense Information Systems Agency's cyber-security solutions.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about DAT",
-    "answer": "=== 2010–2020 ===\nOn April 21, 2010, McAfee sent out a bad anti-virus update (DAT 5958) that crippled millions of corporate and consumer Windows-based computers.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about On August",
-    "answer": "On August 19, 2010, Intel announced that it would purchase McAfee for $48 a share in a deal valued at $7.68 billion.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about SAIC",
-    "answer": "In 2011, McAfee also partnered with SAIC to develop anti-cyber espionage products for use by government and intelligence agencies, along with telecommunications companies.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about John Mc",
-    "answer": "John McAfee, who no longer had any involvement in the company, expressed his pleasure at his name no longer being associated with the software.",
-    "domain": "intranet",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about Security Innovation Alliance",
-    "answer": "In 2018, McAfee also expanded its Security Innovation Alliance partnerships to include companies such as Atos, CyberX, Fidelis Cyber-security, Aujas, and Silver Peak.",
-    "domain": "security",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about IPO",
-    "answer": "In July 2019, McAfee began meeting with bankers to discuss returning to the market as an IPO.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about Google Cloud",
-    "answer": "Near the end of 2019, McAfee partnered with Google Cloud to integrate McAfee's Mvision Cloud and endpoint security technology with Google's cloud infrastructure.",
-    "domain": "internet",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about In October",
-    "answer": "In October 2020, McAfee and its shareholders raised $740 million in the initial public offering and valued at about $8.6 billion based on the outstanding shares listed in its prospectus.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about In July",
-    "answer": "=== 2021–present ===\nIn July 2021, McAfee completed the sale of its enterprise business.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about AI",
-    "answer": "In early 2024, McAfee launched an AI-driven threat detection system, enhancing real-time protection against evolving cyber threats.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about In February",
-    "answer": "In February 2024, the company expanded its identity theft protection services, integrating new tools for monitoring and fraud prevention.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about In August",
-    "answer": "In August 2024, McAfee introduced deepfake detector to combat fraud.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about In May",
-    "answer": "In May 2025, McAfee started an initiative to drive awareness, education, and empathy around scams called Keep it Real.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about Scam Stories",
-    "answer": "This initiative combines thought-provoking ads with Scam Stories, a movement inviting survivors to share their experiences online, on social, or with McAfee directly.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
     "question": "Tell me about VPN",
     "answer": "=== Current products ===\nMcAfee+ Premium\nMcAfee+ Advanced\nMcAfee+ Ultimate\nMcAfee Total Protection\nMcAfee LiveSafe\nMcAfee Business Protection\nMcAfee Safe Connect VPN\nMcAfee Mobile Security for Android\nMcAfee Mobile Security for iOS\nMcAfee Virus Removal Service\nMcAfee Safe Family\nMcAfee TrueKey\nMcAfee WebAdvisor\nMcAfee Deepfake Detector.",
     "domain": "security",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about Afee Web",
-    "answer": "=== Renamed products ===\nMcAfee WebAdvisor (formerly SiteAdvisor).",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about Afee Virus",
-    "answer": "=== Former products ===\nMcAfee VirusScan Enterprise (Changed from McAfee VirusScan)\nMcAfee Network Security Platform (Changed from IntruShield)\nMcAfee Application and Change Control (Changed from McAfee Change Control)\nMcAfee E-Business Servers\nMcAfee Entercept.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about Dr Solomon",
-    "answer": "=== Dr Solomon's Group plc ===\nOn June 9, 1998, Network Associates agreed to acquire Dr Solomon's Group plc, the leading European manufacturer of antivirus software, for $642 million in stock.",
-    "domain": "intranet",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about Vert Networks",
-    "answer": "=== IntruVert Networks ===\nOn April 2, 2003, McAfee acquired IntruVert Networks for $100 million.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "What is According to Network World, \"IntruVert's technology focus?",
-    "answer": "According to Network World, \"IntruVert's technology focus is on intrusion-prevention, which entails not just detecting attacks, but blocking them.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about The Intru",
-    "answer": "The IntruVert product line can be used as a passive intrusion-detection system, just watching and reporting, or it can be used in the intrusion-prevention mode of blocking a perceived attack.\".",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about On April",
-    "answer": "=== SiteAdvisor ===\nOn April 5, 2006, McAfee bought out SiteAdvisor for a reputed $70 million in competition with Symantec, a service that warns users if downloading software or filling out forms on a site may obtain malware or spam.",
-    "domain": "security",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about On June",
-    "answer": "=== Preventsys ===\nOn June 6, 2006, McAfee announced that it would acquire Preventsys, a California-based company offering security risk management products.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about Onigma Ltd",
-    "answer": "=== Onigma Ltd ===\nOn October 16, 2006, McAfee announced that it would acquire Israel based Onigma Ltd for $20 million.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "What does Onigma provide?",
-    "answer": "Onigma provides host-based data leakage protection software that prevents intentional and unintentional leakage of sensitive data by internal users.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about On October",
-    "answer": "===\nOn October 8, 2007, McAfee announced it would acquire SafeBoot Holding B.V.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about Hacker Safe",
-    "answer": "The acquisition integrated ScanAlert's Hacker Safe service and McAfee's SiteAdvisor rating system to attack website security from both sides.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about On July",
-    "answer": "=== Reconnex ===\nOn July 31, 2008, McAfee announced it would acquire Reconnex, a maker of data protection appliances and software.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about Secure Computing",
-    "answer": "=== Secure Computing ===\nOn September 22, 2008, McAfee announced an agreement to acquire Secure Computing, a company specializing in network security hardware, services, and software products.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about Solidcore Systems",
-    "answer": "=== Solidcore Systems ===\nOn May 15, 2009, McAfee announced its intention acquire Solidcore Systems, a privately held security company, for $33 million.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about ATMs",
-    "answer": "Solidcore was a maker of software that helped companies protect ATMs and other specialized computers.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about MX",
-    "answer": "=== MX Logic ===\nOn July 30, 2009, McAfee announced plans to acquire managed email and web security vendor MX Logic.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about Trust Digital",
-    "answer": "=== Trust Digital ===\nOn May 25, 2010, McAfee announced a definitive agreement to acquire Trust Digital, a privately held online security company that specialized in security for mobile devices.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about On March",
-    "answer": "=== Sentrigo ===\nOn March 23, 2011, McAfee announced its intention to acquire privately owned Sentrigo, a leading provider of database security, including vulnerability management, database activity monitoring, database audit, and virtual patching—which ensure databases are protected without impacting performance or availability.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about On February",
-    "answer": "=== ValidEdge ===\nOn February 26, 2013, McAfee announced it had acquired the ValidEdge sandboxing technology.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about The Next Generation Firewall",
-    "answer": "The Next Generation Firewall business acquired from Stonesoft was divested to Forcepoint in January 2016.",
-    "domain": "security",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about On December",
-    "answer": "=== PasswordBox ===\nOn December 1, 2014, Intel Security announced the acquisition of PasswordBox, a Montreal-based provider of digital identity management solutions.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about CASB",
-    "answer": "=== Skyhigh Networks ===\nIn November 2017, McAfee acquired Skyhigh Networks, a CASB security company.",
-    "domain": "security",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about In March",
-    "answer": "In March 2021, Symphony Technology Group acquired McAfee Enterprise, including Skyhigh Networks.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about STG",
-    "answer": "In January 2022, STG announced that McAfee Enterprise's security service edge (SSE) business would operate as a separate company to be known as Skyhigh Security, built on McAfee Enterprise and Skyhigh Networks.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about Uplevel Security",
-    "answer": "=== Uplevel Security ===\nIn July 2019, Uplevel Security, a data analytics company using graph theory and machine learning, announced it had been acquired by McAfee.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about In November",
-    "answer": "=== SayMine ===\nIn November 2025, McAfee acquired MineOS (also known as SayMine), a data privacy & risk management company, stating that the company's Smart Data Assistant (a tool for individuals to delete data companies hold on them) would be merged into McAfee products.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about SEC",
-    "answer": "=== SEC investigation into share options ===\nIn October 2006, McAfee fired its president Kevin Weiss, and its CEO George Samaneuk resigned under the cloud of a recent SEC investigation which also caused the departure of Kent Roberts, the General Counsel, earlier in the year.",
-    "domain": "internet",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about The University",
-    "answer": "The University of Michigan's medical school reported that 8,000 of its 25,000 computers crashed.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about Rhode Island",
-    "answer": "Some jails canceled visitation, and Rhode Island hospitals turned away non-trauma patients at emergency rooms and postponed some elective surgeries.",
-    "domain": "networking",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about QA",
-    "answer": "As a result of the outage, McAfee implemented additional QA protocols for any releases that directly impacted critical system files.",
-    "domain": "general",
     "source": "wikipedia:McAfee"
   },
   {
@@ -1554,12 +744,6 @@
     "source": "wikipedia:Blacklist (computing)"
   },
   {
-    "question": "What is firewall?",
-    "answer": "A firewall is well-suited for blocking IP addresses, but less so for blocking malicious files or passwords.",
-    "domain": "networking",
-    "source": "wikipedia:Blacklist (computing)"
-  },
-  {
     "question": "What does Example provide?",
     "answer": "Example uses include a company that might prevent a list of software from running on its network, a school that might prevent access to a list of websites from its computers, or a business that wants to ensure their computer users are not choosing easily guessed, poor passwords.",
     "domain": "networking",
@@ -1590,12 +774,6 @@
     "source": "wikipedia:Blacklist (computing)"
   },
   {
-    "question": "What is common web browsing blacklist?",
-    "answer": "A common web browsing blacklist is Google's Safe Browsing, which is installed by default in Firefox, Safari, and Chrome.",
-    "domain": "general",
-    "source": "wikipedia:Blacklist (computing)"
-  },
-  {
     "question": "What is These reserved usernames?",
     "answer": "These reserved usernames are commonly associated with built-in system administration functions.",
     "domain": "intranet",
@@ -1616,18 +794,6 @@
   {
     "question": "What is DNSBL?",
     "answer": "A DNSBL is a common distribution method that leverages the DNS itself.",
-    "domain": "internet",
-    "source": "wikipedia:Blacklist (computing)"
-  },
-  {
-    "question": "Tell me about GET",
-    "answer": "Web-server functions may be used; either simple GET requests may be used or more complicated interfaces such as a RESTful API.",
-    "domain": "internet",
-    "source": "wikipedia:Blacklist (computing)"
-  },
-  {
-    "question": "Tell me about URLs",
-    "answer": "Content-control software such as DansGuardian and SquidGuard may work with a blacklist in order to block URLs of sites deemed inappropriate for a work or educational environment.",
     "domain": "internet",
     "source": "wikipedia:Blacklist (computing)"
   },
@@ -1662,32 +828,14 @@
     "source": "wikipedia:Blacklist (computing)"
   },
   {
-    "question": "What is example?",
-    "answer": "An example is the Bluetack blocklist set.",
-    "domain": "general",
-    "source": "wikipedia:Blacklist (computing)"
-  },
-  {
     "question": "Tell me about George Floyd",
     "answer": "The article hit mainstream in Summer 2020 following the George Floyd protests in America.",
     "domain": "general",
     "source": "wikipedia:Blacklist (computing)"
   },
   {
-    "question": "Tell me about Linux Foundation",
-    "answer": "Linux Foundation said it would use neutral language in kernel code and documentation in the future and avoid terms such as \"blacklist\" and \"slave\" going forward.",
-    "domain": "general",
-    "source": "wikipedia:Blacklist (computing)"
-  },
-  {
     "question": "Tell me about The Twitter Engineering",
     "answer": "The Twitter Engineering team stated its intention to move away from a number of terms, including \"blacklist\" and \"whitelist\".",
-    "domain": "general",
-    "source": "wikipedia:Blacklist (computing)"
-  },
-  {
-    "question": "Tell me about Red Hat",
-    "answer": "Red Hat announced that it would make open source more inclusive and avoid these and other terms.",
     "domain": "general",
     "source": "wikipedia:Blacklist (computing)"
   },
@@ -1818,477 +966,9 @@
     "source": "wikipedia:Mausezahn"
   },
   {
-    "question": "Tell me about Wayback Machine",
-    "answer": "== External links ==\nOriginal website at the Wayback Machine (archived 2017-03-24)\nOfficial/new website.",
-    "domain": "general",
-    "source": "wikipedia:Mausezahn"
-  },
-  {
-    "question": "What is Great Firewall?",
-    "answer": "The Great Firewall (GFW; simplified Chinese: 防火长城; traditional Chinese: 防火長城; pinyin: Fánghuǒ Chángchéng) is the combination of legislative actions and technologies enforced by the People's Republic of China to regulate the Internet domestically. Its role in internet censorship in China is to block access to selected foreign websites and to slow down cross-border internet traffic. The Great Firewall operates by checking transmission control protocol (TCP) packets for keywords or sensitive words.",
-    "domain": "networking",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about GFW",
-    "answer": "The Great Firewall (GFW; simplified Chinese: 防火长城; traditional Chinese: 防火長城; pinyin: Fánghuǒ Chángchéng) is the combination of legislative actions and technologies enforced by the People's Republic of China to regulate the Internet domestically.",
-    "domain": "networking",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "What is Its role in internet censorship in China?",
-    "answer": "Its role in internet censorship in China is to block access to selected foreign websites and to slow down cross-border internet traffic.",
-    "domain": "general",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "What is If one link?",
-    "answer": "If one link is closed, more links from the same machine will be blocked by the Great Firewall.",
-    "domain": "security",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about Google Search",
-    "answer": "Google Search, Facebook, Twitter, Wikipedia, and others) and mobile apps, and requiring foreign companies to adapt to domestic regulations.",
-    "domain": "general",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about Great Firewall",
-    "answer": "Besides censorship, the Great Firewall has also influenced the development of China's internal internet economy by giving preference to domestic companies and reducing the effectiveness of products from foreign internet companies.",
-    "domain": "security",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about SIIO",
-    "answer": "The Great Firewall was formerly operated by the SIIO, as part of the Golden Shield Project.",
-    "domain": "security",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "What is Since 2013, the firewall?",
-    "answer": "Since 2013, the firewall is technically operated by the Cyberspace Administration of China (CAC), which is the entity in charge of translating the Chinese Communist Party's ideology and policy into technical specifications.",
-    "domain": "security",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about SARs",
-    "answer": "As mentioned in the \"one country, two systems\" principle, China's special administrative regions (SARs)—Hong Kong and Macau—are not affected by the firewall, as SARs have their own governmental and legal systems and therefore enjoy a higher degree of autonomy.",
-    "domain": "security",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about State Department",
-    "answer": "State Department has reported that the central government authorities have closely monitored Internet use in these regions, and Hong Kong's National Security Law has been used to block websites documenting anti-government protests.",
-    "domain": "networking",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about Henan Province",
-    "answer": "Provincial governments in parts of China, such as Henan Province, run their own versions of the firewall.",
-    "domain": "security",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "What is term Great Firewall of China?",
-    "answer": "The term Great Firewall of China is a combination of the word firewall with the Great Wall of China.",
-    "domain": "networking",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about CNN",
-    "answer": "A year earlier, a CNN report from Beijing described how Chinese authorities were repurposing firewall technology to filter incoming information, quoting technology consultant Stephen Guerin of Redfish Group as saying they were \"looking at firewall devices, which are originally designed from keeping people out of a network or a computer system\" and \"trying to turn that around and filter out the system coming in.\".",
-    "domain": "networking",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "What is saying?",
-    "answer": "The saying is related to a period of the economic reform of China that became known as the \"socialist market economy\".",
-    "domain": "general",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about Cultural Revolution",
-    "answer": "Superseding the political ideologies of the Cultural Revolution, the reform led China towards a market economy and opened up the market for foreign investors.",
-    "domain": "general",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about CCP",
-    "answer": "Nonetheless, despite the economic freedom, values and political ideas of the Chinese Communist Party (CCP) have had to be protected by \"swatting flies\" of other unwanted ideologies.",
-    "domain": "general",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about The Chinese",
-    "answer": "The Chinese government's control over the Internet began in 1996 when Premier Li Peng signed State Council Order No.",
-    "domain": "general",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about Interim Regulations",
-    "answer": "195, issuing the \"Interim Regulations on the Management of International Networking of Computer Information Networks\".",
-    "domain": "networking",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about The Ministry",
-    "answer": "The Ministry of Public Security took initial steps to control Internet use in 1997, when it issued comprehensive regulations governing its use.",
-    "domain": "general",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "What is Individuals?",
-    "answer": "Individuals are prohibited from using the Internet to: harm national security; disclose state secrets; or injure the interests of the state or society.",
-    "domain": "networking",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "What is Users?",
-    "answer": "Users are prohibited from using the Internet to create, replicate, retrieve, or transmit information that incites resistance to the PRC Constitution, laws, or administrative regulations; promoting the overthrow of the government or socialist system; undermining national unification; distorting the truth, spreading rumors, or destroying social order; or providing sexually suggestive material or encouraging gambling, violence, or murder.",
-    "domain": "networking",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about CDP",
-    "answer": "In 1998, the Chinese Communist Party feared that the China Democracy Party (CDP) would breed a powerful new network that CCP elites might not be able to control.",
-    "domain": "general",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "What is Fang Binxing?",
-    "answer": "Fang Binxing is known for his substantial contribution to China's Internet censorship infrastructure, and has been dubbed \"Father of China's Great Firewall\".",
-    "domain": "security",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about Chinese Internet",
-    "answer": "== Origins of Chinese Internet law ==\nChina's view of the Internet is one of \"Internet sovereignty\": the notion that the Internet inside the country is part of the country's sovereignty and should be governed by the country.",
-    "domain": "general",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about NPC",
-    "answer": "That year, China's sole legislative body – the National People's Congress (NPC) – passed CL97, a law that deals with cyber crimes, which it divided into two broad categories: crimes that target computer networks, and crimes carried out over computer networks.",
-    "domain": "networking",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about Some Chinese",
-    "answer": "Behavior illegal under the latter category includes, among many things, the dissemination of pornographic material, and the usurping of \"state secrets.\"\nSome Chinese judges were critical of CL97, calling it ineffective and unenforceable.",
-    "domain": "networking",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about Chinese Communist Party",
-    "answer": "As a result, the Chinese Communist Party has ended up relying heavily on state regulation to carry out CL97.",
-    "domain": "general",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about ISP",
-    "answer": "The latter definition of online activities punishable under CL97, or \"crimes carried out over computer networks\", is used as justification for the Great Firewall, and can be cited when the government blocks any ISP, gateway connections, or any access to anything on the internet.",
-    "domain": "networking",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about State Council",
-    "answer": "The definition also includes using the internet to distribute information considered \"harmful to national security,\" and using the internet to distribute information considered \"harmful to public order, social stability, and Chinese morality.\" The central government relies heavily on its State Council regulators to determine what specific online behavior and speech fall under these definitions.",
-    "domain": "networking",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "What is Social control: the Internet?",
-    "answer": "Social control: the Internet is a means for freedom of speech, and dissemination of campaigns could lead to protests against the government.",
-    "domain": "networking",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "What is Economic protectionism: China prefers the use of local companies that?",
-    "answer": "Economic protectionism: China prefers the use of local companies that are regulated by Chinese regulations, since they have more power over them, e.g.",
-    "domain": "general",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "What is project was completed in 2006, and?",
-    "answer": "The project was completed in 2006, and is now carried out in buildings with machines operated by civilians and supervised by China's national police force, the Public Security Bureau (PSB, Chinese: 公安局).",
-    "domain": "networking",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about Golden Shield Project",
-    "answer": "The main operating procedures of the gatekeepers at the Golden Shield Project include monitoring domestic websites, email, and searching for politically sensitive language and calls to protest.",
-    "domain": "general",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "What is When damaging content?",
-    "answer": "When damaging content is found, local PSB officials can be dispatched to investigate or make arrests.",
-    "domain": "internet",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "What is Minors (in China, those under the age of 18)?",
-    "answer": "Minors (in China, those under the age of 18) are not allowed into Internet cafés, although this law is widely ignored, and when enforced, has spurred the creation of underground \"Black Web Bars\" visited by those underage.",
-    "domain": "general",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about PSB",
-    "answer": "These records may be confiscated by either local government officials or the PSB.",
-    "domain": "general",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "What is Crandall and others argued that the main purpose?",
-    "answer": "Crandall and others argued that the main purpose is not to block 100%, but rather to flag and to warn, in order to encourage self-censorship.",
-    "domain": "general",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about CAC",
-    "answer": "=== Active probing ===\nIn addition to previously discussed techniques, the CAC is also using active probing in order to identify and block network services that would help escaping the firewall.",
-    "domain": "security",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "What is For example, shortly after a VPN request?",
-    "answer": "For example, shortly after a VPN request is issued by a legitimate Chinese VPN client and passes outbound though the Great Firewall to a hidden VPN IP, the Great Firewall may detect the activity and issue its own active probe to verify the nature of the previously unknown VPN IP and, if the probe confirms the IP is part of a blacklisted VPN, blacklist the IP.",
-    "domain": "security",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "What is strategy to resist this attack?",
-    "answer": "The strategy to resist this attack is to limit the quantity of proxy IPs revealed to each user and making it very difficult for users to create more than one identity.",
-    "domain": "security",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "What is Dynamic IPs?",
-    "answer": "Dynamic IPs are quite effective to flush out from blacklists.",
-    "domain": "security",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about Chinese State Council",
-    "answer": "=== Goal of the Firewall ===\nArticle 15 of a 20 September 2000 document from the Chinese State Council, posted by the Xinhua News Agency, lists 9 categories of information which should be censored, blocked, or filtered from access to the citizens using the internet within China:.",
-    "domain": "security",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "What is Opposing the basic principles as they?",
-    "answer": "Opposing the basic principles as they are confirmed in the Constitution.",
-    "domain": "networking",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "What is Much of this information?",
-    "answer": "Much of this information is related to sensitive topics.",
-    "domain": "general",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "What is Great Firewall's goal?",
-    "answer": "The Great Firewall's goal is perceived by the Chinese Communist Party as helping to protect the Chinese population by preventing users from accessing these foreign websites which, in their opinion, host content which would be 'spiritual pollution', as well as information about these sensitive topics.",
-    "domain": "security",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about Xi Jinping",
-    "answer": "Names of paramount leaders, such as Xi Jinping and Deng Xiaoping\nPolitical movements and protests\nFalun Gong and other spiritual groups\nThe 1989 Tiananmen Square protests and massacre\nThe Xinjiang internment camps\nDiscussions of Tibetan Independence\nA 2020 study found that the Great Firewall blocks approximately 311,000 domains.",
-    "domain": "security",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about The Cybersecurity Law",
-    "answer": "=== Impact on people in China ===\nThe Cybersecurity Law behind the firewall is targeted at helping increase internet user privacy, increase protections on personal data, and making companies more responsible for monitoring bad actors, in hopes to make the Internet a safer place for Chinese citizens.",
-    "domain": "security",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about PEN",
-    "answer": "A study by PEN America claimed that \"Some of the government's most rights-abusive laws are aimed at criminalizing free speech that — in the eyes of the government — encourages subversion, separatism, or rejection of the State’s authority.\"\nCensorship of sensitive topics in China has also been easier for the government because of the firewall and its filtering.",
-    "domain": "security",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about Yaqiu Wang",
-    "answer": "According to Yaqiu Wang, a prominent human rights researcher, there was a time in China where the internet provided a method for Chinese citizens to learn about the sensitive topics the government had censored in the news, through access to international news reports and media coverage.",
-    "domain": "networking",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about The Great Firewall",
-    "answer": "=== Economic impacts ===\nThe Great Firewall has also allowed China to develop its own major internet services, such as Tencent, Alibaba, Baidu, Renren, Youku, and Weibo.",
-    "domain": "security",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about Tencent Video",
-    "answer": "China has its own version of many foreign web properties, for example: Bilibili and Tencent Video (YouTube), Weibo (Twitter), Moments and Qzone (Facebook), WeChat (WhatsApp), Ctrip (Orbitz and others), Zhihu (Quora), and Xiaohongshu (Instagram).",
-    "domain": "general",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about VPNs",
-    "answer": "The firewall itself has caused much frustration amongst both individuals and internationally operating companies in China, many of whom have turned to VPNs, speaking in codes, and other methods to retain their access to the international internet.",
-    "domain": "security",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "What is Bypassing the firewall?",
-    "answer": "Bypassing the firewall is known as fānqiáng (翻墙, \"climb over the wall\"), and most circumvention tools combine these two mechanisms:.",
-    "domain": "security",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "What is Freegate, Ultrasurf, Psiphon, and Lantern?",
-    "answer": "Freegate, Ultrasurf, Psiphon, and Lantern are free programs designed and experienced with circumventing the China firewall using multiple open proxies.",
-    "domain": "security",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "What is VPNs (virtual private networks)?",
-    "answer": "VPNs (virtual private networks) are one of the most popular tools used by foreigners for bypassing censorship technologies.",
-    "domain": "security",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "What is Since 2010, almost all bridges at TorProject.org?",
-    "answer": "Since 2010, almost all bridges at TorProject.org are blocked through proxy distribution.",
-    "domain": "intranet",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "What is I2P or garlic routing?",
-    "answer": "I2P or garlic routing is useful when properties similar to Tor's anonymity are needed.",
-    "domain": "networking",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about TTL",
-    "answer": "Distinguishing them by the TTL value (time to live), and not routing any further packets to sites that have triggered blocking behavior.",
-    "domain": "networking",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about The Open",
-    "answer": "=== Known blocked methods ===\nThe OpenVPN protocol is detected and blocked.",
-    "domain": "security",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "What is Connections not using symmetric keys or using \"tls-auth\"?",
-    "answer": "Connections not using symmetric keys or using \"tls-auth\" are blocked at handshake, and connections using the new \"tls-crypt\" option are detected and throttled (under 56 kbit/s) by the QoS filtering system.",
-    "domain": "wifi_policy",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about GRE",
-    "answer": "GRE tunnels and protocols that use GRE (e.g., PPTP) are blocked.",
-    "domain": "general",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "What is If a VPN?",
-    "answer": "If a VPN is used to commit illegal activities and is provided to aid and abet the criminal activity, then the VPN provision can fall under aiding and abetting a crime.",
-    "domain": "security",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about DIT",
-    "answer": "No damage to DIT services were reported despite what amounts to an accidental DDoS.",
-    "domain": "security",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about Exporting Great Firewall",
-    "answer": "=== Exporting Great Firewall technology ===\nReporters Without Borders suspects that countries such as Cuba, Iran, Vietnam, Zimbabwe, and Belarus have obtained surveillance technology from China, although the censorship in these countries is less stringent than in China.",
-    "domain": "security",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about Russian Roskomnadzor",
-    "answer": "Since at least 2015, the Russian Roskomnadzor agency collaborates with Chinese Great Firewall security officials in implementing its data retention and filtering infrastructure.",
-    "domain": "security",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about Vladimir Putin",
-    "answer": "During his visit to Beijing in June 2016, Vladimir Putin signed a joint communiqué with Xi Jinping on information space, followed by Russia's National Forum for Information Security in October hosted by Fang Binxing, the architect of the Chinese Great Firewall.",
-    "domain": "networking",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about Chinese Great Firewall",
-    "answer": "Especially since the 2022 Russian invasion of Ukraine, in order to enforce the war censorship law, Russian authorities were making an internet surveillance system akin to Chinese Great Firewall.",
-    "domain": "security",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about The Digital Silk Road",
-    "answer": "The Digital Silk Road of the Belt and Road Initiative has also been used to export Great Firewall technology to several other countries.",
-    "domain": "security",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
     "question": "Tell me about In September",
     "answer": "In September 2025, leaked documents from Geedge Networks—a Chinese company backed by Fang Binxing—revealed that China had exported its Great Firewall surveillance technology to Kazakhstan, Ethiopia, Pakistan, and Myanmar.",
     "domain": "security",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "What is If like-minded countries?",
-    "answer": "If like-minded countries are successful in imposing the same restrictions on their inhabitants and globalized online companies, then the free global exchange of information could cease to exist.",
-    "domain": "networking",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about USTR",
-    "answer": "The United States Trade Representative's (USTR) \"National Trade Estimate Report\" in 2016 referred the China's digital Great Firewall: \"China's filtering of cross-border Internet traffic has posed a significant burden to foreign suppliers.\" Claude Barfield, the American Enterprise Institute's expert of International trade, suggested that the U.S.",
-    "domain": "networking",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about World Trade Organization",
-    "answer": "government should bring a case against the Firewall, a huge trade barrier, in the World Trade Organization in January 2017.",
-    "domain": "security",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "What is According to Stephen Rosen, the GFW?",
-    "answer": "According to Stephen Rosen, the GFW is reflective of the Chinese government's fear of civil disobedience or rebellion among the Chinese population against the Chinese Communist Party's rule:.",
-    "domain": "general",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "What is If you want to know what people?",
-    "answer": "If you want to know what people are worried about look at what they spend their money on.",
-    "domain": "general",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "What is What?",
-    "answer": "What are the Chinese spending their money on?.",
-    "domain": "general",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about Armed Police",
-    "answer": "We’re told from Chinese figures they’re spending on the People's Armed Police, the internal security force is about as big as they’re spending on the regular military.",
-    "domain": "general",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "What is That’s because this?",
-    "answer": "That’s because this is a regime which is fundamentally afraid of its own people.",
-    "domain": "general",
-    "source": "wikipedia:Great Firewall"
-  },
-  {
-    "question": "Tell me about When China Rules",
-    "answer": "\"When China Rules the Web: Technology in Service of the State\".",
-    "domain": "general",
     "source": "wikipedia:Great Firewall"
   },
   {
@@ -2301,12 +981,6 @@
     "question": "What is next-generation firewall (NGFW)?",
     "answer": "A next-generation firewall (NGFW) is a part of the third generation of firewall technology, combining a conventional firewall with other network device filtering functions, such as an application firewall using in-line deep packet inspection (DPI) and an intrusion prevention system (IPS).",
     "domain": "security",
-    "source": "wikipedia:Next-generation firewall"
-  },
-  {
-    "question": "Tell me about NGFW",
-    "answer": "== History ==\nOne of the first mentions of the NGFW term was in a 2004 document by Gartner.",
-    "domain": "general",
     "source": "wikipedia:Next-generation firewall"
   },
   {
@@ -2370,12 +1044,6 @@
     "source": "wikipedia:Dual-homed"
   },
   {
-    "question": "What is Traffic?",
-    "answer": "Traffic is quickly rerouted to the backup connection in the event of link failure.",
-    "domain": "general",
-    "source": "wikipedia:Dual-homed"
-  },
-  {
     "question": "What is Multihoming?",
     "answer": "Multihoming is a more general category, referring to a device having more than one network connection.",
     "domain": "general",
@@ -2402,12 +1070,6 @@
   {
     "question": "Tell me about Zero Hour",
     "answer": "A sequel to Firewall: Zero Hour (2018), it was released on August 24, 2023 for the PlayStation VR2 virtual reality device.",
-    "domain": "security",
-    "source": "wikipedia:Firewall Ultra"
-  },
-  {
-    "question": "Tell me about VR",
-    "answer": "== Gameplay ==\nFirewall Ultra is a VR first-person shooter developed for PlayStation VR2.",
     "domain": "security",
     "source": "wikipedia:Firewall Ultra"
   },
@@ -2448,114 +1110,6 @@
     "source": "wikipedia:Firewall Ultra"
   },
   {
-    "question": "What is Application firewall?",
-    "answer": "An application firewall is a form of firewall that controls input/output or system calls of an application or service. It operates by monitoring and blocking communications based on a configured policy, generally with predefined rule sets to choose from. The two primary categories of application firewalls are network-based and host-based.",
-    "domain": "security",
-    "source": "wikipedia:Application firewall"
-  },
-  {
-    "question": "What is two primary categories of application firewalls?",
-    "answer": "The two primary categories of application firewalls are network-based and host-based.",
-    "domain": "security",
-    "source": "wikipedia:Application firewall"
-  },
-  {
-    "question": "Tell me about Marcus Ranum",
-    "answer": "Marcus Ranum's work, based on the firewall created by Paul Vixie, Brian Reid, and Jeff Mogul, spearheaded the creation of the first commercial product.",
-    "domain": "security",
-    "source": "wikipedia:Application firewall"
-  },
-  {
-    "question": "Tell me about DARPA",
-    "answer": "Under a broader DARPA contract at TIS, Marcus Ranum, Wei Xu, and Peter Churchyard developed the Firewall Toolkit (FWTK) and made it freely available under license in October 1993.",
-    "domain": "networking",
-    "source": "wikipedia:Application firewall"
-  },
-  {
-    "question": "Tell me about NAI",
-    "answer": "Gauntlet firewall was rated one of the top application firewalls from 1995 until 1998, the year it was acquired by Network Associates Inc, (NAI).",
-    "domain": "security",
-    "source": "wikipedia:Application firewall"
-  },
-  {
-    "question": "Tell me about Network Associates",
-    "answer": "Network Associates continued to claim that Gauntlet was the \"worlds most secure firewall\" but in May 2000, security researcher Jim Stickley discovered a large vulnerability in the firewall, allowing remote access to the operating system and bypassing the security controls.",
-    "domain": "security",
-    "source": "wikipedia:Application firewall"
-  },
-  {
-    "question": "What is This gives more granularity and control, but?",
-    "answer": "This gives more granularity and control, but is limited to only protecting the host it is running on.",
-    "domain": "general",
-    "source": "wikipedia:Application firewall"
-  },
-  {
-    "question": "What is Control?",
-    "answer": "Control is applied by filtering on a per process basis.",
-    "domain": "general",
-    "source": "wikipedia:Application firewall"
-  },
-  {
-    "question": "What is Generally, prompts?",
-    "answer": "Generally, prompts are used to define rules for processes that have not yet received a connection.",
-    "domain": "general",
-    "source": "wikipedia:Application firewall"
-  },
-  {
-    "question": "What is Many host-based application firewalls?",
-    "answer": "Many host-based application firewalls are combined or used in conjunction with a packet filter.",
-    "domain": "security",
-    "source": "wikipedia:Application firewall"
-  },
-  {
-    "question": "What is Due to technological limitations, modern solutions such as  sandboxing?",
-    "answer": "Due to technological limitations, modern solutions such as  sandboxing are being used as a replacement of host-based application firewalls to protect system processes.",
-    "domain": "security",
-    "source": "wikipedia:Application firewall"
-  },
-  {
-    "question": "Tell me about OS",
-    "answer": "=== Mac OS X ===\nStarting with Mac OS X Leopard, an implementation of the TrustedBSD MAC framework (taken from FreeBSD), was included.",
-    "domain": "general",
-    "source": "wikipedia:Application firewall"
-  },
-  {
-    "question": "What is TrustedBSD MAC framework?",
-    "answer": "The TrustedBSD MAC framework is used to sandbox services and provides a firewall layer, given the configuration of the sharing services in Mac OS X Leopard and Snow Leopard.",
-    "domain": "security",
-    "source": "wikipedia:Application firewall"
-  },
-  {
-    "question": "What is ModSecurity?",
-    "answer": "ModSecurity is designed to work with the Web servers IIS, Apache2 and NGINX.",
-    "domain": "internet",
-    "source": "wikipedia:Application firewall"
-  },
-  {
-    "question": "Tell me about Minimal Firewall\nMicrosoft Defender Firewall\nPortmaster\nSimplewall\nTinywall\nWin",
-    "answer": "=== Windows ===\nMinimal Firewall\nMicrosoft Defender Firewall\nPortmaster\nSimplewall\nTinywall\nWinGate.",
-    "domain": "security",
-    "source": "wikipedia:Application firewall"
-  },
-  {
-    "question": "Tell me about SRX",
-    "answer": "Cisco Firepower Threat Defense\nCheck Point\nFortinet FortiGate Series\nJuniper Networks SRX Series\nPalo Alto Networks\nSonicWALL TZ/NSA/SuperMassive Series.",
-    "domain": "general",
-    "source": "wikipedia:Application firewall"
-  },
-  {
-    "question": "Tell me about ADC",
-    "answer": "A10 Networks Web Application Firewall\nBarracuda Networks Web Application Firewall/Load Balancer ADC\nCitrix NetScaler\nF5 Networks BIG-IP Application Security Manager\nFortinet FortiWeb Series\nKEMP Technologies\nImperva.",
-    "domain": "security",
-    "source": "wikipedia:Application firewall"
-  },
-  {
-    "question": "Tell me about Web Application Firewall",
-    "answer": "== External links ==\nWeb Application Firewall, Open Web Application Security Project\nWeb Application Firewall Evaluation Criteria, from the Web Application Security Consortium\nSafety in the cloud(s): 'Vaporizing' the Web application firewall to secure cloud computing.",
-    "domain": "security",
-    "source": "wikipedia:Application firewall"
-  },
-  {
     "question": "What is Web application firewall?",
     "answer": "A Web application firewall (WAF) is a specific form of application firewall that filters, monitors, and blocks HTTP traffic to and from a web service. By inspecting HTTP traffic, it can prevent attacks exploiting a Web application's known vulnerabilities, such as SQL injection, cross-site scripting (XSS), file inclusion, and improper system configuration.",
     "domain": "security",
@@ -2588,12 +1142,6 @@
   {
     "question": "Tell me about OWASP",
     "answer": "In 2003, they expanded and standardized rules through the Open Web Application Security Project’s (OWASP) Top 10 List, an annual ranking for Web security vulnerabilities.",
-    "domain": "general",
-    "source": "wikipedia:Web application firewall"
-  },
-  {
-    "question": "Tell me about CISO",
-    "answer": "According to CISO Magazine, the WAF market was expected to grow to $5.48 billion by 2022.",
     "domain": "general",
     "source": "wikipedia:Web application firewall"
   },
@@ -2652,20 +1200,8 @@
     "source": "wikipedia:Web application firewall"
   },
   {
-    "question": "Tell me about SSL",
-    "answer": "== JA3 fingerprint ==\nJA3, developed by Salesforce in 2017, is a technique for generating a unique fingerprint for SSL/TLS traffic based on specific fields in the handshake, such as the version, cipher suites, and extensions used by the client.",
-    "domain": "security",
-    "source": "wikipedia:Web application firewall"
-  },
-  {
     "question": "What does This fingerprint provide?",
     "answer": "This fingerprint enables the identification and tracking of clients based on the characteristics of their encrypted traffic.",
-    "domain": "general",
-    "source": "wikipedia:Web application firewall"
-  },
-  {
-    "question": "Tell me about AWS",
-    "answer": "In September 2023, AWS WAF announced built-in support for JA3, enabling customers to inspect the JA3 fingerprints of incoming requests.",
     "domain": "general",
     "source": "wikipedia:Web application firewall"
   },
@@ -2682,12 +1218,6 @@
     "source": "wikipedia:List of router and firewall distributions"
   },
   {
-    "question": "What is Virtual firewall?",
-    "answer": "A virtual firewall (VF) is a network firewall service or appliance running entirely within a virtualized environment and which provides the usual packet filtering and monitoring provided via a physical network firewall.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual firewall"
-  },
-  {
     "question": "What is virtual firewall (VF)?",
     "answer": "A virtual firewall (VF) is a network firewall service or appliance running entirely within a virtualized environment and which provides the usual packet filtering and monitoring provided via a physical network firewall.",
     "domain": "security",
@@ -2696,12 +1226,6 @@
   {
     "question": "Tell me about VF",
     "answer": "The VF can be realized as a traditional software firewall on a guest virtual machine already running, a purpose-built virtual security appliance designed with virtual network security in mind, a virtual switch with additional security capabilities, or a managed kernel process running within the host hypervisor.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual firewall"
-  },
-  {
-    "question": "Tell me about VM",
-    "answer": "Since about 1998 there has been an explosive increase in the use of virtual machines (VM) in addition to — sometimes instead of — physical machines to offer many kinds of computer and communications services on local area networks and over the broader Internet.",
     "domain": "networking",
     "source": "wikipedia:Virtual firewall"
   },
@@ -2744,24 +1268,6 @@
   {
     "question": "What does Inappropriate provide?",
     "answer": "Inappropriate uses of virtual network resources and bandwidth consumption VM-to-VM are difficult to discover or rectify.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual firewall"
-  },
-  {
-    "question": "Tell me about VMs",
-    "answer": "VMs can be deliberately (or unexpectedly) migrated between trusted and untrusted virtualized environments where migration is enabled.",
-    "domain": "general",
-    "source": "wikipedia:Virtual firewall"
-  },
-  {
-    "question": "Tell me about IT",
-    "answer": "Many companies use their purchasing or IT departments as the IT security lead agency, applying security measures at the time a physical machine is taken from the box and initialized.",
-    "domain": "general",
-    "source": "wikipedia:Virtual firewall"
-  },
-  {
-    "question": "Tell me about VLAN",
-    "answer": "The VLAN traffic could be monitored and filtered by the physical firewall and then passed back into the virtual network (if deemed legitimate for that purpose) and on to the target virtual machine.",
     "domain": "networking",
     "source": "wikipedia:Virtual firewall"
   },
@@ -2832,12 +1338,6 @@
     "source": "wikipedia:Windows Firewall"
   },
   {
-    "question": "Tell me about XP",
-    "answer": "It was first included in Windows XP x86 SP2, Windows XP x64, and Windows Server 2003 SP1.",
-    "domain": "general",
-    "source": "wikipedia:Windows Firewall"
-  },
-  {
     "question": "Tell me about RPC",
     "answer": "In mid-2003, the Blaster worm attacked a large number of Windows machines, taking advantage of flaws in the RPC Windows service.[1] Several months later, the Sasser worm did something similar.",
     "domain": "general",
@@ -2859,12 +1359,6 @@
     "question": "What is Private assumes that the network?",
     "answer": "Private assumes that the network is isolated from the Internet and allows more inbound connections than public.",
     "domain": "general",
-    "source": "wikipedia:Windows Firewall"
-  },
-  {
-    "question": "What is network?",
-    "answer": "A network is never assumed to be private unless designated as such by a local administrator.",
-    "domain": "networking",
     "source": "wikipedia:Windows Firewall"
   },
   {
@@ -2910,12 +1404,6 @@
     "source": "wikipedia:Windows Firewall"
   },
   {
-    "question": "Tell me about Group Policy",
-    "answer": "A number of additions were made to Group Policy, so that Windows system administrators could configure the Windows Firewall product on a company-wide level.",
-    "domain": "security",
-    "source": "wikipedia:Windows Firewall"
-  },
-  {
     "question": "What is XP's Windows Firewall cannot block outbound connections; it?",
     "answer": "XP's Windows Firewall cannot block outbound connections; it is only capable of blocking inbound ones.",
     "domain": "security",
@@ -2952,26 +1440,8 @@
     "source": "wikipedia:Windows Firewall"
   },
   {
-    "question": "What is IPsec?",
-    "answer": "IPsec is fully integrated, allowing connections to be allowed or denied based on security certificates, Kerberos authentication, etc.",
-    "domain": "security",
-    "source": "wikipedia:Windows Firewall"
-  },
-  {
     "question": "What is Ability to have three separate firewall profiles for when computers?",
     "answer": "Ability to have three separate firewall profiles for when computers are domain-joined, connected to a private network, or connected to a public network (XP SP2 supports two profiles—domain-joined and standard).",
-    "domain": "security",
-    "source": "wikipedia:Windows Firewall"
-  },
-  {
-    "question": "Tell me about Windows Server",
-    "answer": "=== Windows Server 2008 and Windows 7 ===\nWindows Server 2008 contains the same firewall as Windows Vista.",
-    "domain": "security",
-    "source": "wikipedia:Windows Firewall"
-  },
-  {
-    "question": "Tell me about Windows Defender Firewall",
-    "answer": "The change of name to Windows Defender Firewall that occurred in the September 2017 update, known as the Fall Creators Update (codename Redstone 3).",
     "domain": "security",
     "source": "wikipedia:Windows Firewall"
   },
@@ -2982,20 +1452,8 @@
     "source": "wikipedia:Windows Firewall"
   },
   {
-    "question": "Tell me about Microsoft Windows",
-    "answer": "== See also ==\nList of Microsoft Windows components\nSecurity and safety features new to Windows Vista\nPersonal firewall.",
-    "domain": "security",
-    "source": "wikipedia:Windows Firewall"
-  },
-  {
     "question": "What is Host-based intrusion detection system?",
     "answer": "A host-based intrusion detection system (HIDS) is an intrusion detection system that is capable of monitoring and analyzing the internals of a computing system as well as the network packets on its network interfaces, similar to the way a network-based intrusion detection system (NIDS) operates. HIDS focuses on more granular and internal attacks through focusing monitoring host activities instead of overall network traffic.",
-    "domain": "security",
-    "source": "wikipedia:Host-based intrusion detection system"
-  },
-  {
-    "question": "What is host-based intrusion detection system (HIDS)?",
-    "answer": "A host-based intrusion detection system (HIDS) is an intrusion detection system that is capable of monitoring and analyzing the internals of a computing system as well as the network packets on its network interfaces, similar to the way a network-based intrusion detection system (NIDS) operates.",
     "domain": "security",
     "source": "wikipedia:Host-based intrusion detection system"
   },
@@ -3060,12 +1518,6 @@
     "source": "wikipedia:Anomaly-based intrusion detection system"
   },
   {
-    "question": "What is Another method?",
-    "answer": "Another method is to define what normal usage of the system comprises using a strict mathematical model, and flag any deviation from this as an attack.",
-    "domain": "general",
-    "source": "wikipedia:Anomaly-based intrusion detection system"
-  },
-  {
     "question": "Tell me about Artificial Immune System",
     "answer": "Other techniques used to detect anomalies include data mining methods, grammar based methods, and Artificial Immune System.",
     "domain": "general",
@@ -3102,12 +1554,6 @@
     "source": "wikipedia:Perimeter intrusion detection"
   },
   {
-    "question": "Tell me about PIDS",
-    "answer": "== Types of PIDS ==\nA wide range of intrusion detection technologies exist in the current marketplace.",
-    "domain": "security",
-    "source": "wikipedia:Perimeter intrusion detection"
-  },
-  {
     "question": "Tell me about IR",
     "answer": "Active IR\nBreak wire\nElectrostatic field\nFence detection (typically a fiber optic, microphonic cable or accelerometer-based sensor mounted on the fence)\nGround motion\nMagnetic\nMicrowave detectors\nNear-IR beam break\nPassive IR\nPorted coaxial cable\nTaut wire\nSeismic.",
     "domain": "general",
@@ -3122,12 +1568,6 @@
   {
     "question": "What is In computing, a wireless intrusion prevention system (WIPS)?",
     "answer": "In computing, a wireless intrusion prevention system (WIPS) is a network device that monitors the radio spectrum for the presence of unauthorized access points (intrusion detection), and can automatically take countermeasures (intrusion prevention).",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless intrusion prevention system"
-  },
-  {
-    "question": "What is These systems?",
-    "answer": "These systems are typically implemented as an overlay to an existing Wireless LAN infrastructure, although they may be deployed standalone to enforce no-wireless policies within an organization.",
     "domain": "wifi",
     "source": "wikipedia:Wireless intrusion prevention system"
   },
@@ -3150,20 +1590,8 @@
     "source": "wikipedia:Wireless intrusion prevention system"
   },
   {
-    "question": "Tell me about MAC",
-    "answer": "Rogue devices can spoof MAC address of an authorized network device as their own.",
-    "domain": "networking",
-    "source": "wikipedia:Wireless intrusion prevention system"
-  },
-  {
     "question": "What does New research provide?",
     "answer": "New research uses fingerprinting approach to weed out devices with spoofed MAC addresses.",
-    "domain": "networking",
-    "source": "wikipedia:Wireless intrusion prevention system"
-  },
-  {
-    "question": "What is idea?",
-    "answer": "The idea is to compare the unique signatures exhibited by the signals emitted by each wireless device against the known signatures of pre-authorized, known wireless devices.",
     "domain": "networking",
     "source": "wikipedia:Wireless intrusion prevention system"
   },
@@ -3176,12 +1604,6 @@
   {
     "question": "What is administrator of the WIPS?",
     "answer": "The administrator of the WIPS is then notified of the threat, or, if a policy has been set accordingly, the WIPS takes automatic protection measures.",
-    "domain": "wifi_security",
-    "source": "wikipedia:Wireless intrusion prevention system"
-  },
-  {
-    "question": "What is WIPS?",
-    "answer": "WIPS is configured as either a network implementation or a hosted implementation.",
     "domain": "wifi_security",
     "source": "wikipedia:Wireless intrusion prevention system"
   },
@@ -3219,24 +1641,6 @@
     "question": "What is Intrusion detection system evasion techniques?",
     "answer": "Intrusion detection system evasion techniques are modifications made to attacks in order to prevent detection by an intrusion detection system (IDS). Almost all published evasion techniques modify network attacks. The 1998 paper Insertion, Evasion, and Denial of Service: Eluding Network Intrusion Detection popularized IDS evasion, and discussed both evasion techniques and areas where the correct interpretation was ambiguous depending on the targeted computer system.",
     "domain": "networking",
-    "source": "wikipedia:Intrusion detection system evasion techniques"
-  },
-  {
-    "question": "Tell me about URL",
-    "answer": "For example, the string \"cgi-bin\" in a URL can be encoded as \"%63%67%69%2d%62%69%6e\" (i.e., in hexadecimal).",
-    "domain": "internet",
-    "source": "wikipedia:Intrusion detection system evasion techniques"
-  },
-  {
-    "question": "Tell me about HTTPS",
-    "answer": "Attacks on encrypted protocols such as HTTPS cannot be read by an IDS unless the IDS has a copy of the private key used by the server to encrypt the communication.",
-    "domain": "internet",
-    "source": "wikipedia:Intrusion detection system evasion techniques"
-  },
-  {
-    "question": "Tell me about XOR",
-    "answer": "This technique typically involves encoding the payload in some fashion (e.g., XOR-ing each byte with 0x95), then placing a decoder in front of the payload before sending it.",
-    "domain": "general",
     "source": "wikipedia:Intrusion detection system evasion techniques"
   },
   {
@@ -3342,12 +1746,6 @@
     "source": "wikipedia:Snort (software)"
   },
   {
-    "question": "What is Host-based intrusion detection system comparison?",
-    "answer": "Comparison of host-based intrusion detection system components and systems.",
-    "domain": "general",
-    "source": "wikipedia:Host-based intrusion detection system comparison"
-  },
-  {
     "question": "What is Intrusion Detection Message Exchange Format?",
     "answer": "Used as part of computer security, IDMEF (Intrusion Detection Message Exchange Format) is a data format used to exchange information between software enabling intrusion detection, intrusion prevention, security information collection and management systems that may need to interact with them.\nIDMEF messages are designed to be processed automatically. The details of the format are described in the RFC 4765. This RFC presents an implementation of the XML data model and the associated DTD.",
     "domain": "intranet",
@@ -3372,27 +1770,9 @@
     "source": "wikipedia:Intrusion Detection Message Exchange Format"
   },
   {
-    "question": "Tell me about RFC",
-    "answer": "This RFC presents an implementation of the XML data model and the associated DTD.",
-    "domain": "intranet",
-    "source": "wikipedia:Intrusion Detection Message Exchange Format"
-  },
-  {
     "question": "What is requirements for this format?",
     "answer": "The requirements for this format are described in RFC 4766, and the recommended transport protocol (IDXP) is documented in RFC 4767.",
     "domain": "general",
-    "source": "wikipedia:Intrusion Detection Message Exchange Format"
-  },
-  {
-    "question": "Tell me about IETF",
-    "answer": "== IDMEFv2 ==\nAn update of the IDMEFv1 format is being specified as an Internet Draft at IETF since 2022.",
-    "domain": "general",
-    "source": "wikipedia:Intrusion Detection Message Exchange Format"
-  },
-  {
-    "question": "What is This new version?",
-    "answer": "This new version is extended to all type of incidents, cyber, physical and natural hazards.",
-    "domain": "networking",
     "source": "wikipedia:Intrusion Detection Message Exchange Format"
   },
   {
@@ -3462,54 +1842,6 @@
     "source": "wikipedia:Intrusion Detection Message Exchange Format"
   },
   {
-    "question": "What is Data loss prevention software?",
-    "answer": "Data loss prevention (DLP) software detects the unauthorized transmission or disclosure of sensitive data and prevents their occurrence, including data in motion (across networks), at rest (in storage), or in use (on endpoints). DLP systems have traditionally relied upon a variety of classification and enforcement mechanisms to reduce the risk of data leakage but increasingly incorporate machine learning and behavioral analytics to enhance detection accuracy.",
-    "domain": "networking",
-    "source": "wikipedia:Data loss prevention software"
-  },
-  {
-    "question": "Tell me about DLP",
-    "answer": "Data loss prevention (DLP) software detects the unauthorized transmission or disclosure of sensitive data and prevents their occurrence, including data in motion (across networks), at rest (in storage), or in use (on endpoints).",
-    "domain": "security",
-    "source": "wikipedia:Data loss prevention software"
-  },
-  {
-    "question": "What is range of environments in which DLP?",
-    "answer": "The range of environments in which DLP is used today has widened to include on-premises systems, cloud applications, and hybrid environments.",
-    "domain": "security",
-    "source": "wikipedia:Data loss prevention software"
-  },
-  {
-    "question": "What is terms \"data loss\" and \"data leak\"?",
-    "answer": "The terms \"data loss\" and \"data leak\" are related and are often used interchangeably.",
-    "domain": "general",
-    "source": "wikipedia:Data loss prevention software"
-  },
-  {
-    "question": "What is However, a data leak?",
-    "answer": "However, a data leak is possible without losing the data on the originating side.",
-    "domain": "networking",
-    "source": "wikipedia:Data loss prevention software"
-  },
-  {
-    "question": "Tell me about ILDP",
-    "answer": "Other terms associated with data leakage prevention include information leak detection and prevention (ILDP), information leak prevention (ILP), content monitoring and filtering (CMF), information protection and control (IPC) and extrusion prevention system (EPS), as opposed to an intrusion prevention system.",
-    "domain": "intranet",
-    "source": "wikipedia:Data loss prevention software"
-  },
-  {
-    "question": "What does Cloud computing provide?",
-    "answer": "Cloud computing provides on-demand network access to shared computing resources, enabling scalable and flexible data protection strategies.",
-    "domain": "internet",
-    "source": "wikipedia:Data loss prevention software"
-  },
-  {
-    "question": "What is Policies that?",
-    "answer": "Policies that are too broad tend to generate alerts that require manual review which may overwhelm security teams and reduce the overall effectiveness of DLP software.",
-    "domain": "security",
-    "source": "wikipedia:Data loss prevention software"
-  },
-  {
     "question": "What is Fail2ban?",
     "answer": "Fail2Ban is an intrusion prevention software framework. Written in the Python programming language, it is designed to prevent brute-force attacks. It is able to run on POSIX systems that have an interface to a packet-control system or firewall installed locally, such as iptables or TCP Wrapper.",
     "domain": "networking",
@@ -3519,12 +1851,6 @@
     "question": "What is Written in the Python programming language, it?",
     "answer": "Written in the Python programming language, it is designed to prevent brute-force attacks.",
     "domain": "general",
-    "source": "wikipedia:Fail2ban"
-  },
-  {
-    "question": "Tell me about POSIX",
-    "answer": "It is able to run on POSIX systems that have an interface to a packet-control system or firewall installed locally, such as iptables or TCP Wrapper.",
-    "domain": "networking",
     "source": "wikipedia:Fail2ban"
   },
   {
@@ -3570,12 +1896,6 @@
     "source": "wikipedia:Fail2ban"
   },
   {
-    "question": "Tell me about APIs",
-    "answer": "== Integrations ==\nFail2Ban can be integrated with many APIs, including blocklist.de and AbuseIPDB.",
-    "domain": "internet",
-    "source": "wikipedia:Fail2ban"
-  },
-  {
     "question": "What is Sourcefire?",
     "answer": "Sourcefire, Inc was a technology company that developed network security hardware and software. The company's Firepower network security appliances were based on Snort, an open-source intrusion detection system (IDS). Sourcefire was acquired by Cisco for $2.7 billion in July 2013.",
     "domain": "security",
@@ -3591,12 +1911,6 @@
     "question": "Tell me about Sierra Ventures",
     "answer": "== Financial ==\nThe company's initial growth was funded through four separate rounds of financing raising a total of $56.5 million from venture investors such as Sierra Ventures, New Enterprise Associates, Sequoia Capital, Core Capital Partners, Inflection Point Ventures, Meritech Capital Partners, and Cross Creek Capital, L.P.",
     "domain": "internet",
-    "source": "wikipedia:Sourcefire"
-  },
-  {
-    "question": "Tell me about SC",
-    "answer": "Sourcefire received SC Magazine's 2009 \"Reader Trust\" award for best intrusion detection and intrusion prevention system (IDS/IPS) for Snort and Network World's \"2009 Best of Tests\" award for the Sourcefire 3D System.",
-    "domain": "security",
     "source": "wikipedia:Sourcefire"
   },
   {
@@ -3654,780 +1968,6 @@
     "source": "wikipedia:Sourcefire"
   },
   {
-    "question": "What is Wireless security?",
-    "answer": "Wireless security is the prevention of unauthorized access or damage to computers or data using wireless networks, which include Wi-Fi networks. The term may also refer to the protection of the wireless network itself from adversaries seeking to damage the confidentiality, integrity, or availability of the network. The most common type is Wi-Fi security, which includes Wired Equivalent Privacy (WEP) and Wi-Fi Protected Access (WPA). WEP is an old IEEE 802.11 standard from 1997.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is most common type?",
-    "answer": "The most common type is Wi-Fi security, which includes Wired Equivalent Privacy (WEP) and Wi-Fi Protected Access (WPA).",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is WEP?",
-    "answer": "WEP is an old IEEE 802.11 standard from 1997.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What does It is a notoriously weak security standard: the password it provide?",
-    "answer": "It is a notoriously weak security standard: the password it uses can often be cracked in a few minutes with a basic laptop computer and widely available software tools.",
-    "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about WEP",
-    "answer": "WEP was superseded in 2003 by WPA, a quick alternative at the time to improve security over WEP.",
-    "domain": "networking",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is current standard?",
-    "answer": "The current standard is WPA2; some hardware cannot support WPA2 without firmware upgrade or replacement.",
-    "domain": "wifi_security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What does WPA2 provide?",
-    "answer": "WPA2 uses an encryption device that encrypts the network with a 256-bit key; the longer key length improves security over WEP.",
-    "domain": "wifi_security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about In January",
-    "answer": "In January 2018, the Wi-Fi Alliance announced WPA3 as a replacement to WPA2.",
-    "domain": "wifi_security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about CERTIFIED",
-    "answer": "Certification began in June 2018, and WPA3 support has been mandatory for devices which bear the \"Wi-Fi CERTIFIED™\" logo since July 2020.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is However, wireless networking?",
-    "answer": "However, wireless networking is prone to some security issues.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is As a result, it?",
-    "answer": "As a result, it is very important that enterprises define effective wireless security policies that guard against unauthorized access to important resources.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is However, there?",
-    "answer": "However, there are many security risks associated with the current wireless protocols and encryption methods, and in the carelessness and ignorance that exists at the user and corporate IT level.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about MDR",
-    "answer": "In-Stat MDR and META Group have estimated that 95% of all corporate laptop computers that were planned to be purchased in 2005 were equipped with wireless cards.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is If router security?",
-    "answer": "If router security is not activated or if the owner deactivates it for convenience, it creates a free hotspot.",
-    "domain": "networking",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about PCs",
-    "answer": "Since most 21st-century laptop PCs have wireless networking built in (see Intel \"Centrino\" technology), they do not need a third-party adapter such as a PCMCIA Card or USB dongle.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about PC",
-    "answer": "Modern operating systems such as Linux, macOS, or Microsoft Windows make it fairly easy to set up a PC as a wireless LAN \"base station\" using Internet Connection Sharing, thus allowing all the PCs in the home to access the Internet through the \"base\" PC.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is Such \"piggybacking\"?",
-    "answer": "Such \"piggybacking\" is usually achieved without the wireless network operator's knowledge; it may even be without the knowledge of the intruding user if their computer automatically selects a nearby unsecured wireless network to use as an access point.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about WLAN",
-    "answer": "Evaluation of these vulnerabilities and the resulting vulnerability catalogs in an industrial context when considering WLAN, NFC and ZigBee are available.",
-    "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is described modes of attack?",
-    "answer": "The described modes of attack are just a snapshot of typical methods and scenarios where to apply.",
-    "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is One of these methods?",
-    "answer": "One of these methods is referred to as “accidental association”.",
-    "domain": "intranet",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is However, it?",
-    "answer": "However, it is a security breach in that proprietary company information is exposed and now there could exist a link from one company to the other.",
-    "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is Accidental association?",
-    "answer": "Accidental association is a case of wireless vulnerability called as \"mis-association\".",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about APs",
-    "answer": "Mis-association can be accidental, deliberate (for example, done to bypass corporate firewall) or it can result from deliberate attempts on wireless clients to lure them into connecting to attacker's APs.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about AP",
-    "answer": "=== Malicious association ===\n“Malicious associations” are when wireless devices can be actively made by attackers to connect to a company network through their laptop instead of a company access point (AP).",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is These types of laptops?",
-    "answer": "These types of laptops are known as “soft APs” and are created when a cyber criminal runs some software that makes their wireless network card look like a legitimate access point.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is Wireless 802.1X authentications do help with some protection but?",
-    "answer": "Wireless 802.1X authentications do help with some protection but are still vulnerable to hacking.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is Most likely the criminal?",
-    "answer": "Most likely the criminal is just trying to take over the client at the Layer 2 level.",
-    "domain": "networking",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is Ad hoc networks?",
-    "answer": "Ad hoc networks are defined as [peer to peer] networks between wireless computers that do not have an access point in between them.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is security hole provided by Ad hoc networking?",
-    "answer": "The security hole provided by Ad hoc networking is not the Ad hoc network itself but the bridge it provides into other networks, usually in the corporate environment, and the unfortunate default settings in most versions of Microsoft Windows to have this feature turned on unless explicitly disabled.",
-    "domain": "networking",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is If they?",
-    "answer": "If they are also using a wired or wireless infrastructure network at the same time, they are providing a bridge to the secured organizational network through the unsecured Ad hoc connection.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is indirect bridge may expose private data that?",
-    "answer": "The indirect bridge may expose private data that is shared from the user's computer to LAN connections, such as shared folders or private Network Attached Storage, making no distinction between authenticated or private connections and unauthenticated Ad-Hoc networks.",
-    "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about PDAs",
-    "answer": "Even barcode readers, handheld PDAs, and wireless printers and copiers should be secured.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is MAC filtering?",
-    "answer": "MAC filtering is effective only for small residential (SOHO) networks, since it provides protection only when the wireless device is \"off the air\".",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is In an organizational environment, where most wireless devices?",
-    "answer": "In an organizational environment, where most wireless devices are \"on the air\" throughout the active working shift, MAC filtering provides only a false sense of security since it prevents only \"casual\" or unintended connections to the organizational infrastructure and does nothing to prevent a directed attack.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is man-in-the-middle attacker entices computers to log into a computer which?",
-    "answer": "A man-in-the-middle attacker entices computers to log into a computer which is set up as a soft AP (Access Point).",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is Once this?",
-    "answer": "Once this is done, the hacker connects to a real access point through another wireless card offering a steady flow of traffic through the transparent hacking computer to the real network.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is Man-in-the-middle attacks?",
-    "answer": "Man-in-the-middle attacks are enhanced by software such as LANjack and AirJack which automate multiple steps of the process, meaning what once required some skill can now be done by script kiddies.",
-    "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is Hotspots?",
-    "answer": "Hotspots are particularly vulnerable to any attack since there is little to no security on these networks.",
-    "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about EAP",
-    "answer": "These attacks rely on the abuse of protocols such as the Extensible Authentication Protocol (EAP).",
-    "domain": "wifi_security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about The Do",
-    "answer": "The DoS attack in itself does little to expose organizational data to a malicious attacker, since the interruption of the network prevents the flow of data and actually indirectly protects data by preventing it from being transmitted.",
-    "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is usual reason for performing a DoS attack?",
-    "answer": "The usual reason for performing a DoS attack is to observe the recovery of the wireless network, during which all of the initial handshake codes are re-transmitted by all devices, providing an opportunity for the malicious attacker to record these codes and use various cracking tools to analyze security weaknesses and exploit them to gain unauthorized access to the system.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is This works best on weakly encrypted systems such as WEP, where there?",
-    "answer": "This works best on weakly encrypted systems such as WEP, where there are a number of tools available which can launch a dictionary style attack of \"possibly accepted\" security keys based on the \"model\" security key captured during the network recovery.",
-    "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about OSPF",
-    "answer": "=== Network injection ===\nIn a network injection attack, a hacker can make use of access points that are exposed to non-filtered network traffic, specifically broadcasting network traffic such as Spanning Tree Protocol (802.1D), OSPF, RIP, and HSRP.",
-    "domain": "networking",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about ARP",
-    "answer": "After the client connects, the client generates ARP requests, which the malicious access point uses to obtain keystream data.",
-    "domain": "networking",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about The Caffe Latte",
-    "answer": "The Caffe Latte attack was demonstrated against the Windows wireless stack, but other operating systems may also be vulnerable.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is For closed networks (like home users and organizations) the most common way?",
-    "answer": "For closed networks (like home users and organizations) the most common way is to configure access restrictions in the access points.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What does Commercial providers usually forward all web traffic to a captive portal which provide?",
-    "answer": "Commercial providers usually forward all web traffic to a captive portal which provides for payment and/or authorization.",
-    "domain": "wifi_security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is Another solution?",
-    "answer": "Another solution is to require the users to connect securely to a privileged network using VPN.",
-    "domain": "security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is Wireless networks?",
-    "answer": "Wireless networks are less secure than wired ones; in many offices intruders can easily visit and hook up their own computer to the wired network without problems, gaining access to the network, and it is also often possible for remote intruders to gain access to the network through backdoors like Back Orifice.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is system of qualifying?",
-    "answer": "The system of qualifying is an international consensus as specified in ISO/IEC 15408.",
-    "domain": "networking",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is Wireless Intrusion Prevention System (WIPS)?",
-    "answer": "A Wireless Intrusion Prevention System (WIPS) is a concept for the most robust way to counteract wireless security risks.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is simple but ineffective method to attempt to secure a wireless network?",
-    "answer": "A simple but ineffective method to attempt to secure a wireless network is to hide the SSID (Service Set Identifier).",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is IEEE 802.1X?",
-    "answer": "IEEE 802.1X is the IEEE Standard authentication mechanisms to devices wishing to attach to a Wireless LAN.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about FBI",
-    "answer": "Concerns were raised about its security as early as 2001, dramatically demonstrated in 2005 by the FBI, yet in 2007 T.J.",
-    "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about WPA",
-    "answer": "The Wi-Fi Protected Access (WPA and WPA2) security protocols were later created to address the problems with WEP.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is If a weak password, such as a dictionary word or short character string?",
-    "answer": "If a weak password, such as a dictionary word or short character string is used, WPA and WPA2 can be cracked.",
-    "domain": "wifi_security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is second generation of the WPA security protocol (WPA2)?",
-    "answer": "The second generation of the WPA security protocol (WPA2) is based on the final IEEE 802.11i amendment to the 802.11 standard and is eligible for FIPS 140-2 compliance.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is Wi-Fi Protected Access (WPA)?",
-    "answer": "Wi-Fi Protected Access (WPA) is a software/firmware improvement over WEP.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is All regular WLAN-equipment that worked with WEP?",
-    "answer": "All regular WLAN-equipment that worked with WEP are able to be simply upgraded and no new equipment needs to be bought.",
-    "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is WPA?",
-    "answer": "WPA is a trimmed-down version of the 802.11i security standard that was developed by the IEEE 802.11 to replace WEP.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about TKIP",
-    "answer": "The TKIP encryption algorithm was developed for WPA to provide improvements to WEP that could be fielded as firmware upgrades to existing 802.11 devices.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is WPA profile also provides optional support for the AES-CCMP algorithm that?",
-    "answer": "The WPA profile also provides optional support for the AES-CCMP algorithm that is the preferred algorithm in 802.11i and WPA2.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What does WPA Enterprise provide?",
-    "answer": "WPA Enterprise provides RADIUS based authentication using 802.1X.",
-    "domain": "wifi_security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What does WPA Personal provide?",
-    "answer": "WPA Personal uses a pre-shared Shared Key (PSK) to establish the security using an 8 to 63 character passphrase.",
-    "domain": "wifi_security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about PSK",
-    "answer": "The PSK may also be entered as a 64 character hexadecimal string.",
-    "domain": "wifi_security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is Other WEP/WPA crackers?",
-    "answer": "Other WEP/WPA crackers are AirSnort and Auditor Security Collection.",
-    "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is Still, WPA Personal?",
-    "answer": "Still, WPA Personal is secure when used with ‘good’ passphrases or a full 64-character hexadecimal key.",
-    "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about PPTP",
-    "answer": "However, this extra layer of security may also be cracked with tools such as Anger, Deceit and Ettercap for PPTP; and ike-scan, IKEProbe, ipsectrace, and IKEcrack for IPsec-connections.",
-    "domain": "security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What does TKIP implements per-packet key mixing with a re-keying system and also provide?",
-    "answer": "TKIP implements per-packet key mixing with a re-keying system and also provides a message integrity check.",
-    "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What does This, as EAP provide?",
-    "answer": "This, as EAP uses a central authentication server.",
-    "domain": "wifi_security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is This new version of EAP?",
-    "answer": "This new version of EAP is now called Extended EAP and is available in several versions; these include: EAP-MD5, PEAPv0, PEAPv1, EAP-MSCHAPv2, LEAP, EAP-FAST, EAP-TLS, EAP-TTLS, MSCHAPv2, and EAP-SIM.",
-    "domain": "wifi_security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is This protocol?",
-    "answer": "This protocol is based on 802.1X and helps minimize the original security flaws by using WEP and a sophisticated key management system.",
-    "domain": "wifi_security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What does This also provide?",
-    "answer": "This also uses MAC address authentication.",
-    "domain": "networking",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is LEAP?",
-    "answer": "LEAP is not secure; THC-LeapCracker can be used to break Cisco's version of LEAP and be used against computers connected to an access point in the form of a dictionary attack.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is Anwrap and asleap finally?",
-    "answer": "Anwrap and asleap finally are other crackers capable of breaking LEAP.",
-    "domain": "wifi_security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What does This protocol provide?",
-    "answer": "This protocol allows for a secure transport of data, passwords, and encryption keys without the need of a certificate server.",
-    "domain": "security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about EAPs",
-    "answer": "Other EAPs\nThere are other types of Extensible Authentication Protocol implementations that are based on the EAP framework.",
-    "domain": "wifi_security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What does framework that was established provide?",
-    "answer": "The framework that was established supports existing EAP types as well as future authentication methods.",
-    "domain": "wifi_security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What does EAP-TLS provide?",
-    "answer": "EAP-TLS offers very good protection because of its mutual authentication.",
-    "domain": "wifi_security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is Both the client and the network?",
-    "answer": "Both the client and the network are authenticated using certificates and per-session WEP keys.",
-    "domain": "security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is EAP-TTLS?",
-    "answer": "EAP-TTLS is another alternative made by Certicom and Funk Software.",
-    "domain": "networking",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about IEEE",
-    "answer": "=== Restricted access networks ===\nSolutions include a newer system for authentication, IEEE 802.1X, that promises to enhance security on both wired and wireless networks.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is most prized resource?",
-    "answer": "The most prized resource is often access to the Internet.",
-    "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What does This full-fledged 802.11i standard (which provide?",
-    "answer": "This full-fledged 802.11i standard (which uses WPAv2) however does require the newest hardware (unlike WPAv1), thus potentially requiring the purchase of new equipment.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about AES",
-    "answer": "This new hardware required may be either AES-WRAP (an early version of 802.11i) or the newer and better AES-CCMP-equipment.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about WRAP",
-    "answer": "One should make sure one needs WRAP or CCMP-equipment, as the 2 hardware standards are not compatible.",
-    "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is WPA2?",
-    "answer": "WPA2 is a WiFi Alliance branded version of the final 802.11i standard.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is primary enhancement over WPA?",
-    "answer": "The primary enhancement over WPA is the inclusion of the AES-CCMP algorithm as a mandatory feature.",
-    "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is number of WPA and WPA2 networks?",
-    "answer": "The number of WPA and WPA2 networks are increasing, while the number of WEP networks are decreasing, because of the security vulnerabilities in WEP.",
-    "domain": "wifi_security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is vulnerability uses the WPA2 Group Temporal Key (GTK), which?",
-    "answer": "The vulnerability uses the WPA2 Group Temporal Key (GTK), which is a shared key among all users of the same BSSID, to launch attacks on other users of the same BSSID.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about GTK",
-    "answer": "In order for this exploit to be performed, the GTK must be known by the attacker.",
-    "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about USB",
-    "answer": "=== Smart cards, USB tokens, and software tokens ===\nSecurity token use is a method of authentication relying upon only authorized users possessing the requisite token.",
-    "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is Smart cards?",
-    "answer": "Smart cards are physical tokens in the cards that utilize an embedded integrated circuit chip for authentication, requiring a card reader.",
-    "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is USB Tokens?",
-    "answer": "USB Tokens are physical tokens that connect via USB port to authenticate the user.",
-    "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about RF",
-    "answer": "=== RF shielding ===\nIt is practical in some cases to apply specialized wall paint and window film to a room or building to significantly attenuate wireless signals, which keeps the signals from propagating outside a facility.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is This can significantly improve wireless security because it?",
-    "answer": "This can significantly improve wireless security because it is difficult for hackers to receive the signals beyond the controlled area of a facility, such as from a parking lot.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about Most Do",
-    "answer": "=== Denial of service defense ===\nMost DoS attacks are easy to detect.",
-    "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is However, a lot of them?",
-    "answer": "However, a lot of them are difficult to stop even after detection.",
-    "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is Here?",
-    "answer": "Here are three of the most common ways to stop a DoS attack.",
-    "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about SYN",
-    "answer": "Some firewalls address SYN floods by pre-validating the TCP handshake.",
-    "domain": "networking",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about ACK",
-    "answer": "Only when the firewall gets back an ACK, which would happen only in a legitimate connection, would the firewall send the original SYN segment on to the server for which it was originally intended.",
-    "domain": "security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is Once DoS traffic clogs the access line going to the internet, there?",
-    "answer": "Once DoS traffic clogs the access line going to the internet, there is nothing a border firewall can do to help the situation.",
-    "domain": "security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is Most DoS attacks?",
-    "answer": "Most DoS attacks are problems of the community which can only be stopped with the help of ISP's and organizations whose computers are taken over as bots and used to attack other firms.",
-    "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is While open standards such as Kismet?",
-    "answer": "While open standards such as Kismet are targeted towards securing laptops, access points solutions should extend towards covering mobile devices also.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about PDA",
-    "answer": "Host based solutions for mobile handsets and PDA's with 802.1X interface.",
-    "domain": "wifi_security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is Mobile patient monitoring devices?",
-    "answer": "Mobile patient monitoring devices are becoming an integral part of healthcare industry and these devices will eventually become the method of choice for accessing and implementing health checks for patients located in remote areas.",
-    "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is For these types of patient monitoring systems, security and reliability?",
-    "answer": "For these types of patient monitoring systems, security and reliability are critical, because they can influence the condition of patients, and could leave medical professionals in the dark about the condition of the patient if compromised.",
-    "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is If this?",
-    "answer": "If this is done, a server such as RADIUS, ADS, NDS, or LDAP needs to be integrated.",
-    "domain": "wifi_security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is AP's/routers with integrated authentication servers?",
-    "answer": "AP's/routers with integrated authentication servers are often very expensive and specifically an option for commercial usage like hot spots.",
-    "domain": "networking",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is Server software required?",
-    "answer": "Server software required is an enterprise authentication server such as RADIUS, ADS, NDS, or LDAP.",
-    "domain": "wifi_security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about Funk Software",
-    "answer": "The required software can be picked from various suppliers as Microsoft, Cisco, Funk Software, Meetinghouse Data, and from some open-source projects.",
-    "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about RADIUS",
-    "answer": "Aradial RADIUS Server\nCisco Secure Access Control Software\nfreeRADIUS (open-source)\nFunk Software Steel Belted RADIUS (Odyssey)\nMicrosoft Internet Authentication Service\nMeetinghouse Data EAGIS\nSkyFriendz (free cloud solution based on freeRADIUS)\nClient software comes built-in with Windows XP and may be integrated into other OS's using any of following software:.",
-    "domain": "wifi_security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about AEGIS",
-    "answer": "AEGIS-client\nCisco ACU-client\nIntel PROSet/Wireless Software\nOdyssey client\nXsupplicant (open1X)-project.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is Remote Authentication Dial In User Service (RADIUS)?",
-    "answer": "Remote Authentication Dial In User Service (RADIUS) is an AAA (authentication, authorization and accounting) protocol used for remote network access.",
-    "domain": "wifi_security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What does Others think the default encryption provide?",
-    "answer": "Others think the default encryption provides substantial protection at small inconvenience, against dangers of open access that they fear may be substantial even on a home DSL router.",
-    "domain": "networking",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is density of access points can even be a problem – there?",
-    "answer": "The density of access points can even be a problem – there are a limited number of channels available, and they partly overlap.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about Open Access Points",
-    "answer": "According to the advocates of Open Access Points, it should not involve any significant risks to open up wireless networks for the public:.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is wireless network?",
-    "answer": "The wireless network is after all confined to a small geographical area.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is Thus the exposure?",
-    "answer": "Thus the exposure is low with an open wireless access point, and the risks with having an open wireless network are small.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is only way to keep communication truly secure?",
-    "answer": "The only way to keep communication truly secure is to use end-to-end encryption.",
-    "domain": "security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is argument?",
-    "answer": "The argument is that anyone can sniff the traffic applies to wired networks too, where system administrators and possible hackers have access to the links and can read the traffic.",
-    "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is are available on the local net, it?",
-    "answer": "are available on the local net, it is advisable to have authentication (i.e.",
-    "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is by password) for accessing it (one should never assume that the private network?",
-    "answer": "by password) for accessing it (one should never assume that the private network is not accessible from the outside).",
-    "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is Where Internet connections?",
-    "answer": "Where Internet connections are plentiful and cheap, freeloaders will seldom be a prominent nuisance.",
-    "domain": "wifi_security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about ISPs",
-    "answer": "Also, many contracts with ISPs specify that the connection may not be shared with other persons.",
-    "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about KRACK",
-    "answer": "== See also ==\nAircrack-ng\nElectromagnetic shielding\nKismet\nKRACK\nList of router firmware projects\nNetwork encryption cracking\nMobile security\nPayment Card Industry Data Security Standard\nStealth wallpaper\nTempest (codename)\nWireless intrusion prevention system\nWireless Public Key Infrastructure (WPKI)\nExploits of wireless networks.",
-    "domain": "security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about ISBN",
-    "answer": "Wi-Foo: The Secrets of Wireless Hacking (2004) – ISBN 978-0321202178\nReal 802.11 Security: Wi-Fi Protected Access and 802.11i (2003) – ISBN 978-0321136206\nDesign and Implementation of WLAN Authentication and Security(2010) – ISBN 978-3838372266\n\"The Evolution of 802.11 Wireless Security\" (PDF).",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about Secure Your Wireless Home Network",
-    "answer": "== External links ==\nHow to Secure Your Wireless Home Network at wikiHow.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is Rogue access point?",
-    "answer": "A rogue access point is a wireless access point that has been installed on a secure network without explicit authorization from a local network administrator, whether added by a well-meaning employee or by a malicious attacker.",
-    "domain": "wifi",
-    "source": "wikipedia:Rogue access point"
-  },
-  {
     "question": "What is If an attacker installs an access point they?",
     "answer": "If an attacker installs an access point they are able to run various types of vulnerability scanners, and rather than having to be physically inside the organization, can attack remotely—perhaps from a reception area, adjacent building, car park, or with a high gain antenna, even from several miles away.",
     "domain": "wifi",
@@ -4454,12 +1994,6 @@
   {
     "question": "What is Security information and event management?",
     "answer": "Security information and event management (SIEM) is a field within computer security that combines security information management (SIM) and security event management (SEM) to enable real-time analysis of security alerts generated by applications and network hardware. SIEM systems are central to security operations centers (SOCs), where they are employed to detect, investigate, and respond to security incidents.",
-    "domain": "security",
-    "source": "wikipedia:Security information and event management"
-  },
-  {
-    "question": "What is Security information and event management (SIEM)?",
-    "answer": "Security information and event management (SIEM) is a field within computer security that combines security information management (SIM) and security event management (SEM) to enable real-time analysis of security alerts generated by applications and network hardware.",
     "domain": "security",
     "source": "wikipedia:Security information and event management"
   },
@@ -4497,12 +2031,6 @@
     "question": "Tell me about RMF",
     "answer": "The monitoring of system logs has also become increasingly common due to the rise of sophisticated cyberattacks and the need for compliance with regulatory frameworks, which mandate logging security controls within risk management frameworks (RMF).",
     "domain": "general",
-    "source": "wikipedia:Security information and event management"
-  },
-  {
-    "question": "What does National Institute of Standards and Technology provide?",
-    "answer": "The National Institute of Standards and Technology provides the following definition of SIEM: \"Application that provides the ability to gather security data from information system components and present that data as actionable information via a single interface.\" In addition, NIST has designed and implemented a federally mandated RMF.",
-    "domain": "networking",
     "source": "wikipedia:Security information and event management"
   },
   {
@@ -4548,12 +2076,6 @@
     "source": "wikipedia:Security information and event management"
   },
   {
-    "question": "Tell me about CIA",
-    "answer": "Federal systems categorized based on their impact on confidentiality, integrity, and availability (CIA) have five specific logging requirements (AU-2 a-e) that must be met.",
-    "domain": "general",
-    "source": "wikipedia:Security information and event management"
-  },
-  {
     "question": "What is While logging every action?",
     "answer": "While logging every action is possible, it is generally not recommended due to the volume of logs and the need for actionable security data.",
     "domain": "general",
@@ -4566,21 +2088,9 @@
     "source": "wikipedia:Security information and event management"
   },
   {
-    "question": "Tell me about AU",
-    "answer": "Together, AU-2, SI-4, and RA-10 demonstrate how NIST controls integrate into a comprehensive security strategy.",
-    "domain": "general",
-    "source": "wikipedia:Security information and event management"
-  },
-  {
     "question": "Tell me about SEM",
     "answer": "== Terminology ==\nThe acronyms SEM, SIM and SIEM have sometimes been used interchangeably, but generally refer to the different primary focus of products:.",
     "domain": "security",
-    "source": "wikipedia:Security information and event management"
-  },
-  {
-    "question": "Tell me about SIM",
-    "answer": "Security information management (SIM): Long-term storage as well as analysis and reporting of log data.",
-    "domain": "general",
     "source": "wikipedia:Security information and event management"
   },
   {
@@ -4668,12 +2178,6 @@
     "source": "wikipedia:Security information and event management"
   },
   {
-    "question": "What is more data?",
-    "answer": "The more data is collected the more use can be gathered from it.",
-    "domain": "general",
-    "source": "wikipedia:Security information and event management"
-  },
-  {
     "question": "What is Many employees and users?",
     "answer": "Many employees and users are now using VPN services which may obscure physical location.",
     "domain": "security",
@@ -4698,273 +2202,9 @@
     "source": "wikipedia:Security information and event management"
   },
   {
-    "question": "What is Secure access service edge?",
-    "answer": "A secure access service edge (SASE) (also secure access secure edge) is technology used to deliver wide area network (WAN) and security controls as a cloud computing service directly to the source of connection (user, device, Internet of things (IoT) device, or edge computing location) rather than a data center.",
-    "domain": "networking",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "What is secure access service edge (SASE) (also secure access secure edge)?",
-    "answer": "A secure access service edge (SASE) (also secure access secure edge) is technology used to deliver wide area network (WAN) and security controls as a cloud computing service directly to the source of connection (user, device, Internet of things (IoT) device, or edge computing location) rather than a data center.",
-    "domain": "internet",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "What is Security?",
-    "answer": "Security is based on digital identity, real-time context, and company and regulatory compliance policies, rather than a security appliance like a firewall.",
-    "domain": "security",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "Tell me about Neil Mac",
-    "answer": "The term was coined in 2019 by market analyst, Neil MacDonald of Gartner.",
-    "domain": "general",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "Tell me about SASE",
-    "answer": "== Overview ==\nSASE combines SD-WAN with network security functions, including cloud access security brokers (CASB), Secure Web Gateways (SWG), antivirus/malware inspection, virtual private networking (VPN), firewall as a service (FWaaS), and data loss prevention (DLP), all delivered by a single cloud service at the network edge.",
-    "domain": "security",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "What is WAN and security functions?",
-    "answer": "WAN and security functions are typically delivered as a single service at dispersed SASE points of presence (PoPs) located as close as possible to dispersed users, branch offices and cloud services.",
-    "domain": "internet",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "What is SSE?",
-    "answer": "SSE is a collection of SASE security services that can be implemented together with network services, like SD-WAN, to provide a complete solution.",
-    "domain": "networking",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "What is cloud computing model?",
-    "answer": "The cloud computing model is meant to delegate and simplify delivery of SD-WAN and security functions to multiple edge computing devices and locations.",
-    "domain": "networking",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "What does cloud architecture provide?",
-    "answer": "The cloud architecture provides typical cloud enhancements such as elasticity, flexibility, agility, global reach and delegated management.",
-    "domain": "internet",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "What is Identity?",
-    "answer": "Identity is the most significant context affecting SASE security policy.",
-    "domain": "general",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "Tell me about SD",
-    "answer": "Edge connections to the local PoP may vary from an SD-WAN for a branch office to a VPN client or clientless Web access for a mobile user, to multiple tunnels from the cloud or direct cloud connections inside a global data center.",
-    "domain": "networking",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "What is Performance?",
-    "answer": "Performance is also increased by implementing all security functions with a single-pass architecture inside a single PoP, to avoid unnecessary routing.",
-    "domain": "networking",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "What is Both analyst firms criticize SASE as a Gartner term that?",
-    "answer": "Both analyst firms criticize SASE as a Gartner term that is neither a new market, technology nor product, but rather an integration of existing technology with a single source of management.",
-    "domain": "general",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "Tell me about IHS",
-    "answer": "Clifford Grossner of IHS Markit criticizes the lack of analytics, artificial intelligence and machine learning as part of the SASE concept and the likelihood that enterprises won't want to get all SD-WAN and security functions from a single vendor.",
-    "domain": "networking",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "What is SD-WAN?",
-    "answer": "SD-WAN is a technology that simplifies wide area networking through centralized control of the networking hardware or software that directs traffic across the WAN.",
-    "domain": "networking",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "What does NGFW provide?",
-    "answer": "NGFW offers a subset of the security stack offered by SASE, and typically doesn't include SD-WAN services.",
-    "domain": "networking",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "What is NGFW may be deployed on premises or as a cloud service, while SASE?",
-    "answer": "NGFW may be deployed on premises or as a cloud service, while SASE is a cloud architecture by definition.",
-    "domain": "internet",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "What is FWaaS?",
-    "answer": "FWaaS is a firewall offered as a cloud service, rather than on premises as software or hardware.",
-    "domain": "security",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "What is Typically, an entire organization?",
-    "answer": "Typically, an entire organization is connected to a single FWaaS cloud with no requirement for maintaining its own firewall infrastructure.",
-    "domain": "security",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "What does Like SASE it provide?",
-    "answer": "Like SASE it offers reduced complexity and management costs.",
-    "domain": "general",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "What is By contrast SASE?",
-    "answer": "By contrast SASE is meant to be a single comprehensive secure SD-WAN solution for branch offices, mobile users, data centers and any other secure enterprise WAN requirement.",
-    "domain": "networking",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "Tell me about SSE",
-    "answer": "Some vendors focus on the networking aspects while others focus on the security aspect which is now referred to as Secure Service Edge (SSE).",
-    "domain": "general",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "Tell me about MEF",
-    "answer": "== Standards ==\nMEF, originally known as the Metro Ethernet Forum, has become a next generation standards organization with a broad focus around software defined network and security infrastructure services for service provider, technology manufacturers, and enterprise network design.",
-    "domain": "networking",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "What is document?",
-    "answer": "The document is available to MEF participating companies and members.",
-    "domain": "general",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "What is Palo Alto Networks?",
-    "answer": "Palo Alto Networks, Inc. is an American multinational cybersecurity company with headquarters in Santa Clara, California. The core product is a platform that includes advanced firewalls and cloud-based offerings that extend those firewalls to cover other aspects of security. The company serves over 70,000 organizations in over 150 countries, including 85 of the Fortune 100. It is home to the Unit 42 threat research team and hosts the Ignite cybersecurity conference.",
-    "domain": "networking",
-    "source": "wikipedia:Palo Alto Networks"
-  },
-  {
-    "question": "Tell me about Santa Clara",
-    "answer": "is an American multinational cybersecurity company with headquarters in Santa Clara, California.",
-    "domain": "networking",
-    "source": "wikipedia:Palo Alto Networks"
-  },
-  {
-    "question": "What is core product?",
-    "answer": "The core product is a platform that includes advanced firewalls and cloud-based offerings that extend those firewalls to cover other aspects of security.",
-    "domain": "security",
-    "source": "wikipedia:Palo Alto Networks"
-  },
-  {
-    "question": "Tell me about Palo Alto Networks",
-    "answer": "== History ==\nPalo Alto Networks was founded in 2005 by Nir Zuk, a former engineer from Check Point and NetScreen Technologies.",
-    "domain": "general",
-    "source": "wikipedia:Palo Alto Networks"
-  },
-  {
-    "question": "Tell me about Israel Defense Forces",
-    "answer": "Zuk, an Israeli native, began working with computers during his mandatory military service in the Israel Defense Forces in the early 1990s and served as head of software development in Unit 8200, a branch of the Israeli Intelligence Corps.",
-    "domain": "networking",
-    "source": "wikipedia:Palo Alto Networks"
-  },
-  {
-    "question": "Tell me about NYSE",
-    "answer": "The company debuted on the NYSE on July 20, 2012, raising $260 million with its initial public offering, which was the 4th-largest tech IPO of 2012.",
-    "domain": "general",
-    "source": "wikipedia:Palo Alto Networks"
-  },
-  {
-    "question": "Tell me about Check Point",
-    "answer": "By 2018, the organization had 20 members including Cisco, Check Point, Juniper Networks, and Sophos.",
-    "domain": "general",
-    "source": "wikipedia:Palo Alto Networks"
-  },
-  {
-    "question": "Tell me about Global Cyber Range Initiative",
-    "answer": "In 2018, the company began opening cybersecurity training facilities around the world as part of the Global Cyber Range Initiative.",
-    "domain": "general",
-    "source": "wikipedia:Palo Alto Networks"
-  },
-  {
-    "question": "Tell me about Morta Security\nApril",
-    "answer": "=== Acquisitions ===\nJanuary 2014: Morta Security\nApril 2014: Cyvera for approximately $200 million\nMay 2015: CirroSecure\nMarch 2017: LightCyber for approximately $100 million\nMarch 2018: Cloud Security company Evident.io for $300 million.",
-    "domain": "internet",
-    "source": "wikipedia:Palo Alto Networks"
-  },
-  {
-    "question": "Tell me about Secdo\nOctober",
-    "answer": "April 2018: Secdo\nOctober 2018: RedLock for $173 million\nFebruary 2019: Demisto for $560 million\nMay 2019: Twistlock for $410 million\nJune 2019: PureSec for $47 million\nSeptember 2019: Zingbox for $75 million\nNovember 2019: Aporeto, Inc.",
-    "domain": "general",
-    "source": "wikipedia:Palo Alto Networks"
-  },
-  {
-    "question": "Tell me about Crypsis Group",
-    "answer": "for $420 million\nAugust 2020: Crypsis Group for $265 million\nDecember 2020: Expanse for $1.25 billion.",
-    "domain": "general",
-    "source": "wikipedia:Palo Alto Networks"
-  },
-  {
-    "question": "Tell me about Cider Security",
-    "answer": "February 2021: Bridgecrew for $156 million\nNovember 2022: Cider Security for $300 million.",
-    "domain": "general",
-    "source": "wikipedia:Palo Alto Networks"
-  },
-  {
-    "question": "Tell me about MSRC",
-    "answer": "Multiple Unit 42 researchers have been named in the MSRC Top 100, Microsoft's annual ranking of top 100 security researchers.",
-    "domain": "general",
-    "source": "wikipedia:Palo Alto Networks"
-  },
-  {
     "question": "Tell me about In April",
     "answer": "In April 2020, the business unit consisting of Crypsis Group which provided digital forensics, incident response, risk assessment, and other consulting services merged with the Unit 42 threat intelligence team.",
     "domain": "general",
-    "source": "wikipedia:Palo Alto Networks"
-  },
-  {
-    "question": "Tell me about United Kingdom",
-    "answer": "In 2018, Unit 42 discovered Gorgon, a hacking group believed to be operating out of Pakistan and targeting government organizations in the United Kingdom, Spain, Russia, and the United States.",
-    "domain": "general",
-    "source": "wikipedia:Palo Alto Networks"
-  },
-  {
-    "question": "Tell me about Microsoft Word",
-    "answer": "The group was detected sending spear-phishing emails attached to infected Microsoft Word documents using an exploit commonly used by cybercriminals and cyber-espionage campaigns.",
-    "domain": "security",
-    "source": "wikipedia:Palo Alto Networks"
-  },
-  {
-    "question": "What is Xbash?",
-    "answer": "Xbash is able to propagate like a worm and deletes databases stored on victim hosts.",
-    "domain": "general",
-    "source": "wikipedia:Palo Alto Networks"
-  },
-  {
-    "question": "Tell me about XMRig",
-    "answer": "In October, Unit 42 warned of a new crypto mining malware, XMRig, that comes bundled with infected Adobe Flash updates.",
-    "domain": "security",
-    "source": "wikipedia:Palo Alto Networks"
-  },
-  {
-    "question": "What does malware provide?",
-    "answer": "The malware uses the victim's computer's resources to mine Monero cryptocurrency.",
-    "domain": "security",
-    "source": "wikipedia:Palo Alto Networks"
-  },
-  {
-    "question": "What is hackers behind the malware?",
-    "answer": "The hackers behind the malware are believed to be Fancy Bear, the Russian hacking group believed to be responsible for hacking the Democratic National Committee in 2016.",
-    "domain": "networking",
-    "source": "wikipedia:Palo Alto Networks"
-  },
-  {
-    "question": "What does malware communicates with its command and control server with email and provide?",
-    "answer": "The malware communicates with its command and control server with email and uses encryption to evade detection.",
-    "domain": "security",
     "source": "wikipedia:Palo Alto Networks"
   },
   {
@@ -4982,12 +2222,6 @@
   {
     "question": "Tell me about Ruvi Kitov",
     "answer": "== History ==\nThe company was founded in 2005 by Ruvi Kitov and Rueven Harrison and went public on the New York Stock Exchange in April 2019.",
-    "domain": "general",
-    "source": "wikipedia:Tufin"
-  },
-  {
-    "question": "Tell me about Tufin Orchestration Suite",
-    "answer": "== Products ==\nTufin develops and markets the Tufin Orchestration Suite which consists of:.",
     "domain": "general",
     "source": "wikipedia:Tufin"
   },
@@ -5016,195 +2250,9 @@
     "source": "wikipedia:Tufin"
   },
   {
-    "question": "What is Fortinet?",
-    "answer": "Fortinet, Inc. is an American cybersecurity company headquartered in Sunnyvale, California. It develops and sells security products including firewalls, endpoint security and intrusion detection systems. Fortinet has offices in the US, Canada, and UK.\nFounded in 2000 by brothers Ken Xie and Michael Xie, the company's first and main product was FortiGate, a physical firewall. The company later added wireless access points, sandbox and messaging security. The company went public in November 2009.",
-    "domain": "wifi",
-    "source": "wikipedia:Fortinet"
-  },
-  {
-    "question": "Tell me about Ken Xie",
-    "answer": "Founded in 2000 by brothers Ken Xie and Michael Xie, the company's first and main product was FortiGate, a physical firewall.",
-    "domain": "security",
-    "source": "wikipedia:Fortinet"
-  },
-  {
-    "question": "Tell me about UK",
-    "answer": "The company began distributing its products in Canada in December 2003 and in the UK in February 2004.",
-    "domain": "general",
-    "source": "wikipedia:Fortinet"
-  },
-  {
-    "question": "Tell me about North America",
-    "answer": "By 2004, Fortinet had offices in Asia, Europe, and North America.",
-    "domain": "general",
-    "source": "wikipedia:Fortinet"
-  },
-  {
-    "question": "Tell me about IDC",
-    "answer": "According to market research firm IDC, by November 2009, Fortinet held over 15 percent of the unified threat management market.",
-    "domain": "general",
-    "source": "wikipedia:Fortinet"
-  },
-  {
-    "question": "Tell me about CRN",
-    "answer": "Also in 2009, CRN Magazine's survey-based annual report card placed Fortinet first in network security hardware, up from seventh in 2007.",
-    "domain": "general",
-    "source": "wikipedia:Fortinet"
-  },
-  {
-    "question": "Tell me about NSE",
-    "answer": "=== Recent history ===\nIn July 2014, Fortinet announced a technical certification program called the Network Security Expert (NSE) program.",
-    "domain": "general",
-    "source": "wikipedia:Fortinet"
-  },
-  {
-    "question": "Tell me about NSA",
-    "answer": "In January 2017, it was announced that Philip Quade, a former member of the NSA, would become the company's chief information security officer.",
-    "domain": "general",
-    "source": "wikipedia:Fortinet"
-  },
-  {
-    "question": "Tell me about In June",
-    "answer": "In June 2025, Fortinet was added to Investor's Business Daily's Big Cap 20 list of top-rated large-cap growth stocks.",
-    "domain": "general",
-    "source": "wikipedia:Fortinet"
-  },
-  {
-    "question": "Tell me about IPLocks",
-    "answer": "== Acquisitions ==\nIn 2008, the company acquired the intellectual property of IPLocks, a database security and auditing company.",
-    "domain": "general",
-    "source": "wikipedia:Fortinet"
-  },
-  {
-    "question": "Tell me about XDN",
-    "answer": "In December 2012, Fortinet acquired app-hosting service XDN (formerly known as 3Crowd)\nIn 2013 Fortinet acquired Coyote Point, a developer of hardware load balancers.",
-    "domain": "general",
-    "source": "wikipedia:Fortinet"
-  },
-  {
-    "question": "Tell me about Meru Networks",
-    "answer": "In 2015 Fortinet acquired Wi-Fi hardware company Meru Networks.",
-    "domain": "wifi",
-    "source": "wikipedia:Fortinet"
-  },
-  {
-    "question": "Tell me about In Mach",
-    "answer": "In Mach 2021, Fortinet acquired cloud and network security firm ShieldX.",
-    "domain": "internet",
-    "source": "wikipedia:Fortinet"
-  },
-  {
-    "question": "Tell me about WIFI",
-    "answer": "In 2025, Fortinet acquired Everest, an Indian company focus in WIFI access points for high density environments.",
-    "domain": "wifi",
-    "source": "wikipedia:Fortinet"
-  },
-  {
-    "question": "Tell me about ASIC",
-    "answer": "FortiGate was updated later to use application-specific integrated circuit (ASIC) architecture.",
-    "domain": "general",
-    "source": "wikipedia:Fortinet"
-  },
-  {
-    "question": "Tell me about Security Fabric",
-    "answer": "In 2017, Fortinet announced the addition of switches, access points, analyzers, sandboxes and cloud capabilities to the Security Fabric, in addition to endpoints and firewalls.",
-    "domain": "networking",
-    "source": "wikipedia:Fortinet"
-  },
-  {
-    "question": "Tell me about Fortinet Federal",
-    "answer": "Later in 2017, Fortinet created a standalone subsidiary, Fortinet Federal, to develop cybersecurity products for government agencies.",
-    "domain": "general",
-    "source": "wikipedia:Fortinet"
-  },
-  {
-    "question": "Tell me about NSS",
-    "answer": "Fortinet has received security effectiveness certifications through NSS Labs.",
-    "domain": "general",
-    "source": "wikipedia:Fortinet"
-  },
-  {
-    "question": "What does In February 2020, Fortinet released FortiAI, a threat-detection program that provide?",
-    "answer": "In February 2020, Fortinet released FortiAI, a threat-detection program that uses artificial intelligence.",
-    "domain": "general",
-    "source": "wikipedia:Fortinet"
-  },
-  {
-    "question": "Tell me about BT",
-    "answer": "That year, BT Security selected Fortinet and other Threat Alliance members as Critical Partners.",
-    "domain": "general",
-    "source": "wikipedia:Fortinet"
-  },
-  {
-    "question": "What is data?",
-    "answer": "The data is believed to have been obtained from devices vulnerable to a 2022 exploit (CVE-2022–40684).",
-    "domain": "general",
-    "source": "wikipedia:Fortinet"
-  },
-  {
-    "question": "Tell me about Guard Labs",
-    "answer": "=== Cybersecurity research ===\nIn 2005, Fortinet created the FortiGuard Labs internal security research team.",
-    "domain": "general",
-    "source": "wikipedia:Fortinet"
-  },
-  {
-    "question": "Tell me about CTA",
-    "answer": "In March 2014, Fortinet founded the Cyber Threat Alliance (CTA) with Palo Alto Networks in order to share security threat data across vendors.",
-    "domain": "general",
-    "source": "wikipedia:Fortinet"
-  },
-  {
-    "question": "Tell me about NATO",
-    "answer": "The following year, in March 2016, Fortinet and Cisco joined NATO in a data-sharing agreement to improve their information security capabilities.",
-    "domain": "networking",
-    "source": "wikipedia:Fortinet"
-  },
-  {
-    "question": "Tell me about IRS",
-    "answer": "Fortinet researchers discovered a spyware that scammed victims by impersonating the IRS.",
-    "domain": "networking",
-    "source": "wikipedia:Fortinet"
-  },
-  {
-    "question": "Tell me about International Trade Commission",
-    "answer": "Though the International Trade Commission initially ruled against Fortinet, the Trend Micro patents at the center of the dispute were later declared invalid in 2010.",
-    "domain": "networking",
-    "source": "wikipedia:Fortinet"
-  },
-  {
-    "question": "What is Fortinet stated that their products?",
-    "answer": "Fortinet stated that their products are sold by third-party resellers and that they acknowledged US embargoes; however, their sales director participated in a ceremony to deliver the firewall product to the prime minister.",
-    "domain": "security",
-    "source": "wikipedia:Fortinet"
-  },
-  {
-    "question": "Tell me about Fortinet Fortiguard",
-    "answer": "In 2023, Fortinet Fortiguard devices were revealed by Microsoft and members of the Five Eyes intelligence network to be the subject of a wide-ranging and ongoing cyberattack by a state-sponsored entity in China.",
-    "domain": "general",
-    "source": "wikipedia:Fortinet"
-  },
-  {
-    "question": "Tell me about Bleeping Computer",
-    "answer": "Fortinet confirmed the data breach to Bleeping Computer and said that the data breach included \"limited data related to a small number of Fortinet customers\".",
-    "domain": "troubleshooting",
-    "source": "wikipedia:Fortinet"
-  },
-  {
-    "question": "Tell me about Hoz Salvador",
-    "answer": "Hoz Salvador; Ken McAlpine; Rick Basile; Bruce Matsugu; Josh More (November 27, 2012).",
-    "domain": "general",
-    "source": "wikipedia:Fortinet"
-  },
-  {
     "question": "What is Stonesoft Corporation?",
     "answer": "Stonesoft Corporation was a public company that developed and sold network security services based in Helsinki, Finland. It was publicly owned until 2013 when it was acquired by Intel's subsidiary McAfee.\nStonesoft conducted business globally, with a regional headquarters in Atlanta, Georgia, United States, and sales offices throughout Europe, the Middle East, and China.\nIn July 2013, McAfee, a part of Intel Security, completed a tender offer to acquire all Stonesoft products and technologies.",
     "domain": "security",
-    "source": "wikipedia:Stonesoft Corporation"
-  },
-  {
-    "question": "Tell me about Stonesoft Corporation",
-    "answer": "Stonesoft Corporation was a public company that developed and sold network security services based in Helsinki, Finland.",
-    "domain": "general",
     "source": "wikipedia:Stonesoft Corporation"
   },
   {
@@ -5228,12 +2276,6 @@
   {
     "question": "Tell me about OPSEC",
     "answer": "It was one of the first technologies certified in Check Point's OPSEC program.",
-    "domain": "general",
-    "source": "wikipedia:Stonesoft Corporation"
-  },
-  {
-    "question": "Tell me about CERT",
-    "answer": "In 2010, the company released information via CERT-FI on Advanced Evasion technique  (AETs) that met with skepticism in the community.",
     "domain": "general",
     "source": "wikipedia:Stonesoft Corporation"
   },

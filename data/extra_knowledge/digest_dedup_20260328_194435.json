@@ -1,0 +1,416 @@
+[
+  {
+    "question": "What is UDP?",
+    "answer": "UDP (User Datagram Protocol) is a connectionless transport layer protocol that sends datagrams without establishing a connection, offering low latency but no delivery guarantees.",
+    "domain": "networking",
+    "_source": "builtin"
+  },
+  {
+    "question": "What is packet loss?",
+    "answer": "Packet loss occurs when data packets fail to reach their destination, causing retransmissions (TCP) or gaps (UDP). Common causes: congestion, faulty hardware.",
+    "domain": "networking",
+    "_source": "builtin"
+  },
+  {
+    "question": "What is cloud computing?",
+    "answer": "Cloud computing delivers computing resources (servers, storage, databases) over the internet on-demand, with pay-as-you-go pricing. Major providers: AWS, Azure, GCP.",
+    "domain": "internet",
+    "_source": "builtin"
+  },
+  {
+    "question": "What is network segmentation?",
+    "answer": "Network segmentation divides a network into isolated sub-networks (segments) to improve security, performance, and management using VLANs, subnets, or firewalls.",
+    "domain": "intranet",
+    "_source": "builtin"
+  },
+  {
+    "question": "What is IPv6?",
+    "answer": "IPv6 uses 128-bit addresses (virtually unlimited), written in hex like 2001:0db8::1. It provides built-in IPsec, simplified headers, and no need for NAT.",
+    "domain": "networking",
+    "_source": "builtin"
+  },
+  {
+    "question": "What is SD-WAN?",
+    "answer": "SD-WAN (Software-Defined WAN) uses software to manage WAN connections (MPLS, broadband, LTE), providing intelligent path selection, encryption, and centralized policy management. Vendors: Cisco Viptela, VMware VeloCloud, Fortinet, Silver Peak.",
+    "domain": "networking",
+    "_source": "builtin"
+  },
+  {
+    "question": "What is SDN?",
+    "answer": "SDN (Software-Defined Networking) separates the control plane from the data plane, centralizing network management via a controller. It enables programmable, automated network configuration. Protocols: OpenFlow. Products: Cisco ACI, VMware NSX.",
+    "domain": "networking",
+    "_source": "builtin"
+  },
+  {
+    "question": "What is Active Directory?",
+    "answer": "Active Directory (AD) is Microsoft's directory service for managing users, computers, and resources on a Windows network, providing authentication and authorization.",
+    "domain": "intranet",
+    "_source": "builtin"
+  },
+  {
+    "question": "What is a router?",
+    "answer": "A router is a Layer 3 device that forwards packets between different networks by examining destination IP addresses and using routing tables.",
+    "domain": "networking",
+    "_source": "builtin"
+  },
+  {
+    "question": "What does In contrast to L2TPv3, which provide?",
+    "answer": "In contrast to L2TPv3, which allows only point-to-point OSI layer 2 tunnels, VPLS allows any-to-any (multipoint) connectivity.",
+    "domain": "networking",
+    "_source": "data/extra_knowledge/crawl_corporate_network_security_20260328_082759.json"
+  },
+  {
+    "question": "Tell me about Tufin Orchestration Suite",
+    "answer": "== Products ==\nTufin develops and markets the Tufin Orchestration Suite which consists of:.",
+    "domain": "general",
+    "_source": "data/extra_knowledge/crawl_firewall_and_ids_20260328_090700.json"
+  },
+  {
+    "question": "Tell me about Palo Alto Networks",
+    "answer": "However, researchers from Unit 42 at Palo Alto Networks identified critical security flaws in these patches that could be exploited for container escape and privilege escalation, potentially granting attackers unauthorized root-level access to the host system.",
+    "domain": "general",
+    "_source": "data/extra_knowledge/crawl_cloud_networking_20260328_083140.json"
+  },
+  {
+    "question": "What is Some networks?",
+    "answer": "Some networks are able to dynamically change their logical topology through configuration changes to their routers and switches.",
+    "domain": "networking",
+    "_source": "data/extra_knowledge/crawl_corporate_network_security_20260328_082759.json"
+  },
+  {
+    "question": "What is IS-IS protocol?",
+    "answer": "The IS-IS protocol is defined in ISO/IEC 10589:2002 as an international standard within the Open Systems Interconnection (OSI) reference design.",
+    "domain": "networking",
+    "_source": "data/extra_knowledge/crawl_network_protocols_20260328_082514.json"
+  },
+  {
+    "question": "What is If the physical router that?",
+    "answer": "If the physical router that is routing packets on behalf of the virtual router fails, another physical router is selected to automatically replace it.",
+    "domain": "networking",
+    "_source": "data/extra_knowledge/crawl_network_protocols_20260328_082514.json"
+  },
+  {
+    "question": "What is Port numbers 0 through 1023?",
+    "answer": "Port numbers 0 through 1023 are used for common, well-known services.",
+    "domain": "networking",
+    "_source": "data/extra_knowledge/crawl_network_protocols_20260328_082514.json"
+  },
+  {
+    "question": "What is WPA2-Enterprise uses 802.1X to facilitate authentication, but when and how?",
+    "answer": "WPA2-Enterprise uses 802.1X to facilitate authentication, but when and how is CCMP/AES used to encrypt the data after the authentication is completed?.",
+    "domain": "wifi_security",
+    "_source": "data/extra_knowledge/forum_wi-fi_security_20260328_095706.json"
+  },
+  {
+    "question": "What is XSS?",
+    "answer": "XSS (Cross-Site Scripting) injects malicious scripts into web pages viewed by others. Prevention: output encoding, Content Security Policy, input sanitization.",
+    "domain": "security",
+    "_source": "builtin"
+  },
+  {
+    "question": "What is Wi-Fi 6?",
+    "answer": "Wi-Fi 6 (802.11ax) supports speeds up to 9.6 Gbps, uses OFDMA and MU-MIMO for better multi-device performance, includes Target Wake Time (TWT) for power savings, and uses WPA3 security by default.",
+    "domain": "wifi",
+    "_source": "builtin"
+  },
+  {
+    "question": "What is RADIUS?",
+    "answer": "RADIUS (Remote Authentication Dial-In User Service) is a protocol for centralized authentication, authorization, and accounting (AAA). In corporate Wi-Fi, the AP forwards credentials to the RADIUS server, which validates them against Active Directory or LDAP.",
+    "domain": "wifi_security",
+    "_source": "builtin"
+  },
+  {
+    "question": "What is SIEM?",
+    "answer": "SIEM (Security Information and Event Management) collects, correlates, and analyzes logs from network devices, servers, and applications to detect security threats. Examples: Splunk, Microsoft Sentinel, IBM QRadar, Elastic SIEM.",
+    "domain": "security",
+    "_source": "builtin"
+  },
+  {
+    "question": "What is common web browsing blacklist?",
+    "answer": "A common web browsing blacklist is Google's Safe Browsing, which is installed by default in Firefox, Safari, and Chrome.",
+    "domain": "general",
+    "_source": "data/extra_knowledge/crawl_firewall_and_ids_20260328_090700.json"
+  },
+  {
+    "question": "What is If, in contrast, four child squares?",
+    "answer": "If, in contrast, four child squares are homogeneous, they are merged as several connected components (the merging process).",
+    "domain": "general",
+    "_source": "data/extra_knowledge/crawl_corporate_network_security_20260328_082759.json"
+  },
+  {
+    "question": "What does Agilus Diagnostics also provide?",
+    "answer": "Agilus Diagnostics also offers tests in pathology covering biochemistry, immunology, herpetology, clinical pathology, histopathology and immunohistochemistry, microbiology, molecular biology, cytogenetics, and flow cytometry.",
+    "domain": "general",
+    "_source": "data/extra_knowledge/crawl_network_troubleshooting_20260328_082955.json"
+  },
+  {
+    "question": "What is a switch?",
+    "answer": "A network switch is a Layer 2 device that forwards frames within a LAN by learning MAC addresses and building a forwarding table.",
+    "domain": "networking",
+    "_source": "builtin"
+  },
+  {
+    "question": "How does Once a packet relate to Would UDP over VPN eliminate packet loss?",
+    "answer": "Once a packet: Once a packet is forwarded, the router does not retain any historical information about the packet.  |  Would UDP over VPN eliminate packet loss: I am receiving a MPTS UDP stream from a remote location and I am experiencing packet loss. I would like to know if there's any way to eliminate this packet loss while still using the UDP protocol?\n\nI thought of using UDP over VPN. Is this even technically possible and, if so, will it eliminate packet loss in UDP?\n\nThank you in advance.",
+    "domain": "networking",
+    "_source": "data/extra_knowledge/digest_derived_20260328_194426.json"
+  },
+  {
+    "question": "What is a CDN?",
+    "answer": "A CDN (Content Delivery Network) distributes content across geographically dispersed servers to reduce latency and improve load times for users worldwide.",
+    "domain": "internet",
+    "_source": "builtin"
+  },
+  {
+    "question": "What is These VPNs?",
+    "answer": "These VPNs are often used for maintaining security when remote users access corporate networks but are also used ion other settings.",
+    "domain": "security",
+    "_source": "data/extra_knowledge/crawl_cloud_networking_20260328_083140.json"
+  },
+  {
+    "question": "How to plan enterprise Wi-Fi for a building?",
+    "answer": "Enterprise Wi-Fi planning: 1) Define requirements (users, devices, apps), 2) Get floor plans, 3) Conduct predictive survey (Ekahau), 4) Place APs for -67 dBm coverage with 15-20% cell overlap, 5) Assign channels (1/6/11 on 2.4 GHz, plan 5 GHz), 6) Configure VLANs and security, 7) Validate with post-deployment survey.",
+    "domain": "wifi",
+    "_source": "builtin"
+  },
+  {
+    "question": "What is IPv4?",
+    "answer": "IPv4 is the fourth version of the Internet Protocol using 32-bit addresses (4.3 billion possible). Addresses look like 192.168.0.1. Limited address space led to IPv6.",
+    "domain": "networking",
+    "_source": "builtin"
+  },
+  {
+    "question": "What does DHCP provide?",
+    "answer": "DHCP provides IP configuration and time zone information.",
+    "domain": "networking",
+    "_source": "data/extra_knowledge/crawl_network_protocols_20260328_082514.json"
+  },
+  {
+    "question": "802.1X for Wi-FI?",
+    "answer": "I have a hidden SSID network. I know that although the SSID is hidden, someone can sniff the Wi-Fi channels to get my SSID, and with that SSID he can use some OpenWRT-ish things to spoof my Wi-Fi network to force me type my password to authenticate his device. That is unacceptable, and I am looking for better security for my Wi-Fi network.\n\nWhat options do I have? How can 802.1X be used, I need to keep it as simple as possible.",
+    "domain": "wifi",
+    "_source": "data/extra_knowledge/forum_wi-fi_security_20260328_095706.json"
+  },
+  {
+    "question": "What is For example, in Point-to-Point Protocol, the packet?",
+    "answer": "For example, in Point-to-Point Protocol, the packet is formatted in 8-bit bytes, and special characters are used to delimit elements.",
+    "domain": "general",
+    "_source": "data/extra_knowledge/crawl_network_troubleshooting_20260328_133506.json"
+  },
+  {
+    "question": "Tell me about Juniper Networks",
+    "answer": "Juniper Networks, Inc., was an American multinational corporation headquartered in Sunnyvale, California.",
+    "domain": "networking",
+    "_source": "data/extra_knowledge/crawl_corporate_network_security_20260328_082759.json"
+  },
+  {
+    "question": "What is address prefix 64:ff9b::/96?",
+    "answer": "The address prefix 64:ff9b::/96 is a class of IPv4-embedded IPv6 addresses for use in NAT64 transition methods.",
+    "domain": "networking",
+    "_source": "data/extra_knowledge/crawl_vpn_technologies_20260328_090830.json"
+  },
+  {
+    "question": "What is Routing Protocol for Low-Power and Lossy Networks?",
+    "answer": "Routing Protocol for Low-Power and Lossy Networks is a routing protocol for wireless networks with low power consumption and generally susceptible to packet loss.",
+    "domain": "networking",
+    "_source": "data/extra_knowledge/crawl_network_protocols_20260328_082514.json"
+  },
+  {
+    "question": "What is a site-to-site VPN?",
+    "answer": "A site-to-site VPN creates a permanent encrypted IPsec tunnel between two networks (e.g., headquarters and branch office). Traffic is encrypted at the gateway router/firewall transparently to end users.",
+    "domain": "security",
+    "_source": "builtin"
+  },
+  {
+    "question": "What is IMAP?",
+    "answer": "IMAP (Internet Message Access Protocol) retrieves email from a server while keeping messages stored server-side, allowing multi-device access.",
+    "domain": "internet",
+    "_source": "builtin"
+  },
+  {
+    "question": "Tell me about The Cyber Resilience Act",
+    "answer": "The Cyber Resilience Act stresses security throughout the life cycles of products in the European Union, which is in line with SbD principles.",
+    "domain": "general",
+    "_source": "data/extra_knowledge/crawl_corporate_network_security_20260328_082759.json"
+  },
+  {
+    "question": "What is a next-generation firewall?",
+    "answer": "An NGFW combines traditional firewall with application awareness (DPI), IPS, URL filtering, malware sandboxing, SSL inspection, and user identity integration. Vendors: Palo Alto, Fortinet FortiGate, Cisco Firepower, Check Point.",
+    "domain": "security",
+    "_source": "builtin"
+  },
+  {
+    "question": "How safe are Wi-Fi Hotspots? Because WPA 2 is compromised, is there any other security protocol for Wi-Fi?",
+    "answer": "WPA 2 can be cracked using Aircrack-ng in Kali Linux. Is there any other security protocol for Wi-Fi which is not compromised?",
+    "domain": "wifi",
+    "_source": "data/extra_knowledge/forum_wi-fi_security_20260328_095706.json"
+  },
+  {
+    "question": "What is This protocol?",
+    "answer": "This protocol is based on 802.1X and helps minimize the original security flaws by using WEP and a sophisticated key management system.",
+    "domain": "wifi_security",
+    "_source": "data/extra_knowledge/crawl_corporate_network_security_20260328_082759.json"
+  },
+  {
+    "question": "What is LDAP?",
+    "answer": "LDAP (Lightweight Directory Access Protocol) is used to query and modify directory services like Active Directory, organizing entries in a hierarchical tree.",
+    "domain": "intranet",
+    "_source": "builtin"
+  },
+  {
+    "question": "What is I read about kill switch, but after some internet searches I found out that?",
+    "answer": "I read about kill switch, but after some internet searches I found out that is not implemented in OpenVPN.",
+    "domain": "networking",
+    "_source": "data/extra_knowledge/forum_vpn_setup_20260328_100546.json"
+  },
+  {
+    "question": "What is Networks?",
+    "answer": "Networks are typically managed by the organizations that own them.",
+    "domain": "general",
+    "_source": "data/extra_knowledge/crawl_corporate_network_security_20260328_082759.json"
+  },
+  {
+    "question": "What is Nokia Networks?",
+    "answer": "Nokia Networks is Nokia Corporation's largest division.",
+    "domain": "general",
+    "_source": "data/extra_knowledge/crawl_cloud_networking_20260328_090327.json"
+  },
+  {
+    "question": "Tell me about Routing Information Protocol",
+    "answer": "== Development of distance-vector routing ==\nThe oldest routing protocol, and the oldest distance-vector protocol, is version 1 of the Routing Information Protocol (RIPv1).",
+    "domain": "networking",
+    "_source": "data/extra_knowledge/crawl_network_protocols_20260328_082514.json"
+  },
+  {
+    "question": "What is SMTP?",
+    "answer": "SMTP (Simple Mail Transfer Protocol) is used to send emails between servers on port 25/587. It handles outgoing mail; POP3/IMAP handle retrieval.",
+    "domain": "internet",
+    "_source": "builtin"
+  },
+  {
+    "question": "What is SSH?",
+    "answer": "SSH (Secure Shell) is a protocol for secure remote login and command execution over an encrypted channel, typically on port 22.",
+    "domain": "internet",
+    "_source": "builtin"
+  },
+  {
+    "question": "Tell me about Neural Networks",
+    "answer": "Review of Neural Networks in Materials Science Archived 7 June 2015 at the Wayback Machine\nArtificial Neural Networks Tutorial in three languages (Univ.",
+    "domain": "general",
+    "_source": "data/extra_knowledge/crawl_corporate_network_security_20260328_082759.json"
+  },
+  {
+    "question": "What is This communication?",
+    "answer": "This communication is governed by well-understood protocols, which can be embedded in the process code itself.",
+    "domain": "general",
+    "_source": "data/extra_knowledge/crawl_network_protocols_20260328_082514.json"
+  },
+  {
+    "question": "Tell me about Arista Networks",
+    "answer": "Ullal was named by Forbes magazine as \"one of the top five most influential people in the networking industry today\" for her work at Arista Networks.",
+    "domain": "general",
+    "_source": "data/extra_knowledge/crawl_cloud_networking_20260328_083140.json"
+  },
+  {
+    "question": "What does This protocol provide?",
+    "answer": "This protocol allows for a secure transport of data, passwords, and encryption keys without the need of a certificate server.",
+    "domain": "security",
+    "_source": "data/extra_knowledge/crawl_corporate_network_security_20260328_082759.json"
+  },
+  {
+    "question": "What is REST?",
+    "answer": "REST (Representational State Transfer) is an architectural style for web APIs using standard HTTP methods (GET, POST, PUT, DELETE) on resources identified by URLs.",
+    "domain": "internet",
+    "_source": "builtin"
+  },
+  {
+    "question": "Firewall Policies vs Firewall Rules?",
+    "answer": "I just want to understand some concepts related to the firewall. Is there any difference between saying firewall policies and firewall rules? Can we say a firewall includes a set of policies each of which defines a set of special rules?\n\nThank you.",
+    "domain": "security",
+    "_source": "data/extra_knowledge/forum_firewall_configuration_20260328_100252.json"
+  },
+  {
+    "question": "What is ARP?",
+    "answer": "ARP (Address Resolution Protocol) maps IP addresses to MAC addresses on a local network, allowing Layer 2 frame delivery.",
+    "domain": "networking",
+    "_source": "builtin"
+  },
+  {
+    "question": "What is RIP?",
+    "answer": "RIP (Routing Information Protocol) is a distance-vector protocol using hop count (max 15). RIPv2 adds CIDR and authentication. Simple but slow convergence — replaced by OSPF/EIGRP in enterprise networks.",
+    "domain": "networking",
+    "_source": "builtin"
+  },
+  {
+    "question": "What is x+1, and the sequence number that the server chooses for the packet?",
+    "answer": "x+1, and the sequence number that the server chooses for the packet is another random number, y.",
+    "domain": "general",
+    "_source": "data/extra_knowledge/crawl_network_protocols_20260328_082514.json"
+  },
+  {
+    "question": "What is In fact, avoiding NAT complications?",
+    "answer": "In fact, avoiding NAT complications is practically a requirement when designing new higher-layer protocols today.",
+    "domain": "networking",
+    "_source": "data/extra_knowledge/crawl_vpn_technologies_20260328_090830.json"
+  },
+  {
+    "question": "What is the internet?",
+    "answer": "The internet is a global network of interconnected networks using the TCP/IP protocol suite, enabling communication and data exchange worldwide.",
+    "domain": "internet",
+    "_source": "builtin"
+  },
+  {
+    "question": "What is MPLS?",
+    "answer": "MPLS (Multiprotocol Label Switching) routes traffic using short labels instead of long IP lookups, enabling traffic engineering, VPNs (L3VPN, L2VPN), and QoS. Being replaced by SD-WAN in many enterprise WANs.",
+    "domain": "networking",
+    "_source": "builtin"
+  },
+  {
+    "question": "What can this AI do?",
+    "answer": "I can answer questions about networking, Wi-Fi security, corporate wireless policies, internet protocols, intranet, enterprise security, troubleshooting, and more. I was trained on a curated knowledge base using a neural network built with only NumPy.",
+    "domain": "general",
+    "_source": "builtin"
+  },
+  {
+    "question": "What is AWS services?",
+    "answer": "AWS services are delivered to customers via a network of AWS server farms located throughout the world.",
+    "domain": "general",
+    "_source": "data/extra_knowledge/crawl_cloud_networking_20260328_083140.json"
+  },
+  {
+    "question": "What is 802.1X wired authentication?",
+    "answer": "802.1X works on wired ports too — the switch acts as authenticator, blocking traffic until the client authenticates via RADIUS. Used to prevent unauthorized devices from plugging into corporate Ethernet jacks. Often combined with MAB for non-802.1X devices.",
+    "domain": "security",
+    "_source": "builtin"
+  },
+  {
+    "question": "What is protocol stack or network stack?",
+    "answer": "The protocol stack or network stack is an implementation of a computer networking protocol suite or protocol family.",
+    "domain": "general",
+    "_source": "data/extra_knowledge/crawl_network_protocols_20260328_082514.json"
+  },
+  {
+    "question": "What is TLS?",
+    "answer": "TLS (Transport Layer Security) is a cryptographic protocol that provides encryption, authentication, and integrity for data in transit. It replaced SSL.",
+    "domain": "internet",
+    "_source": "builtin"
+  },
+  {
+    "question": "Tell me about Cato Networks",
+    "answer": "== History ==\nCato Networks was founded in 2015 in Tel Aviv, Israel, by Shlomo Kramer, co-founder of Checkpoint and Imperva, and Gur Shatz, a co-founder of networking company Incapsula.",
+    "domain": "general",
+    "_source": "data/extra_knowledge/crawl_cloud_networking_20260328_083140.json"
+  },
+  {
+    "question": "What is These networks?",
+    "answer": "These networks are deployed over ten locations, each connected by multiple 100 Gigabit Ethernet or 10 Gigabit Ethernet connections over fibre networks.",
+    "domain": "networking",
+    "_source": "data/extra_knowledge/crawl_dns_and_internet_infrastructure_20260328_090526.json"
+  },
+  {
+    "question": "What is example of an IP addresses in the reverse DNS zone?",
+    "answer": "An example of an IP addresses in the reverse DNS zone is 166.188.77.208.in-addr.arpa, which represents the address 208.77.188.166 and resolves to the domain name www.example.com.",
+    "domain": "networking",
+    "_source": "data/extra_knowledge/crawl_dns_and_internet_infrastructure_20260328_090526.json"
+  }
+]

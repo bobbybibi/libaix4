@@ -6,50 +6,14 @@
     "source": "stackexchange:serverfault:1050812"
   },
   {
-    "question": "Tell me about LAN",
-    "answer": "I've made a web-application which I installed on a dedicated server connected to our company's LAN.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:1050812"
-  },
-  {
     "question": "What is If I understand correctly?",
     "answer": "If I understand correctly is is because the wi-fi router has DHCP server enabled for security reasons.",
     "domain": "networking",
     "source": "stackexchange:serverfault:1050812"
   },
   {
-    "question": "Tell me about IT",
-    "answer": "I tried talking to our IT services provider, but they look at me like I speak chinese to them.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:1050812"
-  },
-  {
-    "question": "What is What?",
-    "answer": "What is the best cause of action if I wanted my server to be accessable from wi-fi?.",
-    "domain": "wifi",
-    "source": "stackexchange:serverfault:1050812"
-  },
-  {
     "question": "Upgrading from small business Wi-Fi network access points with individual SSIDs?",
     "answer": "Our small business currently has 3 wireless access points around the building, each with their own SSID.  Security is done with WEP (ick) and MAC address filtering (double ick).\n\nWe are trying to reconfigure the setup, with these goals:\n\n\nWi-Fi roaming between the access points\nuser-based authentication that isn't as annoying as MAC address filtering.",
-    "domain": "wifi",
-    "source": "stackexchange:serverfault:138102"
-  },
-  {
-    "question": "Tell me about SSID",
-    "answer": "Our small business currently has 3 wireless access points around the building, each with their own SSID.",
-    "domain": "wifi",
-    "source": "stackexchange:serverfault:138102"
-  },
-  {
-    "question": "What is Security?",
-    "answer": "Security is done with WEP (ick) and MAC address filtering (double ick).",
-    "domain": "networking",
-    "source": "stackexchange:serverfault:138102"
-  },
-  {
-    "question": "Tell me about MAC",
-    "answer": "Wi-Fi roaming between the access points\nuser-based authentication that isn't as annoying as MAC address filtering.",
     "domain": "wifi",
     "source": "stackexchange:serverfault:138102"
   },
@@ -63,12 +27,6 @@
     "question": "What is routers?",
     "answer": "The routers are consumer-grade linksys routers, is it possible to do this without getting new hardware?.",
     "domain": "networking",
-    "source": "stackexchange:serverfault:138102"
-  },
-  {
-    "question": "Tell me about RADIUS",
-    "answer": "We have several on-site Windows servers, can one of them be set up as a RADIUS server, or is that best left to a dedicated machine (again, using existing hardware is good).",
-    "domain": "wifi_security",
     "source": "stackexchange:serverfault:138102"
   },
   {
@@ -108,18 +66,6 @@
     "source": "stackexchange:serverfault:704230"
   },
   {
-    "question": "Tell me about HP",
-    "answer": "HP recently released a large number of firmware updates for JetDirect devices.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:704230"
-  },
-  {
-    "question": "What is There?",
-    "answer": "There is no changelog provided.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:704230"
-  },
-  {
     "question": "What is Curiously, many obsolete (e.g., 802.11b) devices?",
     "answer": "Curiously, many obsolete (e.g., 802.11b) devices are in the list, and the last time a firmware update was provided for some of these was 2004.",
     "domain": "wifi",
@@ -141,24 +87,6 @@
     "question": "Tell me about Update\nBased",
     "answer": "Update\nBased on information in the page supplied in the accepted answer, there were several security updates and new features introduced in these firmware updates.",
     "domain": "general",
-    "source": "stackexchange:serverfault:704230"
-  },
-  {
-    "question": "Tell me about SSL",
-    "answer": "Among those for the 280m, these were the updates I was most interested in, as they appear to several SSL vulnerabilities and add WPA compatibility:.",
-    "domain": "security",
-    "source": "stackexchange:serverfault:704230"
-  },
-  {
-    "question": "Tell me about IP",
-    "answer": "Automatic IP Addressing\nEthernet Locally Administered Addressing (LAA)\nImport/Export of Certificates for SSL\nCERT Vulnerability Note VU#412115 has been fixed\nFTP and DHCP improvements, SPX and TCP improvements.",
-    "domain": "networking",
-    "source": "stackexchange:serverfault:704230"
-  },
-  {
-    "question": "Tell me about WPA",
-    "answer": "Wi-Fi Certification for 802.11b and WPA for the 680n (J6058A), 380x (J6061A), 280m (J6044A) 802.11b wireless print servers.",
-    "domain": "wifi",
     "source": "stackexchange:serverfault:704230"
   },
   {
@@ -188,12 +116,6 @@
   {
     "question": "What is DB Security Groups?",
     "answer": "DB Security Groups are only needed when the EC2-Classic Platform is supported.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:1011144"
-  },
-  {
-    "question": "Tell me about VPC",
-    "answer": "Instead, use VPC Security Groups to control access to your DB Instances.",
     "domain": "general",
     "source": "stackexchange:serverfault:1011144"
   },
@@ -246,12 +168,6 @@
     "source": "stackexchange:serverfault:60794"
   },
   {
-    "question": "Tell me about VPN",
-    "answer": "I just want my clients to connect to the VPN without having to disable their firewall settings, without changing global configuration with potential side-effects (the \"security policy\" solution) and without having to look at an ugly \"Unknown connection\" in the Network and sharing center.",
-    "domain": "security",
-    "source": "stackexchange:serverfault:60794"
-  },
-  {
     "question": "Tell me about HKLM",
     "answer": "I tried to check what was going on in the registry (HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\NetworkList is interesting), but I still didn't find a way to \"force\" the OpenVPN connection to be assigned to a logical network.",
     "domain": "security",
@@ -264,12 +180,6 @@
     "source": "stackexchange:serverfault:145405"
   },
   {
-    "question": "Tell me about Windows Server",
-    "answer": "I have a windows 7 professional (spanish, 32-bits) laptop trying to join a Windows Server 2003 (english, 64-bits) domain.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:145405"
-  },
-  {
     "question": "Tell me about SRV",
     "answer": "The Win7 correctly detects the SRV record, finding the proper domain controller, but then the join fails with the error message (snippet, because the error is in spanish).",
     "domain": "general",
@@ -279,12 +189,6 @@
     "question": "Tell me about An Active Directory Domain Controller",
     "answer": "An Active Directory Domain Controller for This Domain Could Not be Contacted.",
     "domain": "intranet",
-    "source": "stackexchange:serverfault:145405"
-  },
-  {
-    "question": "What is DNS?",
-    "answer": "The DNS is correctly set, and client can ping by name and IP the server, the server can ping the client by IP.",
-    "domain": "internet",
     "source": "stackexchange:serverfault:145405"
   },
   {
@@ -302,12 +206,6 @@
   {
     "question": "What is Also the times?",
     "answer": "Also the times are in sync between the server and the client.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:145405"
-  },
-  {
-    "question": "Tell me about DC",
-    "answer": "netdiag /q for the DC\ndcdiag on the DC\nipconfig /all on the Win 7 client.",
     "domain": "general",
     "source": "stackexchange:serverfault:145405"
   },
@@ -360,33 +258,9 @@
     "source": "stackexchange:serverfault:145405"
   },
   {
-    "question": "Tell me about DNS",
-    "answer": ": medios desconectados\n   Sufijo DNS espec¡fico para la conexi¢n.",
-    "domain": "internet",
-    "source": "stackexchange:serverfault:145405"
-  },
-  {
     "question": "OpenVPN over stunnel not working when forwarded through router but working internally?",
     "answer": "I'm trying to set up OpenVPN over stunnel on my personal server. \n\nopenvpn is in tcp and connects fine outside of stunnel, even when connecting through a port forward on the router. \n\nOpenVPN wrapped in stunnel works fine when not connecting through the port forward on the router, i.e. stunnel sends to internal IP address.",
     "domain": "networking",
-    "source": "stackexchange:serverfault:968985"
-  },
-  {
-    "question": "What is openvpn?",
-    "answer": "openvpn is in tcp and connects fine outside of stunnel, even when connecting through a port forward on the router.",
-    "domain": "networking",
-    "source": "stackexchange:serverfault:968985"
-  },
-  {
-    "question": "Tell me about SSH",
-    "answer": "stunnel appears to be working fine when connecting through a forwarded port on the router, I set up an stunnel for SSH and that connects fine, I even left it in a while loop outputting to the console for a couple of minutes to see if if would fail.",
-    "domain": "networking",
-    "source": "stackexchange:serverfault:968985"
-  },
-  {
-    "question": "Tell me about DHE",
-    "answer": "[openvpn]\naccept = 44444\nconnect = 127.0.0.1:1194\nciphers = DHE-RSA-AES256-SHA256.",
-    "domain": "security",
     "source": "stackexchange:serverfault:968985"
   },
   {
@@ -414,12 +288,6 @@
     "source": "stackexchange:serverfault:1048095"
   },
   {
-    "question": "Tell me about HTTP",
-    "answer": "However, as soon as I try to send an HTTP/HTTPS request, it is blocked, somehow...",
-    "domain": "internet",
-    "source": "stackexchange:serverfault:1048095"
-  },
-  {
     "question": "Tell me about Big Sur",
     "answer": "I have been trying using OpenVPN Client and Tunnelblick (in all cases, the client is running on my Macbook pro with macOS Big Sur), and I get the same issue with both.",
     "domain": "security",
@@ -434,18 +302,6 @@
   {
     "question": "Different Wi-Fi security levels under same private subnet?",
     "answer": "I'm working on an assignment and I'm given a hypothetical scenario where:\n\nA company has a local subnet where everything shares the flat address space 192.168.0.0/8 (this means that any device can communicate with any other device else in the network). There are 2 sections: the administration buildings and the factory. The machines in the factory have their own Programmable Logic Controller (PLC) and they use open (unencrypted) Wifi to communicate.",
-    "domain": "wifi",
-    "source": "stackexchange:networkengineering:62828"
-  },
-  {
-    "question": "Tell me about PLC",
-    "answer": "The machines in the factory have their own Programmable Logic Controller (PLC) and they use open (unencrypted) Wifi to communicate.",
-    "domain": "wifi",
-    "source": "stackexchange:networkengineering:62828"
-  },
-  {
-    "question": "Tell me about PCs",
-    "answer": "The administration PCs also use Wifi, but with WPA2 security.",
     "domain": "wifi",
     "source": "stackexchange:networkengineering:62828"
   },
@@ -510,21 +366,9 @@
     "source": "stackexchange:networkengineering:58418"
   },
   {
-    "question": "Tell me about VLAN",
-    "answer": "I'm curious if I can use a VLAN or a setting on my Wi-Fi AP to prevent the wired devices from being detected with Kismet (or some other secure method).",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:58418"
-  },
-  {
     "question": "What is way I understand it?",
     "answer": "The way I understand it is that the only MAC addresses that any wardriver should see when scanning my Wi-Fi network would be the 2 phones and my Wi-Fi Access Point.",
     "domain": "wifi",
-    "source": "stackexchange:networkengineering:58418"
-  },
-  {
-    "question": "What is This?",
-    "answer": "This is a huge security risk I am hoping to mitigate.",
-    "domain": "troubleshooting",
     "source": "stackexchange:networkengineering:58418"
   },
   {
@@ -534,20 +378,8 @@
     "source": "stackexchange:networkengineering:58418"
   },
   {
-    "question": "802.1X for Wi-FI?",
-    "answer": "I have a hidden SSID network. I know that although the SSID is hidden, someone can sniff the Wi-Fi channels to get my SSID, and with that SSID he can use some OpenWRT-ish things to spoof my Wi-Fi network to force me type my password to authenticate his device. That is unacceptable, and I am looking for better security for my Wi-Fi network.\n\nWhat options do I have? How can 802.1X be used, I need to keep it as simple as possible.",
-    "domain": "wifi",
-    "source": "stackexchange:networkengineering:28206"
-  },
-  {
     "question": "What is I know that although the SSID?",
     "answer": "I know that although the SSID is hidden, someone can sniff the Wi-Fi channels to get my SSID, and with that SSID he can use some OpenWRT-ish things to spoof my Wi-Fi network to force me type my password to authenticate his device.",
-    "domain": "wifi",
-    "source": "stackexchange:networkengineering:28206"
-  },
-  {
-    "question": "What is That?",
-    "answer": "That is unacceptable, and I am looking for better security for my Wi-Fi network.",
     "domain": "wifi",
     "source": "stackexchange:networkengineering:28206"
   },
@@ -555,12 +387,6 @@
     "question": "Tell me about DWS",
     "answer": "I have D-Link DWS-4026 that manages D-Link wifi access points, user credentials are stored in AD.",
     "domain": "wifi",
-    "source": "stackexchange:networkengineering:28206"
-  },
-  {
-    "question": "What is My AD?",
-    "answer": "My AD is not the CA of my infrastructure, I can change that, should I?.",
-    "domain": "general",
     "source": "stackexchange:networkengineering:28206"
   },
   {
@@ -573,12 +399,6 @@
     "question": "What does My ISP provide?",
     "answer": "My ISP provides a combo box (ONT + router + switch + Wi-Fi) which they can manage remotely, likely using TR-069.",
     "domain": "networking",
-    "source": "stackexchange:networkengineering:62826"
-  },
-  {
-    "question": "What is If it?",
-    "answer": "If it is the case, it is most likely a security risk if I use that box in a production environment.",
-    "domain": "general",
     "source": "stackexchange:networkengineering:62826"
   },
   {
@@ -603,12 +423,6 @@
     "question": "Tell me about IOS",
     "answer": "I can get Win10/IOS devices to successfully redirect however it's a mixed result once devices are authenticated by CWA (hotspot/AUP).",
     "domain": "general",
-    "source": "stackexchange:networkengineering:59841"
-  },
-  {
-    "question": "Tell me about DHCP",
-    "answer": "Clients drop the Wi-fi connection with CoA terminate, but do not rejoin and if they do rejoin they do not get an DHCP address any longer.",
-    "domain": "networking",
     "source": "stackexchange:networkengineering:59841"
   },
   {
@@ -678,12 +492,6 @@
     "source": "stackexchange:security:150434"
   },
   {
-    "question": "What is So what?",
-    "answer": "So what is safer, Bluetooth or Wi-Fi?.",
-    "domain": "wifi",
-    "source": "stackexchange:security:150434"
-  },
-  {
     "question": "How are Wi-Fi access points verified?",
     "answer": "Most Wi-Fi security is focussed on blocking authorised access to the network providing a wireless access point; but considering the smorgasbord of background app-to-cloud communication on a mobile phone, connecting to verified Wi-Fi access points is as least as important as SSL/TLS website verification.\n\nHow, if at all, are Wi-Fi access points verified? Is any of this verification implicit to the Wi-Fi standard?",
     "domain": "wifi",
@@ -714,18 +522,6 @@
     "source": "stackexchange:security:147689"
   },
   {
-    "question": "Tell me about PC",
-    "answer": "I know that turning on Airplane Mode disables Bluetooth; however, as far as connecting to the Internet, is there any fundamental security difference in turning off Wi-Fi versus turning on Airplane Mode on my PC running Windows 10?.",
-    "domain": "wifi",
-    "source": "stackexchange:security:147689"
-  },
-  {
-    "question": "How safe are Wi-Fi Hotspots? Because WPA 2 is compromised, is there any other security protocol for Wi-Fi?",
-    "answer": "WPA 2 can be cracked using Aircrack-ng in Kali Linux. Is there any other security protocol for Wi-Fi which is not compromised?",
-    "domain": "wifi",
-    "source": "stackexchange:security:143268"
-  },
-  {
     "question": "Wi-fi security using WPA or WEP?",
     "answer": "In current years we have used WPA and WPA 2 for the encryption of data sent over an 802.11 network. But in the past WEP is used . From time to time, many people say that WEP (Wired Equivalent Privacy) is a rather poor way of protecting data sent over an 802.11 wireless network.  Is there any reason behind?  What is the advantage of using WPA for the encryption of data sent over an 802.11 network ?",
     "domain": "wifi",
@@ -740,12 +536,6 @@
   {
     "question": "Is HTTPS secure over public Wi-Fi with an expired certificate?",
     "answer": "I am staying at a hotel with free public Wi-Fi. To get Internet access I had to visit a web page and agree to the terms and conditions. This website has a security certificate, but it expired over a year ago.\n\nEvidently this means I can't verify the identity of the sign in page for the Wi-Fi.",
-    "domain": "internet",
-    "source": "stackexchange:security:117359"
-  },
-  {
-    "question": "Tell me about HTTPS",
-    "answer": "If I proceed to the page anyway, does this compromise the security of other HTTPS websites in any way (say by enabling MITM attacks)?.",
     "domain": "internet",
     "source": "stackexchange:security:117359"
   },
@@ -777,12 +567,6 @@
     "question": "Is WEP still a thing?",
     "answer": "I was studying the Wi-Fi security section for a pentesting certification the other day and there is an extensive part about cracking WEP. Is going in-depth on WEP cracking worth it anymore?\n\nAccording to this statistic: https://wigle.net/stats# about 7% of Wi-Fi networks still use WEP for encryption today. It's not a lot, but at the same time it is a lot considering that WEP was deprecated in 2004.\n\nThoughts?",
     "domain": "internet",
-    "source": "stackexchange:security:191060"
-  },
-  {
-    "question": "Tell me about WEP",
-    "answer": "I was studying the Wi-Fi security section for a pentesting certification the other day and there is an extensive part about cracking WEP.",
-    "domain": "wifi",
     "source": "stackexchange:security:191060"
   },
   {
@@ -936,12 +720,6 @@
     "source": "hackernews:2913071"
   },
   {
-    "question": "Tell me about TL",
-    "answer": "TL;DR: wireless communications can be attacked by injecting partial packets into the wireless stream.",
-    "domain": "wifi",
-    "source": "hackernews"
-  },
-  {
     "question": "What is discussed about Open Wi-Fi Security?",
     "answer": "Why can't open access wi-fi access points provide some sort of encryption? Couldn't the access point and clients use some form of public key cryptography for the local communication? Captive portals suck, I agree.",
     "domain": "security",
@@ -954,20 +732,8 @@
     "source": "hackernews"
   },
   {
-    "question": "Tell me about SSIDs",
-    "answer": "It would be nice if the standard allowed host names as SSIDs so you could have certificates for them.",
-    "domain": "security",
-    "source": "hackernews"
-  },
-  {
     "question": "What is Client isolation?",
     "answer": "Client isolation is nice but evil twins are a thing.The best practical solution is to use EAP-TLS, ideally you would have a captive portal that instructs clients to either run some whitelisted app/script or manually generate client certs (just an app is usually best imho).",
-    "domain": "wifi_security",
-    "source": "hackernews"
-  },
-  {
-    "question": "Tell me about EAP",
-    "answer": "But if you're allergic to captive portals, you can still do EAP-TLS with only server authentication(like we do with most of HTTPS sites!).Less practical: allow only VPN traffic.",
     "domain": "wifi_security",
     "source": "hackernews"
   },
@@ -996,12 +762,6 @@
     "source": "hackernews:46101391"
   },
   {
-    "question": "Tell me about TLS",
-    "answer": "After seeing \"TLS makes WiFi safe\" repeated endlessly, I built this to walk through a broader thinking distance.",
-    "domain": "security",
-    "source": "hackernews"
-  },
-  {
     "question": "What is /conversation format?",
     "answer": "The /conversation format\n  is for people who just want the technical explanation without the assessment.",
     "domain": "networking",
@@ -1014,12 +774,6 @@
     "source": "hackernews"
   },
   {
-    "question": "Tell me about CA",
-    "answer": "Does certificate pinning protect your device's protocols and services that do not use certificate pinning?Regular CA verification already prevents MITM attacks.",
-    "domain": "security",
-    "source": "hackernews"
-  },
-  {
     "question": "What is only thing certificate pinning does?",
     "answer": "The only thing certificate pinning does is make it harder for you to legitimately inspect your own apps' traffic.> Do most personal computers have the same security controls as corporate managed devices (hardened OS builds, EDR, MDM, DLP, defense in depth)?DLP, etc.",
     "domain": "security",
@@ -1028,12 +782,6 @@
   {
     "question": "Is WPA3 mixed mode less secure than pure WPA3?",
     "answer": "I want to use WPA3 alone, but it seems that a lot of devices I have only support WPA2, so I have to enable WPA2 in one way or another. Currently, I have created two Wi-Fi networks on the same router: one for WPA3-SAE and one for WPA2-PSK with different passwords.",
-    "domain": "wifi_security",
-    "source": "stackexchange:security:265025"
-  },
-  {
-    "question": "Tell me about SAE",
-    "answer": "Currently, I have created two Wi-Fi networks on the same router: one for WPA3-SAE and one for WPA2-PSK with different passwords.",
     "domain": "wifi_security",
     "source": "stackexchange:security:265025"
   },
@@ -1074,12 +822,6 @@
     "source": "stackexchange:security:272987"
   },
   {
-    "question": "What is I heard wpa3?",
-    "answer": "I heard wpa3 is more secure with mfp.",
-    "domain": "wifi_security",
-    "source": "stackexchange:security:272987"
-  },
-  {
     "question": "What is Is sae_require_mfp useless with ieee80211w=2 or?",
     "answer": "Is sae_require_mfp useless with ieee80211w=2 or is better to enable it?.",
     "domain": "general",
@@ -1110,18 +852,6 @@
     "source": "stackexchange:security:188707"
   },
   {
-    "question": "Tell me about OWE",
-    "answer": "When WPA3 has a reasonable level of market penetration, one of its key selling points is Opportunistic Wireless Encryption (OWE).",
-    "domain": "wifi",
-    "source": "stackexchange:security:188707"
-  },
-  {
-    "question": "Tell me about PSK",
-    "answer": "With WPA2 PSK (and some forms of Enterprise), I could tell whether the server also knew the right password.",
-    "domain": "wifi_security",
-    "source": "stackexchange:security:188707"
-  },
-  {
     "question": "What is I suspect that many businesses?",
     "answer": "I suspect that many businesses are only using a PSK for their public WiFi because that's the only way to encrypt data with WPA2.",
     "domain": "wifi_security",
@@ -1137,12 +867,6 @@
     "question": "Is WPA2-Enterprise a more secure protocol designed to protect WiFi communication compared to WPA3-Personal?",
     "answer": "Perhaps an unconventional comparison. If we ignore device compatibility for a moment and compare security features of WPA3(-three)-Personal with WPA2(-two)-Enterprise. Which is most secure and why is it? Not just in terms of encryption strength but also hardened against different attacks such as replay attacks.\nI've tried to compare some security features of both. My list might be incomplete or contain mistakes. Please edit the table in this question for reference, if you're certain it is.",
     "domain": "wifi_security",
-    "source": "stackexchange:security:272965"
-  },
-  {
-    "question": "What is Which?",
-    "answer": "Which is most secure and why is it?.",
-    "domain": "general",
     "source": "stackexchange:security:272965"
   },
   {
@@ -1167,12 +891,6 @@
     "question": "WiFi security in 2018?",
     "answer": "On my wireless network I have implemented WPA2 protocol with AES encryption. Last year there was several warnings that WPA2 is broken, hacked. Now there are announcements that WPA3 is comming in 2018. But until it comes, and everyone accepts it (wifi devices and clients) it may pass much more time. My wifi equipment has the possibility for RADIUS authentication. Should I implement it now, while waiting WPA3, or maybe RADIUS authentication could be permanently safe solution?",
     "domain": "wifi_security",
-    "source": "stackexchange:security:181758"
-  },
-  {
-    "question": "Tell me about AES",
-    "answer": "On my wireless network I have implemented WPA2 protocol with AES encryption.",
-    "domain": "wifi",
     "source": "stackexchange:security:181758"
   },
   {
@@ -1275,12 +993,6 @@
     "question": "What does Wi-Fi Easy Connect™ provide?",
     "answer": "Wi-Fi Easy Connect™ enables users to securely add any device to a Wi-Fi network using another device with a more robust interface, such as a smartphone, by simply scanning a product quick response (QR) code.",
     "domain": "wifi",
-    "source": "hackernews"
-  },
-  {
-    "question": "Tell me about WPS",
-    "answer": "Wi-Fi Easy Connect and WPA3 represent the latest evolution in Wi-Fi Alliance programs to ensure users receive a positive experience while remaining securely connected as the security landscape evolves.This is highly reminiscent of WPS.",
-    "domain": "networking",
     "source": "hackernews"
   },
   {
@@ -1392,18 +1104,6 @@
     "source": "hackernews"
   },
   {
-    "question": "Tell me about RPi",
-    "answer": "it's what we want all over > I hit the store and picked one up, then came home, tested it, and wrote the post.Some of us live in a different RPi 5 availability world apparently.",
-    "domain": "general",
-    "source": "hackernews"
-  },
-  {
-    "question": "Tell me about Raspberry Pi",
-    "answer": "Recent and related:Still no love for WPA3 on the Raspberry Pi 5 - https://news.ycombinator.com/item?id=38170980 - Nov 2023 (155 comments).",
-    "domain": "internet",
-    "source": "hackernews"
-  },
-  {
     "question": "What is discussed about Serious flaws leave WPA3 vulnerable to hacks that steal Wi-Fi passwords?",
     "answer": "For some reason I'm surprised we've had so many issues with Wi-Fi security.I don't know if it was addressed in WPA3 (or if it would be addressed there), but my understanding is that a good chunk of the protocol isn't authenticated at all, such as the de-auth packets.In a world with growing HTTPS support, OpenVPN, WireGuard, etc. and we can't secure a wifi network with a shared key? Downgrade attacks:WPA3 has a transitional mode which allows legacy WPA2 clients to connect.",
     "domain": "wifi",
@@ -1440,12 +1140,6 @@
     "source": "hackernews"
   },
   {
-    "question": "Tell me about IEEE",
-    "answer": "Why can't a Wi-Fi encryption standard be developed in the open and added to IEEE 802.11 as another annex?.",
-    "domain": "wifi",
-    "source": "hackernews"
-  },
-  {
     "question": "What is discussed about Trying to deploy WPA3 on my home network?",
     "answer": "Synology Routers support WPA3 by default Worried enough about security to deploy WPA3, but still uses a Galaxy S2? Even with LineageOS, aren't you still using ancient device drivers? Use WPA3-Enterprise (you can use Let's Encrypt to get a valid certificate so it works fine in a home environment).Don't use SAE (which is, indeed, an instantiation of Dragonfly). I have a strong suspicion that the way it is used, there will be a practical attack.",
     "domain": "networking",
@@ -1476,12 +1170,6 @@
     "source": "stackexchange:serverfault:56815"
   },
   {
-    "question": "Tell me about OR",
-    "answer": "Failed to authenticate\"\nWe absolve the error by shutting symantec down completely OR logging in locally and then logging out and logging in via network credentials (802.1x).",
-    "domain": "wifi_security",
-    "source": "stackexchange:serverfault:56815"
-  },
-  {
     "question": "PXE in an 802.1X environment?",
     "answer": "My organization is about to implement 802.1X on our enterprise, but we currently use PXE-based OS deployment sequences in SCCM.  I'm looking for a way to continue using PXE in an 802.1X environment.  Our infrastructure uses Cisco network gear running at 12.2 (or newer).  We are an all Windows network and all clients support 802.1X.  All new workstations have Intel AMT available (but not factory configured).",
     "domain": "networking",
@@ -1497,12 +1185,6 @@
     "question": "Tell me about PXE",
     "answer": "I'm looking for a way to continue using PXE in an 802.1X environment.",
     "domain": "wifi_security",
-    "source": "stackexchange:serverfault:212572"
-  },
-  {
-    "question": "What does Our infrastructure provide?",
-    "answer": "Our infrastructure uses Cisco network gear running at 12.2 (or newer).",
-    "domain": "general",
     "source": "stackexchange:serverfault:212572"
   },
   {
@@ -1530,12 +1212,6 @@
     "source": "stackexchange:serverfault:678416"
   },
   {
-    "question": "Tell me about Cisco Catalyst",
-    "answer": "I've got a Cisco Catalyst 2960 that I'm trying to configure for a remote office with 802.1X wired authentication.",
-    "domain": "wifi_security",
-    "source": "stackexchange:serverfault:678416"
-  },
-  {
     "question": "What is setup I'm going for?",
     "answer": "The setup I'm going for is Switch -> VoIP Phone via Internal Switch -> PC/Laptop (Domain Joined Win 7/8).",
     "domain": "networking",
@@ -1548,21 +1224,9 @@
     "source": "stackexchange:serverfault:678416"
   },
   {
-    "question": "Tell me about MAB",
-    "answer": "We are using Snom 300 handsets which do support 802.1X but it's not really feasible for us to configure it on all the handsets, so I've configured the switch to use MAB (MAC Authentication Bypass) for the phones.",
-    "domain": "networking",
-    "source": "stackexchange:serverfault:678416"
-  },
-  {
     "question": "What is This for the most part?",
     "answer": "This for the most part is working brilliantly, the handsets get authenticated and put into the VOICE domain and the VLAN policy is displaying 501, which is our voice VLAN.",
     "domain": "networking",
-    "source": "stackexchange:serverfault:678416"
-  },
-  {
-    "question": "What is Here?",
-    "answer": "Here is the 802.1x session into for that connected port:.",
-    "domain": "wifi_security",
     "source": "stackexchange:serverfault:678416"
   },
   {
@@ -1596,21 +1260,9 @@
     "source": "stackexchange:serverfault:58017"
   },
   {
-    "question": "Tell me about XP",
-    "answer": "Set-up:\nXP SP3\nNovell 4.91 SP5\nAuthenicate Via free-radius wirelessly\nNO 802.1x authentication via wire.",
-    "domain": "wifi_security",
-    "source": "stackexchange:serverfault:58017"
-  },
-  {
     "question": "802.1x, what is meant by \"port-based\"?",
     "answer": "I'm reading about 802.1X, mainly on Wikipedia, but can't quite get it. So here is a very basic question:\n\nWhat is meant, when they say that 802.1X is \"port-based\"?",
     "domain": "wifi_security",
-    "source": "stackexchange:serverfault:386149"
-  },
-  {
-    "question": "What is So here?",
-    "answer": "So here is a very basic question:.",
-    "domain": "general",
     "source": "stackexchange:serverfault:386149"
   },
   {
@@ -1632,12 +1284,6 @@
     "source": "stackexchange:serverfault:631778"
   },
   {
-    "question": "Tell me about NAP",
-    "answer": "I'm learning about NAP enforcement in Windows Server 2008 R2.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:631778"
-  },
-  {
     "question": "What does I understand that 802.1x wired NAP Enforcement provide?",
     "answer": "I understand that 802.1x wired NAP Enforcement uses switches to decide whether computers is compliant enough to go on network, or whether computer should go to remediation network.",
     "domain": "networking",
@@ -1647,18 +1293,6 @@
     "question": "linux 802.1x on a windows wired network?",
     "answer": "I'm looking to use my linux workstation on our company network, but i've been running into a few issues, specifically 802.1x i believe. \n\nI'm root on my machine and a windows domain admin so i should be able to access whatever i need to for this to work. Currently my linux machine has restricted connectivity which leads me to believe it's been put into a default vlan for non 802.1x clients.\n\nI guess my overall question is: How can i make my linux machine use 802.",
     "domain": "networking",
-    "source": "stackexchange:serverfault:667234"
-  },
-  {
-    "question": "What is network?",
-    "answer": "The network is a typical windows domain and uses machine accounts as well as user ones.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:667234"
-  },
-  {
-    "question": "Tell me about VM",
-    "answer": "Idea 1, grab a valid key off a windows machine / domain ca machine\n  I ran a windows VM upon the linux machine, and joined that to the domain, thinking this would produce a valid client cert i could nab for the linux machine.",
-    "domain": "general",
     "source": "stackexchange:serverfault:667234"
   },
   {
@@ -1704,18 +1338,6 @@
     "source": "stackexchange:networkengineering:36229"
   },
   {
-    "question": "Tell me about NAC",
-    "answer": "As long as I know NAC tries to unify some endpoint security stuff (virus scanners, IDS, etc) with authentication.",
-    "domain": "wifi_security",
-    "source": "stackexchange:networkengineering:36229"
-  },
-  {
-    "question": "Tell me about IDS",
-    "answer": "Does it provide policies or something so that one can use virus scanners or IDS with 802.1X?.",
-    "domain": "wifi_security",
-    "source": "stackexchange:networkengineering:36229"
-  },
-  {
     "question": "What is I think NAP?",
     "answer": "I think NAP is more or less the same thing as NAC, but it is Windows variant.",
     "domain": "wifi_security",
@@ -1724,12 +1346,6 @@
   {
     "question": "Is 802.1x port security enforces IP uniqueness?",
     "answer": "I know that 802.1x can track MAC addresses. If MAC address is used on one port then you can prohibit it from being used on another port.\n\nCan 802.11x protocol do the same thing for IP addresses?\n\nMy underlying question which triggered that one. Can a user connect to 802.1x using his/her credentials and after change IP address to somebody else IP address to get access to some resources which are protected based on IP address?",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:30661"
-  },
-  {
-    "question": "What is If MAC address?",
-    "answer": "If MAC address is used on one port then you can prohibit it from being used on another port.",
     "domain": "networking",
     "source": "stackexchange:networkengineering:30661"
   },
@@ -1776,12 +1392,6 @@
     "source": "stackexchange:networkengineering:54326"
   },
   {
-    "question": "What is So my question?",
-    "answer": "So my question is can I do 802.1X without a router and if so is there information on how to configure a server if needed?.",
-    "domain": "networking",
-    "source": "stackexchange:networkengineering:54326"
-  },
-  {
     "question": "Juniper: WakeOnLan over 802.1x without using default VLAN?",
     "answer": "Case\n\nWe have a working 802.1x configuration on all our access ports. I want to enable WakeOnLan, but have no idea, how to target computers with Magic Packet.\n\nTests\n\nWe tried to send Magic Packet over 802.1x' Guest VLAN, but it soon prooved to be working only in certain situations, eg. when client computer was connected through VoIP Phone:\n\nInterface    State  VLAN members        Tag   Tagging  Blocking\nge-0/0/3.",
     "domain": "networking",
@@ -1803,12 +1413,6 @@
     "question": "802.1x on Access VLAN only, not on Voice VLAN?",
     "answer": "I've successfully configured a Cisco 3750G to perform the authenticator function of the 802.1x process. I have a test Win7 machine as a supplicant and a Windows 2008 server running NPS as the Authentication Server. The Win7 machine is able to successfully authenticate. \n\nI've now hooked up a Cisco 7941 IP Phone in front of the Win7 machine, configured the switch with the swtichport voice vlan command, I plug it in and it is granted power, but the port quickly moves to a down state.",
     "domain": "networking",
-    "source": "stackexchange:networkengineering:12465"
-  },
-  {
-    "question": "Tell me about NPS",
-    "answer": "I have a test Win7 machine as a supplicant and a Windows 2008 server running NPS as the Authentication Server.",
-    "domain": "intranet",
     "source": "stackexchange:networkengineering:12465"
   },
   {
@@ -1878,12 +1482,6 @@
     "source": "stackexchange:security:154087"
   },
   {
-    "question": "What does user provide?",
-    "answer": "The user uses a certificate to authenticate to the server.",
-    "domain": "security",
-    "source": "stackexchange:security:154087"
-  },
-  {
     "question": "What is For my setup, these kind of attacks can be ignored since they?",
     "answer": "For my setup, these kind of attacks can be ignored since they are either directly connected (physically) or have a direct IPSec VPN connection.",
     "domain": "security",
@@ -1893,18 +1491,6 @@
     "question": "Is it possible for an 802.1x network (PEAP/MSCHAPv2) to have no certificate?",
     "answer": "Is it possible for an 802.1x network (PEAP/MSCHAPv2) to have no certificate (CA, user, or otherwise)?\n\nIf so, what are the security implications? \n\nThe reason I ask is: I'm regularly connecting to a particular organization's WLAN and I'm under the impression that there is no certificate in use. I don't recall accepting one, and the client configuration looks like this:",
     "domain": "wifi_security",
-    "source": "stackexchange:security:182530"
-  },
-  {
-    "question": "Tell me about PEAP",
-    "answer": "Is it possible for an 802.1x network (PEAP/MSCHAPv2) to have no certificate (CA, user, or otherwise)?.",
-    "domain": "wifi_security",
-    "source": "stackexchange:security:182530"
-  },
-  {
-    "question": "Tell me about WLAN",
-    "answer": "The reason I ask is: I'm regularly connecting to a particular organization's WLAN and I'm under the impression that there is no certificate in use.",
-    "domain": "security",
     "source": "stackexchange:security:182530"
   },
   {
@@ -1974,18 +1560,6 @@
     "source": "stackexchange:security:65134"
   },
   {
-    "question": "What is Mutual authentication?",
-    "answer": "Mutual authentication is provided by including an authenticator packet returned to the client after a successful server authentication.",
-    "domain": "general",
-    "source": "stackexchange:security:65134"
-  },
-  {
-    "question": "Tell me about MS",
-    "answer": "However, this article suggest that MS-CHAPv2 isn't safe anymore.",
-    "domain": "general",
-    "source": "stackexchange:security:65134"
-  },
-  {
     "question": "What is EAP-PWD?",
     "answer": "EAP-PWD is highly secure (the password is never transmitted, even in encrypted form), and does not require PKI certificates, and also requires only 3 authentication round-trips.",
     "domain": "security",
@@ -2004,12 +1578,6 @@
     "source": "stackexchange:security:3477"
   },
   {
-    "question": "Tell me about CISSP",
-    "answer": "In the CISSP books, SSL/TLS has been through the arguments and fell rest onto the transport layer 2 instead of the session.",
-    "domain": "security",
-    "source": "stackexchange:security:3477"
-  },
-  {
     "question": "What is Port security 802.1X and EAP?",
     "answer": "Port security 802.1X and EAP is a data link layer 2 authentication mechanism.",
     "domain": "wifi_security",
@@ -2025,12 +1593,6 @@
     "question": "Can 802.1X, EAP and RADIUS work together?",
     "answer": "So this is an academic question I came up with while researching the topic.\n\nCan 802.1X, EAP and RADIUS work together to provide a secure authentication?\n\n\nIf yes, how?\n\nThanks!",
     "domain": "wifi_security",
-    "source": "stackexchange:security:130833"
-  },
-  {
-    "question": "What is So this?",
-    "answer": "So this is an academic question I came up with while researching the topic.",
-    "domain": "general",
     "source": "stackexchange:security:130833"
   },
   {
@@ -2058,20 +1620,8 @@
     "source": "stackexchange:security:178626"
   },
   {
-    "question": "Tell me about VPNs",
-    "answer": "Are there any other services (perhaps VPNs) that the UT network could spoof without setting off a certificate warning?.",
-    "domain": "security",
-    "source": "stackexchange:security:178626"
-  },
-  {
     "question": "Certificate Based Authentication with AD and 802.1x or EAP-TLS?",
     "answer": "I like to think I have a better understanding of PKI then most people but this one issue has me scratching my head and I was hoping someone could cut to the core of it.\n\nIn a system where you have Wireless that is authenticating via certificates and not usernames/passwords, I am confused about the private key sharing across devices or if it even uses the private key for actual authentication.",
-    "domain": "security",
-    "source": "stackexchange:security:160618"
-  },
-  {
-    "question": "Tell me about PKI",
-    "answer": "I like to think I have a better understanding of PKI then most people but this one issue has me scratching my head and I was hoping someone could cut to the core of it.",
     "domain": "security",
     "source": "stackexchange:security:160618"
   },
@@ -2079,12 +1629,6 @@
     "question": "What is In a system where you have Wireless that?",
     "answer": "In a system where you have Wireless that is authenticating via certificates and not usernames/passwords, I am confused about the private key sharing across devices or if it even uses the private key for actual authentication.",
     "domain": "wifi",
-    "source": "stackexchange:security:160618"
-  },
-  {
-    "question": "Tell me about AD",
-    "answer": "For example, you have an Apple phone that you want to authenticate via a certificate that is managed by AD and some MDM.",
-    "domain": "wifi_policy",
     "source": "stackexchange:security:160618"
   },
   {
@@ -2118,12 +1662,6 @@
     "source": "stackexchange:security:23305"
   },
   {
-    "question": "What is WPA2-Enterprise uses 802.1X to facilitate authentication, but when and how?",
-    "answer": "WPA2-Enterprise uses 802.1X to facilitate authentication, but when and how is CCMP/AES used to encrypt the data after the authentication is completed?.",
-    "domain": "wifi_security",
-    "source": "stackexchange:security:23305"
-  },
-  {
     "question": "What is Let us say you want to use PEAP, and the TLS tunnel?",
     "answer": "Let us say you want to use PEAP, and the TLS tunnel is established after the RADIUS server presents its certificate.",
     "domain": "wifi_security",
@@ -2151,30 +1689,6 @@
     "question": "Tell me about GUI",
     "answer": "I wanted something faster and more visual, without losing technical depth — so I built a GUI that brings my favorite diagnostics together in one place.About three months ago, I shared an early version here and got a ton of great feedback.",
     "domain": "networking",
-    "source": "hackernews"
-  },
-  {
-    "question": "Tell me about ARP",
-    "answer": "Then I wanted more: fast, reliable scans using ARP tables and ICMP.As a Wi-Fi engineer, I couldn’t stop there.",
-    "domain": "networking",
-    "source": "hackernews"
-  },
-  {
-    "question": "Tell me about BSD",
-    "answer": "It uses low-level BSD sockets for ICMP and ARP, Apple’s Network framework for interface enumeration, and selectively wraps existing command-line tools where they’re still the best option.",
-    "domain": "networking",
-    "source": "hackernews"
-  },
-  {
-    "question": "Tell me about CLI",
-    "answer": "- What diagnostics do you still find yourself dropping to the CLI for?Details and screenshots: https://netviews.app\nThere’s a free trial and paid licenses; I’m funding development directly rather than ads or subscriptions.",
-    "domain": "internet",
-    "source": "hackernews"
-  },
-  {
-    "question": "Tell me about APIs",
-    "answer": "Licenses include free upgrades.Happy to answer any technical questions about the implementation, Swift APIs, or macOS permission model.",
-    "domain": "internet",
     "source": "hackernews"
   },
   {
@@ -2210,12 +1724,6 @@
   {
     "question": "Tell me about OSes",
     "answer": "The person who talked to me was in fact pretty rude.While I can use a user agent switcher and it works fine that way, and most websites (even banks) don't whitelist OSes.",
-    "domain": "networking",
-    "source": "hackernews"
-  },
-  {
-    "question": "Tell me about AT",
-    "answer": "Look at AT&T Fiber's 802.1X or Verizon's and AT&T's IMEI whitelist, nobody else globally does whitelisting to the same extent, or even Verizon FiOS and T-Mobile.I think Bank of America says something similar to Chase but fortunately doesn't really enforce it the same way.",
     "domain": "networking",
     "source": "hackernews"
   },
@@ -2271,12 +1779,6 @@
     "question": "What is Remote administration?",
     "answer": "Remote administration is performed on the machine via ssh over a different port, with root logins disabled and an exclusive hosts.allow list for ssh only.",
     "domain": "internet",
-    "source": "stackexchange:serverfault:189959"
-  },
-  {
-    "question": "What is My question is, what?",
-    "answer": "My question is, what are the security concerns that I should address?.",
-    "domain": "general",
     "source": "stackexchange:serverfault:189959"
   },
   {
@@ -2370,33 +1872,15 @@
     "source": "stackexchange:serverfault:293714"
   },
   {
-    "question": "Tell me about SQL",
-    "answer": "I have a dev instance of SQL Server 2008 running on a Windows 2003 virtual private server that I can access without problems from SSMS running on my laptop, connected to my wireless network at home.",
-    "domain": "wifi",
-    "source": "stackexchange:serverfault:293714"
-  },
-  {
     "question": "Tell me about SSMS",
     "answer": "But, when I take the laptop to my office and connect to the wireless network there I cannot access the database server from SSMS - the connection to the database times out.",
     "domain": "wifi",
     "source": "stackexchange:serverfault:293714"
   },
   {
-    "question": "Tell me about RDP",
-    "answer": "To connect I need to RDP into the VPS and run SSMS on the remote server.",
-    "domain": "general",
-    "source": "stackexchange:serverfault:293714"
-  },
-  {
     "question": "What is One of the obvious differences between the two wireless networks?",
     "answer": "One of the obvious differences between the two wireless networks is that at home I'm using WPA2 while the office network is still set up with WEP.",
     "domain": "wifi",
-    "source": "stackexchange:serverfault:293714"
-  },
-  {
-    "question": "What is server?",
-    "answer": "The server is Windows Server 2003 R2 x63 Std.",
-    "domain": "general",
     "source": "stackexchange:serverfault:293714"
   },
   {
@@ -2460,12 +1944,6 @@
     "source": "stackexchange:networkengineering:7308"
   },
   {
-    "question": "Tell me about Captive Portal",
-    "answer": "How about users also authenticated over the Captive Portal web authentication page?.",
-    "domain": "wifi_security",
-    "source": "stackexchange:networkengineering:7308"
-  },
-  {
     "question": "How do you prevent rogue wireless access points on a network?",
     "answer": "Depending on what type of traffic is going over the network, it's often not feasible that an employee brings a wireless router and sets it up into your network. This is because often, they are not or poorly secured and present a backdoor into the network. What can you do to prevent rogue wireless access points being introduced into your network?",
     "domain": "wifi",
@@ -2508,12 +1986,6 @@
     "source": "stackexchange:networkengineering:7805"
   },
   {
-    "question": "Tell me about IPs",
-    "answer": "We are setting up a new network at work, when the building was comprised mostly of desktops, life was simple -static IPs for everyone.",
-    "domain": "security",
-    "source": "stackexchange:networkengineering:7805"
-  },
-  {
     "question": "What is My boss's concern?",
     "answer": "My boss's concern is that he wants only company owned devices authenticated on the internal network, and all the rest to use the 'guest' network (including tablets, mobiles, etc).",
     "domain": "internet",
@@ -2541,12 +2013,6 @@
     "question": "What is My thought?",
     "answer": "My thought is that since the unsecured devices will be on their own subnet, they wouldn't pose a significant threat to the secured devices.",
     "domain": "networking",
-    "source": "stackexchange:networkengineering:1978"
-  },
-  {
-    "question": "Tell me about BYOD",
-    "answer": "This answer points to some BYOD resources, but not a separate personal-use-only network.",
-    "domain": "wifi_policy",
     "source": "stackexchange:networkengineering:1978"
   },
   {
@@ -2592,20 +2058,8 @@
     "source": "stackexchange:security:17434"
   },
   {
-    "question": "What is But what?",
-    "answer": "But what is the initialize vector?.",
-    "domain": "general",
-    "source": "stackexchange:security:17434"
-  },
-  {
     "question": "Wireless Security: PEAP?",
     "answer": "I was wondering if there are any known attacks against PEAP  used in wireless authentication/authorization?\n\nI'm specifically looking for attacks that would allow:\n\n\nbypassing the authentication\nsession hijacking",
-    "domain": "wifi_security",
-    "source": "stackexchange:security:32568"
-  },
-  {
-    "question": "What is I was wondering if there?",
-    "answer": "I was wondering if there are any known attacks against PEAP  used in wireless authentication/authorization?.",
     "domain": "wifi_security",
     "source": "stackexchange:security:32568"
   },
@@ -2618,24 +2072,6 @@
   {
     "question": "Tell me about HDD",
     "answer": "Long story short because of my dual boot with Grub I corrupted my HDD the operating system kept moving blocks of memory around.",
-    "domain": "general",
-    "source": "stackexchange:security:51957"
-  },
-  {
-    "question": "Tell me about SSD",
-    "answer": "I've obtained a new SSD and 2nd drive HDD and starting from scratch.",
-    "domain": "general",
-    "source": "stackexchange:security:51957"
-  },
-  {
-    "question": "Tell me about Kali Linux",
-    "answer": "I still want the functionality of Kali Linux to see my wireless.",
-    "domain": "wifi",
-    "source": "stackexchange:security:51957"
-  },
-  {
-    "question": "Tell me about VMWare",
-    "answer": "I've install VMWare work station 10 and I have a VM with Kali in it with a Windows 7 host.",
     "domain": "general",
     "source": "stackexchange:security:51957"
   },
@@ -2742,24 +2178,6 @@
     "source": "stackexchange:security:44773"
   },
   {
-    "question": "What is My question?",
-    "answer": "My question refers to the following article on Wikipedia: MAC Filtering.",
-    "domain": "wifi_security",
-    "source": "stackexchange:security:44773"
-  },
-  {
-    "question": "What is MAC filtering?",
-    "answer": "MAC filtering is not effective control in wireless network as attackers can eavesdrop on wireless transmissions.",
-    "domain": "wifi",
-    "source": "stackexchange:security:44773"
-  },
-  {
-    "question": "What is However MAC filtering?",
-    "answer": "However MAC filtering is more effective in wired networks, since it is more difficult for attackers to identify authorised MACs.",
-    "domain": "wifi_security",
-    "source": "stackexchange:security:44773"
-  },
-  {
     "question": "What is discussed about Reverse engineering an ancient wireless security keypad using RTL-SDR?",
     "answer": "Remarkably simple example of using the RTL-SDR for something. Thank you old school electronics :D That is some brutal power sag going on. Those waveforms would probably look a good bit different with the capacitors replaced. Thirty years is a long time for electrolitic caps, and the tantalums are probably not much better. i hope the author is not going to use this panel as-is because it send everything in clear.",
     "domain": "networking",
@@ -2824,12 +2242,6 @@
     "answer": "Spewing interference out randomly is not an efficient use of airwaves.",
     "domain": "general",
     "source": "hackernews"
-  },
-  {
-    "question": "What is discussed about Origin of Wireless Security: the Marconi Radio Hack of 1903?",
-    "answer": "There was a court case in the US where  Marconi's essential patents on radio transmission were refuted as everything in them were already patented by Tesla.Marconi was a student and assistant of Tesla for a time and decided to steal his work and go into business for himself.Unfortunately  this is not widely understood and Marconi is still widely thought to have invented radio when in fact it was Tesla.",
-    "domain": "networking",
-    "source": "hackernews:13779504"
   },
   {
     "question": "Tell me about US",

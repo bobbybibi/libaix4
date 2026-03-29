@@ -12,21 +12,9 @@
     "source": "wikipedia:Endpoint security"
   },
   {
-    "question": "Tell me about DLP",
-    "answer": "This includes next-generation antivirus, threat detection, investigation, and response, device management, data leak protection (DLP), and other considerations to face evolving threats.",
-    "domain": "security",
-    "source": "wikipedia:Endpoint security"
-  },
-  {
     "question": "What does This provide?",
     "answer": "This allows the network administrator to restrict the use of sensitive data as well as certain website access to specific users, to maintain, and comply with the organization's policies and standards.",
     "domain": "internet",
-    "source": "wikipedia:Endpoint security"
-  },
-  {
-    "question": "Tell me about VPN",
-    "answer": "The components involved in aligning the endpoint security management systems include a virtual private network (VPN) client, an operating system and an updated endpoint agent.",
-    "domain": "security",
     "source": "wikipedia:Endpoint security"
   },
   {
@@ -45,12 +33,6 @@
     "question": "What is In the payment card industry, the contribution from both the delivery models?",
     "answer": "In the payment card industry, the contribution from both the delivery models is that the server program verifies and authenticates the user login credentials and performs a device scan to check if it complies with designated corporate security standards prior to permitting network access.",
     "domain": "networking",
-    "source": "wikipedia:Endpoint security"
-  },
-  {
-    "question": "Tell me about IT",
-    "answer": "In addition to protecting an organization's endpoints from potential threats, endpoint security allows IT admins to monitor operation functions and data backup strategies.",
-    "domain": "general",
     "source": "wikipedia:Endpoint security"
   },
   {
@@ -99,12 +81,6 @@
     "question": "Tell me about ABAC",
     "answer": "In order to determine if access can be granted, policies can be applied based on the attributes of the data, who the user is, and the type of environment using Attribute-Based Access Control (ABAC).",
     "domain": "general",
-    "source": "wikipedia:Zero trust architecture"
-  },
-  {
-    "question": "Tell me about In April",
-    "answer": "=== Early definitions ===\nIn April 1994, the term \"zero trust\" was coined by Stephen Paul Marsh in his doctoral thesis on computer security at the University of Stirling.",
-    "domain": "security",
     "source": "wikipedia:Zero trust architecture"
   },
   {
@@ -192,12 +168,6 @@
     "source": "wikipedia:Zero trust architecture"
   },
   {
-    "question": "Tell me about APT",
-    "answer": "In response to Operation Aurora, a Chinese APT attack throughout 2009, Google started to implement a zero-trust architecture referred to as BeyondCorp.",
-    "domain": "general",
-    "source": "wikipedia:Zero trust architecture"
-  },
-  {
     "question": "Tell me about NCSC",
     "answer": "In 2019 the United Kingdom National Cyber Security Centre (NCSC) recommended that network architects consider a Zero Trust approach for new IT deployments, particularly where significant use of cloud services is planned.",
     "domain": "networking",
@@ -246,33 +216,9 @@
     "source": "wikipedia:Private network"
   },
   {
-    "question": "What is These addresses?",
-    "answer": "These addresses are commonly used for local area networks (LANs) in residential, office, and enterprise environments.",
-    "domain": "general",
-    "source": "wikipedia:Private network"
-  },
-  {
-    "question": "Tell me about IP",
-    "answer": "Both the IPv4 and the IPv6 specifications define private IP address ranges.",
-    "domain": "networking",
-    "source": "wikipedia:Private network"
-  },
-  {
-    "question": "Tell me about ISPs",
-    "answer": "Most Internet service providers (ISPs) allocate only a single publicly routable IPv4 address to each residential customer, but many homes have more than one computer, smartphone, or other Internet-connected device.",
-    "domain": "general",
-    "source": "wikipedia:Private network"
-  },
-  {
     "question": "What is In this situation, a network address translator (NAT/PAT) gateway?",
     "answer": "In this situation, a network address translator (NAT/PAT) gateway is usually used to provide Internet connectivity to multiple hosts.",
     "domain": "networking",
-    "source": "wikipedia:Private network"
-  },
-  {
-    "question": "What is Private addresses?",
-    "answer": "Private addresses are also commonly used in corporate networks which, for security reasons, are not connected directly to the Internet.",
-    "domain": "general",
     "source": "wikipedia:Private network"
   },
   {
@@ -282,45 +228,9 @@
     "source": "wikipedia:Private network"
   },
   {
-    "question": "What is Private network addresses?",
-    "answer": "Private network addresses are not allocated to any specific organization.",
-    "domain": "general",
-    "source": "wikipedia:Private network"
-  },
-  {
-    "question": "Tell me about IETF",
-    "answer": "== Private IPv4 addresses ==\nThe Internet Engineering Task Force (IETF) has directed the Internet Assigned Numbers Authority (IANA) to reserve the following IPv4 address ranges for private networks:.",
-    "domain": "general",
-    "source": "wikipedia:Private network"
-  },
-  {
-    "question": "What is In practice, it?",
-    "answer": "In practice, it is common to subdivide these ranges into smaller subnets.",
-    "domain": "networking",
-    "source": "wikipedia:Private network"
-  },
-  {
-    "question": "Tell me about IANA",
-    "answer": "In April 2012, IANA allocated the 100.64.0.0/10 block of IPv4 addresses specifically for use in carrier-grade NAT scenarios.",
-    "domain": "networking",
-    "source": "wikipedia:Private network"
-  },
-  {
-    "question": "Tell me about Internet Protocol",
-    "answer": "The concept of private networks has been extended in the next generation of the Internet Protocol, IPv6, and special address blocks are reserved.",
-    "domain": "general",
-    "source": "wikipedia:Private network"
-  },
-  {
     "question": "What is address block fc00::/7?",
     "answer": "The address block fc00::/7 is reserved by IANA for unique local addresses (ULAs).",
     "domain": "general",
-    "source": "wikipedia:Private network"
-  },
-  {
-    "question": "What is They?",
-    "answer": "They are unicast addresses, but contain a 40-bit random number in the routing prefix to prevent collisions when two private networks are interconnected.",
-    "domain": "networking",
     "source": "wikipedia:Private network"
   },
   {
@@ -354,38 +264,14 @@
     "source": "wikipedia:Private network"
   },
   {
-    "question": "Tell me about IEEE",
-    "answer": "If a host on an IEEE 802 (Ethernet) network cannot obtain a network address via DHCP, an address from 169.254.1.0 to 169.254.254.255 may be assigned pseudorandomly.",
-    "domain": "networking",
-    "source": "wikipedia:Private network"
-  },
-  {
     "question": "What is implementation of these link-local addresses?",
     "answer": "The implementation of these link-local addresses is mandatory, as various functions of the IPv6 protocol depend on them.",
     "domain": "general",
     "source": "wikipedia:Private network"
   },
   {
-    "question": "What is Some?",
-    "answer": "Some are advocating reducing 127.0.0.0/8 to 127.0.0.0/16.",
-    "domain": "general",
-    "source": "wikipedia:Private network"
-  },
-  {
-    "question": "Tell me about DNS",
-    "answer": "Private networks often do not properly configure DNS services for addresses used internally and attempt reverse DNS lookups for these addresses, causing extra traffic to the Internet root nameservers.",
-    "domain": "internet",
-    "source": "wikipedia:Private network"
-  },
-  {
     "question": "What is Organizational edge routers?",
     "answer": "Organizational edge routers are usually configured to drop ingress IP traffic for these networks, which can occur either by misconfiguration or from malicious traffic using a spoofed source address.",
-    "domain": "networking",
-    "source": "wikipedia:Private network"
-  },
-  {
-    "question": "Tell me about ISP",
-    "answer": "Less commonly, ISP edge routers drop such egress traffic from customers, which reduces the impact to the Internet of such misconfigured or malicious hosts on the customer's network.",
     "domain": "networking",
     "source": "wikipedia:Private network"
   },
@@ -426,26 +312,8 @@
     "source": "wikipedia:Wireless security"
   },
   {
-    "question": "Tell me about WEP",
-    "answer": "WEP was superseded in 2003 by WPA, a quick alternative at the time to improve security over WEP.",
-    "domain": "networking",
-    "source": "wikipedia:Wireless security"
-  },
-  {
     "question": "What is current standard?",
     "answer": "The current standard is WPA2; some hardware cannot support WPA2 without firmware upgrade or replacement.",
-    "domain": "wifi_security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What does WPA2 provide?",
-    "answer": "WPA2 uses an encryption device that encrypts the network with a 256-bit key; the longer key length improves security over WEP.",
-    "domain": "wifi_security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about In January",
-    "answer": "In January 2018, the Wi-Fi Alliance announced WPA3 as a replacement to WPA2.",
     "domain": "wifi_security",
     "source": "wikipedia:Wireless security"
   },
@@ -462,33 +330,15 @@
     "source": "wikipedia:Wireless security"
   },
   {
-    "question": "What is As a result, it?",
-    "answer": "As a result, it is very important that enterprises define effective wireless security policies that guard against unauthorized access to important resources.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
     "question": "Tell me about WIPS",
     "answer": "Wireless Intrusion Prevention Systems (WIPS) or Wireless Intrusion Detection Systems (WIDS) are commonly used to enforce wireless security policies.",
     "domain": "wifi_security",
     "source": "wikipedia:Wireless security"
   },
   {
-    "question": "What is However, there?",
-    "answer": "However, there are many security risks associated with the current wireless protocols and encryption methods, and in the carelessness and ignorance that exists at the user and corporate IT level.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
     "question": "Tell me about MDR",
     "answer": "In-Stat MDR and META Group have estimated that 95% of all corporate laptop computers that were planned to be purchased in 2005 were equipped with wireless cards.",
     "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is If router security?",
-    "answer": "If router security is not activated or if the owner deactivates it for convenience, it creates a free hotspot.",
-    "domain": "networking",
     "source": "wikipedia:Wireless security"
   },
   {
@@ -534,32 +384,8 @@
     "source": "wikipedia:Wireless security"
   },
   {
-    "question": "What is However, it?",
-    "answer": "However, it is a security breach in that proprietary company information is exposed and now there could exist a link from one company to the other.",
-    "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is This?",
-    "answer": "This is especially true if the laptop is also hooked to a wired network.",
-    "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
     "question": "What is Accidental association?",
     "answer": "Accidental association is a case of wireless vulnerability called as \"mis-association\".",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about APs",
-    "answer": "Mis-association can be accidental, deliberate (for example, done to bypass corporate firewall) or it can result from deliberate attempts on wireless clients to lure them into connecting to attacker's APs.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about AP",
-    "answer": "=== Malicious association ===\n“Malicious associations” are when wireless devices can be actively made by attackers to connect to a company network through their laptop instead of a company access point (AP).",
     "domain": "wifi",
     "source": "wikipedia:Wireless security"
   },
@@ -567,12 +393,6 @@
     "question": "What is These types of laptops?",
     "answer": "These types of laptops are known as “soft APs” and are created when a cyber criminal runs some software that makes their wireless network card look like a legitimate access point.",
     "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about VPNs",
-    "answer": "Since wireless networks operate at the Layer 2 level, Layer 3 protections such as network authentication and virtual private networks (VPNs) offer no barrier.",
-    "domain": "networking",
     "source": "wikipedia:Wireless security"
   },
   {
@@ -600,33 +420,9 @@
     "source": "wikipedia:Wireless security"
   },
   {
-    "question": "What is If they?",
-    "answer": "If they are also using a wired or wireless infrastructure network at the same time, they are providing a bridge to the secured organizational network through the unsecured Ad hoc connection.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
     "question": "What is indirect bridge may expose private data that?",
     "answer": "The indirect bridge may expose private data that is shared from the user's computer to LAN connections, such as shared folders or private Network Attached Storage, making no distinction between authenticated or private connections and unauthenticated Ad-Hoc networks.",
     "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about PDAs",
-    "answer": "Even barcode readers, handheld PDAs, and wireless printers and copiers should be secured.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about MAC",
-    "answer": "=== Identity theft (MAC spoofing) ===\nIdentity theft (or MAC spoofing) occurs when a hacker is able to listen in on network traffic and identify the MAC address of a computer with network privileges.",
-    "domain": "networking",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is MAC filtering?",
-    "answer": "MAC filtering is effective only for small residential (SOHO) networks, since it provides protection only when the wireless device is \"off the air\".",
-    "domain": "wifi",
     "source": "wikipedia:Wireless security"
   },
   {
@@ -660,12 +456,6 @@
     "source": "wikipedia:Wireless security"
   },
   {
-    "question": "Tell me about EAP",
-    "answer": "These attacks rely on the abuse of protocols such as the Extensible Authentication Protocol (EAP).",
-    "domain": "wifi_security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
     "question": "Tell me about The Do",
     "answer": "The DoS attack in itself does little to expose organizational data to a malicious attacker, since the interruption of the network prevents the flow of data and actually indirectly protects data by preventing it from being transmitted.",
     "domain": "general",
@@ -690,12 +480,6 @@
     "source": "wikipedia:Wireless security"
   },
   {
-    "question": "Tell me about ARP",
-    "answer": "After the client connects, the client generates ARP requests, which the malicious access point uses to obtain keystream data.",
-    "domain": "networking",
-    "source": "wikipedia:Wireless security"
-  },
-  {
     "question": "Tell me about The Caffe Latte",
     "answer": "The Caffe Latte attack was demonstrated against the Windows wireless stack, but other operating systems may also be vulnerable.",
     "domain": "wifi",
@@ -704,12 +488,6 @@
   {
     "question": "What is For closed networks (like home users and organizations) the most common way?",
     "answer": "For closed networks (like home users and organizations) the most common way is to configure access restrictions in the access points.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about LAN",
-    "answer": "Wireless Intrusion Prevention Systems can be used to provide wireless LAN security in this network model.",
     "domain": "wifi",
     "source": "wikipedia:Wireless security"
   },
@@ -738,12 +516,6 @@
     "source": "wikipedia:Wireless security"
   },
   {
-    "question": "What is Wireless Intrusion Prevention System (WIPS)?",
-    "answer": "A Wireless Intrusion Prevention System (WIPS) is a concept for the most robust way to counteract wireless security risks.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
     "question": "What is WIPS?",
     "answer": "A WIPS is typically implemented as an overlay to an existing Wireless LAN infrastructure, although it may be deployed standalone to enforce no-wireless policies within an organization.",
     "domain": "wifi",
@@ -762,18 +534,6 @@
     "source": "wikipedia:Wireless security"
   },
   {
-    "question": "Tell me about FBI",
-    "answer": "Concerns were raised about its security as early as 2001, dramatically demonstrated in 2005 by the FBI, yet in 2007 T.J.",
-    "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about WPA",
-    "answer": "The Wi-Fi Protected Access (WPA and WPA2) security protocols were later created to address the problems with WEP.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
     "question": "What is If a weak password, such as a dictionary word or short character string?",
     "answer": "If a weak password, such as a dictionary word or short character string is used, WPA and WPA2 can be cracked.",
     "domain": "wifi_security",
@@ -786,12 +546,6 @@
     "source": "wikipedia:Wireless security"
   },
   {
-    "question": "What is Wi-Fi Protected Access (WPA)?",
-    "answer": "Wi-Fi Protected Access (WPA) is a software/firmware improvement over WEP.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
     "question": "What is All regular WLAN-equipment that worked with WEP?",
     "answer": "All regular WLAN-equipment that worked with WEP are able to be simply upgraded and no new equipment needs to be bought.",
     "domain": "general",
@@ -800,12 +554,6 @@
   {
     "question": "What is WPA?",
     "answer": "WPA is a trimmed-down version of the 802.11i security standard that was developed by the IEEE 802.11 to replace WEP.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about TKIP",
-    "answer": "The TKIP encryption algorithm was developed for WPA to provide improvements to WEP that could be fielded as firmware upgrades to existing 802.11 devices.",
     "domain": "wifi",
     "source": "wikipedia:Wireless security"
   },
@@ -828,12 +576,6 @@
     "source": "wikipedia:Wireless security"
   },
   {
-    "question": "Tell me about PSK",
-    "answer": "The PSK may also be entered as a 64 character hexadecimal string.",
-    "domain": "wifi_security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
     "question": "What is Other WEP/WPA crackers?",
     "answer": "Other WEP/WPA crackers are AirSnort and Auditor Security Collection.",
     "domain": "general",
@@ -846,45 +588,15 @@
     "source": "wikipedia:Wireless security"
   },
   {
-    "question": "Tell me about PPTP",
-    "answer": "However, this extra layer of security may also be cracked with tools such as Anger, Deceit and Ettercap for PPTP; and ike-scan, IKEProbe, ipsectrace, and IKEcrack for IPsec-connections.",
-    "domain": "security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
     "question": "What does TKIP implements per-packet key mixing with a re-keying system and also provide?",
     "answer": "TKIP implements per-packet key mixing with a re-keying system and also provides a message integrity check.",
     "domain": "general",
     "source": "wikipedia:Wireless security"
   },
   {
-    "question": "What does This, as EAP provide?",
-    "answer": "This, as EAP uses a central authentication server.",
-    "domain": "wifi_security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about TLS",
-    "answer": "Over the next few years these shortcomings were addressed with the use of TLS and other enhancements.",
-    "domain": "security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
     "question": "What is This new version of EAP?",
     "answer": "This new version of EAP is now called Extended EAP and is available in several versions; these include: EAP-MD5, PEAPv0, PEAPv1, EAP-MSCHAPv2, LEAP, EAP-FAST, EAP-TLS, EAP-TTLS, MSCHAPv2, and EAP-SIM.",
     "domain": "wifi_security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is This protocol?",
-    "answer": "This protocol is based on 802.1X and helps minimize the original security flaws by using WEP and a sophisticated key management system.",
-    "domain": "wifi_security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What does This also provide?",
-    "answer": "This also uses MAC address authentication.",
-    "domain": "networking",
     "source": "wikipedia:Wireless security"
   },
   {
@@ -900,12 +612,6 @@
     "source": "wikipedia:Wireless security"
   },
   {
-    "question": "What does This protocol provide?",
-    "answer": "This protocol allows for a secure transport of data, passwords, and encryption keys without the need of a certificate server.",
-    "domain": "security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
     "question": "Tell me about EAPs",
     "answer": "Other EAPs\nThere are other types of Extensible Authentication Protocol implementations that are based on the EAP framework.",
     "domain": "wifi_security",
@@ -914,12 +620,6 @@
   {
     "question": "What does framework that was established provide?",
     "answer": "The framework that was established supports existing EAP types as well as future authentication methods.",
-    "domain": "wifi_security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What does EAP-TLS provide?",
-    "answer": "EAP-TLS offers very good protection because of its mutual authentication.",
     "domain": "wifi_security",
     "source": "wikipedia:Wireless security"
   },
@@ -936,12 +636,6 @@
     "source": "wikipedia:Wireless security"
   },
   {
-    "question": "Tell me about SSL",
-    "answer": "The solution may be encryption and authorization in the application layer, using technologies like SSL, SSH, GnuPG, PGP and similar.",
-    "domain": "security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
     "question": "What is most prized resource?",
     "answer": "The most prized resource is often access to the Internet.",
     "domain": "general",
@@ -954,21 +648,9 @@
     "source": "wikipedia:Wireless security"
   },
   {
-    "question": "Tell me about AES",
-    "answer": "This new hardware required may be either AES-WRAP (an early version of 802.11i) or the newer and better AES-CCMP-equipment.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
     "question": "Tell me about WRAP",
     "answer": "One should make sure one needs WRAP or CCMP-equipment, as the 2 hardware standards are not compatible.",
     "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is WPA2?",
-    "answer": "WPA2 is a WiFi Alliance branded version of the final 802.11i standard.",
-    "domain": "wifi",
     "source": "wikipedia:Wireless security"
   },
   {
@@ -990,18 +672,6 @@
     "source": "wikipedia:Wireless security"
   },
   {
-    "question": "Tell me about GTK",
-    "answer": "In order for this exploit to be performed, the GTK must be known by the attacker.",
-    "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about USB",
-    "answer": "=== Smart cards, USB tokens, and software tokens ===\nSecurity token use is a method of authentication relying upon only authorized users possessing the requisite token.",
-    "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
     "question": "What is Smart cards?",
     "answer": "Smart cards are physical tokens in the cards that utilize an embedded integrated circuit chip for authentication, requiring a card reader.",
     "domain": "general",
@@ -1011,12 +681,6 @@
     "question": "What is USB Tokens?",
     "answer": "USB Tokens are physical tokens that connect via USB port to authenticate the user.",
     "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about RF",
-    "answer": "=== RF shielding ===\nIt is practical in some cases to apply specialized wall paint and window film to a room or building to significantly attenuate wireless signals, which keeps the signals from propagating outside a facility.",
-    "domain": "wifi",
     "source": "wikipedia:Wireless security"
   },
   {
@@ -1035,18 +699,6 @@
     "question": "What is However, a lot of them?",
     "answer": "However, a lot of them are difficult to stop even after detection.",
     "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is Here?",
-    "answer": "Here are three of the most common ways to stop a DoS attack.",
-    "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about SYN",
-    "answer": "Some firewalls address SYN floods by pre-validating the TCP handshake.",
-    "domain": "networking",
     "source": "wikipedia:Wireless security"
   },
   {
@@ -1074,18 +726,6 @@
     "source": "wikipedia:Wireless security"
   },
   {
-    "question": "Tell me about PDA",
-    "answer": "Host based solutions for mobile handsets and PDA's with 802.1X interface.",
-    "domain": "wifi_security",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "Tell me about IPS",
-    "answer": "Protecting against ad hoc networks\nConnecting to rogue access points\nMutual authentication schemes such as WPA2 as described above\nWireless IPS solutions now offer wireless security for mobile devices.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
     "question": "What is Mobile patient monitoring devices?",
     "answer": "Mobile patient monitoring devices are becoming an integral part of healthcare industry and these devices will eventually become the method of choice for accessing and implementing health checks for patients located in remote areas.",
     "domain": "general",
@@ -1095,12 +735,6 @@
     "question": "What is For these types of patient monitoring systems, security and reliability?",
     "answer": "For these types of patient monitoring systems, security and reliability are critical, because they can influence the condition of patients, and could leave medical professionals in the dark about the condition of the patient if compromised.",
     "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is If this?",
-    "answer": "If this is done, a server such as RADIUS, ADS, NDS, or LDAP needs to be integrated.",
-    "domain": "wifi_security",
     "source": "wikipedia:Wireless security"
   },
   {
@@ -1140,12 +774,6 @@
     "source": "wikipedia:Wireless security"
   },
   {
-    "question": "What is idea?",
-    "answer": "The idea is to have an inside server act as a gatekeeper by verifying identities through a username and password that is already pre-determined by the user.",
-    "domain": "general",
-    "source": "wikipedia:Wireless security"
-  },
-  {
     "question": "What does Others think the default encryption provide?",
     "answer": "Others think the default encryption provides substantial protection at small inconvenience, against dangers of open access that they fear may be substantial even on a home DSL router.",
     "domain": "networking",
@@ -1160,12 +788,6 @@
   {
     "question": "Tell me about Open Access Points",
     "answer": "According to the advocates of Open Access Points, it should not involve any significant risks to open up wireless networks for the public:.",
-    "domain": "wifi",
-    "source": "wikipedia:Wireless security"
-  },
-  {
-    "question": "What is wireless network?",
-    "answer": "The wireless network is after all confined to a small geographical area.",
     "domain": "wifi",
     "source": "wikipedia:Wireless security"
   },
@@ -1230,18 +852,6 @@
     "source": "wikipedia:Domain Name System"
   },
   {
-    "question": "What is Domain Name System (DNS)?",
-    "answer": "The Domain Name System (DNS) is a hierarchical and distributed name service that provides a naming system for computers, services, and other resources on the Internet or other Internet Protocol (IP) networks.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about The Domain Name System",
-    "answer": "The Domain Name System has been an essential component of the functionality of the Internet since 1985.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
     "question": "What does This mechanism provide?",
     "answer": "This mechanism provides distributed and fault-tolerant service and was designed to avoid a single large central database.",
     "domain": "general",
@@ -1250,12 +860,6 @@
   {
     "question": "What does Domain Name System maintains the domain name hierarchy and provide?",
     "answer": "The Domain Name System maintains the domain name hierarchy and provides translation services between it and the address spaces.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about Domain Name System",
-    "answer": "Internet name servers and a communication protocol implement the Domain Name System.",
     "domain": "general",
     "source": "wikipedia:Domain Name System"
   },
@@ -1278,33 +882,9 @@
     "source": "wikipedia:Domain Name System"
   },
   {
-    "question": "Tell me about UDP",
-    "answer": "The Domain Name System originally used the User Datagram Protocol (UDP) as transport over IP.",
-    "domain": "networking",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about TCP",
-    "answer": "Reliability, security, and privacy concerns spawned the use of the Transmission Control Protocol (TCP) as well as numerous other protocol developments.",
-    "domain": "networking",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about URLs",
-    "answer": "Users take advantage of this when they use meaningful Uniform Resource Locators (URLs) and e-mail addresses without having to know how the computer actually locates the services.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
     "question": "What is important and ubiquitous function of the DNS?",
     "answer": "An important and ubiquitous function of the DNS is its central role in distributed Internet services such as cloud services and content delivery networks.",
     "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about URL",
-    "answer": "When a user accesses a distributed Internet service using a URL, the domain name of the URL is translated to the IP address of a server that is proximal to the user.",
-    "domain": "networking",
     "source": "wikipedia:Domain Name System"
   },
   {
@@ -1329,12 +909,6 @@
     "question": "What is For zones operated by a registry, administrative information?",
     "answer": "For zones operated by a registry, administrative information is often complemented by the registry's RDAP and WHOIS services.",
     "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about ARPANET",
-    "answer": "== History ==\nUsing a simpler, more memorable name in place of a host's numerical address dates back to the ARPANET era.",
-    "domain": "networking",
     "source": "wikipedia:Domain Name System"
   },
   {
@@ -1364,30 +938,6 @@
   {
     "question": "Tell me about Paul Mockapetris",
     "answer": "Postel directed the task of forging a compromise between five competing proposals of solutions to Paul Mockapetris.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about RFC",
-    "answer": "The Internet Engineering Task Force published the original specifications in RFC 882 and RFC 883 in November 1983.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about UC",
-    "answer": "In 1984, four UC Berkeley students, Douglas Terry, Mark Painter, David Riggle, and Songnian Zhou, wrote the first Unix name server implementation for the Berkeley Internet Name Domain, commonly referred to as BIND.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about DEC",
-    "answer": "In 1985, Kevin Dunlap of DEC substantially revised the DNS implementation.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about BIND",
-    "answer": "Mike Karels, Phil Almquist, and Paul Vixie then took over BIND maintenance.",
     "domain": "general",
     "source": "wikipedia:Domain Name System"
   },
@@ -1452,18 +1002,6 @@
     "source": "wikipedia:Domain Name System"
   },
   {
-    "question": "Tell me about ASCII",
-    "answer": "The limited set of ASCII characters permitted in the DNS prevented the representation of names and words of many languages in their native alphabets or scripts.",
-    "domain": "networking",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about ICANN",
-    "answer": "To make this possible, ICANN approved the Internationalizing Domain Names in Applications (IDNA) system, by which user applications, such as web browsers, map Unicode strings into the valid DNS character set using Punycode.",
-    "domain": "networking",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
     "question": "Tell me about TLDs",
     "answer": "In addition, many registries of the existing top-level domain names (TLDs) have adopted the IDNA system, guided by RFC 5890, RFC 5891, RFC 5892, RFC 5893.",
     "domain": "general",
@@ -1503,12 +1041,6 @@
     "question": "What is This flag?",
     "answer": "This flag is usually reproduced prominently in the output of DNS administration query tools, such as dig, to indicate that the responding name server is an authority for the domain name in question.",
     "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is When a name server?",
-    "answer": "When a name server is designated as the authoritative server for a domain name for which it does not have authoritative data, it presents a type of error called a \"lame delegation\" or \"lame response\".",
-    "domain": "networking",
     "source": "wikipedia:Domain Name System"
   },
   {
@@ -1562,12 +1094,6 @@
   {
     "question": "What is recursive query?",
     "answer": "A recursive query is one for which the DNS server answers the query completely by querying other name servers as needed.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is DNS servers?",
-    "answer": "DNS servers are not required to support recursive queries.",
     "domain": "internet",
     "source": "wikipedia:Domain Name System"
   },
@@ -1644,12 +1170,6 @@
     "source": "wikipedia:Domain Name System"
   },
   {
-    "question": "What is IP address?",
-    "answer": "The IP address is represented as a name in reverse-ordered octet representation for IPv4, and reverse-ordered nibble representation for IPv6.",
-    "domain": "networking",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
     "question": "What is For example, assuming the IPv4 address 208.80.152.2?",
     "answer": "For example, assuming the IPv4 address 208.80.152.2 is assigned to Wikimedia, it is represented as a DNS name in reverse order: 2.152.80.208.in-addr.arpa.",
     "domain": "networking",
@@ -1676,12 +1196,6 @@
   {
     "question": "What is Multiple hostnames may correspond to a single IP address, which?",
     "answer": "Multiple hostnames may correspond to a single IP address, which is useful in virtual hosting, in which many web sites are served from a single host.",
-    "domain": "networking",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "What is DNS?",
-    "answer": "The DNS is used for efficient storage and distribution of IP addresses of block-listed email hosts.",
     "domain": "networking",
     "source": "wikipedia:Domain Name System"
   },
@@ -1752,18 +1266,6 @@
     "source": "wikipedia:Domain Name System"
   },
   {
-    "question": "Tell me about RA",
-    "answer": "RA: 1 bit\nRecursion Available, in a response, indicates if the replying DNS server supports recursion.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about AD",
-    "answer": "AD: 1 bit\nAuthentic Data, in a response, indicates if the replying DNS server verified the data.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
     "question": "Tell me about CD",
     "answer": "CD: 1 bit\nChecking Disabled, in a query, indicates that non-verified data is acceptable in a response.",
     "domain": "general",
@@ -1782,12 +1284,6 @@
     "source": "wikipedia:Domain Name System"
   },
   {
-    "question": "What is domain name?",
-    "answer": "The domain name is broken into discrete labels which are concatenated; each label is prefixed by the length of that label.",
-    "domain": "networking",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
     "question": "What is types of information elements?",
     "answer": "The types of information elements are categorized and organized with a list of DNS record types, the resource records (RRs).",
     "domain": "internet",
@@ -1797,12 +1293,6 @@
     "question": "What is Resource records of the same type?",
     "answer": "Resource records of the same type are described as a resource record set (RRset), having no special ordering.",
     "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about DNSSEC",
-    "answer": "In contrast, the Domain Name System Security Extensions (DNSSEC) work on the complete set of resource record in canonical order.",
-    "domain": "internet",
     "source": "wikipedia:Domain Name System"
   },
   {
@@ -1944,12 +1434,6 @@
     "source": "wikipedia:Domain Name System"
   },
   {
-    "question": "What is This vulnerability?",
-    "answer": "This vulnerability is occasionally exploited in phishing.",
-    "domain": "security",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
     "question": "Tell me about DNSMessenger",
     "answer": "=== DNSMessenger ===\nDNSMessenger is a type of cyber attack technique that uses the  DNS to communicate and control malware remotely without relying on conventional protocols that might raise red flags.",
     "domain": "security",
@@ -2034,12 +1518,6 @@
     "source": "wikipedia:Domain Name System"
   },
   {
-    "question": "Tell me about COM",
-    "answer": "For top-level domains on COM and NET, a thin registry model is used.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
     "question": "Tell me about PDR",
     "answer": "The domain registry (GoDaddy, BigRock and PDR, VeriSign, etc.) holds basic WHOIS data (i.e., registrar and name servers, etc.).",
     "domain": "general",
@@ -2066,18 +1544,6 @@
   {
     "question": "Tell me about Broad Band",
     "answer": "Broad Band: The Untold Story of the Women Who Made the Internet.",
-    "domain": "general",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about RFCs",
-    "answer": "(See under Informational RFCs)\nRFC 7830 – \"The EDNS(0) Padding Option,\" Proposed Standard.",
-    "domain": "internet",
-    "source": "wikipedia:Domain Name System"
-  },
-  {
-    "question": "Tell me about PDF",
-    "answer": "\"Internet Governance and the Domain Name System: Issues for Congress\" (PDF).",
     "domain": "general",
     "source": "wikipedia:Domain Name System"
   },
@@ -2154,12 +1620,6 @@
     "source": "wikipedia:Air gap (networking)"
   },
   {
-    "question": "Tell me about FM",
-    "answer": "Researchers have also demonstrated the feasibility of data exfiltration using FM frequency signals.",
-    "domain": "general",
-    "source": "wikipedia:Air gap (networking)"
-  },
-  {
     "question": "Tell me about EM",
     "answer": "== Limitations ==\nLimitations imposed on devices used in these environments may include a ban on wireless connections to or from the secure network, or similar restrictions on EM leakage from the secure network through the use of TEMPEST or a Faraday cage.",
     "domain": "wifi",
@@ -2208,12 +1668,6 @@
     "source": "wikipedia:Air gap (networking)"
   },
   {
-    "question": "What is problem?",
-    "answer": "The problem is not completely eliminated, though, especially if users have administrative privileges on their local workstations and are therefore able to install software that is not centrally managed.",
-    "domain": "networking",
-    "source": "wikipedia:Air gap (networking)"
-  },
-  {
     "question": "Tell me about NIPRNet",
     "answer": "== See also ==\nAir-gap malware\nAirplane mode\nFirewall (computing)\nNear sound data transfer\nNIPRNet\nSIPRNet\nSneakernet\nTempest (codename)\nUnidirectional network\nVan Eck phreaking.",
     "domain": "security",
@@ -2234,12 +1688,6 @@
   {
     "question": "What is One might feel secure when one?",
     "answer": "One might feel secure when one is not actually so; or might feel insecure despite being safe.",
-    "domain": "general",
-    "source": "wikipedia:Security"
-  },
-  {
-    "question": "What is This distinction?",
-    "answer": "This distinction is usually not very clear to express in the English language.",
     "domain": "general",
     "source": "wikipedia:Security"
   },
@@ -2406,69 +1854,9 @@
     "source": "wikipedia:Security"
   },
   {
-    "question": "What is McAfee?",
-    "answer": "McAfee Corp. ( MAK-ə-fee), formerly known as McAfee Associates, Inc. from 1987 to 1997 and 2004 to 2014, Network Associates Inc. from 1997 to 2004, and Intel Security Group from 2014 to 2017, is an American proprietary software company focused on online protection for consumers worldwide headquartered in San Jose, California.\nThe company was purchased by Intel in February 2011; with this acquisition, it became part of the Intel Security division.",
-    "domain": "networking",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "What is from 1997 to 2004, and Intel Security Group from 2014 to 2017?",
-    "answer": "from 1997 to 2004, and Intel Security Group from 2014 to 2017, is an American proprietary software company focused on online protection for consumers worldwide headquartered in San Jose, California.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about Intel Security",
-    "answer": "The company was purchased by Intel in February 2011; with this acquisition, it became part of the Intel Security division.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about TPG",
-    "answer": "In 2017, Intel had a strategic deal with TPG Capital and converted Intel Security into a joint venture between both companies called McAfee.",
-    "domain": "internet",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about Thoma Bravo",
-    "answer": "Thoma Bravo took a minority stake in the new company, and Intel retained a 49% stake.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
     "question": "Tell me about NASDAQ",
     "answer": "The owners took McAfee public on the NASDAQ in 2020, and in 2022 an investor group led by Advent International Corporation took it private again.",
     "domain": "networking",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about Afee Associates",
-    "answer": "=== 1987–1999 ===\nThe company was founded in 1987 as McAfee Associates, named for its founder John McAfee, who resigned from the company in 1994.",
-    "domain": "intranet",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about PGP",
-    "answer": "Network Associates was formed in 1997 as a merger of McAfee Associates, Network General, PGP Corporation and Helix Software.",
-    "domain": "intranet",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about FSA",
-    "answer": "In 1996, McAfee acquired Calgary, Alberta, Canada-based FSA Corporation, which helped the company diversify its security offerings away from just client-based antivirus software by bringing on board its own network and desktop encryption technologies.",
-    "domain": "security",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about Dean Huxley",
-    "answer": "While those product lines had their own individual successes including PowerBroker (written by Dean Huxley and Dan Freedman and now sold by BeyondTrust), the growth of antivirus ware always outpaced the growth of the other security product lines.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "What is Among other companies bought and sold by McAfee?",
-    "answer": "Among other companies bought and sold by McAfee is Trusted Information Systems, which developed the Firewall Toolkit, the free software foundation for the commercial Gauntlet Firewall, which was later sold to Secure Computing Corporation.",
-    "domain": "security",
     "source": "wikipedia:McAfee"
   },
   {
@@ -2478,320 +1866,14 @@
     "source": "wikipedia:McAfee"
   },
   {
-    "question": "Tell me about TIS",
-    "answer": "McAfee, as a result of brief ownership of TIS Labs/NAI Labs/Network Associates Laboratories/McAfee Research, was highly influential in the world of open-source software, as that organization produced portions of the Linux, FreeBSD, and Darwin operating systems, and developed portions of the BIND name server software and SNMP version 3.",
-    "domain": "intranet",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about ILOVEYOU",
-    "answer": "=== 2000–2009 ===\nIn 2000, McAfee/Network Associates was the leading authority in educating and protecting people against the Love Bug or ILOVEYOU virus, one of the most destructive computer viruses in history.",
-    "domain": "intranet",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about CEO",
-    "answer": "At the end of 2000, CEO Bill Larson, President Peter Watkins, and CFO Prabhat Goyal all resigned after the company sustained losses.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about BMC",
-    "answer": "It restructured, beginning with the sale of its Magic Solutions business to Remedy, a subsidiary of BMC Software early in the year.",
-    "domain": "internet",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about Sniffer Technologies",
-    "answer": "In mid-2004, the company sold the Sniffer Technologies business to a venture capital backed firm named Network General (the same name as the original owner of Sniffer Technologies), and changed its name back to McAfee to reflect its focus on security-related technologies.",
-    "domain": "internet",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about SIA",
-    "answer": "In 2007, McAfee launched the Security Innovation Alliance (SIA), a program focused on cultivating partnerships with other tech companies and integrating third-party technology with McAfee's security and compliance risk management technology.",
-    "domain": "security",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about US",
-    "answer": "On March 11, 2008, McAfee announced a license agreement with the US Department of Defense.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about Virus Scan Enterprise",
-    "answer": "This agreement allowed the DoD to integrate McAfee's Virus Scan Enterprise and Anti-Spyware Enterprise into the Defense Information Systems Agency's cyber-security solutions.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about DAT",
-    "answer": "=== 2010–2020 ===\nOn April 21, 2010, McAfee sent out a bad anti-virus update (DAT 5958) that crippled millions of corporate and consumer Windows-based computers.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about On August",
-    "answer": "On August 19, 2010, Intel announced that it would purchase McAfee for $48 a share in a deal valued at $7.68 billion.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about SAIC",
-    "answer": "In 2011, McAfee also partnered with SAIC to develop anti-cyber espionage products for use by government and intelligence agencies, along with telecommunications companies.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about John Mc",
-    "answer": "John McAfee, who no longer had any involvement in the company, expressed his pleasure at his name no longer being associated with the software.",
-    "domain": "intranet",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about Security Innovation Alliance",
-    "answer": "In 2018, McAfee also expanded its Security Innovation Alliance partnerships to include companies such as Atos, CyberX, Fidelis Cyber-security, Aujas, and Silver Peak.",
-    "domain": "security",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about IPO",
-    "answer": "In July 2019, McAfee began meeting with bankers to discuss returning to the market as an IPO.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about Google Cloud",
-    "answer": "Near the end of 2019, McAfee partnered with Google Cloud to integrate McAfee's Mvision Cloud and endpoint security technology with Google's cloud infrastructure.",
-    "domain": "internet",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about In October",
-    "answer": "In October 2020, McAfee and its shareholders raised $740 million in the initial public offering and valued at about $8.6 billion based on the outstanding shares listed in its prospectus.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about In July",
-    "answer": "=== 2021–present ===\nIn July 2021, McAfee completed the sale of its enterprise business.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about AI",
-    "answer": "In early 2024, McAfee launched an AI-driven threat detection system, enhancing real-time protection against evolving cyber threats.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about In February",
-    "answer": "In February 2024, the company expanded its identity theft protection services, integrating new tools for monitoring and fraud prevention.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about In August",
-    "answer": "In August 2024, McAfee introduced deepfake detector to combat fraud.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about In May",
-    "answer": "In May 2025, McAfee started an initiative to drive awareness, education, and empathy around scams called Keep it Real.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about Scam Stories",
-    "answer": "This initiative combines thought-provoking ads with Scam Stories, a movement inviting survivors to share their experiences online, on social, or with McAfee directly.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about Afee Web",
-    "answer": "=== Renamed products ===\nMcAfee WebAdvisor (formerly SiteAdvisor).",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about Afee Virus",
-    "answer": "=== Former products ===\nMcAfee VirusScan Enterprise (Changed from McAfee VirusScan)\nMcAfee Network Security Platform (Changed from IntruShield)\nMcAfee Application and Change Control (Changed from McAfee Change Control)\nMcAfee E-Business Servers\nMcAfee Entercept.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about Dr Solomon",
-    "answer": "=== Dr Solomon's Group plc ===\nOn June 9, 1998, Network Associates agreed to acquire Dr Solomon's Group plc, the leading European manufacturer of antivirus software, for $642 million in stock.",
-    "domain": "intranet",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about Vert Networks",
-    "answer": "=== IntruVert Networks ===\nOn April 2, 2003, McAfee acquired IntruVert Networks for $100 million.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "What is According to Network World, \"IntruVert's technology focus?",
-    "answer": "According to Network World, \"IntruVert's technology focus is on intrusion-prevention, which entails not just detecting attacks, but blocking them.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about The Intru",
-    "answer": "The IntruVert product line can be used as a passive intrusion-detection system, just watching and reporting, or it can be used in the intrusion-prevention mode of blocking a perceived attack.\".",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about On April",
-    "answer": "=== SiteAdvisor ===\nOn April 5, 2006, McAfee bought out SiteAdvisor for a reputed $70 million in competition with Symantec, a service that warns users if downloading software or filling out forms on a site may obtain malware or spam.",
-    "domain": "security",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about On June",
-    "answer": "=== Preventsys ===\nOn June 6, 2006, McAfee announced that it would acquire Preventsys, a California-based company offering security risk management products.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about Onigma Ltd",
-    "answer": "=== Onigma Ltd ===\nOn October 16, 2006, McAfee announced that it would acquire Israel based Onigma Ltd for $20 million.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "What does Onigma provide?",
-    "answer": "Onigma provides host-based data leakage protection software that prevents intentional and unintentional leakage of sensitive data by internal users.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about On October",
-    "answer": "===\nOn October 8, 2007, McAfee announced it would acquire SafeBoot Holding B.V.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about Hacker Safe",
-    "answer": "The acquisition integrated ScanAlert's Hacker Safe service and McAfee's SiteAdvisor rating system to attack website security from both sides.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about On July",
-    "answer": "=== Reconnex ===\nOn July 31, 2008, McAfee announced it would acquire Reconnex, a maker of data protection appliances and software.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about Secure Computing",
-    "answer": "=== Secure Computing ===\nOn September 22, 2008, McAfee announced an agreement to acquire Secure Computing, a company specializing in network security hardware, services, and software products.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about Solidcore Systems",
-    "answer": "=== Solidcore Systems ===\nOn May 15, 2009, McAfee announced its intention acquire Solidcore Systems, a privately held security company, for $33 million.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about ATMs",
-    "answer": "Solidcore was a maker of software that helped companies protect ATMs and other specialized computers.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about Trust Digital",
-    "answer": "=== Trust Digital ===\nOn May 25, 2010, McAfee announced a definitive agreement to acquire Trust Digital, a privately held online security company that specialized in security for mobile devices.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about On March",
-    "answer": "=== Sentrigo ===\nOn March 23, 2011, McAfee announced its intention to acquire privately owned Sentrigo, a leading provider of database security, including vulnerability management, database activity monitoring, database audit, and virtual patching—which ensure databases are protected without impacting performance or availability.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
     "question": "Tell me about SIEM",
     "answer": "=== NitroSecurity ===\nOn October 4, 2011, McAfee announced its intention to acquire privately owned NitroSecurity, a developer of high-performance security information and event management (SIEM) solutions that protect critical information and infrastructure.",
     "domain": "security",
     "source": "wikipedia:McAfee"
   },
   {
-    "question": "Tell me about On February",
-    "answer": "=== ValidEdge ===\nOn February 26, 2013, McAfee announced it had acquired the ValidEdge sandboxing technology.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about The Next Generation Firewall",
-    "answer": "The Next Generation Firewall business acquired from Stonesoft was divested to Forcepoint in January 2016.",
-    "domain": "security",
-    "source": "wikipedia:McAfee"
-  },
-  {
     "question": "Tell me about On December",
     "answer": "=== PasswordBox ===\nOn December 1, 2014, Intel Security announced the acquisition of PasswordBox, a Montreal-based provider of digital identity management solutions.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about CASB",
-    "answer": "=== Skyhigh Networks ===\nIn November 2017, McAfee acquired Skyhigh Networks, a CASB security company.",
-    "domain": "security",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about In March",
-    "answer": "In March 2021, Symphony Technology Group acquired McAfee Enterprise, including Skyhigh Networks.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about STG",
-    "answer": "In January 2022, STG announced that McAfee Enterprise's security service edge (SSE) business would operate as a separate company to be known as Skyhigh Security, built on McAfee Enterprise and Skyhigh Networks.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about Uplevel Security",
-    "answer": "=== Uplevel Security ===\nIn July 2019, Uplevel Security, a data analytics company using graph theory and machine learning, announced it had been acquired by McAfee.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about In November",
-    "answer": "=== SayMine ===\nIn November 2025, McAfee acquired MineOS (also known as SayMine), a data privacy & risk management company, stating that the company's Smart Data Assistant (a tool for individuals to delete data companies hold on them) would be merged into McAfee products.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about SEC",
-    "answer": "=== SEC investigation into share options ===\nIn October 2006, McAfee fired its president Kevin Weiss, and its CEO George Samaneuk resigned under the cloud of a recent SEC investigation which also caused the departure of Kent Roberts, the General Counsel, earlier in the year.",
-    "domain": "internet",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about The University",
-    "answer": "The University of Michigan's medical school reported that 8,000 of its 25,000 computers crashed.",
-    "domain": "general",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about Rhode Island",
-    "answer": "Some jails canceled visitation, and Rhode Island hospitals turned away non-trauma patients at emergency rooms and postponed some elective surgeries.",
-    "domain": "networking",
-    "source": "wikipedia:McAfee"
-  },
-  {
-    "question": "Tell me about QA",
-    "answer": "As a result of the outage, McAfee implemented additional QA protocols for any releases that directly impacted critical system files.",
     "domain": "general",
     "source": "wikipedia:McAfee"
   },
@@ -2834,12 +1916,6 @@
   {
     "question": "Tell me about Afee Chief Technology Officer George Kurtz",
     "answer": "\"We believe the name was the internal name the attacker(s) gave to this operation\", McAfee Chief Technology Officer George Kurtz said in a weblog post.",
-    "domain": "general",
-    "source": "wikipedia:Operation Aurora"
-  },
-  {
-    "question": "Tell me about On January",
-    "answer": "On January 12, 2010, Google revealed on its weblog that it had been the victim of a cyber attack.",
     "domain": "general",
     "source": "wikipedia:Operation Aurora"
   },
@@ -2919,18 +1995,6 @@
     "question": "Tell me about The German",
     "answer": "== Response and aftermath ==\nThe German, Australian, and French governments publicly issued warnings to users of Internet Explorer after the attack, advising them to use alternative browsers at least until a fix for the security breach was made.",
     "domain": "networking",
-    "source": "wikipedia:Operation Aurora"
-  },
-  {
-    "question": "Tell me about XP",
-    "answer": "The vulnerability affects Internet Explorer versions 6, 7, and 8 on Windows 7, Vista, Windows XP, Server 2003, Server 2008 R2, as well as IE 6 Service Pack 1 on Windows 2000 Service Pack 4.",
-    "domain": "general",
-    "source": "wikipedia:Operation Aurora"
-  },
-  {
-    "question": "Tell me about The Internet Explorer",
-    "answer": "The Internet Explorer exploit code used in the attack has been released into the public domain, and has been incorporated into the Metasploit Framework penetration testing program.",
-    "domain": "security",
     "source": "wikipedia:Operation Aurora"
   },
   {
@@ -3030,20 +2094,8 @@
     "source": "wikipedia:Operation Aurora"
   },
   {
-    "question": "Tell me about CNET",
-    "answer": "McAfee Operation Aurora Overview\nOperation Aurora Explained by CNET.",
-    "domain": "general",
-    "source": "wikipedia:Operation Aurora"
-  },
-  {
     "question": "What is Juniper Networks?",
     "answer": "Juniper Networks, Inc., was an American multinational corporation headquartered in Sunnyvale, California. The company developed and marketed networking products, including routers, switches, network management software, network security products, and software-defined networking technology.\nThe company was founded in 1996 by Pradeep Sindhu, with Scott Kriens as the first CEO, who remained until September 2008. Kriens has been credited with much of Juniper's early market success.",
-    "domain": "networking",
-    "source": "wikipedia:Juniper Networks"
-  },
-  {
-    "question": "Tell me about Juniper Networks",
-    "answer": "Juniper Networks, Inc., was an American multinational corporation headquartered in Sunnyvale, California.",
     "domain": "networking",
     "source": "wikipedia:Juniper Networks"
   },
@@ -3051,12 +2103,6 @@
     "question": "What is Juniper Networks originally focused on core routers, which?",
     "answer": "Juniper Networks originally focused on core routers, which are used by internet service providers (ISPs) to perform IP address lookups and direct internet traffic.",
     "domain": "networking",
-    "source": "wikipedia:Juniper Networks"
-  },
-  {
-    "question": "Tell me about HPE",
-    "answer": "In January 2024, Juniper agreed to be acquired in full by Hewlett Packard Enterprise (HPE) for approximately $14 billion.",
-    "domain": "general",
     "source": "wikipedia:Juniper Networks"
   },
   {
@@ -3078,24 +2124,6 @@
     "source": "wikipedia:Juniper Networks"
   },
   {
-    "question": "Tell me about AT",
-    "answer": "Juniper also received $2.5 million from Qwest and other investments from AT&T.",
-    "domain": "general",
-    "source": "wikipedia:Juniper Networks"
-  },
-  {
-    "question": "Tell me about United Kingdom",
-    "answer": "A European headquarters was established in the United Kingdom and an Asia-Pacific headquarters in Hong Kong.",
-    "domain": "general",
-    "source": "wikipedia:Juniper Networks"
-  },
-  {
-    "question": "Tell me about Cisco Systems",
-    "answer": "=== Competition ===\nBy 2001, Juniper controlled one-third of the market for high-end core routers, mostly at the expense of Cisco Systems sales.",
-    "domain": "networking",
-    "source": "wikipedia:Juniper Networks"
-  },
-  {
     "question": "Tell me about Avici Systems",
     "answer": "Cisco's routers were not expected to erode Juniper's growing share of the market, but other companies such as Lucent, Alcatel, and startups Avici Systems and Pluris had announced plans to release products that would out-pace Juniper's routers.",
     "domain": "networking",
@@ -3108,21 +2136,9 @@
     "source": "wikipedia:Juniper Networks"
   },
   {
-    "question": "Tell me about In December",
-    "answer": "In December 2006, Juniper restated its financials, charging $900 million in expenses to correct backdated stock options from 1999 to 2003.",
-    "domain": "internet",
-    "source": "wikipedia:Juniper Networks"
-  },
-  {
     "question": "Tell me about Bob Muglia",
     "answer": "Johnson focused the company more on software, creating a software solutions division headed by a former Microsoft colleague, Bob Muglia.",
     "domain": "general",
-    "source": "wikipedia:Juniper Networks"
-  },
-  {
-    "question": "Tell me about IBM",
-    "answer": "Juniper established partnerships with IBM, Microsoft and Oracle for software compatibility efforts.",
-    "domain": "security",
     "source": "wikipedia:Juniper Networks"
   },
   {
@@ -3180,12 +2196,6 @@
     "source": "wikipedia:Juniper Networks"
   },
   {
-    "question": "Tell me about SDN",
-    "answer": "In 2014, Juniper acquired the software-defined networking (SDN) company WANDL.",
-    "domain": "general",
-    "source": "wikipedia:Juniper Networks"
-  },
-  {
     "question": "Tell me about BTI",
     "answer": "In April 2016, Juniper closed its acquisition of BTI, a provider of cloud and metro network technology, in an effort to beef up its data center interconnect and metro packet optical transport technology and services.",
     "domain": "internet",
@@ -3219,18 +2229,6 @@
     "question": "What does Juniper provide?",
     "answer": "Juniper provides technical support and services through the J-Care program.",
     "domain": "general",
-    "source": "wikipedia:Juniper Networks"
-  },
-  {
-    "question": "Tell me about ASIC",
-    "answer": "It incorporated specialized application-specific integrated circuits (ASIC) for routing internet traffic that were developed in partnership with IBM.",
-    "domain": "networking",
-    "source": "wikipedia:Juniper Networks"
-  },
-  {
-    "question": "Tell me about TX",
-    "answer": "The first products of the TX Matrix family, which could be used to combine up to four T-series routers, was released in December 2004.",
-    "domain": "networking",
     "source": "wikipedia:Juniper Networks"
   },
   {
@@ -3270,33 +2268,15 @@
     "source": "wikipedia:Juniper Networks"
   },
   {
-    "question": "Tell me about NAT",
-    "answer": "It included firewalls, flow monitoring, filtering and Network Address Translation (NAT).",
-    "domain": "networking",
-    "source": "wikipedia:Juniper Networks"
-  },
-  {
     "question": "Tell me about ADSL",
     "answer": "The NetScreen-5GT ADSL security appliance was the first new NetScreen product Juniper introduced after the acquisition and its first wireless product.",
     "domain": "wifi",
     "source": "wikipedia:Juniper Networks"
   },
   {
-    "question": "Tell me about In September",
-    "answer": "In September 2004, Juniper entered the market for enterprise access routers with three routers that were the first of the J-series product family.",
-    "domain": "networking",
-    "source": "wikipedia:Juniper Networks"
-  },
-  {
     "question": "Tell me about SSG",
     "answer": "According to a 2006 review in Network World, Juniper's SSG 520 firewall and routing product was \"the first serious threat\" to competing products from Cisco.",
     "domain": "networking",
-    "source": "wikipedia:Juniper Networks"
-  },
-  {
-    "question": "What is Mykonos' software?",
-    "answer": "Mykonos' software is focused on deceiving hackers by presenting fake vulnerabilities and tracking their activity.",
-    "domain": "general",
     "source": "wikipedia:Juniper Networks"
   },
   {
@@ -3366,12 +2346,6 @@
     "source": "wikipedia:Juniper Networks"
   },
   {
-    "question": "Tell me about NSA",
-    "answer": "Analysis showed that the mechanism of the backdoor was created by the NSA, but might later have been taken over by an unnamed national government.",
-    "domain": "networking",
-    "source": "wikipedia:Juniper Networks"
-  },
-  {
     "question": "What is Radware?",
     "answer": "Radware Ltd. is an American provider of cybersecurity and application delivery products for physical, cloud and software-defined data centers. Radware's corporate headquarters are located in Mahwah, New Jersey. The company also has offices in Europe, Africa and Asia Pacific regions. The company's global headquarters is in Israel. Radware is a member of the Rad Group of companies and its shares are traded on NASDAQ.",
     "domain": "internet",
@@ -3432,18 +2406,6 @@
     "source": "wikipedia:Computer security"
   },
   {
-    "question": "What is IT security?",
-    "answer": "IT security is not a perfect subset of information security and therefore does not  completely align with the security convergence schema.",
-    "domain": "general",
-    "source": "wikipedia:Computer security"
-  },
-  {
-    "question": "What is vulnerability?",
-    "answer": "A vulnerability refers to a flaw in the structure, execution, functioning, or internal oversight of a computer or system that compromises its security.",
-    "domain": "general",
-    "source": "wikipedia:Computer security"
-  },
-  {
     "question": "What is Most of the vulnerabilities that have been discovered?",
     "answer": "Most of the vulnerabilities that have been discovered are documented in the Common Vulnerabilities and Exposures (CVE) database.",
     "domain": "general",
@@ -3465,12 +2427,6 @@
     "question": "What is Normal internet users?",
     "answer": "Normal internet users are most likely to be affected by untargeted cyberattacks.",
     "domain": "general",
-    "source": "wikipedia:Computer security"
-  },
-  {
-    "question": "What is These?",
-    "answer": "These are where attackers indiscriminately target as many devices, services, or users as possible.",
-    "domain": "networking",
     "source": "wikipedia:Computer security"
   },
   {
@@ -3558,12 +2514,6 @@
     "source": "wikipedia:Computer security"
   },
   {
-    "question": "Tell me about MITM",
-    "answer": "=== Man-in-the-middle attacks ===\nMan-in-the-middle attacks (MITM) involve a malicious attacker trying to intercept, surveil or modify communications between two parties by spoofing one or both party's identities and injecting themselves in-between.",
-    "domain": "general",
-    "source": "wikipedia:Computer security"
-  },
-  {
     "question": "What is IP address spoofing?",
     "answer": "IP address spoofing is where the attacker hijacks routing protocols to reroute the targets traffic to a vulnerable network node for traffic interception or injection.",
     "domain": "networking",
@@ -3579,12 +2529,6 @@
     "question": "What is WiFi SSID spoofing?",
     "answer": "WiFi SSID spoofing is where the attacker simulates a Wi-Fi base station SSID to capture and modify internet traffic and transactions.",
     "domain": "wifi",
-    "source": "wikipedia:Computer security"
-  },
-  {
-    "question": "What is DNS spoofing?",
-    "answer": "DNS spoofing is where attackers hijack domain name assignments to redirect traffic to systems under the attackers control, in order to surveil traffic or launch other attacks.",
-    "domain": "internet",
     "source": "wikipedia:Computer security"
   },
   {
@@ -3615,12 +2559,6 @@
     "question": "What is However, they?",
     "answer": "However, they are also multi-staged, meaning that \"they can infiltrate networks and move laterally inside the network.\" The attacks can be polymorphic, meaning that the cyberattacks used such as viruses, worms or trojans \"constantly change (\"morph\") making it nearly impossible to detect them using signature-based defences.\".",
     "domain": "networking",
-    "source": "wikipedia:Computer security"
-  },
-  {
-    "question": "What is Phishing?",
-    "answer": "Phishing is the attempt to acquire sensitive information such as usernames, passwords, and credit card details directly from users by deceiving the users.",
-    "domain": "security",
     "source": "wikipedia:Computer security"
   },
   {
@@ -3666,12 +2604,6 @@
     "source": "wikipedia:Computer security"
   },
   {
-    "question": "What is Spoofing?",
-    "answer": "Spoofing is an act of pretending to be a valid entity through the falsification of data (such as an IP address or username), in order to gain access to information or resources that one is otherwise unauthorized to obtain.",
-    "domain": "networking",
-    "source": "wikipedia:Computer security"
-  },
-  {
     "question": "What is Email spoofing?",
     "answer": "Email spoofing is where an attacker forges the sending (From, or source) address of an email.",
     "domain": "general",
@@ -3681,12 +2613,6 @@
     "question": "Tell me about Evil Maid",
     "answer": "So-called Evil Maid attacks and security services planting of surveillance capability into routers are examples.",
     "domain": "networking",
-    "source": "wikipedia:Computer security"
-  },
-  {
-    "question": "Tell me about HTML",
-    "answer": "=== HTML smuggling ===\nHTML smuggling allows an attacker to smuggle a malicious code inside a particular HTML or web page.",
-    "domain": "general",
     "source": "wikipedia:Computer security"
   },
   {
@@ -3858,12 +2784,6 @@
     "source": "wikipedia:Computer security"
   },
   {
-    "question": "What is Two factor authentication?",
-    "answer": "Two factor authentication is a method for mitigating unauthorized access to a system or sensitive information.",
-    "domain": "general",
-    "source": "wikipedia:Computer security"
-  },
-  {
     "question": "Tell me about PIN",
     "answer": "It requires something you know: a password or PIN, and something you have: a card, dongle, cellphone, or another piece of hardware.",
     "domain": "general",
@@ -3936,12 +2856,6 @@
     "source": "wikipedia:Computer security"
   },
   {
-    "question": "Tell me about GPS",
-    "answer": "Disconnecting or disabling peripheral devices (like camera, GPS, removable storage, etc.), that are not in use.",
-    "domain": "general",
-    "source": "wikipedia:Computer security"
-  },
-  {
     "question": "What is Mobile-enabled access devices?",
     "answer": "Mobile-enabled access devices are growing in popularity due to the ubiquitous nature of cell phones.",
     "domain": "networking",
@@ -3974,12 +2888,6 @@
   {
     "question": "What is Using secure operating systems?",
     "answer": "Using secure operating systems is a good way of ensuring computer security.",
-    "domain": "general",
-    "source": "wikipedia:Computer security"
-  },
-  {
-    "question": "Tell me about ACLs",
-    "answer": "Within computer systems, two of the main security models capable of enforcing privilege separation are access control lists (ACLs) and role-based access control (RBAC).",
     "domain": "general",
     "source": "wikipedia:Computer security"
   },
@@ -4077,12 +2985,6 @@
     "question": "Tell me about Instant Issuance",
     "answer": "Other developments in this arena include the development of technology such as Instant Issuance which has enabled shopping mall kiosks acting on behalf of banks to issue on-the-spot credit cards to interested customers.",
     "domain": "internet",
-    "source": "wikipedia:Computer security"
-  },
-  {
-    "question": "What is Internet?",
-    "answer": "The Internet is a potential attack vector for such machines if connected, but the Stuxnet worm demonstrated that even equipment controlled by computers not connected to the Internet can be vulnerable.",
-    "domain": "general",
     "source": "wikipedia:Computer security"
   },
   {
@@ -4260,12 +3162,6 @@
     "source": "wikipedia:Computer security"
   },
   {
-    "question": "Tell me about SIM",
-    "answer": "=== Telecommunications ===\nPerhaps the most widely known digitally secure telecommunication device is the SIM (Subscriber Identity Module) card, a device that is embedded in most of the world's cellular devices before any service can be obtained.",
-    "domain": "general",
-    "source": "wikipedia:Computer security"
-  },
-  {
     "question": "What is SIM card?",
     "answer": "The SIM card is just the beginning of this digitally secure environment.",
     "domain": "general",
@@ -4398,12 +3294,6 @@
     "source": "wikipedia:Computer security"
   },
   {
-    "question": "Tell me about In June",
-    "answer": "In June 2021, the cyber attack took down the largest fuel pipeline in the U.S.",
-    "domain": "general",
-    "source": "wikipedia:Computer security"
-  },
-  {
     "question": "What is Proving attribution for cybercrimes and cyberattacks?",
     "answer": "Proving attribution for cybercrimes and cyberattacks is also a major problem for all law enforcement agencies.",
     "domain": "general",
@@ -4413,12 +3303,6 @@
     "question": "What is So the Internet?",
     "answer": "So the Internet is as if someone [had] given free plane tickets to all the online criminals of the world.\" The use of techniques such as dynamic DNS, fast flux and bullet proof servers add to the difficulty of investigation and enforcement.",
     "domain": "internet",
-    "source": "wikipedia:Computer security"
-  },
-  {
-    "question": "Tell me about RSA",
-    "answer": "Clarke said during a panel discussion at the RSA Security Conference in San Francisco, he believes that the \"industry only responds when you threaten regulation.",
-    "domain": "general",
     "source": "wikipedia:Computer security"
   },
   {
@@ -4466,12 +3350,6 @@
   {
     "question": "What is ENISA : The European Network and Information Security Agency (ENISA)?",
     "answer": "ENISA : The European Network and Information Security Agency (ENISA) is an agency of the European Union with the objective to improve network and information security in the European Union.",
-    "domain": "general",
-    "source": "wikipedia:Computer security"
-  },
-  {
-    "question": "Tell me about GDPR",
-    "answer": "=== Europe ===\nOn 14 April 2016, the European Parliament and the Council of the European Union adopted the General Data Protection Regulation (GDPR).",
     "domain": "general",
     "source": "wikipedia:Computer security"
   },
@@ -4626,12 +3504,6 @@
     "source": "wikipedia:Computer security"
   },
   {
-    "question": "What is These services?",
-    "answer": "These services are commonly referred to as Highly Adaptive Cybersecurity Services (HACS).",
-    "domain": "general",
-    "source": "wikipedia:Computer security"
-  },
-  {
     "question": "Tell me about The Department",
     "answer": "===== Agencies =====\nThe Department of Homeland Security has a dedicated division responsible for the response system, risk management program and requirements for cyber security in the United States called the National Cyber Security Division.",
     "domain": "networking",
@@ -4704,12 +3576,6 @@
     "source": "wikipedia:Computer security"
   },
   {
-    "question": "Tell me about CERT",
-    "answer": "CERT/CC: created by the Defense Advanced Research Projects Agency (DARPA) and run by the Software Engineering Institute (SEI).",
-    "domain": "networking",
-    "source": "wikipedia:Computer security"
-  },
-  {
     "question": "Tell me about NRC",
     "answer": "Nuclear Regulatory Commission (NRC) outlines cyber security requirements under 10 CFR Part 73, specifically in §73.54.",
     "domain": "general",
@@ -4758,12 +3624,6 @@
     "source": "wikipedia:Computer security"
   },
   {
-    "question": "Tell me about CISO",
-    "answer": "Chief Information Security Officer (CISO)\nA high-level management position responsible for the entire information security division/staff.",
-    "domain": "networking",
-    "source": "wikipedia:Computer security"
-  },
-  {
     "question": "Tell me about CSO",
     "answer": "Chief Security Officer (CSO)\nA high-level management position responsible for the entire security division/staff.",
     "domain": "networking",
@@ -4788,21 +3648,9 @@
     "source": "wikipedia:Computer security"
   },
   {
-    "question": "Tell me about Operational Technology",
-    "answer": "The framework defines emerging cyber security roles in Operational Technology.",
-    "domain": "general",
-    "source": "wikipedia:Computer security"
-  },
-  {
     "question": "Tell me about OTCCF",
     "answer": "The OTCCF was endorsed by the Infocomm Media Development Authority (IMDA).",
     "domain": "general",
-    "source": "wikipedia:Computer security"
-  },
-  {
-    "question": "Tell me about FTP",
-    "answer": "These systems can protect either the whole computer, such as through an interactive login screen, or individual services, such as a FTP server.",
-    "domain": "internet",
     "source": "wikipedia:Computer security"
   },
   {
@@ -4830,20 +3678,8 @@
     "source": "wikipedia:Computer security"
   },
   {
-    "question": "Tell me about SELinux",
-    "answer": "Generalized security frameworks such as SELinux or AppArmor help administrators control access.",
-    "domain": "general",
-    "source": "wikipedia:Computer security"
-  },
-  {
     "question": "What is Authentication techniques can be used to ensure that communication end-points?",
     "answer": "Authentication techniques can be used to ensure that communication end-points are who they say they are.",
-    "domain": "general",
-    "source": "wikipedia:Computer security"
-  },
-  {
-    "question": "What is Backups?",
-    "answer": "Backups are one or more copies kept of important computer files.",
     "domain": "general",
     "source": "wikipedia:Computer security"
   },
@@ -4875,12 +3711,6 @@
     "question": "What is Data integrity?",
     "answer": "Data integrity is the accuracy and consistency of stored data, indicated by an absence of any alteration in data between two updates of a data record.",
     "domain": "general",
-    "source": "wikipedia:Computer security"
-  },
-  {
-    "question": "What is Encryption?",
-    "answer": "Encryption is used to protect the confidentiality of a message.",
-    "domain": "security",
     "source": "wikipedia:Computer security"
   },
   {
@@ -4932,12 +3762,6 @@
     "source": "wikipedia:Computer security"
   },
   {
-    "question": "What is Social engineering?",
-    "answer": "Social engineering is the use of deception to manipulate individuals to breach security.",
-    "domain": "general",
-    "source": "wikipedia:Computer security"
-  },
-  {
     "question": "What is Logic bombs?",
     "answer": "Logic bombs is a type of malware added to a legitimate program that lies dormant until it is triggered by a specific event.",
     "domain": "security",
@@ -4965,12 +3789,6 @@
     "question": "Tell me about The April",
     "answer": "The April 1967 session organized by Willis Ware at the Spring Joint Computer Conference, and the later publication of the Ware Report, were foundational moments in the history of the field of computer security.",
     "domain": "general",
-    "source": "wikipedia:Computer security"
-  },
-  {
-    "question": "Tell me about BBN",
-    "answer": "One of the earliest examples of an attack on a computer network was the computer worm Creeper written by Bob Thomas at BBN, which propagated through the ARPANET in 1971.",
-    "domain": "networking",
     "source": "wikipedia:Computer security"
   },
   {
@@ -5034,27 +3852,9 @@
     "source": "wikipedia:Computer security"
   },
   {
-    "question": "What is Hewlett Packard Enterprise?",
-    "answer": "The Hewlett Packard Enterprise Company (HPE) is an American multinational information technology company based in Spring, Texas. It is a business-focused organization which works in servers, storage, networking, AI, containerization software and consulting and support. HPE was ranked No. 107 in the 2018 Fortune 500 list of the largest United States corporations by total revenue.",
-    "domain": "networking",
-    "source": "wikipedia:Hewlett Packard Enterprise"
-  },
-  {
     "question": "What is Hewlett Packard Enterprise Company (HPE)?",
     "answer": "The Hewlett Packard Enterprise Company (HPE) is an American multinational information technology company based in Spring, Texas.",
     "domain": "networking",
-    "source": "wikipedia:Hewlett Packard Enterprise"
-  },
-  {
-    "question": "Tell me about HP",
-    "answer": "The split was structured so that the former Hewlett-Packard Company would change its name to HP Inc.",
-    "domain": "general",
-    "source": "wikipedia:Hewlett Packard Enterprise"
-  },
-  {
-    "question": "Tell me about Hewlett Packard Enterprise",
-    "answer": "and spin off Hewlett Packard Enterprise as a newly created company.",
-    "domain": "general",
     "source": "wikipedia:Hewlett Packard Enterprise"
   },
   {
@@ -5070,21 +3870,9 @@
     "source": "wikipedia:Hewlett Packard Enterprise"
   },
   {
-    "question": "What is company?",
-    "answer": "The company is commonly referred to as \"Hewlett Packard Enterprise\" or by its initials \"HPE\".",
-    "domain": "general",
-    "source": "wikipedia:Hewlett Packard Enterprise"
-  },
-  {
     "question": "Tell me about SGI",
     "answer": "In August 2016, the company announced plans to acquire Silicon Graphics International (SGI), known for their capabilities in high performance computing.",
     "domain": "networking",
-    "source": "wikipedia:Hewlett Packard Enterprise"
-  },
-  {
-    "question": "Tell me about LLC",
-    "answer": "In September 2016, Hewlett Packard Enterprise transferred two patents to Texas-based wholly owned shell company Plectrum LLC.",
-    "domain": "general",
     "source": "wikipedia:Hewlett Packard Enterprise"
   },
   {
@@ -5190,18 +3978,6 @@
     "source": "wikipedia:Broadcom"
   },
   {
-    "question": "Tell me about VMware",
-    "answer": "In May 2022, Broadcom announced an agreement to acquire VMware in a cash-and-stock transaction valued at $69 billion.",
-    "domain": "general",
-    "source": "wikipedia:Broadcom"
-  },
-  {
-    "question": "Tell me about Broadcom Inc",
-    "answer": "=== Origin in Hewlett-Packard ===\nThe company that would later become Broadcom Inc.",
-    "domain": "general",
-    "source": "wikipedia:Broadcom"
-  },
-  {
     "question": "Tell me about Agilent Technologies",
     "answer": "The division separated from Hewlett-Packard as part of the Agilent Technologies spinoff in 1999.",
     "domain": "general",
@@ -5228,12 +4004,6 @@
   {
     "question": "Tell me about LSI",
     "answer": "Avago Technologies announced its agreement to acquire LSI Corporation in December 2013 for $6.6 billion.",
-    "domain": "general",
-    "source": "wikipedia:Broadcom"
-  },
-  {
-    "question": "Tell me about SSD",
-    "answer": "The company sold its SSD controller business to Seagate Technology in May 2014.",
     "domain": "general",
     "source": "wikipedia:Broadcom"
   },
@@ -5286,12 +4056,6 @@
     "source": "wikipedia:Broadcom"
   },
   {
-    "question": "Tell me about CA",
-    "answer": "On 11 July 2018, news sources reported that Broadcom and CA Technologies agreed on terms for an $18.9 billion acquisition.",
-    "domain": "general",
-    "source": "wikipedia:Broadcom"
-  },
-  {
     "question": "Tell me about Symantec Corporation",
     "answer": "On 9 August 2019, Broadcom acquired the enterprise security business of Symantec Corporation (the consumer software portion of which is now known as Gen Digital) for $10.7 billion in cash.",
     "domain": "general",
@@ -5322,20 +4086,8 @@
     "source": "wikipedia:Broadcom"
   },
   {
-    "question": "Tell me about TV",
-    "answer": "=== Patent suits ===\nIn 2017, Broadcom filed patent suits against smart TV manufacturers.",
-    "domain": "general",
-    "source": "wikipedia:Broadcom"
-  },
-  {
     "question": "What is Critics have argued that Broadcom?",
     "answer": "Critics have argued that Broadcom is suing Netflix for being more successful, citing the declining number of traditional pay television subscribers due to the rise of streaming services.",
-    "domain": "general",
-    "source": "wikipedia:Broadcom"
-  },
-  {
-    "question": "Tell me about PLC",
-    "answer": "On January 7, 2020, Accenture PLC agreed to acquire Symantec's 300-person cybersecurity services division from Broadcom.",
     "domain": "general",
     "source": "wikipedia:Broadcom"
   },
@@ -5442,12 +4194,6 @@
     "source": "wikipedia:HPE Integrated Lights-Out"
   },
   {
-    "question": "Tell me about RIB",
-    "answer": "The original was the Remote Insight Board (RIB), which was available as an EISA or PCI expansion card.",
-    "domain": "general",
-    "source": "wikipedia:HPE Integrated Lights-Out"
-  },
-  {
     "question": "What is final firmware version for RILOE?",
     "answer": "The final firmware version for RILOE is 2.53(A) dated 9 Mar 2004 and for RILOE II is 1.21 dated 5 July 2006.",
     "domain": "general",
@@ -5478,21 +4224,9 @@
     "source": "wikipedia:HPE Integrated Lights-Out"
   },
   {
-    "question": "Tell me about The Pro",
-    "answer": "The ProLiant MicroServer Gen10+ and Gen11 has an iLO add-on card.",
-    "domain": "general",
-    "source": "wikipedia:HPE Integrated Lights-Out"
-  },
-  {
     "question": "What is Some generations of iLO?",
     "answer": "Some generations of iLO are segmented into different editions, based on what features are licensed.",
     "domain": "general",
-    "source": "wikipedia:HPE Integrated Lights-Out"
-  },
-  {
-    "question": "Tell me about APIs",
-    "answer": "== Programming Interfaces ==\nSeveral tools or APIs exist for interacting with HPE iLO:.",
-    "domain": "internet",
     "source": "wikipedia:HPE Integrated Lights-Out"
   },
   {
@@ -5526,12 +4260,6 @@
     "source": "wikipedia:Micro Focus Enterprise Security Products"
   },
   {
-    "question": "What is Micro Focus Enterprise Security Products business?",
-    "answer": "The Micro Focus Enterprise Security Products business is part of the software business of Micro Focus.",
-    "domain": "general",
-    "source": "wikipedia:Micro Focus Enterprise Security Products"
-  },
-  {
     "question": "What does ArcSight provide?",
     "answer": "ArcSight provides Security Information and Event Management (SIEM).",
     "domain": "security",
@@ -5558,12 +4286,6 @@
   {
     "question": "What is HP Protect 2014?",
     "answer": "HP Protect 2014 is scheduled to occur on September 8–11, 2014 in Washington, D.C.",
-    "domain": "general",
-    "source": "wikipedia:Micro Focus Enterprise Security Products"
-  },
-  {
-    "question": "Tell me about Micro Focus Enterprise Security Products",
-    "answer": "== External links ==\nMicro Focus Enterprise Security Products official website.",
     "domain": "general",
     "source": "wikipedia:Micro Focus Enterprise Security Products"
   },
@@ -5673,12 +4395,6 @@
     "question": "Tell me about Implement Risk Responses",
     "answer": "Implement Risk Responses – implementing agreed-upon risk response plans.",
     "domain": "general",
-    "source": "wikipedia:Risk management"
-  },
-  {
-    "question": "Tell me about ISO",
-    "answer": "=== Principles ===\nThe International Organization for Standardization (ISO) identifies the following principles for risk management:.",
-    "domain": "networking",
     "source": "wikipedia:Risk management"
   },
   {
@@ -5889,12 +4605,6 @@
     "question": "What is traditional measure in banking?",
     "answer": "A traditional measure in banking is value at risk (VaR) – the possible loss due to adverse credit and market events.",
     "domain": "general",
-    "source": "wikipedia:Risk management"
-  },
-  {
-    "question": "Tell me about III",
-    "answer": "The Basel III framework governs the parallel  regulatory capital requirements, including for operational risk.",
-    "domain": "internet",
     "source": "wikipedia:Risk management"
   },
   {
@@ -6174,18 +4884,6 @@
     "source": "wikipedia:Security Onion"
   },
   {
-    "question": "Tell me about IDS",
-    "answer": "Security Onion combines various tools and technologies to provide a robust IDS solution, including:.",
-    "domain": "security",
-    "source": "wikipedia:Security Onion"
-  },
-  {
-    "question": "Tell me about OSSEC",
-    "answer": "OSSEC: A host-based IDS that monitors system logs and file integrity.",
-    "domain": "security",
-    "source": "wikipedia:Security Onion"
-  },
-  {
     "question": "What is Elasticsearch, Logstash, and Kibana (ELK stack): These tools?",
     "answer": "Elasticsearch, Logstash, and Kibana (ELK stack): These tools are used for log management and analysis, allowing for effective visualization and querying of security events.",
     "domain": "general",
@@ -6234,20 +4932,8 @@
     "source": "wikipedia:Hewlett-Packard"
   },
   {
-    "question": "Tell me about II",
-    "answer": "Hewlett and Packard worked on counter-radar technology and artillery shell proximity fuzes during World War II; the work exempted Packard from the draft, but Hewlett had to serve as an officer in the Army Signal Corps after being called to active duty.",
-    "domain": "general",
-    "source": "wikipedia:Hewlett-Packard"
-  },
-  {
     "question": "Tell me about HWP",
     "answer": "Beginning in 1961, Hewlett-Packard was listed on the New York Stock Exchange (as well as the now-closed Pacific Exchange) under its own ticker symbol, \"HWP\".",
-    "domain": "general",
-    "source": "wikipedia:Hewlett-Packard"
-  },
-  {
-    "question": "Tell me about CPU",
-    "answer": "We therefore decided to call it a calculator, and all such nonsense disappeared.\" An engineering triumph at the time, the logic circuit was produced without any integrated circuits, and the CPU assembly was entirely executed in discrete components.",
     "domain": "general",
     "source": "wikipedia:Hewlett-Packard"
   },
@@ -6324,18 +5010,6 @@
     "source": "wikipedia:Hewlett-Packard"
   },
   {
-    "question": "Tell me about On November",
-    "answer": "On November 11, 2009, 3Com and Hewlett-Packard announced that the latter would be acquiring 3Com for $2.7 billion in cash.",
-    "domain": "general",
-    "source": "wikipedia:Hewlett-Packard"
-  },
-  {
-    "question": "Tell me about CFO",
-    "answer": "On August 6, 2010, Hurd resigned amid controversy and CFO Cathie Lesjak assumed the role of interim CEO.",
-    "domain": "general",
-    "source": "wikipedia:Hewlett-Packard"
-  },
-  {
     "question": "Tell me about SAP",
     "answer": "His appointment sparked a strong reaction from Ellison, who complained that Apotheker had been in charge of SAP when one of its subsidiaries was systematically stealing software from Oracle.",
     "domain": "general",
@@ -6380,12 +5054,6 @@
   {
     "question": "Tell me about ESSN",
     "answer": "The Enterprise Servers, Storage and Networking Group (ESSN) oversaw \"back end\" products like storage and servers.",
-    "domain": "general",
-    "source": "wikipedia:Hewlett-Packard"
-  },
-  {
-    "question": "Tell me about Microsoft Windows",
-    "answer": "Support was offered for Microsoft Windows, Exchange, SharePoint, and some office applications.",
     "domain": "general",
     "source": "wikipedia:Hewlett-Packard"
   },
@@ -6594,20 +5262,8 @@
     "source": "wikipedia:Enterprise software"
   },
   {
-    "question": "What is Enterprise application software (EAS)?",
-    "answer": "Enterprise application software (EAS) is recognized among academics as enterprise software components and modules which support only a particular business function.",
-    "domain": "general",
-    "source": "wikipedia:Enterprise software"
-  },
-  {
     "question": "Tell me about EAS",
     "answer": "These EAS software components and modules can interoperate, so that cross-functional or inter-organizational enterprise systems can be built up.",
-    "domain": "general",
-    "source": "wikipedia:Enterprise software"
-  },
-  {
-    "question": "What is Software that?",
-    "answer": "Software that is primarily sold to consumers, is not called enterprise software.",
     "domain": "general",
     "source": "wikipedia:Enterprise software"
   },
@@ -6651,12 +5307,6 @@
     "question": "What is From a hardware perspective, enterprise systems?",
     "answer": "From a hardware perspective, enterprise systems are the servers, storage and associated software that large businesses use as the foundation for their IT infrastructure.",
     "domain": "intranet",
-    "source": "wikipedia:Enterprise software"
-  },
-  {
-    "question": "What is These systems?",
-    "answer": "These systems are designed to manage large volumes of critical data and thus are typically designed to provide high levels of transaction performance and data security.",
-    "domain": "general",
     "source": "wikipedia:Enterprise software"
   },
   {
@@ -6786,12 +5436,6 @@
     "source": "wikipedia:DXC Technology"
   },
   {
-    "question": "What does company provide?",
-    "answer": "The company provides business-to-business Information Technology (IT) services.",
-    "domain": "general",
-    "source": "wikipedia:DXC Technology"
-  },
-  {
     "question": "Tell me about TESM",
     "answer": "In 2018, it announced additional acquisitions, including Molina Medicaid Solutions (previously part of Molina Healthcare), Argodesign and two ServiceNow partners, BusinessNow and TESM.",
     "domain": "general",
@@ -6816,26 +5460,8 @@
     "source": "wikipedia:BeyondCorp"
   },
   {
-    "question": "Tell me about BYOD",
-    "answer": "Unmanaged devices, such as BYOD, were not given access to the BeyondCorp resources.",
-    "domain": "wifi_policy",
-    "source": "wikipedia:BeyondCorp"
-  },
-  {
-    "question": "Tell me about Trust Inferrer",
-    "answer": "==== Trust Inferrer ====\nOne of the main components in BeyondCorp's implementation is the Trust Inferrer.",
-    "domain": "general",
-    "source": "wikipedia:BeyondCorp"
-  },
-  {
     "question": "What is Trust Inferrer?",
     "answer": "The Trust Inferrer is a security component (typically software) that looks at information about a user's device, like a computer or phone, to decide how much it can be trusted to access certain resources like important company documents.",
-    "domain": "general",
-    "source": "wikipedia:BeyondCorp"
-  },
-  {
-    "question": "Tell me about The Trust Inferrer",
-    "answer": "The Trust Inferrer checks things like the security of the device, whether it has the right software installed, and if it belongs to an authorized user.",
     "domain": "general",
     "source": "wikipedia:BeyondCorp"
   },
@@ -6864,12 +5490,6 @@
     "source": "wikipedia:BeyondCorp"
   },
   {
-    "question": "What is Access Control Engine?",
-    "answer": "The Access Control Engine is like a traffic cop standing at an intersection.",
-    "domain": "general",
-    "source": "wikipedia:BeyondCorp"
-  },
-  {
     "question": "What is Its job?",
     "answer": "Its job is to make sure that only authorized devices and users are allowed to access specific resources (like files or applications) on the network.",
     "domain": "general",
@@ -6878,12 +5498,6 @@
   {
     "question": "What is It helps ensure that only the right people and devices?",
     "answer": "It helps ensure that only the right people and devices are allowed access to the network, which helps keep things secure.",
-    "domain": "general",
-    "source": "wikipedia:BeyondCorp"
-  },
-  {
-    "question": "Tell me about The Access Control Engine",
-    "answer": "The Access Control Engine utilizes the output from the Trust Inferrer and other data that is fed into its system.",
     "domain": "general",
     "source": "wikipedia:BeyondCorp"
   },
@@ -6906,12 +5520,6 @@
     "source": "wikipedia:Perimeter 81"
   },
   {
-    "question": "Tell me about SASE",
-    "answer": "Since 2023, Perimeter 81 has been owned by the American-Israeli multinational cybersecurity company Check Point and renamed to \"Harmony SASE.\".",
-    "domain": "networking",
-    "source": "wikipedia:Perimeter 81"
-  },
-  {
     "question": "Tell me about Sagi Gidali",
     "answer": "== History ==\nThe company was founded in 2018 by Sagi Gidali and Amit Bareket, founders of SaferVPN which was acquired by J2 Global.",
     "domain": "security",
@@ -6921,12 +5529,6 @@
     "question": "Tell me about The Safer",
     "answer": "The SaferVPN network infrastructure, which was developed over six years, served as the basis for Perimeter 81's initial product development.",
     "domain": "security",
-    "source": "wikipedia:Perimeter 81"
-  },
-  {
-    "question": "Tell me about SD",
-    "answer": "It protects online users  by using  a secure web gateway, replacing multiprotocol label switching and enabling connection between offices via SD-WAN.",
-    "domain": "networking",
     "source": "wikipedia:Perimeter 81"
   },
   {
@@ -6990,12 +5592,6 @@
     "source": "wikipedia:National Institute of Standards and Technology"
   },
   {
-    "question": "What is National Institute of Standards and Technology (NIST)?",
-    "answer": "The National Institute of Standards and Technology (NIST) is an agency of the United States Department of Commerce whose mission is to promote American innovation and industrial competitiveness.",
-    "domain": "networking",
-    "source": "wikipedia:National Institute of Standards and Technology"
-  },
-  {
     "question": "What is NIST's activities?",
     "answer": "NIST's activities are organized into physical science laboratory programs that include nanoscale science and technology, engineering, information technology, neutron research, material measurement, and physical measurement.",
     "domain": "general",
@@ -7044,18 +5640,6 @@
     "source": "wikipedia:National Institute of Standards and Technology"
   },
   {
-    "question": "Tell me about DC",
-    "answer": "A laboratory site was constructed in Washington, DC, and instruments were acquired from the national physical laboratories of Europe.",
-    "domain": "networking",
-    "source": "wikipedia:National Institute of Standards and Technology"
-  },
-  {
-    "question": "Tell me about National Conference",
-    "answer": "In 1905 a meeting was called that would be the first \"National Conference on Weights and Measures\".",
-    "domain": "networking",
-    "source": "wikipedia:National Institute of Standards and Technology"
-  },
-  {
     "question": "Tell me about Herbert Hoover",
     "answer": "Initially conceived as purely a metrology agency, the Bureau of Standards was directed by Herbert Hoover to set up divisions to develop commercial standards for materials and products.",
     "domain": "general",
@@ -7092,12 +5676,6 @@
     "source": "wikipedia:National Institute of Standards and Technology"
   },
   {
-    "question": "Tell me about National Institute",
-    "answer": "=== National Institute of Standards and Technology (from 1988) ===\nDue to a changing mission, the \"National Bureau of Standards\" became the \"National Institute of Standards and Technology\" in 1988.",
-    "domain": "networking",
-    "source": "wikipedia:National Institute of Standards and Technology"
-  },
-  {
     "question": "Tell me about NCST",
     "answer": "Following the September 11, 2001, attacks, under the National Construction Safety Team Act (NCST),  NIST conducted the official investigation into the collapse of the World Trade Center buildings.",
     "domain": "networking",
@@ -7118,12 +5696,6 @@
   {
     "question": "Tell me about The Congress",
     "answer": "=== Metric system ===\nThe Congress of 1866 made use of the metric system in commerce a legally protected activity through the passage of Metric Act of 1866.",
-    "domain": "general",
-    "source": "wikipedia:National Institute of Standards and Technology"
-  },
-  {
-    "question": "What is NIST?",
-    "answer": "NIST is headquartered in Gaithersburg, Maryland, and operates a facility in Boulder, Colorado, which was dedicated by President Eisenhower in 1954.",
     "domain": "general",
     "source": "wikipedia:National Institute of Standards and Technology"
   },
@@ -7362,12 +5934,6 @@
     "source": "wikipedia:Secure by design"
   },
   {
-    "question": "Tell me about The Cyber Resilience Act",
-    "answer": "The Cyber Resilience Act stresses security throughout the life cycles of products in the European Union, which is in line with SbD principles.",
-    "domain": "general",
-    "source": "wikipedia:Secure by design"
-  },
-  {
     "question": "What is Consumer IoT: ETSI TS 103 645 sets security standards that?",
     "answer": "Consumer IoT: ETSI TS 103 645 sets security standards that are used in IoT rules in the UK and EU.",
     "domain": "general",
@@ -7394,12 +5960,6 @@
   {
     "question": "What is Web API security?",
     "answer": "Web API security entails authenticating programs or users who are invoking a web API.\nAlong with the ease of API integrations come the difficulties of ensuring proper authentication (AuthN) and authorization (AuthZ). In a multitenant environment, security controls based on proper AuthN and AuthZ can help ensure that API access is limited to those who need (and are entitled to) it.",
-    "domain": "internet",
-    "source": "wikipedia:Web API security"
-  },
-  {
-    "question": "Tell me about API",
-    "answer": "Web API security entails authenticating programs or users who are invoking a web API.",
     "domain": "internet",
     "source": "wikipedia:Web API security"
   },
@@ -7436,12 +5996,6 @@
   {
     "question": "What is Thus the user?",
     "answer": "Thus the user is very vulnerable to any packet sniffers on the net.\".",
-    "domain": "general",
-    "source": "wikipedia:Web API security"
-  },
-  {
-    "question": "Tell me about TTL",
-    "answer": "The token has a time to live (TTL) after which the client must acquire a new token.",
     "domain": "general",
     "source": "wikipedia:Web API security"
   },
@@ -7494,21 +6048,9 @@
     "source": "wikipedia:Web API security"
   },
   {
-    "question": "What is This approach?",
-    "answer": "This approach is particularly effective in multi-cloud and hybrid environments.",
-    "domain": "internet",
-    "source": "wikipedia:Web API security"
-  },
-  {
     "question": "What is API Gateways: API gateways?",
     "answer": "API Gateways: API gateways are being widely used to enforce security policies such as rate limiting, authentication, and logging.",
     "domain": "networking",
-    "source": "wikipedia:Web API security"
-  },
-  {
-    "question": "Tell me about Distributed Denial",
-    "answer": "This helps mitigate Distributed Denial of Service (DDoS) attacks.",
-    "domain": "security",
     "source": "wikipedia:Web API security"
   },
   {
@@ -7563,12 +6105,6 @@
     "question": "Tell me about IDSs",
     "answer": "=== Standard measures ===\nStandard security measures such as firewalls, intrusion detection systems (IDSs), and antivirus software are widely used to guard against both outsider and insider attacks.",
     "domain": "security",
-    "source": "wikipedia:Data loss prevention software"
-  },
-  {
-    "question": "What does Cloud computing provide?",
-    "answer": "Cloud computing provides on-demand network access to shared computing resources, enabling scalable and flexible data protection strategies.",
-    "domain": "internet",
     "source": "wikipedia:Data loss prevention software"
   },
   {
@@ -7650,12 +6186,6 @@
     "source": "wikipedia:Risk Management Framework"
   },
   {
-    "question": "Tell me about RMF",
-    "answer": "The RMF was developed by the National Institute of Standards and Technology (NIST), and provides a structured process that integrates information security, privacy, and risk management activities into the system development life cycle.",
-    "domain": "networking",
-    "source": "wikipedia:Risk Management Framework"
-  },
-  {
     "question": "What is RMF?",
     "answer": "The RMF is an important aspect of a systems attainment of its Authority to Operate (ATO).",
     "domain": "general",
@@ -7683,12 +6213,6 @@
     "question": "What is Typically, ATOs?",
     "answer": "Typically, ATOs are granted for up to three years, after which the process must be repeated.",
     "domain": "general",
-    "source": "wikipedia:Risk Management Framework"
-  },
-  {
-    "question": "Tell me about FISMA",
-    "answer": "== History ==\nThe Federal Information Security Management Act of 2002 (FISMA 2002) was enacted to safeguard U.S.",
-    "domain": "wifi_security",
     "source": "wikipedia:Risk Management Framework"
   },
   {
@@ -7742,12 +6266,6 @@
   {
     "question": "Tell me about Elon Musk",
     "answer": "Billionaires like Elon Musk and Jack Dorsey have argued that web3 only serves as a buzzword or marketing term.",
-    "domain": "general",
-    "source": "wikipedia:Web3"
-  },
-  {
-    "question": "Tell me about World Wide Web",
-    "answer": "Web 1.0 and Web 2.0 refer to eras in the history of the World Wide Web as it evolved through various technologies and formats.",
     "domain": "general",
     "source": "wikipedia:Web3"
   },
@@ -8010,12 +6528,6 @@
     "source": "wikipedia:NAC Breda"
   },
   {
-    "question": "Tell me about FIFA",
-    "answer": "Note: Flags indicate national team as defined under FIFA eligibility rules; some limited exceptions apply.",
-    "domain": "networking",
-    "source": "wikipedia:NAC Breda"
-  },
-  {
     "question": "Tell me about National Arts Centre",
     "answer": "== Arts ==\nNational Arts Centre, Canada\nNational Arts Club, New York, United States\nNational Arts Council, Singapore, a statutory board of the Singapore government\nNarodowe Archiwum Cyfrowe, Polish National Digital Archives\nNew adult contemporary, a name once used for the smooth jazz radio format.",
     "domain": "networking",
@@ -8256,12 +6768,6 @@
     "source": "wikipedia:Nucleus accumbens"
   },
   {
-    "question": "Tell me about MSN",
-    "answer": "While two studies have reported reduced reinforcing effects of cocaine with D2-MSN activation, one study has reported no effect.",
-    "domain": "general",
-    "source": "wikipedia:Nucleus accumbens"
-  },
-  {
     "question": "What is When women?",
     "answer": "When women are presented pictures of unrelated infants, fMRIs show increased brain activity in the nucleus accumbens and adjacent caudate nucleus, proportionate to the degree to which the women find these infants \"cute\".",
     "domain": "networking",
@@ -8400,12 +6906,6 @@
     "source": "wikipedia:MG Motor"
   },
   {
-    "question": "Tell me about EV",
-    "answer": "The MG4 EV, MG's first ground-up-developed EV that was launched in 2022, significantly contributed to driving MG's sales growth and received widespread acclaim from the press.",
-    "domain": "general",
-    "source": "wikipedia:MG Motor"
-  },
-  {
     "question": "Tell me about GS",
     "answer": "The production version of the GS went on sale in China in March 2015.",
     "domain": "general",
@@ -8492,12 +6992,6 @@
   {
     "question": "What is MG-branded vehicles?",
     "answer": "MG-branded vehicles are manufactured and distributed by MG Motor India, a SAIC Motor subsidiary, which was established in 2017 and started operations in 2019.",
-    "domain": "general",
-    "source": "wikipedia:MG Motor"
-  },
-  {
-    "question": "Tell me about General Motors",
-    "answer": "The company acquired a former General Motors facility in Halol, Gujarat.",
     "domain": "general",
     "source": "wikipedia:MG Motor"
   },
@@ -8658,12 +7152,6 @@
     "source": "wikipedia:Gun-Nac"
   },
   {
-    "question": "Tell me about NES",
-    "answer": "AllGame editor Skyler Miller praised Gun-Nac, describing the game as \"perhaps the best shooter for the NES\".",
-    "domain": "wifi_security",
-    "source": "wikipedia:Gun-Nac"
-  },
-  {
     "question": "What is NAC Architecture?",
     "answer": "NAC Architecture is a design firm with over 170 architects, engineers, interior designers and support staff, with offices in Columbus, Los Angeles, San Diego, Seattle, and Spokane. The firm specializes in architecture, planning, electrical engineering, interior design, and capital facilities consulting. Core markets served include education (K-12 and higher education), healthcare, laboratory, biotechnology, recreation, hospitality, civic, cultural, extended care, and restoration.",
     "domain": "internet",
@@ -8732,12 +7220,6 @@
   {
     "question": "What is Although there?",
     "answer": "Although there is no standard dimension for the NAC, the approximately 4-7mm nipple can protrude for over 1 cm from the typically 4.2-4.5cm diameter areola.",
-    "domain": "wifi_security",
-    "source": "wikipedia:Nipple reconstruction surgery"
-  },
-  {
-    "question": "What is NAC?",
-    "answer": "The NAC is supported by stratified keratinized squamous epithelium that extend towards the surface of the nipple ducts.",
     "domain": "wifi_security",
     "source": "wikipedia:Nipple reconstruction surgery"
   },
@@ -8826,12 +7308,6 @@
     "source": "wikipedia:Nipple reconstruction surgery"
   },
   {
-    "question": "What is Currently, there?",
-    "answer": "Currently, there are no techniques that prevent the loss of projection over time.",
-    "domain": "general",
-    "source": "wikipedia:Nipple reconstruction surgery"
-  },
-  {
     "question": "What is erection of a nipple?",
     "answer": "The erection of a nipple is dependent on the sympathetic nervous system and the smooth muscles within the nipple, thus if the nipple receives damage there would be loss of projection.",
     "domain": "general",
@@ -8850,20 +7326,8 @@
     "source": "wikipedia:Nic Nac Naturals"
   },
   {
-    "question": "Tell me about Nic Nac Naturals",
-    "answer": "== Products ==\nNic Nac Naturals produces nicotine lozenges in mint and fruit flavors.",
-    "domain": "networking",
-    "source": "wikipedia:Nic Nac Naturals"
-  },
-  {
     "question": "What is dosages?",
     "answer": "The dosages are 3-milligram and 6-milligram nicotine strengths and are made using non-tobacco (synthetic) nicotine.",
-    "domain": "general",
-    "source": "wikipedia:Nic Nac Naturals"
-  },
-  {
-    "question": "What does It also provide?",
-    "answer": "It also uses xylitol and essential oils for flavoring.",
     "domain": "general",
     "source": "wikipedia:Nic Nac Naturals"
   },
@@ -8940,32 +7404,14 @@
     "source": "wikipedia:Network access control"
   },
   {
-    "question": "Tell me about HTTP",
-    "answer": "Captive portals\nA captive portal intercepts HTTP access to web pages, redirecting users to a web application that provides instructions and tools for updating their computer.",
-    "domain": "wifi_security",
-    "source": "wikipedia:Network access control"
-  },
-  {
     "question": "Tell me about External Captive Portals",
     "answer": "External Captive Portals allow organizations to offload wireless controllers and switches from hosting web portals.",
     "domain": "networking",
     "source": "wikipedia:Network access control"
   },
   {
-    "question": "What is When a user?",
-    "answer": "When a user is denied access because of a security concern, productive use of the device is lost, which can impact the ability to complete a job or serve a customer.",
-    "domain": "general",
-    "source": "wikipedia:Network access control"
-  },
-  {
     "question": "Tell me about Network Access Protection\nNetwork Admission Control\nTrusted Network Connect\nUnified",
     "answer": "== See also ==\nNetwork Access Protection\nNetwork Admission Control\nTrusted Network Connect\nUnified threat management.",
-    "domain": "general",
-    "source": "wikipedia:Network access control"
-  },
-  {
-    "question": "Tell me about DOD",
-    "answer": "== External links ==\nBooz Allen Hamilton leaves 60k unsecured files on DOD server.",
     "domain": "general",
     "source": "wikipedia:Network access control"
   },
@@ -9012,12 +7458,6 @@
     "source": "wikipedia:Network segmentation"
   },
   {
-    "question": "Tell me about LLMNR",
-    "answer": "Common attack vectors such as LLMNR and NetBIOS poisoning can be partially alleviated by proper network segmentation as they only work on the local network.",
-    "domain": "general",
-    "source": "wikipedia:Network segmentation"
-  },
-  {
     "question": "What is For this reason it?",
     "answer": "For this reason it is recommended to segment the various areas of a network by usage.",
     "domain": "general",
@@ -9048,21 +7488,9 @@
     "source": "wikipedia:Microsegmentation (network security)"
   },
   {
-    "question": "What is In network security, microsegmentation?",
-    "answer": "In network security, microsegmentation is a network security architecture that establishes security zone boundaries at the level of individual workloads within data centers and cloud environments, which allows workloads to be isolated and secured independently.",
-    "domain": "internet",
-    "source": "wikipedia:Microsegmentation (network security)"
-  },
-  {
     "question": "What is Although originally applied to data center networks, microsegmentation?",
     "answer": "Although originally applied to data center networks, microsegmentation is also used in client network environments.",
     "domain": "general",
-    "source": "wikipedia:Microsegmentation (network security)"
-  },
-  {
-    "question": "Tell me about OS",
-    "answer": "=== Native OS host-based firewall segmentation ===\nIt uses operating system firewalls to regulate network traffic between segments.",
-    "domain": "networking",
     "source": "wikipedia:Microsegmentation (network security)"
   },
   {
@@ -9078,20 +7506,8 @@
     "source": "wikipedia:Microsegmentation (network security)"
   },
   {
-    "question": "Tell me about In Internet",
-    "answer": "In Internet of Things (IoT) environments, microsegmentation helps organizations control lateral communication between devices, which is often unmanaged by perimeter-focused security measures.",
-    "domain": "general",
-    "source": "wikipedia:Microsegmentation (network security)"
-  },
-  {
     "question": "What is Virtual private network?",
     "answer": "A virtual private network (VPN) is an overlay network that uses network virtualization to extend a private network across a public network, such as the Internet, via the use of encryption and tunneling protocols. In a VPN, a tunneling protocol is used to transfer network messages from one network host to another. \nHost-to-network VPNs are commonly used by organizations to allow off-site users secure access to an office network over the Internet.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is virtual private network (VPN)?",
-    "answer": "A virtual private network (VPN) is an overlay network that uses network virtualization to extend a private network across a public network, such as the Internet, via the use of encryption and tunneling protocols.",
     "domain": "security",
     "source": "wikipedia:Virtual private network"
   },
@@ -9162,12 +7578,6 @@
     "source": "wikipedia:Virtual private network"
   },
   {
-    "question": "Tell me about LANs",
-    "answer": "Hubs and repeaters in LANs have been largely obsoleted by modern network switches.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
     "question": "What is Network bridges?",
     "answer": "Network bridges are analogous to a two-port switch.",
     "domain": "networking",
@@ -9192,12 +7602,6 @@
     "source": "wikipedia:Virtual private network"
   },
   {
-    "question": "What is use of protocol layering?",
-    "answer": "The use of protocol layering is ubiquitous across the field of computer networking.",
-    "domain": "general",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
     "question": "What is important example of a protocol stack?",
     "answer": "An important example of a protocol stack is HTTP, the World Wide Web protocol.",
     "domain": "internet",
@@ -9206,12 +7610,6 @@
   {
     "question": "What is This stack?",
     "answer": "This stack is used between a wireless router and a personal computer when accessing the web.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is network packet?",
-    "answer": "A network packet is a formatted unit of data carried by a packet-switched network.",
     "domain": "networking",
     "source": "wikipedia:Virtual private network"
   },
@@ -9300,12 +7698,6 @@
     "source": "wikipedia:Virtual private network"
   },
   {
-    "question": "Tell me about MPLS",
-    "answer": "Multiprotocol Label Switching (MPLS) often overlays trusted VPNs, often with quality-of-service control over a trusted delivery network.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
     "question": "What is Mobile VPNs?",
     "answer": "Mobile VPNs are widely used in public safety where they give law-enforcement officers access to applications such as computer-assisted dispatch and criminal databases, and in other organizations with similar requirements such as field service management and healthcare.",
     "domain": "security",
@@ -9360,12 +7752,6 @@
     "source": "wikipedia:Virtual private network"
   },
   {
-    "question": "What does In contrast to L2TPv3, which provide?",
-    "answer": "In contrast to L2TPv3, which allows only point-to-point OSI layer 2 tunnels, VPLS allows any-to-any (multipoint) connectivity.",
-    "domain": "networking",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
     "question": "Tell me about PPVPN",
     "answer": "=== PPVPN ===\nA provider-provisioned VPN (PPVPN) is a virtual private network (VPN) implemented by a connectivity service provider or large enterprise on a network they operate on their own, as opposed to a \"customer-provisioned VPN\" where the VPN is implemented by the customer who acquires the connectivity service on top of the technical specificities of the provider.",
     "domain": "security",
@@ -9378,32 +7764,14 @@
     "source": "wikipedia:Virtual private network"
   },
   {
-    "question": "What does IPsec provide?",
-    "answer": "IPsec uses encryption, encapsulating an IP packet inside an IPsec packet.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
     "question": "What is De-encapsulation happens at the end of the tunnel, where the original IP packet?",
     "answer": "De-encapsulation happens at the end of the tunnel, where the original IP packet is decrypted and forwarded to its intended destination.",
     "domain": "networking",
     "source": "wikipedia:Virtual private network"
   },
   {
-    "question": "What is IPsec?",
-    "answer": "IPsec is also often supported by network hardware accelerators, which makes IPsec VPN desirable for low-power scenarios, like always-on remote access VPN configurations.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
     "question": "What is IPsec tunnels?",
     "answer": "IPsec tunnels are set up by the Internet Key Exchange (IKE) protocol.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "Tell me about IKE",
-    "answer": "IKE version 2, which was created by Microsoft and Cisco, can be used alone to provide IPsec VPN functionality.",
     "domain": "security",
     "source": "wikipedia:Virtual private network"
   },
@@ -9417,18 +7785,6 @@
     "question": "What does OpenSSH server provide?",
     "answer": "OpenSSH server provides a limited number of concurrent tunnels.",
     "domain": "internet",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "What is SSH?",
-    "answer": "SSH is more often used to remotely connect to machines or networks instead of a site to site VPN connection.",
-    "domain": "security",
-    "source": "wikipedia:Virtual private network"
-  },
-  {
-    "question": "Tell me about SSTP",
-    "answer": "=== SSTP (2007) ===\nSecure Socket Tunneling Protocol (SSTP) is a form of VPN tunnel that provides a mechanism to transport Point-to-Point Protocol (PPP) traffic through an SSL/TLS channel.",
-    "domain": "security",
     "source": "wikipedia:Virtual private network"
   },
   {
@@ -9570,12 +7926,6 @@
     "source": "wikipedia:Computer network"
   },
   {
-    "question": "Tell me about NPL",
-    "answer": "The NPL network, a local area network at the National Physical Laboratory (United Kingdom), pioneered the implementation of the concept in 1968-69 using 768 kbit/s links.",
-    "domain": "networking",
-    "source": "wikipedia:Computer network"
-  },
-  {
     "question": "Tell me about Both Baran",
     "answer": "Both Baran's and Davies' inventions were seminal contributions that influenced the development of computer networks.",
     "domain": "general",
@@ -9608,12 +7958,6 @@
   {
     "question": "Tell me about ALOHAnet",
     "answer": "It was inspired by the packet radio ALOHAnet, started by Norman Abramson and Franklin Kuo at the University of Hawaii in the late 1960s.",
-    "domain": "general",
-    "source": "wikipedia:Computer network"
-  },
-  {
-    "question": "Tell me about CYCLADES",
-    "answer": "That year, the French CYCLADES network, directed by Louis Pouzin was the first to make the hosts responsible for the reliable delivery of data, rather than this being a centralized service of the network itself.",
     "domain": "general",
     "source": "wikipedia:Computer network"
   },
@@ -9651,12 +7995,6 @@
     "question": "Tell me about Western Electric",
     "answer": "In 1965, Western Electric introduced the first widely used telephone switch that implemented computer control in the switching fabric.",
     "domain": "networking",
-    "source": "wikipedia:Computer network"
-  },
-  {
-    "question": "Tell me about North America",
-    "answer": "Public data networks in Europe, North America and Japan began using X.25 in the late 1970s and interconnected with X.75.",
-    "domain": "general",
     "source": "wikipedia:Computer network"
   },
   {
@@ -9822,26 +8160,8 @@
     "source": "wikipedia:Computer network"
   },
   {
-    "question": "What is To do this one or more carrier signals?",
-    "answer": "To do this one or more carrier signals are modulated by the digital signal to produce an analog signal that can be tailored to give the required properties for transmission.",
-    "domain": "general",
-    "source": "wikipedia:Computer network"
-  },
-  {
     "question": "What is Modems?",
     "answer": "Modems are still commonly used for telephone lines, using a digital subscriber line technology and cable television systems using DOCSIS technology.",
-    "domain": "general",
-    "source": "wikipedia:Computer network"
-  },
-  {
-    "question": "What is firewall?",
-    "answer": "A firewall is a network device or software for controlling network security and access rules.",
-    "domain": "security",
-    "source": "wikipedia:Computer network"
-  },
-  {
-    "question": "What is communication protocol?",
-    "answer": "A communication protocol is a set of rules for exchanging information over a network.",
     "domain": "general",
     "source": "wikipedia:Computer network"
   },
@@ -9864,20 +8184,8 @@
     "source": "wikipedia:Computer network"
   },
   {
-    "question": "Tell me about MTU",
-    "answer": "The physical link technologies of packet networks typically limit the size of packets to a certain maximum transmission unit (MTU).",
-    "domain": "general",
-    "source": "wikipedia:Computer network"
-  },
-  {
     "question": "What is longer message may be fragmented before it?",
     "answer": "A longer message may be fragmented before it is transferred and once the packets arrive, they are reassembled to construct the original message.",
-    "domain": "general",
-    "source": "wikipedia:Computer network"
-  },
-  {
-    "question": "What is Internet protocol suite?",
-    "answer": "The Internet protocol suite is the defining set of protocols for the Internet.",
     "domain": "general",
     "source": "wikipedia:Computer network"
   },
@@ -9891,12 +8199,6 @@
     "question": "Tell me about SONET",
     "answer": "==== SONET/SDH ====\nSynchronous optical networking (SONET) and Synchronous Digital Hierarchy (SDH) are standardized multiplexing protocols that transfer multiple digital bit streams over optical fiber using lasers.",
     "domain": "general",
-    "source": "wikipedia:Computer network"
-  },
-  {
-    "question": "Tell me about ATM",
-    "answer": "==== Asynchronous Transfer Mode ====\nAsynchronous Transfer Mode (ATM) is a switching technique for telecommunication networks.",
-    "domain": "networking",
     "source": "wikipedia:Computer network"
   },
   {
@@ -9915,12 +8217,6 @@
     "question": "Tell me about GSM",
     "answer": "==== Cellular standards ====\nThere are a number of different digital cellular standards, including: Global System for Mobile Communications (GSM), General Packet Radio Service (GPRS), cdmaOne, CDMA2000, Evolution-Data Optimized (EV-DO), Enhanced Data Rates for GSM Evolution (EDGE), Universal Mobile Telecommunications System (UMTS), Digital Enhanced Cordless Telecommunications (DECT), Digital AMPS (IS-136/TDMA), and Integrated Digital Enhanced Network (iDEN).",
     "domain": "general",
-    "source": "wikipedia:Computer network"
-  },
-  {
-    "question": "What is Routing?",
-    "answer": "Routing is the process of selecting network paths to carry network traffic.",
-    "domain": "networking",
     "source": "wikipedia:Computer network"
   },
   {
@@ -9972,12 +8268,6 @@
     "source": "wikipedia:Computer network"
   },
   {
-    "question": "Tell me about FDDI",
-    "answer": "Token Ring networks, and the Fiber Distributed Data Interface (FDDI), made use of such a topology.",
-    "domain": "general",
-    "source": "wikipedia:Computer network"
-  },
-  {
     "question": "What is Mesh network: each node?",
     "answer": "Mesh network: each node is connected to an arbitrary number of neighbors in such a way that there is at least one traversal from any node to any other.",
     "domain": "wifi",
@@ -10004,12 +8294,6 @@
   {
     "question": "What is Physical layout?",
     "answer": "Physical layout is not completely irrelevant, however, as common ducting and equipment locations can represent single points of failure due to issues like fires, power failures and flooding.",
-    "domain": "general",
-    "source": "wikipedia:Computer network"
-  },
-  {
-    "question": "What is overlay network?",
-    "answer": "An overlay network is a virtual network that is built on top of another network.",
     "domain": "general",
     "source": "wikipedia:Computer network"
   },
@@ -10062,12 +8346,6 @@
     "source": "wikipedia:Computer network"
   },
   {
-    "question": "Tell me about PAN",
-    "answer": "==== Personal area network ====\nA personal area network (PAN) is a computer network used for communication among computers and different information technological devices close to one person.",
-    "domain": "general",
-    "source": "wikipedia:Computer network"
-  },
-  {
     "question": "What is Some examples of devices that?",
     "answer": "Some examples of devices that are used in a PAN are personal computers, printers, fax machines, telephones, PDAs, scanners, and video game consoles.",
     "domain": "general",
@@ -10083,12 +8361,6 @@
     "question": "What is Wired LANs?",
     "answer": "Wired LANs are most commonly based on Ethernet technology.",
     "domain": "networking",
-    "source": "wikipedia:Computer network"
-  },
-  {
-    "question": "Tell me about ITU",
-    "answer": "Other networking technologies such as ITU-T G.hn also provide a way to create a wired LAN using existing wiring, such as coaxial cables, telephone lines, and power lines.",
-    "domain": "general",
     "source": "wikipedia:Computer network"
   },
   {
@@ -10124,12 +8396,6 @@
   {
     "question": "Tell me about SANs",
     "answer": "The cost and complexity of SANs dropped in the early 2000s to levels allowing wider adoption across both enterprise and small to medium-sized business environments.",
-    "domain": "general",
-    "source": "wikipedia:Computer network"
-  },
-  {
-    "question": "Tell me about CAN",
-    "answer": "==== Campus area network ====\nA campus area network (CAN) is made up of an interconnection of LANs within a limited geographical area.",
     "domain": "general",
     "source": "wikipedia:Computer network"
   },
@@ -10170,12 +8436,6 @@
     "source": "wikipedia:Computer network"
   },
   {
-    "question": "Tell me about WAN",
-    "answer": "==== Wide area network ====\nA wide area network (WAN) is a computer network that covers a large geographic area such as a city, country, or spans even intercontinental distances.",
-    "domain": "general",
-    "source": "wikipedia:Computer network"
-  },
-  {
     "question": "What does WAN provide?",
     "answer": "A WAN uses a communications channel that combines many types of media such as telephone lines, cables, and airwaves.",
     "domain": "wifi",
@@ -10190,18 +8450,6 @@
   {
     "question": "What is key challenge in mobile communications?",
     "answer": "The key challenge in mobile communications is handing off communications from one local coverage area to the next.",
-    "domain": "general",
-    "source": "wikipedia:Computer network"
-  },
-  {
-    "question": "What is extranet?",
-    "answer": "An extranet is an extension of an intranet that allows secure communications to users outside of the intranet (e.g.",
-    "domain": "intranet",
-    "source": "wikipedia:Computer network"
-  },
-  {
-    "question": "What is Networks?",
-    "answer": "Networks are typically managed by the organizations that own them.",
     "domain": "general",
     "source": "wikipedia:Computer network"
   },
@@ -10236,18 +8484,6 @@
     "source": "wikipedia:Computer network"
   },
   {
-    "question": "Tell me about WWW",
-    "answer": "The Internet utilizes copper communications and an optical networking backbone to enable the World Wide Web (WWW), the Internet of things, video transfer, and a broad range of information services.",
-    "domain": "general",
-    "source": "wikipedia:Computer network"
-  },
-  {
-    "question": "Tell me about BGP",
-    "answer": "Service providers and large enterprises exchange information about the reachability of their address spaces through the Border Gateway Protocol (BGP), forming a redundant worldwide mesh of transmission paths.",
-    "domain": "networking",
-    "source": "wikipedia:Computer network"
-  },
-  {
     "question": "What is It is an anonymizing network where connections?",
     "answer": "It is an anonymizing network where connections are made only between trusted peers — sometimes called friends (F2F) — using non-standard protocols and ports.",
     "domain": "general",
@@ -10274,12 +8510,6 @@
   {
     "question": "What is World Wide Web, E-mail, printing and network file sharing?",
     "answer": "The World Wide Web, E-mail, printing and network file sharing are examples of well-known network services.",
-    "domain": "general",
-    "source": "wikipedia:Computer network"
-  },
-  {
-    "question": "What is Services?",
-    "answer": "Services are usually based on a service protocol that defines the format and sequencing of messages between clients and servers of that network service.",
     "domain": "general",
     "source": "wikipedia:Computer network"
   },
@@ -10374,12 +8604,6 @@
     "source": "wikipedia:Computer network"
   },
   {
-    "question": "What is Network security?",
-    "answer": "Network security is used on a variety of computer networks, both public and private, to secure daily transactions and communications among businesses, government agencies, and individuals.",
-    "domain": "general",
-    "source": "wikipedia:Computer network"
-  },
-  {
     "question": "What is monitoring?",
     "answer": "The monitoring is often done surreptitiously and may be done by or at the behest of governments, by corporations, criminal organizations, or individuals.",
     "domain": "general",
@@ -10401,12 +8625,6 @@
     "question": "Tell me about Reporters Without Borders",
     "answer": "However, many civil rights and privacy groups—such as Reporters Without Borders, the Electronic Frontier Foundation, and the American Civil Liberties Union—have expressed concern that increasing surveillance of citizens may lead to a mass surveillance society, with limited political and personal freedoms.",
     "domain": "general",
-    "source": "wikipedia:Computer network"
-  },
-  {
-    "question": "Tell me about HTTPS",
-    "answer": "Examples of end-to-end encryption include HTTPS for web traffic, PGP for email, OTR for instant messaging, ZRTP for telephony, and TETRA for radio.",
-    "domain": "internet",
     "source": "wikipedia:Computer network"
   },
   {
@@ -10449,18 +8667,6 @@
     "question": "What is It is an application of graph theory wherein communicating devices?",
     "answer": "It is an application of graph theory wherein communicating devices are modeled as nodes and the connections between the devices are modeled as links or lines between the nodes.",
     "domain": "general",
-    "source": "wikipedia:Network topology"
-  },
-  {
-    "question": "What is Physical topology?",
-    "answer": "Physical topology is the placement of the various components of a network (e.g., device location and cable installation), while logical topology illustrates how data flows within a network.",
-    "domain": "general",
-    "source": "wikipedia:Network topology"
-  },
-  {
-    "question": "What is network's physical topology?",
-    "answer": "A network's physical topology is a particular concern of the physical layer of the OSI model.",
-    "domain": "networking",
     "source": "wikipedia:Network topology"
   },
   {
@@ -10524,18 +8730,6 @@
     "source": "wikipedia:Network topology"
   },
   {
-    "question": "What is Some networks?",
-    "answer": "Some networks are able to dynamically change their logical topology through configuration changes to their routers and switches.",
-    "domain": "networking",
-    "source": "wikipedia:Network topology"
-  },
-  {
-    "question": "What is In the OSI model, these?",
-    "answer": "In the OSI model, these are defined at layers 1 and 2 — the physical layer and the data link layer.",
-    "domain": "networking",
-    "source": "wikipedia:Network topology"
-  },
-  {
     "question": "What is Signal traces on printed circuit boards?",
     "answer": "Signal traces on printed circuit boards are common for board-level serial communication, particularly between certain types of integrated circuits, a common example being SPI.",
     "domain": "general",
@@ -10551,12 +8745,6 @@
     "question": "What is Twisted pair wire?",
     "answer": "Twisted pair wire is the most widely used medium for all telecommunication.",
     "domain": "general",
-    "source": "wikipedia:Network topology"
-  },
-  {
-    "question": "What is Price?",
-    "answer": "Price is a main factor distinguishing wired and wireless technology options in a business.",
-    "domain": "wifi",
     "source": "wikipedia:Network topology"
   },
   {
@@ -10598,12 +8786,6 @@
   {
     "question": "What is Remote bridges, where the connecting link?",
     "answer": "Remote bridges, where the connecting link is slower than the end networks, have largely been replaced with routers.",
-    "domain": "networking",
-    "source": "wikipedia:Network topology"
-  },
-  {
-    "question": "What is switch?",
-    "answer": "A switch is distinct from a hub in that it only forwards the frames to the physical ports involved in the communication, rather than all ports connected.",
     "domain": "networking",
     "source": "wikipedia:Network topology"
   },
@@ -10914,12 +9096,6 @@
     "source": "wikipedia:Network topology"
   },
   {
-    "question": "What is This topology?",
-    "answer": "This topology is mostly seen in military applications.",
-    "domain": "general",
-    "source": "wikipedia:Network topology"
-  },
-  {
     "question": "Tell me about Tetrahedron Core Network",
     "answer": "Tetrahedron Core Network: Application of a tetrahedral structure to create a resilient partial-mesh 3-dimensional campus backbone data network.",
     "domain": "general",
@@ -11054,12 +9230,6 @@
   {
     "question": "Tell me about Paul Werbos",
     "answer": "Paul Werbos applied backpropagation to neural networks in 1982 (his 1974 PhD thesis, reprinted in a 1994 book, did not yet describe the algorithm).",
-    "domain": "general",
-    "source": "wikipedia:Neural network (machine learning)"
-  },
-  {
-    "question": "Tell me about CNN",
-    "answer": "Fukushima's CNN architecture also introduced max pooling, a popular downsampling procedure for CNNs.",
     "domain": "general",
     "source": "wikipedia:Neural network (machine learning)"
   },
@@ -11268,20 +9438,8 @@
     "source": "wikipedia:Neural network (machine learning)"
   },
   {
-    "question": "What does This method provide?",
-    "answer": "This method allows the network to generalize to unseen data.",
-    "domain": "general",
-    "source": "wikipedia:Neural network (machine learning)"
-  },
-  {
     "question": "What is Practically this?",
     "answer": "Practically this is done by defining a loss function that is evaluated periodically during learning.",
-    "domain": "general",
-    "source": "wikipedia:Neural network (machine learning)"
-  },
-  {
-    "question": "What is cost?",
-    "answer": "The cost is frequently defined as a statistic whose value can only be approximated.",
     "domain": "general",
     "source": "wikipedia:Neural network (machine learning)"
   },
@@ -11300,12 +9458,6 @@
   {
     "question": "What is If after learning, the error rate?",
     "answer": "If after learning, the error rate is too high, the network typically must be redesigned.",
-    "domain": "general",
-    "source": "wikipedia:Neural network (machine learning)"
-  },
-  {
-    "question": "What is While it?",
-    "answer": "While it is possible to define a loss function ad hoc, frequently the choice is determined by the function's desirable properties (such as convexity) because it arises from the model (e.g.",
     "domain": "general",
     "source": "wikipedia:Neural network (machine learning)"
   },
@@ -11382,21 +9534,9 @@
     "source": "wikipedia:Neural network (machine learning)"
   },
   {
-    "question": "What is that?",
-    "answer": "that is equal to the mean of the data.",
-    "domain": "general",
-    "source": "wikipedia:Neural network (machine learning)"
-  },
-  {
     "question": "What is Tasks that fall within the paradigm of unsupervised learning?",
     "answer": "Tasks that fall within the paradigm of unsupervised learning are in general estimation problems; the applications include clustering, the estimation of statistical distributions, compression and filtering.",
     "domain": "general",
-    "source": "wikipedia:Neural network (machine learning)"
-  },
-  {
-    "question": "What is goal?",
-    "answer": "The goal is to win the game, i.e., generate the most positive (lowest cost) responses.",
-    "domain": "networking",
     "source": "wikipedia:Neural network (machine learning)"
   },
   {
@@ -11502,12 +9642,6 @@
     "source": "wikipedia:Neural network (machine learning)"
   },
   {
-    "question": "What is latter?",
-    "answer": "The latter is much more complicated but can shorten learning periods and produce better results.",
-    "domain": "general",
-    "source": "wikipedia:Neural network (machine learning)"
-  },
-  {
     "question": "What is Some types operate purely in hardware, while others?",
     "answer": "Some types operate purely in hardware, while others are purely software and run on general purpose computers.",
     "domain": "general",
@@ -11528,12 +9662,6 @@
   {
     "question": "What does Neural architecture search (NAS) provide?",
     "answer": "Neural architecture search (NAS) uses machine learning to automate ANN design.",
-    "domain": "general",
-    "source": "wikipedia:Neural network (machine learning)"
-  },
-  {
-    "question": "Tell me about NAS",
-    "answer": "Various approaches to NAS have designed networks that compare well with hand-designed systems.",
     "domain": "general",
     "source": "wikipedia:Neural network (machine learning)"
   },
@@ -11622,12 +9750,6 @@
     "source": "wikipedia:Neural network (machine learning)"
   },
   {
-    "question": "What is This behavior?",
-    "answer": "This behavior is referred to as the spectral bias, or frequency principle, of neural networks.",
-    "domain": "general",
-    "source": "wikipedia:Neural network (machine learning)"
-  },
-  {
     "question": "What is This phenomenon?",
     "answer": "This phenomenon is the opposite to the behavior of some well studied iterative numerical schemes such as Jacobi method.",
     "domain": "networking",
@@ -11646,12 +9768,6 @@
     "source": "wikipedia:Neural network (machine learning)"
   },
   {
-    "question": "What is second?",
-    "answer": "The second is to use some form of regularization.",
-    "domain": "general",
-    "source": "wikipedia:Neural network (machine learning)"
-  },
-  {
     "question": "Tell me about MSE",
     "answer": "Supervised neural networks that use a mean squared error (MSE) cost function can use formal statistical methods to determine the confidence of the trained model.",
     "domain": "general",
@@ -11661,12 +9777,6 @@
     "question": "What is confidence analysis made this way?",
     "answer": "A confidence analysis made this way is statistically valid as long as the output probability distribution stays the same and the network is not modified.",
     "domain": "general",
-    "source": "wikipedia:Neural network (machine learning)"
-  },
-  {
-    "question": "What is Research?",
-    "answer": "Research is underway on ANN systems designed for penetration testing, for detecting botnets, credit cards frauds and network intrusions.",
-    "domain": "security",
     "source": "wikipedia:Neural network (machine learning)"
   },
   {
@@ -11778,12 +9888,6 @@
     "source": "wikipedia:Neural network (machine learning)"
   },
   {
-    "question": "Tell me about FPGAs",
-    "answer": "The use of accelerators such as FPGAs and GPUs can reduce training times from months to days.",
-    "domain": "general",
-    "source": "wikipedia:Neural network (machine learning)"
-  },
-  {
     "question": "What is Another type of chip optimized for neural network processing?",
     "answer": "Another type of chip optimized for neural network processing is called a Tensor Processing Unit, or TPU.",
     "domain": "general",
@@ -11810,12 +9914,6 @@
   {
     "question": "Tell me about Radial Basis Functions",
     "answer": "Kriesel) – Illustrated, bilingual manuscript about artificial neural networks; Topics so far: Perceptrons, Backpropagation, Radial Basis Functions, Recurrent Neural Networks, Self Organizing Maps, Hopfield Networks.",
-    "domain": "general",
-    "source": "wikipedia:Neural network (machine learning)"
-  },
-  {
-    "question": "Tell me about Neural Networks",
-    "answer": "Review of Neural Networks in Materials Science Archived 7 June 2015 at the Wayback Machine\nArtificial Neural Networks Tutorial in three languages (Univ.",
     "domain": "general",
     "source": "wikipedia:Neural network (machine learning)"
   },
@@ -11904,12 +10002,6 @@
     "source": "wikipedia:Operational technology"
   },
   {
-    "question": "What is These networks?",
-    "answer": "These networks are vital for the proper functioning of various industries, such as manufacturing, power generation, transportation and our society.",
-    "domain": "general",
-    "source": "wikipedia:Operational technology"
-  },
-  {
     "question": "What is Stuxnet malware?",
     "answer": "The Stuxnet malware is one example of this, highlighting the potential for disaster should a safety system become infected with malware (whether targeted at that system or accidentally infected).",
     "domain": "security",
@@ -11937,12 +10029,6 @@
     "question": "Tell me about Jay Chaudhry",
     "answer": "== History ==\nZscaler was founded in 2007 by Jay Chaudhry and K.",
     "domain": "general",
-    "source": "wikipedia:Zscaler"
-  },
-  {
-    "question": "Tell me about Zero Trust Exchange",
-    "answer": "== Zero Trust Exchange ==\nZscaler's Zero Trust Exchange platform features cyberthreat protection, data protection, zero trust connectivity, and business analytics.",
-    "domain": "security",
     "source": "wikipedia:Zscaler"
   },
   {
@@ -12092,18 +10178,6 @@
   {
     "question": "What is K-means algorithm?",
     "answer": "The K-means algorithm is an iterative technique that is used to partition an image into K clusters.",
-    "domain": "general",
-    "source": "wikipedia:Image segmentation"
-  },
-  {
-    "question": "What is difference?",
-    "answer": "The difference is typically based on pixel color, intensity, texture, and location, or a weighted combination of these factors.",
-    "domain": "networking",
-    "source": "wikipedia:Image segmentation"
-  },
-  {
-    "question": "What is This algorithm?",
-    "answer": "This algorithm is guaranteed to converge, but it may not return the optimal solution.",
     "domain": "general",
     "source": "wikipedia:Image segmentation"
   },
@@ -12404,12 +10478,6 @@
   {
     "question": "What is If it?",
     "answer": "If it is found non-uniform (not homogeneous), then it is split into four child squares (the splitting process), and so on.",
-    "domain": "general",
-    "source": "wikipedia:Image segmentation"
-  },
-  {
-    "question": "What is If, in contrast, four child squares?",
-    "answer": "If, in contrast, four child squares are homogeneous, they are merged as several connected components (the merging process).",
     "domain": "general",
     "source": "wikipedia:Image segmentation"
   },
@@ -12804,12 +10872,6 @@
     "source": "wikipedia:Subnet"
   },
   {
-    "question": "Tell me about CIDR",
-    "answer": "The routing prefix may be expressed as the first address of a network, written in Classless Inter-Domain Routing (CIDR) notation, followed by a slash character (/), and ending with the bit-length of the prefix.",
-    "domain": "networking",
-    "source": "wikipedia:Subnet"
-  },
-  {
     "question": "What is For example, 198.51.100.0/24?",
     "answer": "For example, 198.51.100.0/24 is the prefix of the Internet Protocol version 4 network starting at the given address, having 24 bits allocated for the network prefix, and the remaining 8 bits reserved for host addressing.",
     "domain": "general",
@@ -12818,12 +10880,6 @@
   {
     "question": "What is IPv6 address specification 2001:db8::/32?",
     "answer": "The IPv6 address specification 2001:db8::/32 is a large address block with 296 addresses, having a 32-bit routing prefix.",
-    "domain": "networking",
-    "source": "wikipedia:Subnet"
-  },
-  {
-    "question": "Tell me about AND",
-    "answer": "For IPv4, a network may also be characterized by its subnet mask or netmask, which is the bitmask that, when applied by a bitwise AND operation to any IP address in the network, yields the routing prefix.",
     "domain": "networking",
     "source": "wikipedia:Subnet"
   },
@@ -12861,12 +10917,6 @@
     "question": "What is host identifier?",
     "answer": "The host identifier is a unique local identification and is either a host number on the local network or an interface identifier.",
     "domain": "general",
-    "source": "wikipedia:Subnet"
-  },
-  {
-    "question": "What is Each subnet?",
-    "answer": "Each subnet is served by a designated default router but may consist internally of multiple physical Ethernet segments interconnected by network switches.",
-    "domain": "networking",
     "source": "wikipedia:Subnet"
   },
   {
@@ -12990,12 +11040,6 @@
     "source": "wikipedia:Subnet"
   },
   {
-    "question": "Tell me about The Internet Engineering Task Force",
-    "answer": "The Internet Engineering Task Force recommends the use of /127 subnets for point-to-point links, which have only two hosts.",
-    "domain": "networking",
-    "source": "wikipedia:Subnet"
-  },
-  {
     "question": "What is all-zeroes address?",
     "answer": "The all-zeroes address is reserved as the subnet-router anycast address.",
     "domain": "networking",
@@ -13011,12 +11055,6 @@
     "question": "What is first and last address in any network or subnet?",
     "answer": "The first and last address in any network or subnet is not allowed to be assigned to any individual host.",
     "domain": "networking",
-    "source": "wikipedia:Subnet"
-  },
-  {
-    "question": "Tell me about CCNA",
-    "answer": "CCNA Cisco Certified Network Associate Study Guide 5th Edition.",
-    "domain": "intranet",
     "source": "wikipedia:Subnet"
   },
   {
@@ -13116,12 +11154,6 @@
     "source": "wikipedia:Sase"
   },
   {
-    "question": "Tell me about Sase Narain",
-    "answer": "== People ==\nSase Narain (1925–2020), Guyanese politician and lawyer\nTatsuya Sase (佐瀬 達也; born 1991), Japanese footballer.",
-    "domain": "general",
-    "source": "wikipedia:Sase"
-  },
-  {
     "question": "What is Sases?",
     "answer": "Sases, also known as Gondophares IV Sases (Kharosthi: 𐨒𐨂𐨡𐨂𐨥𐨪 𐨯𐨯 Gu-du-pha-ra Sa-sa, Guduphara Sasa), sometimes Sasan, was an Indo-Parthian king and Apracharaja who ruled in Gandhara. He is only known from coins and ruled for at least 26 years after succeeding Gondophares. At some point during his reign he assumed the title Gondophares, which was held by the supreme Indo-Parthian rulers.",
     "domain": "general",
@@ -13158,12 +11190,6 @@
     "source": "wikipedia:Sases"
   },
   {
-    "question": "Tell me about CE",
-    "answer": "In the 1st century CE, Phraotes, a Greek-speaking king of the city of Taxila, was met by the philosopher Apollonius of Tyana dated approximately to 46 CE, according to the Life of Apollonius Tyana written by Philostratus.",
-    "domain": "general",
-    "source": "wikipedia:Sases"
-  },
-  {
     "question": "What is Gondophares who fits this date?",
     "answer": "The Gondophares who fits this date is Gondophares IV Sases, whose coinage has been dated to 40-78 AD.",
     "domain": "general",
@@ -13188,135 +11214,9 @@
     "source": "wikipedia:Sases"
   },
   {
-    "question": "What is Secure access service edge?",
-    "answer": "A secure access service edge (SASE) (also secure access secure edge) is technology used to deliver wide area network (WAN) and security controls as a cloud computing service directly to the source of connection (user, device, Internet of things (IoT) device, or edge computing location) rather than a data center.",
-    "domain": "networking",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "What is secure access service edge (SASE) (also secure access secure edge)?",
-    "answer": "A secure access service edge (SASE) (also secure access secure edge) is technology used to deliver wide area network (WAN) and security controls as a cloud computing service directly to the source of connection (user, device, Internet of things (IoT) device, or edge computing location) rather than a data center.",
-    "domain": "internet",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "Tell me about Neil Mac",
-    "answer": "The term was coined in 2019 by market analyst, Neil MacDonald of Gartner.",
-    "domain": "general",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "What is WAN and security functions?",
-    "answer": "WAN and security functions are typically delivered as a single service at dispersed SASE points of presence (PoPs) located as close as possible to dispersed users, branch offices and cloud services.",
-    "domain": "internet",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "What is SSE?",
-    "answer": "SSE is a collection of SASE security services that can be implemented together with network services, like SD-WAN, to provide a complete solution.",
-    "domain": "networking",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "What is cloud computing model?",
-    "answer": "The cloud computing model is meant to delegate and simplify delivery of SD-WAN and security functions to multiple edge computing devices and locations.",
-    "domain": "networking",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "What does cloud architecture provide?",
-    "answer": "The cloud architecture provides typical cloud enhancements such as elasticity, flexibility, agility, global reach and delegated management.",
-    "domain": "internet",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "What is Identity?",
-    "answer": "Identity is the most significant context affecting SASE security policy.",
-    "domain": "general",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "What is Performance?",
-    "answer": "Performance is also increased by implementing all security functions with a single-pass architecture inside a single PoP, to avoid unnecessary routing.",
-    "domain": "networking",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "What is Both analyst firms criticize SASE as a Gartner term that?",
-    "answer": "Both analyst firms criticize SASE as a Gartner term that is neither a new market, technology nor product, but rather an integration of existing technology with a single source of management.",
-    "domain": "general",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "Tell me about IHS",
-    "answer": "Clifford Grossner of IHS Markit criticizes the lack of analytics, artificial intelligence and machine learning as part of the SASE concept and the likelihood that enterprises won't want to get all SD-WAN and security functions from a single vendor.",
-    "domain": "networking",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "What is SD-WAN?",
-    "answer": "SD-WAN is a technology that simplifies wide area networking through centralized control of the networking hardware or software that directs traffic across the WAN.",
-    "domain": "networking",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "Tell me about NGFW",
-    "answer": "NGFW combines a traditional firewall with other security and networking functions geared to the virtualized data center.",
-    "domain": "security",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "What does NGFW provide?",
-    "answer": "NGFW offers a subset of the security stack offered by SASE, and typically doesn't include SD-WAN services.",
-    "domain": "networking",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "What is NGFW may be deployed on premises or as a cloud service, while SASE?",
-    "answer": "NGFW may be deployed on premises or as a cloud service, while SASE is a cloud architecture by definition.",
-    "domain": "internet",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "What is FWaaS?",
-    "answer": "FWaaS is a firewall offered as a cloud service, rather than on premises as software or hardware.",
-    "domain": "security",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "What is Typically, an entire organization?",
-    "answer": "Typically, an entire organization is connected to a single FWaaS cloud with no requirement for maintaining its own firewall infrastructure.",
-    "domain": "security",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "What does Like SASE it provide?",
-    "answer": "Like SASE it offers reduced complexity and management costs.",
-    "domain": "general",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "What is By contrast SASE?",
-    "answer": "By contrast SASE is meant to be a single comprehensive secure SD-WAN solution for branch offices, mobile users, data centers and any other secure enterprise WAN requirement.",
-    "domain": "networking",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "Tell me about SSE",
-    "answer": "Some vendors focus on the networking aspects while others focus on the security aspect which is now referred to as Secure Service Edge (SSE).",
-    "domain": "general",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
     "question": "Tell me about MEF",
     "answer": "== Standards ==\nMEF, originally known as the Metro Ethernet Forum, has become a next generation standards organization with a broad focus around software defined network and security infrastructure services for service provider, technology manufacturers, and enterprise network design.",
     "domain": "networking",
-    "source": "wikipedia:Secure access service edge"
-  },
-  {
-    "question": "What is document?",
-    "answer": "The document is available to MEF participating companies and members.",
-    "domain": "general",
     "source": "wikipedia:Secure access service edge"
   },
   {
@@ -13364,12 +11264,6 @@
   {
     "question": "What is Roman tombstone that was excavated close-by?",
     "answer": "A Roman tombstone that was excavated close-by is exhibited in the monastery courtyard.",
-    "domain": "general",
-    "source": "wikipedia:Sase Monastery"
-  },
-  {
-    "question": "Tell me about Sase Monastery",
-    "answer": "== External links ==\n Media related to Sase Monastery at Wikimedia Commons.",
     "domain": "general",
     "source": "wikipedia:Sase Monastery"
   },
@@ -13452,12 +11346,6 @@
     "source": "wikipedia:Sase prospect"
   },
   {
-    "question": "Tell me about The Sase",
-    "answer": "The Sase prospect lies within the Lupoto concession, about 10 kilometres (6.2 mi) the south of Tiger's Kipoi Mine and to the north of the older Lupoto Mine in the Kalumines concession area.",
-    "domain": "general",
-    "source": "wikipedia:Sase prospect"
-  },
-  {
     "question": "What is Sase Narain?",
     "answer": "Sase Narain    (27 January 1925 – 25 August 2020) was a Guyanese politician and lawyer. He served as Speaker of the National Assembly of Guyana from 1971 to 1992, becoming the longest serving Speaker in Guyana.",
     "domain": "networking",
@@ -13480,42 +11368,6 @@
     "answer": "Former Prime Minister Hamilton Green praised him for \"his candor and his wisdom\".",
     "domain": "general",
     "source": "wikipedia:Sase Narain"
-  },
-  {
-    "question": "What is Cato Networks?",
-    "answer": "Cato Networks Ltd. is a Tel Aviv, Israel-based network security company that develops Secure Access Service Edge (SASE) technology, which combines enterprise communication and security capabilities into a single cloud-based platform. The company was founded in 2015. After an October 2021 funding round, the company was a tech unicorn valued at $2.5 billion.",
-    "domain": "internet",
-    "source": "wikipedia:Cato Networks"
-  },
-  {
-    "question": "Tell me about Cato Networks",
-    "answer": "== History ==\nCato Networks was founded in 2015 in Tel Aviv, Israel, by Shlomo Kramer, co-founder of Checkpoint and Imperva, and Gur Shatz, a co-founder of networking company Incapsula.",
-    "domain": "general",
-    "source": "wikipedia:Cato Networks"
-  },
-  {
-    "question": "Tell me about Venture Partners",
-    "answer": "Venture Partners, Aspect Capital, Singaporean fund Singtel's subsidiary Innov8, and hedge fund Coatue Management.",
-    "domain": "internet",
-    "source": "wikipedia:Cato Networks"
-  },
-  {
-    "question": "Tell me about ARR",
-    "answer": "Included in this announcement were two other recent developments: that it had crossed the $300 million  Annual Recurring Revenue (ARR) threshold; and that it had raised another $50 million in its Series G round, bringing the total to $409 million at an estimated valuation of over $4.8 billion.",
-    "domain": "general",
-    "source": "wikipedia:Cato Networks"
-  },
-  {
-    "question": "What is Its products?",
-    "answer": "Its products are designed to help IT staff manage network security for distributed workforces accessing resources across the wide area networks (WANs), cloud and Internet that connects them.",
-    "domain": "internet",
-    "source": "wikipedia:Cato Networks"
-  },
-  {
-    "question": "What does company's Cato SASE Cloud platform provide?",
-    "answer": "The company's Cato SASE Cloud platform supports more than 73 points of presence in over 150 countries.",
-    "domain": "internet",
-    "source": "wikipedia:Cato Networks"
   },
   {
     "question": "What is Sase (Višegrad)?",
