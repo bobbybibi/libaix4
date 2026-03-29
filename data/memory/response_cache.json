@@ -1,0 +1,23 @@
+{
+  "what is tcp": {
+    "answer": "TCP (Transmission Control Protocol) is a connection-oriented transport layer protocol that provides reliable, ordered delivery of data between applications using a three-way handshake.",
+    "confidence": 0.9999997876763154,
+    "domain": "networking",
+    "cached_at": "2026-03-29T06:47:09.687537+00:00",
+    "hits": 4
+  },
+  "what is https": {
+    "answer": "HTTPS is HTTP over TLS/SSL, encrypting data in transit to protect confidentiality and integrity between browser and server.",
+    "confidence": 0.9999998244647124,
+    "domain": "internet",
+    "cached_at": "2026-03-29T06:47:14.407780+00:00",
+    "hits": 1
+  },
+  "what is a firewall": {
+    "answer": "A firewall monitors and filters network traffic based on security rules, blocking unauthorized access while permitting legitimate communication.",
+    "confidence": 0.9999998065648693,
+    "domain": "networking",
+    "cached_at": "2026-03-29T06:47:21.768919+00:00",
+    "hits": 1
+  }
+}
