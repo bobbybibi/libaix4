@@ -602,8 +602,14 @@ def retrain():
 @login_required
 def browse_knowledge():
     domain_filter = request.args.get("domain", "")
-    page = max(1, int(request.args.get("page", 1)))
-    per_page = max(1, min(int(request.args.get("per_page", 100)), 500))
+    try:
+        page = max(1, int(request.args.get("page", 1)))
+    except (ValueError, TypeError):
+        page = 1
+    try:
+        per_page = max(1, min(int(request.args.get("per_page", 100)), 500))
+    except (ValueError, TypeError):
+        per_page = 100
     entries: list[dict] = []
 
     for q, a, d in KNOWLEDGE:
