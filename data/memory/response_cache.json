@@ -4,7 +4,7 @@
     "confidence": 0.9999997876763154,
     "domain": "networking",
     "cached_at": "2026-03-29T06:47:09.687537+00:00",
-    "hits": 4
+    "hits": 6
   },
   "what is https": {
     "answer": "HTTPS is HTTP over TLS/SSL, encrypting data in transit to protect confidentiality and integrity between browser and server.",
@@ -18,6 +18,125 @@
     "confidence": 0.9999998065648693,
     "domain": "networking",
     "cached_at": "2026-03-29T06:47:21.768919+00:00",
+    "hits": 2
+  },
+  "how do i connect to wifi": {
+    "answer": "IoT devices should be on a dedicated SSID mapped to an isolated VLAN with strict firewall ACLs. Use MAB or PSK-based auth (not on the corporate SSID). Apply microsegmentation to limit IoT lateral movement. Monitor for anomalous traffic patterns.",
+    "confidence": 0.9998015354851634,
+    "domain": "wifi_security",
+    "cached_at": "2026-03-29T07:35:27.947287+00:00",
+    "hits": 1
+  },
+  "what is encryption": {
+    "answer": "Encryption converts plaintext into ciphertext using an algorithm and key, making data unreadable without the decryption key. Types: symmetric (AES) and asymmetric (RSA).",
+    "confidence": 0.9999998404373539,
+    "domain": "security",
+    "cached_at": "2026-03-29T07:35:28.013570+00:00",
+    "hits": 1
+  },
+  "what is dns": {
+    "answer": "DNS (Domain Name System) translates human-readable domain names (like google.com) into IP addresses that computers use to route traffic.",
+    "confidence": 0.9999997323025193,
+    "domain": "networking",
+    "cached_at": "2026-03-29T07:35:28.077335+00:00",
+    "hits": 1
+  },
+  "what is a vpn and how does it work": {
+    "answer": "A VPN (Virtual Private Network) creates an encrypted tunnel over a public network, allowing remote users to securely access an intranet as if they were on the local network.",
+    "confidence": 0.9950741133450947,
+    "domain": "intranet",
+    "cached_at": "2026-03-29T07:35:28.140100+00:00",
+    "hits": 1
+  },
+  "asdfghjkl qwerty zxcvbnm": {
+    "answer": "I'm not sure about that. Try asking about networking, internet, intranet, or security topics. Type 'help' for examples.",
+    "confidence": 0.030628460819880104,
+    "domain": "general",
+    "cached_at": "2026-03-29T07:35:41.420670+00:00",
+    "hits": 1
+  },
+  "what is tcp/ip": {
+    "answer": "I'm not sure about that. Try asking about networking, internet, intranet, or security topics. Type 'help' for examples.",
+    "confidence": 0.08534070435972646,
+    "domain": "general",
+    "cached_at": "2026-03-29T07:38:38.072797+00:00",
+    "hits": 1
+  },
+  "what is phishing": {
+    "answer": "Phishing is a social engineering attack that uses fake emails or websites to trick users into revealing credentials, financial info, or installing malware.",
+    "confidence": 0.9999998069986191,
+    "domain": "security",
+    "cached_at": "2026-03-29T07:38:38.074942+00:00",
+    "hits": 1
+  },
+  "what is an intranet": {
+    "answer": "An intranet is a private network within an organization that uses internet technologies (TCP/IP, HTTP) for internal communication, collaboration, and resource sharing.",
+    "confidence": 0.9999997511505068,
+    "domain": "intranet",
+    "cached_at": "2026-03-29T07:38:38.076841+00:00",
+    "hits": 1
+  },
+  "what is wi-fi 6": {
+    "answer": "I'm not sure about that. Try asking about networking, internet, intranet, or security topics. Type 'help' for examples.",
+    "confidence": 0.08534070435972646,
+    "domain": "general",
+    "cached_at": "2026-03-29T07:38:38.079467+00:00",
+    "hits": 1
+  },
+  "what is wpa3": {
+    "answer": "WPA3 replaces WPA2 with stronger security: SAE (Simultaneous Authentication of Equals) replaces PSK, providing forward secrecy. WPA3-Enterprise adds 192-bit cryptographic strength. It mitigates KRACK and dictionary attacks.",
+    "confidence": 0.999999755264067,
+    "domain": "wifi_security",
+    "cached_at": "2026-03-29T07:38:38.081328+00:00",
+    "hits": 1
+  },
+  "what is the difference between http and https": {
+    "answer": "HTTP (HyperText Transfer Protocol) is an application-layer protocol for transferring web pages and resources between clients (browsers) and servers.",
+    "confidence": 0.5147661045382058,
+    "domain": "internet",
+    "cached_at": "2026-03-29T07:38:38.083160+00:00",
+    "hits": 1
+  },
+  "how does dhcp work": {
+    "answer": "DHCP (Dynamic Host Configuration Protocol) automatically assigns IP addresses, subnet masks, gateways, and DNS servers to devices on a network.",
+    "confidence": 0.9999998287902314,
+    "domain": "networking",
+    "cached_at": "2026-03-29T07:38:38.085063+00:00",
+    "hits": 1
+  },
+  "what is a man-in-the-middle attack": {
+    "answer": "KRACK (Key Reinstallation Attack) exploits a flaw in WPA2's four-way handshake by manipulating and replaying cryptographic handshake messages, potentially allowing decryption of traffic. WPA3's SAE and patched WPA2 mitigate it.",
+    "confidence": 0.5041693991097447,
+    "domain": "wifi_security",
+    "cached_at": "2026-03-29T07:38:38.087035+00:00",
+    "hits": 1
+  },
+  "what are vlans used for": {
+    "answer": "I'm not sure about that. Try asking about networking, internet, intranet, or security topics. Type 'help' for examples.",
+    "confidence": 0.08534070435972646,
+    "domain": "general",
+    "cached_at": "2026-03-29T07:38:38.089035+00:00",
+    "hits": 1
+  },
+  "what is 802.1x": {
+    "answer": "I'm not sure about that. Try asking about networking, internet, intranet, or security topics. Type 'help' for examples.",
+    "confidence": 0.08534070435972646,
+    "domain": "general",
+    "cached_at": "2026-03-29T07:38:38.091030+00:00",
+    "hits": 1
+  },
+  "help": {
+    "answer": "I can answer questions about: networking (TCP/IP, OSI, routing, SD-WAN), Wi-Fi (802.11ax, WPA3, controllers), corporate wireless (restrictions, BYOD, QoS), security (zero trust, 802.1X, PKI), and troubleshooting. Just ask!",
+    "confidence": 0.9999996956942083,
+    "domain": "general",
+    "cached_at": "2026-03-29T07:38:38.093177+00:00",
+    "hits": 1
+  },
+  "what is a subnet mask": {
+    "answer": "A subnet mask divides an IP address into network and host portions. For example, 255.255.255.0 (/24) means the first 24 bits identify the network and the last 8 bits identify hosts.",
+    "confidence": 0.9999998351315443,
+    "domain": "networking",
+    "cached_at": "2026-03-29T07:40:20.934070+00:00",
     "hits": 1
   }
 }
