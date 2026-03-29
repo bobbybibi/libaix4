@@ -172,7 +172,7 @@ def dashboard():
         knowledge_count=len(KNOWLEDGE),
         extra_count=extra_count,
         total_count=len(KNOWLEDGE) + extra_count,
-        domains=get_domains() + _get_extra_domains(),
+        domains=sorted(set(get_domains() + _get_extra_domains())),
         crawler_config=config,
     )
 
@@ -198,7 +198,7 @@ def api_stats():
         "builtin_entries": len(KNOWLEDGE),
         "extra_entries": extra_count,
         "total_entries": len(KNOWLEDGE) + extra_count,
-        "domains": get_domains() + _get_extra_domains(),
+        "domains": sorted(set(get_domains() + _get_extra_domains())),
         "extra_files": _list_extra_files(),
         "source_breakdown": source_breakdown,
         "crawler": {
@@ -602,6 +602,8 @@ def retrain():
 @login_required
 def browse_knowledge():
     domain_filter = request.args.get("domain", "")
+    page = max(1, int(request.args.get("page", 1)))
+    per_page = max(1, min(int(request.args.get("per_page", 100)), 500))
     entries: list[dict] = []
 
     for q, a, d in KNOWLEDGE:
@@ -622,7 +624,18 @@ def browse_knowledge():
         except Exception:
             continue
 
-    return jsonify({"entries": entries, "total": len(entries)})
+    total = len(entries)
+    start = (page - 1) * per_page
+    end = start + per_page
+    paginated = entries[start:end]
+
+    return jsonify({
+        "entries": paginated,
+        "total": total,
+        "page": page,
+        "per_page": per_page,
+        "total_pages": (total + per_page - 1) // per_page,
+    })
 
 
 # ── Learned Topics ────────────────────────────────────────────────────
@@ -1070,7 +1083,7 @@ def chat():
                     "builtin_entries": len(KNOWLEDGE),
                     "extra_entries": extra,
                     "total_entries": len(KNOWLEDGE) + extra,
-                    "domains": get_domains() + _get_extra_domains(),
+                    "domains": sorted(set(get_domains() + _get_extra_domains())),
                     "source_breakdown": _get_source_breakdown(),
                 }
             elif q == "ml_stats":
