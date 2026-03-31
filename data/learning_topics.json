@@ -143,8 +143,26 @@
       "priority": "medium",
       "enabled": false,
       "added_at": "2026-03-31T21:24:35.176924+00:00"
+    },
+    {
+      "name": "test_topic_6c3a49fe",
+      "priority": "low",
+      "enabled": true,
+      "added_at": "2026-03-31T21:30:32.493837+00:00"
+    },
+    {
+      "name": "dup_test_893a983c",
+      "priority": "low",
+      "enabled": true,
+      "added_at": "2026-03-31T21:30:32.586944+00:00"
+    },
+    {
+      "name": "toggle_test_8e1c76e5",
+      "priority": "medium",
+      "enabled": false,
+      "added_at": "2026-03-31T21:30:32.680905+00:00"
     }
   ],
   "auto_discover": true,
-  "last_updated": "2026-03-31T21:24:35.178167+00:00"
+  "last_updated": "2026-03-31T21:30:32.682092+00:00"
 }

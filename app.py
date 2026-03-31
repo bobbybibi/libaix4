@@ -32,6 +32,22 @@ from project_memory import (
 )
 from vectorizer import BagOfWords
 
+# Brain + Watcher (lazy imports — graceful if not yet available)
+try:
+    from libaix_brain import (
+        build_session_briefing as _brain_briefing,
+        get_status as _brain_status,
+        run_full_scan_cycle as _brain_scan,
+        scan_project as _brain_scan_project,
+    )
+    from ml_watcher import (
+        build_watcher_context as _watcher_context,
+        run_watcher_cycle as _watcher_cycle,
+    )
+    _BRAIN_AVAILABLE = True
+except ImportError:
+    _BRAIN_AVAILABLE = False
+
 app = Flask(__name__)
 app.secret_key = secrets.token_hex(32)
 app.register_blueprint(admin_bp)
@@ -116,6 +132,14 @@ try:
               f"({'↑ improving' if perf.get('improving') else '→ stable'})")
 except Exception as _e:
     print(f"Note: Project memory init skipped ({type(_e).__name__}: {_e})")
+
+# Brain + Watcher startup
+if _BRAIN_AVAILABLE:
+    try:
+        _brain_scan_project()
+        print("LIBAIXBrain: project scan complete.")
+    except Exception as _e:
+        print(f"Note: Brain startup scan skipped ({type(_e).__name__}: {_e})")
 print()
 
 
@@ -323,6 +347,64 @@ def health():
         "datasets": list(TARGETS.keys()),
         "models_ready": list(models.keys()),
     })
+
+
+# ── Routes: Brain & Watcher API ──────────────────────────────────────
+
+
+@app.route("/brain/status", methods=["GET"])
+def brain_status():
+    """Return the LIBAIXBrain status summary."""
+    if not _BRAIN_AVAILABLE:
+        return jsonify({"error": "Brain module not available"}), 503
+    try:
+        return jsonify(_brain_status())
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route("/brain/briefing", methods=["GET"])
+def brain_briefing():
+    """Return a full session briefing from LIBAIXBrain."""
+    if not _BRAIN_AVAILABLE:
+        return jsonify({"error": "Brain module not available"}), 503
+    try:
+        return jsonify(_brain_briefing())
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route("/brain/scan", methods=["POST"])
+def brain_scan():
+    """Run a full brain scan cycle (scan → analyse → score → plan)."""
+    if not _BRAIN_AVAILABLE:
+        return jsonify({"error": "Brain module not available"}), 503
+    try:
+        return jsonify(_brain_scan())
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route("/watcher/context", methods=["GET"])
+def watcher_context():
+    """Return the ML watcher's instant project context."""
+    if not _BRAIN_AVAILABLE:
+        return jsonify({"error": "Watcher module not available"}), 503
+    try:
+        return jsonify(_watcher_context())
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route("/watcher/cycle", methods=["POST"])
+def watcher_cycle():
+    """Run a full watcher monitoring cycle."""
+    if not _BRAIN_AVAILABLE:
+        return jsonify({"error": "Watcher module not available"}), 503
+    try:
+        return jsonify(_watcher_cycle())
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 
 if __name__ == "__main__":
