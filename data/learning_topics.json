@@ -125,8 +125,26 @@
       "priority": "medium",
       "enabled": false,
       "added_at": "2026-03-29T07:06:44.848258+00:00"
+    },
+    {
+      "name": "test_topic_a6f3d320",
+      "priority": "low",
+      "enabled": true,
+      "added_at": "2026-03-31T21:24:34.987513+00:00"
+    },
+    {
+      "name": "dup_test_9ad4ec3b",
+      "priority": "low",
+      "enabled": true,
+      "added_at": "2026-03-31T21:24:35.082200+00:00"
+    },
+    {
+      "name": "toggle_test_94e8251c",
+      "priority": "medium",
+      "enabled": false,
+      "added_at": "2026-03-31T21:24:35.176924+00:00"
     }
   ],
   "auto_discover": true,
-  "last_updated": "2026-03-29T07:06:44.849323+00:00"
+  "last_updated": "2026-03-31T21:24:35.178167+00:00"
 }
