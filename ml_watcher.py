@@ -266,7 +266,7 @@ def build_knowledge_index() -> dict:
                 index["extra_entries"] += count
                 index["extra_files"].append({"file": fp.name, "entries": count})
 
-                # Categorise source
+                # Categorize source
                 name = fp.name.lower()
                 if "wikipedia" in name or "wiki" in name:
                     index["sources"]["crawled"] += count

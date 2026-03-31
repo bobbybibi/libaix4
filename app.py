@@ -359,8 +359,8 @@ def brain_status():
         return jsonify({"error": "Brain module not available"}), 503
     try:
         return jsonify(_brain_status())
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
+    except Exception:
+        return jsonify({"error": "Failed to retrieve brain status"}), 500
 
 
 @app.route("/brain/briefing", methods=["GET"])
@@ -370,8 +370,8 @@ def brain_briefing():
         return jsonify({"error": "Brain module not available"}), 503
     try:
         return jsonify(_brain_briefing())
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
+    except Exception:
+        return jsonify({"error": "Failed to build session briefing"}), 500
 
 
 @app.route("/brain/scan", methods=["POST"])
@@ -381,8 +381,8 @@ def brain_scan():
         return jsonify({"error": "Brain module not available"}), 503
     try:
         return jsonify(_brain_scan())
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
+    except Exception:
+        return jsonify({"error": "Failed to run brain scan cycle"}), 500
 
 
 @app.route("/watcher/context", methods=["GET"])
@@ -392,8 +392,8 @@ def watcher_context():
         return jsonify({"error": "Watcher module not available"}), 503
     try:
         return jsonify(_watcher_context())
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
+    except Exception:
+        return jsonify({"error": "Failed to build watcher context"}), 500
 
 
 @app.route("/watcher/cycle", methods=["POST"])
@@ -403,8 +403,8 @@ def watcher_cycle():
         return jsonify({"error": "Watcher module not available"}), 503
     try:
         return jsonify(_watcher_cycle())
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
+    except Exception:
+        return jsonify({"error": "Failed to run watcher cycle"}), 500
 
 
 if __name__ == "__main__":
