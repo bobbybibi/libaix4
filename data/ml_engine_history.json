@@ -1,109 +1,5 @@
 [
   {
-    "timestamp": "2026-03-31T22:49:01.382262+00:00",
-    "type": "stabilization_restore",
-    "old_accuracy": 0.0007,
-    "new_accuracy": 0.0007
-  },
-  {
-    "timestamp": "2026-03-31T22:49:11.004242+00:00",
-    "type": "optimization",
-    "best_accuracy": 0.0,
-    "best_config": null,
-    "configs_tested": 5
-  },
-  {
-    "timestamp": "2026-03-31T22:49:21.661973+00:00",
-    "type": "assessment",
-    "accuracy": 0.0007,
-    "confidence": 0.3655,
-    "weak_domains": [
-      "networking",
-      "internet",
-      "intranet",
-      "security",
-      "wifi",
-      "wifi_security",
-      "wifi_policy",
-      "troubleshooting",
-      "general"
-    ]
-  },
-  {
-    "timestamp": "2026-03-31T22:49:21.755500+00:00",
-    "type": "growth_cycle",
-    "start_accuracy": 0.0007,
-    "final_accuracy": 0.0007
-  },
-  {
-    "timestamp": "2026-03-31T23:46:25.579590+00:00",
-    "type": "assessment",
-    "accuracy": 0.0006,
-    "confidence": 0.3646,
-    "weak_domains": [
-      "networking",
-      "internet",
-      "intranet",
-      "security",
-      "wifi",
-      "wifi_security",
-      "wifi_policy",
-      "troubleshooting",
-      "general"
-    ]
-  },
-  {
-    "timestamp": "2026-03-31T23:46:37.157099+00:00",
-    "type": "assessment",
-    "accuracy": 0.0006,
-    "confidence": 0.3646,
-    "weak_domains": [
-      "networking",
-      "internet",
-      "intranet",
-      "security",
-      "wifi",
-      "wifi_security",
-      "wifi_policy",
-      "troubleshooting",
-      "general"
-    ]
-  },
-  {
-    "timestamp": "2026-03-31T23:46:48.709764+00:00",
-    "type": "assessment",
-    "accuracy": 0.0006,
-    "confidence": 0.3646,
-    "weak_domains": [
-      "networking",
-      "internet",
-      "intranet",
-      "security",
-      "wifi",
-      "wifi_security",
-      "wifi_policy",
-      "troubleshooting",
-      "general"
-    ]
-  },
-  {
-    "timestamp": "2026-03-31T23:47:00.240742+00:00",
-    "type": "assessment",
-    "accuracy": 0.0006,
-    "confidence": 0.3646,
-    "weak_domains": [
-      "networking",
-      "internet",
-      "intranet",
-      "security",
-      "wifi",
-      "wifi_security",
-      "wifi_policy",
-      "troubleshooting",
-      "general"
-    ]
-  },
-  {
     "timestamp": "2026-03-31T23:47:00.350393+00:00",
     "type": "stabilization_restore",
     "old_accuracy": 0.0006,
@@ -1279,6 +1175,110 @@
   },
   {
     "timestamp": "2026-04-01T20:59:45.013117+00:00",
+    "type": "growth_cycle",
+    "start_accuracy": 0.0004,
+    "final_accuracy": 0.0004
+  },
+  {
+    "timestamp": "2026-04-01T21:54:21.755419+00:00",
+    "type": "assessment",
+    "accuracy": 0.0004,
+    "confidence": 0.3635,
+    "weak_domains": [
+      "networking",
+      "internet",
+      "intranet",
+      "security",
+      "wifi",
+      "wifi_security",
+      "wifi_policy",
+      "troubleshooting",
+      "general"
+    ]
+  },
+  {
+    "timestamp": "2026-04-01T21:54:40.178501+00:00",
+    "type": "assessment",
+    "accuracy": 0.0004,
+    "confidence": 0.3635,
+    "weak_domains": [
+      "networking",
+      "internet",
+      "intranet",
+      "security",
+      "wifi",
+      "wifi_security",
+      "wifi_policy",
+      "troubleshooting",
+      "general"
+    ]
+  },
+  {
+    "timestamp": "2026-04-01T21:54:58.243785+00:00",
+    "type": "assessment",
+    "accuracy": 0.0004,
+    "confidence": 0.3635,
+    "weak_domains": [
+      "networking",
+      "internet",
+      "intranet",
+      "security",
+      "wifi",
+      "wifi_security",
+      "wifi_policy",
+      "troubleshooting",
+      "general"
+    ]
+  },
+  {
+    "timestamp": "2026-04-01T21:55:16.115371+00:00",
+    "type": "assessment",
+    "accuracy": 0.0004,
+    "confidence": 0.3635,
+    "weak_domains": [
+      "networking",
+      "internet",
+      "intranet",
+      "security",
+      "wifi",
+      "wifi_security",
+      "wifi_policy",
+      "troubleshooting",
+      "general"
+    ]
+  },
+  {
+    "timestamp": "2026-04-01T21:55:16.283754+00:00",
+    "type": "stabilization_restore",
+    "old_accuracy": 0.0004,
+    "new_accuracy": 0.0004
+  },
+  {
+    "timestamp": "2026-04-01T21:55:32.250881+00:00",
+    "type": "optimization",
+    "best_accuracy": 0.0,
+    "best_config": null,
+    "configs_tested": 5
+  },
+  {
+    "timestamp": "2026-04-01T21:55:50.361766+00:00",
+    "type": "assessment",
+    "accuracy": 0.0004,
+    "confidence": 0.3635,
+    "weak_domains": [
+      "networking",
+      "internet",
+      "intranet",
+      "security",
+      "wifi",
+      "wifi_security",
+      "wifi_policy",
+      "troubleshooting",
+      "general"
+    ]
+  },
+  {
+    "timestamp": "2026-04-01T21:55:50.540876+00:00",
     "type": "growth_cycle",
     "start_accuracy": 0.0004,
     "final_accuracy": 0.0004
