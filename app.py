@@ -14,7 +14,9 @@ Then open http://localhost:5000 in your browser.
 from __future__ import annotations
 
 import json
+import re
 import secrets
+import threading
 from pathlib import Path
 
 import numpy as np
@@ -214,18 +216,212 @@ def datasets():
 
 # ── Routes: Knowledge AI chat ────────────────────────────────────────
 
+# Chat command detection patterns
+_URL_RE = re.compile(r'https?://[^\s<>"\'`,;)\]]+', re.IGNORECASE)
+_RESEARCH_PREFIXES = [
+    "research", "learn about", "study", "find information about",
+    "teach yourself about", "gather knowledge on", "look up",
+    "find out about", "investigate",
+]
+
+
+def _detect_chat_command(question: str) -> dict | None:
+    """Detect research/learn/URL commands in user chat messages.
+
+    Returns a dict with command info, or None for regular questions.
+    """
+    lower = question.lower().strip()
+
+    # Detect URLs → offer crawling
+    urls = _URL_RE.findall(question)
+    if urls:
+        # Extract topic context from surrounding text
+        text = question
+        for u in urls:
+            text = text.replace(u, "")
+        topic = text.strip(" .,;:!?")
+        topic = re.sub(
+            r'^(crawl|scrape|visit|fetch|go to|get|learn from|read)\s+',
+            '', topic, flags=re.IGNORECASE,
+        ).strip() or "general"
+        return {"type": "crawl", "urls": urls, "topic": topic}
+
+    # Detect research/learn commands
+    for prefix in sorted(_RESEARCH_PREFIXES, key=len, reverse=True):
+        if lower.startswith(prefix):
+            topic = question[len(prefix):].strip(" .,;:!?")
+            if len(topic) > 2:
+                return {"type": "research", "topic": topic}
+
+    return None
+
+
+def _execute_research(topic: str, urls: list[str] | None = None) -> dict:
+    """Execute multi-source research for a topic. Runs crawlers and returns results.
+
+    This does NOT retrain the model inline — it queues knowledge and triggers
+    a background retrain so the response is fast.
+    """
+    results: dict[str, dict] = {}
+    total_entries = 0
+
+    try:
+        from crawler import crawl_single_topic
+        wiki_result = crawl_single_topic(topic, [], max_articles=5)
+        results["wikipedia"] = {
+            "entries": wiki_result.get("entries", 0),
+            "status": wiki_result.get("status", "error"),
+        }
+        if wiki_result.get("status") == "success":
+            total_entries += wiki_result.get("entries", 0)
+    except Exception:
+        results["wikipedia"] = {"entries": 0, "status": "error"}
+
+    try:
+        from forum_crawler import crawl_single_forum_topic
+        forum_result = crawl_single_forum_topic(
+            topic, [], max_per_source=5,
+            sources=["stackexchange", "reddit", "hackernews", "devto"],
+        )
+        results["forums"] = {
+            "entries": forum_result.get("entries", 0),
+            "status": forum_result.get("status", "error"),
+        }
+        if forum_result.get("status") == "success":
+            total_entries += forum_result.get("entries", 0)
+    except Exception:
+        results["forums"] = {"entries": 0, "status": "error"}
+
+    # Crawl specific URLs if provided
+    if urls:
+        from site_crawler import add_site_job
+        for url in urls[:5]:  # Limit to 5 URLs
+            try:
+                r = add_site_job(url=url, topic=topic, max_pages=10, max_depth=1)
+                url_entries = r.get("entries", 0)
+                results[f"site:{url[:50]}"] = {
+                    "entries": url_entries,
+                    "status": r.get("status", "error"),
+                }
+                total_entries += url_entries
+            except Exception:
+                results[f"site:{url[:50]}"] = {"entries": 0, "status": "error"}
+
+    # Auto-add topic to crawler configs for continuous learning
+    try:
+        from crawler import load_config, save_config
+        config = load_config()
+        topics = config.get("topics", [])
+        if not any(t["name"].lower() == topic.lower() for t in topics):
+            topics.append({
+                "name": topic, "keywords": [], "enabled": True, "max_articles": 5,
+            })
+            config["topics"] = topics
+            save_config(config)
+    except Exception:
+        pass
+
+    # Trigger background retrain if we got new data
+    if total_entries > 0:
+        _background_retrain()
+
+    return {
+        "total_entries": total_entries,
+        "sources": results,
+        "topic": topic,
+    }
+
+
+def _background_retrain() -> None:
+    """Retrain the knowledge model in a background thread, then reload."""
+    def _do_retrain():
+        try:
+            from train_knowledge import train as _train_knowledge
+            _train_knowledge(
+                activation="tanh", optimizer="adam",
+                lr=0.01, epochs=3000, hidden=256,
+                augment=True, verbose=False,
+            )
+            _load_knowledge_model()
+        except Exception:
+            pass
+
+    t = threading.Thread(target=_do_retrain, daemon=True)
+    t.start()
+
 @app.route("/chat", methods=["POST"])
 def chat():
-    """Answer a user question using the knowledge classifier."""
-    if knowledge_model is None or knowledge_bow is None:
-        return jsonify({"error": "Knowledge model not loaded. Train it first."}), 503
+    """Answer a user question using the knowledge classifier.
 
+    Also detects special commands:
+      - "research <topic>" / "learn about <topic>" → multi-source crawl
+      - URLs in the message → crawl the site(s) for knowledge
+    """
     data = request.get_json(force=True)
     question = str(data.get("question", "")).strip()
     if not question:
         return jsonify({"error": "Empty question"}), 400
     if len(question) > 2000:
         return jsonify({"error": "Question too long (max 2000 characters)"}), 400
+
+    # Detect research / URL crawl commands
+    cmd = _detect_chat_command(question)
+    if cmd is not None:
+        cmd_type = cmd["type"]
+        if cmd_type == "research":
+            topic = cmd["topic"]
+            result = _execute_research(topic)
+            total = result["total_entries"]
+            if total > 0:
+                answer = (
+                    f"Researching **{topic}** — found {total} new knowledge entries "
+                    f"from {len(result['sources'])} sources. "
+                    "The model is retraining in the background. "
+                    "Ask me about this topic again in a moment!"
+                )
+            else:
+                answer = (
+                    f"I searched multiple sources for '{topic}' but couldn't find "
+                    "relevant knowledge entries. Try a more specific topic or "
+                    "provide a URL to crawl."
+                )
+            return jsonify({
+                "answer": answer,
+                "confidence": 1.0,
+                "domain": "research",
+                "suggestions": [],
+                "research": result,
+            })
+
+        elif cmd_type == "crawl":
+            urls = cmd["urls"]
+            topic = cmd["topic"]
+            result = _execute_research(topic, urls=urls)
+            total = result["total_entries"]
+            url_list = ", ".join(urls[:3])
+            if total > 0:
+                answer = (
+                    f"Crawling {url_list} — found {total} new entries. "
+                    "The model is retraining in the background. "
+                    "Ask me about this topic again shortly!"
+                )
+            else:
+                answer = (
+                    f"I crawled {url_list} but couldn't extract relevant knowledge. "
+                    "The page might not have topic-relevant content, or it may be "
+                    "behind authentication."
+                )
+            return jsonify({
+                "answer": answer,
+                "confidence": 1.0,
+                "domain": "crawl",
+                "suggestions": [],
+                "research": result,
+            })
+
+    # Regular Q&A — requires loaded model
+    if knowledge_model is None or knowledge_bow is None:
+        return jsonify({"error": "Knowledge model not loaded. Train it first."}), 503
 
     # Check response cache first
     cached = lookup_cached_response(question)
@@ -270,8 +466,11 @@ def chat():
 
     # Low confidence threshold
     if confidence < 0.15:
-        answer = ("I'm not sure about that. Try asking about networking, internet, "
-                  "intranet, or security topics. Type 'help' for examples.")
+        answer = (
+            "I'm not sure about that. Try asking about networking, internet, "
+            "intranet, or security topics. You can also say "
+            "'research <topic>' to teach me something new!"
+        )
         domain = "general"
 
     # Cache the response for future lookups
@@ -288,6 +487,38 @@ def chat():
 @app.route("/knowledge/domains", methods=["GET"])
 def knowledge_domain_list():
     return jsonify(knowledge_domains)
+
+
+@app.route("/chat/research", methods=["POST"])
+def chat_research():
+    """Dedicated endpoint: research a topic across all sources.
+
+    POST {"topic": "...", "urls": ["..."]}  →  multi-source crawl + background retrain.
+    """
+    data = request.get_json(force=True)
+    topic = str(data.get("topic", "")).strip()
+    if not topic:
+        return jsonify({"error": "Topic is required"}), 400
+    if len(topic) > 200:
+        return jsonify({"error": "Topic too long (max 200 characters)"}), 400
+
+    urls = data.get("urls", [])
+    if not isinstance(urls, list):
+        urls = []
+    # Validate URLs
+    safe_urls = [u for u in urls[:5] if isinstance(u, str) and _URL_RE.match(u)]
+
+    result = _execute_research(topic, urls=safe_urls if safe_urls else None)
+    return jsonify({
+        "status": "success" if result["total_entries"] > 0 else "no_results",
+        "topic": topic,
+        "total_entries": result["total_entries"],
+        "sources": result["sources"],
+        "message": (
+            f"Found {result['total_entries']} entries about '{topic}'. "
+            "Model retraining in background."
+        ) if result["total_entries"] > 0 else f"No results found for '{topic}'.",
+    })
 
 
 @app.route("/knowledge/stats", methods=["GET"])

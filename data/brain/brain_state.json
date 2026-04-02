@@ -1,9 +1,9 @@
 {
   "_created_at": "2026-03-31T21:30:30.566263+00:00",
-  "_updated_at": "2026-04-02T00:06:07.717505+00:00",
-  "last_scan": "2026-04-02T00:06:07.717459+00:00",
+  "_updated_at": "2026-04-02T00:14:35.712366+00:00",
+  "last_scan": "2026-04-02T00:14:35.712314+00:00",
   "manifest": {
-    "scanned_at": "2026-04-02T00:06:07.707598+00:00",
+    "scanned_at": "2026-04-02T00:14:35.702399+00:00",
     "modules": {
       "neural_network.py": {
         "lines": 442,
@@ -62,8 +62,8 @@
         "exists": true
       },
       "app.py": {
-        "lines": 411,
-        "functions": 18,
+        "lines": 642,
+        "functions": 22,
         "function_names": [
           "_train",
           "_load_knowledge_model",
@@ -71,8 +71,12 @@
           "predict",
           "train_endpoint",
           "datasets",
+          "_detect_chat_command",
+          "_execute_research",
+          "_background_retrain",
           "chat",
           "knowledge_domain_list",
+          "chat_research",
           "knowledge_stats",
           "retrain_knowledge",
           "memory_context",
@@ -183,7 +187,7 @@
         "exists": true
       },
       "ml_engine.py": {
-        "lines": 572,
+        "lines": 587,
         "functions": 14,
         "function_names": [
           "load_engine_config",
@@ -429,6 +433,11 @@
       {
         "path": "/knowledge/domains",
         "handler": "knowledge_domain_list",
+        "file": "app.py"
+      },
+      {
+        "path": "/chat/research",
+        "handler": "chat_research",
         "file": "app.py"
       },
       {
@@ -1277,10 +1286,10 @@
       "ml-watcher"
     ],
     "stats": {
-      "total_python_lines": 9405,
-      "total_functions": 311,
+      "total_python_lines": 9651,
+      "total_functions": 315,
       "total_modules": 18,
-      "total_routes": 19,
+      "total_routes": 20,
       "total_tests": 225,
       "total_test_files": 11,
       "total_data_files": 450,

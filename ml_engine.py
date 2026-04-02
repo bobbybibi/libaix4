@@ -128,9 +128,23 @@ def assess_model() -> dict:
             except Exception:
                 pass
 
-    questions = [q for q, _, _ in all_knowledge]
-    _answers = [a for _, a, _ in all_knowledge]
-    _domains_list = [d for _, _, d in all_knowledge]
+    # Only evaluate entries whose answers exist in the model's answer_map.
+    # Extra knowledge entries with unknown answers would always fail and
+    # produce a false-low accuracy score (e.g. 0%).
+    known_answers = set(answer_map.values())
+    evaluable = [(q, a, d) for q, a, d in all_knowledge if a in known_answers]
+
+    questions = [q for q, _, _ in evaluable]
+    _answers = [a for _, a, _ in evaluable]
+    _domains_list = [d for _, _, d in evaluable]
+
+    if not questions:
+        return {
+            "status": "no_evaluable",
+            "message": "No evaluable entries (answer_map is empty or no matching knowledge)",
+            "total_entries": len(all_knowledge),
+            "total_classes": len(answer_map),
+        }
 
     # Predict
     X = bow.transform(questions)
@@ -142,7 +156,7 @@ def assess_model() -> dict:
     domain_stats: dict[str, dict] = {}
     correct_total = 0
 
-    for i, (q, ans, dom) in enumerate(all_knowledge):
+    for i, (q, ans, dom) in enumerate(evaluable):
         pred_answer = answer_map.get(str(pred_classes[i]), "")
         is_correct = pred_answer == ans
         if is_correct:
@@ -183,7 +197,8 @@ def assess_model() -> dict:
         "status": "ok",
         "overall_accuracy": round(overall_accuracy, 4),
         "avg_confidence": round(avg_confidence, 4),
-        "total_entries": len(questions),
+        "evaluated_entries": len(questions),
+        "total_entries": len(all_knowledge),
         "total_classes": len(answer_map),
         "domains": domain_summary,
         "weak_domains": weak_domains,
