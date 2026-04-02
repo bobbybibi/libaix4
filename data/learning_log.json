@@ -2148,5 +2148,55 @@
       "stackexchange": 361,
       "hackernews": 106
     }
+  },
+  {
+    "timestamp": "2026-04-02T06:51:35.411963+00:00",
+    "source": "forum_crawler",
+    "topic": "Wi-Fi Security",
+    "entries": 487,
+    "source_breakdown": {
+      "stackexchange": 359,
+      "hackernews": 128
+    }
+  },
+  {
+    "timestamp": "2026-04-02T06:54:32.691513+00:00",
+    "source": "forum_crawler",
+    "topic": "Network Troubleshooting",
+    "entries": 635,
+    "source_breakdown": {
+      "stackexchange": 506,
+      "hackernews": 129
+    }
+  },
+  {
+    "timestamp": "2026-04-02T06:57:22.668602+00:00",
+    "source": "forum_crawler",
+    "topic": "Firewall Configuration",
+    "entries": 522,
+    "source_breakdown": {
+      "stackexchange": 401,
+      "hackernews": 121
+    }
+  },
+  {
+    "timestamp": "2026-04-02T07:00:17.764544+00:00",
+    "source": "forum_crawler",
+    "topic": "VPN Setup",
+    "entries": 563,
+    "source_breakdown": {
+      "stackexchange": 421,
+      "hackernews": 142
+    }
+  },
+  {
+    "timestamp": "2026-04-02T07:03:11.359811+00:00",
+    "source": "forum_crawler",
+    "topic": "Network Monitoring",
+    "entries": 467,
+    "source_breakdown": {
+      "stackexchange": 361,
+      "hackernews": 106
+    }
   }
 ]
