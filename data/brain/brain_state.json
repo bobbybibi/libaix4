@@ -1,9 +1,9 @@
 {
   "_created_at": "2026-03-31T21:30:30.566263+00:00",
-  "_updated_at": "2026-04-03T17:01:18.543302+00:00",
-  "last_scan": "2026-04-03T17:01:18.543255+00:00",
+  "_updated_at": "2026-04-03T17:12:40.022643+00:00",
+  "last_scan": "2026-04-03T17:12:40.022575+00:00",
   "manifest": {
-    "scanned_at": "2026-04-03T17:01:18.528315+00:00",
+    "scanned_at": "2026-04-03T17:12:39.997422+00:00",
     "modules": {
       "neural_network.py": {
         "lines": 442,
@@ -826,6 +826,7 @@
       }
     },
     "data_files": [
+      "data/anon_config.json",
       "data/boil_config.json",
       "data/boil_log.json",
       "data/boil_state.json",
@@ -1624,6 +1625,7 @@
       "templates/index.html"
     ],
     "configs": [
+      "anon_config.json",
       "boil_config.json",
       "boil_log.json",
       "boil_state.json",
@@ -1653,7 +1655,7 @@
       "total_routes": 20,
       "total_tests": 257,
       "total_test_files": 12,
-      "total_data_files": 771,
+      "total_data_files": 772,
       "total_model_files": 18,
       "total_templates": 3,
       "total_agents": 7

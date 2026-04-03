@@ -1,0 +1,17 @@
+{
+  "delay_min": 1.0,
+  "delay_max": 5.0,
+  "jitter": 0.5,
+  "referrer_policy": "none",
+  "respect_robots_txt": true,
+  "timeout": 20,
+  "max_retries": 2,
+  "retry_backoff": 2.0,
+  "rate_limit_per_domain": 2.0,
+  "strip_cookies": true,
+  "strip_tracking_params": true,
+  "dns_over_https": false,
+  "doh_server": "https://cloudflare-dns.com/dns-query",
+  "proxies": [],
+  "created_at": "2026-04-03T17:08:20.834745+00:00"
+}

@@ -305,8 +305,80 @@
       "priority": "medium",
       "enabled": false,
       "added_at": "2026-04-03T17:01:23.114487+00:00"
+    },
+    {
+      "name": "test_topic_3d48ef4a",
+      "priority": "low",
+      "enabled": true,
+      "added_at": "2026-04-03T17:08:47.023254+00:00"
+    },
+    {
+      "name": "dup_test_7a9a582a",
+      "priority": "low",
+      "enabled": true,
+      "added_at": "2026-04-03T17:08:47.112977+00:00"
+    },
+    {
+      "name": "toggle_test_44d2e3ad",
+      "priority": "medium",
+      "enabled": false,
+      "added_at": "2026-04-03T17:08:47.204580+00:00"
+    },
+    {
+      "name": "test_topic_13bd463a",
+      "priority": "low",
+      "enabled": true,
+      "added_at": "2026-04-03T17:10:21.178865+00:00"
+    },
+    {
+      "name": "dup_test_69417c22",
+      "priority": "low",
+      "enabled": true,
+      "added_at": "2026-04-03T17:10:21.267837+00:00"
+    },
+    {
+      "name": "toggle_test_482c0387",
+      "priority": "medium",
+      "enabled": false,
+      "added_at": "2026-04-03T17:10:21.357323+00:00"
+    },
+    {
+      "name": "test_topic_549b4b1f",
+      "priority": "low",
+      "enabled": true,
+      "added_at": "2026-04-03T17:10:42.237539+00:00"
+    },
+    {
+      "name": "dup_test_614ca3e4",
+      "priority": "low",
+      "enabled": true,
+      "added_at": "2026-04-03T17:10:42.368759+00:00"
+    },
+    {
+      "name": "toggle_test_d460f97e",
+      "priority": "medium",
+      "enabled": false,
+      "added_at": "2026-04-03T17:10:42.502381+00:00"
+    },
+    {
+      "name": "test_topic_cbd03a34",
+      "priority": "low",
+      "enabled": true,
+      "added_at": "2026-04-03T17:12:47.350543+00:00"
+    },
+    {
+      "name": "dup_test_cb6e26b0",
+      "priority": "low",
+      "enabled": true,
+      "added_at": "2026-04-03T17:12:47.484521+00:00"
+    },
+    {
+      "name": "toggle_test_38fe1491",
+      "priority": "medium",
+      "enabled": false,
+      "added_at": "2026-04-03T17:12:47.615681+00:00"
     }
   ],
   "auto_discover": true,
-  "last_updated": "2026-04-03T17:01:23.115690+00:00"
+  "last_updated": "2026-04-03T17:12:47.617229+00:00"
 }
