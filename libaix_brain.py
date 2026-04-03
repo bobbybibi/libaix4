@@ -1021,7 +1021,7 @@ def recommend_knowledge_gaps() -> dict:
     topics that could benefit from more Q&A pairs.
     """
     try:
-        from knowledge_base import KNOWLEDGE, get_domains
+        from knowledge_base import KNOWLEDGE
     except ImportError:
         return {"error": "knowledge_base not available", "recommendations": []}
 
@@ -1106,7 +1106,6 @@ def analyse_impact(target_module: str) -> dict:
     tests that cover the module, and routes it serves.
     """
     dep_graph = build_dependency_graph()
-    graph = dep_graph["graph"]
     reverse = dep_graph.get("reverse_graph", {})
 
     # Direct dependents

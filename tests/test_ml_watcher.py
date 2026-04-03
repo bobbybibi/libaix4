@@ -17,6 +17,8 @@ def _isolate_watcher(tmp_path, monkeypatch):
     monkeypatch.setattr("ml_watcher.CHANGE_LOG_PATH", watcher_dir / "change_log.json")
     monkeypatch.setattr("ml_watcher.KNOWLEDGE_INDEX_PATH", watcher_dir / "knowledge_index.json")
     monkeypatch.setattr("ml_watcher.ALERT_PATH", watcher_dir / "alerts.json")
+    monkeypatch.setattr("ml_watcher.GROWTH_LOG_PATH", watcher_dir / "growth_log.json")
+    monkeypatch.setattr("ml_watcher.CONFIG_BASELINE_PATH", watcher_dir / "config_baseline.json")
 
     # Also isolate project_memory
     mem_dir = tmp_path / "memory"
@@ -239,3 +241,169 @@ class TestHelpers:
         from ml_watcher import _file_info
         info = _file_info(Path("nonexistent.xyz"))
         assert info["hash"] == "missing"
+
+
+# ── Knowledge growth tracking ───────────────────────────────────────
+
+
+class TestKnowledgeGrowth:
+    def test_track_growth_returns_structure(self):
+        from ml_watcher import track_knowledge_growth
+        result = track_knowledge_growth()
+        assert "current_total" in result
+        assert "domain_count" in result
+        assert "velocity" in result
+        assert "average_growth" in result
+        assert "data_points" in result
+        assert "history" in result
+        assert result["data_points"] >= 1
+
+    def test_growth_accumulates(self):
+        from ml_watcher import track_knowledge_growth
+        r1 = track_knowledge_growth()
+        r2 = track_knowledge_growth()
+        assert r2["data_points"] == r1["data_points"] + 1
+
+    def test_growth_history_limited(self):
+        from ml_watcher import track_knowledge_growth
+        track_knowledge_growth()
+        result = track_knowledge_growth()
+        assert len(result["history"]) <= 10
+
+    def test_velocity_calculation(self):
+        from ml_watcher import track_knowledge_growth
+        track_knowledge_growth()
+        result = track_knowledge_growth()
+        # Same knowledge base, so velocity should be 0
+        assert result["velocity"] == 0
+
+
+# ── Config drift detection ──────────────────────────────────────────
+
+
+class TestConfigDrift:
+    def test_detect_drift_returns_structure(self):
+        from ml_watcher import detect_config_drift
+        result = detect_config_drift()
+        assert "added" in result
+        assert "removed" in result
+        assert "modified" in result
+        assert "total_drift" in result
+        assert "has_drift" in result
+        assert "current_configs" in result
+
+    def test_save_baseline(self):
+        from ml_watcher import save_config_baseline
+        baseline = save_config_baseline()
+        assert "saved_at" in baseline
+        assert "configs" in baseline
+
+    def test_no_drift_after_baseline(self):
+        from ml_watcher import detect_config_drift, save_config_baseline
+        save_config_baseline()
+        result = detect_config_drift()
+        assert result["modified"] == []
+        assert result["added"] == []
+        assert result["removed"] == []
+
+    def test_drift_detected_after_change(self, tmp_path, monkeypatch):
+        import json as _json
+        from ml_watcher import detect_config_drift, save_config_baseline
+        save_config_baseline()
+        # Simulate a config change by creating a new file in data/
+        config_path = Path("data") / "test_drift_detect.json"
+        config_path.write_text(_json.dumps({"test": True}), encoding="utf-8")
+        try:
+            result = detect_config_drift()
+            assert "test_drift_detect.json" in result["added"]
+            assert result["has_drift"] is True
+        finally:
+            config_path.unlink(missing_ok=True)
+
+
+# ── Disk usage ──────────────────────────────────────────────────────
+
+
+class TestDiskUsage:
+    def test_measure_returns_structure(self):
+        from ml_watcher import measure_disk_usage
+        result = measure_disk_usage()
+        assert "directories" in result
+        assert "total_bytes" in result
+        assert "total_formatted" in result
+        assert "data" in result["directories"]
+        assert "models" in result["directories"]
+        assert "tests" in result["directories"]
+
+    def test_directory_entries_have_bytes(self):
+        from ml_watcher import measure_disk_usage
+        result = measure_disk_usage()
+        for name, info in result["directories"].items():
+            assert "bytes" in info
+            assert "formatted" in info
+            assert info["bytes"] >= 0
+
+    def test_total_is_sum(self):
+        from ml_watcher import measure_disk_usage
+        result = measure_disk_usage()
+        expected = sum(d["bytes"] for d in result["directories"].values())
+        assert result["total_bytes"] == expected
+
+
+# ── Alert summary ───────────────────────────────────────────────────
+
+
+class TestAlertSummary:
+    def test_empty_summary(self):
+        from ml_watcher import get_alert_summary
+        summary = get_alert_summary()
+        assert summary["total_alerts"] == 0
+        assert summary["unacknowledged"] == 0
+        assert summary["by_level"] == {}
+        assert summary["by_category"] == {}
+
+    def test_summary_with_alerts(self):
+        from ml_watcher import add_alert, get_alert_summary
+        add_alert("Info 1", level="info", category="test")
+        add_alert("Warning 1", level="warning", category="model")
+        add_alert("Info 2", level="info", category="test")
+        summary = get_alert_summary()
+        assert summary["total_alerts"] == 3
+        assert summary["unacknowledged"] == 3
+        assert summary["by_level"]["info"] == 2
+        assert summary["by_level"]["warning"] == 1
+        assert summary["by_category"]["test"] == 2
+        assert summary["by_category"]["model"] == 1
+
+    def test_summary_recent_limited(self):
+        from ml_watcher import add_alert, get_alert_summary
+        for i in range(10):
+            add_alert(f"Alert {i}")
+        summary = get_alert_summary()
+        assert len(summary["recent"]) <= 5
+
+
+class TestClearAlerts:
+    def test_clear_acknowledged(self):
+        from ml_watcher import (
+            acknowledge_alert,
+            add_alert,
+            clear_acknowledged_alerts,
+            get_alerts,
+        )
+        add_alert("Keep me")
+        a2 = add_alert("Clear me")
+        acknowledge_alert(a2["id"])
+        result = clear_acknowledged_alerts()
+        assert result["removed"] == 1
+        assert result["remaining"] == 1
+        remaining = get_alerts()
+        assert len(remaining) == 1
+        assert remaining[0]["message"] == "Keep me"
+
+    def test_clear_when_none_acknowledged(self):
+        from ml_watcher import add_alert, clear_acknowledged_alerts
+        add_alert("Unacknowledged")
+        result = clear_acknowledged_alerts()
+        assert result["removed"] == 0
+        assert result["remaining"] == 1

@@ -297,3 +297,285 @@ class TestHelpers:
         names = _extract_test_names(Path("tests/test_neural_network.py"))
         assert len(names) > 0
         assert all(n.startswith("test_") for n in names)
+
+
+# ── Dependency graph ─────────────────────────────────────────────────
+
+
+class TestDependencyGraph:
+    def test_build_graph_structure(self):
+        from libaix_brain import build_dependency_graph
+        result = build_dependency_graph()
+        assert "graph" in result
+        assert "reverse_graph" in result
+        assert "total_modules" in result
+        assert "total_edges" in result
+        assert "circular_dependencies" in result
+        assert "leaf_modules" in result
+        assert result["total_modules"] > 0
+
+    def test_graph_has_known_dependencies(self):
+        from libaix_brain import build_dependency_graph
+        result = build_dependency_graph()
+        graph = result["graph"]
+        # app.py imports many modules
+        assert "app.py" in graph
+        assert len(graph["app.py"]) > 0
+
+    def test_reverse_graph_consistency(self):
+        from libaix_brain import build_dependency_graph
+        result = build_dependency_graph()
+        graph = result["graph"]
+        reverse = result.get("reverse_graph", {})
+        # Every edge in reverse should have corresponding forward edge
+        for dep, dependents in reverse.items():
+            for d in dependents:
+                assert dep in graph.get(d, []), f"{d} should depend on {dep}"
+
+    def test_leaf_modules_have_no_deps(self):
+        from libaix_brain import build_dependency_graph
+        result = build_dependency_graph()
+        graph = result["graph"]
+        for leaf in result["leaf_modules"]:
+            assert graph.get(leaf, []) == []
+
+    def test_most_depended_on_sorted(self):
+        from libaix_brain import build_dependency_graph
+        result = build_dependency_graph()
+        counts = [m["depended_by"] for m in result["most_depended_on"]]
+        assert counts == sorted(counts, reverse=True)
+
+    def test_graph_persists_summary(self):
+        from libaix_brain import build_dependency_graph, load_brain_state
+        build_dependency_graph()
+        state = load_brain_state()
+        assert "dependency_graph" in state
+        assert "total_edges" in state["dependency_graph"]
+
+
+class TestExtractImports:
+    def test_extract_imports_from_app(self):
+        from libaix_brain import _extract_imports
+        imports = _extract_imports(Path("app.py"))
+        assert len(imports) > 0
+        # app.py imports knowledge_base, neural_network, etc.
+        assert "knowledge_base.py" in imports
+
+    def test_extract_imports_missing_file(self):
+        from libaix_brain import _extract_imports
+        assert _extract_imports(Path("nonexistent.py")) == []
+
+
+# ── Module complexity ────────────────────────────────────────────────
+
+
+class TestModuleComplexity:
+    def test_score_returns_structure(self):
+        from libaix_brain import score_module_complexity
+        result = score_module_complexity()
+        assert "modules" in result
+        assert "total_complexity" in result
+        assert "average_complexity" in result
+        assert "most_complex" in result
+        assert "simplest" in result
+        assert len(result["modules"]) > 0
+
+    def test_modules_sorted_by_complexity(self):
+        from libaix_brain import score_module_complexity
+        result = score_module_complexity()
+        scores = [m["complexity_score"] for m in result["modules"]]
+        assert scores == sorted(scores, reverse=True)
+
+    def test_module_entry_has_expected_fields(self):
+        from libaix_brain import score_module_complexity
+        result = score_module_complexity()
+        mod = result["modules"][0]
+        assert "module" in mod
+        assert "lines" in mod
+        assert "functions" in mod
+        assert "classes" in mod
+        assert "branches" in mod
+        assert "complexity_score" in mod
+
+    def test_complexity_non_negative(self):
+        from libaix_brain import score_module_complexity
+        result = score_module_complexity()
+        for mod in result["modules"]:
+            assert mod["complexity_score"] >= 0
+
+    def test_count_classes(self):
+        from libaix_brain import _count_classes
+        # neural_network.py has at least the NeuralNetwork class
+        assert _count_classes(Path("neural_network.py")) >= 1
+
+    def test_count_branches(self):
+        from libaix_brain import _count_branches
+        assert _count_branches(Path("app.py")) > 0
+        assert _count_branches(Path("nonexistent.py")) == 0
+
+
+# ── Code quality ─────────────────────────────────────────────────────
+
+
+class TestCodeQuality:
+    def test_measure_returns_structure(self):
+        from libaix_brain import measure_code_quality
+        result = measure_code_quality()
+        assert "modules" in result
+        assert "overall_docstring_coverage" in result
+        assert "total_todos" in result
+        assert "total_functions" in result
+        assert "total_documented" in result
+
+    def test_docstring_pct_in_range(self):
+        from libaix_brain import measure_code_quality
+        result = measure_code_quality()
+        assert 0 <= result["overall_docstring_coverage"] <= 100
+
+    def test_each_module_has_metrics(self):
+        from libaix_brain import measure_code_quality
+        result = measure_code_quality()
+        for mod in result["modules"]:
+            assert "module" in mod
+            assert "lines" in mod
+            assert "docstring_pct" in mod
+            assert "todos" in mod
+            assert 0 <= mod["docstring_pct"] <= 100
+
+    def test_count_todos(self):
+        from libaix_brain import _count_todos
+        # Missing file returns 0
+        assert _count_todos(Path("nonexistent.py")) == 0
+        # Any file should return >= 0
+        assert _count_todos(Path("app.py")) >= 0
+
+    def test_has_docstrings(self):
+        from libaix_brain import _has_docstrings
+        documented, total = _has_docstrings(Path("libaix_brain.py"))
+        assert total > 0
+        assert documented >= 0
+        assert documented <= total
+
+
+# ── Knowledge gap recommendations ───────────────────────────────────
+
+
+class TestKnowledgeGaps:
+    def test_recommend_returns_structure(self):
+        from libaix_brain import recommend_knowledge_gaps
+        result = recommend_knowledge_gaps()
+        assert "total_entries" in result
+        assert "domain_count" in result
+        assert "domain_distribution" in result
+        assert "recommendations" in result
+        assert "recommendation_count" in result
+
+    def test_recommendations_are_actionable(self):
+        from libaix_brain import recommend_knowledge_gaps
+        result = recommend_knowledge_gaps()
+        for rec in result["recommendations"]:
+            assert "type" in rec
+            assert "domain" in rec
+            assert "reason" in rec
+            assert "priority" in rec
+            assert rec["type"] in ("expand_domain", "new_domain")
+            assert rec["priority"] in ("high", "medium", "low")
+
+    def test_domain_distribution_matches_total(self):
+        from libaix_brain import recommend_knowledge_gaps
+        result = recommend_knowledge_gaps()
+        dist_total = sum(result["domain_distribution"].values())
+        assert dist_total == result["total_entries"]
+
+
+# ── Impact analysis ──────────────────────────────────────────────────
+
+
+class TestImpactAnalysis:
+    def test_analyse_app_impact(self):
+        from libaix_brain import analyse_impact, scan_project
+        scan_project()  # Need manifest for routes
+        result = analyse_impact("neural_network.py")
+        assert result["target"] == "neural_network.py"
+        assert "direct_dependents" in result
+        assert "transitive_dependents" in result
+        assert "affected_tests" in result
+        assert "risk_level" in result
+        assert result["risk_level"] in ("low", "medium", "high")
+
+    def test_impact_unknown_module(self):
+        from libaix_brain import analyse_impact
+        result = analyse_impact("nonexistent.py")
+        assert result["target"] == "nonexistent.py"
+        assert result["direct_dependents"] == []
+
+    def test_impact_has_analysis_note(self):
+        from libaix_brain import analyse_impact
+        result = analyse_impact("knowledge_base.py")
+        assert "analysis_note" in result
+        assert "knowledge_base.py" in result["analysis_note"]
+
+
+# ── Stale data detection ────────────────────────────────────────────
+
+
+class TestStaleData:
+    def test_detect_returns_structure(self):
+        from libaix_brain import detect_stale_data
+        result = detect_stale_data(max_age_days=30)
+        assert "max_age_days" in result
+        assert "stale_files" in result
+        assert "stale_count" in result
+        assert "total_stale_bytes" in result
+        assert result["max_age_days"] == 30
+
+    def test_all_stale_with_zero_days(self):
+        from libaix_brain import detect_stale_data
+        # 0 days means everything is stale (modified before "now")
+        result = detect_stale_data(max_age_days=0)
+        assert isinstance(result["stale_files"], list)
+        # With max_age_days=0, entries older than 0 days (i.e., all) are stale
+        for sf in result["stale_files"]:
+            assert "path" in sf
+            assert "age_days" in sf
+            assert "category" in sf
+
+    def test_stale_sorted_by_age(self):
+        from libaix_brain import detect_stale_data
+        result = detect_stale_data(max_age_days=0)
+        ages = [sf["age_days"] for sf in result["stale_files"]]
+        assert ages == sorted(ages, reverse=True)
+
+
+# ── Module summary ──────────────────────────────────────────────────
+
+
+class TestModuleSummary:
+    def test_summarize_existing_module(self):
+        from libaix_brain import summarize_module
+        result = summarize_module("app.py")
+        assert result["exists"] is True
+        assert result["module"] == "app.py"
+        assert result["lines"] > 0
+        assert result["functions"] > 0
+        assert len(result["routes"]) > 0
+        assert result["complexity_score"] > 0
+
+    def test_summarize_missing_module(self):
+        from libaix_brain import summarize_module
+        result = summarize_module("nonexistent.py")
+        assert result["exists"] is False
+        assert "error" in result
+
+    def test_summarize_has_test_info(self):
+        from libaix_brain import summarize_module
+        result = summarize_module("neural_network.py")
+        assert result["exists"] is True
+        assert result["test_file"] is not None
+        assert result["test_count"] > 0
+
+    def test_summarize_has_imports(self):
+        from libaix_brain import summarize_module
+        result = summarize_module("app.py")
+        assert isinstance(result["local_imports"], list)
+        assert len(result["local_imports"]) > 0
