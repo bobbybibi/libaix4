@@ -467,8 +467,62 @@
       "priority": "medium",
       "enabled": false,
       "added_at": "2026-04-03T18:21:26.014250+00:00"
+    },
+    {
+      "name": "test_topic_dac9c6a6",
+      "priority": "low",
+      "enabled": true,
+      "added_at": "2026-04-03T22:11:33.218611+00:00"
+    },
+    {
+      "name": "dup_test_afa67f27",
+      "priority": "low",
+      "enabled": true,
+      "added_at": "2026-04-03T22:11:33.502473+00:00"
+    },
+    {
+      "name": "toggle_test_3e5510aa",
+      "priority": "medium",
+      "enabled": false,
+      "added_at": "2026-04-03T22:11:33.743246+00:00"
+    },
+    {
+      "name": "test_topic_deed8841",
+      "priority": "low",
+      "enabled": true,
+      "added_at": "2026-04-03T22:13:40.686554+00:00"
+    },
+    {
+      "name": "dup_test_e31a9dd2",
+      "priority": "low",
+      "enabled": true,
+      "added_at": "2026-04-03T22:13:40.877253+00:00"
+    },
+    {
+      "name": "toggle_test_25bd0e8c",
+      "priority": "medium",
+      "enabled": false,
+      "added_at": "2026-04-03T22:13:41.102204+00:00"
+    },
+    {
+      "name": "test_topic_63b55647",
+      "priority": "low",
+      "enabled": true,
+      "added_at": "2026-04-03T22:15:27.340465+00:00"
+    },
+    {
+      "name": "dup_test_0d9d5cbb",
+      "priority": "low",
+      "enabled": true,
+      "added_at": "2026-04-03T22:15:27.629287+00:00"
+    },
+    {
+      "name": "toggle_test_fc04d9fa",
+      "priority": "medium",
+      "enabled": false,
+      "added_at": "2026-04-03T22:15:27.949339+00:00"
     }
   ],
   "auto_discover": true,
-  "last_updated": "2026-04-03T18:21:26.046578+00:00"
+  "last_updated": "2026-04-03T22:15:27.991721+00:00"
 }
