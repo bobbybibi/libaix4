@@ -1,9 +1,9 @@
 {
   "_created_at": "2026-03-31T21:30:30.566263+00:00",
-  "_updated_at": "2026-04-03T18:06:12.323891+00:00",
-  "last_scan": "2026-04-03T18:06:12.323837+00:00",
+  "_updated_at": "2026-04-03T18:29:27.868962+00:00",
+  "last_scan": "2026-04-03T18:29:27.868913+00:00",
   "manifest": {
-    "scanned_at": "2026-04-03T18:06:12.308671+00:00",
+    "scanned_at": "2026-04-03T18:29:27.853623+00:00",
     "modules": {
       "neural_network.py": {
         "lines": 442,
@@ -673,6 +673,40 @@
           "test_digest_stats"
         ]
       },
+      "test_anon_crawler.py": {
+        "count": 29,
+        "names": [
+          "test_default_config_has_expected_keys",
+          "test_load_config_returns_defaults_when_no_file",
+          "test_save_and_load_config_roundtrip",
+          "test_load_config_handles_corrupt_json",
+          "test_blocks_localhost",
+          "test_blocks_127_0_0_1",
+          "test_blocks_ipv6_loopback",
+          "test_blocks_169_254_metadata",
+          "test_blocks_private_10_x",
+          "test_blocks_private_192_168",
+          "test_blocks_file_scheme",
+          "test_blocks_numeric_only_host",
+          "test_allows_valid_public_url",
+          "test_allows_https_wikipedia",
+          "test_pool_has_many_entries",
+          "test_all_entries_are_strings",
+          "test_no_duplicates",
+          "test_build_random_headers_returns_dict",
+          "test_headers_change_across_calls",
+          "test_spoofed_referrer_policy",
+          "test_add_valid_proxy",
+          "test_add_duplicate_proxy_returns_false",
+          "test_add_invalid_scheme_returns_false",
+          "test_remove_proxy",
+          "test_remove_nonexistent_proxy",
+          "test_strip_tracking_params_removes_utm",
+          "test_strip_tracking_params_removes_fbclid",
+          "test_strip_tracking_params_preserves_clean_url",
+          "test_get_anon_stats_returns_dict"
+        ]
+      },
       "test_app.py": {
         "count": 32,
         "names": [
@@ -708,6 +742,32 @@
           "test_index_has_aria_attributes",
           "test_memory_context",
           "test_memory_performance"
+        ]
+      },
+      "test_boil_engine.py": {
+        "count": 21,
+        "names": [
+          "test_default_config_has_expected_keys",
+          "test_default_config_enabled_true",
+          "test_load_config_creates_default_when_missing",
+          "test_save_and_load_config_roundtrip",
+          "test_load_config_handles_corrupt_json",
+          "test_default_state_has_expected_keys",
+          "test_get_boil_state_returns_default",
+          "test_save_and_get_state_roundtrip",
+          "test_get_improvement_log_empty_when_no_file",
+          "test_append_and_get_log",
+          "test_log_caps_at_500",
+          "test_mechanism_names_has_45_entries",
+          "test_all_mechanism_names_are_strings",
+          "test_run_boil_tick_returns_dict",
+          "test_run_boil_tick_increments_state",
+          "test_run_boil_tick_writes_log",
+          "test_is_boiling_false_by_default",
+          "test_start_and_stop_background",
+          "test_start_when_already_running_returns_false",
+          "test_stop_when_not_running_returns_false",
+          "test_result_helper"
         ]
       },
       "test_chat_research.py": {
@@ -757,6 +817,45 @@
           "test_preserves_original_fields",
           "test_returns_dict",
           "test_has_expected_keys"
+        ]
+      },
+      "test_form_filler.py": {
+        "count": 34,
+        "names": [
+          "test_extract_single_form",
+          "test_form_action_resolved",
+          "test_form_method",
+          "test_form_has_fields",
+          "test_textarea_detected",
+          "test_select_detected",
+          "test_required_field",
+          "test_csrf_field_detected",
+          "test_extract_multiple_forms",
+          "test_empty_html_returns_empty",
+          "test_email_by_type",
+          "test_email_by_name",
+          "test_phone_by_type",
+          "test_password_by_type",
+          "test_name_by_name",
+          "test_address_by_name",
+          "test_date_by_type",
+          "test_fallback_to_type",
+          "test_simple_kv",
+          "test_quoted_values",
+          "test_single_quoted",
+          "test_empty_prompt",
+          "test_create_profile",
+          "test_save_and_load_profile",
+          "test_overwrite_profile_by_name",
+          "test_save_and_load_template",
+          "test_load_templates_empty",
+          "test_history_empty_by_default",
+          "test_extract_validation_rules",
+          "test_email_type_captured",
+          "test_extract_csrf_token_from_html",
+          "test_no_csrf_in_plain_form",
+          "test_fill_with_values",
+          "test_fill_with_profile_fallback"
         ]
       },
       "test_knowledge_base.py": {
@@ -884,6 +983,42 @@
           "test_multiclass_convergence"
         ]
       },
+      "test_new_endpoints.py": {
+        "count": 31,
+        "names": [
+          "test_boil_status",
+          "test_boil_start",
+          "test_boil_stop",
+          "test_boil_tick",
+          "test_boil_log",
+          "test_boil_log_with_n_param",
+          "test_boil_config_get",
+          "test_boil_config_post",
+          "test_reason_post",
+          "test_reason_missing_question",
+          "test_reason_empty_question",
+          "test_reason_stats",
+          "test_reason_rebuild",
+          "test_anon_stats",
+          "test_anon_crawl_missing_url",
+          "test_anon_crawl_empty_url",
+          "test_anon_crawl_unsafe_url",
+          "test_anon_config_get",
+          "test_anon_config_post",
+          "test_forms_extract_with_html",
+          "test_forms_extract_empty",
+          "test_forms_fill_with_values",
+          "test_forms_fill_with_prompt",
+          "test_forms_fill_no_values",
+          "test_forms_profiles_get_empty",
+          "test_forms_profiles_create",
+          "test_forms_profiles_create_missing_name",
+          "test_forms_profiles_list_after_create",
+          "test_forms_templates_empty",
+          "test_forms_history_empty",
+          "test_stats_all"
+        ]
+      },
       "test_project_memory.py": {
         "count": 25,
         "names": [
@@ -912,6 +1047,41 @@
           "test_logs_performance",
           "test_builds_context",
           "test_includes_remembered_facts"
+        ]
+      },
+      "test_reasoning_engine.py": {
+        "count": 30,
+        "names": [
+          "test_create_rule",
+          "test_to_dict",
+          "test_from_dict",
+          "test_roundtrip_dict",
+          "test_create_node",
+          "test_to_dict",
+          "test_from_dict",
+          "test_cosine_similarity_identical_vectors",
+          "test_cosine_similarity_orthogonal",
+          "test_cosine_similarity_zero_vector",
+          "test_extract_capitalized",
+          "test_extract_definitions",
+          "test_token_overlap_identical",
+          "test_token_overlap_empty",
+          "test_token_overlap_disjoint",
+          "test_engine_initialises",
+          "test_build_from_knowledge",
+          "test_get_stats",
+          "test_deduce_returns_list",
+          "test_deduce_empty_premises",
+          "test_deduce_results_have_expected_keys",
+          "test_find_analogies_returns_list",
+          "test_find_analogies_unknown_concept",
+          "test_detect_contradictions_returns_list",
+          "test_synthesize_returns_dict",
+          "test_generalize_with_examples",
+          "test_generalize_insufficient_examples",
+          "test_save_state_creates_file",
+          "test_load_state_restores_rules_and_concepts",
+          "test_reason_about_returns_dict"
         ]
       },
       "test_vectorizer.py": {
@@ -1705,7 +1875,9 @@
       "data/memory/project_memory.json",
       "data/memory/response_cache.json",
       "data/ml_engine_config.json",
-      "data/ml_engine_history.json"
+      "data/ml_engine_history.json",
+      "data/reasoning_config.json",
+      "data/reasoning_state.json"
     ],
     "model_files": [
       "models/answer_map.json",
@@ -1745,7 +1917,9 @@
       "learning_log.json",
       "learning_topics.json",
       "ml_engine_config.json",
-      "ml_engine_history.json"
+      "ml_engine_history.json",
+      "reasoning_config.json",
+      "reasoning_state.json"
     ],
     "agents": [
       "developer",
@@ -1761,9 +1935,9 @@
       "total_functions": 335,
       "total_modules": 18,
       "total_routes": 40,
-      "total_tests": 257,
-      "total_test_files": 12,
-      "total_data_files": 772,
+      "total_tests": 402,
+      "total_test_files": 17,
+      "total_data_files": 774,
       "total_model_files": 18,
       "total_templates": 3,
       "total_agents": 7

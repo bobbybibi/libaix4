@@ -27,7 +27,7 @@ from typing import Any
 
 import numpy as np
 
-from knowledge_base import KNOWLEDGE, get_domains
+from knowledge_base import KNOWLEDGE
 from vectorizer import tokenize, BagOfWords
 
 # ── Paths ────────────────────────────────────────────────────────────

@@ -18,7 +18,6 @@ Provides anonymous crawling capabilities with:
 
 from __future__ import annotations
 
-import hashlib
 import http.cookiejar
 import json
 import random

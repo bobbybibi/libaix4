@@ -9,24 +9,24 @@
   "synthesis_min_overlap": 2,
   "generalize_min_examples": 2,
   "cache_ttl_seconds": 300,
-  "last_build": "2026-04-03T18:06:13.086392+00:00",
-  "build_count": 2,
+  "last_build": "2026-04-03T18:29:28.255792+00:00",
+  "build_count": 6,
   "stats": {
     "rules_count": 96,
     "concepts_count": 831,
     "entries_count": 197,
     "domains": [
-      "wifi",
       "security",
-      "wifi_policy",
-      "troubleshooting",
-      "intranet",
-      "internet",
       "wifi_security",
       "networking",
+      "wifi_policy",
+      "troubleshooting",
+      "internet",
+      "wifi",
+      "intranet",
       "general"
     ],
-    "build_time_seconds": 0.375,
-    "built_at": "2026-04-03T18:06:13.086392+00:00"
+    "build_time_seconds": 0.358,
+    "built_at": "2026-04-03T18:29:28.255792+00:00"
   }
 }
