@@ -140,6 +140,13 @@ class TestBrainImpact:
         assert resp.status_code == 200
         data = resp.get_json()
         assert data["direct_dependents"] == []
+        assert "error" in data
+
+    def test_impact_blocks_path_traversal(self, client):
+        resp = client.get("/brain/impact/..%2F..%2Fetc%2Fpasswd")
+        assert resp.status_code == 200
+        data = resp.get_json()
+        assert "error" in data
 
 
 class TestBrainStale:
@@ -171,6 +178,13 @@ class TestBrainModuleSummary:
         assert resp.status_code == 200
         data = resp.get_json()
         assert data["exists"] is False
+
+    def test_summarize_blocks_traversal(self, client):
+        resp = client.get("/brain/module/..%2F..%2Fetc%2Fpasswd")
+        assert resp.status_code == 200
+        data = resp.get_json()
+        assert data["exists"] is False
+        assert "error" in data
 
 
 # ── Watcher endpoint tests ───────────────────────────────────────────

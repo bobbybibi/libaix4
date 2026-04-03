@@ -298,6 +298,21 @@ class TestHelpers:
         assert len(names) > 0
         assert all(n.startswith("test_") for n in names)
 
+    def test_validate_module_name_known(self):
+        from libaix_brain import _validate_module_name
+        assert _validate_module_name("app.py") is True
+        assert _validate_module_name("neural_network.py") is True
+
+    def test_validate_module_name_unknown(self):
+        from libaix_brain import _validate_module_name
+        assert _validate_module_name("nonexistent.py") is False
+
+    def test_validate_module_name_traversal(self):
+        from libaix_brain import _validate_module_name
+        assert _validate_module_name("../../etc/passwd") is False
+        assert _validate_module_name("../app.py") is False
+        assert _validate_module_name("app/../../etc/passwd") is False
+
 
 # ── Dependency graph ─────────────────────────────────────────────────
 
@@ -508,6 +523,13 @@ class TestImpactAnalysis:
         result = analyse_impact("nonexistent.py")
         assert result["target"] == "nonexistent.py"
         assert result["direct_dependents"] == []
+        assert "error" in result
+
+    def test_impact_blocks_path_traversal(self):
+        from libaix_brain import analyse_impact
+        result = analyse_impact("../../etc/passwd")
+        assert "error" in result
+        assert result["direct_dependents"] == []
 
     def test_impact_has_analysis_note(self):
         from libaix_brain import analyse_impact
@@ -564,6 +586,12 @@ class TestModuleSummary:
     def test_summarize_missing_module(self):
         from libaix_brain import summarize_module
         result = summarize_module("nonexistent.py")
+        assert result["exists"] is False
+        assert "error" in result
+
+    def test_summarize_blocks_path_traversal(self):
+        from libaix_brain import summarize_module
+        result = summarize_module("../../../etc/passwd")
         assert result["exists"] is False
         assert "error" in result
 

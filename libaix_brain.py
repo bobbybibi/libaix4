@@ -92,6 +92,15 @@ def _now_iso() -> str:
     return datetime.now(timezone.utc).isoformat()
 
 
+def _validate_module_name(name: str) -> bool:
+    """Return True if *name* is a safe, known module name (no path traversal)."""
+    # Block path separators and traversal
+    if "/" in name or "\\" in name or ".." in name:
+        return False
+    # Must be a known module
+    return name in CORE_MODULES
+
+
 def _count_lines(path: Path) -> int:
     """Count lines in a text file, returning 0 on error."""
     try:
@@ -1104,7 +1113,20 @@ def analyse_impact(target_module: str) -> dict:
 
     Uses the dependency graph to find direct and transitive dependents,
     tests that cover the module, and routes it serves.
+    Only accepts known module names (no arbitrary paths).
     """
+    if not _validate_module_name(target_module):
+        return {
+            "error": f"Unknown module: '{target_module}'",
+            "target": target_module,
+            "direct_dependents": [],
+            "transitive_dependents": [],
+            "affected_tests": {},
+            "affected_routes": [],
+            "risk_level": "low",
+            "analysis_note": f"Module '{target_module}' is not a known project module.",
+            "analysed_at": _now_iso(),
+        }
     dep_graph = build_dependency_graph()
     reverse = dep_graph.get("reverse_graph", {})
 
@@ -1228,7 +1250,10 @@ def summarize_module(module_name: str) -> dict:
 
     Includes line count, functions, classes, imports, routes (if any),
     test coverage, and complexity score.
+    Only accepts known module names (no arbitrary paths).
     """
+    if not _validate_module_name(module_name):
+        return {"error": f"Unknown module: '{module_name}'", "exists": False}
     mod_path = PROJECT_ROOT / module_name
     if not mod_path.exists():
         return {"error": f"Module '{module_name}' not found", "exists": False}
