@@ -585,3 +585,244 @@ def run_watcher_cycle() -> dict:
         "knowledge": kidx,
         "health": health,
     }
+
+
+# ── Knowledge growth tracking ───────────────────────────────────────
+
+
+GROWTH_LOG_PATH = WATCHER_DIR / "growth_log.json"
+MAX_GROWTH_LOG = 200
+
+
+def _load_growth_log() -> list[dict]:
+    if GROWTH_LOG_PATH.exists():
+        try:
+            return json.loads(GROWTH_LOG_PATH.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError):
+            pass
+    return []
+
+
+def _save_growth_log(log: list[dict]) -> None:
+    _ensure_dir()
+    GROWTH_LOG_PATH.write_text(
+        json.dumps(log[-MAX_GROWTH_LOG:], indent=2, ensure_ascii=False, default=str),
+        encoding="utf-8",
+    )
+
+
+def track_knowledge_growth() -> dict:
+    """Record a knowledge growth data point and return growth analysis.
+
+    Tracks total entries, domain distribution, and growth velocity.
+    """
+    kidx = build_knowledge_index()
+    log = _load_growth_log()
+
+    entry = {
+        "timestamp": _now_iso(),
+        "total_entries": kidx["total_entries"],
+        "builtin_entries": kidx["builtin_entries"],
+        "extra_entries": kidx["extra_entries"],
+        "domain_count": len(kidx["domains"]),
+    }
+    log.append(entry)
+    _save_growth_log(log)
+
+    # Calculate velocity
+    velocity = 0.0
+    if len(log) >= 2:
+        recent = log[-1]["total_entries"]
+        previous = log[-2]["total_entries"]
+        velocity = recent - previous
+
+    # Calculate average growth (last 10 entries)
+    recent_entries = log[-10:]
+    avg_growth = 0.0
+    if len(recent_entries) >= 2:
+        first_val = recent_entries[0]["total_entries"]
+        last_val = recent_entries[-1]["total_entries"]
+        avg_growth = round((last_val - first_val) / max(1, len(recent_entries) - 1), 2)
+
+    return {
+        "current_total": kidx["total_entries"],
+        "domain_count": len(kidx["domains"]),
+        "velocity": velocity,
+        "average_growth": avg_growth,
+        "data_points": len(log),
+        "history": log[-10:],
+        "tracked_at": _now_iso(),
+    }
+
+
+# ── Config drift detection ───────────────────────────────────────────
+
+
+CONFIG_BASELINE_PATH = WATCHER_DIR / "config_baseline.json"
+
+
+def _load_config_files() -> dict[str, str]:
+    """Load all JSON config files in data/ and return {name: hash}."""
+    config_dir = Path("data")
+    configs: dict[str, str] = {}
+    if config_dir.exists():
+        for fp in sorted(config_dir.glob("*.json")):
+            if fp.is_file():
+                configs[fp.name] = _hash_file(fp)
+    return configs
+
+
+def save_config_baseline() -> dict:
+    """Save the current config state as the baseline for drift detection."""
+    configs = _load_config_files()
+    baseline = {
+        "saved_at": _now_iso(),
+        "configs": configs,
+    }
+    _ensure_dir()
+    CONFIG_BASELINE_PATH.write_text(
+        json.dumps(baseline, indent=2, ensure_ascii=False, default=str),
+        encoding="utf-8",
+    )
+    return baseline
+
+
+def detect_config_drift() -> dict:
+    """Compare current config files against the saved baseline.
+
+    Returns added, removed, and modified config files.
+    """
+    # Load baseline
+    if CONFIG_BASELINE_PATH.exists():
+        try:
+            baseline = json.loads(
+                CONFIG_BASELINE_PATH.read_text(encoding="utf-8")
+            )
+        except (json.JSONDecodeError, OSError):
+            baseline = {"configs": {}, "saved_at": None}
+    else:
+        baseline = {"configs": {}, "saved_at": None}
+
+    old_configs = baseline.get("configs", {})
+    new_configs = _load_config_files()
+
+    old_keys = set(old_configs.keys())
+    new_keys = set(new_configs.keys())
+
+    added = sorted(new_keys - old_keys)
+    removed = sorted(old_keys - new_keys)
+    modified = [
+        k for k in sorted(old_keys & new_keys)
+        if old_configs[k] != new_configs[k]
+    ]
+
+    has_drift = bool(added or removed or modified)
+
+    if has_drift and not baseline.get("saved_at"):
+        # First run — save baseline automatically
+        save_config_baseline()
+
+    return {
+        "baseline_date": baseline.get("saved_at"),
+        "added": added,
+        "removed": removed,
+        "modified": modified,
+        "total_drift": len(added) + len(removed) + len(modified),
+        "has_drift": has_drift,
+        "current_configs": list(new_configs.keys()),
+        "checked_at": _now_iso(),
+    }
+
+
+# ── Disk usage monitoring ────────────────────────────────────────────
+
+
+def measure_disk_usage() -> dict:
+    """Measure disk usage for key project directories.
+
+    Returns byte counts for data/, models/, tests/, and total project.
+    """
+
+    def _dir_size(path: Path) -> int:
+        total = 0
+        if not path.exists():
+            return 0
+        for fp in path.rglob("*"):
+            if fp.is_file():
+                try:
+                    total += fp.stat().st_size
+                except OSError:
+                    continue
+        return total
+
+    data_size = _dir_size(Path("data"))
+    model_size = _dir_size(Path("models"))
+    test_size = _dir_size(Path("tests"))
+    template_size = _dir_size(Path("templates"))
+
+    # Count files in each
+    data_files = sum(1 for _ in Path("data").rglob("*") if _.is_file()) if Path("data").exists() else 0
+    model_files = sum(1 for _ in Path("models").rglob("*") if _.is_file()) if Path("models").exists() else 0
+
+    total = data_size + model_size + test_size + template_size
+
+    def _fmt(b: int) -> str:
+        if b >= 1_048_576:
+            return f"{b / 1_048_576:.1f} MB"
+        if b >= 1024:
+            return f"{b / 1024:.1f} KB"
+        return f"{b} B"
+
+    return {
+        "directories": {
+            "data": {"bytes": data_size, "formatted": _fmt(data_size), "files": data_files},
+            "models": {"bytes": model_size, "formatted": _fmt(model_size), "files": model_files},
+            "tests": {"bytes": test_size, "formatted": _fmt(test_size)},
+            "templates": {"bytes": template_size, "formatted": _fmt(template_size)},
+        },
+        "total_bytes": total,
+        "total_formatted": _fmt(total),
+        "measured_at": _now_iso(),
+    }
+
+
+# ── Alert summary ───────────────────────────────────────────────────
+
+
+def get_alert_summary() -> dict:
+    """Return a summary of all alerts grouped by level and category."""
+    alerts = _load_alerts()
+
+    by_level: dict[str, int] = {}
+    by_category: dict[str, int] = {}
+    unacknowledged = 0
+
+    for a in alerts:
+        level = a.get("level", "info")
+        by_level[level] = by_level.get(level, 0) + 1
+        cat = a.get("category", "general")
+        by_category[cat] = by_category.get(cat, 0) + 1
+        if not a.get("acknowledged"):
+            unacknowledged += 1
+
+    return {
+        "total_alerts": len(alerts),
+        "unacknowledged": unacknowledged,
+        "by_level": by_level,
+        "by_category": by_category,
+        "recent": alerts[-5:] if alerts else [],
+        "summarized_at": _now_iso(),
+    }
+
+
+def clear_acknowledged_alerts() -> dict:
+    """Remove all acknowledged alerts, keeping only unacknowledged ones."""
+    alerts = _load_alerts()
+    kept = [a for a in alerts if not a.get("acknowledged")]
+    removed_count = len(alerts) - len(kept)
+    _save_alerts(kept)
+    return {
+        "removed": removed_count,
+        "remaining": len(kept),
+        "cleared_at": _now_iso(),
+    }

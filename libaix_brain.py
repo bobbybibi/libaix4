@@ -763,3 +763,513 @@ def get_status() -> dict:
         "gaps_count": len(state.get("gaps", [])),
         "known_agents": list(KNOWN_AGENTS.keys()),
     }
+
+
+# ── Dependency graph ─────────────────────────────────────────────────
+
+
+def _extract_imports(path: Path) -> list[str]:
+    """Extract local project imports from a Python file."""
+    try:
+        text = path.read_text(encoding="utf-8", errors="ignore")
+    except OSError:
+        return []
+    imports: list[str] = []
+    all_modules = {m.replace(".py", "") for m in CORE_MODULES}
+    for m in re.finditer(
+        r"^(?:from|import)\s+([\w.]+)", text, re.MULTILINE
+    ):
+        mod_name = m.group(1).split(".")[0]
+        if mod_name in all_modules:
+            imports.append(mod_name + ".py")
+    return sorted(set(imports))
+
+
+def build_dependency_graph() -> dict:
+    """Build a module-level dependency graph for the project.
+
+    Returns a dict mapping each module to its local imports, plus
+    summary statistics (edges count, most-depended-on modules,
+    most-dependent modules, circular deps).
+    """
+    graph: dict[str, list[str]] = {}
+    for mod_name in CORE_MODULES:
+        mod_path = PROJECT_ROOT / mod_name
+        if mod_path.exists():
+            deps = _extract_imports(mod_path)
+            # Exclude self-imports
+            graph[mod_name] = [d for d in deps if d != mod_name]
+
+    # Reverse graph: who depends on me?
+    reverse: dict[str, list[str]] = {m: [] for m in graph}
+    for mod, deps in graph.items():
+        for dep in deps:
+            if dep in reverse:
+                reverse[dep].append(mod)
+
+    # Detect circular dependencies (direct A↔B cycles)
+    circular: list[list[str]] = []
+    seen_pairs: set[tuple[str, str]] = set()
+    for mod, deps in graph.items():
+        for dep in deps:
+            if mod in graph.get(dep, []):
+                pair = tuple(sorted([mod, dep]))
+                if pair not in seen_pairs:
+                    seen_pairs.add(pair)
+                    circular.append(list(pair))
+
+    # Stats
+    total_edges = sum(len(deps) for deps in graph.values())
+    most_depended = sorted(
+        reverse.items(), key=lambda kv: len(kv[1]), reverse=True
+    )[:5]
+    most_dependent = sorted(
+        graph.items(), key=lambda kv: len(kv[1]), reverse=True
+    )[:5]
+
+    # Leaf modules (no local deps)
+    leaf_modules = [m for m, deps in graph.items() if not deps]
+
+    result = {
+        "graph": graph,
+        "reverse_graph": {k: v for k, v in reverse.items() if v},
+        "total_modules": len(graph),
+        "total_edges": total_edges,
+        "most_depended_on": [
+            {"module": m, "depended_by": len(d)} for m, d in most_depended
+        ],
+        "most_dependent": [
+            {"module": m, "depends_on": len(d)} for m, d in most_dependent
+        ],
+        "leaf_modules": leaf_modules,
+        "circular_dependencies": circular,
+        "built_at": _now_iso(),
+    }
+
+    # Persist
+    state = load_brain_state()
+    state["dependency_graph"] = {
+        "total_edges": total_edges,
+        "circular": len(circular),
+        "built_at": result["built_at"],
+    }
+    save_brain_state(state)
+
+    return result
+
+
+# ── Module complexity scoring ────────────────────────────────────────
+
+
+def _count_classes(path: Path) -> int:
+    """Count class definitions in a Python file."""
+    try:
+        text = path.read_text(encoding="utf-8", errors="ignore")
+    except OSError:
+        return 0
+    return len(re.findall(r"^class\s+\w+", text, re.MULTILINE))
+
+
+def _count_branches(path: Path) -> int:
+    """Count branching statements (if/elif/for/while/try/except)."""
+    try:
+        text = path.read_text(encoding="utf-8", errors="ignore")
+    except OSError:
+        return 0
+    return len(re.findall(
+        r"^\s+(?:if|elif|for|while|try|except)\s", text, re.MULTILINE
+    ))
+
+
+def score_module_complexity() -> dict:
+    """Score each module's complexity based on lines, functions, classes,
+    and branching statements. Returns sorted by complexity (highest first).
+    """
+    results: list[dict] = []
+    for mod_name in CORE_MODULES:
+        mod_path = PROJECT_ROOT / mod_name
+        if not mod_path.exists():
+            continue
+        lines = _count_lines(mod_path)
+        funcs = len(_extract_functions(mod_path))
+        classes = _count_classes(mod_path)
+        branches = _count_branches(mod_path)
+
+        # Weighted complexity score
+        score = (
+            lines * 0.1         # 1 point per 10 lines
+            + funcs * 2.0       # 2 points per function
+            + classes * 5.0     # 5 points per class
+            + branches * 1.5    # 1.5 points per branch
+        )
+
+        results.append({
+            "module": mod_name,
+            "lines": lines,
+            "functions": funcs,
+            "classes": classes,
+            "branches": branches,
+            "complexity_score": round(score, 1),
+        })
+
+    results.sort(key=lambda r: r["complexity_score"], reverse=True)
+
+    total_score = sum(r["complexity_score"] for r in results)
+    avg_score = round(total_score / max(1, len(results)), 1)
+
+    return {
+        "modules": results,
+        "total_complexity": round(total_score, 1),
+        "average_complexity": avg_score,
+        "most_complex": results[0]["module"] if results else None,
+        "simplest": results[-1]["module"] if results else None,
+        "assessed_at": _now_iso(),
+    }
+
+
+# ── Code quality metrics ─────────────────────────────────────────────
+
+
+def _count_todos(path: Path) -> int:
+    """Count TODO/FIXME/HACK/XXX comments in a file."""
+    try:
+        text = path.read_text(encoding="utf-8", errors="ignore")
+    except OSError:
+        return 0
+    return len(re.findall(r"#\s*(?:TODO|FIXME|HACK|XXX)\b", text, re.IGNORECASE))
+
+
+def _has_docstrings(path: Path) -> tuple[int, int]:
+    """Return (functions_with_docstrings, total_functions) in a file."""
+    try:
+        text = path.read_text(encoding="utf-8", errors="ignore")
+    except OSError:
+        return 0, 0
+    func_defs = list(re.finditer(r"^([ \t]*)def\s+\w+\s*\(", text, re.MULTILINE))
+    total = len(func_defs)
+    documented = 0
+    lines = text.splitlines()
+    for m in func_defs:
+        line_num = text[:m.start()].count("\n")
+        # Look for docstring within the next 3 lines after `def ...:`
+        for offset in range(1, 4):
+            idx = line_num + offset
+            if idx < len(lines):
+                stripped = lines[idx].strip()
+                if stripped.startswith(('"""', "'''", 'r"""', "r'''")):
+                    documented += 1
+                    break
+                if stripped and not stripped.startswith("#"):
+                    break
+    return documented, total
+
+
+def measure_code_quality() -> dict:
+    """Measure code quality metrics across all modules.
+
+    Checks docstring coverage, TODO counts, average function length,
+    and import hygiene.
+    """
+    module_metrics: list[dict] = []
+    total_todos = 0
+    total_documented = 0
+    total_functions = 0
+
+    for mod_name in CORE_MODULES:
+        mod_path = PROJECT_ROOT / mod_name
+        if not mod_path.exists():
+            continue
+        lines = _count_lines(mod_path)
+        todos = _count_todos(mod_path)
+        total_todos += todos
+        documented, funcs = _has_docstrings(mod_path)
+        total_documented += documented
+        total_functions += funcs
+        avg_func_len = round(lines / max(1, funcs), 1) if funcs else 0
+
+        module_metrics.append({
+            "module": mod_name,
+            "lines": lines,
+            "functions": funcs,
+            "documented_functions": documented,
+            "docstring_pct": round(100 * documented / max(1, funcs), 1),
+            "todos": todos,
+            "avg_function_length": avg_func_len,
+        })
+
+    overall_docstring_pct = round(
+        100 * total_documented / max(1, total_functions), 1
+    )
+
+    return {
+        "modules": module_metrics,
+        "overall_docstring_coverage": overall_docstring_pct,
+        "total_todos": total_todos,
+        "total_functions": total_functions,
+        "total_documented": total_documented,
+        "assessed_at": _now_iso(),
+    }
+
+
+# ── Knowledge gap recommendations ───────────────────────────────────
+
+
+def recommend_knowledge_gaps() -> dict:
+    """Analyse the knowledge base and recommend areas to expand.
+
+    Looks at domain balance, entry counts, and identifies underserved
+    topics that could benefit from more Q&A pairs.
+    """
+    try:
+        from knowledge_base import KNOWLEDGE, get_domains
+    except ImportError:
+        return {"error": "knowledge_base not available", "recommendations": []}
+
+    # Count per domain
+    domain_counts: dict[str, int] = {}
+    for _, _, domain in KNOWLEDGE:
+        domain_counts[domain] = domain_counts.get(domain, 0) + 1
+
+    # Include extra knowledge
+    extra_dir = Path("data/extra_knowledge")
+    extra_domains: dict[str, int] = {}
+    if extra_dir.exists():
+        for fp in sorted(extra_dir.glob("*.json")):
+            try:
+                data = json.loads(fp.read_text(encoding="utf-8"))
+                entries = data if isinstance(data, list) else data.get("entries", [])
+                for entry in entries:
+                    d = entry.get("domain", "general") if isinstance(entry, dict) else "general"
+                    extra_domains[d] = extra_domains.get(d, 0) + 1
+            except (json.JSONDecodeError, OSError):
+                continue
+
+    # Merge counts
+    all_domains: dict[str, int] = dict(domain_counts)
+    for d, c in extra_domains.items():
+        all_domains[d] = all_domains.get(d, 0) + c
+
+    total = sum(all_domains.values())
+    avg_per_domain = total / max(1, len(all_domains))
+
+    recommendations: list[dict] = []
+
+    # Under-represented domains
+    for domain, count in sorted(all_domains.items(), key=lambda kv: kv[1]):
+        if count < avg_per_domain * 0.5:
+            recommendations.append({
+                "type": "expand_domain",
+                "domain": domain,
+                "current_entries": count,
+                "suggested_target": int(avg_per_domain),
+                "reason": f"Domain '{domain}' has only {count} entries "
+                          f"(average is {avg_per_domain:.0f}). Consider adding more.",
+                "priority": "high" if count < avg_per_domain * 0.25 else "medium",
+            })
+
+    # Missing common domains (suggest new topics)
+    suggested_domains = [
+        "cloud_computing", "devops", "database", "programming",
+        "operating_systems", "web_development", "cryptography",
+    ]
+    existing = set(all_domains.keys())
+    for sd in suggested_domains:
+        if sd not in existing:
+            recommendations.append({
+                "type": "new_domain",
+                "domain": sd,
+                "current_entries": 0,
+                "suggested_target": 15,
+                "reason": f"Domain '{sd}' is not covered yet. "
+                          "Consider adding knowledge entries.",
+                "priority": "low",
+            })
+
+    return {
+        "total_entries": total,
+        "domain_count": len(all_domains),
+        "domain_distribution": all_domains,
+        "average_per_domain": round(avg_per_domain, 1),
+        "recommendations": recommendations,
+        "recommendation_count": len(recommendations),
+        "assessed_at": _now_iso(),
+    }
+
+
+# ── Cross-module impact analysis ─────────────────────────────────────
+
+
+def analyse_impact(target_module: str) -> dict:
+    """Analyse what would be affected if *target_module* changes.
+
+    Uses the dependency graph to find direct and transitive dependents,
+    tests that cover the module, and routes it serves.
+    """
+    dep_graph = build_dependency_graph()
+    graph = dep_graph["graph"]
+    reverse = dep_graph.get("reverse_graph", {})
+
+    # Direct dependents
+    direct = reverse.get(target_module, [])
+
+    # Transitive dependents (BFS)
+    transitive: list[str] = []
+    visited: set[str] = set()
+    queue = list(direct)
+    while queue:
+        mod = queue.pop(0)
+        if mod in visited:
+            continue
+        visited.add(mod)
+        transitive.append(mod)
+        queue.extend(reverse.get(mod, []))
+
+    # Find related tests
+    test_mapping: dict[str, list[str]] = {}
+    mod_base = target_module.replace(".py", "")
+    if TEST_DIR.exists():
+        for tp in sorted(TEST_DIR.glob("test_*.py")):
+            try:
+                text = tp.read_text(encoding="utf-8", errors="ignore")
+            except OSError:
+                continue
+            # Check if test file imports or references the target module
+            if mod_base in text:
+                test_names = _extract_test_names(tp)
+                test_mapping[tp.name] = test_names
+
+    # Find affected routes
+    state = load_brain_state()
+    manifest = state.get("manifest", {})
+    affected_routes = [
+        r for r in manifest.get("routes", [])
+        if r.get("file") == target_module
+    ]
+
+    # Risk assessment
+    risk = "low"
+    if len(transitive) > 3:
+        risk = "high"
+    elif len(transitive) > 1 or len(affected_routes) > 2:
+        risk = "medium"
+
+    return {
+        "target": target_module,
+        "direct_dependents": direct,
+        "transitive_dependents": transitive,
+        "affected_tests": test_mapping,
+        "affected_routes": affected_routes,
+        "risk_level": risk,
+        "analysis_note": (
+            f"Changing {target_module} directly affects {len(direct)} module(s) "
+            f"and transitively affects {len(transitive)} module(s). "
+            f"{len(test_mapping)} test file(s) cover this module."
+        ),
+        "analysed_at": _now_iso(),
+    }
+
+
+# ── Stale data detection ────────────────────────────────────────────
+
+
+def detect_stale_data(max_age_days: int = 30) -> dict:
+    """Detect stale data files, configs, and model backups.
+
+    Returns files that haven't been modified in *max_age_days* days.
+    """
+    from datetime import timedelta
+
+    now = datetime.now(timezone.utc)
+    cutoff = now - timedelta(days=max_age_days)
+    stale: list[dict] = []
+
+    scan_dirs = [
+        ("data", DATA_DIR),
+        ("models", MODEL_DIR),
+    ]
+
+    for category, dir_path in scan_dirs:
+        if not dir_path.exists():
+            continue
+        for fp in sorted(dir_path.rglob("*")):
+            if not fp.is_file():
+                continue
+            try:
+                mtime = datetime.fromtimestamp(
+                    fp.stat().st_mtime, tz=timezone.utc
+                )
+                if mtime < cutoff:
+                    age_days = (now - mtime).days
+                    stale.append({
+                        "path": str(fp),
+                        "category": category,
+                        "size": fp.stat().st_size,
+                        "last_modified": mtime.isoformat(),
+                        "age_days": age_days,
+                    })
+            except OSError:
+                continue
+
+    stale.sort(key=lambda s: s["age_days"], reverse=True)
+
+    return {
+        "max_age_days": max_age_days,
+        "stale_files": stale,
+        "stale_count": len(stale),
+        "total_stale_bytes": sum(s["size"] for s in stale),
+        "checked_at": _now_iso(),
+    }
+
+
+# ── Module summary (compact) ────────────────────────────────────────
+
+
+def summarize_module(module_name: str) -> dict:
+    """Generate a compact summary of a single module.
+
+    Includes line count, functions, classes, imports, routes (if any),
+    test coverage, and complexity score.
+    """
+    mod_path = PROJECT_ROOT / module_name
+    if not mod_path.exists():
+        return {"error": f"Module '{module_name}' not found", "exists": False}
+
+    lines = _count_lines(mod_path)
+    funcs = _extract_functions(mod_path)
+    classes = _count_classes(mod_path)
+    branches = _count_branches(mod_path)
+    imports = _extract_imports(mod_path)
+    todos = _count_todos(mod_path)
+    documented, total_funcs = _has_docstrings(mod_path)
+    routes = _extract_routes(mod_path)
+
+    # Related test file
+    mod_base = module_name.replace(".py", "")
+    test_file = TEST_DIR / f"test_{mod_base}.py"
+    test_count = 0
+    test_names: list[str] = []
+    if test_file.exists():
+        test_names = _extract_test_names(test_file)
+        test_count = len(test_names)
+
+    complexity = round(
+        lines * 0.1 + len(funcs) * 2.0 + classes * 5.0 + branches * 1.5, 1
+    )
+
+    return {
+        "module": module_name,
+        "exists": True,
+        "lines": lines,
+        "functions": len(funcs),
+        "function_names": funcs,
+        "classes": classes,
+        "branches": branches,
+        "local_imports": imports,
+        "routes": routes,
+        "todos": todos,
+        "docstring_coverage": round(100 * documented / max(1, total_funcs), 1),
+        "test_file": test_file.name if test_file.exists() else None,
+        "test_count": test_count,
+        "complexity_score": complexity,
+        "summarized_at": _now_iso(),
+    }

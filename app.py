@@ -37,14 +37,30 @@ from vectorizer import BagOfWords
 # Brain + Watcher (lazy imports — graceful if not yet available)
 try:
     from libaix_brain import (
+        analyse_impact as _brain_impact,
+        build_dependency_graph as _brain_deps,
         build_session_briefing as _brain_briefing,
+        detect_stale_data as _brain_stale,
         get_status as _brain_status,
+        measure_code_quality as _brain_quality,
+        recommend_knowledge_gaps as _brain_knowledge_gaps,
         run_full_scan_cycle as _brain_scan,
         scan_project as _brain_scan_project,
+        score_module_complexity as _brain_complexity,
+        summarize_module as _brain_module_summary,
+        analyse_gaps as _brain_analyse_gaps,
+        calculate_health_score as _brain_health_score,
+        get_pending_tasks as _brain_pending_tasks,
     )
     from ml_watcher import (
         build_watcher_context as _watcher_context,
+        clear_acknowledged_alerts as _watcher_clear_alerts,
+        detect_config_drift as _watcher_config_drift,
+        get_alert_summary as _watcher_alert_summary,
+        measure_disk_usage as _watcher_disk_usage,
+        run_health_check as _watcher_health_check,
         run_watcher_cycle as _watcher_cycle,
+        track_knowledge_growth as _watcher_growth,
     )
     _BRAIN_AVAILABLE = True
 except ImportError:
@@ -693,6 +709,190 @@ def watcher_cycle():
         return jsonify(_watcher_cycle())
     except Exception:
         return jsonify({"error": "Failed to run watcher cycle"}), 500
+
+
+# ── Routes: Extended Brain API ───────────────────────────────────────
+
+
+@app.route("/brain/gaps", methods=["GET"])
+def brain_gaps():
+    """Return gap analysis results from the brain."""
+    if not _BRAIN_AVAILABLE:
+        return jsonify({"error": "Brain module not available"}), 503
+    try:
+        return jsonify({"gaps": _brain_analyse_gaps()})
+    except Exception:
+        return jsonify({"error": "Failed to analyse gaps"}), 500
+
+
+@app.route("/brain/tasks", methods=["GET"])
+def brain_tasks():
+    """Return pending tasks from the brain's task queue."""
+    if not _BRAIN_AVAILABLE:
+        return jsonify({"error": "Brain module not available"}), 503
+    try:
+        agent = request.args.get("agent")
+        return jsonify({"tasks": _brain_pending_tasks(agent=agent)})
+    except Exception:
+        return jsonify({"error": "Failed to retrieve tasks"}), 500
+
+
+@app.route("/brain/health", methods=["GET"])
+def brain_health_score():
+    """Return the project health score breakdown."""
+    if not _BRAIN_AVAILABLE:
+        return jsonify({"error": "Brain module not available"}), 503
+    try:
+        return jsonify(_brain_health_score())
+    except Exception:
+        return jsonify({"error": "Failed to calculate health score"}), 500
+
+
+@app.route("/brain/dependencies", methods=["GET"])
+def brain_dependencies():
+    """Return the module dependency graph."""
+    if not _BRAIN_AVAILABLE:
+        return jsonify({"error": "Brain module not available"}), 503
+    try:
+        return jsonify(_brain_deps())
+    except Exception:
+        return jsonify({"error": "Failed to build dependency graph"}), 500
+
+
+@app.route("/brain/complexity", methods=["GET"])
+def brain_complexity():
+    """Return module complexity scores."""
+    if not _BRAIN_AVAILABLE:
+        return jsonify({"error": "Brain module not available"}), 503
+    try:
+        return jsonify(_brain_complexity())
+    except Exception:
+        return jsonify({"error": "Failed to score complexity"}), 500
+
+
+@app.route("/brain/quality", methods=["GET"])
+def brain_quality():
+    """Return code quality metrics."""
+    if not _BRAIN_AVAILABLE:
+        return jsonify({"error": "Brain module not available"}), 503
+    try:
+        return jsonify(_brain_quality())
+    except Exception:
+        return jsonify({"error": "Failed to measure code quality"}), 500
+
+
+@app.route("/brain/knowledge-gaps", methods=["GET"])
+def brain_knowledge_gaps():
+    """Return knowledge gap recommendations."""
+    if not _BRAIN_AVAILABLE:
+        return jsonify({"error": "Brain module not available"}), 503
+    try:
+        return jsonify(_brain_knowledge_gaps())
+    except Exception:
+        return jsonify({"error": "Failed to analyse knowledge gaps"}), 500
+
+
+@app.route("/brain/impact/<module_name>", methods=["GET"])
+def brain_impact(module_name):
+    """Analyse impact of changing a specific module."""
+    if not _BRAIN_AVAILABLE:
+        return jsonify({"error": "Brain module not available"}), 503
+    try:
+        return jsonify(_brain_impact(module_name))
+    except Exception:
+        return jsonify({"error": "Failed to analyse impact"}), 500
+
+
+@app.route("/brain/stale", methods=["GET"])
+def brain_stale():
+    """Detect stale data files."""
+    if not _BRAIN_AVAILABLE:
+        return jsonify({"error": "Brain module not available"}), 503
+    try:
+        max_days = request.args.get("days", 30, type=int)
+        return jsonify(_brain_stale(max_age_days=max_days))
+    except Exception:
+        return jsonify({"error": "Failed to detect stale data"}), 500
+
+
+@app.route("/brain/module/<module_name>", methods=["GET"])
+def brain_module_summary(module_name):
+    """Return a compact summary of a specific module."""
+    if not _BRAIN_AVAILABLE:
+        return jsonify({"error": "Brain module not available"}), 503
+    try:
+        return jsonify(_brain_module_summary(module_name))
+    except Exception:
+        return jsonify({"error": "Failed to summarize module"}), 500
+
+
+# ── Routes: Extended Watcher API ─────────────────────────────────────
+
+
+@app.route("/watcher/growth", methods=["GET"])
+def watcher_growth():
+    """Track and return knowledge growth metrics."""
+    if not _BRAIN_AVAILABLE:
+        return jsonify({"error": "Watcher module not available"}), 503
+    try:
+        return jsonify(_watcher_growth())
+    except Exception:
+        return jsonify({"error": "Failed to track knowledge growth"}), 500
+
+
+@app.route("/watcher/config-drift", methods=["GET"])
+def watcher_config_drift():
+    """Detect configuration drift from baseline."""
+    if not _BRAIN_AVAILABLE:
+        return jsonify({"error": "Watcher module not available"}), 503
+    try:
+        return jsonify(_watcher_config_drift())
+    except Exception:
+        return jsonify({"error": "Failed to detect config drift"}), 500
+
+
+@app.route("/watcher/disk", methods=["GET"])
+def watcher_disk():
+    """Return disk usage measurements for project directories."""
+    if not _BRAIN_AVAILABLE:
+        return jsonify({"error": "Watcher module not available"}), 503
+    try:
+        return jsonify(_watcher_disk_usage())
+    except Exception:
+        return jsonify({"error": "Failed to measure disk usage"}), 500
+
+
+@app.route("/watcher/alerts", methods=["GET"])
+def watcher_alerts():
+    """Return alert summary from the watcher."""
+    if not _BRAIN_AVAILABLE:
+        return jsonify({"error": "Watcher module not available"}), 503
+    try:
+        return jsonify(_watcher_alert_summary())
+    except Exception:
+        return jsonify({"error": "Failed to get alert summary"}), 500
+
+
+@app.route("/watcher/alerts/clear", methods=["POST"])
+def watcher_clear_alerts():
+    """Clear all acknowledged alerts."""
+    if not _BRAIN_AVAILABLE:
+        return jsonify({"error": "Watcher module not available"}), 503
+    try:
+        return jsonify(_watcher_clear_alerts())
+    except Exception:
+        return jsonify({"error": "Failed to clear alerts"}), 500
+
+
+@app.route("/watcher/health", methods=["GET"])
+def watcher_health():
+    """Run and return a watcher health check."""
+    if not _BRAIN_AVAILABLE:
+        return jsonify({"error": "Watcher module not available"}), 503
+    try:
+        return jsonify(_watcher_health_check())
+    except Exception:
+        return jsonify({"error": "Failed to run health check"}), 500
 
 
 # ── Routes: Boil Engine API ──────────────────────────────────────────
