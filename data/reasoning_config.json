@@ -9,24 +9,29 @@
   "synthesis_min_overlap": 2,
   "generalize_min_examples": 2,
   "cache_ttl_seconds": 300,
-  "last_build": "2026-04-03T22:57:40.661255+00:00",
-  "build_count": 12,
+  "last_build": "2026-04-05T02:43:37.526144+00:00",
+  "build_count": 69,
   "stats": {
-    "rules_count": 96,
-    "concepts_count": 831,
-    "entries_count": 197,
+    "rules_count": 117,
+    "concepts_count": 998,
+    "entries_count": 247,
     "domains": [
-      "security",
-      "general",
-      "networking",
       "wifi_security",
-      "intranet",
-      "troubleshooting",
+      "testing",
+      "programming",
+      "general",
+      "git",
+      "wifi_policy",
+      "security",
       "internet",
+      "troubleshooting",
+      "networking",
+      "debugging",
       "wifi",
-      "wifi_policy"
+      "algorithms",
+      "intranet"
     ],
-    "build_time_seconds": 0.311,
-    "built_at": "2026-04-03T22:57:40.661255+00:00"
+    "build_time_seconds": 0.59,
+    "built_at": "2026-04-05T02:43:37.526144+00:00"
   }
 }

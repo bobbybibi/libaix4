@@ -10,5 +10,11 @@
     "improvements": 969801,
     "details": "Found 969801 duplicate answers across 984434 entries",
     "timestamp": "2026-04-03T17:00:03.127722+00:00"
+  },
+  {
+    "mechanism": "rescore_quality",
+    "improvements": 197,
+    "details": "Scored 197 entries, 197 above threshold",
+    "timestamp": "2026-04-04T15:41:00.511582+00:00"
   }
 ]

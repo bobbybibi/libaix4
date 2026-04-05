@@ -952,6 +952,216 @@
     },
     {
       "conditions": [
+        "A variable"
+      ],
+      "conclusion": "A variable is named reference to a value stored in memory",
+      "confidence": 0.76,
+      "domain": "programming",
+      "source": "What is a variable?",
+      "rule_type": "identity"
+    },
+    {
+      "conditions": [
+        "A function"
+      ],
+      "conclusion": "A function is reusable block of code defined with 'def' in Python",
+      "confidence": 0.7867,
+      "domain": "programming",
+      "source": "What is a function?",
+      "rule_type": "identity"
+    },
+    {
+      "conditions": [
+        "Functions"
+      ],
+      "conclusion": "Functions enables code reuse",
+      "confidence": 0.68,
+      "domain": "programming",
+      "source": "What is a function?",
+      "rule_type": "enables"
+    },
+    {
+      "conditions": [
+        "A class"
+      ],
+      "conclusion": "A class is blueprint for creating objects",
+      "confidence": 0.7067,
+      "domain": "programming",
+      "source": "What is a class?",
+      "rule_type": "identity"
+    },
+    {
+      "conditions": [
+        "A decorator"
+      ],
+      "conclusion": "A decorator is function that wraps another function to extend its behavior without modifying it",
+      "confidence": 0.84,
+      "domain": "programming",
+      "source": "What is a decorator in Python?",
+      "rule_type": "identity"
+    },
+    {
+      "conditions": [
+        "A generator"
+      ],
+      "conclusion": "A generator is function that uses 'yield' instead of 'return' to produce a sequence of values lazily",
+      "confidence": 0.8667,
+      "domain": "programming",
+      "source": "What is a generator in Python?",
+      "rule_type": "identity"
+    },
+    {
+      "conditions": [
+        "A list comprehension"
+      ],
+      "conclusion": "A list comprehension is concise way to create lists: [expr for item in iterable if condition]",
+      "confidence": 0.8933,
+      "domain": "programming",
+      "source": "What is a list comprehension?",
+      "rule_type": "identity"
+    },
+    {
+      "conditions": [
+        "6+ strings prefixed with 'f' that"
+      ],
+      "conclusion": "6+ strings prefixed with 'f' that enables inline expressions: f'Hello {name}",
+      "confidence": 0.76,
+      "domain": "programming",
+      "source": "What are f-strings?",
+      "rule_type": "enables"
+    },
+    {
+      "conditions": [
+        "A virtual environment"
+      ],
+      "conclusion": "A virtual environment is isolated Python installation that keeps project dependencies separate",
+      "confidence": 0.84,
+      "domain": "programming",
+      "source": "What is a virtual environment?",
+      "rule_type": "identity"
+    },
+    {
+      "conditions": [
+        "They don't enforce types at runtime but"
+      ],
+      "conclusion": "They don't enforce types at runtime but enables static analysis with mypy/pyright",
+      "confidence": 0.8133,
+      "domain": "programming",
+      "source": "What are type hints in Python?",
+      "rule_type": "enables"
+    },
+    {
+      "conditions": [
+        "A lambda"
+      ],
+      "conclusion": "A lambda is anonymous single-expression function: lambda x",
+      "confidence": 0.76,
+      "domain": "programming",
+      "source": "What is a lambda function?",
+      "rule_type": "identity"
+    },
+    {
+      "conditions": [
+        "async/await"
+      ],
+      "conclusion": "async/await enables asynchronous programming",
+      "confidence": 0.7067,
+      "domain": "programming",
+      "source": "What is async/await in Python?",
+      "rule_type": "enables"
+    },
+    {
+      "conditions": [
+        "A dictionary"
+      ],
+      "conclusion": "A dictionary is key-value mapping: d = {'name': 'Alice'",
+      "confidence": 0.76,
+      "domain": "programming",
+      "source": "What is a dictionary in Python?",
+      "rule_type": "identity"
+    },
+    {
+      "conditions": [
+        "Git"
+      ],
+      "conclusion": "Git is distributed version control system that tracks changes to files",
+      "confidence": 0.8133,
+      "domain": "git",
+      "source": "What is Git?",
+      "rule_type": "identity"
+    },
+    {
+      "conditions": [
+        "A branch"
+      ],
+      "conclusion": "A branch is lightweight pointer to a commit",
+      "confidence": 0.7067,
+      "domain": "git",
+      "source": "What is a Git branch?",
+      "rule_type": "identity"
+    },
+    {
+      "conditions": [
+        "The main/master branch"
+      ],
+      "conclusion": "The main/master branch is default",
+      "confidence": 0.7067,
+      "domain": "git",
+      "source": "What is a Git branch?",
+      "rule_type": "identity"
+    },
+    {
+      "conditions": [
+        "A pull request (PR)"
+      ],
+      "conclusion": "A pull request (PR) is request to merge your branch into another (usually main)",
+      "confidence": 0.84,
+      "domain": "git",
+      "source": "What is a pull request?",
+      "rule_type": "identity"
+    },
+    {
+      "conditions": [
+        "Each line"
+      ],
+      "conclusion": "Each line is glob pattern",
+      "confidence": 0.68,
+      "domain": "git",
+      "source": "What is .gitignore?",
+      "rule_type": "identity"
+    },
+    {
+      "conditions": [
+        "Quicksort"
+      ],
+      "conclusion": "Quicksort is divide-and-conquer sorting algorithm",
+      "confidence": 0.76,
+      "domain": "algorithms",
+      "source": "What is quicksort?",
+      "rule_type": "identity"
+    },
+    {
+      "conditions": [
+        "The logging module"
+      ],
+      "conclusion": "The logging module function leveled output: DEBUG",
+      "confidence": 0.7333,
+      "domain": "debugging",
+      "source": "What is logging in Python?",
+      "rule_type": "function"
+    },
+    {
+      "conditions": [
+        "fixture, they"
+      ],
+      "conclusion": "fixture, they function test data or resources",
+      "confidence": 0.7333,
+      "domain": "testing",
+      "source": "What are pytest fixtures?",
+      "rule_type": "function"
+    },
+    {
+      "conditions": [
         "libaix"
       ],
       "conclusion": "libaix is neural network built from scratch using only NumPy",
@@ -993,11 +1203,11 @@
         "User": 0.44999999999999996,
         "Datagram": 0.15,
         "udp": 0.3,
-        "difference": 0.44999999999999996,
-        "and": 0.6,
+        "difference": 0.9,
+        "and": 1.0,
         "IP": 1.0,
         "address": 0.3,
-        "For": 0.3,
+        "For": 0.6,
         "subnet": 0.15,
         "mask": 0.15,
         "DNS": 1.0,
@@ -1006,7 +1216,7 @@
         "System": 0.6,
         "dns": 0.44999999999999996,
         "DHCP": 0.3,
-        "Dynamic": 0.6,
+        "Dynamic": 0.75,
         "Host": 0.15,
         "Configuration": 0.15,
         "dhcp": 0.3,
@@ -1054,7 +1264,7 @@
         "Lower": 0.15,
         "latency": 0.15,
         "Packet": 0.15,
-        "Common": 0.3,
+        "Common": 0.75,
         "packet": 0.15,
         "loss": 0.15,
         "internet": 0.3,
@@ -1076,9 +1286,9 @@
         "browser": 0.15,
         "Apache": 0.15,
         "Nginx": 0.15,
-        "APIs": 0.6,
+        "APIs": 0.75,
         "server": 0.3,
-        "API": 0.15,
+        "API": 0.3,
         "Programming": 0.15,
         "Interface": 0.15,
         "Web": 0.3,
@@ -1205,7 +1415,7 @@
         "OSPF": 0.3,
         "Shortest": 0.15,
         "Path": 0.15,
-        "First": 0.15,
+        "First": 0.44999999999999996,
         "Dijkstra": 0.15,
         "ospf": 0.15,
         "SMTP": 0.15,
@@ -1268,9 +1478,9 @@
         "channel": 0.6,
         "Channel": 0.15,
         "bonding": 0.15,
-        "DFS": 0.15,
+        "DFS": 0.3,
         "Selection": 0.15,
-        "dfs": 0.15,
+        "dfs": 0.3,
         "Nodes": 0.15,
         "Meraki": 0.15,
         "Instant": 0.15,
@@ -1298,7 +1508,7 @@
         "Equals": 0.3,
         "KRACK": 0.3,
         "wpa3": 0.44999999999999996,
-        "Each": 0.44999999999999996,
+        "Each": 0.9,
         "enterprise": 0.44999999999999996,
         "CNSA": 0.15,
         "GCM": 0.15,
@@ -1320,7 +1530,7 @@
         "Pre": 0.15,
         "Shared": 0.15,
         "All": 0.15,
-        "Use": 0.15,
+        "Use": 1.0,
         "pre": 0.15,
         "shared": 0.15,
         "key": 0.15,
@@ -1365,7 +1575,7 @@
         "restrictions": 0.15,
         "guest": 0.15,
         "Client": 0.15,
-        "Essential": 0.3,
+        "Essential": 0.44999999999999996,
         "client": 0.15,
         "isolation": 0.15,
         "Implemented": 0.6,
@@ -1382,7 +1592,7 @@
         "control": 0.15,
         "When": 0.15,
         "Cloudflare": 0.15,
-        "Faster": 0.15,
+        "Faster": 0.3,
         "Quality": 0.15,
         "WMM": 0.3,
         "Multimedia": 0.3,
@@ -1424,11 +1634,11 @@
         "downloadable": 0.15,
         "acl": 0.15,
         "Tunnel": 0.3,
-        "Type": 0.15,
+        "Type": 0.3,
         "Medium": 0.15,
         "Group": 0.3,
         "ID": 0.6,
-        "dynamic": 0.15,
+        "dynamic": 0.3,
         "assignment": 0.15,
         "STP": 0.15,
         "Spanning": 0.15,
@@ -1513,7 +1723,7 @@
         "FortiGate": 0.15,
         "Firepower": 0.15,
         "Check": 0.15,
-        "Point": 0.15,
+        "Point": 0.3,
         "next": 0.15,
         "generation": 0.15,
         "Both": 0.15,
@@ -1528,9 +1738,9 @@
         "Elastic": 0.15,
         "siem": 0.15,
         "Zero": 0.3,
-        "Every": 0.15,
+        "Every": 0.3,
         "Principles": 0.15,
-        "Never": 0.3,
+        "Never": 0.44999999999999996,
         "trust": 0.15,
         "Microsegmentation": 0.15,
         "SDN": 0.3,
@@ -1576,9 +1786,9 @@
         "NIST": 0.3,
         "SP": 0.15,
         "penetration": 0.15,
-        "testing": 0.15,
+        "testing": 0.3,
         "CSF": 0.15,
-        "Identify": 0.15,
+        "Identify": 0.3,
         "Protect": 0.15,
         "Detect": 0.15,
         "Respond": 0.15,
@@ -1607,7 +1817,7 @@
         "Traceroute": 0.15,
         "TTL": 0.15,
         "Exceeded": 0.15,
-        "Useful": 0.15,
+        "Useful": 0.6,
         "traceroute": 0.15,
         "Wireshark": 0.15,
         "Can": 0.15,
@@ -1650,14 +1860,14 @@
         "wired": 0.15,
         "Bypass": 0.15,
         "Less": 0.15,
-        "Always": 0.15,
+        "Always": 0.3,
         "mab": 0.15,
         "TACACS": 0.15,
         "Terminal": 0.15,
         "Plus": 0.15,
         "Unlike": 0.15,
         "tacacs": 0.15,
-        "They": 0.15,
+        "They": 0.44999999999999996,
         "honey": 0.15,
         "pot": 0.15,
         "DLP": 0.3,
@@ -1696,7 +1906,7 @@
         "CLI": 0.15,
         "Tools": 0.15,
         "Ansible": 0.15,
-        "Python": 0.15,
+        "Python": 1.0,
         "Netmiko": 0.15,
         "NAPALM": 0.15,
         "Terraform": 0.15,
@@ -1731,8 +1941,169 @@
         "Autopilot": 0.15,
         "windows": 0.15,
         "autopilot": 0.15,
-        "NumPy": 0.3,
+        "variable": 0.15,
+        "Functions": 0.15,
+        "function": 0.3,
+        "Dog": 0.15,
+        "Instantiate": 0.15,
+        "Rex": 0.15,
+        "class": 0.15,
+        "OOP": 0.15,
+        "Core": 0.3,
+        "object": 0.15,
+        "oriented": 0.15,
+        "programming": 0.3,
+        "Syntax": 0.15,
+        "decorator": 0.15,
+        "python": 1.0,
+        "Created": 0.15,
+        "generator": 0.15,
+        "Example": 0.6,
+        "Pythonic": 0.15,
+        "list": 0.44999999999999996,
+        "comprehension": 0.15,
+        "Exception": 0.15,
+        "exception": 0.15,
+        "handling": 0.15,
+        "Hello": 0.15,
+        "strings": 0.15,
+        "Create": 0.3,
+        "Prevents": 0.15,
+        "virtual": 0.15,
+        "environment": 0.15,
+        "Usage": 0.15,
+        "pip": 0.15,
+        "IDE": 0.15,
+        "type": 0.15,
+        "hints": 0.15,
+        "Implement": 0.15,
+        "context": 0.15,
+        "manager": 0.15,
+        "lambda": 0.15,
+        "args": 0.15,
+        "kwargs": 0.15,
+        "Reduces": 0.15,
+        "Supports": 0.15,
+        "True": 0.3,
+        "dataclass": 0.15,
+        "Run": 0.3,
+        "async": 0.15,
+        "await": 0.15,
+        "Recursion": 0.15,
+        "recursion": 0.15,
+        "Alice": 0.15,
+        "Keys": 0.15,
+        "Dict": 0.15,
+        "dictionary": 0.15,
+        "Lists": 0.15,
+        "Tuples": 0.15,
+        "tuple": 0.15,
+        "Git": 0.75,
+        "GitHub": 0.15,
+        "git": 0.75,
+        "Merge": 0.3,
+        "Delete": 0.15,
+        "branch": 0.15,
+        "Rebase": 0.15,
+        "merge": 0.15,
+        "rebase": 0.15,
+        "stash": 0.15,
+        "PRs": 0.15,
+        "PR": 0.15,
+        "CI": 0.15,
+        "pull": 0.15,
+        "request": 0.15,
+        "Place": 0.15,
+        "gitignore": 0.15,
+        "cherry": 0.15,
+        "pick": 0.15,
+        "Start": 0.15,
+        "bisect": 0.15,
+        "Big": 0.15,
+        "Measures": 0.15,
+        "big": 0.15,
+        "notation": 0.15,
+        "Binary": 0.15,
+        "Compare": 0.15,
+        "Requires": 0.15,
+        "binary": 0.15,
+        "search": 0.15,
+        "BFS": 0.15,
+        "Breadth": 0.15,
+        "Search": 0.3,
+        "Visits": 0.15,
+        "Finds": 0.15,
+        "bfs": 0.15,
+        "Depth": 0.15,
+        "Average": 0.3,
+        "Handles": 0.15,
+        "hash": 0.15,
+        "table": 0.15,
+        "Fibonacci": 0.15,
+        "DP": 0.15,
+        "Quicksort": 0.15,
+        "Pick": 0.15,
+        "Timsort": 0.15,
+        "quicksort": 0.15,
+        "Singly": 0.15,
+        "Doubly": 0.15,
+        "linked": 0.15,
+        "Read": 0.15,
+        "stack": 0.15,
+        "trace": 0.15,
+        "DEBUG": 0.15,
+        "INFO": 0.15,
+        "WARNING": 0.15,
+        "ERROR": 0.15,
+        "CRITICAL": 0.15,
+        "Better": 0.15,
+        "logging": 0.15,
+        "Profiling": 0.15,
+        "profiling": 0.15,
+        "TypeError": 0.15,
+        "ValueError": 0.15,
+        "KeyError": 0.15,
+        "IndexError": 0.15,
+        "AttributeError": 0.15,
+        "ImportError": 0.15,
+        "NameError": 0.15,
+        "FileNotFoundError": 0.15,
+        "common": 0.15,
+        "error": 0.15,
+        "types": 0.15,
+        "memory": 0.15,
+        "leak": 0.15,
+        "Unit": 0.3,
+        "unit": 0.3,
+        "Integration": 0.15,
+        "integration": 0.15,
+        "tests": 0.15,
+        "Mocking": 0.15,
+        "MagicMock": 0.15,
+        "Verify": 0.15,
+        "mocking": 0.15,
+        "Test": 0.3,
+        "Aim": 0.15,
+        "test": 0.15,
+        "coverage": 0.15,
+        "TDD": 0.15,
+        "Driven": 0.15,
+        "Development": 0.15,
+        "Red": 0.15,
+        "Green": 0.15,
+        "Refactor": 0.15,
+        "Forces": 0.15,
+        "Results": 0.15,
+        "tdd": 0.15,
+        "Fixtures": 0.15,
+        "Decorated": 0.15,
+        "Scopes": 0.15,
+        "Yield": 0.15,
+        "pytest": 0.15,
+        "fixtures": 0.15,
+        "NumPy": 0.15,
         "libaix": 0.15,
+        "Say": 0.15,
         "AI": 0.15
       },
       "properties": [
@@ -1800,6 +2171,21 @@
         "survey technique where an AP is mounted on an adjustable pole at the planned installation height",
         "visual representation of signal strength overlaid on a floor plan",
         "cloud-based MDM",
+        "named reference to a value stored in memory",
+        "reusable block of code defined with",
+        "blueprint for creating objects",
+        "function that wraps another function to extend its behavior without modifying it",
+        "function that uses",
+        "concise way to create lists",
+        "isolated Python installation that keeps project dependencies separate",
+        "anonymous single-expression function",
+        "key-value mapping",
+        "distributed version control system that tracks changes to files",
+        "lightweight pointer to a commit",
+        "default",
+        "request to merge your branch into another",
+        "glob pattern",
+        "divide-and-conquer sorting algorithm",
         "neural network built from scratch using only NumPy"
       ]
     },
@@ -1827,13 +2213,13 @@
         "layers": 0.15,
         "Help": 0.15,
         "TCP": 0.15,
-        "WAN": 0.15,
-        "BYOD": 0.15,
-        "QoS": 0.15,
-        "PKI": 0.15,
+        "Python": 0.15,
+        "OOP": 0.15,
+        "Big": 0.15,
+        "Git": 0.15,
+        "TDD": 0.15,
         "Just": 0.15,
         "IP": 0.15,
-        "SD": 0.15,
         "help": 0.15
       },
       "properties": [
@@ -1900,7 +2286,24 @@
         "nist": 0.15,
         "cybersecurity": 0.15,
         "framework": 0.15,
-        "stick": 0.15
+        "stick": 0.15,
+        "Python": 0.3,
+        "variable": 0.15,
+        "Git": 0.15,
+        "Create": 0.15,
+        "Merge": 0.15,
+        "Delete": 0.15,
+        "git": 0.15,
+        "branch": 0.15,
+        "DEBUG": 0.15,
+        "INFO": 0.15,
+        "WARNING": 0.15,
+        "ERROR": 0.15,
+        "CRITICAL": 0.15,
+        "Use": 0.15,
+        "Better": 0.15,
+        "logging": 0.15,
+        "python": 0.15
       },
       "properties": [
         "7-layer framework that standardizes network communication",
@@ -1909,7 +2312,8 @@
         "private organizational network",
         "port-based network access control standard",
         "malicious AP that mimics a legitimate SSID to trick clients into connecting",
-        "survey technique where an AP is mounted on an adjustable pole at the planned installation height"
+        "survey technique where an AP is mounted on an adjustable pole at the planned installation height",
+        "named reference to a value stored in memory"
       ]
     },
     "Open": {
@@ -2362,11 +2766,11 @@
         "User": 0.44999999999999996,
         "Datagram": 0.15,
         "udp": 0.3,
-        "difference": 0.44999999999999996,
-        "and": 0.6,
+        "difference": 0.9,
+        "and": 1.0,
         "IP": 1.0,
         "address": 0.3,
-        "For": 0.3,
+        "For": 0.6,
         "subnet": 0.15,
         "mask": 0.15,
         "DNS": 1.0,
@@ -2375,7 +2779,7 @@
         "System": 0.6,
         "dns": 0.44999999999999996,
         "DHCP": 0.3,
-        "Dynamic": 0.6,
+        "Dynamic": 0.75,
         "Host": 0.15,
         "Configuration": 0.15,
         "dhcp": 0.3,
@@ -2423,7 +2827,7 @@
         "Lower": 0.15,
         "latency": 0.15,
         "Packet": 0.15,
-        "Common": 0.3,
+        "Common": 0.75,
         "packet": 0.15,
         "loss": 0.15,
         "internet": 0.3,
@@ -2445,9 +2849,9 @@
         "browser": 0.15,
         "Apache": 0.15,
         "Nginx": 0.15,
-        "APIs": 0.6,
+        "APIs": 0.75,
         "server": 0.3,
-        "API": 0.15,
+        "API": 0.3,
         "Programming": 0.15,
         "Interface": 0.15,
         "Web": 0.3,
@@ -2574,7 +2978,7 @@
         "OSPF": 0.3,
         "Shortest": 0.15,
         "Path": 0.15,
-        "First": 0.15,
+        "First": 0.44999999999999996,
         "Dijkstra": 0.15,
         "ospf": 0.15,
         "SMTP": 0.15,
@@ -2637,9 +3041,9 @@
         "channel": 0.6,
         "Channel": 0.15,
         "bonding": 0.15,
-        "DFS": 0.15,
+        "DFS": 0.3,
         "Selection": 0.15,
-        "dfs": 0.15,
+        "dfs": 0.3,
         "Nodes": 0.15,
         "Meraki": 0.15,
         "Instant": 0.15,
@@ -2667,7 +3071,7 @@
         "Equals": 0.3,
         "KRACK": 0.3,
         "wpa3": 0.44999999999999996,
-        "Each": 0.44999999999999996,
+        "Each": 0.9,
         "enterprise": 0.44999999999999996,
         "CNSA": 0.15,
         "GCM": 0.15,
@@ -2689,7 +3093,7 @@
         "Pre": 0.15,
         "Shared": 0.15,
         "All": 0.15,
-        "Use": 0.15,
+        "Use": 1.0,
         "pre": 0.15,
         "shared": 0.15,
         "key": 0.15,
@@ -2734,7 +3138,7 @@
         "restrictions": 0.15,
         "guest": 0.15,
         "Client": 0.15,
-        "Essential": 0.3,
+        "Essential": 0.44999999999999996,
         "client": 0.15,
         "isolation": 0.15,
         "Implemented": 0.6,
@@ -2751,7 +3155,7 @@
         "control": 0.15,
         "When": 0.15,
         "Cloudflare": 0.15,
-        "Faster": 0.15,
+        "Faster": 0.3,
         "Quality": 0.15,
         "WMM": 0.3,
         "Multimedia": 0.3,
@@ -2793,11 +3197,11 @@
         "downloadable": 0.15,
         "acl": 0.15,
         "Tunnel": 0.3,
-        "Type": 0.15,
+        "Type": 0.3,
         "Medium": 0.15,
         "Group": 0.3,
         "ID": 0.6,
-        "dynamic": 0.15,
+        "dynamic": 0.3,
         "assignment": 0.15,
         "STP": 0.15,
         "Spanning": 0.15,
@@ -2882,7 +3286,7 @@
         "FortiGate": 0.15,
         "Firepower": 0.15,
         "Check": 0.15,
-        "Point": 0.15,
+        "Point": 0.3,
         "next": 0.15,
         "generation": 0.15,
         "Both": 0.15,
@@ -2897,9 +3301,9 @@
         "Elastic": 0.15,
         "siem": 0.15,
         "Zero": 0.3,
-        "Every": 0.15,
+        "Every": 0.3,
         "Principles": 0.15,
-        "Never": 0.3,
+        "Never": 0.44999999999999996,
         "trust": 0.15,
         "Microsegmentation": 0.15,
         "SDN": 0.3,
@@ -2945,9 +3349,9 @@
         "NIST": 0.3,
         "SP": 0.15,
         "penetration": 0.15,
-        "testing": 0.15,
+        "testing": 0.3,
         "CSF": 0.15,
-        "Identify": 0.15,
+        "Identify": 0.3,
         "Protect": 0.15,
         "Detect": 0.15,
         "Respond": 0.15,
@@ -2976,7 +3380,7 @@
         "Traceroute": 0.15,
         "TTL": 0.15,
         "Exceeded": 0.15,
-        "Useful": 0.15,
+        "Useful": 0.6,
         "traceroute": 0.15,
         "Wireshark": 0.15,
         "Can": 0.15,
@@ -3019,14 +3423,14 @@
         "wired": 0.15,
         "Bypass": 0.15,
         "Less": 0.15,
-        "Always": 0.15,
+        "Always": 0.3,
         "mab": 0.15,
         "TACACS": 0.15,
         "Terminal": 0.15,
         "Plus": 0.15,
         "Unlike": 0.15,
         "tacacs": 0.15,
-        "They": 0.15,
+        "They": 0.44999999999999996,
         "honey": 0.15,
         "pot": 0.15,
         "DLP": 0.3,
@@ -3065,7 +3469,7 @@
         "CLI": 0.15,
         "Tools": 0.15,
         "Ansible": 0.15,
-        "Python": 0.15,
+        "Python": 1.0,
         "Netmiko": 0.15,
         "NAPALM": 0.15,
         "Terraform": 0.15,
@@ -3100,8 +3504,169 @@
         "Autopilot": 0.15,
         "windows": 0.15,
         "autopilot": 0.15,
-        "NumPy": 0.3,
+        "variable": 0.15,
+        "Functions": 0.15,
+        "function": 0.3,
+        "Dog": 0.15,
+        "Instantiate": 0.15,
+        "Rex": 0.15,
+        "class": 0.15,
+        "OOP": 0.15,
+        "Core": 0.3,
+        "object": 0.15,
+        "oriented": 0.15,
+        "programming": 0.3,
+        "Syntax": 0.15,
+        "decorator": 0.15,
+        "python": 1.0,
+        "Created": 0.15,
+        "generator": 0.15,
+        "Example": 0.6,
+        "Pythonic": 0.15,
+        "list": 0.44999999999999996,
+        "comprehension": 0.15,
+        "Exception": 0.15,
+        "exception": 0.15,
+        "handling": 0.15,
+        "Hello": 0.15,
+        "strings": 0.15,
+        "Create": 0.3,
+        "Prevents": 0.15,
+        "virtual": 0.15,
+        "environment": 0.15,
+        "Usage": 0.15,
+        "pip": 0.15,
+        "IDE": 0.15,
+        "type": 0.15,
+        "hints": 0.15,
+        "Implement": 0.15,
+        "context": 0.15,
+        "manager": 0.15,
+        "lambda": 0.15,
+        "args": 0.15,
+        "kwargs": 0.15,
+        "Reduces": 0.15,
+        "Supports": 0.15,
+        "True": 0.3,
+        "dataclass": 0.15,
+        "Run": 0.3,
+        "async": 0.15,
+        "await": 0.15,
+        "Recursion": 0.15,
+        "recursion": 0.15,
+        "Alice": 0.15,
+        "Keys": 0.15,
+        "Dict": 0.15,
+        "dictionary": 0.15,
+        "Lists": 0.15,
+        "Tuples": 0.15,
+        "tuple": 0.15,
+        "Git": 0.75,
+        "GitHub": 0.15,
+        "git": 0.75,
+        "Merge": 0.3,
+        "Delete": 0.15,
+        "branch": 0.15,
+        "Rebase": 0.15,
+        "merge": 0.15,
+        "rebase": 0.15,
+        "stash": 0.15,
+        "PRs": 0.15,
+        "PR": 0.15,
+        "CI": 0.15,
+        "pull": 0.15,
+        "request": 0.15,
+        "Place": 0.15,
+        "gitignore": 0.15,
+        "cherry": 0.15,
+        "pick": 0.15,
+        "Start": 0.15,
+        "bisect": 0.15,
+        "Big": 0.15,
+        "Measures": 0.15,
+        "big": 0.15,
+        "notation": 0.15,
+        "Binary": 0.15,
+        "Compare": 0.15,
+        "Requires": 0.15,
+        "binary": 0.15,
+        "search": 0.15,
+        "BFS": 0.15,
+        "Breadth": 0.15,
+        "Search": 0.3,
+        "Visits": 0.15,
+        "Finds": 0.15,
+        "bfs": 0.15,
+        "Depth": 0.15,
+        "Average": 0.3,
+        "Handles": 0.15,
+        "hash": 0.15,
+        "table": 0.15,
+        "Fibonacci": 0.15,
+        "DP": 0.15,
+        "Quicksort": 0.15,
+        "Pick": 0.15,
+        "Timsort": 0.15,
+        "quicksort": 0.15,
+        "Singly": 0.15,
+        "Doubly": 0.15,
+        "linked": 0.15,
+        "Read": 0.15,
+        "stack": 0.15,
+        "trace": 0.15,
+        "DEBUG": 0.15,
+        "INFO": 0.15,
+        "WARNING": 0.15,
+        "ERROR": 0.15,
+        "CRITICAL": 0.15,
+        "Better": 0.15,
+        "logging": 0.15,
+        "Profiling": 0.15,
+        "profiling": 0.15,
+        "TypeError": 0.15,
+        "ValueError": 0.15,
+        "KeyError": 0.15,
+        "IndexError": 0.15,
+        "AttributeError": 0.15,
+        "ImportError": 0.15,
+        "NameError": 0.15,
+        "FileNotFoundError": 0.15,
+        "common": 0.15,
+        "error": 0.15,
+        "types": 0.15,
+        "memory": 0.15,
+        "leak": 0.15,
+        "Unit": 0.3,
+        "unit": 0.3,
+        "Integration": 0.15,
+        "integration": 0.15,
+        "tests": 0.15,
+        "Mocking": 0.15,
+        "MagicMock": 0.15,
+        "Verify": 0.15,
+        "mocking": 0.15,
+        "Test": 0.3,
+        "Aim": 0.15,
+        "test": 0.15,
+        "coverage": 0.15,
+        "TDD": 0.15,
+        "Driven": 0.15,
+        "Development": 0.15,
+        "Red": 0.15,
+        "Green": 0.15,
+        "Refactor": 0.15,
+        "Forces": 0.15,
+        "Results": 0.15,
+        "tdd": 0.15,
+        "Fixtures": 0.15,
+        "Decorated": 0.15,
+        "Scopes": 0.15,
+        "Yield": 0.15,
+        "pytest": 0.15,
+        "fixtures": 0.15,
+        "NumPy": 0.15,
         "libaix": 0.15,
+        "Say": 0.15,
         "AI": 0.15
       },
       "properties": [
@@ -3272,12 +3837,12 @@
         "intranet": 0.15,
         "Help": 0.15,
         "OSI": 0.15,
-        "WAN": 0.15,
-        "BYOD": 0.15,
-        "QoS": 0.15,
-        "PKI": 0.15,
+        "Python": 0.15,
+        "OOP": 0.15,
+        "Big": 0.15,
+        "Git": 0.15,
+        "TDD": 0.15,
         "Just": 0.15,
-        "SD": 0.15,
         "help": 0.15
       },
       "properties": [
@@ -3583,12 +4148,12 @@
       "name": "difference",
       "domain": "networking",
       "related": {
-        "What": 0.44999999999999996,
+        "What": 0.9,
         "TCP": 0.15,
         "UDP": 0.15,
-        "what": 0.44999999999999996,
+        "what": 0.9,
         "tcp": 0.15,
-        "and": 0.44999999999999996,
+        "and": 0.9,
         "udp": 0.15,
         "The": 0.15,
         "Intranets": 0.15,
@@ -3598,7 +4163,23 @@
         "Mbps": 0.15,
         "Gbps": 0.15,
         "ghz": 0.15,
-        "wifi": 0.15
+        "wifi": 0.15,
+        "Lists": 0.15,
+        "Tuples": 0.15,
+        "list": 0.15,
+        "tuple": 0.15,
+        "Merge": 0.15,
+        "Rebase": 0.15,
+        "Use": 0.15,
+        "Never": 0.15,
+        "merge": 0.15,
+        "rebase": 0.15,
+        "Unit": 0.15,
+        "Integration": 0.15,
+        "API": 0.15,
+        "unit": 0.15,
+        "integration": 0.15,
+        "tests": 0.15
       },
       "properties": []
     },
@@ -3606,11 +4187,11 @@
       "name": "and",
       "domain": "networking",
       "related": {
-        "What": 0.6,
+        "What": 1.0,
         "TCP": 0.15,
         "UDP": 0.15,
-        "what": 0.6,
-        "difference": 0.44999999999999996,
+        "what": 1.0,
+        "difference": 0.9,
         "tcp": 0.15,
         "udp": 0.15,
         "The": 0.15,
@@ -3632,7 +4213,27 @@
         "SentinelOne": 0.15,
         "endpoint": 0.15,
         "detection": 0.15,
-        "response": 0.15
+        "response": 0.15,
+        "Used": 0.15,
+        "APIs": 0.15,
+        "args": 0.15,
+        "kwargs": 0.15,
+        "Lists": 0.15,
+        "Tuples": 0.15,
+        "list": 0.15,
+        "tuple": 0.15,
+        "Merge": 0.15,
+        "Rebase": 0.15,
+        "Use": 0.15,
+        "Never": 0.15,
+        "merge": 0.15,
+        "rebase": 0.15,
+        "Unit": 0.15,
+        "Integration": 0.15,
+        "API": 0.15,
+        "unit": 0.15,
+        "integration": 0.15,
+        "tests": 0.15
       },
       "properties": []
     },
@@ -3688,11 +4289,11 @@
         "Label": 0.15,
         "Switching": 0.15,
         "VPNs": 0.15,
-        "QoS": 0.3,
+        "QoS": 0.15,
         "Being": 0.15,
-        "WAN": 0.3,
+        "WAN": 0.15,
         "WANs": 0.15,
-        "SD": 0.3,
+        "SD": 0.15,
         "mpls": 0.15,
         "PoE": 0.15,
         "Power": 0.15,
@@ -3750,8 +4351,11 @@
         "dlp": 0.15,
         "Help": 0.15,
         "OSI": 0.15,
-        "BYOD": 0.15,
-        "PKI": 0.15,
+        "Python": 0.15,
+        "OOP": 0.15,
+        "Big": 0.15,
+        "Git": 0.15,
+        "TDD": 0.15,
         "Just": 0.15,
         "help": 0.15
       },
@@ -3786,9 +4390,9 @@
       "name": "For",
       "domain": "networking",
       "related": {
-        "What": 0.3,
+        "What": 0.6,
         "IP": 0.15,
-        "what": 0.3,
+        "what": 0.6,
         "subnet": 0.15,
         "mask": 0.15,
         "RSSI": 0.15,
@@ -3811,9 +4415,18 @@
         "many": 0.15,
         "users": 0.15,
         "one": 0.15,
-        "handle": 0.15
+        "handle": 0.15,
+        "Useful": 0.15,
+        "lambda": 0.15,
+        "function": 0.15,
+        "Profiling": 0.15,
+        "Use": 0.15,
+        "Identify": 0.15,
+        "profiling": 0.15
       },
-      "properties": []
+      "properties": [
+        "anonymous single-expression function"
+      ]
     },
     "subnet": {
       "name": "subnet",
@@ -4069,14 +4682,14 @@
       "name": "Dynamic",
       "domain": "networking",
       "related": {
-        "What": 0.6,
+        "What": 0.75,
         "DHCP": 0.15,
         "Host": 0.15,
         "Configuration": 0.15,
         "Protocol": 0.15,
         "DNS": 0.15,
         "IP": 0.3,
-        "what": 0.6,
+        "what": 0.75,
         "dhcp": 0.15,
         "DFS": 0.15,
         "Frequency": 0.15,
@@ -4094,7 +4707,7 @@
         "Private": 0.15,
         "Group": 0.15,
         "ID": 0.15,
-        "dynamic": 0.15,
+        "dynamic": 0.3,
         "vlan": 0.15,
         "assignment": 0.15,
         "ARP": 0.15,
@@ -4105,7 +4718,11 @@
         "Inspection": 0.15,
         "DAI": 0.15,
         "arp": 0.15,
-        "spoofing": 0.15
+        "spoofing": 0.15,
+        "Example": 0.15,
+        "Fibonacci": 0.15,
+        "DP": 0.15,
+        "programming": 0.15
       },
       "properties": []
     },
@@ -5070,7 +5687,13 @@
         "cookie": 0.15,
         "TCP": 0.15,
         "IP": 0.15,
-        "intranet": 0.15
+        "intranet": 0.15,
+        "Python": 0.15,
+        "Used": 0.15,
+        "Run": 0.15,
+        "async": 0.15,
+        "await": 0.15,
+        "python": 0.15
       },
       "properties": [
         "application-layer protocol for transferring web pages and resources between clients",
@@ -5355,11 +5978,11 @@
       "name": "Common",
       "domain": "networking",
       "related": {
-        "What": 0.3,
+        "What": 0.75,
         "Packet": 0.15,
         "TCP": 0.15,
         "UDP": 0.15,
-        "what": 0.3,
+        "what": 0.75,
         "packet": 0.15,
         "loss": 0.15,
         "EAP": 0.15,
@@ -5370,9 +5993,24 @@
         "PEAP": 0.15,
         "TTLS": 0.15,
         "FAST": 0.15,
-        "eap": 0.15
+        "eap": 0.15,
+        "Python": 0.3,
+        "Syntax": 0.15,
+        "decorator": 0.15,
+        "python": 0.3,
+        "Alice": 0.15,
+        "Keys": 0.15,
+        "Dict": 0.15,
+        "dictionary": 0.15,
+        "Git": 0.15,
+        "Place": 0.15,
+        "Each": 0.15,
+        "Use": 0.15,
+        "gitignore": 0.15
       },
-      "properties": []
+      "properties": [
+        "glob pattern"
+      ]
     },
     "packet": {
       "name": "packet",
@@ -5832,11 +6470,11 @@
       "name": "APIs",
       "domain": "internet",
       "related": {
-        "What": 0.6,
+        "What": 0.75,
         "Apache": 0.15,
         "Nginx": 0.15,
         "HTTP": 0.44999999999999996,
-        "what": 0.6,
+        "what": 0.75,
         "web": 0.15,
         "server": 0.15,
         "API": 0.15,
@@ -5868,7 +6506,11 @@
         "NETCONF": 0.15,
         "YANG": 0.15,
         "network": 0.15,
-        "automation": 0.15
+        "automation": 0.15,
+        "Used": 0.15,
+        "args": 0.15,
+        "and": 0.15,
+        "kwargs": 0.15
       },
       "properties": []
     },
@@ -5892,7 +6534,7 @@
       "name": "API",
       "domain": "internet",
       "related": {
-        "What": 0.15,
+        "What": 0.3,
         "Application": 0.15,
         "Programming": 0.15,
         "Interface": 0.15,
@@ -5900,8 +6542,15 @@
         "APIs": 0.15,
         "HTTP": 0.15,
         "JSON": 0.15,
-        "what": 0.15,
-        "api": 0.15
+        "what": 0.3,
+        "api": 0.15,
+        "Unit": 0.15,
+        "Integration": 0.15,
+        "difference": 0.15,
+        "unit": 0.15,
+        "and": 0.15,
+        "integration": 0.15,
+        "tests": 0.15
       },
       "properties": []
     },
@@ -8809,14 +9458,24 @@
       "name": "First",
       "domain": "networking",
       "related": {
-        "What": 0.15,
+        "What": 0.44999999999999996,
         "OSPF": 0.15,
         "Open": 0.15,
         "Shortest": 0.15,
         "Path": 0.15,
         "Dijkstra": 0.15,
-        "what": 0.15,
-        "ospf": 0.15
+        "what": 0.44999999999999996,
+        "ospf": 0.15,
+        "BFS": 0.15,
+        "Breadth": 0.15,
+        "Search": 0.3,
+        "Visits": 0.15,
+        "Finds": 0.15,
+        "Used": 0.3,
+        "bfs": 0.15,
+        "DFS": 0.15,
+        "Depth": 0.15,
+        "dfs": 0.15
       },
       "properties": []
     },
@@ -9609,7 +10268,14 @@
         "Guest": 0.15,
         "IoT": 0.15,
         "what": 0.15,
-        "ssid": 0.15
+        "ssid": 0.15,
+        "How": 0.15,
+        "Git": 0.15,
+        "Run": 0.15,
+        "Then": 0.15,
+        "create": 0.15,
+        "git": 0.15,
+        "repository": 0.15
       },
       "properties": []
     },
@@ -10880,14 +11546,14 @@
       "name": "DFS",
       "domain": "wifi",
       "related": {
-        "What": 0.15,
+        "What": 0.3,
         "Dynamic": 0.15,
         "Frequency": 0.15,
         "Selection": 0.15,
         "GHz": 0.15,
         "APs": 0.15,
-        "what": 0.15,
-        "dfs": 0.15,
+        "what": 0.3,
+        "dfs": 0.3,
         "wifi": 0.3,
         "How": 0.15,
         "Check": 0.15,
@@ -10898,7 +11564,11 @@
         "Test": 0.15,
         "AP": 0.15,
         "troubleshoot": 0.15,
-        "disconnections": 0.15
+        "disconnections": 0.15,
+        "Depth": 0.15,
+        "First": 0.15,
+        "Search": 0.15,
+        "Used": 0.15
       },
       "properties": []
     },
@@ -10922,15 +11592,19 @@
       "name": "dfs",
       "domain": "wifi",
       "related": {
-        "What": 0.15,
-        "DFS": 0.15,
+        "What": 0.3,
+        "DFS": 0.3,
         "Dynamic": 0.15,
         "Frequency": 0.15,
         "Selection": 0.15,
         "GHz": 0.15,
         "APs": 0.15,
-        "what": 0.15,
-        "wifi": 0.15
+        "what": 0.3,
+        "wifi": 0.15,
+        "Depth": 0.15,
+        "First": 0.15,
+        "Search": 0.15,
+        "Used": 0.15
       },
       "properties": []
     },
@@ -11693,10 +12367,10 @@
       "name": "Each",
       "domain": "wifi_security",
       "related": {
-        "What": 0.44999999999999996,
+        "What": 0.9,
         "Enterprise": 0.15,
         "RADIUS": 0.15,
-        "what": 0.44999999999999996,
+        "what": 0.9,
         "wpa2": 0.15,
         "enterprise": 0.15,
         "NetFlow": 0.15,
@@ -11713,9 +12387,23 @@
         "Time": 0.15,
         "Exceeded": 0.15,
         "Useful": 0.15,
-        "traceroute": 0.15
+        "traceroute": 0.15,
+        "Git": 0.3,
+        "Core": 0.15,
+        "GitHub": 0.15,
+        "git": 0.15,
+        "Common": 0.15,
+        "Place": 0.15,
+        "Use": 0.15,
+        "gitignore": 0.15,
+        "Unit": 0.15,
+        "Python": 0.15,
+        "unit": 0.15,
+        "testing": 0.15
       },
-      "properties": []
+      "properties": [
+        "distributed version control system that tracks changes to files"
+      ]
     },
     "enterprise": {
       "name": "enterprise",
@@ -12250,18 +12938,18 @@
       "name": "Use",
       "domain": "wifi_security",
       "related": {
-        "What": 0.15,
+        "What": 1.0,
         "PSK": 0.3,
         "Pre": 0.15,
         "Shared": 0.15,
         "Key": 0.15,
         "Personal": 0.15,
         "All": 0.15,
-        "what": 0.15,
+        "what": 1.0,
         "pre": 0.15,
         "shared": 0.15,
         "key": 0.15,
-        "How": 0.15,
+        "How": 0.44999999999999996,
         "IoT": 0.15,
         "SSID": 0.15,
         "VLAN": 0.15,
@@ -12273,7 +12961,53 @@
         "devices": 0.15,
         "connect": 0.15,
         "corporate": 0.15,
-        "wifi": 0.15
+        "wifi": 0.15,
+        "Merge": 0.15,
+        "Rebase": 0.15,
+        "Never": 0.15,
+        "difference": 0.15,
+        "merge": 0.15,
+        "and": 0.15,
+        "rebase": 0.15,
+        "Git": 0.3,
+        "HEAD": 0.15,
+        "undo": 0.15,
+        "git": 0.15,
+        "commit": 0.15,
+        "Common": 0.15,
+        "Place": 0.15,
+        "Each": 0.15,
+        "gitignore": 0.15,
+        "Python": 0.44999999999999996,
+        "Code": 0.15,
+        "Step": 0.15,
+        "Also": 0.15,
+        "IDE": 0.15,
+        "VS": 0.15,
+        "debug": 0.15,
+        "python": 0.3,
+        "code": 0.15,
+        "The": 0.15,
+        "DEBUG": 0.15,
+        "INFO": 0.15,
+        "WARNING": 0.15,
+        "ERROR": 0.15,
+        "CRITICAL": 0.15,
+        "Better": 0.15,
+        "logging": 0.15,
+        "Profiling": 0.15,
+        "For": 0.15,
+        "Identify": 0.15,
+        "profiling": 0.15,
+        "memory": 0.15,
+        "leak": 0.15,
+        "Fixtures": 0.15,
+        "Decorated": 0.15,
+        "True": 0.15,
+        "Scopes": 0.15,
+        "Yield": 0.15,
+        "pytest": 0.15,
+        "fixtures": 0.15
       },
       "properties": []
     },
@@ -12960,7 +13694,31 @@
         "AD": 0.15,
         "ID": 0.15,
         "conditional": 0.15,
-        "access": 0.15
+        "access": 0.15,
+        "APIs": 0.15,
+        "args": 0.15,
+        "and": 0.15,
+        "kwargs": 0.15,
+        "Python": 0.15,
+        "HTTP": 0.15,
+        "Run": 0.15,
+        "async": 0.15,
+        "await": 0.15,
+        "python": 0.15,
+        "BFS": 0.15,
+        "Breadth": 0.15,
+        "First": 0.3,
+        "Search": 0.3,
+        "Visits": 0.15,
+        "Finds": 0.15,
+        "bfs": 0.15,
+        "DFS": 0.15,
+        "Depth": 0.15,
+        "dfs": 0.15,
+        "Singly": 0.15,
+        "Doubly": 0.15,
+        "linked": 0.15,
+        "list": 0.15
       },
       "properties": [
         "network protocol analyzer"
@@ -13420,7 +14178,7 @@
         "enterprise": 0.15,
         "building": 0.15,
         "IoT": 0.15,
-        "Use": 0.15,
+        "Use": 0.44999999999999996,
         "MAB": 0.15,
         "PSK": 0.15,
         "Apply": 0.15,
@@ -13428,7 +14186,26 @@
         "iot": 0.15,
         "devices": 0.15,
         "connect": 0.15,
-        "corporate": 0.15
+        "corporate": 0.15,
+        "Git": 0.3,
+        "Run": 0.15,
+        "Then": 0.15,
+        "Set": 0.15,
+        "create": 0.15,
+        "git": 0.3,
+        "repository": 0.15,
+        "HEAD": 0.15,
+        "undo": 0.15,
+        "commit": 0.15,
+        "Python": 0.15,
+        "Code": 0.15,
+        "Step": 0.15,
+        "Also": 0.15,
+        "IDE": 0.15,
+        "VS": 0.15,
+        "debug": 0.15,
+        "python": 0.15,
+        "code": 0.15
       },
       "properties": [
         "ISP blocking"
@@ -13627,11 +14404,11 @@
       "name": "Essential",
       "domain": "wifi_policy",
       "related": {
-        "What": 0.3,
+        "What": 0.44999999999999996,
         "Client": 0.15,
         "SSID": 0.15,
         "AP": 0.15,
-        "what": 0.3,
+        "what": 0.44999999999999996,
         "client": 0.15,
         "isolation": 0.15,
         "wifi": 0.15,
@@ -13649,7 +14426,10 @@
         "OCSP": 0.15,
         "VPN": 0.15,
         "CA": 0.15,
-        "pki": 0.15
+        "pki": 0.15,
+        "Read": 0.15,
+        "stack": 0.15,
+        "trace": 0.15
       },
       "properties": []
     },
@@ -13758,10 +14538,10 @@
         "Switching": 0.15,
         "VPNs": 0.15,
         "Being": 0.15,
-        "WAN": 0.44999999999999996,
+        "WAN": 0.3,
         "WANs": 0.15,
-        "IP": 0.3,
-        "SD": 0.3,
+        "IP": 0.15,
+        "SD": 0.15,
         "mpls": 0.15,
         "How": 0.3,
         "Slow": 0.15,
@@ -13780,14 +14560,7 @@
         "Look": 0.15,
         "DNS": 0.15,
         "network": 0.15,
-        "latency": 0.15,
-        "Help": 0.15,
-        "TCP": 0.15,
-        "OSI": 0.15,
-        "BYOD": 0.15,
-        "PKI": 0.15,
-        "Just": 0.15,
-        "help": 0.15
+        "latency": 0.15
       },
       "properties": []
     },
@@ -14049,7 +14822,7 @@
       "name": "Faster",
       "domain": "wifi_policy",
       "related": {
-        "What": 0.15,
+        "What": 0.3,
         "DNS": 0.15,
         "When": 0.15,
         "Solutions": 0.15,
@@ -14058,11 +14831,17 @@
         "Cloudflare": 0.15,
         "Gateway": 0.15,
         "Zscaler": 0.15,
-        "what": 0.15,
+        "what": 0.3,
         "dns": 0.15,
-        "filtering": 0.15
+        "filtering": 0.15,
+        "Example": 0.15,
+        "Pythonic": 0.15,
+        "list": 0.15,
+        "comprehension": 0.15
       },
-      "properties": []
+      "properties": [
+        "concise way to create lists"
+      ]
     },
     "Quality": {
       "name": "Quality",
@@ -14351,17 +15130,7 @@
         "MDM": 0.15,
         "VLAN": 0.15,
         "OS": 0.15,
-        "byod": 0.15,
-        "Help": 0.15,
-        "TCP": 0.15,
-        "OSI": 0.15,
-        "WAN": 0.15,
-        "QoS": 0.15,
-        "PKI": 0.15,
-        "Just": 0.15,
-        "IP": 0.15,
-        "SD": 0.15,
-        "help": 0.15
+        "byod": 0.15
       },
       "properties": []
     },
@@ -14997,7 +15766,7 @@
       "name": "Type",
       "domain": "wifi_policy",
       "related": {
-        "What": 0.15,
+        "What": 0.3,
         "VLAN": 0.15,
         "Dynamic": 0.15,
         "VLANs": 0.15,
@@ -15007,10 +15776,16 @@
         "Private": 0.15,
         "Group": 0.15,
         "ID": 0.15,
-        "what": 0.15,
+        "what": 0.3,
         "dynamic": 0.15,
         "vlan": 0.15,
-        "assignment": 0.15
+        "assignment": 0.15,
+        "Python": 0.15,
+        "They": 0.15,
+        "IDE": 0.15,
+        "type": 0.15,
+        "hints": 0.15,
+        "python": 0.15
       },
       "properties": []
     },
@@ -15075,9 +15850,9 @@
       "name": "dynamic",
       "domain": "wifi_policy",
       "related": {
-        "What": 0.15,
+        "What": 0.3,
         "VLAN": 0.15,
-        "Dynamic": 0.15,
+        "Dynamic": 0.3,
         "VLANs": 0.15,
         "RADIUS": 0.15,
         "Tunnel": 0.15,
@@ -15086,9 +15861,13 @@
         "Private": 0.15,
         "Group": 0.15,
         "ID": 0.15,
-        "what": 0.15,
+        "what": 0.3,
         "vlan": 0.15,
-        "assignment": 0.15
+        "assignment": 0.15,
+        "Example": 0.15,
+        "Fibonacci": 0.15,
+        "DP": 0.15,
+        "programming": 0.15
       },
       "properties": []
     },
@@ -15678,11 +16457,11 @@
         "Label": 0.15,
         "Switching": 0.15,
         "VPNs": 0.15,
-        "QoS": 0.44999999999999996,
+        "QoS": 0.3,
         "Being": 0.15,
         "WANs": 0.15,
-        "IP": 0.3,
-        "SD": 0.6,
+        "IP": 0.15,
+        "SD": 0.44999999999999996,
         "what": 0.44999999999999996,
         "mpls": 0.15,
         "Software": 0.15,
@@ -15723,14 +16502,7 @@
         "Alto": 0.15,
         "Prisma": 0.15,
         "Netskope": 0.15,
-        "sase": 0.15,
-        "Help": 0.15,
-        "TCP": 0.15,
-        "OSI": 0.15,
-        "BYOD": 0.15,
-        "PKI": 0.15,
-        "Just": 0.15,
-        "help": 0.15
+        "sase": 0.15
       },
       "properties": []
     },
@@ -15764,11 +16536,11 @@
         "Label": 0.15,
         "Switching": 0.15,
         "VPNs": 0.15,
-        "QoS": 0.3,
+        "QoS": 0.15,
         "Being": 0.15,
-        "WAN": 0.6,
+        "WAN": 0.44999999999999996,
         "WANs": 0.15,
-        "IP": 0.3,
+        "IP": 0.15,
         "what": 0.44999999999999996,
         "mpls": 0.15,
         "Software": 0.15,
@@ -15797,14 +16569,7 @@
         "Alto": 0.15,
         "Prisma": 0.15,
         "Netskope": 0.15,
-        "sase": 0.15,
-        "Help": 0.15,
-        "TCP": 0.15,
-        "OSI": 0.15,
-        "BYOD": 0.15,
-        "PKI": 0.15,
-        "Just": 0.15,
-        "help": 0.15
+        "sase": 0.15
       },
       "properties": []
     },
@@ -17007,7 +17772,7 @@
       "name": "Point",
       "domain": "security",
       "related": {
-        "What": 0.15,
+        "What": 0.3,
         "NGFW": 0.15,
         "DPI": 0.15,
         "IPS": 0.15,
@@ -17021,10 +17786,14 @@
         "Cisco": 0.15,
         "Firepower": 0.15,
         "Check": 0.15,
-        "what": 0.15,
+        "what": 0.3,
         "next": 0.15,
         "generation": 0.15,
-        "firewall": 0.15
+        "firewall": 0.15,
+        "Reduces": 0.15,
+        "Supports": 0.15,
+        "True": 0.15,
+        "dataclass": 0.15
       },
       "properties": []
     },
@@ -17325,14 +18094,17 @@
       "name": "Every",
       "domain": "security",
       "related": {
-        "What": 0.15,
+        "What": 0.3,
         "Zero": 0.15,
         "Principles": 0.15,
         "Never": 0.15,
-        "what": 0.15,
+        "what": 0.3,
         "zero": 0.15,
         "trust": 0.15,
-        "security": 0.15
+        "security": 0.15,
+        "Recursion": 0.15,
+        "Example": 0.15,
+        "recursion": 0.15
       },
       "properties": []
     },
@@ -17355,18 +18127,25 @@
       "name": "Never",
       "domain": "security",
       "related": {
-        "What": 0.3,
+        "What": 0.44999999999999996,
         "Zero": 0.15,
         "Every": 0.15,
         "Principles": 0.15,
-        "what": 0.3,
+        "what": 0.44999999999999996,
         "zero": 0.15,
         "trust": 0.15,
         "security": 0.15,
         "Ransomware": 0.15,
         "Prevention": 0.15,
         "EDR": 0.15,
-        "ransomware": 0.15
+        "ransomware": 0.15,
+        "Merge": 0.15,
+        "Rebase": 0.15,
+        "Use": 0.15,
+        "difference": 0.15,
+        "merge": 0.15,
+        "and": 0.15,
+        "rebase": 0.15
       },
       "properties": []
     },
@@ -17902,17 +18681,7 @@
         "VPN": 0.15,
         "CA": 0.15,
         "what": 0.15,
-        "pki": 0.15,
-        "Help": 0.15,
-        "TCP": 0.15,
-        "OSI": 0.15,
-        "WAN": 0.15,
-        "BYOD": 0.15,
-        "QoS": 0.15,
-        "Just": 0.15,
-        "IP": 0.15,
-        "SD": 0.15,
-        "help": 0.15
+        "pki": 0.15
       },
       "properties": [
         "framework for creating"
@@ -18341,7 +19110,7 @@
       "name": "testing",
       "domain": "security",
       "related": {
-        "What": 0.15,
+        "What": 0.3,
         "Penetration": 0.15,
         "Types": 0.15,
         "Frameworks": 0.15,
@@ -18349,8 +19118,12 @@
         "PTES": 0.15,
         "NIST": 0.15,
         "SP": 0.15,
-        "what": 0.15,
-        "penetration": 0.15
+        "what": 0.3,
+        "penetration": 0.15,
+        "Unit": 0.15,
+        "Each": 0.15,
+        "Python": 0.15,
+        "unit": 0.15
       },
       "properties": []
     },
@@ -18379,7 +19152,7 @@
       "name": "Identify",
       "domain": "security",
       "related": {
-        "What": 0.15,
+        "What": 0.3,
         "NIST": 0.15,
         "The": 0.15,
         "CSF": 0.15,
@@ -18389,7 +19162,7 @@
         "Recover": 0.15,
         "Widely": 0.15,
         "US": 0.15,
-        "what": 0.15,
+        "what": 0.3,
         "nist": 0.15,
         "cybersecurity": 0.15,
         "framework": 0.15,
@@ -18406,7 +19179,11 @@
         "AP": 0.15,
         "wifi": 0.15,
         "site": 0.15,
-        "survey": 0.15
+        "survey": 0.15,
+        "Profiling": 0.15,
+        "Use": 0.15,
+        "For": 0.15,
+        "profiling": 0.15
       },
       "properties": []
     },
@@ -18663,7 +19440,13 @@
         "SNMP": 0.15,
         "DNS": 0.15,
         "network": 0.15,
-        "latency": 0.15
+        "latency": 0.15,
+        "What": 0.15,
+        "Mocking": 0.15,
+        "Python": 0.15,
+        "MagicMock": 0.15,
+        "what": 0.15,
+        "mocking": 0.15
       },
       "properties": [
         "ISP blocking"
@@ -18713,7 +19496,22 @@
         "SNMP": 0.15,
         "Look": 0.15,
         "network": 0.15,
-        "latency": 0.15
+        "latency": 0.15,
+        "What": 0.3,
+        "Run": 0.15,
+        "Aim": 0.15,
+        "what": 0.3,
+        "test": 0.15,
+        "coverage": 0.15,
+        "TDD": 0.15,
+        "Driven": 0.15,
+        "Development": 0.15,
+        "Red": 0.15,
+        "Green": 0.15,
+        "Refactor": 0.15,
+        "Forces": 0.15,
+        "Results": 0.15,
+        "tdd": 0.15
       },
       "properties": []
     },
@@ -19348,9 +20146,25 @@
         "AP": 0.15,
         "wifi": 0.15,
         "site": 0.15,
-        "survey": 0.15
+        "survey": 0.15,
+        "What": 0.3,
+        "Python": 0.15,
+        "Prevents": 0.15,
+        "what": 0.3,
+        "virtual": 0.15,
+        "environment": 0.15,
+        "Git": 0.15,
+        "The": 0.15,
+        "Merge": 0.15,
+        "Delete": 0.15,
+        "git": 0.15,
+        "branch": 0.15
       },
-      "properties": []
+      "properties": [
+        "isolated Python installation that keeps project dependencies separate",
+        "lightweight pointer to a commit",
+        "default"
+      ]
     },
     "Walk": {
       "name": "Walk",
@@ -19616,7 +20430,7 @@
       "name": "Useful",
       "domain": "troubleshooting",
       "related": {
-        "What": 0.15,
+        "What": 0.6,
         "Traceroute": 0.15,
         "Windows": 0.15,
         "TTL": 0.15,
@@ -19624,10 +20438,19 @@
         "ICMP": 0.15,
         "Time": 0.15,
         "Exceeded": 0.15,
-        "what": 0.15,
-        "traceroute": 0.15
+        "what": 0.6,
+        "traceroute": 0.15,
+        "For": 0.15,
+        "lambda": 0.15,
+        "function": 0.15,
+        "git": 0.3,
+        "stash": 0.15,
+        "cherry": 0.15,
+        "pick": 0.15
       },
-      "properties": []
+      "properties": [
+        "anonymous single-expression function"
+      ]
     },
     "traceroute": {
       "name": "traceroute",
@@ -20636,7 +21459,7 @@
       "name": "Always",
       "domain": "security",
       "related": {
-        "What": 0.15,
+        "What": 0.3,
         "MAB": 0.15,
         "MAC": 0.15,
         "Authentication": 0.15,
@@ -20645,7 +21468,7 @@
         "RADIUS": 0.15,
         "Less": 0.15,
         "IP": 0.15,
-        "what": 0.15,
+        "what": 0.3,
         "mab": 0.15,
         "How": 0.15,
         "High": 0.15,
@@ -20656,7 +21479,10 @@
         "many": 0.15,
         "users": 0.15,
         "one": 0.15,
-        "handle": 0.15
+        "handle": 0.15,
+        "Python": 0.15,
+        "Usage": 0.15,
+        "pip": 0.15
       },
       "properties": []
     },
@@ -20791,12 +21617,20 @@
       "name": "They",
       "domain": "security",
       "related": {
-        "What": 0.15,
+        "What": 0.44999999999999996,
         "Network": 0.15,
         "AP": 0.15,
-        "what": 0.15,
+        "what": 0.44999999999999996,
         "honey": 0.15,
-        "pot": 0.15
+        "pot": 0.15,
+        "Python": 0.3,
+        "Hello": 0.15,
+        "strings": 0.15,
+        "Type": 0.15,
+        "IDE": 0.15,
+        "type": 0.15,
+        "hints": 0.15,
+        "python": 0.15
       },
       "properties": [
         "decoy system designed to attract attackers and study their methods"
@@ -21683,7 +22517,7 @@
       "name": "Python",
       "domain": "networking",
       "related": {
-        "What": 0.15,
+        "What": 1.0,
         "Network": 0.15,
         "CLI": 0.15,
         "Tools": 0.15,
@@ -21696,11 +22530,110 @@
         "YANG": 0.15,
         "REST": 0.15,
         "APIs": 0.15,
-        "what": 0.15,
+        "what": 1.0,
         "network": 0.15,
-        "automation": 0.15
+        "automation": 0.15,
+        "The": 0.3,
+        "variable": 0.15,
+        "Functions": 0.15,
+        "function": 0.15,
+        "Dog": 0.15,
+        "Instantiate": 0.15,
+        "Rex": 0.15,
+        "class": 0.15,
+        "Syntax": 0.15,
+        "Common": 0.3,
+        "decorator": 0.15,
+        "python": 1.0,
+        "Created": 0.15,
+        "generator": 0.15,
+        "Hello": 0.15,
+        "They": 0.3,
+        "strings": 0.15,
+        "Create": 0.15,
+        "Prevents": 0.15,
+        "virtual": 0.15,
+        "environment": 0.15,
+        "Usage": 0.15,
+        "Always": 0.15,
+        "pip": 0.15,
+        "Type": 0.15,
+        "IDE": 0.3,
+        "type": 0.15,
+        "hints": 0.15,
+        "Used": 0.15,
+        "HTTP": 0.15,
+        "Run": 0.15,
+        "async": 0.15,
+        "await": 0.15,
+        "Alice": 0.15,
+        "Keys": 0.15,
+        "Dict": 0.15,
+        "dictionary": 0.15,
+        "Average": 0.3,
+        "Handles": 0.15,
+        "hash": 0.15,
+        "table": 0.15,
+        "Quicksort": 0.15,
+        "Pick": 0.15,
+        "Timsort": 0.15,
+        "quicksort": 0.15,
+        "How": 0.15,
+        "Use": 0.44999999999999996,
+        "Code": 0.15,
+        "Step": 0.15,
+        "Also": 0.15,
+        "VS": 0.15,
+        "debug": 0.15,
+        "code": 0.15,
+        "DEBUG": 0.15,
+        "INFO": 0.15,
+        "WARNING": 0.15,
+        "ERROR": 0.15,
+        "CRITICAL": 0.15,
+        "Better": 0.15,
+        "logging": 0.15,
+        "TypeError": 0.15,
+        "ValueError": 0.15,
+        "KeyError": 0.15,
+        "IndexError": 0.15,
+        "AttributeError": 0.15,
+        "ImportError": 0.15,
+        "NameError": 0.15,
+        "FileNotFoundError": 0.15,
+        "common": 0.15,
+        "error": 0.15,
+        "types": 0.15,
+        "memory": 0.15,
+        "leak": 0.15,
+        "Unit": 0.15,
+        "Each": 0.15,
+        "unit": 0.15,
+        "testing": 0.15,
+        "Mocking": 0.15,
+        "MagicMock": 0.15,
+        "Verify": 0.15,
+        "mocking": 0.15,
+        "Help": 0.15,
+        "TCP": 0.15,
+        "OSI": 0.15,
+        "OOP": 0.15,
+        "Big": 0.15,
+        "Git": 0.15,
+        "TDD": 0.15,
+        "Just": 0.15,
+        "IP": 0.15,
+        "help": 0.15
       },
-      "properties": []
+      "properties": [
+        "named reference to a value stored in memory",
+        "reusable block of code defined with",
+        "blueprint for creating objects",
+        "function that wraps another function to extend its behavior without modifying it",
+        "function that uses",
+        "isolated Python installation that keeps project dependencies separate",
+        "key-value mapping"
+      ]
     },
     "Netmiko": {
       "name": "Netmiko",
@@ -22092,7 +23025,14 @@
         "plan": 0.15,
         "enterprise": 0.15,
         "wifi": 0.15,
-        "building": 0.15
+        "building": 0.15,
+        "What": 0.15,
+        "Git": 0.15,
+        "Common": 0.15,
+        "Each": 0.15,
+        "Use": 0.15,
+        "what": 0.15,
+        "gitignore": 0.15
       },
       "properties": []
     },
@@ -22630,14 +23570,2703 @@
       },
       "properties": []
     },
+    "variable": {
+      "name": "variable",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "The": 0.15,
+        "what": 0.15
+      },
+      "properties": []
+    },
+    "Functions": {
+      "name": "Functions",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "what": 0.15,
+        "function": 0.15
+      },
+      "properties": [
+        "reusable block of code defined with"
+      ]
+    },
+    "function": {
+      "name": "function",
+      "domain": "programming",
+      "related": {
+        "What": 0.3,
+        "Python": 0.15,
+        "Functions": 0.15,
+        "what": 0.3,
+        "Useful": 0.15,
+        "For": 0.15,
+        "lambda": 0.15
+      },
+      "properties": []
+    },
+    "Dog": {
+      "name": "Dog",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "Instantiate": 0.15,
+        "Rex": 0.15,
+        "what": 0.15,
+        "class": 0.15
+      },
+      "properties": [
+        "blueprint for creating objects"
+      ]
+    },
+    "Instantiate": {
+      "name": "Instantiate",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "Dog": 0.15,
+        "Rex": 0.15,
+        "what": 0.15,
+        "class": 0.15
+      },
+      "properties": []
+    },
+    "Rex": {
+      "name": "Rex",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "Dog": 0.15,
+        "Instantiate": 0.15,
+        "what": 0.15,
+        "class": 0.15
+      },
+      "properties": []
+    },
+    "class": {
+      "name": "class",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "Dog": 0.15,
+        "Instantiate": 0.15,
+        "Rex": 0.15,
+        "what": 0.15
+      },
+      "properties": []
+    },
+    "OOP": {
+      "name": "OOP",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Core": 0.15,
+        "what": 0.15,
+        "object": 0.15,
+        "oriented": 0.15,
+        "programming": 0.15,
+        "Help": 0.15,
+        "TCP": 0.15,
+        "OSI": 0.15,
+        "Python": 0.15,
+        "Big": 0.15,
+        "Git": 0.15,
+        "TDD": 0.15,
+        "Just": 0.15,
+        "IP": 0.15,
+        "help": 0.15
+      },
+      "properties": []
+    },
+    "Core": {
+      "name": "Core",
+      "domain": "programming",
+      "related": {
+        "What": 0.3,
+        "OOP": 0.15,
+        "what": 0.3,
+        "object": 0.15,
+        "oriented": 0.15,
+        "programming": 0.15,
+        "Git": 0.15,
+        "Each": 0.15,
+        "GitHub": 0.15,
+        "git": 0.15
+      },
+      "properties": []
+    },
+    "object": {
+      "name": "object",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "OOP": 0.15,
+        "Core": 0.15,
+        "what": 0.15,
+        "oriented": 0.15,
+        "programming": 0.15
+      },
+      "properties": []
+    },
+    "oriented": {
+      "name": "oriented",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "OOP": 0.15,
+        "Core": 0.15,
+        "what": 0.15,
+        "object": 0.15,
+        "programming": 0.15
+      },
+      "properties": []
+    },
+    "programming": {
+      "name": "programming",
+      "domain": "programming",
+      "related": {
+        "What": 0.3,
+        "OOP": 0.15,
+        "Core": 0.15,
+        "what": 0.3,
+        "object": 0.15,
+        "oriented": 0.15,
+        "Dynamic": 0.15,
+        "Example": 0.15,
+        "Fibonacci": 0.15,
+        "DP": 0.15,
+        "dynamic": 0.15
+      },
+      "properties": []
+    },
+    "Syntax": {
+      "name": "Syntax",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "Common": 0.15,
+        "what": 0.15,
+        "decorator": 0.15,
+        "python": 0.15
+      },
+      "properties": [
+        "function that wraps another function to extend its behavior without modifying it"
+      ]
+    },
+    "decorator": {
+      "name": "decorator",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "Syntax": 0.15,
+        "Common": 0.15,
+        "what": 0.15,
+        "python": 0.15
+      },
+      "properties": []
+    },
+    "python": {
+      "name": "python",
+      "domain": "programming",
+      "related": {
+        "What": 1.0,
+        "Python": 1.0,
+        "Syntax": 0.15,
+        "Common": 0.3,
+        "what": 1.0,
+        "decorator": 0.15,
+        "Created": 0.15,
+        "generator": 0.15,
+        "Type": 0.15,
+        "They": 0.15,
+        "IDE": 0.3,
+        "type": 0.15,
+        "hints": 0.15,
+        "Used": 0.15,
+        "HTTP": 0.15,
+        "Run": 0.15,
+        "async": 0.15,
+        "await": 0.15,
+        "Alice": 0.15,
+        "Keys": 0.15,
+        "Dict": 0.15,
+        "dictionary": 0.15,
+        "How": 0.15,
+        "Use": 0.3,
+        "Code": 0.15,
+        "Step": 0.15,
+        "Also": 0.15,
+        "VS": 0.15,
+        "debug": 0.15,
+        "code": 0.15,
+        "The": 0.15,
+        "DEBUG": 0.15,
+        "INFO": 0.15,
+        "WARNING": 0.15,
+        "ERROR": 0.15,
+        "CRITICAL": 0.15,
+        "Better": 0.15,
+        "logging": 0.15,
+        "TypeError": 0.15,
+        "ValueError": 0.15,
+        "KeyError": 0.15,
+        "IndexError": 0.15,
+        "AttributeError": 0.15,
+        "ImportError": 0.15,
+        "NameError": 0.15,
+        "FileNotFoundError": 0.15,
+        "common": 0.15,
+        "error": 0.15,
+        "types": 0.15
+      },
+      "properties": []
+    },
+    "Created": {
+      "name": "Created",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "what": 0.15,
+        "generator": 0.15,
+        "python": 0.15
+      },
+      "properties": [
+        "function that uses"
+      ]
+    },
+    "generator": {
+      "name": "generator",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "Created": 0.15,
+        "what": 0.15,
+        "python": 0.15
+      },
+      "properties": []
+    },
+    "Example": {
+      "name": "Example",
+      "domain": "programming",
+      "related": {
+        "What": 0.6,
+        "Faster": 0.15,
+        "Pythonic": 0.15,
+        "what": 0.6,
+        "list": 0.15,
+        "comprehension": 0.15,
+        "Implement": 0.15,
+        "context": 0.15,
+        "manager": 0.15,
+        "Recursion": 0.15,
+        "Every": 0.15,
+        "recursion": 0.15,
+        "Dynamic": 0.15,
+        "Fibonacci": 0.15,
+        "DP": 0.15,
+        "dynamic": 0.15,
+        "programming": 0.15
+      },
+      "properties": [
+        "concise way to create lists"
+      ]
+    },
+    "Pythonic": {
+      "name": "Pythonic",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Example": 0.15,
+        "Faster": 0.15,
+        "what": 0.15,
+        "list": 0.15,
+        "comprehension": 0.15
+      },
+      "properties": []
+    },
+    "list": {
+      "name": "list",
+      "domain": "programming",
+      "related": {
+        "What": 0.44999999999999996,
+        "Example": 0.15,
+        "Faster": 0.15,
+        "Pythonic": 0.15,
+        "what": 0.44999999999999996,
+        "comprehension": 0.15,
+        "Lists": 0.15,
+        "Tuples": 0.15,
+        "difference": 0.15,
+        "and": 0.15,
+        "tuple": 0.15,
+        "Singly": 0.15,
+        "Doubly": 0.15,
+        "Used": 0.15,
+        "linked": 0.15
+      },
+      "properties": []
+    },
+    "comprehension": {
+      "name": "comprehension",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Example": 0.15,
+        "Faster": 0.15,
+        "Pythonic": 0.15,
+        "what": 0.15,
+        "list": 0.15
+      },
+      "properties": []
+    },
+    "Exception": {
+      "name": "Exception",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "what": 0.15,
+        "exception": 0.15,
+        "handling": 0.15
+      },
+      "properties": []
+    },
+    "exception": {
+      "name": "exception",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Exception": 0.15,
+        "what": 0.15,
+        "handling": 0.15
+      },
+      "properties": []
+    },
+    "handling": {
+      "name": "handling",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Exception": 0.15,
+        "what": 0.15,
+        "exception": 0.15
+      },
+      "properties": []
+    },
+    "Hello": {
+      "name": "Hello",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "They": 0.15,
+        "what": 0.15,
+        "strings": 0.15,
+        "NumPy": 0.15,
+        "Git": 0.15,
+        "Ask": 0.15,
+        "hello": 0.15
+      },
+      "properties": []
+    },
+    "strings": {
+      "name": "strings",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "Hello": 0.15,
+        "They": 0.15,
+        "what": 0.15
+      },
+      "properties": []
+    },
+    "Prevents": {
+      "name": "Prevents",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "Create": 0.15,
+        "what": 0.15,
+        "virtual": 0.15,
+        "environment": 0.15
+      },
+      "properties": []
+    },
+    "virtual": {
+      "name": "virtual",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "Create": 0.15,
+        "Prevents": 0.15,
+        "what": 0.15,
+        "environment": 0.15
+      },
+      "properties": []
+    },
+    "environment": {
+      "name": "environment",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "Create": 0.15,
+        "Prevents": 0.15,
+        "what": 0.15,
+        "virtual": 0.15
+      },
+      "properties": []
+    },
+    "Usage": {
+      "name": "Usage",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "Always": 0.15,
+        "what": 0.15,
+        "pip": 0.15
+      },
+      "properties": []
+    },
+    "pip": {
+      "name": "pip",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "Usage": 0.15,
+        "Always": 0.15,
+        "what": 0.15
+      },
+      "properties": []
+    },
+    "IDE": {
+      "name": "IDE",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Python": 0.3,
+        "Type": 0.15,
+        "They": 0.15,
+        "what": 0.15,
+        "type": 0.15,
+        "hints": 0.15,
+        "python": 0.3,
+        "How": 0.15,
+        "Use": 0.15,
+        "Code": 0.15,
+        "Step": 0.15,
+        "Also": 0.15,
+        "VS": 0.15,
+        "debug": 0.15,
+        "code": 0.15
+      },
+      "properties": []
+    },
+    "type": {
+      "name": "type",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "Type": 0.15,
+        "They": 0.15,
+        "IDE": 0.15,
+        "what": 0.15,
+        "hints": 0.15,
+        "python": 0.15
+      },
+      "properties": []
+    },
+    "hints": {
+      "name": "hints",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "Type": 0.15,
+        "They": 0.15,
+        "IDE": 0.15,
+        "what": 0.15,
+        "type": 0.15,
+        "python": 0.15
+      },
+      "properties": []
+    },
+    "Implement": {
+      "name": "Implement",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Example": 0.15,
+        "what": 0.15,
+        "context": 0.15,
+        "manager": 0.15
+      },
+      "properties": []
+    },
+    "context": {
+      "name": "context",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Example": 0.15,
+        "Implement": 0.15,
+        "what": 0.15,
+        "manager": 0.15
+      },
+      "properties": []
+    },
+    "manager": {
+      "name": "manager",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Example": 0.15,
+        "Implement": 0.15,
+        "what": 0.15,
+        "context": 0.15
+      },
+      "properties": []
+    },
+    "lambda": {
+      "name": "lambda",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Useful": 0.15,
+        "For": 0.15,
+        "what": 0.15,
+        "function": 0.15
+      },
+      "properties": []
+    },
+    "args": {
+      "name": "args",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Used": 0.15,
+        "APIs": 0.15,
+        "what": 0.15,
+        "and": 0.15,
+        "kwargs": 0.15
+      },
+      "properties": []
+    },
+    "kwargs": {
+      "name": "kwargs",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Used": 0.15,
+        "APIs": 0.15,
+        "what": 0.15,
+        "args": 0.15,
+        "and": 0.15
+      },
+      "properties": []
+    },
+    "Reduces": {
+      "name": "Reduces",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Point": 0.15,
+        "Supports": 0.15,
+        "True": 0.15,
+        "what": 0.15,
+        "dataclass": 0.15
+      },
+      "properties": []
+    },
+    "Supports": {
+      "name": "Supports",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Point": 0.15,
+        "Reduces": 0.15,
+        "True": 0.15,
+        "what": 0.15,
+        "dataclass": 0.15
+      },
+      "properties": []
+    },
+    "True": {
+      "name": "True",
+      "domain": "programming",
+      "related": {
+        "What": 0.3,
+        "Point": 0.15,
+        "Reduces": 0.15,
+        "Supports": 0.15,
+        "what": 0.3,
+        "dataclass": 0.15,
+        "Fixtures": 0.15,
+        "Decorated": 0.15,
+        "Use": 0.15,
+        "Scopes": 0.15,
+        "Yield": 0.15,
+        "pytest": 0.15,
+        "fixtures": 0.15
+      },
+      "properties": []
+    },
+    "dataclass": {
+      "name": "dataclass",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Point": 0.15,
+        "Reduces": 0.15,
+        "Supports": 0.15,
+        "True": 0.15,
+        "what": 0.15
+      },
+      "properties": []
+    },
+    "Run": {
+      "name": "Run",
+      "domain": "programming",
+      "related": {
+        "What": 0.3,
+        "Python": 0.15,
+        "Used": 0.15,
+        "HTTP": 0.15,
+        "what": 0.3,
+        "async": 0.15,
+        "await": 0.15,
+        "python": 0.15,
+        "How": 0.15,
+        "Git": 0.15,
+        "Then": 0.15,
+        "Set": 0.15,
+        "create": 0.15,
+        "git": 0.15,
+        "repository": 0.15,
+        "Test": 0.15,
+        "Aim": 0.15,
+        "test": 0.15,
+        "coverage": 0.15
+      },
+      "properties": []
+    },
+    "async": {
+      "name": "async",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "Used": 0.15,
+        "HTTP": 0.15,
+        "Run": 0.15,
+        "what": 0.15,
+        "await": 0.15,
+        "python": 0.15
+      },
+      "properties": []
+    },
+    "await": {
+      "name": "await",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "Used": 0.15,
+        "HTTP": 0.15,
+        "Run": 0.15,
+        "what": 0.15,
+        "async": 0.15,
+        "python": 0.15
+      },
+      "properties": []
+    },
+    "Recursion": {
+      "name": "Recursion",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Every": 0.15,
+        "Example": 0.15,
+        "what": 0.15,
+        "recursion": 0.15
+      },
+      "properties": []
+    },
+    "recursion": {
+      "name": "recursion",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Recursion": 0.15,
+        "Every": 0.15,
+        "Example": 0.15,
+        "what": 0.15
+      },
+      "properties": []
+    },
+    "Alice": {
+      "name": "Alice",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "Keys": 0.15,
+        "Common": 0.15,
+        "Dict": 0.15,
+        "what": 0.15,
+        "dictionary": 0.15,
+        "python": 0.15
+      },
+      "properties": [
+        "key-value mapping"
+      ]
+    },
+    "Keys": {
+      "name": "Keys",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "Alice": 0.15,
+        "Common": 0.15,
+        "Dict": 0.15,
+        "what": 0.15,
+        "dictionary": 0.15,
+        "python": 0.15
+      },
+      "properties": []
+    },
+    "Dict": {
+      "name": "Dict",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "Alice": 0.15,
+        "Keys": 0.15,
+        "Common": 0.15,
+        "what": 0.15,
+        "dictionary": 0.15,
+        "python": 0.15
+      },
+      "properties": []
+    },
+    "dictionary": {
+      "name": "dictionary",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "Alice": 0.15,
+        "Keys": 0.15,
+        "Common": 0.15,
+        "Dict": 0.15,
+        "what": 0.15,
+        "python": 0.15
+      },
+      "properties": []
+    },
+    "Lists": {
+      "name": "Lists",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Tuples": 0.15,
+        "what": 0.15,
+        "difference": 0.15,
+        "list": 0.15,
+        "and": 0.15,
+        "tuple": 0.15
+      },
+      "properties": []
+    },
+    "Tuples": {
+      "name": "Tuples",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Lists": 0.15,
+        "what": 0.15,
+        "difference": 0.15,
+        "list": 0.15,
+        "and": 0.15,
+        "tuple": 0.15
+      },
+      "properties": []
+    },
+    "tuple": {
+      "name": "tuple",
+      "domain": "programming",
+      "related": {
+        "What": 0.15,
+        "Lists": 0.15,
+        "Tuples": 0.15,
+        "what": 0.15,
+        "difference": 0.15,
+        "list": 0.15,
+        "and": 0.15
+      },
+      "properties": []
+    },
+    "Git": {
+      "name": "Git",
+      "domain": "git",
+      "related": {
+        "What": 0.75,
+        "Each": 0.3,
+        "Core": 0.15,
+        "GitHub": 0.15,
+        "what": 0.75,
+        "git": 0.75,
+        "How": 0.3,
+        "Run": 0.15,
+        "Then": 0.15,
+        "Set": 0.15,
+        "create": 0.15,
+        "repository": 0.15,
+        "Create": 0.15,
+        "The": 0.15,
+        "Merge": 0.15,
+        "Delete": 0.15,
+        "branch": 0.15,
+        "HEAD": 0.15,
+        "Use": 0.3,
+        "undo": 0.15,
+        "commit": 0.15,
+        "Common": 0.15,
+        "Place": 0.15,
+        "gitignore": 0.15,
+        "Start": 0.15,
+        "bisect": 0.15,
+        "Say": 0.15,
+        "AI": 0.15,
+        "Hello": 0.15,
+        "NumPy": 0.15,
+        "Ask": 0.15,
+        "hello": 0.15,
+        "Help": 0.15,
+        "TCP": 0.15,
+        "OSI": 0.15,
+        "Python": 0.15,
+        "OOP": 0.15,
+        "Big": 0.15,
+        "TDD": 0.15,
+        "Just": 0.15,
+        "IP": 0.15,
+        "help": 0.15
+      },
+      "properties": [
+        "distributed version control system that tracks changes to files",
+        "lightweight pointer to a commit",
+        "default",
+        "glob pattern"
+      ]
+    },
+    "GitHub": {
+      "name": "GitHub",
+      "domain": "git",
+      "related": {
+        "What": 0.15,
+        "Git": 0.15,
+        "Each": 0.15,
+        "Core": 0.15,
+        "what": 0.15,
+        "git": 0.15,
+        "Who": 0.15,
+        "ML": 0.15,
+        "who": 0.15,
+        "made": 0.15,
+        "libaix": 0.15
+      },
+      "properties": []
+    },
+    "git": {
+      "name": "git",
+      "domain": "git",
+      "related": {
+        "What": 0.75,
+        "Git": 0.75,
+        "Each": 0.15,
+        "Core": 0.15,
+        "GitHub": 0.15,
+        "what": 0.75,
+        "How": 0.3,
+        "Run": 0.15,
+        "Then": 0.15,
+        "Set": 0.15,
+        "create": 0.15,
+        "repository": 0.15,
+        "Create": 0.15,
+        "The": 0.15,
+        "Merge": 0.15,
+        "Delete": 0.15,
+        "branch": 0.15,
+        "Useful": 0.3,
+        "stash": 0.15,
+        "HEAD": 0.15,
+        "Use": 0.15,
+        "undo": 0.15,
+        "commit": 0.15,
+        "cherry": 0.15,
+        "pick": 0.15,
+        "Start": 0.15,
+        "bisect": 0.15
+      },
+      "properties": []
+    },
+    "Then": {
+      "name": "Then",
+      "domain": "git",
+      "related": {
+        "How": 0.15,
+        "Git": 0.15,
+        "Run": 0.15,
+        "Set": 0.15,
+        "create": 0.15,
+        "git": 0.15,
+        "repository": 0.15
+      },
+      "properties": []
+    },
+    "create": {
+      "name": "create",
+      "domain": "git",
+      "related": {
+        "How": 0.15,
+        "Git": 0.15,
+        "Run": 0.15,
+        "Then": 0.15,
+        "Set": 0.15,
+        "git": 0.15,
+        "repository": 0.15
+      },
+      "properties": []
+    },
+    "repository": {
+      "name": "repository",
+      "domain": "git",
+      "related": {
+        "How": 0.15,
+        "Git": 0.15,
+        "Run": 0.15,
+        "Then": 0.15,
+        "Set": 0.15,
+        "create": 0.15,
+        "git": 0.15
+      },
+      "properties": []
+    },
+    "Merge": {
+      "name": "Merge",
+      "domain": "git",
+      "related": {
+        "What": 0.3,
+        "Git": 0.15,
+        "Create": 0.15,
+        "The": 0.15,
+        "Delete": 0.15,
+        "what": 0.3,
+        "git": 0.15,
+        "branch": 0.15,
+        "Rebase": 0.15,
+        "Use": 0.15,
+        "Never": 0.15,
+        "difference": 0.15,
+        "merge": 0.15,
+        "and": 0.15,
+        "rebase": 0.15
+      },
+      "properties": []
+    },
+    "Delete": {
+      "name": "Delete",
+      "domain": "git",
+      "related": {
+        "What": 0.15,
+        "Git": 0.15,
+        "Create": 0.15,
+        "The": 0.15,
+        "Merge": 0.15,
+        "what": 0.15,
+        "git": 0.15,
+        "branch": 0.15
+      },
+      "properties": []
+    },
+    "branch": {
+      "name": "branch",
+      "domain": "git",
+      "related": {
+        "What": 0.15,
+        "Git": 0.15,
+        "Create": 0.15,
+        "The": 0.15,
+        "Merge": 0.15,
+        "Delete": 0.15,
+        "what": 0.15,
+        "git": 0.15
+      },
+      "properties": []
+    },
+    "Rebase": {
+      "name": "Rebase",
+      "domain": "git",
+      "related": {
+        "What": 0.15,
+        "Merge": 0.15,
+        "Use": 0.15,
+        "Never": 0.15,
+        "what": 0.15,
+        "difference": 0.15,
+        "merge": 0.15,
+        "and": 0.15,
+        "rebase": 0.15
+      },
+      "properties": []
+    },
+    "merge": {
+      "name": "merge",
+      "domain": "git",
+      "related": {
+        "What": 0.15,
+        "Merge": 0.15,
+        "Rebase": 0.15,
+        "Use": 0.15,
+        "Never": 0.15,
+        "what": 0.15,
+        "difference": 0.15,
+        "and": 0.15,
+        "rebase": 0.15
+      },
+      "properties": []
+    },
+    "rebase": {
+      "name": "rebase",
+      "domain": "git",
+      "related": {
+        "What": 0.15,
+        "Merge": 0.15,
+        "Rebase": 0.15,
+        "Use": 0.15,
+        "Never": 0.15,
+        "what": 0.15,
+        "difference": 0.15,
+        "merge": 0.15,
+        "and": 0.15
+      },
+      "properties": []
+    },
+    "stash": {
+      "name": "stash",
+      "domain": "git",
+      "related": {
+        "What": 0.15,
+        "Useful": 0.15,
+        "what": 0.15,
+        "git": 0.15
+      },
+      "properties": []
+    },
+    "PRs": {
+      "name": "PRs",
+      "domain": "git",
+      "related": {
+        "What": 0.15,
+        "PR": 0.15,
+        "CI": 0.15,
+        "what": 0.15,
+        "pull": 0.15,
+        "request": 0.15
+      },
+      "properties": [
+        "request to merge your branch into another"
+      ]
+    },
+    "PR": {
+      "name": "PR",
+      "domain": "git",
+      "related": {
+        "What": 0.15,
+        "PRs": 0.15,
+        "CI": 0.15,
+        "what": 0.15,
+        "pull": 0.15,
+        "request": 0.15
+      },
+      "properties": [
+        "request to merge your branch into another"
+      ]
+    },
+    "CI": {
+      "name": "CI",
+      "domain": "git",
+      "related": {
+        "What": 0.15,
+        "PRs": 0.15,
+        "PR": 0.15,
+        "what": 0.15,
+        "pull": 0.15,
+        "request": 0.15
+      },
+      "properties": []
+    },
+    "pull": {
+      "name": "pull",
+      "domain": "git",
+      "related": {
+        "What": 0.15,
+        "PRs": 0.15,
+        "PR": 0.15,
+        "CI": 0.15,
+        "what": 0.15,
+        "request": 0.15
+      },
+      "properties": []
+    },
+    "request": {
+      "name": "request",
+      "domain": "git",
+      "related": {
+        "What": 0.15,
+        "PRs": 0.15,
+        "PR": 0.15,
+        "CI": 0.15,
+        "what": 0.15,
+        "pull": 0.15
+      },
+      "properties": []
+    },
+    "HEAD": {
+      "name": "HEAD",
+      "domain": "git",
+      "related": {
+        "How": 0.15,
+        "Git": 0.15,
+        "Use": 0.15,
+        "undo": 0.15,
+        "git": 0.15,
+        "commit": 0.15
+      },
+      "properties": []
+    },
+    "undo": {
+      "name": "undo",
+      "domain": "git",
+      "related": {
+        "How": 0.15,
+        "Git": 0.15,
+        "HEAD": 0.15,
+        "Use": 0.15,
+        "git": 0.15,
+        "commit": 0.15
+      },
+      "properties": []
+    },
+    "commit": {
+      "name": "commit",
+      "domain": "git",
+      "related": {
+        "How": 0.15,
+        "Git": 0.15,
+        "HEAD": 0.15,
+        "Use": 0.15,
+        "undo": 0.15,
+        "git": 0.15
+      },
+      "properties": []
+    },
+    "gitignore": {
+      "name": "gitignore",
+      "domain": "git",
+      "related": {
+        "What": 0.15,
+        "Git": 0.15,
+        "Common": 0.15,
+        "Place": 0.15,
+        "Each": 0.15,
+        "Use": 0.15,
+        "what": 0.15
+      },
+      "properties": []
+    },
+    "cherry": {
+      "name": "cherry",
+      "domain": "git",
+      "related": {
+        "What": 0.15,
+        "Useful": 0.15,
+        "what": 0.15,
+        "git": 0.15,
+        "pick": 0.15
+      },
+      "properties": []
+    },
+    "pick": {
+      "name": "pick",
+      "domain": "git",
+      "related": {
+        "What": 0.15,
+        "Useful": 0.15,
+        "what": 0.15,
+        "git": 0.15,
+        "cherry": 0.15
+      },
+      "properties": []
+    },
+    "Start": {
+      "name": "Start",
+      "domain": "git",
+      "related": {
+        "What": 0.15,
+        "Git": 0.15,
+        "what": 0.15,
+        "git": 0.15,
+        "bisect": 0.15
+      },
+      "properties": []
+    },
+    "bisect": {
+      "name": "bisect",
+      "domain": "git",
+      "related": {
+        "What": 0.15,
+        "Start": 0.15,
+        "Git": 0.15,
+        "what": 0.15,
+        "git": 0.15
+      },
+      "properties": []
+    },
+    "Big": {
+      "name": "Big",
+      "domain": "algorithms",
+      "related": {
+        "What": 0.15,
+        "Measures": 0.15,
+        "what": 0.15,
+        "big": 0.15,
+        "notation": 0.15,
+        "Help": 0.15,
+        "TCP": 0.15,
+        "OSI": 0.15,
+        "Python": 0.15,
+        "OOP": 0.15,
+        "Git": 0.15,
+        "TDD": 0.15,
+        "Just": 0.15,
+        "IP": 0.15,
+        "help": 0.15
+      },
+      "properties": []
+    },
+    "Measures": {
+      "name": "Measures",
+      "domain": "algorithms",
+      "related": {
+        "What": 0.15,
+        "Big": 0.15,
+        "what": 0.15,
+        "big": 0.15,
+        "notation": 0.15
+      },
+      "properties": []
+    },
+    "big": {
+      "name": "big",
+      "domain": "algorithms",
+      "related": {
+        "What": 0.15,
+        "Big": 0.15,
+        "Measures": 0.15,
+        "what": 0.15,
+        "notation": 0.15
+      },
+      "properties": []
+    },
+    "notation": {
+      "name": "notation",
+      "domain": "algorithms",
+      "related": {
+        "What": 0.15,
+        "Big": 0.15,
+        "Measures": 0.15,
+        "what": 0.15,
+        "big": 0.15
+      },
+      "properties": []
+    },
+    "Binary": {
+      "name": "Binary",
+      "domain": "algorithms",
+      "related": {
+        "What": 0.15,
+        "Compare": 0.15,
+        "Requires": 0.15,
+        "what": 0.15,
+        "binary": 0.15,
+        "search": 0.15
+      },
+      "properties": []
+    },
+    "Compare": {
+      "name": "Compare",
+      "domain": "algorithms",
+      "related": {
+        "What": 0.15,
+        "Binary": 0.15,
+        "Requires": 0.15,
+        "what": 0.15,
+        "binary": 0.15,
+        "search": 0.15
+      },
+      "properties": []
+    },
+    "Requires": {
+      "name": "Requires",
+      "domain": "algorithms",
+      "related": {
+        "What": 0.15,
+        "Binary": 0.15,
+        "Compare": 0.15,
+        "what": 0.15,
+        "binary": 0.15,
+        "search": 0.15
+      },
+      "properties": []
+    },
+    "binary": {
+      "name": "binary",
+      "domain": "algorithms",
+      "related": {
+        "What": 0.15,
+        "Binary": 0.15,
+        "Compare": 0.15,
+        "Requires": 0.15,
+        "what": 0.15,
+        "search": 0.15
+      },
+      "properties": []
+    },
+    "search": {
+      "name": "search",
+      "domain": "algorithms",
+      "related": {
+        "What": 0.15,
+        "Binary": 0.15,
+        "Compare": 0.15,
+        "Requires": 0.15,
+        "what": 0.15,
+        "binary": 0.15
+      },
+      "properties": []
+    },
+    "BFS": {
+      "name": "BFS",
+      "domain": "algorithms",
+      "related": {
+        "What": 0.15,
+        "Breadth": 0.15,
+        "First": 0.15,
+        "Search": 0.15,
+        "Visits": 0.15,
+        "Finds": 0.15,
+        "Used": 0.15,
+        "what": 0.15,
+        "bfs": 0.15
+      },
+      "properties": []
+    },
+    "Breadth": {
+      "name": "Breadth",
+      "domain": "algorithms",
+      "related": {
+        "What": 0.15,
+        "BFS": 0.15,
+        "First": 0.15,
+        "Search": 0.15,
+        "Visits": 0.15,
+        "Finds": 0.15,
+        "Used": 0.15,
+        "what": 0.15,
+        "bfs": 0.15
+      },
+      "properties": []
+    },
+    "Search": {
+      "name": "Search",
+      "domain": "algorithms",
+      "related": {
+        "What": 0.3,
+        "BFS": 0.15,
+        "Breadth": 0.15,
+        "First": 0.3,
+        "Visits": 0.15,
+        "Finds": 0.15,
+        "Used": 0.3,
+        "what": 0.3,
+        "bfs": 0.15,
+        "DFS": 0.15,
+        "Depth": 0.15,
+        "dfs": 0.15
+      },
+      "properties": []
+    },
+    "Visits": {
+      "name": "Visits",
+      "domain": "algorithms",
+      "related": {
+        "What": 0.15,
+        "BFS": 0.15,
+        "Breadth": 0.15,
+        "First": 0.15,
+        "Search": 0.15,
+        "Finds": 0.15,
+        "Used": 0.15,
+        "what": 0.15,
+        "bfs": 0.15
+      },
+      "properties": []
+    },
+    "Finds": {
+      "name": "Finds",
+      "domain": "algorithms",
+      "related": {
+        "What": 0.15,
+        "BFS": 0.15,
+        "Breadth": 0.15,
+        "First": 0.15,
+        "Search": 0.15,
+        "Visits": 0.15,
+        "Used": 0.15,
+        "what": 0.15,
+        "bfs": 0.15
+      },
+      "properties": []
+    },
+    "bfs": {
+      "name": "bfs",
+      "domain": "algorithms",
+      "related": {
+        "What": 0.15,
+        "BFS": 0.15,
+        "Breadth": 0.15,
+        "First": 0.15,
+        "Search": 0.15,
+        "Visits": 0.15,
+        "Finds": 0.15,
+        "Used": 0.15,
+        "what": 0.15
+      },
+      "properties": []
+    },
+    "Depth": {
+      "name": "Depth",
+      "domain": "algorithms",
+      "related": {
+        "What": 0.15,
+        "DFS": 0.15,
+        "First": 0.15,
+        "Search": 0.15,
+        "Used": 0.15,
+        "what": 0.15,
+        "dfs": 0.15
+      },
+      "properties": []
+    },
+    "Average": {
+      "name": "Average",
+      "domain": "algorithms",
+      "related": {
+        "What": 0.3,
+        "Handles": 0.15,
+        "Python": 0.3,
+        "what": 0.3,
+        "hash": 0.15,
+        "table": 0.15,
+        "Quicksort": 0.15,
+        "Pick": 0.15,
+        "Timsort": 0.15,
+        "quicksort": 0.15
+      },
+      "properties": []
+    },
+    "Handles": {
+      "name": "Handles",
+      "domain": "algorithms",
+      "related": {
+        "What": 0.15,
+        "Average": 0.15,
+        "Python": 0.15,
+        "what": 0.15,
+        "hash": 0.15,
+        "table": 0.15
+      },
+      "properties": []
+    },
+    "hash": {
+      "name": "hash",
+      "domain": "algorithms",
+      "related": {
+        "What": 0.15,
+        "Average": 0.15,
+        "Handles": 0.15,
+        "Python": 0.15,
+        "what": 0.15,
+        "table": 0.15
+      },
+      "properties": []
+    },
+    "table": {
+      "name": "table",
+      "domain": "algorithms",
+      "related": {
+        "What": 0.15,
+        "Average": 0.15,
+        "Handles": 0.15,
+        "Python": 0.15,
+        "what": 0.15,
+        "hash": 0.15
+      },
+      "properties": []
+    },
+    "Fibonacci": {
+      "name": "Fibonacci",
+      "domain": "algorithms",
+      "related": {
+        "What": 0.15,
+        "Dynamic": 0.15,
+        "Example": 0.15,
+        "DP": 0.15,
+        "what": 0.15,
+        "dynamic": 0.15,
+        "programming": 0.15
+      },
+      "properties": []
+    },
+    "DP": {
+      "name": "DP",
+      "domain": "algorithms",
+      "related": {
+        "What": 0.15,
+        "Dynamic": 0.15,
+        "Example": 0.15,
+        "Fibonacci": 0.15,
+        "what": 0.15,
+        "dynamic": 0.15,
+        "programming": 0.15
+      },
+      "properties": []
+    },
+    "Quicksort": {
+      "name": "Quicksort",
+      "domain": "algorithms",
+      "related": {
+        "What": 0.15,
+        "Pick": 0.15,
+        "Average": 0.15,
+        "Python": 0.15,
+        "Timsort": 0.15,
+        "what": 0.15,
+        "quicksort": 0.15
+      },
+      "properties": [
+        "divide-and-conquer sorting algorithm"
+      ]
+    },
+    "Pick": {
+      "name": "Pick",
+      "domain": "algorithms",
+      "related": {
+        "What": 0.15,
+        "Quicksort": 0.15,
+        "Average": 0.15,
+        "Python": 0.15,
+        "Timsort": 0.15,
+        "what": 0.15,
+        "quicksort": 0.15
+      },
+      "properties": [
+        "divide-and-conquer sorting algorithm"
+      ]
+    },
+    "Timsort": {
+      "name": "Timsort",
+      "domain": "algorithms",
+      "related": {
+        "What": 0.15,
+        "Quicksort": 0.15,
+        "Pick": 0.15,
+        "Average": 0.15,
+        "Python": 0.15,
+        "what": 0.15,
+        "quicksort": 0.15
+      },
+      "properties": []
+    },
+    "quicksort": {
+      "name": "quicksort",
+      "domain": "algorithms",
+      "related": {
+        "What": 0.15,
+        "Quicksort": 0.15,
+        "Pick": 0.15,
+        "Average": 0.15,
+        "Python": 0.15,
+        "Timsort": 0.15,
+        "what": 0.15
+      },
+      "properties": []
+    },
+    "Singly": {
+      "name": "Singly",
+      "domain": "algorithms",
+      "related": {
+        "What": 0.15,
+        "Doubly": 0.15,
+        "Used": 0.15,
+        "what": 0.15,
+        "linked": 0.15,
+        "list": 0.15
+      },
+      "properties": []
+    },
+    "Doubly": {
+      "name": "Doubly",
+      "domain": "algorithms",
+      "related": {
+        "What": 0.15,
+        "Singly": 0.15,
+        "Used": 0.15,
+        "what": 0.15,
+        "linked": 0.15,
+        "list": 0.15
+      },
+      "properties": []
+    },
+    "linked": {
+      "name": "linked",
+      "domain": "algorithms",
+      "related": {
+        "What": 0.15,
+        "Singly": 0.15,
+        "Doubly": 0.15,
+        "Used": 0.15,
+        "what": 0.15,
+        "list": 0.15
+      },
+      "properties": []
+    },
+    "Code": {
+      "name": "Code",
+      "domain": "debugging",
+      "related": {
+        "How": 0.15,
+        "Python": 0.15,
+        "Use": 0.15,
+        "Step": 0.15,
+        "Also": 0.15,
+        "IDE": 0.15,
+        "VS": 0.15,
+        "debug": 0.15,
+        "python": 0.15,
+        "code": 0.15
+      },
+      "properties": []
+    },
+    "Step": {
+      "name": "Step",
+      "domain": "debugging",
+      "related": {
+        "How": 0.15,
+        "Python": 0.15,
+        "Use": 0.15,
+        "Code": 0.15,
+        "Also": 0.15,
+        "IDE": 0.15,
+        "VS": 0.15,
+        "debug": 0.15,
+        "python": 0.15,
+        "code": 0.15
+      },
+      "properties": []
+    },
+    "Also": {
+      "name": "Also",
+      "domain": "debugging",
+      "related": {
+        "How": 0.15,
+        "Python": 0.15,
+        "Use": 0.15,
+        "Code": 0.15,
+        "Step": 0.15,
+        "IDE": 0.15,
+        "VS": 0.15,
+        "debug": 0.15,
+        "python": 0.15,
+        "code": 0.15
+      },
+      "properties": []
+    },
+    "VS": {
+      "name": "VS",
+      "domain": "debugging",
+      "related": {
+        "How": 0.15,
+        "Python": 0.15,
+        "Use": 0.15,
+        "Code": 0.15,
+        "Step": 0.15,
+        "Also": 0.15,
+        "IDE": 0.15,
+        "debug": 0.15,
+        "python": 0.15,
+        "code": 0.15
+      },
+      "properties": []
+    },
+    "debug": {
+      "name": "debug",
+      "domain": "debugging",
+      "related": {
+        "How": 0.15,
+        "Python": 0.15,
+        "Use": 0.15,
+        "Code": 0.15,
+        "Step": 0.15,
+        "Also": 0.15,
+        "IDE": 0.15,
+        "VS": 0.15,
+        "python": 0.15,
+        "code": 0.15
+      },
+      "properties": []
+    },
+    "code": {
+      "name": "code",
+      "domain": "debugging",
+      "related": {
+        "How": 0.15,
+        "Python": 0.15,
+        "Use": 0.15,
+        "Code": 0.15,
+        "Step": 0.15,
+        "Also": 0.15,
+        "IDE": 0.15,
+        "VS": 0.15,
+        "debug": 0.15,
+        "python": 0.15
+      },
+      "properties": []
+    },
+    "Read": {
+      "name": "Read",
+      "domain": "debugging",
+      "related": {
+        "What": 0.15,
+        "Essential": 0.15,
+        "what": 0.15,
+        "stack": 0.15,
+        "trace": 0.15
+      },
+      "properties": []
+    },
+    "stack": {
+      "name": "stack",
+      "domain": "debugging",
+      "related": {
+        "What": 0.15,
+        "Read": 0.15,
+        "Essential": 0.15,
+        "what": 0.15,
+        "trace": 0.15
+      },
+      "properties": []
+    },
+    "trace": {
+      "name": "trace",
+      "domain": "debugging",
+      "related": {
+        "What": 0.15,
+        "Read": 0.15,
+        "Essential": 0.15,
+        "what": 0.15,
+        "stack": 0.15
+      },
+      "properties": []
+    },
+    "DEBUG": {
+      "name": "DEBUG",
+      "domain": "debugging",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "The": 0.15,
+        "INFO": 0.15,
+        "WARNING": 0.15,
+        "ERROR": 0.15,
+        "CRITICAL": 0.15,
+        "Use": 0.15,
+        "Better": 0.15,
+        "what": 0.15,
+        "logging": 0.15,
+        "python": 0.15
+      },
+      "properties": []
+    },
+    "INFO": {
+      "name": "INFO",
+      "domain": "debugging",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "The": 0.15,
+        "DEBUG": 0.15,
+        "WARNING": 0.15,
+        "ERROR": 0.15,
+        "CRITICAL": 0.15,
+        "Use": 0.15,
+        "Better": 0.15,
+        "what": 0.15,
+        "logging": 0.15,
+        "python": 0.15
+      },
+      "properties": []
+    },
+    "WARNING": {
+      "name": "WARNING",
+      "domain": "debugging",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "The": 0.15,
+        "DEBUG": 0.15,
+        "INFO": 0.15,
+        "ERROR": 0.15,
+        "CRITICAL": 0.15,
+        "Use": 0.15,
+        "Better": 0.15,
+        "what": 0.15,
+        "logging": 0.15,
+        "python": 0.15
+      },
+      "properties": []
+    },
+    "ERROR": {
+      "name": "ERROR",
+      "domain": "debugging",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "The": 0.15,
+        "DEBUG": 0.15,
+        "INFO": 0.15,
+        "WARNING": 0.15,
+        "CRITICAL": 0.15,
+        "Use": 0.15,
+        "Better": 0.15,
+        "what": 0.15,
+        "logging": 0.15,
+        "python": 0.15
+      },
+      "properties": []
+    },
+    "CRITICAL": {
+      "name": "CRITICAL",
+      "domain": "debugging",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "The": 0.15,
+        "DEBUG": 0.15,
+        "INFO": 0.15,
+        "WARNING": 0.15,
+        "ERROR": 0.15,
+        "Use": 0.15,
+        "Better": 0.15,
+        "what": 0.15,
+        "logging": 0.15,
+        "python": 0.15
+      },
+      "properties": []
+    },
+    "Better": {
+      "name": "Better",
+      "domain": "debugging",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "The": 0.15,
+        "DEBUG": 0.15,
+        "INFO": 0.15,
+        "WARNING": 0.15,
+        "ERROR": 0.15,
+        "CRITICAL": 0.15,
+        "Use": 0.15,
+        "what": 0.15,
+        "logging": 0.15,
+        "python": 0.15
+      },
+      "properties": []
+    },
+    "logging": {
+      "name": "logging",
+      "domain": "debugging",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "The": 0.15,
+        "DEBUG": 0.15,
+        "INFO": 0.15,
+        "WARNING": 0.15,
+        "ERROR": 0.15,
+        "CRITICAL": 0.15,
+        "Use": 0.15,
+        "Better": 0.15,
+        "what": 0.15,
+        "python": 0.15
+      },
+      "properties": []
+    },
+    "Profiling": {
+      "name": "Profiling",
+      "domain": "debugging",
+      "related": {
+        "What": 0.15,
+        "Use": 0.15,
+        "For": 0.15,
+        "Identify": 0.15,
+        "what": 0.15,
+        "profiling": 0.15
+      },
+      "properties": []
+    },
+    "profiling": {
+      "name": "profiling",
+      "domain": "debugging",
+      "related": {
+        "What": 0.15,
+        "Profiling": 0.15,
+        "Use": 0.15,
+        "For": 0.15,
+        "Identify": 0.15,
+        "what": 0.15
+      },
+      "properties": []
+    },
+    "TypeError": {
+      "name": "TypeError",
+      "domain": "debugging",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "ValueError": 0.15,
+        "KeyError": 0.15,
+        "IndexError": 0.15,
+        "AttributeError": 0.15,
+        "ImportError": 0.15,
+        "NameError": 0.15,
+        "FileNotFoundError": 0.15,
+        "what": 0.15,
+        "common": 0.15,
+        "python": 0.15,
+        "error": 0.15,
+        "types": 0.15
+      },
+      "properties": []
+    },
+    "ValueError": {
+      "name": "ValueError",
+      "domain": "debugging",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "TypeError": 0.15,
+        "KeyError": 0.15,
+        "IndexError": 0.15,
+        "AttributeError": 0.15,
+        "ImportError": 0.15,
+        "NameError": 0.15,
+        "FileNotFoundError": 0.15,
+        "what": 0.15,
+        "common": 0.15,
+        "python": 0.15,
+        "error": 0.15,
+        "types": 0.15
+      },
+      "properties": []
+    },
+    "KeyError": {
+      "name": "KeyError",
+      "domain": "debugging",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "TypeError": 0.15,
+        "ValueError": 0.15,
+        "IndexError": 0.15,
+        "AttributeError": 0.15,
+        "ImportError": 0.15,
+        "NameError": 0.15,
+        "FileNotFoundError": 0.15,
+        "what": 0.15,
+        "common": 0.15,
+        "python": 0.15,
+        "error": 0.15,
+        "types": 0.15
+      },
+      "properties": []
+    },
+    "IndexError": {
+      "name": "IndexError",
+      "domain": "debugging",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "TypeError": 0.15,
+        "ValueError": 0.15,
+        "KeyError": 0.15,
+        "AttributeError": 0.15,
+        "ImportError": 0.15,
+        "NameError": 0.15,
+        "FileNotFoundError": 0.15,
+        "what": 0.15,
+        "common": 0.15,
+        "python": 0.15,
+        "error": 0.15,
+        "types": 0.15
+      },
+      "properties": []
+    },
+    "AttributeError": {
+      "name": "AttributeError",
+      "domain": "debugging",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "TypeError": 0.15,
+        "ValueError": 0.15,
+        "KeyError": 0.15,
+        "IndexError": 0.15,
+        "ImportError": 0.15,
+        "NameError": 0.15,
+        "FileNotFoundError": 0.15,
+        "what": 0.15,
+        "common": 0.15,
+        "python": 0.15,
+        "error": 0.15,
+        "types": 0.15
+      },
+      "properties": []
+    },
+    "ImportError": {
+      "name": "ImportError",
+      "domain": "debugging",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "TypeError": 0.15,
+        "ValueError": 0.15,
+        "KeyError": 0.15,
+        "IndexError": 0.15,
+        "AttributeError": 0.15,
+        "NameError": 0.15,
+        "FileNotFoundError": 0.15,
+        "what": 0.15,
+        "common": 0.15,
+        "python": 0.15,
+        "error": 0.15,
+        "types": 0.15
+      },
+      "properties": []
+    },
+    "NameError": {
+      "name": "NameError",
+      "domain": "debugging",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "TypeError": 0.15,
+        "ValueError": 0.15,
+        "KeyError": 0.15,
+        "IndexError": 0.15,
+        "AttributeError": 0.15,
+        "ImportError": 0.15,
+        "FileNotFoundError": 0.15,
+        "what": 0.15,
+        "common": 0.15,
+        "python": 0.15,
+        "error": 0.15,
+        "types": 0.15
+      },
+      "properties": []
+    },
+    "FileNotFoundError": {
+      "name": "FileNotFoundError",
+      "domain": "debugging",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "TypeError": 0.15,
+        "ValueError": 0.15,
+        "KeyError": 0.15,
+        "IndexError": 0.15,
+        "AttributeError": 0.15,
+        "ImportError": 0.15,
+        "NameError": 0.15,
+        "what": 0.15,
+        "common": 0.15,
+        "python": 0.15,
+        "error": 0.15,
+        "types": 0.15
+      },
+      "properties": []
+    },
+    "common": {
+      "name": "common",
+      "domain": "debugging",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "TypeError": 0.15,
+        "ValueError": 0.15,
+        "KeyError": 0.15,
+        "IndexError": 0.15,
+        "AttributeError": 0.15,
+        "ImportError": 0.15,
+        "NameError": 0.15,
+        "FileNotFoundError": 0.15,
+        "what": 0.15,
+        "python": 0.15,
+        "error": 0.15,
+        "types": 0.15
+      },
+      "properties": []
+    },
+    "error": {
+      "name": "error",
+      "domain": "debugging",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "TypeError": 0.15,
+        "ValueError": 0.15,
+        "KeyError": 0.15,
+        "IndexError": 0.15,
+        "AttributeError": 0.15,
+        "ImportError": 0.15,
+        "NameError": 0.15,
+        "FileNotFoundError": 0.15,
+        "what": 0.15,
+        "common": 0.15,
+        "python": 0.15,
+        "types": 0.15
+      },
+      "properties": []
+    },
+    "types": {
+      "name": "types",
+      "domain": "debugging",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "TypeError": 0.15,
+        "ValueError": 0.15,
+        "KeyError": 0.15,
+        "IndexError": 0.15,
+        "AttributeError": 0.15,
+        "ImportError": 0.15,
+        "NameError": 0.15,
+        "FileNotFoundError": 0.15,
+        "what": 0.15,
+        "common": 0.15,
+        "python": 0.15,
+        "error": 0.15
+      },
+      "properties": []
+    },
+    "memory": {
+      "name": "memory",
+      "domain": "debugging",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "Use": 0.15,
+        "what": 0.15,
+        "leak": 0.15
+      },
+      "properties": []
+    },
+    "leak": {
+      "name": "leak",
+      "domain": "debugging",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "Use": 0.15,
+        "what": 0.15,
+        "memory": 0.15
+      },
+      "properties": []
+    },
+    "Unit": {
+      "name": "Unit",
+      "domain": "testing",
+      "related": {
+        "What": 0.3,
+        "Each": 0.15,
+        "Python": 0.15,
+        "what": 0.3,
+        "unit": 0.3,
+        "testing": 0.15,
+        "Integration": 0.15,
+        "API": 0.15,
+        "difference": 0.15,
+        "and": 0.15,
+        "integration": 0.15,
+        "tests": 0.15
+      },
+      "properties": []
+    },
+    "unit": {
+      "name": "unit",
+      "domain": "testing",
+      "related": {
+        "What": 0.3,
+        "Unit": 0.3,
+        "Each": 0.15,
+        "Python": 0.15,
+        "what": 0.3,
+        "testing": 0.15,
+        "Integration": 0.15,
+        "API": 0.15,
+        "difference": 0.15,
+        "and": 0.15,
+        "integration": 0.15,
+        "tests": 0.15
+      },
+      "properties": []
+    },
+    "Integration": {
+      "name": "Integration",
+      "domain": "testing",
+      "related": {
+        "What": 0.15,
+        "Unit": 0.15,
+        "API": 0.15,
+        "what": 0.15,
+        "difference": 0.15,
+        "unit": 0.15,
+        "and": 0.15,
+        "integration": 0.15,
+        "tests": 0.15
+      },
+      "properties": []
+    },
+    "integration": {
+      "name": "integration",
+      "domain": "testing",
+      "related": {
+        "What": 0.15,
+        "Unit": 0.15,
+        "Integration": 0.15,
+        "API": 0.15,
+        "what": 0.15,
+        "difference": 0.15,
+        "unit": 0.15,
+        "and": 0.15,
+        "tests": 0.15
+      },
+      "properties": []
+    },
+    "tests": {
+      "name": "tests",
+      "domain": "testing",
+      "related": {
+        "What": 0.15,
+        "Unit": 0.15,
+        "Integration": 0.15,
+        "API": 0.15,
+        "what": 0.15,
+        "difference": 0.15,
+        "unit": 0.15,
+        "and": 0.15,
+        "integration": 0.15
+      },
+      "properties": []
+    },
+    "Mocking": {
+      "name": "Mocking",
+      "domain": "testing",
+      "related": {
+        "What": 0.15,
+        "Python": 0.15,
+        "MagicMock": 0.15,
+        "Verify": 0.15,
+        "what": 0.15,
+        "mocking": 0.15
+      },
+      "properties": []
+    },
+    "MagicMock": {
+      "name": "MagicMock",
+      "domain": "testing",
+      "related": {
+        "What": 0.15,
+        "Mocking": 0.15,
+        "Python": 0.15,
+        "Verify": 0.15,
+        "what": 0.15,
+        "mocking": 0.15
+      },
+      "properties": []
+    },
+    "mocking": {
+      "name": "mocking",
+      "domain": "testing",
+      "related": {
+        "What": 0.15,
+        "Mocking": 0.15,
+        "Python": 0.15,
+        "MagicMock": 0.15,
+        "Verify": 0.15,
+        "what": 0.15
+      },
+      "properties": []
+    },
+    "Aim": {
+      "name": "Aim",
+      "domain": "testing",
+      "related": {
+        "What": 0.15,
+        "Test": 0.15,
+        "Run": 0.15,
+        "what": 0.15,
+        "test": 0.15,
+        "coverage": 0.15
+      },
+      "properties": []
+    },
+    "test": {
+      "name": "test",
+      "domain": "testing",
+      "related": {
+        "What": 0.15,
+        "Test": 0.15,
+        "Run": 0.15,
+        "Aim": 0.15,
+        "what": 0.15,
+        "coverage": 0.15
+      },
+      "properties": []
+    },
+    "coverage": {
+      "name": "coverage",
+      "domain": "testing",
+      "related": {
+        "What": 0.15,
+        "Test": 0.15,
+        "Run": 0.15,
+        "Aim": 0.15,
+        "what": 0.15,
+        "test": 0.15
+      },
+      "properties": []
+    },
+    "TDD": {
+      "name": "TDD",
+      "domain": "testing",
+      "related": {
+        "What": 0.15,
+        "Test": 0.15,
+        "Driven": 0.15,
+        "Development": 0.15,
+        "Red": 0.15,
+        "Green": 0.15,
+        "Refactor": 0.15,
+        "Forces": 0.15,
+        "Results": 0.15,
+        "what": 0.15,
+        "tdd": 0.15,
+        "Help": 0.15,
+        "TCP": 0.15,
+        "OSI": 0.15,
+        "Python": 0.15,
+        "OOP": 0.15,
+        "Big": 0.15,
+        "Git": 0.15,
+        "Just": 0.15,
+        "IP": 0.15,
+        "help": 0.15
+      },
+      "properties": []
+    },
+    "Driven": {
+      "name": "Driven",
+      "domain": "testing",
+      "related": {
+        "What": 0.15,
+        "TDD": 0.15,
+        "Test": 0.15,
+        "Development": 0.15,
+        "Red": 0.15,
+        "Green": 0.15,
+        "Refactor": 0.15,
+        "Forces": 0.15,
+        "Results": 0.15,
+        "what": 0.15,
+        "tdd": 0.15
+      },
+      "properties": []
+    },
+    "Development": {
+      "name": "Development",
+      "domain": "testing",
+      "related": {
+        "What": 0.15,
+        "TDD": 0.15,
+        "Test": 0.15,
+        "Driven": 0.15,
+        "Red": 0.15,
+        "Green": 0.15,
+        "Refactor": 0.15,
+        "Forces": 0.15,
+        "Results": 0.15,
+        "what": 0.15,
+        "tdd": 0.15
+      },
+      "properties": []
+    },
+    "Red": {
+      "name": "Red",
+      "domain": "testing",
+      "related": {
+        "What": 0.15,
+        "TDD": 0.15,
+        "Test": 0.15,
+        "Driven": 0.15,
+        "Development": 0.15,
+        "Green": 0.15,
+        "Refactor": 0.15,
+        "Forces": 0.15,
+        "Results": 0.15,
+        "what": 0.15,
+        "tdd": 0.15
+      },
+      "properties": []
+    },
+    "Green": {
+      "name": "Green",
+      "domain": "testing",
+      "related": {
+        "What": 0.15,
+        "TDD": 0.15,
+        "Test": 0.15,
+        "Driven": 0.15,
+        "Development": 0.15,
+        "Red": 0.15,
+        "Refactor": 0.15,
+        "Forces": 0.15,
+        "Results": 0.15,
+        "what": 0.15,
+        "tdd": 0.15
+      },
+      "properties": []
+    },
+    "Refactor": {
+      "name": "Refactor",
+      "domain": "testing",
+      "related": {
+        "What": 0.15,
+        "TDD": 0.15,
+        "Test": 0.15,
+        "Driven": 0.15,
+        "Development": 0.15,
+        "Red": 0.15,
+        "Green": 0.15,
+        "Forces": 0.15,
+        "Results": 0.15,
+        "what": 0.15,
+        "tdd": 0.15
+      },
+      "properties": []
+    },
+    "Forces": {
+      "name": "Forces",
+      "domain": "testing",
+      "related": {
+        "What": 0.15,
+        "TDD": 0.15,
+        "Test": 0.15,
+        "Driven": 0.15,
+        "Development": 0.15,
+        "Red": 0.15,
+        "Green": 0.15,
+        "Refactor": 0.15,
+        "Results": 0.15,
+        "what": 0.15,
+        "tdd": 0.15
+      },
+      "properties": []
+    },
+    "Results": {
+      "name": "Results",
+      "domain": "testing",
+      "related": {
+        "What": 0.15,
+        "TDD": 0.15,
+        "Test": 0.15,
+        "Driven": 0.15,
+        "Development": 0.15,
+        "Red": 0.15,
+        "Green": 0.15,
+        "Refactor": 0.15,
+        "Forces": 0.15,
+        "what": 0.15,
+        "tdd": 0.15
+      },
+      "properties": []
+    },
+    "tdd": {
+      "name": "tdd",
+      "domain": "testing",
+      "related": {
+        "What": 0.15,
+        "TDD": 0.15,
+        "Test": 0.15,
+        "Driven": 0.15,
+        "Development": 0.15,
+        "Red": 0.15,
+        "Green": 0.15,
+        "Refactor": 0.15,
+        "Forces": 0.15,
+        "Results": 0.15,
+        "what": 0.15
+      },
+      "properties": []
+    },
+    "Fixtures": {
+      "name": "Fixtures",
+      "domain": "testing",
+      "related": {
+        "What": 0.15,
+        "Decorated": 0.15,
+        "Use": 0.15,
+        "True": 0.15,
+        "Scopes": 0.15,
+        "Yield": 0.15,
+        "what": 0.15,
+        "pytest": 0.15,
+        "fixtures": 0.15
+      },
+      "properties": []
+    },
+    "Decorated": {
+      "name": "Decorated",
+      "domain": "testing",
+      "related": {
+        "What": 0.15,
+        "Fixtures": 0.15,
+        "Use": 0.15,
+        "True": 0.15,
+        "Scopes": 0.15,
+        "Yield": 0.15,
+        "what": 0.15,
+        "pytest": 0.15,
+        "fixtures": 0.15
+      },
+      "properties": []
+    },
+    "Scopes": {
+      "name": "Scopes",
+      "domain": "testing",
+      "related": {
+        "What": 0.15,
+        "Fixtures": 0.15,
+        "Decorated": 0.15,
+        "Use": 0.15,
+        "True": 0.15,
+        "Yield": 0.15,
+        "what": 0.15,
+        "pytest": 0.15,
+        "fixtures": 0.15
+      },
+      "properties": []
+    },
+    "Yield": {
+      "name": "Yield",
+      "domain": "testing",
+      "related": {
+        "What": 0.15,
+        "Fixtures": 0.15,
+        "Decorated": 0.15,
+        "Use": 0.15,
+        "True": 0.15,
+        "Scopes": 0.15,
+        "what": 0.15,
+        "pytest": 0.15,
+        "fixtures": 0.15
+      },
+      "properties": []
+    },
+    "pytest": {
+      "name": "pytest",
+      "domain": "testing",
+      "related": {
+        "What": 0.15,
+        "Fixtures": 0.15,
+        "Decorated": 0.15,
+        "Use": 0.15,
+        "True": 0.15,
+        "Scopes": 0.15,
+        "Yield": 0.15,
+        "what": 0.15,
+        "fixtures": 0.15
+      },
+      "properties": []
+    },
+    "fixtures": {
+      "name": "fixtures",
+      "domain": "testing",
+      "related": {
+        "What": 0.15,
+        "Fixtures": 0.15,
+        "Decorated": 0.15,
+        "Use": 0.15,
+        "True": 0.15,
+        "Scopes": 0.15,
+        "Yield": 0.15,
+        "what": 0.15,
+        "pytest": 0.15
+      },
+      "properties": []
+    },
     "NumPy": {
       "name": "NumPy",
       "domain": "general",
       "related": {
-        "What": 0.3,
-        "what": 0.3,
+        "What": 0.15,
+        "what": 0.15,
         "libaix": 0.15,
-        "AI": 0.15
+        "Hello": 0.15,
+        "Git": 0.15,
+        "Ask": 0.15,
+        "hello": 0.15
       },
       "properties": [
         "neural network built from scratch using only NumPy"
@@ -22663,18 +26292,6 @@
       "domain": "general",
       "related": {
         "GitHub": 0.15,
-        "ML": 0.15,
-        "who": 0.15,
-        "made": 0.15,
-        "libaix": 0.15
-      },
-      "properties": []
-    },
-    "GitHub": {
-      "name": "GitHub",
-      "domain": "general",
-      "related": {
-        "Who": 0.15,
         "ML": 0.15,
         "who": 0.15,
         "made": 0.15,
@@ -22718,22 +26335,25 @@
       },
       "properties": []
     },
+    "Say": {
+      "name": "Say",
+      "domain": "general",
+      "related": {
+        "What": 0.15,
+        "Git": 0.15,
+        "AI": 0.15,
+        "what": 0.15
+      },
+      "properties": []
+    },
     "AI": {
       "name": "AI",
       "domain": "general",
       "related": {
         "What": 0.15,
-        "NumPy": 0.15,
+        "Git": 0.15,
+        "Say": 0.15,
         "what": 0.15
-      },
-      "properties": []
-    },
-    "Hello": {
-      "name": "Hello",
-      "domain": "general",
-      "related": {
-        "Ask": 0.15,
-        "hello": 0.15
       },
       "properties": []
     },
@@ -22742,6 +26362,8 @@
       "domain": "general",
       "related": {
         "Hello": 0.15,
+        "NumPy": 0.15,
+        "Git": 0.15,
         "hello": 0.15
       },
       "properties": []
@@ -22751,6 +26373,8 @@
       "domain": "general",
       "related": {
         "Hello": 0.15,
+        "NumPy": 0.15,
+        "Git": 0.15,
         "Ask": 0.15
       },
       "properties": []
@@ -22761,13 +26385,13 @@
       "related": {
         "TCP": 0.15,
         "OSI": 0.15,
-        "WAN": 0.15,
-        "BYOD": 0.15,
-        "QoS": 0.15,
-        "PKI": 0.15,
+        "Python": 0.15,
+        "OOP": 0.15,
+        "Big": 0.15,
+        "Git": 0.15,
+        "TDD": 0.15,
         "Just": 0.15,
         "IP": 0.15,
-        "SD": 0.15,
         "help": 0.15
       },
       "properties": []
@@ -22779,12 +26403,12 @@
         "Help": 0.15,
         "TCP": 0.15,
         "OSI": 0.15,
-        "WAN": 0.15,
-        "BYOD": 0.15,
-        "QoS": 0.15,
-        "PKI": 0.15,
+        "Python": 0.15,
+        "OOP": 0.15,
+        "Big": 0.15,
+        "Git": 0.15,
+        "TDD": 0.15,
         "IP": 0.15,
-        "SD": 0.15,
         "help": 0.15
       },
       "properties": []
@@ -22796,16 +26420,16 @@
         "Help": 0.15,
         "TCP": 0.15,
         "OSI": 0.15,
-        "WAN": 0.15,
-        "BYOD": 0.15,
-        "QoS": 0.15,
-        "PKI": 0.15,
+        "Python": 0.15,
+        "OOP": 0.15,
+        "Big": 0.15,
+        "Git": 0.15,
+        "TDD": 0.15,
         "Just": 0.15,
-        "IP": 0.15,
-        "SD": 0.15
+        "IP": 0.15
       },
       "properties": []
     }
   },
-  "saved_at": "2026-04-03T22:57:40.673073+00:00"
+  "saved_at": "2026-04-05T02:43:37.553691+00:00"
 }

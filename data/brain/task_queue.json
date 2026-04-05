@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "title": "Fix: Missing tests for train.py",
+    "description": "Module train.py (109 lines, 2 functions) has no dedicated test file 'test_train.py'.",
+    "agent": "tester",
+    "priority": 5,
+    "category": "testing",
+    "status": "pending",
+    "created_at": "2026-04-04T06:13:58.897535+00:00",
+    "completed_at": null
+  },
+  {
+    "id": 2,
+    "title": "Fix: Missing tests for train_knowledge.py",
+    "description": "Module train_knowledge.py (265 lines, 4 functions) has no dedicated test file 'test_train_knowledge.py'.",
+    "agent": "tester",
+    "priority": 5,
+    "category": "testing",
+    "status": "pending",
+    "created_at": "2026-04-04T06:13:58.910964+00:00",
+    "completed_at": null
+  },
+  {
+    "id": 3,
+    "title": "Fix: Missing tests for ml_engine.py",
+    "description": "Module ml_engine.py (587 lines, 14 functions) has no dedicated test file 'test_ml_engine.py'.",
+    "agent": "tester",
+    "priority": 5,
+    "category": "testing",
+    "status": "pending",
+    "created_at": "2026-04-04T06:13:58.926420+00:00",
+    "completed_at": null
+  },
+  {
+    "id": 4,
+    "title": "Fix: Missing tests for crawler.py",
+    "description": "Module crawler.py (257 lines, 12 functions) has no dedicated test file 'test_crawler.py'.",
+    "agent": "tester",
+    "priority": 5,
+    "category": "testing",
+    "status": "pending",
+    "created_at": "2026-04-04T06:13:58.943758+00:00",
+    "completed_at": null
+  },
+  {
+    "id": 5,
+    "title": "Fix: Missing tests for forum_crawler.py",
+    "description": "Module forum_crawler.py (663 lines, 19 functions) has no dedicated test file 'test_forum_crawler.py'.",
+    "agent": "tester",
+    "priority": 5,
+    "category": "testing",
+    "status": "pending",
+    "created_at": "2026-04-04T06:13:58.960417+00:00",
+    "completed_at": null
+  },
+  {
+    "id": 6,
+    "title": "Fix: Missing tests for site_crawler.py",
+    "description": "Module site_crawler.py (361 lines, 15 functions) has no dedicated test file 'test_site_crawler.py'.",
+    "agent": "tester",
+    "priority": 5,
+    "category": "testing",
+    "status": "pending",
+    "created_at": "2026-04-04T06:13:58.985672+00:00",
+    "completed_at": null
+  },
+  {
+    "id": 7,
+    "title": "Fix: Missing tests for file_processor.py",
+    "description": "Module file_processor.py (244 lines, 12 functions) has no dedicated test file 'test_file_processor.py'.",
+    "agent": "tester",
+    "priority": 5,
+    "category": "testing",
+    "status": "pending",
+    "created_at": "2026-04-04T06:13:59.013801+00:00",
+    "completed_at": null
+  },
+  {
+    "id": 8,
+    "title": "Fix: Missing tests for local_scheduler.py",
+    "description": "Module local_scheduler.py (370 lines, 17 functions) has no dedicated test file 'test_local_scheduler.py'.",
+    "agent": "tester",
+    "priority": 5,
+    "category": "testing",
+    "status": "pending",
+    "created_at": "2026-04-04T06:13:59.030947+00:00",
+    "completed_at": null
+  },
+  {
+    "id": 9,
+    "title": "Fix: Low test coverage in test_digest_engine.py",
+    "description": "test_digest_engine.py has 7 tests but digest_engine.py has 17 functions. Consider adding more tests.",
+    "agent": "tester",
+    "priority": 8,
+    "category": "testing",
+    "status": "pending",
+    "created_at": "2026-04-04T06:13:59.045823+00:00",
+    "completed_at": null
+  },
+  {
+    "id": 10,
+    "title": "Fix: Missing config: cron_config.json",
+    "description": "Configuration file 'data/cron_config.json' is missing. It may be auto-generated on first use.",
+    "agent": "developer",
+    "priority": 8,
+    "category": "config",
+    "status": "pending",
+    "created_at": "2026-04-04T06:13:59.062282+00:00",
+    "completed_at": null
+  }
+]

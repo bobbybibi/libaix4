@@ -1,11 +1,11 @@
 {
-  "total_ticks": 2,
-  "total_improvements": 1934828,
-  "last_tick": "2026-04-03T17:00:03.305802+00:00",
-  "started_at": "2026-04-03T22:57:40.328835+00:00",
+  "total_ticks": 1,
+  "total_improvements": 197,
+  "last_tick": "2026-04-04T15:41:00.511610+00:00",
+  "started_at": "2026-04-05T02:43:36.881145+00:00",
   "mechanism_runs": {
     "rescore_quality": 1,
-    "merge_duplicates": 1,
+    "merge_duplicates": 0,
     "expand_short_answers": 0,
     "generate_followups": 0,
     "identify_gaps": 0,
@@ -51,8 +51,8 @@
     "improvement_recommendations": 0
   },
   "mechanism_last_run": {
-    "rescore_quality": "2026-04-03T17:00:00.030731+00:00",
-    "merge_duplicates": "2026-04-03T17:00:03.305905+00:00",
+    "rescore_quality": "2026-04-04T15:41:00.511615+00:00",
+    "merge_duplicates": null,
     "expand_short_answers": null,
     "generate_followups": null,
     "identify_gaps": null,
@@ -98,8 +98,8 @@
     "improvement_recommendations": null
   },
   "mechanism_improvements": {
-    "rescore_quality": 965027,
-    "merge_duplicates": 969801,
+    "rescore_quality": 197,
+    "merge_duplicates": 0,
     "expand_short_answers": 0,
     "generate_followups": 0,
     "identify_gaps": 0,
