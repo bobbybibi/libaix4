@@ -58,6 +58,13 @@ def client():
     return app.test_client()
 
 
+@pytest.fixture()
+def auth_client(client):
+    """Login to admin and return authenticated client."""
+    client.post("/admin/login", data={"username": "testadmin", "password": "testpass123"})
+    return client
+
+
 # ── Boil endpoints ──────────────────────────────────────────────────
 
 
@@ -70,27 +77,27 @@ class TestBoilEndpoints:
         assert "state" in data
         assert "config" in data
 
-    def test_boil_start(self, client, monkeypatch):
+    def test_boil_start(self, auth_client, monkeypatch):
         monkeypatch.setattr(boil_engine, "_boil_thread", None)
         boil_engine._stop_event.clear()
-        resp = client.post("/boil/start")
+        resp = auth_client.post("/boil/start")
         assert resp.status_code == 200
         data = resp.get_json()
         assert "started" in data
         # Cleanup: stop the thread
         boil_engine.stop_boil_background()
 
-    def test_boil_stop(self, client, monkeypatch):
+    def test_boil_stop(self, auth_client, monkeypatch):
         monkeypatch.setattr(boil_engine, "_boil_thread", None)
         boil_engine._stop_event.clear()
         boil_engine.start_boil_background()
-        resp = client.post("/boil/stop")
+        resp = auth_client.post("/boil/stop")
         assert resp.status_code == 200
         data = resp.get_json()
         assert "stopped" in data
 
-    def test_boil_tick(self, client):
-        resp = client.post("/boil/tick")
+    def test_boil_tick(self, auth_client):
+        resp = auth_client.post("/boil/tick")
         assert resp.status_code == 200
         data = resp.get_json()
         assert "mechanism" in data
@@ -102,10 +109,10 @@ class TestBoilEndpoints:
         data = resp.get_json()
         assert isinstance(data, list)
 
-    def test_boil_log_with_n_param(self, client):
+    def test_boil_log_with_n_param(self, auth_client):
         # Run a tick first to ensure there's log content
-        client.post("/boil/tick")
-        resp = client.get("/boil/log?n=5")
+        auth_client.post("/boil/tick")
+        resp = auth_client.get("/boil/log?n=5")
         assert resp.status_code == 200
 
     def test_boil_config_get(self, client):
@@ -150,8 +157,8 @@ class TestReasonEndpoints:
         assert "rules_count" in data
         assert "concepts_count" in data
 
-    def test_reason_rebuild(self, client):
-        resp = client.post("/reason/rebuild")
+    def test_reason_rebuild(self, auth_client):
+        resp = auth_client.post("/reason/rebuild")
         assert resp.status_code == 200
         data = resp.get_json()
         assert "rules_count" in data
@@ -168,21 +175,20 @@ class TestAnonEndpoints:
         data = resp.get_json()
         assert "total_requests" in data
 
-    def test_anon_crawl_missing_url(self, client):
-        resp = client.post("/anon/crawl", json={"topic": "test"})
+    def test_anon_crawl_missing_url(self, auth_client):
+        resp = auth_client.post("/anon/crawl", json={"topic": "test"})
         assert resp.status_code == 400
         assert "error" in resp.get_json()
 
-    def test_anon_crawl_empty_url(self, client):
-        resp = client.post("/anon/crawl", json={"url": "", "topic": "test"})
+    def test_anon_crawl_empty_url(self, auth_client):
+        resp = auth_client.post("/anon/crawl", json={"url": "", "topic": "test"})
         assert resp.status_code == 400
 
-    def test_anon_crawl_unsafe_url(self, client):
+    def test_anon_crawl_unsafe_url(self, auth_client):
         """Crawling an internal IP should be blocked by SSRF protection."""
-        resp = client.post("/anon/crawl", json={"url": "http://127.0.0.1/secret", "topic": "test"})
-        assert resp.status_code == 200  # anon_crawl_page returns status dict, not HTTP error
-        data = resp.get_json()
-        assert data.get("status") == "error" or "error" in data
+        resp = auth_client.post("/anon/crawl", json={"url": "http://127.0.0.1/secret", "topic": "test"})
+        # SSRF protection returns 403
+        assert resp.status_code == 403
 
     def test_anon_config_get(self, client):
         resp = client.get("/anon/config")

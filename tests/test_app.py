@@ -105,7 +105,7 @@ class TestTrain:
         assert resp.status_code == 400
 
     def test_train_invalid_activation(self):
-        resp = self.client.post("/train", json={"activation": "leaky_relu"})
+        resp = self.client.post("/train", json={"activation": "nonexistent_act"})
         assert resp.status_code == 400
         assert "activation" in resp.get_json()["error"]
 

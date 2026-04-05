@@ -1,9 +1,14 @@
 """Tests for admin API endpoints using Flask's test client."""
 from __future__ import annotations
 
+import os
 import uuid
 
 import pytest
+
+# Set admin credentials before importing app (which imports admin)
+os.environ.setdefault("ADMIN_USER", "testadmin")
+os.environ.setdefault("ADMIN_PASS", "testpass123")
 
 from app import app
 
@@ -18,7 +23,7 @@ def client():
 @pytest.fixture
 def auth_client(client):
     """Login to admin and return authenticated client."""
-    client.post("/admin/login", data={"username": "kakababa", "password": "Nepidaras25!!??"})
+    client.post("/admin/login", data={"username": "testadmin", "password": "testpass123"})
     return client
 
 
@@ -47,7 +52,7 @@ class TestAdminAuth:
         assert resp.status_code == 302
 
     def test_login_success(self, client):
-        resp = client.post("/admin/login", data={"username": "kakababa", "password": "Nepidaras25!!??"}, follow_redirects=True)
+        resp = client.post("/admin/login", data={"username": "testadmin", "password": "testpass123"}, follow_redirects=True)
         assert resp.status_code == 200
 
     def test_login_failure(self, client):

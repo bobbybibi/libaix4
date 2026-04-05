@@ -1,7 +1,17 @@
 """Unit tests for the digest_engine module."""
 from __future__ import annotations
 
+import json
+from pathlib import Path
+
+import numpy as np
+import pytest
+
 from digest_engine import (
+    _cosine_similarity_matrix,
+    _default_config,
+    load_digest_config,
+    save_digest_config,
     score_entry_quality,
     get_digest_stats,
 )
@@ -54,3 +64,45 @@ class TestGetDigestStats:
         stats = get_digest_stats()
         assert "digest_count" in stats
         assert "quality" in stats
+
+
+# ── Config helpers ───────────────────────────────────────────────────
+
+class TestDigestConfig:
+    def test_default_config_keys(self):
+        cfg = _default_config()
+        assert "dedup_threshold" in cfg
+        assert "quality_min_score" in cfg
+        assert cfg["digest_count"] == 0
+
+    def test_save_and_load(self, tmp_path, monkeypatch):
+        monkeypatch.setattr("digest_engine.DIGEST_CONFIG_PATH", tmp_path / "dc.json")
+        cfg = _default_config()
+        cfg["digest_count"] = 42
+        save_digest_config(cfg)
+        loaded = load_digest_config()
+        assert loaded["digest_count"] == 42
+
+    def test_load_returns_defaults_when_missing(self, tmp_path, monkeypatch):
+        monkeypatch.setattr("digest_engine.DIGEST_CONFIG_PATH", tmp_path / "nope.json")
+        cfg = load_digest_config()
+        assert cfg["digest_count"] == 0
+
+
+# ── Cosine similarity ────────────────────────────────────────────────
+
+class TestCosineSimilarityMatrix:
+    def test_identity_when_same(self):
+        v = np.array([[1.0, 0.0], [1.0, 0.0]])
+        sim = _cosine_similarity_matrix(v)
+        np.testing.assert_almost_equal(sim[0, 1], 1.0)
+
+    def test_orthogonal_is_zero(self):
+        v = np.array([[1.0, 0.0], [0.0, 1.0]])
+        sim = _cosine_similarity_matrix(v)
+        np.testing.assert_almost_equal(sim[0, 1], 0.0)
+
+    def test_symmetric(self):
+        v = np.array([[0.6, 0.8], [0.8, 0.6]])
+        sim = _cosine_similarity_matrix(v)
+        np.testing.assert_almost_equal(sim[0, 1], sim[1, 0])

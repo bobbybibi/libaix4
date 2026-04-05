@@ -92,3 +92,66 @@ class TestBagOfWords:
         X_after = loaded.transform(["tcp server"])
         np.testing.assert_array_almost_equal(X_before, X_after)
         assert loaded.vocab == bow.vocab
+
+
+class TestNgrams:
+    def test_bigrams_in_vocab(self):
+        bow = BagOfWords(max_n=2)
+        bow.fit(["tcp protocol works", "udp protocol fast"])
+        # Should have both unigrams and bigrams
+        assert "tcp" in bow.vocab
+        assert "tcp_protocol" in bow.vocab
+        assert "protocol_works" in bow.vocab
+
+    def test_bigram_increases_vocab(self):
+        bow_uni = BagOfWords(max_n=1)
+        bow_bi = BagOfWords(max_n=2)
+        texts = ["tcp protocol works", "udp protocol fast"]
+        bow_uni.fit(texts)
+        bow_bi.fit(texts)
+        assert bow_bi.vocab_size > bow_uni.vocab_size
+
+    def test_trigrams(self):
+        bow = BagOfWords(max_n=3)
+        bow.fit(["tcp protocol works well"])
+        assert "tcp_protocol_works" in bow.vocab
+
+    def test_bigram_transform_shape(self):
+        bow = BagOfWords(max_n=2)
+        X = bow.fit_transform(["tcp protocol", "udp protocol"])
+        assert X.shape == (2, bow.vocab_size)
+
+    def test_bigram_save_load(self):
+        bow = BagOfWords(max_n=2)
+        bow.fit(["tcp protocol networking", "http web server"])
+        X_before = bow.transform(["tcp protocol"])
+
+        with tempfile.TemporaryDirectory() as d:
+            path = Path(d) / "vec.json"
+            bow.save(path)
+            loaded = BagOfWords.load(path)
+
+        assert loaded.max_n == 2
+        X_after = loaded.transform(["tcp protocol"])
+        np.testing.assert_array_almost_equal(X_before, X_after)
+
+    def test_min_df_filters_rare(self):
+        bow = BagOfWords(max_n=1, min_df=2)
+        bow.fit(["tcp protocol", "udp protocol", "rare_unique_word"])
+        # "protocol" appears in 2 docs, should be kept
+        assert "protocol" in bow.vocab
+        # "rare_unique_word" only in 1 doc, should be filtered out
+        assert "rare_unique_word" not in bow.vocab
+
+    def test_default_max_n_is_unigram(self):
+        bow = BagOfWords()
+        assert bow.max_n == 1
+
+    def test_unigram_backward_compat(self):
+        """Default max_n=1 should match old behaviour exactly."""
+        bow_old = BagOfWords(max_n=1)
+        bow_new = BagOfWords()
+        texts = ["tcp protocol networking", "http web server"]
+        X_old = bow_old.fit_transform(texts)
+        X_new = bow_new.fit_transform(texts)
+        np.testing.assert_array_equal(X_old, X_new)
