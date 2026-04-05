@@ -3,6 +3,7 @@ vectorizer.py — Bag-of-words text vectorizer built with only Python builtins +
 
 Converts text into numerical feature vectors for the neural network.
 No external NLP libraries — just tokenization, stopword removal, and BoW encoding.
+Supports unigrams and optional n-gram features (bigrams, trigrams).
 """
 
 from __future__ import annotations
@@ -57,16 +58,32 @@ def tokenize(text: str) -> list[str]:
     return [t for t in tokens if t not in STOP_WORDS and len(t) > 1]
 
 
+def _make_ngrams(tokens: list[str], max_n: int) -> list[str]:
+    """Generate token features up to *max_n*-grams.
+
+    Unigrams are always included.  For n > 1, adjacent tokens are joined
+    with an underscore (e.g. ``["tcp", "protocol"]`` → ``"tcp_protocol"``).
+    """
+    features: list[str] = list(tokens)  # unigrams
+    for n in range(2, max_n + 1):
+        for i in range(len(tokens) - n + 1):
+            features.append("_".join(tokens[i : i + n]))
+    return features
+
+
 class BagOfWords:
     """A simple bag-of-words vectorizer.
 
     Builds a vocabulary from training texts and converts new texts into
-    fixed-length numerical vectors.
+    fixed-length numerical vectors.  Supports optional n-gram features
+    (``max_n=2`` adds bigrams alongside unigrams).
     """
 
-    def __init__(self) -> None:
+    def __init__(self, max_n: int = 1, min_df: int = 1) -> None:
         self.vocab: dict[str, int] = {}
         self.idf: np.ndarray | None = None
+        self.max_n: int = max_n
+        self.min_df: int = min_df
         self._fitted = False
 
     @property
@@ -79,15 +96,19 @@ class BagOfWords:
         doc_freq: dict[str, int] = {}
         for text in texts:
             tokens = tokenize(text)
-            seen = set()
-            for token in tokens:
+            features = _make_ngrams(tokens, self.max_n)
+            seen: set[str] = set()
+            for token in features:
                 word_freq[token] = word_freq.get(token, 0) + 1
                 if token not in seen:
                     doc_freq[token] = doc_freq.get(token, 0) + 1
                     seen.add(token)
 
-        # Keep words that appear in at least 1 doc, sort by frequency for stability
-        sorted_words = sorted(word_freq.keys(), key=lambda w: (-word_freq[w], w))
+        # Keep features with df >= min_df, sort by frequency for stability
+        sorted_words = sorted(
+            (w for w in word_freq if doc_freq.get(w, 0) >= self.min_df),
+            key=lambda w: (-word_freq[w], w),
+        )
         self.vocab = {w: i for i, w in enumerate(sorted_words)}
 
         # Compute IDF: log(N / df) + 1 (smoothed)
@@ -107,7 +128,8 @@ class BagOfWords:
         matrix = np.zeros((len(texts), len(self.vocab)), dtype=np.float64)
         for i, text in enumerate(texts):
             tokens = tokenize(text)
-            for token in tokens:
+            features = _make_ngrams(tokens, self.max_n)
+            for token in features:
                 if token in self.vocab:
                     matrix[i, self.vocab[token]] += 1.0
 
@@ -131,6 +153,8 @@ class BagOfWords:
         data = {
             "vocab": self.vocab,
             "idf": self.idf.tolist() if self.idf is not None else None,
+            "max_n": self.max_n,
+            "min_df": self.min_df,
         }
         Path(path).write_text(json.dumps(data), encoding="utf-8")
 
@@ -138,7 +162,7 @@ class BagOfWords:
     def load(cls, path: str | Path) -> "BagOfWords":
         """Load vectorizer from JSON."""
         data = json.loads(Path(path).read_text(encoding="utf-8"))
-        bow = cls()
+        bow = cls(max_n=data.get("max_n", 1), min_df=data.get("min_df", 1))
         bow.vocab = data["vocab"]
         bow.idf = np.array(data["idf"], dtype=np.float64) if data["idf"] else None
         bow._fitted = True

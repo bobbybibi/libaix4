@@ -87,6 +87,7 @@ def train(
     dropout_rate: float = 0.0,
     grad_clip: float | None = None,
     lr_schedule: str | None = None,
+    val_split: float = 0.0,
 ) -> tuple[NeuralNetwork, BagOfWords, dict[int, str]]:
     """Train the knowledge classifier.  Returns (model, vectorizer, answer_map)."""
 
@@ -125,10 +126,23 @@ def train(
         print(f"Training data: {n_samples} questions → {n_classes} answer classes")
         print(f"Domains: {', '.join(get_domains())}")
 
-    # Vectorize
+    # Vectorize (fit on ALL data so vocab covers everything)
     bow = BagOfWords()
     X = bow.fit_transform(questions)
     vocab_size = bow.vocab_size
+
+    # Train / validation split
+    X_train, Y_train = X, labels
+    X_val, Y_val = None, None
+    if 0.0 < val_split < 1.0:
+        rng = np.random.RandomState(seed)
+        n_val = max(1, int(n_samples * val_split))
+        idx = rng.permutation(n_samples)
+        val_idx, train_idx = idx[:n_val], idx[n_val:]
+        X_train, Y_train = X[train_idx], labels[train_idx]
+        X_val, Y_val = X[val_idx], labels[val_idx]
+        if verbose:
+            print(f"Validation split: {len(train_idx)} train / {len(val_idx)} val")
 
     if verbose:
         print(f"Vocabulary size: {vocab_size}")
@@ -169,21 +183,33 @@ def train(
 
     log_every = max(1, epochs // 10)
     losses = nn.train(
-        X, labels,
+        X_train, Y_train,
         epochs=epochs,
         log_every=log_every if verbose else 0,
         early_stopping=early_stopping,
         patience=patience,
+        x_val=X_val,
+        y_val=Y_val,
     )
 
-    # Evaluate accuracy
+    # Evaluate accuracy on full data
     preds = nn.predict(X)
     pred_classes = np.argmax(preds, axis=1)
     true_classes = np.argmax(labels, axis=1)
     accuracy = np.mean(pred_classes == true_classes)
 
+    # Validation accuracy
+    val_accuracy = None
+    if X_val is not None:
+        val_preds = nn.predict(X_val)
+        val_pred_classes = np.argmax(val_preds, axis=1)
+        val_true_classes = np.argmax(Y_val, axis=1)
+        val_accuracy = float(np.mean(val_pred_classes == val_true_classes))
+
     if verbose:
         print(f"\nTraining accuracy: {accuracy:.1%}")
+        if val_accuracy is not None:
+            print(f"Validation accuracy: {val_accuracy:.1%}")
         print(f"Final loss: {losses[-1]:.6f}")
         if early_stopping and len(losses) < epochs:
             print(f"Stopped early at epoch {len(losses)}")
@@ -243,6 +269,10 @@ def main() -> None:
         "--lr-schedule", choices=["step", "cosine"], default=None,
         help="Learning rate schedule",
     )
+    parser.add_argument(
+        "--val-split", type=float, default=0.0,
+        help="Fraction of data to hold out for validation (0-1)",
+    )
     args = parser.parse_args()
 
     train(
@@ -258,6 +288,7 @@ def main() -> None:
         dropout_rate=args.dropout,
         grad_clip=args.grad_clip,
         lr_schedule=args.lr_schedule,
+        val_split=args.val_split,
     )
 
 
