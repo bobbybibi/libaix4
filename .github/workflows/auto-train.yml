@@ -1,41 +1,32 @@
 name: Auto-Train Knowledge AI
 
-# MAXIMUM TRAINING SCHEDULE — EVERY 15 MINUTES
-# Runs 96x/day (every 15 min) + on every knowledge push + manual dispatch.
-# 8 parallel configs per run = 768 training sessions/day.
-# Public repos get unlimited GitHub Actions minutes.
-# GitHub may throttle some runs under high load — that's fine, we catch up.
+# Daily mini-batch retraining. Mini-batch SGD converges in ~100 epochs instead
+# of thousands, so a run completes in minutes (well within CI limits and free
+# Actions minutes) rather than hitting the 6-hour timeout. Trigger on demand
+# any time from the Actions tab.
+#
+# NOTE: training a 15k-way softmax is inherently costly and gives modest
+# accuracy — the corpus is really a retrieval problem. See PR discussion for the
+# recommended retrieval-based redesign that needs no training at all.
 
 on:
   schedule:
-    # Every 15 minutes, 24/7
-    - cron: "0 * * * *"
-    - cron: "15 * * * *"
-    - cron: "30 * * * *"
-    - cron: "45 * * * *"
-  push:
-    paths:
-      - "knowledge_base.py"
-      - "train_knowledge.py"
-      - "vectorizer.py"
-      - "neural_network.py"
-      - "data/extra_knowledge/*.json"
+    - cron: "30 4 * * *"   # daily at 04:30 UTC
   workflow_dispatch:
     inputs:
       epochs:
         description: "Training epochs"
-        default: "5000"
+        default: "100"
+        type: string
+      batch_size:
+        description: "Mini-batch size"
+        default: "256"
         type: string
       activation:
         description: "Activation function"
         default: "tanh"
         type: choice
         options: ["tanh", "sigmoid", "relu"]
-      optimizer:
-        description: "Optimizer"
-        default: "adam"
-        type: choice
-        options: ["adam", "momentum", "sgd"]
 
 permissions:
   contents: write
@@ -43,58 +34,6 @@ permissions:
 jobs:
   train:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        # Train 8 configs in parallel — best model wins
-        include:
-          - name: "tanh-adam-5k"
-            activation: "tanh"
-            optimizer: "adam"
-            epochs: 5000
-            lr: 0.01
-            hidden: 256
-          - name: "tanh-adam-8k"
-            activation: "tanh"
-            optimizer: "adam"
-            epochs: 8000
-            lr: 0.005
-            hidden: 256
-          - name: "relu-adam-5k"
-            activation: "relu"
-            optimizer: "adam"
-            epochs: 5000
-            lr: 0.005
-            hidden: 256
-          - name: "sigmoid-momentum-5k"
-            activation: "sigmoid"
-            optimizer: "momentum"
-            epochs: 5000
-            lr: 0.05
-            hidden: 256
-          - name: "tanh-adam-10k"
-            activation: "tanh"
-            optimizer: "adam"
-            epochs: 10000
-            lr: 0.003
-            hidden: 256
-          - name: "tanh-adam-15k-deep"
-            activation: "tanh"
-            optimizer: "adam"
-            epochs: 15000
-            lr: 0.002
-            hidden: 512
-          - name: "relu-adam-10k-wide"
-            activation: "relu"
-            optimizer: "adam"
-            epochs: 10000
-            lr: 0.003
-            hidden: 512
-          - name: "tanh-adam-20k-ultra"
-            activation: "tanh"
-            optimizer: "adam"
-            epochs: 20000
-            lr: 0.001
-            hidden: 256
     steps:
       - uses: actions/checkout@v4
         with:
@@ -109,120 +48,48 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run tests first
-        run: python -m pytest tests/ -v
-
-      - name: Train — ${{ matrix.name }}
+      - name: Check if enabled
+        id: enabled
         run: |
-          echo "Training with activation=${{ matrix.activation }} optimizer=${{ matrix.optimizer }} lr=${{ matrix.lr }} epochs=${{ matrix.epochs }} hidden=${{ matrix.hidden }}"
+          python -c "
+          import json, sys
+          from pathlib import Path
+          cfg_path = Path('data/cron_config.json')
+          if cfg_path.exists():
+              cfg = json.loads(cfg_path.read_text())
+              wf = cfg.get('workflows', {}).get('auto_train', {})
+              if not wf.get('enabled', True):
+                  print('Auto-train disabled via admin')
+                  sys.exit(0)
+          print('enabled')
+          "
+          echo "run=true" >> "$GITHUB_OUTPUT"
+
+      - name: Run tests first
+        if: steps.enabled.outputs.run == 'true'
+        run: python -m pytest tests/ -q
+
+      - name: Train (mini-batch)
+        if: steps.enabled.outputs.run == 'true'
+        run: |
           python train_knowledge.py \
-            --activation ${{ matrix.activation }} \
-            --optimizer ${{ matrix.optimizer }} \
-            --lr ${{ matrix.lr }} \
-            --epochs ${{ matrix.epochs }} \
-            --hidden ${{ matrix.hidden }}
+            --activation "${{ github.event.inputs.activation || 'tanh' }}" \
+            --optimizer adam \
+            --lr 0.01 \
+            --hidden 256 \
+            --epochs "${{ github.event.inputs.epochs || '100' }}" \
+            --batch-size "${{ github.event.inputs.batch_size || '256' }}"
 
       - name: Show model stats
+        if: steps.enabled.outputs.run == 'true'
         run: |
           echo "=== Model files ==="
           ls -lh models/
-          echo ""
-          echo "=== Answer map entries ==="
-          python -c "import json; d=json.load(open('models/answer_map.json')); print(f'{len(d)} answers')"
-          echo ""
-          echo "=== Vocab size ==="
-          python -c "import json; d=json.load(open('models/vectorizer.json')); print(f'{len(d[\"vocab\"])} words')"
+          python -c "import json; d=json.load(open('models/answer_map.json')); print(f'{len(d)} answer classes')"
+          python -c "import json; d=json.load(open('models/vectorizer.json')); print(f'{len(d[\"vocab\"])} vocab words')"
 
-      - name: Upload trained model as artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: model-${{ matrix.name }}
-          path: models/
-          retention-days: 7
-
-  # Pick the best model and commit it
-  select-best:
-    needs: train
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.ref }}
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-
-      # Download all model artifacts
-      - name: Download all candidate models
-        uses: actions/download-artifact@v4
-        with:
-          path: candidates/
-          pattern: model-*
-
-      - name: Select best model by accuracy
-        run: |
-          python - <<'SCRIPT'
-          import json, shutil, sys
-          from pathlib import Path
-          import numpy as np
-          sys.path.insert(0, ".")
-          from neural_network import NeuralNetwork
-          from vectorizer import BagOfWords
-          from knowledge_base import KNOWLEDGE
-
-          questions = [q for q, _, _ in KNOWLEDGE]
-          answers = [a for _, a, _ in KNOWLEDGE]
-
-          best_acc = -1
-          best_dir = None
-
-          for cand in Path("candidates").iterdir():
-              if not cand.is_dir():
-                  continue
-              try:
-                  model = NeuralNetwork.load(cand / "knowledge.npz")
-                  bow = BagOfWords.load(cand / "vectorizer.json")
-                  ans_map = json.loads((cand / "answer_map.json").read_text())
-
-                  X = bow.transform(questions)
-                  preds = model.predict(X)
-                  pred_classes = np.argmax(preds, axis=1)
-
-                  correct = 0
-                  for i, q in enumerate(questions):
-                      pred_answer = ans_map.get(str(pred_classes[i]), "")
-                      # Find the expected answer for this question
-                      expected = answers[i]
-                      if pred_answer == expected:
-                          correct += 1
-
-                  acc = correct / len(questions)
-                  print(f"  {cand.name}: {acc:.1%} ({correct}/{len(questions)})")
-
-                  if acc > best_acc:
-                      best_acc = acc
-                      best_dir = cand
-              except Exception as e:
-                  print(f"  {cand.name}: FAILED — {e}")
-
-          if best_dir is None:
-              print("ERROR: No valid candidate models!")
-              sys.exit(1)
-
-          print(f"\nBest: {best_dir.name} ({best_acc:.1%})")
-          # Copy best to models/
-          for f in best_dir.iterdir():
-              shutil.copy2(f, Path("models") / f.name)
-          print("Copied best model to models/")
-          SCRIPT
-
-      - name: Commit updated models
+      - name: Commit updated model
+        if: steps.enabled.outputs.run == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -230,10 +97,9 @@ jobs:
           if git diff --cached --quiet; then
             echo "No model changes to commit."
           else
-            git commit -m "chore(auto-train): retrain knowledge model [skip ci]
+            git commit -m "chore(auto-train): daily mini-batch retrain [skip ci]
 
-          Trained on $(python -c "from knowledge_base import KNOWLEDGE; print(len(KNOWLEDGE))") knowledge entries
-          $(python -c "import json; d=json.load(open('models/answer_map.json')); print(f'{len(d)} answer classes')")
-          $(python -c "import json; d=json.load(open('models/vectorizer.json')); print(f'{len(d[\"vocab\"])} vocab words')")"
+          $(python -c "from knowledge_base import KNOWLEDGE; print(f'{len(KNOWLEDGE)} base knowledge entries')")
+          $(python -c "import json; d=json.load(open('models/answer_map.json')); print(f'{len(d)} answer classes')")"
             git push
           fi

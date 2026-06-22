@@ -109,6 +109,7 @@ def train(
     lr_schedule: str | None = None,
     val_split: float = 0.0,
     max_label_gb: float | None = None,
+    batch_size: int | None = None,
 ) -> tuple[NeuralNetwork, BagOfWords, dict[int, str]]:
     """Train the knowledge classifier.  Returns (model, vectorizer, answer_map)."""
 
@@ -219,6 +220,7 @@ def train(
         dropout_rate=dropout_rate,
         grad_clip=grad_clip,
         lr_schedule=lr_schedule,
+        batch_size=batch_size,
     )
 
     if verbose:
@@ -334,6 +336,11 @@ def main() -> None:
         help="Max GB for the one-hot label matrix before dropping augmentation "
         "and then subsampling (default 2.0, or $LIBAIX_TRAIN_MAX_LABEL_GB)",
     )
+    parser.add_argument(
+        "--batch-size", type=int, default=None,
+        help="Mini-batch size for SGD (default: full-batch). Mini-batches "
+        "converge in far fewer epochs on large datasets.",
+    )
     args = parser.parse_args()
 
     train(
@@ -351,6 +358,7 @@ def main() -> None:
         lr_schedule=args.lr_schedule,
         val_split=args.val_split,
         max_label_gb=args.max_label_gb,
+        batch_size=args.batch_size,
     )
 
 
