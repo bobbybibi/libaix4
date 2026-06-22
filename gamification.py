@@ -16,7 +16,7 @@ import random
 import threading
 import uuid
 from dataclasses import dataclass, field
-from datetime import date, timedelta
+from datetime import date
 
 from knowledge_base import KNOWLEDGE, get_domains
 
@@ -269,7 +269,6 @@ def generate_quiz(domain: str | None = None, count: int = 5) -> list[dict]:
 
     # Pick random entries
     selected = random.sample(entries, min(count, len(entries)))
-    all_answers = [a for _, a, _ in KNOWLEDGE]
 
     quiz: list[dict] = []
     for question, correct_answer, d in selected:

@@ -127,7 +127,7 @@ except ImportError:
 
 try:
     from conversation_engine import (
-        ConversationContext, enrich_with_context, is_followup,
+        ConversationContext, enrich_with_context,
     )
     _CONVERSATION_AVAILABLE = True
 except ImportError:
@@ -1384,15 +1384,11 @@ try:
         extract_forms,
         classify_field,
         parse_fill_prompt,
-        fill_form,
-        submit_form,
         save_profile,
         load_profiles,
         delete_profile,
-        save_form_template,
         load_form_templates,
         get_fill_history,
-        extract_validation_rules,
         FillProfile,
     )
     _FORM_AVAILABLE = True
@@ -1454,7 +1450,6 @@ def forms_fill():
     data = request.get_json(force=True)
     prompt = str(data.get("prompt", "")).strip()
     values = data.get("values", {})
-    profile_name = data.get("profile", "")
 
     # Parse prompt if provided
     if prompt and not values:

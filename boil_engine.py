@@ -1306,7 +1306,6 @@ def _m45_improvement_recommendations() -> dict:
     """Generate self-improvement recommendations based on all metrics."""
     entries = _load_all_entries()
     domain_counts = Counter(e["domain"] for e in entries)
-    state = get_boil_state()
 
     recommendations: list[str] = []
 
@@ -1330,7 +1329,7 @@ def _m45_improvement_recommendations() -> dict:
     # Check recent improvements
     logs = get_improvement_log(20)
     if logs:
-        recent_zero = sum(1 for l in logs if l.get("improvements", 0) == 0)
+        recent_zero = sum(1 for log in logs if log.get("improvements", 0) == 0)
         if recent_zero > len(logs) * 0.8:
             recommendations.append("Most recent ticks produced no improvements — consider new data")
 
@@ -1408,7 +1407,6 @@ def _pick_mechanism(config: dict, state: dict) -> str:
       - Configured weight for the mechanism
       - Recent improvement count (low → higher priority)
     """
-    now = time.time()
     weights = config.get("mechanism_weights", {})
     cooldowns = config.get("cooldowns", {})
     last_runs = state.get("mechanism_last_run", {})

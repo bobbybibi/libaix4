@@ -97,7 +97,9 @@ class _FormExtractor(HTMLParser):
                           "enctype": ad.get("enctype", "application/x-www-form-urlencoded"),
                           "fields": []}
         elif tag == "label":
-            self._label_for = ad.get("for", ""); self._label_text = ""; self._in_label = True
+            self._label_for = ad.get("for", "")
+            self._label_text = ""
+            self._in_label = True
         elif self._form is None:
             return
         elif tag == "input":
@@ -107,7 +109,9 @@ class _FormExtractor(HTMLParser):
                 "value": ad.get("value", ""), "placeholder": ad.get("placeholder", ""),
                 "pattern": ad.get("pattern", "")})
         elif tag == "textarea":
-            self._in_textarea = True; self._ta_text = ""; self._ta_attrs = ad
+            self._in_textarea = True
+            self._ta_text = ""
+            self._ta_attrs = ad
         elif tag == "select":
             self._select = {"name": ad.get("name", ""), "id": ad.get("id", ""),
                             "required": "required" in ad, "options": []}
@@ -119,7 +123,8 @@ class _FormExtractor(HTMLParser):
     def handle_endtag(self, tag: str) -> None:
         tag = tag.lower()
         if tag == "form" and self._form is not None:
-            self.forms.append(self._form); self._form = None
+            self.forms.append(self._form)
+            self._form = None
         elif tag == "label" and self._in_label:
             self._in_label = False
             if self._label_for and self._label_text:

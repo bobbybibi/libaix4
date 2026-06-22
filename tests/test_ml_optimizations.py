@@ -505,11 +505,12 @@ class TestBestWeightsRestore:
                            softmax_output=True, seed=42)
         rng = np.random.default_rng(0)
         x_train = rng.random((6, 4))
-        y_train = np.zeros((6, 3)); y_train[range(6), [0,1,2,0,1,2]] = 1.0
+        y_train = np.zeros((6, 3))
+        y_train[range(6), [0, 1, 2, 0, 1, 2]] = 1.0
         x_val = rng.random((3, 4))
         y_val = np.eye(3, dtype=np.float64)
 
-        losses = nn.train(
+        nn.train(
             x_train, y_train,
             epochs=5000, log_every=0,
             early_stopping=True, patience=200,
@@ -560,7 +561,8 @@ class TestBatchNorm:
         )
         rng = np.random.default_rng(0)
         X = rng.random((6, 4))
-        Y = np.zeros((6, 3)); Y[range(6), [0, 1, 2, 0, 1, 2]] = 1.0
+        Y = np.zeros((6, 3))
+        Y[range(6), [0, 1, 2, 0, 1, 2]] = 1.0
         losses = nn.train(X, Y, epochs=2000, log_every=0)
         assert losses[-1] < losses[0]
         out = nn.predict(X)
@@ -576,7 +578,8 @@ class TestConfidenceCalibration:
         )
         rng = np.random.default_rng(0)
         X = rng.random((6, 4))
-        Y = np.zeros((6, 3)); Y[range(6), [0, 1, 2, 0, 1, 2]] = 1.0
+        Y = np.zeros((6, 3))
+        Y[range(6), [0, 1, 2, 0, 1, 2]] = 1.0
         nn.train(X, Y, epochs=1000, log_every=0)
         T = nn.calibrate_temperature(X, Y)
         assert isinstance(T, float)
@@ -589,7 +592,8 @@ class TestConfidenceCalibration:
         )
         rng = np.random.default_rng(0)
         X = rng.random((6, 4))
-        Y = np.zeros((6, 3)); Y[range(6), [0, 1, 2, 0, 1, 2]] = 1.0
+        Y = np.zeros((6, 3))
+        Y[range(6), [0, 1, 2, 0, 1, 2]] = 1.0
         nn.train(X, Y, epochs=1000, log_every=0)
         nn.calibrate_temperature(X, Y)
         preds = nn.predict_calibrated(X)
@@ -608,7 +612,8 @@ class TestConfidenceCalibration:
         )
         rng = np.random.default_rng(0)
         X = rng.random((6, 4))
-        Y = np.zeros((6, 3)); Y[range(6), [0, 1, 2, 0, 1, 2]] = 1.0
+        Y = np.zeros((6, 3))
+        Y[range(6), [0, 1, 2, 0, 1, 2]] = 1.0
         nn.train(X, Y, epochs=1000, log_every=0)
         nn.calibrate_temperature(X, Y)
         p = tmp_path / "calibrated.npz"
@@ -720,7 +725,8 @@ class TestLabelSmoothing:
         )
         rng = np.random.default_rng(0)
         X = rng.random((6, 4))
-        Y = np.zeros((6, 3)); Y[range(6), [0, 1, 2, 0, 1, 2]] = 1.0
+        Y = np.zeros((6, 3))
+        Y[range(6), [0, 1, 2, 0, 1, 2]] = 1.0
         losses = nn.train(X, Y, epochs=1000, log_every=0)
         assert losses[-1] < losses[0]
 
@@ -753,7 +759,8 @@ class TestTrainingHistory:
                            softmax_output=True, seed=42)
         rng = np.random.default_rng(0)
         X = rng.random((6, 4))
-        Y = np.zeros((6, 3)); Y[range(6), [0, 1, 2, 0, 1, 2]] = 1.0
+        Y = np.zeros((6, 3))
+        Y[range(6), [0, 1, 2, 0, 1, 2]] = 1.0
         x_val = rng.random((3, 4))
         y_val = np.eye(3, dtype=np.float64)
         nn.train(

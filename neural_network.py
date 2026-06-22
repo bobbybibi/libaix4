@@ -275,7 +275,8 @@ class NeuralNetwork:
         self._masks: list[np.ndarray | None] = []
         self._bn_cache = []
         a = x
-        is_output = lambda idx: idx == len(self.weights) - 1
+        def is_output(idx):
+            return idx == len(self.weights) - 1
         for idx, (w, b) in enumerate(zip(self.weights, self.biases)):
             z = a @ w + b
 
@@ -342,7 +343,6 @@ class NeuralNetwork:
         """
         cache = self._bn_cache[cache_idx]
         z_norm = cache["z_norm"]
-        mean = cache["mean"]
         var = cache["var"]
         layer_idx = cache["idx"]
         gamma = self._bn_gamma[layer_idx]
@@ -677,7 +677,8 @@ class NeuralNetwork:
     def predict(self, x: np.ndarray) -> np.ndarray:
         """Inference-only forward pass (no gradient storage)."""
         a = x
-        is_output = lambda idx: idx == len(self.weights) - 1
+        def is_output(idx):
+            return idx == len(self.weights) - 1
         for idx, (w, b) in enumerate(zip(self.weights, self.biases)):
             z = a @ w + b
             if self.batch_norm and not is_output(idx):
@@ -771,7 +772,6 @@ class NeuralNetwork:
             scaled = logits / T
             probs = _softmax(scaled)
             # NLL gradient w.r.t. T
-            eps = 1e-12
             # dNLL/dT = (1/N) * sum_i (p_i - y_i) @ logits_i / T^2
             grad = -np.mean(np.sum((probs - y_val) * logits, axis=1)) / (T ** 2)
             T -= lr * grad
@@ -783,7 +783,8 @@ class NeuralNetwork:
     def _get_logits(self, x: np.ndarray) -> np.ndarray:
         """Forward pass returning raw logits (pre-softmax)."""
         a = x
-        is_output = lambda idx: idx == len(self.weights) - 1
+        def is_output(idx):
+            return idx == len(self.weights) - 1
         for idx, (w, b) in enumerate(zip(self.weights, self.biases)):
             z = a @ w + b
             if self.batch_norm and not is_output(idx):
