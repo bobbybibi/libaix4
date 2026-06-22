@@ -276,7 +276,8 @@ class TestCrawlForums:
 
 
 class TestRunAllForumCrawlers:
-    def test_runs_enabled_topics(self, monkeypatch):
+    def test_runs_enabled_topics(self, tmp_path, monkeypatch):
+        monkeypatch.setattr(forum_crawler, "EXTRA_KNOWLEDGE_DIR", tmp_path / "ek")
         monkeypatch.setattr(forum_crawler, "crawl_forums", lambda *a, **kw: [
             {"question": "Q?", "answer": "A long enough answer for testing.", "domain": "net", "source": "test:1"},
         ])
@@ -286,7 +287,8 @@ class TestRunAllForumCrawlers:
 
 
 class TestCrawlSingleForumTopic:
-    def test_returns_results(self, monkeypatch):
+    def test_returns_results(self, tmp_path, monkeypatch):
+        monkeypatch.setattr(forum_crawler, "EXTRA_KNOWLEDGE_DIR", tmp_path / "ek")
         monkeypatch.setattr(forum_crawler, "crawl_forums", lambda *a, **kw: [
             {"question": "Q?", "answer": "A long enough answer.", "domain": "net", "source": "test:1"},
         ])

@@ -9,8 +9,47 @@ Original files are deleted by the caller after extraction (space preservation).
 from __future__ import annotations
 
 import csv
+import json
 import re
 from pathlib import Path
+
+
+def existing_qa_keys(directory: Path) -> set[tuple[str, str]]:
+    """Return all (question, answer) pairs already saved under *directory*."""
+    keys: set[tuple[str, str]] = set()
+    directory = Path(directory)
+    if not directory.exists():
+        return keys
+    for fp in directory.glob("*.json"):
+        try:
+            data = json.loads(fp.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        if isinstance(data, list):
+            for entry in data:
+                if isinstance(entry, dict):
+                    keys.add((entry.get("question", ""), entry.get("answer", "")))
+    return keys
+
+
+def dedupe_new_entries(entries: list[dict], directory: Path) -> list[dict]:
+    """Return only entries not already saved under *directory*.
+
+    Matches on the (question, answer) pair and also drops within-batch
+    duplicates. Crawlers re-fetch the same sources every cycle, so this stops
+    identical files from accumulating in the knowledge directory.
+    """
+    existing = existing_qa_keys(directory)
+    seen: set[tuple[str, str]] = set()
+    out: list[dict] = []
+    for entry in entries:
+        key = (entry.get("question", ""), entry.get("answer", ""))
+        if key in existing or key in seen:
+            continue
+        seen.add(key)
+        out.append(entry)
+    return out
+
 
 # Domain keywords for auto-classification
 DOMAIN_KEYWORDS: dict[str, list[str]] = {

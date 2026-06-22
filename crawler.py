@@ -16,7 +16,7 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
-from file_processor import classify_domain, generate_qa_from_text
+from file_processor import classify_domain, dedupe_new_entries, generate_qa_from_text
 
 WIKI_API = "https://en.wikipedia.org/w/api.php"
 USER_AGENT = "libaix-crawler/1.0 (educational neural network project; github.com/lindapot-art/libaix)"
@@ -191,13 +191,21 @@ def _default_config() -> dict:
 
 # ── Persistence ───────────────────────────────────────────────────────
 
-def save_crawled_knowledge(entries: list[dict], topic_name: str) -> Path:
+def save_crawled_knowledge(entries: list[dict], topic_name: str) -> Path | None:
+    """Persist newly-crawled entries, skipping ones already saved.
+
+    Returns the written file, or None when a non-empty crawl produced nothing
+    new — so re-crawling the same articles no longer bloats the corpus.
+    """
     EXTRA_KNOWLEDGE_DIR.mkdir(parents=True, exist_ok=True)
+    new_entries = dedupe_new_entries(entries, EXTRA_KNOWLEDGE_DIR)
+    if entries and not new_entries:
+        return None
     safe = re.sub(r"[^\w\-]", "_", topic_name.lower())
     ts = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
     fp = EXTRA_KNOWLEDGE_DIR / f"crawl_{safe}_{ts}.json"
     fp.write_text(
-        json.dumps(entries, indent=2, ensure_ascii=False),
+        json.dumps(new_entries, indent=2, ensure_ascii=False),
         encoding="utf-8",
     )
     return fp
@@ -223,12 +231,15 @@ def run_all_crawlers() -> dict:
             )
             if entries:
                 fp = save_crawled_knowledge(entries, topic["name"])
-                results[topic["name"]] = {
-                    "status": "success",
-                    "entries": len(entries),
-                    "file": str(fp),
-                }
-                total_new += len(entries)
+                if fp is not None:
+                    results[topic["name"]] = {
+                        "status": "success",
+                        "entries": len(entries),
+                        "file": str(fp),
+                    }
+                    total_new += len(entries)
+                else:
+                    results[topic["name"]] = {"status": "no_new", "entries": 0}
             else:
                 results[topic["name"]] = {"status": "no_results", "entries": 0}
         except Exception as exc:
@@ -248,6 +259,8 @@ def crawl_single_topic(
     entries = crawl_topic(topic_name, keywords, max_articles)
     if entries:
         fp = save_crawled_knowledge(entries, topic_name)
+        if fp is None:
+            return {"status": "no_new", "entries": 0}
         return {
             "status": "success",
             "entries": len(entries),
