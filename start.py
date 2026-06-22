@@ -83,6 +83,42 @@ def _train_model() -> None:
 
 # ── Step 3: Launch ───────────────────────────────────────────────────
 
+def _resolve_port(host: str, requested: int, strict: bool = False) -> int:
+    """Return a port that is safe to bind, never killing whatever holds one.
+
+    libaix only *probes* ports (a quick bind test) — it never terminates or
+    signals the process already using a port. If ``requested`` is free, it is
+    returned as-is. If it is busy:
+
+      • ``strict=True``  → print guidance and exit (leave the other app alone).
+      • ``strict=False`` → step aside onto the next free port and report it.
+    """
+    from net_utils import find_available_port, is_port_available
+
+    if not (0 < requested <= 65535):
+        print(f"Error: port {requested} is out of range (must be 1–65535).")
+        sys.exit(2)
+
+    if is_port_available(host, requested):
+        return requested
+
+    if strict:
+        print(f"Error: port {requested} is already in use by another app.")
+        print("  libaix will NOT terminate it. Pick another port with --port,")
+        print("  or drop --strict-port to auto-select the next free port.")
+        sys.exit(1)
+
+    fallback = find_available_port(host, requested + 1)
+    if fallback is None:
+        print(f"Error: port {requested} is in use and no free port was found nearby.")
+        print("  No other processes were touched. Try a different --port.")
+        sys.exit(1)
+
+    print(f"Note: port {requested} is in use by another app — leaving it untouched.")
+    print(f"  Stepping aside to the next free port: {fallback}\n")
+    return fallback
+
+
 def main() -> None:
     import argparse
 
@@ -91,7 +127,16 @@ def main() -> None:
     parser.add_argument("--port", type=int, default=5000, help="Port (default: 5000)")
     parser.add_argument("--skip-train", action="store_true", help="Skip model training")
     parser.add_argument("--retrain", action="store_true", help="Force retrain knowledge model")
+    parser.add_argument(
+        "--strict-port",
+        action="store_true",
+        help="Fail if --port is busy instead of auto-selecting the next free port "
+        "(libaix never kills the app already using a port)",
+    )
     args = parser.parse_args()
+
+    # Resolve a safe port BEFORE doing any heavy work (install/train).
+    port = _resolve_port(args.host, args.port, strict=args.strict_port)
 
     # Install deps
     _check_and_install()
@@ -105,15 +150,15 @@ def main() -> None:
 
     # Start the app
     display_host = "localhost" if args.host in ("0.0.0.0", "::") else args.host
-    print(f"Starting libaix on http://{args.host}:{args.port}")
-    print(f"  Chat UI:  http://{display_host}:{args.port}/")
-    print(f"  Admin:    http://{display_host}:{args.port}/admin")
+    print(f"Starting libaix on http://{args.host}:{port}")
+    print(f"  Chat UI:  http://{display_host}:{port}/")
+    print(f"  Admin:    http://{display_host}:{port}/admin")
     if args.host in ("0.0.0.0", "::"):
         print("  (also accessible via your machine's IP address on your network)")
     print("  Press Ctrl+C to stop.\n")
 
     from app import app
-    app.run(host=args.host, port=args.port, debug=False)
+    app.run(host=args.host, port=port, debug=False)
 
 
 if __name__ == "__main__":

@@ -1583,4 +1583,21 @@ def stats_all():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=False)
+    # Pick a free port without ever killing whatever may already hold 5000.
+    _host = os.environ.get("LIBAIX_HOST", "0.0.0.0")
+    _requested = int(os.environ.get("LIBAIX_PORT", "5000"))
+    try:
+        from net_utils import find_available_port, is_port_available
+
+        if is_port_available(_host, _requested):
+            _port = _requested
+        else:
+            _port = find_available_port(_host, _requested + 1) or _requested
+            if _port != _requested:
+                print(
+                    f"Note: port {_requested} is in use by another app — "
+                    f"leaving it untouched; using {_port} instead."
+                )
+    except Exception:
+        _port = _requested
+    app.run(host=_host, port=_port, debug=False)
