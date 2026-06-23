@@ -1,60 +1,5 @@
 [
   {
-    "timestamp": "2026-04-03T23:47:30.613917+00:00",
-    "type": "assessment",
-    "accuracy": 0.9618,
-    "confidence": 0.9666,
-    "weak_domains": [
-      "wifi"
-    ]
-  },
-  {
-    "timestamp": "2026-04-03T23:47:30.840493+00:00",
-    "type": "growth_cycle",
-    "start_accuracy": 0.9618,
-    "final_accuracy": 0.9618
-  },
-  {
-    "timestamp": "2026-04-04T02:54:47.690642+00:00",
-    "type": "assessment",
-    "accuracy": 0.9618,
-    "confidence": 0.9666,
-    "weak_domains": [
-      "wifi"
-    ]
-  },
-  {
-    "timestamp": "2026-04-04T02:54:50.746463+00:00",
-    "type": "assessment",
-    "accuracy": 0.9618,
-    "confidence": 0.9666,
-    "weak_domains": [
-      "wifi"
-    ]
-  },
-  {
-    "timestamp": "2026-04-04T02:54:53.780247+00:00",
-    "type": "assessment",
-    "accuracy": 0.9618,
-    "confidence": 0.9666,
-    "weak_domains": [
-      "wifi"
-    ]
-  },
-  {
-    "timestamp": "2026-04-04T02:54:54.016062+00:00",
-    "type": "stabilization_check",
-    "accuracy": 0.9618,
-    "action": "stable"
-  },
-  {
-    "timestamp": "2026-04-04T02:55:24.804750+00:00",
-    "type": "optimization",
-    "best_accuracy": 0.0,
-    "best_config": null,
-    "configs_tested": 5
-  },
-  {
     "timestamp": "2026-04-04T02:55:27.573865+00:00",
     "type": "assessment",
     "accuracy": 0.9618,
@@ -832,6 +777,65 @@
   },
   {
     "timestamp": "2026-06-23T20:56:25.544904+00:00",
+    "type": "growth_cycle",
+    "start_accuracy": 0.9795,
+    "final_accuracy": 0.9795
+  },
+  {
+    "timestamp": "2026-06-23T21:46:30.752925+00:00",
+    "type": "assessment",
+    "accuracy": 0.9795,
+    "confidence": 0.9701,
+    "weak_domains": [
+      "wifi",
+      "cloud"
+    ]
+  },
+  {
+    "timestamp": "2026-06-23T21:46:34.011155+00:00",
+    "type": "assessment",
+    "accuracy": 0.9795,
+    "confidence": 0.9701,
+    "weak_domains": [
+      "wifi",
+      "cloud"
+    ]
+  },
+  {
+    "timestamp": "2026-06-23T21:46:37.229288+00:00",
+    "type": "assessment",
+    "accuracy": 0.9795,
+    "confidence": 0.9701,
+    "weak_domains": [
+      "wifi",
+      "cloud"
+    ]
+  },
+  {
+    "timestamp": "2026-06-23T21:46:37.478220+00:00",
+    "type": "stabilization_check",
+    "accuracy": 0.9795,
+    "action": "stable"
+  },
+  {
+    "timestamp": "2026-06-23T21:47:10.687547+00:00",
+    "type": "optimization",
+    "best_accuracy": 0.0,
+    "best_config": null,
+    "configs_tested": 5
+  },
+  {
+    "timestamp": "2026-06-23T21:47:13.678581+00:00",
+    "type": "assessment",
+    "accuracy": 0.9795,
+    "confidence": 0.9701,
+    "weak_domains": [
+      "wifi",
+      "cloud"
+    ]
+  },
+  {
+    "timestamp": "2026-06-23T21:47:13.934791+00:00",
     "type": "growth_cycle",
     "start_accuracy": 0.9795,
     "final_accuracy": 0.9795
