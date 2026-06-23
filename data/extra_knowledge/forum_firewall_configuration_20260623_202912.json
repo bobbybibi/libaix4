@@ -1,0 +1,3098 @@
+[
+  {
+    "question": "AWS Firewall Configuration Review?",
+    "answer": "We had a situation where an incorrect AWS firewall rule buried in our configuration was causing some headaches.  After a few days we found the rule and fixed it.  Does anyone know of a good way to audit Amazon AWS firewall configurations to better visualize configurations to get in front of these issues before they become a problem?",
+    "domain": "security",
+    "source": "stackexchange:serverfault:702299"
+  },
+  {
+    "question": "Tell me about AWS",
+    "answer": "We had a situation where an incorrect AWS firewall rule buried in our configuration was causing some headaches.",
+    "domain": "security",
+    "source": "stackexchange:serverfault:702299"
+  },
+  {
+    "question": "Manual Firewall Configuration on Redhat IPTables?",
+    "answer": "I'm trying to configure a complex firewall for my team.  We're looking at six interfaces with different types of security zones and flows.  \n\nI have a well-documented, clean firewall configuration script, but if I run iptables-save, the results will of course have no comments.  The results will also be out of sync with our documented policy.",
+    "domain": "security",
+    "source": "stackexchange:serverfault:254711"
+  },
+  {
+    "question": "Tell me about Rube Goldberg",
+    "answer": "Is there a nice, clean way that I can use my own configuration file on Redhat without undoing Redhat's Rube Goldberg scripts?.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:254711"
+  },
+  {
+    "question": "Whats wrong with firewall configuration with iptables?",
+    "answer": "I have below firewall configuration which is DROP/DENY by default but I am unable to browse any webpage what am I missing ? Note:- I have ens33 as interface and Ubuntu is the OS I m using.\n\nroot@ubuntu:~# iptables -L -n -v --line-number\nChain INPUT (policy DROP 360 packets, 33205 bytes)\nnum   pkts bytes target     prot opt in     out     source               destination         \n1      720 54133 ACCEPT     all  --  lo     *       0.0.0.0/0            0.0.0.",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:862597"
+  },
+  {
+    "question": "What is I have below firewall configuration which?",
+    "answer": "I have below firewall configuration which is DROP/DENY by default but I am unable to browse any webpage what am I missing ?.",
+    "domain": "security",
+    "source": "stackexchange:serverfault:862597"
+  },
+  {
+    "question": "Tell me about OS",
+    "answer": "Note:- I have ens33 as interface and Ubuntu is the OS I m using.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:862597"
+  },
+  {
+    "question": "Tell me about FORWARD",
+    "answer": "Chain FORWARD (policy DROP 0 packets, 0 bytes)\nnum   pkts bytes target     prot opt in     out     source               destination.",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:862597"
+  },
+  {
+    "question": "CentOS 7 Firewall Configuration?",
+    "answer": "In CentOS 6 I could type setup from the command line and I would be presented with a set of tools, one of them being Firewall configuration. I can still do this in CentOS 7, except the list no longer includes Firewall configuration as an option.\n\nDoes anyone know where I can find it now and why it has been moved?\n\nThis is where I used to go to allow incoming traffic via HTTP and HTTPS. If there's a better way, I'd gladly take the advice. Thanks.",
+    "domain": "internet",
+    "source": "stackexchange:serverfault:616435"
+  },
+  {
+    "question": "Tell me about In Cent",
+    "answer": "In CentOS 6 I could type setup from the command line and I would be presented with a set of tools, one of them being Firewall configuration.",
+    "domain": "security",
+    "source": "stackexchange:serverfault:616435"
+  },
+  {
+    "question": "What is This?",
+    "answer": "This is where I used to go to allow incoming traffic via HTTP and HTTPS.",
+    "domain": "internet",
+    "source": "stackexchange:serverfault:616435"
+  },
+  {
+    "question": "Where does Webmin store its firewall configuration?",
+    "answer": "I want to copy the firewall configuration for iptables from one server to the other. Both servers run Debian Squeeze and have Webmin 1.660 installed, so I want to copy the configuration that Webmin uses.\n\nI couldn´t find it in \"/var/webmin\", in \"/etc/iptable*\", \"/etc/sysconfig/iptables\", or in \"iptables.up.rules\".\n\n\"/var/lib/iptables/active\" is the current configuration and when I edit it, those changes won´t show up in Webmin.",
+    "domain": "security",
+    "source": "stackexchange:serverfault:556797"
+  },
+  {
+    "question": "Tell me about Debian Squeeze",
+    "answer": "Both servers run Debian Squeeze and have Webmin 1.660 installed, so I want to copy the configuration that Webmin uses.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:556797"
+  },
+  {
+    "question": "What is \"/var/lib/iptables/active\"?",
+    "answer": "\"/var/lib/iptables/active\" is the current configuration and when I edit it, those changes won´t show up in Webmin.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:556797"
+  },
+  {
+    "question": "What is Though, when I click on \"Revert Configuration\" my changes?",
+    "answer": "Though, when I click on \"Revert Configuration\" my changes are lost in that file and replaced.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:556797"
+  },
+  {
+    "question": "remote firewall configuration on centos7?",
+    "answer": "I'm using Centos 7 and am trying to configure my firewall remotely. When I run firewall-config & a window comes up but remains blank. I cannot kill the window with the X close button so I need to kill -9 the process.\n\nAny ideas why this would be blank?\n\nAm I misunderstanding something?",
+    "domain": "security",
+    "source": "stackexchange:serverfault:673317"
+  },
+  {
+    "question": "Cannot find error in iptables firewall configuration?",
+    "answer": "I'm struggling with a firewall problem on my Centos server.\n\nI have the following configuration which when I use it with a service iptables restart and I try to ssh to the server with putty, I cannot access the server - I just get a connection timeout error.\n\nHowever when I leave the final REJECT line out I can.\n\nI've opened the ports for ssh ie port 22. What am I doing wrong? Am I making a noobie mistake? Any help would be appreciated.",
+    "domain": "security",
+    "source": "stackexchange:serverfault:693655"
+  },
+  {
+    "question": "Tell me about INPUT",
+    "answer": "-A INPUT -m set --match-set blacklist src -j DROP -m comment --comment \\\"IPSET drop ips on blacklist\\\"\n-A INPUT -p tcp --dport 8080 -j SET --add-set blacklist src.",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:693655"
+  },
+  {
+    "question": "Tell me about NEW",
+    "answer": "--syn -m state --state NEW -j DROP         -m comment --comment \\\"Deny SYN flood attack\\\"\n-A INPUT -m state --state ESTABLISHED -m limit --limit 50/second --limit-burst 50 -j ACCEPT -m comment --comment \\\"Accept traffic with ESTABLISHED flag set (limit - DDoS prevent)\\\"\n-A INPUT -m state --state RELATED -m limit --limit 50/second --limit-burst 50 -j ACCEPT   -m comment --comment \\\"Accept traffic with RELATED flag set (limit - DDoS prevent)\\\"\n-A INPUT -m state --state INVALID -j DROP                    -m comment --comment \\\"Deny traffic with the INVALID flag set\\\".",
+    "domain": "security",
+    "source": "stackexchange:serverfault:693655"
+  },
+  {
+    "question": "What does this Cisco Router firewall configuration mean?",
+    "answer": "I have a Cisco 881w that I have attempted to set up a very basic firewall on, but I am not convinced I have done this correctly. Below is the configuration pertaining to the firewall and access lists (some of which I set up, some of which is factory defaults).",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:722695"
+  },
+  {
+    "question": "What is Below?",
+    "answer": "Below is the configuration pertaining to the firewall and access lists (some of which I set up, some of which is factory defaults).",
+    "domain": "security",
+    "source": "stackexchange:serverfault:722695"
+  },
+  {
+    "question": "What is Also, any information on how I can test what the firewall I think I have set up?",
+    "answer": "Also, any information on how I can test what the firewall I think I have set up is letting in and out would be appreciated.",
+    "domain": "security",
+    "source": "stackexchange:serverfault:722695"
+  },
+  {
+    "question": "Firewall configuration on Ubuntu KVM host?",
+    "answer": "I have an Ubuntu 9.10 server with KVM virtualization installed on it (I'll call it HOST). It has three VMs running, one with Apache installed (calling it APACHE), one with Mysql installed (calling it MYSQL), and one with Jetty running on port 8080 (JETTY). The host has a bridge configured to provide access to the VMs.\n\nI'd like to run a firewall on the host, but not on each VM.  The firewall should block all ports on the host and VMs that aren't necessary.",
+    "domain": "internet",
+    "source": "stackexchange:serverfault:120932"
+  },
+  {
+    "question": "Tell me about KVM",
+    "answer": "I have an Ubuntu 9.10 server with KVM virtualization installed on it (I'll call it HOST).",
+    "domain": "general",
+    "source": "stackexchange:serverfault:120932"
+  },
+  {
+    "question": "Tell me about VMs",
+    "answer": "It has three VMs running, one with Apache installed (calling it APACHE), one with Mysql installed (calling it MYSQL), and one with Jetty running on port 8080 (JETTY).",
+    "domain": "general",
+    "source": "stackexchange:serverfault:120932"
+  },
+  {
+    "question": "Tell me about HOST",
+    "answer": "HOST should only be able to be connected to via SSH from within it's netblock.",
+    "domain": "internet",
+    "source": "stackexchange:serverfault:120932"
+  },
+  {
+    "question": "Tell me about APAHCE",
+    "answer": "APAHCE, MYSQL should be able to be connected to via SSH from anywhere.",
+    "domain": "internet",
+    "source": "stackexchange:serverfault:120932"
+  },
+  {
+    "question": "Tell me about MYSQL",
+    "answer": "MYSQL should be able to be connected to via port 3306 from within the netblock only.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:120932"
+  },
+  {
+    "question": "What is JETTY should be able to be connected to via port 8080 (it?",
+    "answer": "JETTY should be able to be connected to via port 8080 (it is running as a user, so can't run on 80), but traffic to port 80 should be forwarded to 8080 in the firewall as well, so it can appear as a regular http server.",
+    "domain": "security",
+    "source": "stackexchange:serverfault:120932"
+  },
+  {
+    "question": "What is It looks like UWF?",
+    "answer": "It looks like UWF is installed, but not active.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:120932"
+  },
+  {
+    "question": "Tell me about HOWTOs",
+    "answer": "Are there any good HOWTOs on doing this that I just haven't found?.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:120932"
+  },
+  {
+    "question": "Server 2016 Domain Controller firewall configuration?",
+    "answer": "I have an environment with 12 VM's all running Windows Server 2016. One is a domain controller, all others joined to the domain.\nWhen I login via RDP to any of the computers it takes 2+ minutes.  Most of the time displaying \"Other User\" and a loading graphic.  Then it shows the Username with loading icon for a shorter period.  Then finally logs in.\n\nMultiple users multiple machines.  Today I found that if I disable the windows firewall on the Domain controller, logins are super fast.",
+    "domain": "security",
+    "source": "stackexchange:serverfault:982288"
+  },
+  {
+    "question": "Tell me about VM",
+    "answer": "I have an environment with 12 VM's all running Windows Server 2016.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:982288"
+  },
+  {
+    "question": "What is One?",
+    "answer": "One is a domain controller, all others joined to the domain.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:982288"
+  },
+  {
+    "question": "Tell me about RDP",
+    "answer": "When I login via RDP to any of the computers it takes 2+ minutes.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:982288"
+  },
+  {
+    "question": "Tell me about Other User",
+    "answer": "Most of the time displaying \"Other User\" and a loading graphic.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:982288"
+  },
+  {
+    "question": "Cisco SG-350 Switch and Fortigate Firewall Configuration?",
+    "answer": "I'm not what you would call a Network Engineer, but right now i have a (somewhat) complex network problem that i have to solve. I must configure a SG-35028p cisco switch and a fortigate 60f firewall to give internet access (kinda in a router on a stick fashion if you ask me).\nRight now i haven't been able to achieve the objectives that the attached image shows because i'm not really sure why my vlans do not have internet access, or how to correctly configure a vlan for that matter.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:69048"
+  },
+  {
+    "question": "Tell me about Network Engineer",
+    "answer": "I'm not what you would call a Network Engineer, but right now i have a (somewhat) complex network problem that i have to solve.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:69048"
+  },
+  {
+    "question": "Tell me about SG",
+    "answer": "I must configure a SG-35028p cisco switch and a fortigate 60f firewall to give internet access (kinda in a router on a stick fashion if you ask me).",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:69048"
+  },
+  {
+    "question": "Tell me about EDIT",
+    "answer": "EDIT: I'll add my current switch configuration to clarify the state of the setup:\n-vlan database\n-vlan 10,20,30,40,66,77\n-exit.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:69048"
+  },
+  {
+    "question": "Firewall and VPN configuration?",
+    "answer": "I've been reading a lot of different Q&As on here and other forums about firewall positioning in relation to the DMZ and the appropriate place to put a VPN server. I've made the following logical diagram to describe what I think is a synthesis of what I've read. Can you please tell me if this design is feasible configuration and if not, where/why it's wrong? \n\n\n\nIn the diagram the filtering router is the edge firewall. It has two externally visible IP addresses. One splits DMZ and LAN traffic.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:57687"
+  },
+  {
+    "question": "Tell me about DMZ",
+    "answer": "I've been reading a lot of different Q&As on here and other forums about firewall positioning in relation to the DMZ and the appropriate place to put a VPN server.",
+    "domain": "security",
+    "source": "stackexchange:networkengineering:57687"
+  },
+  {
+    "question": "What is I've made the following logical diagram to describe what I think?",
+    "answer": "I've made the following logical diagram to describe what I think is a synthesis of what I've read.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:57687"
+  },
+  {
+    "question": "What is Can you please tell me if this design?",
+    "answer": "Can you please tell me if this design is feasible configuration and if not, where/why it's wrong?.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:57687"
+  },
+  {
+    "question": "What is DMZ traffic?",
+    "answer": "DMZ traffic is forwarded from the filtering router by port to servers in the DMZ.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:57687"
+  },
+  {
+    "question": "What is Requests for unknown connections not in the DMZ?",
+    "answer": "Requests for unknown connections not in the DMZ are either forwarded to the NAT router where they are translated or dropped.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:57687"
+  },
+  {
+    "question": "Tell me about VPN",
+    "answer": "The VPN Server also does authentication and forwards to the NAT router if the external client successfully registers on the network.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:57687"
+  },
+  {
+    "question": "Tell me about NAT",
+    "answer": "The NAT router translates internal/external traffic requests.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:57687"
+  },
+  {
+    "question": "What is a \"back to back\" firewall configuration?",
+    "answer": "I've found some guides talking about \"back to back\" (or back2back) configuration but I can't find an explanation of such configuration.\n\nCan somebody explain what is meant by \"back-to-back\"?",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:51128"
+  },
+  {
+    "question": "What is Can somebody explain what?",
+    "answer": "Can somebody explain what is meant by \"back-to-back\"?.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:51128"
+  },
+  {
+    "question": "Backup configuration from SonicWall using ssh or scp?",
+    "answer": "I'm evaluating whether to get a SonicWall TZ or a comparable Fortinet  firewall. One thing i can't find but would really like to have is the ability to automate backing up the firewall configuration.",
+    "domain": "security",
+    "source": "stackexchange:networkengineering:24341"
+  },
+  {
+    "question": "Tell me about TZ",
+    "answer": "I'm evaluating whether to get a SonicWall TZ or a comparable Fortinet  firewall.",
+    "domain": "security",
+    "source": "stackexchange:networkengineering:24341"
+  },
+  {
+    "question": "What is One thing i can't find but would really like to have?",
+    "answer": "One thing i can't find but would really like to have is the ability to automate backing up the firewall configuration.",
+    "domain": "security",
+    "source": "stackexchange:networkengineering:24341"
+  },
+  {
+    "question": "Allow necessary protocols to ping when configure firewall?",
+    "answer": "I am configuring a firewall hardware, which is connected between my laptop and lab LAN (lab LAN is also connected to other computers as well as Internet). My objective is to allow the ping between my computer & another computer in the lab. Then test deny the ping function.\n\nTo ping successfully, I must allow all necessary protocols that related to \"ping\" by setting firewall configuration GUI. I have tried to allow several protocols together that related to ping, such as ARP, ICMP.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:26135"
+  },
+  {
+    "question": "What is I am configuring a firewall hardware, which?",
+    "answer": "I am configuring a firewall hardware, which is connected between my laptop and lab LAN (lab LAN is also connected to other computers as well as Internet).",
+    "domain": "security",
+    "source": "stackexchange:networkengineering:26135"
+  },
+  {
+    "question": "What is My objective?",
+    "answer": "My objective is to allow the ping between my computer & another computer in the lab.",
+    "domain": "troubleshooting",
+    "source": "stackexchange:networkengineering:26135"
+  },
+  {
+    "question": "Tell me about GUI",
+    "answer": "To ping successfully, I must allow all necessary protocols that related to \"ping\" by setting firewall configuration GUI.",
+    "domain": "security",
+    "source": "stackexchange:networkengineering:26135"
+  },
+  {
+    "question": "Tell me about ARP",
+    "answer": "I have tried to allow several protocols together that related to ping, such as ARP, ICMP.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:26135"
+  },
+  {
+    "question": "What is I think the problem?",
+    "answer": "I think the problem is that some protocols that support \"ping\" are not listed and allowed in the configuration.",
+    "domain": "troubleshooting",
+    "source": "stackexchange:networkengineering:26135"
+  },
+  {
+    "question": "What protocols/configurations do I need, for implementing my firewall zone based network?",
+    "answer": "I have two Cisco 1941 routers connected to a PA-200 firewall. Each router has a couple of switches attached to it. I want to implement this network.\n\n\n\nI have defined a list of 8 firewall zones:\n\nZone 1 BYOD:           10.1.0.0/16 \nZone 2 DMZ:            10.2.0.0/24\nZone 3 FrontOffice:    10.2.1.0/24\nZone 4 BackOffice:     10.2.2.0/24\n....\n\n\nOn the PA Firewall, I want to define access policies between different zones.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:41723"
+  },
+  {
+    "question": "Tell me about PA",
+    "answer": "I have two Cisco 1941 routers connected to a PA-200 firewall.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:41723"
+  },
+  {
+    "question": "Tell me about BYOD",
+    "answer": "Zone 1 BYOD:           10.1.0.0/16 \nZone 2 DMZ:            10.2.0.0/24\nZone 3 FrontOffice:    10.2.1.0/24\nZone 4 BackOffice:     10.2.2.0/24\n....",
+    "domain": "wifi_policy",
+    "source": "stackexchange:networkengineering:41723"
+  },
+  {
+    "question": "Tell me about VLAN",
+    "answer": "All traffic inside the network needs to go through firewall, so it can decide for example, if a client from VLAN/zone 1 can send/receive packets from/to VLAN/zone 2.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:41723"
+  },
+  {
+    "question": "What is I honestly don't know how to configure it completely, which?",
+    "answer": "I honestly don't know how to configure it completely, which is something I'm trying to figure out by asking this question.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:41723"
+  },
+  {
+    "question": "Tell me about PC",
+    "answer": "However, I'm not sure that's going to work, because the PC probably won't be able to see the firewall's mac address since it's behind a router...",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:41723"
+  },
+  {
+    "question": "Tell me about STP",
+    "answer": "Problem 3: Do I need to use redundancy protocols like STP, or FHRP?.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:41723"
+  },
+  {
+    "question": "Swapping to new ASA hardware - same configuration - what are the pitfalls?",
+    "answer": "I am replacing some old ASA 5515 with some new ASA 5516. We are going from a set up whereby we managed the boxes to one where a 3rd party is now managing them. I am currently going through the implementation and rollback plan with them, in the meantime I am also preparing a testing plan for when the swap takes place.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:64835"
+  },
+  {
+    "question": "What is current method for the swap?",
+    "answer": "The current method for the swap is that 3rd party has already configured the new firewalls and hooked them up to a switch and that the swap will take place by disabling the ports where the old firewall is connected and enabling the ports where the new firewall is connected.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:64835"
+  },
+  {
+    "question": "What is So the way I understand this?",
+    "answer": "So the way I understand this is that the configuration is being ported to the new firewall.",
+    "domain": "security",
+    "source": "stackexchange:networkengineering:64835"
+  },
+  {
+    "question": "What is Configuration?",
+    "answer": "Configuration is exactly the same as what is in the old one.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:64835"
+  },
+  {
+    "question": "Tell me about IP",
+    "answer": "When the swap happens I expect the arp tables to update down the chain of switches and for the servers to reroute their services accordingly to the new gateway ( even though it will have the same IP as the old gateway).",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:64835"
+  },
+  {
+    "question": "What is We currently have 6 site-to-site VPN connections and they?",
+    "answer": "We currently have 6 site-to-site VPN connections and they are worried that just swapping over could cause split-tunneling.",
+    "domain": "security",
+    "source": "stackexchange:networkengineering:64835"
+  },
+  {
+    "question": "What is My question?",
+    "answer": "My question is am I missing any pitfalls here?.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:64835"
+  },
+  {
+    "question": "What is How?",
+    "answer": "How is a database cluster affected by an internal routing change?.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:64835"
+  },
+  {
+    "question": "VPN S2S/L2L between 2 ASA 5506-X?",
+    "answer": "I have a problem to create a VPN L2L between 2 ASA 5506-X (see the pictures bellow).\n\nI configure my 2 firewall inspired by the majority of tutorials found on the NET.\n\nI correctly place client PCs in each LAN, but when I try to ping from Site 1 to Site 2 (or vice versa) it does not work.\n\nYou can see below my firewall configuration and the network map.\n\nNetwork map:\n\n\nASA0:\n\nASA Version 9.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:48769"
+  },
+  {
+    "question": "Tell me about NET",
+    "answer": "I configure my 2 firewall inspired by the majority of tutorials found on the NET.",
+    "domain": "security",
+    "source": "stackexchange:networkengineering:48769"
+  },
+  {
+    "question": "Tell me about PCs",
+    "answer": "I correctly place client PCs in each LAN, but when I try to ping from Site 1 to Site 2 (or vice versa) it does not work.",
+    "domain": "troubleshooting",
+    "source": "stackexchange:networkengineering:48769"
+  },
+  {
+    "question": "Tell me about WAN",
+    "answer": "interface GigabitEthernet1/8\n nameif WAN\n security-level 0\n ip address 172.30.1.20 255.255.255.0\n!.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:48769"
+  },
+  {
+    "question": "No access to internet from DMZ Cisco ASA 5512?",
+    "answer": "Glad to join the forum. I hope to get help too and help as much as I can. Currently I have a big problem. I am using Cisco ASA 5512. I defined 3 interfaces on the firewall: inside (192.168.0.0), outside (192.198.100.253) and DMZ (192.168.1.0) which includes web servers and other VPN sevices. The DMZ can not access the internet, despite everything I think I have done. Can more experienced people and specialists help me?\nHere is the firewall configuration\nThank you\n\n: Saved\n:\nASA Version 9.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:52864"
+  },
+  {
+    "question": "How to install firewall under a router?",
+    "answer": "Recently purchased Sophos Xg 125 firewall, previously am using Cisco Rv325 router with 4 Vlan,\n\nMy question about for configuration is that\n1.how to configure my firewall under this router because previously am using Cisco Rv325 router with 4 vlan. Is it possible to use this vlan under my firewall..if yes how??\n2. Where should i create public ip and all\n\nplease help.....",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:52985"
+  },
+  {
+    "question": "Tell me about Sophos Xg",
+    "answer": "Recently purchased Sophos Xg 125 firewall, previously am using Cisco Rv325 router with 4 Vlan,.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:52985"
+  },
+  {
+    "question": "Tell me about Cisco Rv",
+    "answer": "My question about for configuration is that\n1.how to configure my firewall under this router because previously am using Cisco Rv325 router with 4 vlan.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:52985"
+  },
+  {
+    "question": "Firewall Configuration Audits?",
+    "answer": "I'm looking to perform policy audits against firewall configurations and/or rulesets. This should be performed independently of any configuration management systems, ideally by operating off the running config.  I am most interested in inspecting Cisco PIX/ASA/FWSM and Juniper NetScreen/JunOS devices, however iptables and WFP are also of interest. What techniques exist for doing this?",
+    "domain": "security",
+    "source": "stackexchange:security:4130"
+  },
+  {
+    "question": "Tell me about PIX",
+    "answer": "I am most interested in inspecting Cisco PIX/ASA/FWSM and Juniper NetScreen/JunOS devices, however iptables and WFP are also of interest.",
+    "domain": "internet",
+    "source": "stackexchange:security:4130"
+  },
+  {
+    "question": "Testing Web Application Firewall Configuration (ModSecurity)?",
+    "answer": "What is the best way of testing my Firewall configuration as i have deployed the Core Rule set provided by the OWASP. But my rule configuration was giving me too many false positives which i  resolved by deleting many of the rules from the core ruleset. Now that i have deleted some problematic rules how can i now make sure that my configuration is still secure.",
+    "domain": "networking",
+    "source": "stackexchange:security:23454"
+  },
+  {
+    "question": "What is What?",
+    "answer": "What is the best way of testing my Firewall configuration as i have deployed the Core Rule set provided by the OWASP.",
+    "domain": "security",
+    "source": "stackexchange:security:23454"
+  },
+  {
+    "question": "Stateless Firewall configuration and random port number from server?",
+    "answer": "When I was reading about web servers, I  came to know that though servers listen to static port (say port 80 for http), immediately after the connection, they assign a different port and thread to process. This helps in scalability; otherwise the server cannot listen to the static port until the processing of the previous request is finished.",
+    "domain": "networking",
+    "source": "stackexchange:security:216822"
+  },
+  {
+    "question": "What is Now my question?",
+    "answer": "Now my question is that if you have a stateless firewall at the client side (I know it is not a common scenario), how can we configure this?.",
+    "domain": "security",
+    "source": "stackexchange:security:216822"
+  },
+  {
+    "question": "What is But since the target port?",
+    "answer": "But since the target port is randomly assigned, we cannot be sure of the inbound port number.",
+    "domain": "networking",
+    "source": "stackexchange:security:216822"
+  },
+  {
+    "question": "What is Since the firewall?",
+    "answer": "Since the firewall is stateless, it doesn't have any previous knowledge of outbound connection initiation.",
+    "domain": "security",
+    "source": "stackexchange:security:216822"
+  },
+  {
+    "question": "Is firewall needed when a VPS is used to run a single service?",
+    "answer": "Consider the following cases.\nA vps running a selfhosted service which is listening on port 1234.\nCase 1: There is firewall configured that blocks all incoming connections by default. Now port 1234 has to be explicitly opened in the firewall configuration. When a client tries to access a different port, firewall blocks it.\nCase 2: There is no firewall configured. Client can access port 1234 by default.",
+    "domain": "security",
+    "source": "stackexchange:security:277671"
+  },
+  {
+    "question": "What is vps running a selfhosted service which?",
+    "answer": "A vps running a selfhosted service which is listening on port 1234.",
+    "domain": "general",
+    "source": "stackexchange:security:277671"
+  },
+  {
+    "question": "What is Case 1: There?",
+    "answer": "Case 1: There is firewall configured that blocks all incoming connections by default.",
+    "domain": "security",
+    "source": "stackexchange:security:277671"
+  },
+  {
+    "question": "What is Case 2: There?",
+    "answer": "Case 2: There is no firewall configured.",
+    "domain": "security",
+    "source": "stackexchange:security:277671"
+  },
+  {
+    "question": "What is When a client tries to access a different port, kernel would find no process?",
+    "answer": "When a client tries to access a different port, kernel would find no process is listening on the port and just close the connection.",
+    "domain": "general",
+    "source": "stackexchange:security:277671"
+  },
+  {
+    "question": "What is Only case I can think of?",
+    "answer": "Only case I can think of is if a miss-configured non-malicious process happens to listen on random port and bind to all interfaces '0.0.0.0', then firewall would help block.",
+    "domain": "security",
+    "source": "stackexchange:security:277671"
+  },
+  {
+    "question": "Tell me about VPS",
+    "answer": "If I just have a simple VPS running some services listening on few ports.",
+    "domain": "general",
+    "source": "stackexchange:security:277671"
+  },
+  {
+    "question": "What is I think the answer comes to if I can be sure there?",
+    "answer": "I think the answer comes to if I can be sure there is no unintentional listener on the external interface.",
+    "domain": "general",
+    "source": "stackexchange:security:277671"
+  },
+  {
+    "question": "Should a host based firewall have an API accessible to other applications?",
+    "answer": "Some people are hesitant to use Windows Firewall because it allows software to alter its state via an API.  The benefit of this is that the Firewall configuration can be centrally manged in GPO.\n\nOn the other hand, malware can change or alter Windows Firewall settings unbeknownst to the end user.\n\nHas anyone, vendor, or even research group studied the impact and ramifications?  What are your experiences with \"programmable firewalls\"* and should they be used?",
+    "domain": "security",
+    "source": "stackexchange:security:15961"
+  },
+  {
+    "question": "What is Some people?",
+    "answer": "Some people are hesitant to use Windows Firewall because it allows software to alter its state via an API.",
+    "domain": "security",
+    "source": "stackexchange:security:15961"
+  },
+  {
+    "question": "What is benefit of this?",
+    "answer": "The benefit of this is that the Firewall configuration can be centrally manged in GPO.",
+    "domain": "security",
+    "source": "stackexchange:security:15961"
+  },
+  {
+    "question": "Tell me about Windows Firewall",
+    "answer": "On the other hand, malware can change or alter Windows Firewall settings unbeknownst to the end user.",
+    "domain": "security",
+    "source": "stackexchange:security:15961"
+  },
+  {
+    "question": "Firewall Blocking IP Spoofing?",
+    "answer": "I was studying firewalls and I came to think of this. I have a firewall configured as follows:\n\npacket filter rule table to allow users of a corporate network\nto surf the web via HTTP and HTTPS\n\nNow what happens if an attacker from the “outside” spoofs an\nIP address from the “inside” as their source address?\n\nCould they then connect to a machine inside the corporate network? Why/not?",
+    "domain": "internet",
+    "source": "stackexchange:security:131084"
+  },
+  {
+    "question": "Tell me about HTTP",
+    "answer": "packet filter rule table to allow users of a corporate network\nto surf the web via HTTP and HTTPS.",
+    "domain": "internet",
+    "source": "stackexchange:security:131084"
+  },
+  {
+    "question": "Packet-filtering firewall evasion (Scanning)?",
+    "answer": "Context\n\nI'm very familiar with different applications of scanning tools (. . . and you can use -mtu to specify the size of the fragments in nmap . . .) but every piece of information I read about scanning and enumeration seems to always conclude with \" . . . but this is only effective against old or poorly configured firewalls . . .",
+    "domain": "security",
+    "source": "stackexchange:security:30643"
+  },
+  {
+    "question": "What is but this?",
+    "answer": "but this is only effective against old or poorly configured firewalls .",
+    "domain": "security",
+    "source": "stackexchange:security:30643"
+  },
+  {
+    "question": "How to prevent Firefox and Chrome from opening ports in the firewall?",
+    "answer": "I have noticed that Firefox and Chrome have opened ports for unsolicited inbound traffic in the Windows firewall. This happened with Windows 7 x64 and Windows 10. (Here, I am talking about the standard firewall integrated in recent Windows versions, not some third-party product).\n\nNormally, when a program tries to change the firewall configuration, I get a notification (dialog box) on the desktop asking me if I would like to allow that action.",
+    "domain": "networking",
+    "source": "stackexchange:security:205416"
+  },
+  {
+    "question": "What is However, each time those browsers update themselves (which?",
+    "answer": "However, each time those browsers update themselves (which is quite often), they re-create those rules without the usual confirmation dialog appearing.",
+    "domain": "general",
+    "source": "stackexchange:security:205416"
+  },
+  {
+    "question": "What is I currently suspect that the rules?",
+    "answer": "I currently suspect that the rules are recreated not by Firefox or Chrome themselves, but by their maintenance (update) services which are running in the background, probably with administrative rights.",
+    "domain": "general",
+    "source": "stackexchange:security:205416"
+  },
+  {
+    "question": "Tell me about TCP",
+    "answer": "I do not want Firefox to add rules to my firewall to let unsolicited inbound traffic pass to itself to any port from any address for TCP and UDP.",
+    "domain": "networking",
+    "source": "stackexchange:security:205416"
+  },
+  {
+    "question": "Tell me about UDP",
+    "answer": "Likewise, I do not want Chrome to add rules to my firewall which let unsolicited inbound UDP traffic pass to itself to a certain port, but also from any address.",
+    "domain": "networking",
+    "source": "stackexchange:security:205416"
+  },
+  {
+    "question": "What is My clients?",
+    "answer": "My clients are not part of a domain, so I would have to do this on each of them.",
+    "domain": "general",
+    "source": "stackexchange:security:205416"
+  },
+  {
+    "question": "Tell me about UPD",
+    "answer": "Note that the rule for Chrome lets pass UPD traffic from any address to port 5353 to Chrome.",
+    "domain": "general",
+    "source": "stackexchange:security:205416"
+  },
+  {
+    "question": "Tell me about Inbound Rules",
+    "answer": "Hint: When testing, please be aware that you might need to right-click on \"Inbound Rules\" at the left and select \"Refresh\" from the context menu to actually see the newest updates to the rules which might have been done in the background by services or applications.",
+    "domain": "general",
+    "source": "stackexchange:security:205416"
+  },
+  {
+    "question": "Incoming Packet From Source Port 80?",
+    "answer": "I'm sure no daemon or browser is using network resources, but I found incoming packets from Wireshark:\n\n98.126.43.174 source port 80 --TCP--> MyIp destination port 339 [SYN, ACK]\n98.126.43.174 source port 80 --TCP--> MyIP destination port 339 [SYN, ACK]\n67.11.225.49 source port 27725 --UDP--> MyIP destination port 10112\n67.11.225.49 source port 27725 --UDP--> MyIP destination port 10112\n\n\nI've setup deny all incoming packets in my firewall.",
+    "domain": "networking",
+    "source": "stackexchange:security:29522"
+  },
+  {
+    "question": "What is I'm sure no daemon or browser?",
+    "answer": "I'm sure no daemon or browser is using network resources, but I found incoming packets from Wireshark:.",
+    "domain": "troubleshooting",
+    "source": "stackexchange:security:29522"
+  },
+  {
+    "question": "What is I'm sure my IP?",
+    "answer": "I'm sure my IP is not initiating any connection to port 80 to that IP.",
+    "domain": "general",
+    "source": "stackexchange:security:29522"
+  },
+  {
+    "question": "Tell me about SYN",
+    "answer": "If I didn't block this packet by using stateful firewall and keep replying with [SYN, ACK] as defaults, what is the worst risk that could happen?.",
+    "domain": "security",
+    "source": "stackexchange:security:29522"
+  },
+  {
+    "question": "Port scans: 'traffic denied' VS 'close - age out'?",
+    "answer": "I have been investigating logs from the firewall (Juniper) and I've found out that when someone is portscanning my website, the majority of the traffic through different tcp/udp ports is denied (except for ports 80 and 443, which is allowed). However, traffic is allowed through some of the ports that it shouldn't be, for example, ports 4800, 502, 21025, 88. But after inspecting the log it also says 'CLOSE - age out'.",
+    "domain": "networking",
+    "source": "stackexchange:security:173468"
+  },
+  {
+    "question": "What is However, traffic?",
+    "answer": "However, traffic is allowed through some of the ports that it shouldn't be, for example, ports 4800, 502, 21025, 88.",
+    "domain": "general",
+    "source": "stackexchange:security:173468"
+  },
+  {
+    "question": "What is To clarify: I do not have access to check what?",
+    "answer": "To clarify: I do not have access to check what is the exact firewall configuration.",
+    "domain": "security",
+    "source": "stackexchange:security:173468"
+  },
+  {
+    "question": "What is discussed about All SonicWall Cloud Backup Users Had Firewall Configurations Stolen?",
+    "answer": "The associated SonicWall announcement https://www.sonicwall.com/support/knowledge-base/mysonicwall...",
+    "domain": "internet",
+    "source": "hackernews:45555811"
+  },
+  {
+    "question": "What is discussed about Show HN: Firezone, an open-source WireGuard-based alternative to OpenVPN AS?",
+    "answer": "I created Firezone to make it easier to host and manage your own WireGuard VPN server. While working at Cisco as a security automation engineer I experienced a lot of unnecessary pain managing secure network-level access into our cloud VPCs. I tried OpenVPN Access Server but I personally feel that security software should be open source to be validated (and improved) by the community.",
+    "domain": "security",
+    "source": "hackernews:28683231"
+  },
+  {
+    "question": "Tell me about VPCs",
+    "answer": "While working at Cisco as a security automation engineer I experienced a lot of unnecessary pain managing secure network-level access into our cloud VPCs.",
+    "domain": "internet",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about Access Server",
+    "answer": "I tried OpenVPN Access Server but I personally feel that security software should be open source to be validated (and improved) by the community.",
+    "domain": "security",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about UI",
+    "answer": "So I built some convenience functionality on top, added a simple Web UI, and open sourced it.Firezone is packaged with Chef Omnibus so the only dependencies are a recent Linux kernel (4.19+) and the WireGuard module.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is Web UI?",
+    "answer": "The Web UI is built with Elixir/Phoenix (I’m a recovering full-stack Rails engineer) and runs as an unprivileged user.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is firewall application?",
+    "answer": "The firewall application is essentially a frontend to nftables and currently functions as a simple egress firewall to block outbound traffic to specific hosts/CIDRs (in your private network or elsewhere).In the near term I’m planning to polish it up a bit and add more security features.",
+    "domain": "security",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about DNS",
+    "answer": "Longer-term I’d like to add things like DNS-based ad blocking, IP blocklist support, LDAP / SSO authentication, and more user management features.I wanted to show it here and see what HN thinks.",
+    "domain": "intranet",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is discussed about Launch HN: Firezone (YC W22) – Zero-trust access platform built on WireGuard?",
+    "answer": "Hi HN! I'm Jamil Bou Kheir, founder of Firezone (https://www.firezone.dev), a remote access platform that is a replacement for legacy corporate VPNs. Built on WireGuard (a fast, modern VPN protocol), Firezone secures your team’s apps, networks and services using access policies synced with your identity provider. You deploy tiny, self-contained binaries into your infrastructure anywhere you need access, and your workforce uses our client apps to reach the resources they protect.",
+    "domain": "internet",
+    "source": "hackernews:41173330"
+  },
+  {
+    "question": "Tell me about VPNs",
+    "answer": "I'm Jamil Bou Kheir, founder of Firezone (https://www.firezone.dev), a remote access platform that is a replacement for legacy corporate VPNs.",
+    "domain": "internet",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about APT",
+    "answer": "But as workers go remote and resources move to the cloud, the perimeter blurs, making it harder to secure.I experienced this issue first-hand as a security engineer hunting for APT malware on Cisco's intranet.",
+    "domain": "security",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is However, now you have many VPN tunnels instead of one, and most VPN protocols?",
+    "answer": "However, now you have many VPN tunnels instead of one, and most VPN protocols are too heavyweight for this.If Cisco was facing these issues with remote access, I thought, others must be facing similar problems.",
+    "domain": "security",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is So when WireGuard came along, I started Firezone.WireGuard tunnels?",
+    "answer": "So when WireGuard came along, I started Firezone.WireGuard tunnels are so lightweight you can open thousands of them from an iPhone to whatever resources you need access to.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about STUN",
+    "answer": "Just deploy Gateways - small, statically-linked Linux binaries - where you need access, and Firezone’s homegrown STUN/TURN layer (we call “snownet”) handles the rest.",
+    "domain": "networking",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is If you need more throughput, just deploy more Gateways, and load?",
+    "answer": "If you need more throughput, just deploy more Gateways, and load is balanced across all of them.WireGuard keys are distributed to peers only when access to a particular resource is authorized, and private keys never leave the device’s memory where they were generated.",
+    "domain": "networking",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about OTP",
+    "answer": "We lean heavily on Elixir/Phoenix and OTP’s awesome concurrency features to power all of this.Firezone’s access control system is intentionally very simple.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about ACL",
+    "answer": "More perimeters means more rules managing access to them, so we intentionally wanted to keep admins out of “ACL hell” as the number of controls grew.One area we’re actively working to improve is our UI/UX - Firezone is a product built by engineers, for engineers, and at times, it shows!.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "Challenge HN: There's only one truly open port on this machine. Can you find it?",
+    "answer": "Came up with some fun iptables rules for securing my servers and I'd like to test out how effective they are, so here's a challenge for you all!There's a VPS on 152.70.178.90 with a quite unique firewall configuration. Open to the internet are two services: an HTTP server on :80 for verifying my ownership of the machine, and... something else, somewhere. Your task is to find and connect to the second service – bonus points if you successfully authenticate.",
+    "domain": "security",
+    "source": "hackernews:38775705"
+  },
+  {
+    "question": "What is Open to the internet?",
+    "answer": "Open to the internet are two services: an HTTP server on :80 for verifying my ownership of the machine, and...",
+    "domain": "internet",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is Your task?",
+    "answer": "Your task is to find and connect to the second service – bonus points if you successfully authenticate.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is port?",
+    "answer": "The port is always open for everyone to see.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is VPS?",
+    "answer": "The VPS is also on a gigabit connection, so go wild!.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is discussed about Proposal: Standardize TCP Port 41 for AI Services – Here's Why?",
+    "answer": "In the playful spirit of leet speak where \"41\" stands for \"AI,\" I propose we consider standardizing TCP port 41 as the default for AI services across the internet. This idea started as a fun experiment when I began deploying my chatbot on this port, but it sparked some thoughts on the broader applicability and benefits.",
+    "domain": "networking",
+    "source": "hackernews:40329638"
+  },
+  {
+    "question": "What is In the playful spirit of leet speak where \"41\"?",
+    "answer": "In the playful spirit of leet speak where \"41\" stands for \"AI,\" I propose we consider standardizing TCP port 41 as the default for AI services across the internet.",
+    "domain": "networking",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about AI",
+    "answer": "This includes potential conflicts with existing systems that might already use port 41.Security Implications: Standardizing a port for AI services might make it a target for malicious activities.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about IANA",
+    "answer": "This would involve discussions, agreements, and possibly formal proposals to bodies like IANA.I would like to hear the community’s thoughts on this proposal.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is discussed about Show HN: AI Commander – TeamViewer for AI Agents, No VPN or SSH?",
+    "answer": "I built a platform allowing for instant access to remote computers from CLI tools like Claude, Codex, Opencode, or any other AI chat. There are mini apps for Windows (tray), Mac (menu bar), and Linux (CLI app) generating connection code, like TeamViewer. Comprehensive security, instant access, no firewall/networking configuration. Just ask your AI to do something on your machine, and it will do it flawlessly.",
+    "domain": "security",
+    "source": "hackernews:48590260"
+  },
+  {
+    "question": "Tell me about CLI",
+    "answer": "I built a platform allowing for instant access to remote computers from CLI tools like Claude, Codex, Opencode, or any other AI chat.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is There?",
+    "answer": "There are mini apps for Windows (tray), Mac (menu bar), and Linux (CLI app) generating connection code, like TeamViewer.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "How to Unban an IP properly with Fail2Ban?",
+    "answer": "I'm using Fail2Ban on a server and I'm wondering how to unban an IP properly.\n\nI know I can work with IPTables directly: iptables -D fail2ban-ssh <number>\n\nBut is there not a way to do it with the fail2ban-client?\n\nIn the manuals it states something like: fail2ban-client get ssh actionunban <IP>. But that doesn't work.\n\nAlso, I don't want to /etc/init.d/fail2ban restart as that would lose all the bans in the list.",
+    "domain": "internet",
+    "source": "stackexchange:serverfault:285256"
+  },
+  {
+    "question": "Tell me about IPTables",
+    "answer": "I know I can work with IPTables directly: iptables -D fail2ban-ssh <number>.",
+    "domain": "internet",
+    "source": "stackexchange:serverfault:285256"
+  },
+  {
+    "question": "What is But?",
+    "answer": "But is there not a way to do it with the fail2ban-client?.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:285256"
+  },
+  {
+    "question": "best way to clear all iptables rules?",
+    "answer": "I currently have this snippet:\n# flush all chains\niptables -F\niptables -t nat -F\niptables -t mangle -F\n\n# delete all chains\niptables -X\n\nIs there a possibility that some impervious rule will stay alive after running this?\nThe idea is to have a completely clean iptables config, that can be easily replaced by new ruleset (nevermind routes/ifconfig's parameters).",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:200635"
+  },
+  {
+    "question": "What is idea?",
+    "answer": "The idea is to have a completely clean iptables config, that can be easily replaced by new ruleset (nevermind routes/ifconfig's parameters).",
+    "domain": "general",
+    "source": "stackexchange:serverfault:200635"
+  },
+  {
+    "question": "How can I port forward with iptables?",
+    "answer": "I want connections coming in on ppp0 on port 8001 to be routed to 192.168.1.200 on eth0 on port 8080.\n\nI've got these two rules\n\n-A PREROUTING  -p tcp -m tcp --dport 8001 -j DNAT --to-destination 192.168.1.200:8080\n\n-A FORWARD -m state -p tcp -d 192.168.1.200 --dport 8080 --state NEW,ESTABLISHED,RELATED -j ACCEPT\n\n\nand it doesn't work. What am I missing?",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:140622"
+  },
+  {
+    "question": "Tell me about PREROUTING",
+    "answer": "-A PREROUTING  -p tcp -m tcp --dport 8001 -j DNAT --to-destination 192.168.1.200:8080.",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:140622"
+  },
+  {
+    "question": "IPTables only allow localhost access?",
+    "answer": "I have struggled throughout the years to get a solid understanding on iptables.  Any time I try and read through the man pages my eyes start to glaze over.\n\nI have a service that I only want to allow the localhost to have access to.\n\nWhat terms (or configuration, if someone is feeling generous) should I Google for to allow only localhost host to have access to a given port?",
+    "domain": "general",
+    "source": "stackexchange:serverfault:247176"
+  },
+  {
+    "question": "What is What terms (or configuration, if someone?",
+    "answer": "What terms (or configuration, if someone is feeling generous) should I Google for to allow only localhost host to have access to a given port?.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:247176"
+  },
+  {
+    "question": "IPTABLES - Limit rate of a specific incoming IP?",
+    "answer": "I do not wish to limit the rate of a specific service.  My goals is to limit rate based solely on the incoming IP address.  For example using a pseudo-rule:\n\njohn.domain.local (192.168.1.100) can only download from our httpd/ftp servers at \"10KB/s\" (instead of 1MB/s)\n\nHow could I rate limit using IPTables based on incoming IP addresses?",
+    "domain": "internet",
+    "source": "stackexchange:serverfault:384132"
+  },
+  {
+    "question": "What is My goals?",
+    "answer": "My goals is to limit rate based solely on the incoming IP address.",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:384132"
+  },
+  {
+    "question": "How to do the port forwarding from one ip to another ip in same network?",
+    "answer": "I would like do some NAT in iptables. So that, all the packets coming to 192.168.12.87 and port 80 will be forwarded to 192.168.12.77 port 80.\n\nHow to do this with iptables?\n\nOr \n\nAny other ways to achieve the same?",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:586486"
+  },
+  {
+    "question": "REJECT vs DROP when using iptables?",
+    "answer": "Is there any reason why I would want to have \n\niptables -A INPUT -j REJECT\n\n\ninstead of \n\niptables -A INPUT -j DROP",
+    "domain": "general",
+    "source": "stackexchange:serverfault:157375"
+  },
+  {
+    "question": "Iptables, what's the difference between -m state and -m conntrack?",
+    "answer": "What's the practical difference between:\niptables -A INPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT\n\nand\niptables -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT\n\nWhich one is best to use?",
+    "domain": "general",
+    "source": "stackexchange:serverfault:358996"
+  },
+  {
+    "question": "What is the mangle table in iptables?",
+    "answer": "I am using iptable rules to filter & manipulate packets in my Ubuntu server.\nbut I cannot understand the mangle table.\nQuoting from this iptables tutorial:\n\nThis table should as we've already noted mainly be used for mangling packets. In other words, you may freely use the mangle matches etc that could be used to change TOS (Type Of Service) fields and so on.\nYou are strongly advised not to use this table for any filtering; nor will any DNAT, SNAT or Masquerading work in this table.",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:467756"
+  },
+  {
+    "question": "Tell me about TOS",
+    "answer": "In other words, you may freely use the mangle matches etc that could be used to change TOS (Type Of Service) fields and so on.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:467756"
+  },
+  {
+    "question": "What is You?",
+    "answer": "You are strongly advised not to use this table for any filtering; nor will any DNAT, SNAT or Masquerading work in this table.",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:467756"
+  },
+  {
+    "question": "iptables multiple source IPs in single rule?",
+    "answer": "I'd like to create a single rule in iptables (if possible) that uses multiple source IP addresses.  Is this possible?",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:6989"
+  },
+  {
+    "question": "What does I'd like to create a single rule in iptables (if possible) that provide?",
+    "answer": "I'd like to create a single rule in iptables (if possible) that uses multiple source IP addresses.",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:6989"
+  },
+  {
+    "question": "IpTables Chain not being invoked?",
+    "answer": "I have added the following iptables rules but I am still seeing successful icmp, tcp, and http traffic to that subnet.  \n\nOutput from iptables -L:\n\nChain OUTPUT (policy ACCEPT)\nREJECT     all  --  anywhere        199.22.124.0/21 reject-with icmp-port-unreachable\n\nChain INPUT (policy DROP)\ntarget     prot opt source          destination\nREJECT     all  --  199.22.124.0/21 anywhere        reject-with icmp-port-unreachable",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:25954"
+  },
+  {
+    "question": "Tell me about OUTPUT",
+    "answer": "Chain OUTPUT (policy ACCEPT)\nREJECT     all  --  anywhere        199.22.124.0/21 reject-with icmp-port-unreachable.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:25954"
+  },
+  {
+    "question": "iptables : did I understand these commands correctly?",
+    "answer": "Take a look at this set of commands :\n\niptables -F\n\niptables -P OUTPUT DR0P\niptables -P INPUT DROP\niptables -P FORWARD DROP\n\niptables -A FORWARD -d 195.83.164.0/23 -p udp --dport 53 -i eth0 -j ACCEPT\niptables -A FORWARD -s 195.83.164.0/23 -p udp --sport 53 -j ACCEPT\n\niptables -A FORWARD -p tcp --sport 22 -j ACCEPT\niptables -A FORWARD -p tcp --dport 22 -j ACCEPT\n\niptables -t nat -A POSTROUTING -s 192.168.1.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:41118"
+  },
+  {
+    "question": "Tell me about POSTROUTING",
+    "answer": "iptables -t nat -A POSTROUTING -s 192.168.1.0/24 -o ppp0 -j MASQUERADE.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:41118"
+  },
+  {
+    "question": "Tell me about IF",
+    "answer": ":\nIF THE PACKET IS NOT DESTINATED TO THE ROUTER (\"NDTR\"), THEN...",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:41118"
+  },
+  {
+    "question": "Tell me about NDTR",
+    "answer": ":\nThe NDTR packet is analysed by MANGLE's FORWARD chain : nothing is indicated, so we suppose that the default action is ACCEPT\nThen, the NDTR packet is analyzed by FILTER's FORWARD chain : the lines N°5, N°6, N°7, N°8 and N°4 tell that the NDTR packet will be ACCEPTED only if [ its destination is 195.83.164.0/23 AND destination port is 53 AND destination interface is eth0 ] OR if [ its source is 195.83.164.0/23 AND destination port is 53 ] OR if [ its an SSH packet ] ELSE, it will be DROPPED.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:41118"
+  },
+  {
+    "question": "Tell me about ACCEPTED",
+    "answer": "Otherwise, if it's ACCEPTED, it will be analyzed by the MANGLE's POSTROUTING chain : nothing is indicated, we suppose the default action is ACCEPT : then, it will be analyzed by NAT's POSTROUTING chain : nothing is indicated, ACCEPT by default again.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:41118"
+  },
+  {
+    "question": "What is OTHERWISE, IF THE PACKET?",
+    "answer": "OTHERWISE, IF THE PACKET IS ACTUALLY DESTINATED TO THIS ROUTER (\"DR\") .....",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:41118"
+  },
+  {
+    "question": "Tell me about DR",
+    "answer": ":\nThe DR packet will be analyzed by MANGLE's INPUT chain : nothing is indicated, we assume ACCEPT\nThen, the DR packet will be analyzed by the FILTER's INPUT chain : it will be REJECTED if its destination interface is eth0, or DROPPED if not.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:41118"
+  },
+  {
+    "question": "Tell me about MANGLE",
+    "answer": "Just for information : the packet would be analyzed then by MANGLE's OUTPUT chain then by NAT's OUTPUT chain then by FILTER's OUTPUT chain then by MANGLE's POSTROUTING chain then by NAT's POSTROUTING chain, then it will be returned to the host that sent it.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:41118"
+  },
+  {
+    "question": "Internet connection sharing using iptables?",
+    "answer": "Objective:\n\nI am working on an embedded Linux device with the following network configuration.\n\n\nInterface-1: 'wlan0' acts as an access point.\nInterface-2: 'eth1'  connected to Internet.\n\n\nMy objective is to NAT packets reaching 'wlan0' (and destined to IP's other than those in the subnet of wlan0) from the wireless clients connected to it to 'eth1'. So that the wireless clients connected to 'wlan0' will have Internet access.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:30524"
+  },
+  {
+    "question": "Tell me about SNAT",
+    "answer": "echo \"   Enabling SNAT (MASQUERADE) functionality on $EXTIF\"\n        $IPTABLES -t nat -A POSTROUTING -o $EXTIF -j MASQUERADE.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:30524"
+  },
+  {
+    "question": "What is As I understand a packet will be traversing the FORWARD chain only if it?",
+    "answer": "As I understand a packet will be traversing the FORWARD chain only if it is not intended for the local host.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:30524"
+  },
+  {
+    "question": "What is clarification I have?",
+    "answer": "The clarification I have is how will the matching condition of -o $EXTIF be satisfied for any packets.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:30524"
+  },
+  {
+    "question": "What is I understand that -i $INTIF will be satisfied as it?",
+    "answer": "I understand that -i $INTIF will be satisfied as it is the entry interface for the packet.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:30524"
+  },
+  {
+    "question": "Resolve overlapping subnet problem using Linux and IPTABLES!?",
+    "answer": "I have a dilemma; I have a customer with an application server running on CentOS 5 (latest).  The app server is configured with 2 interfaces:\n\neth0 - connect to the client network with subnet 192.168.3.0/24\neth1 - connects to local subnet which hosts all the devices the application manages with subnet 192.168.1.0/24\n\n\nThe problem is that the client has a remote office which has a subnet that overlaps with the app server internal network (namely 192.168.1.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:12557"
+  },
+  {
+    "question": "What is app server?",
+    "answer": "The app server is configured with 2 interfaces:.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:12557"
+  },
+  {
+    "question": "What is problem?",
+    "answer": "The problem is that the client has a remote office which has a subnet that overlaps with the app server internal network (namely 192.168.1.0/24) and would like the users in that subnet to have access to the app server.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:12557"
+  },
+  {
+    "question": "Tell me about DNAT",
+    "answer": "I'm trying to resolve the issue by calling upon the Linux router capabilities (iptables targets DNAT, SNAT, NETMAP, ROUTE, etc.), but I'm stumped.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:12557"
+  },
+  {
+    "question": "What is client?",
+    "answer": "The client is attempting to access 192.168.3.10 to access the web app but the packets never get back as the app server see the connection attempt as being from a locally connected device and proceeds to arp for the MAC address.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:12557"
+  },
+  {
+    "question": "What is I've setup a test environment in our lab and this?",
+    "answer": "I've setup a test environment in our lab and this is what tcpdump reveals when I attempt a ping from the client PC:.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:12557"
+  },
+  {
+    "question": "What is only thing we cannot do?",
+    "answer": "The only thing we cannot do is change the IP address on the app server eth0 interface!.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:12557"
+  },
+  {
+    "question": "IPTABLES port 53 closed?",
+    "answer": "I'm configuring my proxy server to serve 2 Internet connections to one end.\n\nThe problem is, some websites load and some don't.\n\nMy cache.log file return me this when I attempt to load a website:\n\n2015/10/30 15:15:03| comm_udp_sendto: FD 8, (family=2) 208.67.222.222:53: (101) Network is unreachable\n2015/10/30 15:15:03| idnsSendQuery: FD 8: sendto: (101) Network is unreachable\n2015/10/30 15:15:03| comm_udp_sendto: FD 8, (family=2) 208.67.220.",
+    "domain": "internet",
+    "source": "stackexchange:networkengineering:23919"
+  },
+  {
+    "question": "Tell me about FD",
+    "answer": "2015/10/30 15:15:03| comm_udp_sendto: FD 8, (family=2) 208.67.222.222:53: (101) Network is unreachable\n2015/10/30 15:15:03| idnsSendQuery: FD 8: sendto: (101) Network is unreachable\n2015/10/30 15:15:03| comm_udp_sendto: FD 8, (family=2) 208.67.220.220:53: (101) Network is unreachable\n2015/10/30 15:15:03| idnsSendQuery: FD 8: sendto: (101) Network is unreachable.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:23919"
+  },
+  {
+    "question": "How to mark the packet with a specific IP address using iptables command?",
+    "answer": "We can mark all the tcp packet while forwarding them using the following :\n\niptables -A FORWARD -t mangle -p tcp -j MARK --set-mark 1\n\nIs there any way to mark the packets for a particular IP address?",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:37601"
+  },
+  {
+    "question": "GNS3 v2 router to host connection?",
+    "answer": "I'm trying to make a router inside GNS3 to connect to the host device (a Debian 8) with no success. Am I missing something?\n\n\n\nDHCP works as expected:\n\n!\ninterface FastEthernet0/0\n ip address dhcp\n duplex auto\n speed auto\n!\n\n\nIP is assigned to the router:\n\n%DHCP-6-ADDRESS_ASSIGN: Interface FastEthernet0/0 assigned DHCP address 192.168.56.104, mask 255.255.255.0, hostname R1\n\n\nWhen I ping from the host to the router I see (tcpdump) the ARP reply:\n\n13:12:08.902370 ARP, Request who-has 192.168.56.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:42290"
+  },
+  {
+    "question": "Tell me about DHCP",
+    "answer": "%DHCP-6-ADDRESS_ASSIGN: Interface FastEthernet0/0 assigned DHCP address 192.168.56.104, mask 255.255.255.0, hostname R1.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:42290"
+  },
+  {
+    "question": "Tell me about ARPA",
+    "answer": "R1#sh arp\nProtocol  Address          Age (min)  Hardware Addr   Type   Interface\nInternet  192.168.56.101          2   xxxx.xxxx.3f96  ARPA   FastEthernet0/0\nInternet  192.168.56.104          -   cc01.4349.0000  ARPA   FastEthernet0/0.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:42290"
+  },
+  {
+    "question": "Emulate Ethernet frame loss for testing purposes?",
+    "answer": "Maybe I am missing something rather basic, but I don't know so I figured I would ask.\n\nIn terms of testing, how sensitive various TDMoE are to BER and packet delay, I am looking into how to simulate delay and random packet dropping at the ethernet level.  For these tests, I will probably just run iptables as documented in a similar StackOverflow question.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:204"
+  },
+  {
+    "question": "What is In terms of testing, how sensitive various TDMoE?",
+    "answer": "In terms of testing, how sensitive various TDMoE are to BER and packet delay, I am looking into how to simulate delay and random packet dropping at the ethernet level.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:204"
+  },
+  {
+    "question": "Tell me about BER",
+    "answer": "However, although that will work here, I am not sure it will work in a more general case (perhaps testing BER tolerance between Windows servers and the like).",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:204"
+  },
+  {
+    "question": "What is My requirements?",
+    "answer": "My requirements are to be able to do this on the ethernet level.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:204"
+  },
+  {
+    "question": "What is Just wondering if this?",
+    "answer": "Just wondering if this is the right way to go.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:204"
+  },
+  {
+    "question": "How do you exclude an IP range on a Fortinet router?",
+    "answer": "I have a Fortinet 100D router with 5.6.2 OS.  I need to set up a SNAT rule that matches everything but a certain IP range.  This is easy to do on a Linux system with iptables, but not quickly apparent on a Fortinet.  Example:\n\nI want to SNAT 10.107.100.0/24 not having a destination of 192.168.102.0/24 to some IP address like 10.200.100.104\n\nSNAT SRC:10.107.100.0/24 DST:!192.168.102.0/24 to 10.200.100.104\n\nAny ideas?",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:45089"
+  },
+  {
+    "question": "Juniper ZTP DHCP Server Setup?",
+    "answer": "I am currently trying to configure DHCP as part of a ztp setup. Right now my topology is as follows:\n\nex2200(me0,10.0.20.2)->(ge-0/0/1,10.0.20.1)srx100(fe-0/0/2,10.0.80.1)<-(eth0,10.0.80.2)centos6.7_dhcp_server\n\nI have the dhcp server on the 10.0.80.0/24 subnet, and I want it to assign IP addresses into the 10.0.20.0/24 subnet.\n\nset vendor-string = option vendor-class-identifier;\noption space ZTPDEMO;\noption ZTPDEMO.image-file-name code 0 = text;\noption ZTPDEMO.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:38975"
+  },
+  {
+    "question": "Tell me about ZTPDEMO",
+    "answer": "set vendor-string = option vendor-class-identifier;\noption space ZTPDEMO;\noption ZTPDEMO.image-file-name code 0 = text;\noption ZTPDEMO.config-file-name code 1 = text;\noption ZTPDEMO.image-file-type code 2 = text;\noption ZTPDEMO.transfer-mode code 3 = text;\noption ZTPDEMO-encapsulation code 43 = encapsulate ZTPDEMO;\noption ZTPDEMO.image-file-type \"symlink\";\noption option-150 code 150 = ip-address;.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:38975"
+  },
+  {
+    "question": "Tell me about LDAP",
+    "answer": "Feb 15 06:26:35 localhost dhcpd: For info, please visit https://www.isc.org/software/dhcp/\nFeb 15 06:26:35 localhost dhcpd: Not searching LDAP since ldap-server, ldap-port and ldap-base-dn were not specified in the config file\nFeb 15 06:26:35 localhost dhcpd: Wrote 0 deleted host decls to leases file.",
+    "domain": "internet",
+    "source": "stackexchange:networkengineering:38975"
+  },
+  {
+    "question": "Tell me about ISC",
+    "answer": "Feb 15 06:26:35 localhost dhcpd: \nFeb 15 06:26:35 localhost dhcpd: This version of ISC DHCP is based on the release available\nFeb 15 06:26:35 localhost dhcpd: on ftp.isc.org.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:38975"
+  },
+  {
+    "question": "Tell me about Bugs Database",
+    "answer": "Feb 15 06:26:35 localhost dhcpd: \nFeb 15 06:26:35 localhost dhcpd: Please report for this software via the CentOS Bugs Database:\nFeb 15 06:26:35 localhost dhcpd:     http://bugs.centos.org/\nFeb 15 06:26:35 localhost dhcpd: \nFeb 15 06:26:35 localhost dhcpd: exiting.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:38975"
+  },
+  {
+    "question": "What is few other tidbits: iptables?",
+    "answer": "A few other tidbits: iptables is off, and the port is configured statically on the server: eth0 10.0.80.2 255.255.255.0, gateway 10.0.80.1.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:38975"
+  },
+  {
+    "question": "Can iptables be hacked / circumvented?",
+    "answer": "We currently have a server that blocks all connections using iptables, and we have to whitelist an IP expressly in order to be able to access the server remotely.\n\nEssentially, the first rule allows the whitelisted IPs (including localhost interface) to progress further to the other chains on the firewall, while rejecting any IP that is not on the list.",
+    "domain": "security",
+    "source": "stackexchange:security:169912"
+  },
+  {
+    "question": "What does Essentially, the first rule provide?",
+    "answer": "Essentially, the first rule allows the whitelisted IPs (including localhost interface) to progress further to the other chains on the firewall, while rejecting any IP that is not on the list.",
+    "domain": "security",
+    "source": "stackexchange:security:169912"
+  },
+  {
+    "question": "Tell me about ALLOW",
+    "answer": "Chain ALLOW (1 references)\n pkts bytes target     prot opt in     out     source               destination\n 183K   36M next_chain  all  --  *      *       198.###.##.###       0.0.0.0/0\n3053K  237M ACCEPT      all  --  lo     *       0.0.0.0/0            0.0.0.0/0\n 116K 5859K REJECT      all  --  *      *       0.0.0.0/0            0.0.0.0/0            reject-with icmp-port-unreachable.",
+    "domain": "networking",
+    "source": "stackexchange:security:169912"
+  },
+  {
+    "question": "Allow loopback in Iptables?",
+    "answer": "I'm trying to write Iptables rules for a small web server. Almost every source I've encountered recommends to allow loopback access to the web server, but doesn't explain why this is necessary.\n\nWhat's the purpose of this configuration, and is it really secure?",
+    "domain": "internet",
+    "source": "stackexchange:security:56187"
+  },
+  {
+    "question": "iptables: force clients to use proxy?",
+    "answer": "My network: 192.168.0.1 server. (enp0s3 NAT, enp0s8 internal) 192.168.0.10-15 clients (enp0s3 internal).\n\nI have a proxysquid for blocking websites,and so on.\n\nMy clients can navigate and browse any website if no proxy is set at firefox settings, if I set the proxy they can't reach any website but can ping 8.8.8.",
+    "domain": "networking",
+    "source": "stackexchange:security:230227"
+  },
+  {
+    "question": "What is My clients can navigate and browse any website if no proxy?",
+    "answer": "My clients can navigate and browse any website if no proxy is set at firefox settings, if I set the proxy they can't reach any website but can ping 8.8.8.8.",
+    "domain": "intranet",
+    "source": "stackexchange:security:230227"
+  },
+  {
+    "question": "What is Honestly I'm a novice using iptables, and maybe the solution?",
+    "answer": "Honestly I'm a novice using iptables, and maybe the solution is easier than I think, but I need some help, thanks you all.",
+    "domain": "general",
+    "source": "stackexchange:security:230227"
+  },
+  {
+    "question": "Why can't iptables drop arp requests?",
+    "answer": "I was trying to hide my laptop from my phone's network scan app. The app is using arp requests to find devices on the network. I tried everything on iptables. It doesn't work, even if i set all the policies drop. Fortunately arptables can drop the requests. But why iptables can't do that ?",
+    "domain": "networking",
+    "source": "stackexchange:security:202270"
+  },
+  {
+    "question": "What is app?",
+    "answer": "The app is using arp requests to find devices on the network.",
+    "domain": "networking",
+    "source": "stackexchange:security:202270"
+  },
+  {
+    "question": "IPtables Linux Firewall and IPsec traffic?",
+    "answer": "Can iptables filter out incoming datagrams that are IPSec-tunneled packets going to port 25?",
+    "domain": "security",
+    "source": "stackexchange:security:113117"
+  },
+  {
+    "question": "What is Can iptables filter out incoming datagrams that?",
+    "answer": "Can iptables filter out incoming datagrams that are IPSec-tunneled packets going to port 25?.",
+    "domain": "security",
+    "source": "stackexchange:security:113117"
+  },
+  {
+    "question": "how to block pop up with iptables?",
+    "answer": "Although I have enabled the pop up blocker in firefox, there are many websites that are able to circumvent this feature. (for example movie streaming sites like kinox.to). My question is not really about how I can install some new pop up blocker, but to learn how this works. I'm currently digging into iptables, NAT etc and I wonder how for example kinox.to (IP: 104.28.20.67) is able to launch a pop up window from meinkino.to (IP: 104.31.218.57).",
+    "domain": "networking",
+    "source": "stackexchange:security:149690"
+  },
+  {
+    "question": "What is Although I have enabled the pop up blocker in firefox, there?",
+    "answer": "Although I have enabled the pop up blocker in firefox, there are many websites that are able to circumvent this feature.",
+    "domain": "general",
+    "source": "stackexchange:security:149690"
+  },
+  {
+    "question": "w00tw00t.at.ISC.SANS.DFind iptables fix - abusable?",
+    "answer": "It's only an idea. I've recently logged that my server is scanned by w00tw00t tools.\n\nI found many solutions to this, such as use of apache mod-security, fail2ban, etc..\n\nThe one I want to speak about, is usage of iptables to block such IP's, based on apache log matching. \n\nIf I would use any presented idea, about how to block those scanning address, we must point out important fact, which is requesting IP's are almost every time spoofed, which means, they don't belong to attacker.",
+    "domain": "internet",
+    "source": "stackexchange:security:11916"
+  },
+  {
+    "question": "What is I've recently logged that my server?",
+    "answer": "I've recently logged that my server is scanned by w00tw00t tools.",
+    "domain": "general",
+    "source": "stackexchange:security:11916"
+  },
+  {
+    "question": "What is one I want to speak about?",
+    "answer": "The one I want to speak about, is usage of iptables to block such IP's, based on apache log matching.",
+    "domain": "general",
+    "source": "stackexchange:security:11916"
+  },
+  {
+    "question": "Security Onion VMWare + OpenWRT IPTables Mirroring?",
+    "answer": "I'm trying to set up SO in my home network to lab and see if I can monitor all ingress/egress traffic from my SOHO router. I don't have a switch with SPAN ports, or a network tap so I'm using OpenWRT in combination w/ iptables mirroring functionality via --tee.\nMy management interface on my SO VM is 192.168.1.100/24. I'm using the following iptables routes, added via SSL to OpenWRT, and verified in the status -> firewall web UI.\n\niptables -t mangle -A PREROUTING -d 192.168.1.",
+    "domain": "networking",
+    "source": "stackexchange:security:176487"
+  },
+  {
+    "question": "Tell me about SO",
+    "answer": "I'm trying to set up SO in my home network to lab and see if I can monitor all ingress/egress traffic from my SOHO router.",
+    "domain": "networking",
+    "source": "stackexchange:security:176487"
+  },
+  {
+    "question": "Tell me about SPAN",
+    "answer": "I don't have a switch with SPAN ports, or a network tap so I'm using OpenWRT in combination w/ iptables mirroring functionality via --tee.",
+    "domain": "networking",
+    "source": "stackexchange:security:176487"
+  },
+  {
+    "question": "Tell me about SSL",
+    "answer": "I'm using the following iptables routes, added via SSL to OpenWRT, and verified in the status -> firewall web UI.",
+    "domain": "security",
+    "source": "stackexchange:security:176487"
+  },
+  {
+    "question": "What is OpenWRT says that it?",
+    "answer": "OpenWRT says that it is indeed sending traffic on the .1 subnet to .100, however when I log into the SO machine and try to trigger IDS events from another machine on the subnet, nothing flags.",
+    "domain": "networking",
+    "source": "stackexchange:security:176487"
+  },
+  {
+    "question": "UFW vs IpTables for web application security?",
+    "answer": "I am trying to better understand measures that can be used to protect a web-application. I'm trying to determine which would be more effective, implementing a UFW or using IpTables.\nFrom my perspective, they are both as effective as each other but the effectiveness of them is not based on the tools themselves but rather the rules implemented using them.\nThat being said, I think the Iptables operate at the Transport layer and the UFW at the network layer.",
+    "domain": "general",
+    "source": "stackexchange:security:260828"
+  },
+  {
+    "question": "Tell me about UFW",
+    "answer": "I'm trying to determine which would be more effective, implementing a UFW or using IpTables.",
+    "domain": "general",
+    "source": "stackexchange:security:260828"
+  },
+  {
+    "question": "What is From my perspective, they?",
+    "answer": "From my perspective, they are both as effective as each other but the effectiveness of them is not based on the tools themselves but rather the rules implemented using them.",
+    "domain": "general",
+    "source": "stackexchange:security:260828"
+  },
+  {
+    "question": "Setting up a fake AP - problem with iptables and DNS server?",
+    "answer": "Im trying to set up a fake AP using aircrack-ng suite, DHCP server & iptables.\n\nAfter creating the fake AP: \n\nairmon-ng start wlan1\nairbase-ng -c 11 -e \"freewifi\" wlan1mon\n\n\n\n\nrunning iptables configuration and at0 routing rules(bash file):\n\n#!/bin/sh\nifconfig at0 up\nifconfig at0 10.0.0.1 netmask 255.255.255.",
+    "domain": "networking",
+    "source": "stackexchange:security:149490"
+  },
+  {
+    "question": "Tell me about AP",
+    "answer": "Im trying to set up a fake AP using aircrack-ng suite, DHCP server & iptables.",
+    "domain": "networking",
+    "source": "stackexchange:security:149490"
+  },
+  {
+    "question": "What is First, no internet connection?",
+    "answer": "First, no internet connection is given, I can connect to my \"freewifi\" AP and im even given an IP address, but internet connection cant be made:.",
+    "domain": "networking",
+    "source": "stackexchange:security:149490"
+  },
+  {
+    "question": "What is discussed about DHCP is not blocked by ufw/iptables?",
+    "answer": "Can anyone recommend a decent book on linux firewalls, iptables and the like? Every time I wade into this I feel I'm missing to much base knowledge to make good decisions. That is a surprising revalation; that iptables filters traffic depending on Linux implementations details. One could imagine the outcry if firewall vendor X suffered a similar “feature”. Or is this well known for Linux iptable users? Wait until they learn about Docker ignoring iptable rules.https://www.baeldung.",
+    "domain": "internet",
+    "source": "hackernews:36894198"
+  },
+  {
+    "question": "What is That?",
+    "answer": "That is a surprising revalation; that iptables filters traffic depending on Linux implementations details.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is FWIW, this?",
+    "answer": "FWIW, this is the same behavior on OpenBSD—DHCP listens directly on bpf, which sees traffic before the packet filter.",
+    "domain": "networking",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is discussed about Block web scanners with ipset and iptables?",
+    "answer": "I understand the first part -- sending requests with no host header to a spam log (or even better, don't log).What I don't understand is the second part -- blocking those hosts.  Seems pointless now that you've de-noised your logs.  They're still sending packets.  Saves thousands of bytes on outbound?What about all the scan-spam on sites WITH host headers?  Whatevs. Another neat trick is to add a link in robots.txt and instruct bots to stay away.",
+    "domain": "internet",
+    "source": "hackernews:33552986"
+  },
+  {
+    "question": "Tell me about WITH",
+    "answer": "Saves thousands of bytes on outbound?What about all the scan-spam on sites WITH host headers?.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is Another neat trick?",
+    "answer": "Another neat trick is to add a link in robots.txt and instruct bots to stay away.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about CN",
+    "answer": "If they don’t, you add them to your blocklist On my internet facing hosts, I use the firehol level 2 and level 3 block sets along with blocking all CN IP space that I can accurately identify.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What does I wonder why the author provide?",
+    "answer": "I wonder why the author uses a 404 error response.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about NGINX",
+    "answer": "I usually configure NGINX with \"return 444;\" which closes the connection without response.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is discussed about Iptables Tutorial 1.2.2?",
+    "answer": "www.frozentux.net uses an invalid security certificate. The certificate expired on October 19, 2017, 9:59 PM. The current time is October 20, 2017, 11:04 AM.Here's an alternate urlhttps://web.archive.org/web/20170921014253/https://www.froze... nftables is iptables' successor:http://www.netfilter.org/projects/nftableshttps://hn.algolia.com/?query=nftables Copyright 2006, \"...the new Linux 2.4.",
+    "domain": "security",
+    "source": "hackernews:15514970"
+  },
+  {
+    "question": "What does www.frozentux.net provide?",
+    "answer": "www.frozentux.net uses an invalid security certificate.",
+    "domain": "security",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is current time?",
+    "answer": "The current time is October 20, 2017, 11:04 AM.Here's an alternate urlhttps://web.archive.org/web/20170921014253/https://www.froze...",
+    "domain": "internet",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is nftables?",
+    "answer": "nftables is iptables' successor:http://www.netfilter.org/projects/nftableshttps://hn.algolia.com/?query=nftables Copyright 2006, \"...the new Linux 2.4.x kernels\", dead SSL cert Please keep in mind that RHEL / Centos 7 has changed the default firewall from iptables to firewalld.",
+    "domain": "security",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is This tutorial?",
+    "answer": "This tutorial is pretty old actually.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is I hope someone can create all possible auto-completion to guide the users, it?",
+    "answer": "I hope someone can create all possible auto-completion to guide the users, it is so hard to memorize those abbrev tags/options for those commands.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "Why is the kernel community replacing iptables with BPF?",
+    "answer": "So what about the elephant in the room, nftables? Are they basically dead in the water now? An interesting introduction to how Linux currently does packet filtering and how changing to BPF will improve performance.The really amusing thing to me (an OpenBSD user) was the omission of any discussion of the origin of BPF, or even spelling out the acronym (it's the Berkeley Packet Filter).",
+    "domain": "internet",
+    "source": "hackernews:16878542"
+  },
+  {
+    "question": "Tell me about BPF",
+    "answer": "An interesting introduction to how Linux currently does packet filtering and how changing to BPF will improve performance.The really amusing thing to me (an OpenBSD user) was the omission of any discussion of the origin of BPF, or even spelling out the acronym (it's the Berkeley Packet Filter).Those GPL guys really really hate acknowledging anything to do with Berkeley!.",
+    "domain": "internet",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about HN",
+    "answer": "I posted this on a similar current HN thread about BPF, but also relevant here.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about EBPF",
+    "answer": "See Poettering's blog for how you can do very cool access control things via systemd taking advantage of EBPF:http://0pointer.net/blog/ip-accounting-and-access-lists-with...",
+    "domain": "internet",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is discussed about DDoS Protection With IPtables?",
+    "answer": "This is not real DDoS protection since it does not deal with jamming the pipes. It is more of a resource exhaustion protection. Submissions like this one make me wish Hacker News had a downvote button... This can protect you from simple DoS attack by some script kiddie, not real DDoS attack. Just use CloudFlare or a provider that have active protections against DDoS attacks. Iptables will NOT help you with any real DDoS attack.",
+    "domain": "security",
+    "source": "hackernews:20075282"
+  },
+  {
+    "question": "Tell me about Hacker News",
+    "answer": "Submissions like this one make me wish Hacker News had a downvote button...",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is lot of people seems to be thinking that it?",
+    "answer": "A lot of people seems to be thinking that it is pointless to use iptables to drop unwanted traffic in 2019.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is discussed about Iptables Basics?",
+    "answer": "iptables is the standard currently, but I'd suggest learning nftables. nftables is meant to replace iptables everywhere.It might take time for it to gain the same usage as iptables, but it is currently a drop-in replacement for iptables on many distros. Relevant discussion here:\nhttps://news.ycombinator.com/item?id=14286016Also: https://developers.redhat.com/blog/2016/10/28/what-comes-aft... It's inconvenient that something so important is so hard to understand and manage.",
+    "domain": "internet",
+    "source": "hackernews:14523573"
+  },
+  {
+    "question": "What is iptables?",
+    "answer": "iptables is the standard currently, but I'd suggest learning nftables.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is It's inconvenient that something so important?",
+    "answer": "It's inconvenient that something so important is so hard to understand and manage.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is discussed about Finally iptables works the same on every Linux distro?",
+    "answer": "Haven't tried it for myself -- but looking at the code, it appears that the last rule needs to be changed to port 22 for SSH to work. For complex setups you sooner or later have to dynamically add/remove rules, based on values only known at runtime (such as an IP address obtained by DHCP). Then, a simple list of rules doesn't suffice, and some kind of programming is needed.To solve such problems elegantly I designed my \"NCD programming language\" (link: https://code.google.",
+    "domain": "internet",
+    "source": "hackernews:6316237"
+  },
+  {
+    "question": "Tell me about SSH",
+    "answer": "Haven't tried it for myself -- but looking at the code, it appears that the last rule needs to be changed to port 22 for SSH to work.",
+    "domain": "internet",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is Then, a simple list of rules doesn't suffice, and some kind of programming?",
+    "answer": "Then, a simple list of rules doesn't suffice, and some kind of programming is needed.To solve such problems elegantly I designed my \"NCD programming language\" (link: https://code.google.com/p/badvpn/wiki/NCD ).",
+    "domain": "internet",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is umm, iptables?",
+    "answer": "umm, iptables is a part of the kernel, and is exactly the same, regardless of distribution.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is discussed about Filtered: NMAP Port Scanner Sees Through IPtables Firewall (2006)?",
+    "answer": "It seems that it might be more appropriate to simply have your default firewall rule be to drop incoming traffic, and to then open only those ports you need.If you're using a port whitelist (rather than blacklist), the problem the author identifies shouldn't really exist. I've always wondered what the actual best practice is with rejection rules. I tend to prefer issuing reset/unreachable since as the article points out it does make the port look like it's truly unused.",
+    "domain": "networking",
+    "source": "hackernews:8476939"
+  },
+  {
+    "question": "What is I've always wondered what the actual best practice?",
+    "answer": "I've always wondered what the actual best practice is with rejection rules.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about DROP",
+    "answer": "rejectIf you scan only that specific port, a DROP will make the IP address appear unused - so if you're worried about someone scanning purely for port 22 and not anything else, a drop is the better choice.(See: nmap an unused IP address with -P0 to ignore the fact there's no icmp response to show the host is alive, and you get a 'filtered')If you're worried about people that are specifically trying to find see if a service is running on your specific server, a reject + reset might be the better choice.",
+    "domain": "networking",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is discussed about Block a country using iptables?",
+    "answer": "In the past I've wanted to mass-block third world countries from my email server to reduce spam. After seeing the way libertarians in the third world cling to internet access, I'm more reluctant to create barriers. I live in a country that probably doesn't bring you much profit.  Please don't block me just because of where I live. I have a script that blocks all APNIC traffic in iptables on my personal computers. I have seen a 99.98% reduction in hacking attempts after implementing it.",
+    "domain": "security",
+    "source": "hackernews:3575291"
+  },
+  {
+    "question": "Tell me about APNIC",
+    "answer": "I have a script that blocks all APNIC traffic in iptables on my personal computers.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is discussed about Using iptables to balance Node.js?",
+    "answer": "Is it fairly common to forward port 80 to some higher level port, so the server can run as a non-root user?I do it out of necessity, but have yet to play with the statistics portion of iptables.Cool little article. Or he could do it with a proper load balancing proxy such as HA Proxy. Then he would be able to take one node-instance down gracefully, update it to a newer version, and put it online again (and repeat for all other instances).",
+    "domain": "intranet",
+    "source": "hackernews:2887124"
+  },
+  {
+    "question": "Tell me about HA",
+    "answer": "Or he could do it with a proper load balancing proxy such as HA Proxy.",
+    "domain": "intranet",
+    "source": "hackernews"
+  },
+  {
+    "question": "Reviewing firewall rules?",
+    "answer": "I need to review firewall rules of a CheckPoint firewall for a customer (with 200+ rules).\n\nI have used FWDoc in the past to extract the rules and convert them to other formats but there was some errors with exclusions. I then analyze them manually to produce an improved version of the rules (usually in OOo Calc) with comments.\n\nI know there are several visualization techniques but they all go down to analyzing the traffic and I want static analysis.",
+    "domain": "security",
+    "source": "stackexchange:serverfault:33676"
+  },
+  {
+    "question": "Tell me about FWDoc",
+    "answer": "I have used FWDoc in the past to extract the rules and convert them to other formats but there was some errors with exclusions.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:33676"
+  },
+  {
+    "question": "Tell me about OOo",
+    "answer": "I then analyze them manually to produce an improved version of the rules (usually in OOo Calc) with comments.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:33676"
+  },
+  {
+    "question": "What is I know there?",
+    "answer": "I know there are several visualization techniques but they all go down to analyzing the traffic and I want static analysis.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:33676"
+  },
+  {
+    "question": "Configuring firewall rules?",
+    "answer": "I am trying to configure firewall rules for my windows PC\n\ni would like to achieve this scenario \n\nAll packets from PC A will use this proxy server x.x.x.x at port AA\n\nHowever, these are my rules \n\nAllow Local Address x.x.x.x Remote Address Any Local Port AA Remote Port Any\nBlock Local Address Any Remote Address Any Local Port Any Remote Port Any\n\n\nPC A has ip of y.y.y.y \n\nShouldnt it match the first rule if i am using a proxy server which i configured in the LAN settings.\n\nThis works though.",
+    "domain": "security",
+    "source": "stackexchange:serverfault:731861"
+  },
+  {
+    "question": "Tell me about AA",
+    "answer": "Allow Local Address x.x.x.x Remote Address Any Local Port AA Remote Port Any\nBlock Local Address Any Remote Address Any Local Port Any Remote Port Any.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:731861"
+  },
+  {
+    "question": "Tell me about LAN",
+    "answer": "Shouldnt it match the first rule if i am using a proxy server which i configured in the LAN settings.",
+    "domain": "intranet",
+    "source": "stackexchange:serverfault:731861"
+  },
+  {
+    "question": "What is Traffic?",
+    "answer": "Traffic is routed to my proxy server if i only use one single rule.",
+    "domain": "intranet",
+    "source": "stackexchange:serverfault:731861"
+  },
+  {
+    "question": "Windows Firewall: Apply local firewall rules?",
+    "answer": "I have an environment where we have a GPO which we have set on all profiles to have the setting:\nApply local firewall rules: No\n\nI've confirmed that the GP is applied successfully by using gpresult/rsop.\n\nOn occasion, a block rule will be added to the system locally by MPSSVC which prevents my customer's application from working. We also have an explicit allow rule for the same process which is added by GPO. We can manually remove the block rule but it eventually comes back.",
+    "domain": "security",
+    "source": "stackexchange:serverfault:918918"
+  },
+  {
+    "question": "Tell me about GPO",
+    "answer": "I have an environment where we have a GPO which we have set on all profiles to have the setting:\nApply local firewall rules: No.",
+    "domain": "security",
+    "source": "stackexchange:serverfault:918918"
+  },
+  {
+    "question": "What is I've confirmed that the GP?",
+    "answer": "I've confirmed that the GP is applied successfully by using gpresult/rsop.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:918918"
+  },
+  {
+    "question": "Tell me about MPSSVC",
+    "answer": "On occasion, a block rule will be added to the system locally by MPSSVC which prevents my customer's application from working.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:918918"
+  },
+  {
+    "question": "Firewall rules to block MSN Messenger?",
+    "answer": "What firewall rules do I need to apply to block MSN Messenger? I've applied the following:\n\nmsgr.hotmail.com\nmessenger.hotmail.com\ngateway.messenger.hotmail.com\nlogin.live.com\n\n\nI've also blocked all traffic on port 1863.\n\nStill able to sign-in.\n\nAny suggestions?",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:49641"
+  },
+  {
+    "question": "Tell me about MSN",
+    "answer": "What firewall rules do I need to apply to block MSN Messenger?.",
+    "domain": "security",
+    "source": "stackexchange:serverfault:49641"
+  },
+  {
+    "question": "Stateful Firewall Rules Obeyed by Switch?",
+    "answer": "I have a stateful firewall (pfsense) with a WAN and LAN port, with the LAN port connected to an unmanaged switch (DLink Gbit) and several computers connected to the switch.\n\nI was wondering if the switch obeyed firewall rules, i.e. if I blocked all traffic between two computers with a rule on the firewall, would the switch still pass traffic because it is all local and doesn't go through the firewall?",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:101306"
+  },
+  {
+    "question": "default firewall rules not executed on gcloud compute engine?",
+    "answer": "I notice something weird behavior on my  gcloud compute engine\"\nthis default firewall rules has no effect:\n\n> $ gcloud compute --project \"plop\" firewall-rules\n> describe default-allow-http allowed:\n> - IPProtocol: tcp   ports:\n>   - '80' creationTimestamp: '2018-07-26T05:17:16.627-07:00' description: '' direction: INGRESS kind: compute#firewall name:\n> default-allow-http network:\n> https://www.googleapis.",
+    "domain": "internet",
+    "source": "stackexchange:serverfault:926830"
+  },
+  {
+    "question": "Tell me about IPProtocol",
+    "answer": "> $ gcloud compute --project \"plop\" firewall-rules\n> describe default-allow-http allowed:\n> - IPProtocol: tcp   ports:\n>   - '80' creationTimestamp: '2018-07-26T05:17:16.627-07:00' description: '' direction: INGRESS kind: compute#firewall name:\n> default-allow-http network:\n> https://www.googleapis.com/compute/v1/projects/plop/global/networks/default\n> priority: 1000 selfLink:\n> https://www.googleapis.com/compute/v1/projects/plop/global/firewalls/default-allow-http\n> sourceRanges:\n> - 0.0.0.0/0 targetTags:\n> - http-server.",
+    "domain": "internet",
+    "source": "stackexchange:serverfault:926830"
+  },
+  {
+    "question": "What is Seems to me those two rules?",
+    "answer": "Seems to me those two rules are identical though, any idea why ?.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:926830"
+  },
+  {
+    "question": "TCP firewall rules on http3 with QUIC?",
+    "answer": "HTTP3 uses QUIC. QUIQ is UDP. Does this mean all router firewall rules for port 80 and 443 must be changed from TCP to UDP?",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:1185886"
+  },
+  {
+    "question": "Modify Debian firewall rules programmatically?",
+    "answer": "I'm currently deploying on Rackspace Cloud Servers with Debian installs.\n\nI have an application that uses a remote coordinator which communicates with all of my servers in order to start various services and just to generally keep track of the servers.\n\nI need to secure my production environment and I'm using certain services (Couchbase/Membase and ElasticSearch) that don't have built in security so I need to implement a firewall on all of my servers.",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:341926"
+  },
+  {
+    "question": "Tell me about Rackspace Cloud Servers",
+    "answer": "I'm currently deploying on Rackspace Cloud Servers with Debian installs.",
+    "domain": "internet",
+    "source": "stackexchange:serverfault:341926"
+  },
+  {
+    "question": "What does I have an application that provide?",
+    "answer": "I have an application that uses a remote coordinator which communicates with all of my servers in order to start various services and just to generally keep track of the servers.",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:341926"
+  },
+  {
+    "question": "Opinions about firewall rules for vps?",
+    "answer": "I just switched to a new vps, which I installed Linux and I wish to harden it a bit by applying firewall rules using iptables. I use Firewall Builder to create my rules and I would like some suggestions or your opinion about it.\n\nThe vps comes with one NIC with public IP (marked as outside in the rules).",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:655071"
+  },
+  {
+    "question": "Tell me about Firewall Builder",
+    "answer": "I use Firewall Builder to create my rules and I would like some suggestions or your opinion about it.",
+    "domain": "security",
+    "source": "stackexchange:serverfault:655071"
+  },
+  {
+    "question": "Tell me about NIC",
+    "answer": "The vps comes with one NIC with public IP (marked as outside in the rules).",
+    "domain": "general",
+    "source": "stackexchange:serverfault:655071"
+  },
+  {
+    "question": "What is Whatever I tried, rule #5 does not seem work and?",
+    "answer": "Whatever I tried, rule #5 does not seem work and is disabled as shown by the red X in the rule number.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:655071"
+  },
+  {
+    "question": "Possible to create policy limiting firewall rules in GCP?",
+    "answer": "Does anyone know if it's possible to create an organizational policy that would prevent the use of having a source set to 'any' for specific ports on firewall rules in GCP?\nFor example, I want to prevent users from creating firewall rules that use 'any' as a source for ports such as SSH, RDP, SQL, and so on.",
+    "domain": "security",
+    "source": "stackexchange:serverfault:1070355"
+  },
+  {
+    "question": "Tell me about GCP",
+    "answer": "Does anyone know if it's possible to create an organizational policy that would prevent the use of having a source set to 'any' for specific ports on firewall rules in GCP?.",
+    "domain": "security",
+    "source": "stackexchange:serverfault:1070355"
+  },
+  {
+    "question": "Firewall Policies vs Firewall Rules?",
+    "answer": "I just want to understand some concepts related to the firewall. Is there any difference between saying firewall policies and firewall rules? Can we say a firewall includes a set of policies each of which defines a set of special rules?\n\nThank you.",
+    "domain": "security",
+    "source": "stackexchange:networkengineering:25995"
+  },
+  {
+    "question": "Juniper SRX - interface filters vs firewall rules?",
+    "answer": "I'm trying to display all firewall rule associated with a specific interface. However, the best I can find is show interfaces filters. I'm assuming since these are called \"filters\", they're not the same as the \"rules\" from show security application-firewall rule-sets all...\n\nCould someone enlighten me here?",
+    "domain": "security",
+    "source": "stackexchange:networkengineering:19305"
+  },
+  {
+    "question": "What is However, the best I can find?",
+    "answer": "However, the best I can find is show interfaces filters.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:19305"
+  },
+  {
+    "question": "What is I'm assuming since these?",
+    "answer": "I'm assuming since these are called \"filters\", they're not the same as the \"rules\" from show security application-firewall rule-sets all...",
+    "domain": "security",
+    "source": "stackexchange:networkengineering:19305"
+  },
+  {
+    "question": "Firewall Rule 'Both Ways'?",
+    "answer": "I'd like to think I have a good understanding of NAT and Firewall rules at a basic level, though please correct me if I'm wrong at any point. I've seen many products list their firewall requirements as needing ports allowed 'both ways'.\n\nIn particular I'm talking about the requirements listed here;\nhttp://mysignageportal.com/cdms/support/faq/what-information-do-i-need-if-there-are-restrictions-in-place-on-my-network.",
+    "domain": "internet",
+    "source": "stackexchange:networkengineering:53423"
+  },
+  {
+    "question": "What is following ports?",
+    "answer": "The following ports are required to be open both ways for complete communication with the CMS server.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:53423"
+  },
+  {
+    "question": "Change firewall rules of a Cisco Router from network?",
+    "answer": "I'm looking for ways, methods or workarounds to:\n\nChange firewall rules (WAN/LAN accept-deny) of a Router from networking, through Linux command or PHP script, can be a socket, or rest service, soap service or something like. Or telnet, or something like.\n\nMaybe there is some firmware to replace the default system of the router with something that provides a web service or something like? (Cisco RV042)",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:52610"
+  },
+  {
+    "question": "What is Maybe there?",
+    "answer": "Maybe there is some firmware to replace the default system of the router with something that provides a web service or something like?.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:52610"
+  },
+  {
+    "question": "How to do remote testing of firewall rules that are location based?",
+    "answer": "I have managed servers that I have access to. I requested firewall rules that are location based (like making sure nobody can SSH to a server unless they are connecting from a specific public IP.\n\nI'd like to be able to test from lots of different IP's. How can I test this from a terminal in a economic fashion?\n\nThe only way I could think of (that would be expensive and not really efficient) is create servers in DO, Linode, AWS, etc in different regions.",
+    "domain": "security",
+    "source": "stackexchange:networkengineering:52787"
+  },
+  {
+    "question": "What is I requested firewall rules that?",
+    "answer": "I requested firewall rules that are location based (like making sure nobody can SSH to a server unless they are connecting from a specific public IP.",
+    "domain": "security",
+    "source": "stackexchange:networkengineering:52787"
+  },
+  {
+    "question": "What is only way I could think of (that would be expensive and not really efficient)?",
+    "answer": "The only way I could think of (that would be expensive and not really efficient) is create servers in DO, Linode, AWS, etc in different regions.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:52787"
+  },
+  {
+    "question": "Tell me about PS",
+    "answer": "PS: I wasn't sure if this was better suited for Network Engineering (the people likely to know now to test network firewall rules) or Super User.",
+    "domain": "security",
+    "source": "stackexchange:networkengineering:52787"
+  },
+  {
+    "question": "How to construct firewall rule from 52.112.0.0/14?",
+    "answer": "I am trying to create a firewall rule to allow Microsoft Teams thru my firewall. I can see here https://docs.microsoft.com/en-us/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide#skype-for-business-online-and-microsoft-teams\nthat 52.112.0.0/14 is the address used but the ip that is recorded in my router is 52.113.89.125.\nThe 89.125 can change from time to time but when I looked it up on   https://ipinfo.io/52.113.89.125 its 'route' is 52.112.0.0/14...",
+    "domain": "internet",
+    "source": "stackexchange:networkengineering:71217"
+  },
+  {
+    "question": "Tell me about Microsoft Teams",
+    "answer": "I am trying to create a firewall rule to allow Microsoft Teams thru my firewall.",
+    "domain": "security",
+    "source": "stackexchange:networkengineering:71217"
+  },
+  {
+    "question": "Are NAT rules not subjected to firewall / policy group rules on an ASA?",
+    "answer": "Have an existing ASA that has a config I inherited.  Looking at the firewall I do not see a rule that allows traffic of a certain pattern to traverse the firewall.  I do see the pattern applied for NAT'ing reasons and I'm curious, if you have a NAT policy defined, is that traffic able to bypass the firewall?\n\nFor example, I have one access list defined as:\n\naccess-list policy-nat extended permit udp object-group MY_OBJ any eq snmp\n\nand another as\n\naccess-list firewall-list extended permit udp ho.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:17332"
+  },
+  {
+    "question": "What does Looking at the firewall I do not see a rule that provide?",
+    "answer": "Looking at the firewall I do not see a rule that allows traffic of a certain pattern to traverse the firewall.",
+    "domain": "security",
+    "source": "stackexchange:networkengineering:17332"
+  },
+  {
+    "question": "What is Both ACL's?",
+    "answer": "Both ACL's are applied to the same interface as such:.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:17332"
+  },
+  {
+    "question": "How Does a Firewall (pfSense) Check Packets Against Rules?",
+    "answer": "For packet rule testing, legacy 5 tuple based techniques employ decision tree, decomposition or hardware (usually TCAM) based approaches. What specific technique do pfSense firewalls employ to test the packets against the rules with minimal hardware requirements. As the rules are defined usually by 5 tuple for IPv4, a firewall has to match each incoming packet and transport header fields against the stored rule set.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:68262"
+  },
+  {
+    "question": "Tell me about TCAM",
+    "answer": "For packet rule testing, legacy 5 tuple based techniques employ decision tree, decomposition or hardware (usually TCAM) based approaches.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:68262"
+  },
+  {
+    "question": "What is As the rules?",
+    "answer": "As the rules are defined usually by 5 tuple for IPv4, a firewall has to match each incoming packet and transport header fields against the stored rule set.",
+    "domain": "security",
+    "source": "stackexchange:networkengineering:68262"
+  },
+  {
+    "question": "What is How does a firewall decide which rule an incoming packet?",
+    "answer": "How does a firewall decide which rule an incoming packet is matched to either pass or to block and also maintain line-rate?.",
+    "domain": "security",
+    "source": "stackexchange:networkengineering:68262"
+  },
+  {
+    "question": "Why cant i reach the other network while i have added the routes and firewall rules to allow traffic? (Pfsense/USG200)?",
+    "answer": "I have 2 networks, the current one and the new one. The current one is not configured by me and one big mess and contains heavily out dated hardware (especially servers). I want to be able to access the complete current network from the new one so i can migrate server for server and device for device. \n\nSome network details:\n\n\nCurrent network: \n\n\nIP: 192.168.1.1\nIP range: 192.168.104.0/24\nRouter/firewall: Zyxel USG200\nContain all devices\nGives DHCP address to Pfsense (192.168.104.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:67889"
+  },
+  {
+    "question": "What is current one?",
+    "answer": "The current one is not configured by me and one big mess and contains heavily out dated hardware (especially servers).",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:67889"
+  },
+  {
+    "question": "What is When extra details?",
+    "answer": "When extra details are required, let me know and i will update my question.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:67889"
+  },
+  {
+    "question": "What is the differenence between set firewall filter and set firewall family?",
+    "answer": "I have some legacy Juniper routers.  One set has firewall rules written as such:\n\nset firewall filter ....\n\nand the other set has rules written as:\n\nset firewall family inet...\n\nI know the second one is specific to inet traffic, but other than that is there any different between the two?  If not, why have two different ways to write firewall rules on MX routers?",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:17469"
+  },
+  {
+    "question": "What is I know the second one?",
+    "answer": "I know the second one is specific to inet traffic, but other than that is there any different between the two?.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:17469"
+  },
+  {
+    "question": "Tell me about MX",
+    "answer": "If not, why have two different ways to write firewall rules on MX routers?.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:17469"
+  },
+  {
+    "question": "Test firewall rules (Linux)?",
+    "answer": "I have a question about how to test the firewall rules. To be more specific, for academic purpose I have to set up a machine which will accept all kind of packets o a specific interface. \n\nI added an IP Table rule:\n\nsudo iptables –A INPUT –i eth0 –j ACCEPT\n\n\nI need a practical prove that this interface accept all kind of packets.\nDoes anyone know a specific way or tool which can help me.",
+    "domain": "security",
+    "source": "stackexchange:security:31957"
+  },
+  {
+    "question": "What's a secure firewall rules using UFW?",
+    "answer": "On my Ubuntu server I have these services running:\n\nnetstat -tlnp\nActive Internet connections (only servers)\nProto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name\ntcp        0      0 127.0.0.1:9000          0.0.0.0:*               LISTEN      1340/php-fpm.conf)\ntcp        0      0 127.0.0.1:3306          0.0.0.0:*               LISTEN      685/mysqld      \ntcp        0      0 0.0.0.0:6698            0.0.0.",
+    "domain": "internet",
+    "source": "stackexchange:security:35552"
+  },
+  {
+    "question": "I have an open source App that installs firewall rules, but should your firewall rules remain secret?",
+    "answer": "As I'm working on an OpenSource application, that application is to serve Web pages to clients. It also supports a mailserver, DNS, and runs with the Cassandra database.\n\nWhat I have done is setup a firewall that gets installed with the application. This means it is available with the OpenSource application (i.e. anyone, including hackers, can see the rules that are going to be applied to the firewall.",
+    "domain": "internet",
+    "source": "stackexchange:security:140041"
+  },
+  {
+    "question": "What is As I'm working on an OpenSource application, that application?",
+    "answer": "As I'm working on an OpenSource application, that application is to serve Web pages to clients.",
+    "domain": "general",
+    "source": "stackexchange:security:140041"
+  },
+  {
+    "question": "What does It also provide?",
+    "answer": "It also supports a mailserver, DNS, and runs with the Cassandra database.",
+    "domain": "internet",
+    "source": "stackexchange:security:140041"
+  },
+  {
+    "question": "What is What I have done?",
+    "answer": "What I have done is setup a firewall that gets installed with the application.",
+    "domain": "security",
+    "source": "stackexchange:security:140041"
+  },
+  {
+    "question": "What is This means it?",
+    "answer": "This means it is available with the OpenSource application (i.e.",
+    "domain": "general",
+    "source": "stackexchange:security:140041"
+  },
+  {
+    "question": "What is anyone, including hackers, can see the rules that?",
+    "answer": "anyone, including hackers, can see the rules that are going to be applied to the firewall.).",
+    "domain": "security",
+    "source": "stackexchange:security:140041"
+  },
+  {
+    "question": "What is rules?",
+    "answer": "The rules are as restrictive as possible, as far as I can tell, so I'm not too worried about that in particular.",
+    "domain": "internet",
+    "source": "stackexchange:security:140041"
+  },
+  {
+    "question": "What is Obviously, the firewall?",
+    "answer": "Obviously, the firewall is not the only security feature included in the system, but that's certainly one important one.",
+    "domain": "security",
+    "source": "stackexchange:security:140041"
+  },
+  {
+    "question": "Web Application Firewall Rules?",
+    "answer": "For Network Layer Firewalls we have different sort of redundancy and consistency checks like rule shadowing, that can impact the performance of firewall. Do similar kind of checks can be applied on WAFs, i have some questions ?\n\n\nDoes order of Rules matter ?\nHow inconsistent rules are handle.\nHow redundancy is removed from the ruleset \nCan rules be bypassed for static application layer signatures",
+    "domain": "networking",
+    "source": "stackexchange:security:18179"
+  },
+  {
+    "question": "Tell me about For Network Layer Firewalls",
+    "answer": "For Network Layer Firewalls we have different sort of redundancy and consistency checks like rule shadowing, that can impact the performance of firewall.",
+    "domain": "security",
+    "source": "stackexchange:security:18179"
+  },
+  {
+    "question": "Tell me about WAFs",
+    "answer": "Do similar kind of checks can be applied on WAFs, i have some questions ?.",
+    "domain": "general",
+    "source": "stackexchange:security:18179"
+  },
+  {
+    "question": "Would encryption bypass some firewall rules?",
+    "answer": "Would an encrypted connection be able to bypass a firewall? A firewall is working on layer 1-4 of OSI model, the encryption and decryption is done in presentation layer (layer 7 of the OSI model). Can encryption may bypass a few rules?",
+    "domain": "security",
+    "source": "stackexchange:security:55748"
+  },
+  {
+    "question": "What is firewall?",
+    "answer": "A firewall is working on layer 1-4 of OSI model, the encryption and decryption is done in presentation layer (layer 7 of the OSI model).",
+    "domain": "security",
+    "source": "stackexchange:security:55748"
+  },
+  {
+    "question": "Is it dangerous to have unused Windows 10 Defender Firewall rules active?",
+    "answer": "I recently discovered that a bunch of games I've installed in the past (from legit sources) have activated many Windows Defender firewall rules viewable from wf.msc. Some of the games I have since uninstalled, so I don't know why the rules are still there. Some of them seem to be pretty permissive.\n\nI'd like to know if these pose any sort of a threat to my computer though. Are these old rules security holes something that could be/has been exploited in the past?",
+    "domain": "security",
+    "source": "stackexchange:security:170539"
+  },
+  {
+    "question": "Tell me about Windows Defender",
+    "answer": "I recently discovered that a bunch of games I've installed in the past (from legit sources) have activated many Windows Defender firewall rules viewable from wf.msc.",
+    "domain": "security",
+    "source": "stackexchange:security:170539"
+  },
+  {
+    "question": "Firewall rules by URL?",
+    "answer": "is there a solution to create FW rules by URL instead of IP for inbound traffic? For example a.example.com and b.example.com are the same IP on the DNS, but they are different sites, is there a solution to open port 22 for example just to a.example.com?\n\nIf so, what is the name of the solution?\n\nThanks.",
+    "domain": "internet",
+    "source": "stackexchange:security:64044"
+  },
+  {
+    "question": "Tell me about FW",
+    "answer": "is there a solution to create FW rules by URL instead of IP for inbound traffic?.",
+    "domain": "internet",
+    "source": "stackexchange:security:64044"
+  },
+  {
+    "question": "What is For example a.example.com and b.example.com?",
+    "answer": "For example a.example.com and b.example.com are the same IP on the DNS, but they are different sites, is there a solution to open port 22 for example just to a.example.com?.",
+    "domain": "internet",
+    "source": "stackexchange:security:64044"
+  },
+  {
+    "question": "How source port field in firewall rule is used?",
+    "answer": "Some firewalls (like the first figure in 13.1.4 in http://doc.m0n0.ch/handbook/examples.html) allow user to specify source port in a firewall rules. But in a TCP connection, the source port is randomly selected from 1024 - MAX. So my question is, why we need to have a source port field in a firewall rule? And we can see that some other firewalls do not provide a source port field in their rule format (e.g. http://www.fwbuilder.org/4.0/docs/users_guide5/global-policy.shtml)\n\nThank you!",
+    "domain": "networking",
+    "source": "stackexchange:security:55747"
+  },
+  {
+    "question": "What is But in a TCP connection, the source port?",
+    "answer": "But in a TCP connection, the source port is randomly selected from 1024 - MAX.",
+    "domain": "networking",
+    "source": "stackexchange:security:55747"
+  },
+  {
+    "question": "Do firewall rules have to be symmetric? That is, does a firewall have to block a particular traffic type both inbound and outbound?",
+    "answer": "Do firewall rules have to be symmetric? That is, does a firewall have to block a particular traffic type both inbound (to the protected site) and outbound (from the site)? Why or why not? \n\nI have to answer the above question. What is the meaning of symmetric rules in firewall? can anyone please explain it to me",
+    "domain": "security",
+    "source": "stackexchange:security:74200"
+  },
+  {
+    "question": "Should network firewall rules be secret?",
+    "answer": "At my workplace only the security team have access to see the rules on the server network firewalls.  \n\nDevelopers and system engineers don't have any visibility, so they just deploy applications to servers and find out what's broken rather than checking application requirements against the rules in advance.  \n\nIs this kind of secrecy a normal/valid security practice?",
+    "domain": "security",
+    "source": "stackexchange:security:187660"
+  },
+  {
+    "question": "What is discussed about Apple’s Private Relay can cause the system to ignore firewall rules?",
+    "answer": "Seems annoying, but any application can work around any firewall rules pretty trivially provided they can get at least one type of connection out to the internet. TCP, UDP, DNS... anything. Just need that one connection and it can be turned into a tunnel.The private relay feature is worth being aware of, but it's irritating for users to deal with overzealous and clueless admins who think that locking down systems by disabling features like this can \"increase security\".",
+    "domain": "networking",
+    "source": "hackernews:31153062"
+  },
+  {
+    "question": "Tell me about ISP",
+    "answer": "It's also great for accessing stuff Vietnamese ISP's try so poorly to block.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is ) I doubt this?",
+    "answer": ") I doubt this is a leak, it very much sounds like Apple is using QUIC to connect home and make the API work.Not respecting the system firewall does seem like a flaw, but Apple has had a history of bypassing attempts at filtering network traffic.",
+    "domain": "security",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about APIs",
+    "answer": "Firewalls have been blocked from working and Apple services have been made unblockable in later APIs.",
+    "domain": "security",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is discussed about Firewall rules: not as secure as you think?",
+    "answer": "This methods discussed in the article are how I have seen some hardware appliance vendors SSH into their devices despite the customer only allowing outbound connections to a cloud provider.  I would call these out in security reviews and it would get political really fast as the team buying the device wanted this feature but the compliance team wanted the flows documented that would conflict with security policies and ultimately would cause an audit failure.",
+    "domain": "internet",
+    "source": "hackernews:41396206"
+  },
+  {
+    "question": "What is This methods discussed in the article?",
+    "answer": "This methods discussed in the article are how I have seen some hardware appliance vendors SSH into their devices despite the customer only allowing outbound connections to a cloud provider.",
+    "domain": "internet",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about HTTPS",
+    "answer": "A firewall vendor claimed they could block anything inside that outbound HTTPS connection that was not HTTP but they could not.",
+    "domain": "internet",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is Which?",
+    "answer": "Which is why you need a modern firewall that MitMs both TLS and SSH.",
+    "domain": "security",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is Can really suck when the reasoning on both ends?",
+    "answer": "Can really suck when the reasoning on both ends is valid Most security controls used in your average business can be bypassed by knowledgeable users with enough time.The aim is to make things as hard as reasonably possible so you can tell your boss and regulators that you did your part.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is discussed about I just learned: Docker edits firewall rules for you?",
+    "answer": "Docker was not designed with security in mind, and on any host exposed to the internet a massive security risk because of this. Putting someone in the `docker` group is nearly equivalent to giving them root permissions.K8s at least offers more fine-grained control over networking, between port range restrictions and having to enable a NodePort.",
+    "domain": "internet",
+    "source": "hackernews:34858775"
+  },
+  {
+    "question": "What is Putting someone in the `docker` group?",
+    "answer": "Putting someone in the `docker` group is nearly equivalent to giving them root permissions.K8s at least offers more fine-grained control over networking, between port range restrictions and having to enable a NodePort.",
+    "domain": "internet",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about DOCKER",
+    "answer": "It's another thing to build a proper set of firewall rules which will prevent incoming connections.I came up with some rules including DOCKER-USER chain but I'd qualify them as hack relying on undocumented configuration.",
+    "domain": "security",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is discussed about I've now used Linux nftables for firewall rules and it went okay?",
+    "answer": "Personally, I think that if you aren't already familiar with iptables, nftables is easier to learn and understand, with the caveat that there is a lot existing documentation, tutorials, etc. for iptables, and significantly less for nftables. I also had my first encounter recently because I bought a new  home router and the OpenWRT 22.xx beta now uses nft.",
+    "domain": "networking",
+    "source": "hackernews:32200411"
+  },
+  {
+    "question": "What is Personally, I think that if you aren't already familiar with iptables, nftables?",
+    "answer": "Personally, I think that if you aren't already familiar with iptables, nftables is easier to learn and understand, with the caveat that there is a lot existing documentation, tutorials, etc.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is One of the nicest things about nftables?",
+    "answer": "One of the nicest things about nftables is the way most distros has packaged it: with a service named \"nftables\" that runs a base config file from a standard location (usually /etc/nftables.conf or /etc/sysconfig/nftables.conf).",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is > This experience?",
+    "answer": "> This experience is much better than the traditional iptables approach, where the 'load from file' and 'save to file' operations have the feel of a hack rather than a designed format and it can be easier to automate your rule setup with a script.I found that statement to be weird given the existence of iptables-save and iptables-restore.Anyway.I manage a large fleet of OpenWRT devices with some crazy iptables stuff.I have played with NFT multiple times over the last decade.",
+    "domain": "internet",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about NFT",
+    "answer": "Like systemd and wayland it's being over-hyped by influenced teenagers that don't know what they are talking about and distro-paid bloggers.NFT has a lot of problems and there's still a few things that it can't do, mostly because of missing modules.I hope some day NFT becomes a good proper successor to iptables, but unfortunately the transition has been really slow, drawn out, and it's being pushed as a solid solution when it's just not ready.",
+    "domain": "networking",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is discussed about Cloudflare Firewall Rules to Protect WordPress?",
+    "answer": "So much needed, bye bye Wordfence and all so-called \"security plugins\". Note the comment about admin-ajax below the article; it's a real problem. One of the many bad design decisions in WP. While a great idea in principle, this is... incomplete.You can also do exactly the same thing with any web server. And you should. Just because you use Cloudflare doesn’t mean your server is not directly accessible on the internet. Sure, its IP is masked, but that doesn’t mean it’s suddenly invisible.",
+    "domain": "internet",
+    "source": "hackernews:19827612"
+  },
+  {
+    "question": "What is Just because you use Cloudflare doesn’t mean your server?",
+    "answer": "Just because you use Cloudflare doesn’t mean your server is not directly accessible on the internet.",
+    "domain": "internet",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is Sure, its IP?",
+    "answer": "Sure, its IP is masked, but that doesn’t mean it’s suddenly invisible.In reality this is just a much more advanced version of security through obscurity.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is discussed about Announcing Firewall Rules?",
+    "answer": "I worked on this system and am happy to answer questions about it.The main documentation can be found here https://developers.cloudflare.com/firewall/cf-firewall-rules...As an outline:+ We use a Wireshark(r) https://www.wireshark.org/ inspired DSL for expressions that match traffic throughout our network https://www.wireshark.org/docs/wsug_html_chunked/ChWorkBuild...",
+    "domain": "internet",
+    "source": "hackernews:18139194"
+  },
+  {
+    "question": "Gateways and Pfsense?",
+    "answer": "I have a question regarding pfsense and routing in general.\n\nI have a laptop that is connected to ISP router, the second laptop runs pfsense and few more laptops are connected to it via a switch. \n\nisp router network is: 192.168.1.0/24\n\npfsense eth0: 192.168.1.100/24\npfsense eth0 gateway: 192.168.1.1 (isp router)\npfsense eth2: 192.168.2.1/24\n\nlaptop 1: 192.168.1.36/24\ngateway for laptop 1: 192.168.1.1 (isp router)\n\nlaptop 2: 192.168.2.2\ngateway for laptop 2: 192.168.2.",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:976569"
+  },
+  {
+    "question": "What is I have a laptop that?",
+    "answer": "I have a laptop that is connected to ISP router, the second laptop runs pfsense and few more laptops are connected to it via a switch.",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:976569"
+  },
+  {
+    "question": "What is Question:?",
+    "answer": "Question: is there any way to have multiple gateways on my machine?.",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:976569"
+  },
+  {
+    "question": "Where are pfsense log files?",
+    "answer": "Where can the pfsense log files be located and viewed?\n\nI have searched the documentation and it doesn't indicate the log files location for the various components of pfsense.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:520408"
+  },
+  {
+    "question": "monowall vs pfsense?",
+    "answer": "I'm building a router out of a Mini-ITX pc + compact flash card setup and I'm trying to choose a suitable distro. My criteria are:\n\n\nMust be able to run from a CF card (so no excessive disk writes)\nI'm mostly interested in having a high powered router for the purpose of traffic shaping\nThat said, I'm also interested in using this to learn more about how routing / networking works (my original plan was to use a basic bare-bones distro like LFS and put the routing software on top myself) so I'm no.",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:63110"
+  },
+  {
+    "question": "Tell me about ITX",
+    "answer": "I'm building a router out of a Mini-ITX pc + compact flash card setup and I'm trying to choose a suitable distro.",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:63110"
+  },
+  {
+    "question": "Tell me about CF",
+    "answer": "Must be able to run from a CF card (so no excessive disk writes)\nI'm mostly interested in having a high powered router for the purpose of traffic shaping\nThat said, I'm also interested in using this to learn more about how routing / networking works (my original plan was to use a basic bare-bones distro like LFS and put the routing software on top myself) so I'm not after a distro that hides the inner workings from me\nI'd also like to have SSH.",
+    "domain": "internet",
+    "source": "stackexchange:serverfault:63110"
+  },
+  {
+    "question": "Rearrange pfSense interface order?",
+    "answer": "I want to organize a pfSense firewall that I got already running and the first thing is the interface order.\nI know that pfSense is a little bit harsh when coming to rearrange things, but I would like to know if there's any easy way to reorder the interfaces on the Firewall, here's the status today:\n\nIn this case I want to put the WAN interfaces on top, followed by PFSYNC, MGMT, SRV and finally LAN.",
+    "domain": "security",
+    "source": "stackexchange:serverfault:1022296"
+  },
+  {
+    "question": "What is I know that pfSense?",
+    "answer": "I know that pfSense is a little bit harsh when coming to rearrange things, but I would like to know if there's any easy way to reorder the interfaces on the Firewall, here's the status today:.",
+    "domain": "security",
+    "source": "stackexchange:serverfault:1022296"
+  },
+  {
+    "question": "ESXI, pfSense, 10gbE?",
+    "answer": "Good day all! I will try and make this short and sweet. My current setup is:\n\nXS708T NETGEAR 10gbE switch\n\nESXi Machine #1:\n\n\n2x Intel 10gbE\npfSense (VM) with WAN on one vSwitch, LAN on other vSwitch, NIC's above respectively for each.",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:883309"
+  },
+  {
+    "question": "Tell me about SFP",
+    "answer": "1x Intel 10gb (SFP+)\nUbuntu Server (x2), FreeNAS server, Windows Server VM's.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:883309"
+  },
+  {
+    "question": "What is So here?",
+    "answer": "So here is the issue: using iperf between both Ubuntu VM's on separate AND same ESXi machines are able to reach the full 10GB/s throughput when on the same VLAN.",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:883309"
+  },
+  {
+    "question": "What is Watching systat -ifstat on pfSense, I can verify no traffic?",
+    "answer": "Watching systat -ifstat on pfSense, I can verify no traffic is traveling through pfSense.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:883309"
+  },
+  {
+    "question": "What is So my thought process?",
+    "answer": "So my thought process is this; my switch has been verified capable of handing the 10GB/s throughput when on the same VLAN.",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:883309"
+  },
+  {
+    "question": "Tell me about CPU",
+    "answer": "I have monitored pfSense during all the test to verify that I'm not hitting any sort of hardware (CPU) limits.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:883309"
+  },
+  {
+    "question": "pfsense log file retention?",
+    "answer": "We have a pfSense firewall in our datacentre.  By default, pfSense is only storing 500K of firewall filter logs, which is only a few hours for us.  How can I increase this?\n\npfSense uses clog rather than the usual BSD newsyslog.\n\nI only want the log for debugging firewall rules, not compliance or anything, and the firewall has 100GB of spare disk space, so I'd rather have the logs on the firewall itself than set up a syslog server.",
+    "domain": "security",
+    "source": "stackexchange:serverfault:271862"
+  },
+  {
+    "question": "What is By default, pfSense?",
+    "answer": "By default, pfSense is only storing 500K of firewall filter logs, which is only a few hours for us.",
+    "domain": "security",
+    "source": "stackexchange:serverfault:271862"
+  },
+  {
+    "question": "What does pfSense provide?",
+    "answer": "pfSense uses clog rather than the usual BSD newsyslog.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:271862"
+  },
+  {
+    "question": "Forefront TMG vs pfSense?",
+    "answer": "We currently run pfSense with no problems, however we are looking at TMG as it is included in our partner subscription to MS and allows Windows 7 DirectConnect features to our domain for off-site users.\n\nI have had a google, but there don't seem to be any comparisons of TMG to pfSense.\n\nAnyone have experience/knowledge of this?\n\nOur infrastructure is Windows Server 2008 R2 behind pfSense at the moment.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:213520"
+  },
+  {
+    "question": "What is We currently run pfSense with no problems, however we?",
+    "answer": "We currently run pfSense with no problems, however we are looking at TMG as it is included in our partner subscription to MS and allows Windows 7 DirectConnect features to our domain for off-site users.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:213520"
+  },
+  {
+    "question": "Tell me about TMG",
+    "answer": "I have had a google, but there don't seem to be any comparisons of TMG to pfSense.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:213520"
+  },
+  {
+    "question": "What is Our infrastructure?",
+    "answer": "Our infrastructure is Windows Server 2008 R2 behind pfSense at the moment.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:213520"
+  },
+  {
+    "question": "pfsense in virtualbox?",
+    "answer": "I'm new to pfSense and VirtualBox, I have a PC running Ubuntu, in Ubuntu I run a VirtualBox host. pfSense is installed as a virtual machine. I have two network adapters, one connected to my modem(WAN), one connected to a switch (LAN). I bridged the adapters to my virtual machine. Everything works, I was able to connect to the Internet, other computers in LAN is able to obtain IP addresses from pfSense, working perfectly fine.",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:760237"
+  },
+  {
+    "question": "What is pfSense?",
+    "answer": "pfSense is installed as a virtual machine.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:760237"
+  },
+  {
+    "question": "What is Everything works, I was able to connect to the Internet, other computers in LAN?",
+    "answer": "Everything works, I was able to connect to the Internet, other computers in LAN is able to obtain IP addresses from pfSense, working perfectly fine.",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:760237"
+  },
+  {
+    "question": "What is only issue here?",
+    "answer": "The only issue here is I don't know how I would connect my virtual machine host into the same network as other PC in LAN.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:760237"
+  },
+  {
+    "question": "Pfsense over Ubuntu 12.04?",
+    "answer": "Is it required to install virtual box in order to install pfsense?\nI mean I would like to directy install pfsense over ubuntu 12.04 operating system without needing any virtualbox like software?\n\nDoes pfsense have capability of running over real operating system directly?\n\nThanks in advance",
+    "domain": "general",
+    "source": "stackexchange:serverfault:482920"
+  },
+  {
+    "question": "Hurricane Electric Tunnel with Pfsense?",
+    "answer": "How would I setup a HE net Tunnel to route through PFsense so I can have v6 addresses on my servers? I already have the tunnel setup on their end, but there is no instructions for PFsense.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:228366"
+  },
+  {
+    "question": "Tell me about HE",
+    "answer": "How would I setup a HE net Tunnel to route through PFsense so I can have v6 addresses on my servers?.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:228366"
+  },
+  {
+    "question": "What is I already have the tunnel setup on their end, but there?",
+    "answer": "I already have the tunnel setup on their end, but there is no instructions for PFsense.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:228366"
+  },
+  {
+    "question": "Virtualize pfSense on VMware?",
+    "answer": "I'm making a network model and I have issues with virtualization of pfSense under VMware.\n\nI have a client in a VLAN 220 (172.2.20.100/23) trying to ping his gateway (pfSense : 172.2.20.1/23) but it doesn't work as the inter-VLAN routing doesn't work also.\n\nThis is a diagram of the network :\n\n\nEDIT1 : I created a 220 tagged port group and added it to one of the pfSense vNIC. \nWe have Cisco UCS C220 M5 physical server under VMware 6.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:60490"
+  },
+  {
+    "question": "Tell me about VMware",
+    "answer": "I'm making a network model and I have issues with virtualization of pfSense under VMware.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:60490"
+  },
+  {
+    "question": "Tell me about UCS",
+    "answer": "We have Cisco UCS C220 M5 physical server under VMware 6.7 Enterprise, you think we have a driver issue ?.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:60490"
+  },
+  {
+    "question": "pfSense IPv6 NAT?",
+    "answer": "I know many of you said that IPv6 has no NAT, but my server provider told me, that it is possible. I have no idea how...\n\nI have a pfSense Server as my Firewall (Not the router!). I have a /28 IPv4 and a /64 IPv6 Subnet from my hoster.\n\nI have my WAN and my LAN on pfSense. The NAT worked successfully with IPv4.\n\nWAN - Public IPv4\nLAN - 192.168.1.0/24\n\nNow I want to do that stuff with IPv6.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:46170"
+  },
+  {
+    "question": "OSPF between Cisco & PFsense?",
+    "answer": "Cisco OSPF has area 0 with 10.0.0.0/24.\n\nPFsense OSPF has area 0 with 10.0.0.0/24 and area 10 with 10.10.2.0/24 and area 20 with 192.168.122.0/24.\n\nThe routers have full \"FULL/DR\" & \"FULL/BDR\" relationship with each other.\n\nHowever, although \"show route\" and \"ip route\" show routes from each different devices, ospf neighbors can't talk to each other.\n(To rule out firewall/acl on both Cisco and PFsense, I put in static routes and it worked).",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:38305"
+  },
+  {
+    "question": "Tell me about PFsense",
+    "answer": "PFsense OSPF has area 0 with 10.0.0.0/24 and area 10 with 10.10.2.0/24 and area 20 with 192.168.122.0/24.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:38305"
+  },
+  {
+    "question": "Tell me about FULL",
+    "answer": "The routers have full \"FULL/DR\" & \"FULL/BDR\" relationship with each other.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:38305"
+  },
+  {
+    "question": "Tell me about RIP",
+    "answer": "Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP\n       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area \n       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2\n       E1 - OSPF external type 1, E2 - OSPF external type 2\n       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2\n       ia - IS-IS inter area, * - candidate default, U - per-user static route\n       o - ODR, P - periodic downloaded static route, + - replicated route.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:38305"
+  },
+  {
+    "question": "What is Gateway of last resort?",
+    "answer": "Gateway of last resort is 107.204.168.1 to network 0.0.0.0.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:38305"
+  },
+  {
+    "question": "Tell me about IA",
+    "answer": "S*    0.0.0.0 0.0.0.0 [1/0] via 107.204.168.1, outside\nO IA     10.10.2.0 255.255.255.0 [110/20] via 10.0.0.119, 15:17:07, inside\nC        107.0.0.0 255.0.0.0 is directly connected, outside\nL        107.204.169.233 255.255.255.255 is directly connected, outside\nC        10.0.0.0 255.255.0.0 is directly connected, inside\nL        10.0.0.1 255.255.255.255 is directly connected, inside\nO IA  192.168.122.0 255.255.255.0 [110/20] via 10.0.0.119, 15:17:07, inside.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:38305"
+  },
+  {
+    "question": "Tell me about ID",
+    "answer": "Neighbor ID     Pri   State           Dead Time   Address         Interface\n100.100.100.100   1   FULL/BDR        0:00:39    10.0.0.119    inside\ncisASA#.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:38305"
+  },
+  {
+    "question": "Tell me about UGS",
+    "answer": "IPv4 Routes\nDestination Gateway Flags   Use Mtu Netif   Expire\n0.0.0.0/32  10.0.0.1    UGS 0   1450    em3 \ndefault 10.0.0.1    UGS 57016   1450    em3 \n8.8.8.8 00:3d:2c:15:26:57   UHS 17  1450    em3 \n10.10.2.0/24    link#2  U   0   1450    em1 \n10.10.2.1   link#2  UHS 212364  16384   lo0 \n84.200.69.80    00:3d:2c:15:26:57   UHS 166 1450    em3 \n127.0.0.1   link#8  UH  823 16384   lo0 \n10.0.0.0/16 10.0.0.1    UGS 120297  1450    em3 \n10.0.0.119  link#4  UHS 0   16384   lo0 \n192.168.122.0/24    link#3  U   63230   1450    em2 \n192.168.122.1   link#3  UHS 212299  16384   lo0.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:38305"
+  },
+  {
+    "question": "Tell me about MB",
+    "answer": ": Hardware:   ASA5505, 512 MB RAM, CPU Geode 500 MHz\n:\nASA Version 9.2(4) \n!.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:38305"
+  },
+  {
+    "question": "Access pfSense LAN through OpenVPN?",
+    "answer": "I'm trying to access a LAN through OpenVPN.\n\nMy current setup is that I have one machine (Linux (old)) that can successfully connect to OpenVPN running on a pfSense (2.3.2) machine. Behind the pfSense machine is a LAN with a third machine attached.\n\nThe subnet used for OpenVPN clients is 10.0.8.0/24. The client I'm testing with has the IP 10.0.8.3.\n\nThe subnet used for the LAN is X.Y.Z.0/24. The machine that's on the LAN has the IP X.Y.Z.12, and it can ping its gateway, X.Y.Z.254.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:37522"
+  },
+  {
+    "question": "What is My current setup?",
+    "answer": "My current setup is that I have one machine (Linux (old)) that can successfully connect to OpenVPN running on a pfSense (2.3.2) machine.",
+    "domain": "security",
+    "source": "stackexchange:networkengineering:37522"
+  },
+  {
+    "question": "What is Behind the pfSense machine?",
+    "answer": "Behind the pfSense machine is a LAN with a third machine attached.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:37522"
+  },
+  {
+    "question": "What is In the pfSense configuration for the OpenVPN server, there?",
+    "answer": "In the pfSense configuration for the OpenVPN server, there is an option \"IPv4 Local network(s)\", which implies that the VPN clients should have access to the specified subnets.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:37522"
+  },
+  {
+    "question": "What does I also added a firewall rule that provide?",
+    "answer": "I also added a firewall rule that allows all traffic from hosts on 10.0.8.0/24 to hosts on X.Y.Z.0/24.",
+    "domain": "security",
+    "source": "stackexchange:networkengineering:37522"
+  },
+  {
+    "question": "What is last bit of configuration I did?",
+    "answer": "The last bit of configuration I did is I manually added routing rules on the OpenVPN client, since they are not added successfully by the OpenVPN client (likely due to a version mismatch?).",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:37522"
+  },
+  {
+    "question": "What is Following?",
+    "answer": "Following are the current (relevant) routing rules on the OpenVPN client:.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:37522"
+  },
+  {
+    "question": "What is 10.0.8.1?",
+    "answer": "10.0.8.1 is the gateway that the OpenVPN connection command outputs on the client, although I am unable to ping it.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:37522"
+  },
+  {
+    "question": "What is When multiple OpenVPN clients?",
+    "answer": "When multiple OpenVPN clients are connected, they can ping each other.",
+    "domain": "security",
+    "source": "stackexchange:networkengineering:37522"
+  },
+  {
+    "question": "What is Is there an error in my configuration, or?",
+    "answer": "Is there an error in my configuration, or is there an additional step I need to take to access the LAN from an OpenVPN client?.",
+    "domain": "security",
+    "source": "stackexchange:networkengineering:37522"
+  },
+  {
+    "question": "Port Forwarding on unavoidable Double-NAT pfSense?",
+    "answer": "I've got a pfSense box which is acting as DHCP/DNS for one LAN, which all office computers and servers connect to.\n\nWe have a modem which cannot be put into bridge mode for several reasons and cannot be swapped out for another bridgeable modem as we use certain services from the ISP that only function with their (rather crappy) modem.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:35716"
+  },
+  {
+    "question": "What is I've got a pfSense box which?",
+    "answer": "I've got a pfSense box which is acting as DHCP/DNS for one LAN, which all office computers and servers connect to.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:35716"
+  },
+  {
+    "question": "What is issue I face?",
+    "answer": "The issue I face is this: I can't port forward from the pfSense box to any other computer/server on the pfSense LAN.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:35716"
+  },
+  {
+    "question": "What is I confirmed that the Modem's DMZ?",
+    "answer": "I confirmed that the Modem's DMZ is working as I connected a server directly to the Modem's LAN and was able to access services from our public IP.",
+    "domain": "intranet",
+    "source": "stackexchange:networkengineering:35716"
+  },
+  {
+    "question": "What is only thing we've changed?",
+    "answer": "The only thing we've changed is the installation of the pfSense box as the Windows server died.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:35716"
+  },
+  {
+    "question": "Configuring the NAT 1:1 rules with pfsense?",
+    "answer": "I have two pfsense. One pfsense is on 192.168.0.1 and another pfsense is on 192.168.20.1. Basically I have installed 20.1 pfsense on one machine 192.168.0.180 which is in the network of 0.1 pfsense, and added the rules for that machine on 0.1 pfsense.\n\nNow what I am trying to achieve is that the system connected to 20.1 pfsense rules should also be able to connect to the systems on 0.1 which is happening. But when I am trying to connect from 0.x to let's say 20.y it's not able to connect.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:51690"
+  },
+  {
+    "question": "What is One pfsense?",
+    "answer": "One pfsense is on 192.168.0.1 and another pfsense is on 192.168.20.1.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:51690"
+  },
+  {
+    "question": "What is Basically I have installed 20.1 pfsense on one machine 192.168.0.180 which?",
+    "answer": "Basically I have installed 20.1 pfsense on one machine 192.168.0.180 which is in the network of 0.1 pfsense, and added the rules for that machine on 0.1 pfsense.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:51690"
+  },
+  {
+    "question": "What is Now what I am trying to achieve?",
+    "answer": "Now what I am trying to achieve is that the system connected to 20.1 pfsense rules should also be able to connect to the systems on 0.1 which is happening.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:51690"
+  },
+  {
+    "question": "pFsense, Unifi AP, HP switch and VLANS?",
+    "answer": "I have a Unifi AP with a single MYNET SSID connected to my HP 2520 switch on port 23. I have a pfSense LAN interface connected on port 1. AP clients get DHCP (192.168.1.0/24) from pfSense and can access Internet, etc. I have static leases for all my \"known\" devices but also a DHCP pool so new devices can get on to get configured.\nI have OpenVPN (client) configured on pfSense and policy route ports 443, etc over it.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:72652"
+  },
+  {
+    "question": "Tell me about MYNET",
+    "answer": "When a client leaves MYNET and connects to NOVPN, the client doesn't get an IP.",
+    "domain": "security",
+    "source": "stackexchange:networkengineering:72652"
+  },
+  {
+    "question": "What is reply?",
+    "answer": "The reply is originating from x.x.1.1 (pfSense LAN interface).",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:72652"
+  },
+  {
+    "question": "What is I was expecting it to come from x.x.2.1 which?",
+    "answer": "I was expecting it to come from x.x.2.1 which is the vlan 200 address for pfSense.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:72652"
+  },
+  {
+    "question": "Tell me about VLANs",
+    "answer": "I think this might be happening because I don't have any VLANs on my switch maybe?.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:72652"
+  },
+  {
+    "question": "Tell me about GVRP",
+    "answer": "I tried setting up vlan 200 on my switch but got lost with tagged/untagged/GVRP, etc.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:72652"
+  },
+  {
+    "question": "Tell me about HP",
+    "answer": "I tried a few things from this HP link but couldn't quite figure out what was needed to make this work.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:72652"
+  },
+  {
+    "question": "Tell me about Port    Type      Enabled      Mode      Flow Ctrl  Group  Type",
+    "answer": "Port/Trunk settings (all ports are set the same as #1):\n  Port    Type      Enabled      Mode      Flow Ctrl  Group  Type\n  ----  --------- + -------  ------------  ---------  -----  -----\n  1     1000T     | Yes      Auto          Disable\n  ...",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:72652"
+  },
+  {
+    "question": "Tell me about UPDATE",
+    "answer": "UPDATE: adding switch configs below:\nrunning config\nswitch-2520G# show run.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:72652"
+  },
+  {
+    "question": "Tell me about TTL",
+    "answer": "Default Gateway :                \n  Default TTL     : 64   \n  Arp Age         : 20  \n  Domain Suffix   :                               \n  DNS server      :.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:72652"
+  },
+  {
+    "question": "Can I bulk export aliases from pfSense (in order to import to another pfSense)?",
+    "answer": "This seems like a simple thing but there doesn't appear to be an easy way (in the GUI). Before I dive into the file system level, I thought I'd ask --- is there an easy export of aliases from pfSense?\n\nThe online help (https://doc.pfsense.org/index.php/Aliases) lists a bulk import but makes no mention of export or bulk saving. I have a long list of aliases and it would be nice for this to be done swiftly and repeatably.",
+    "domain": "internet",
+    "source": "stackexchange:networkengineering:50135"
+  },
+  {
+    "question": "What is Before I dive into the file system level, I thought I'd ask ---?",
+    "answer": "Before I dive into the file system level, I thought I'd ask --- is there an easy export of aliases from pfSense?.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:50135"
+  },
+  {
+    "question": "Tell me about High Availability",
+    "answer": "I have the High Availability pfsync set up but it does not seem to transfer any aliases even though \"Firewall aliases\" is checked.",
+    "domain": "security",
+    "source": "stackexchange:networkengineering:50135"
+  },
+  {
+    "question": "What is UPDATE: So at least part of the syncing issue?",
+    "answer": "UPDATE: So at least part of the syncing issue is that the two firewalls I am syncing are on different versions of pfSense...",
+    "domain": "security",
+    "source": "stackexchange:networkengineering:50135"
+  },
+  {
+    "question": "What is but my project?",
+    "answer": "but my project is to move all the config options from one to the other so I can upgrade it.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:50135"
+  },
+  {
+    "question": "pfSense Site-to-Site routes?",
+    "answer": "I was presented with an issue regarding an actual setup using pfSense at two locations.\n\npfSense Site A is the OpenVPN Server and B is the client.\n\nEverything works, the LAN on Site A can communicate with LAN on site B and also the other way around.\n\nSite A LAN GW IP is 192.168.10.254\nSite B LAN GW IP is 192.168.5.1\n\nIssue is that some specific hosts on Site A should use Internet Breakout at site B but as they have the 192.168.10.254 as GW automatically get to the Internet through Site A WAN.",
+    "domain": "security",
+    "source": "stackexchange:networkengineering:39759"
+  },
+  {
+    "question": "What is pfSense Site A?",
+    "answer": "pfSense Site A is the OpenVPN Server and B is the client.",
+    "domain": "security",
+    "source": "stackexchange:networkengineering:39759"
+  },
+  {
+    "question": "What is Issue?",
+    "answer": "Issue is that some specific hosts on Site A should use Internet Breakout at site B but as they have the 192.168.10.254 as GW automatically get to the Internet through Site A WAN.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:39759"
+  },
+  {
+    "question": "What is I would like to achieve?",
+    "answer": "I would like to achieve is having Site A hosts going to Internet through Site B WAN instead of A.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:39759"
+  },
+  {
+    "question": "What is I'm sorry if some information?",
+    "answer": "I'm sorry if some information is missing, but not really a network guy.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:39759"
+  },
+  {
+    "question": "Why would pfSense ignore arp requests?",
+    "answer": "I'm configuring pfSense 2.4.3p1 as a transparent firewall. It's running in virtual machine with two vtnet paravirtualized adapters:\n\n\nWAN (vtnet0) connected to a 'far-side' network containing the gateway, DNS and DHCP servers\nLAN (vtnet1) connected to a 'near-side' network containing clients\n\n\nThe firewall is to explicitly join the broadcast domains of the two segments such that they're both within 192.168.1.1/24. NAT is disabled.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:53332"
+  },
+  {
+    "question": "What is Running tcpdump while a client tries to ping 192.168.1.1 shows that ARP requests?",
+    "answer": "Running tcpdump while a client tries to ping 192.168.1.1 shows that ARP requests are coming from the client, getting ignored by pfSense, passed through to the WAN, and no response is coming back:.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:53332"
+  },
+  {
+    "question": "Pfsense security issues?",
+    "answer": "I have used pfsense before as the main gateway, load balancer, traffic shaping, proxy, firewall, virus/malware protection, enterprise wifi solution for an entire office of 50+ users. Yet I have received criticism from top IT companies who have done an audit on our IT infrastructure calling this solution immature and insecure.",
+    "domain": "networking",
+    "source": "stackexchange:security:225672"
+  },
+  {
+    "question": "Tell me about IT",
+    "answer": "Yet I have received criticism from top IT companies who have done an audit on our IT infrastructure calling this solution immature and insecure.",
+    "domain": "general",
+    "source": "stackexchange:security:225672"
+  },
+  {
+    "question": "What is My reasoning for choosing pfsense?",
+    "answer": "My reasoning for choosing pfsense are due to the following points:.",
+    "domain": "networking",
+    "source": "stackexchange:security:225672"
+  },
+  {
+    "question": "Tell me about RAM",
+    "answer": "Quad Core Intel Pentium Processor\n8GB of DDR3 RAM\n500GB HDD\n4 x 1Gbps NICs.",
+    "domain": "intranet",
+    "source": "stackexchange:security:225672"
+  },
+  {
+    "question": "Tell me about Squid Proxy\nEnterprise Wifi Management",
+    "answer": "Anti-Virus protection: ClamAV\nProxy & Caching: Squid Proxy\nEnterprise Wifi Management & Authentication: FreeRADIUS.",
+    "domain": "wifi",
+    "source": "stackexchange:security:225672"
+  },
+  {
+    "question": "pfsense subdomain timeout with error 522?",
+    "answer": "I want to attach a valid ssl subdomain to my pfsense. I would check it (with warnings) via my the pfsense's IP 192.168.11.1 .\nI used multiple tutorials to come up with the following:\n\nBought a domain\nSet the domain's namespace to cloudflair\nSetup an cloud flair API key with dns zone edit rights and collected various cloudflair details.",
+    "domain": "internet",
+    "source": "stackexchange:security:252432"
+  },
+  {
+    "question": "Tell me about API",
+    "answer": "Bought a domain\nSet the domain's namespace to cloudflair\nSetup an cloud flair API key with dns zone edit rights and collected various cloudflair details.",
+    "domain": "internet",
+    "source": "stackexchange:security:252432"
+  },
+  {
+    "question": "Tell me about ACME",
+    "answer": "Installed ACME\nAdded two ACME keys (one for staging and another for production)\nCreated a certificate successfully (both in staging and production)\nSet my pfsense to new certificate\nAdded my subdomain to the additional hostnames.",
+    "domain": "security",
+    "source": "stackexchange:security:252432"
+  },
+  {
+    "question": "How can I disable logging for specific rule in pfsense?",
+    "answer": "I would like to prevent pfsense logging of the block for the rule below:\n\nRule: 'Block ULA networks from WAN'\nSource: my_router_ip:specific_port\nDest: ip:1900\nProtocol: UDP\n\n\nEven though I have disabled UPnP discovery from my home wifi router, every hour it sends out 6 requests, which fill up my logs.\n\nI have tried creating a WAN Easy Rule, but the requests are still being logged. Any help would be appreciated.",
+    "domain": "networking",
+    "source": "stackexchange:security:176754"
+  },
+  {
+    "question": "Tell me about ULA",
+    "answer": "Rule: 'Block ULA networks from WAN'\nSource: my_router_ip:specific_port\nDest: ip:1900\nProtocol: UDP.",
+    "domain": "networking",
+    "source": "stackexchange:security:176754"
+  },
+  {
+    "question": "Which one will give me the best VPN security when choosing Encryption algorithm in pfsense?",
+    "answer": "I want to setup an VPN server in pfsense and I can choose a lot of Encryption algorithm types ,alot!!\nWhat I have read is that the AES 256 (512 is not an option) is the best. Well even then there are a couple of option this is what I can choose from:\n\n\nCBC\nCFB\nCFB1\nCFB8\nOFB\n\n\nI did find this answer https://stackoverflow.com/questions/1220751/how-to-choose-an-aes-encryption-mode-cbc-ecb-ctr-ocb-cfb, but it did not include all options and there are some critic comments on the answer.",
+    "domain": "security",
+    "source": "stackexchange:security:91481"
+  },
+  {
+    "question": "What is What I have read?",
+    "answer": "What I have read is that the AES 256 (512 is not an option) is the best.",
+    "domain": "general",
+    "source": "stackexchange:security:91481"
+  },
+  {
+    "question": "What is Well even then there?",
+    "answer": "Well even then there are a couple of option this is what I can choose from:.",
+    "domain": "general",
+    "source": "stackexchange:security:91481"
+  },
+  {
+    "question": "What is Of course there?",
+    "answer": "Of course there is an wikipedia page: http://en.wikipedia.org/wiki/Block_cipher_mode_of_operation , but that does not give me an clear answer on what is the most secure and gives a lot of extra info I do not understand.",
+    "domain": "internet",
+    "source": "stackexchange:security:91481"
+  },
+  {
+    "question": "What is Question 2: If 1?",
+    "answer": "Question 2: If 1 is true then which one of the above list is the most secure?.",
+    "domain": "general",
+    "source": "stackexchange:security:91481"
+  },
+  {
+    "question": "Benefits of home router behind Linux firewall?",
+    "answer": "Like a lot of people I have a simple consumer grade router at home. The setup is pretty standard: \n\n\n  Ethernet from the cable modem --> router's WAN \n\n\nGiven the poor track record of consumer routers in terms of security I decided it would be safer to put the router behind a firewall. In my case I used a spare PC and setup a dedicated pfSense box. The new config is:\n\n\n  Ethernet from cable modem --> pfSense --> router connected to pfSense LAN.",
+    "domain": "networking",
+    "source": "stackexchange:security:90890"
+  },
+  {
+    "question": "What is My thinking?",
+    "answer": "My thinking is that pfSense is more actively updated then my router's firmware so it should have less bugs and vulnerabilities.",
+    "domain": "networking",
+    "source": "stackexchange:security:90890"
+  },
+  {
+    "question": "Tell me about USB",
+    "answer": "I understand that the firewall does nothing to mitigate \"user error\" attacks like downloading malware, plugging in infected USB drive, etc.",
+    "domain": "security",
+    "source": "stackexchange:security:90890"
+  },
+  {
+    "question": "How does DNS-01 validation for LetsEncrypt know what the right IP address is?",
+    "answer": "For my personal use, I bought a domain for internal ssl validation for my pfsense. I was able to get the LetsEncrypt's ACME script to successfully validate my domain and produce an ssl certificate for a subdomain. I setup my pfsense to use my new certificate and alternative host name successfully.\nSo far, everything was going according to my expectations.",
+    "domain": "networking",
+    "source": "stackexchange:security:252404"
+  },
+  {
+    "question": "Is the level of traffic normal against my blocked ports?",
+    "answer": "I was recommended by my brother to direct the question here about the level of traffic I get against several of my blocked ports. \n\nI run pfsense 1.2.3, router in bridge. \n\nBehind pfsense I have:\n\n1x desktop windows 7\n\n1x Linux ubuntu running web(about 50MB transfered/day) and ftp service(filtered) and mumble (used by about 10 users)\n\nFor the past weeks I have noticed an increased of hosts trying to send UDP packets to mainly 1 port at a time.",
+    "domain": "networking",
+    "source": "stackexchange:security:4274"
+  },
+  {
+    "question": "What is Suddenly the port they try to send to?",
+    "answer": "Suddenly the port they try to send to is changed and I barely notice any traffic to the previous port.",
+    "domain": "general",
+    "source": "stackexchange:security:4274"
+  },
+  {
+    "question": "Virtual network for malware analysis?",
+    "answer": "I'm attempting to do some analysis work on a malware sample but I'm running into a wall. I can't get the malware to execute correctly and talk to its C2 server. In my lab I have a Windows machine that executes the malware, a pfSense router that only has LAN, and an additional Linux host on the same subnet as the Windows machine that runs INetSim (a fake web server).",
+    "domain": "networking",
+    "source": "stackexchange:security:127637"
+  },
+  {
+    "question": "If I set http.sslVerify to false in git, then will the connection be secure?",
+    "answer": "If I set \"http.sslVerify false\"(in .gitconfig file) in git, then will the connection be secure? In between, we are using pfsense firewall and squid+squidgaurd for web-filtering.\n\nIs this a good path to use?",
+    "domain": "security",
+    "source": "stackexchange:security:108752"
+  },
+  {
+    "question": "What is In between, we?",
+    "answer": "In between, we are using pfsense firewall and squid+squidgaurd for web-filtering.",
+    "domain": "security",
+    "source": "stackexchange:security:108752"
+  },
+  {
+    "question": "scan forwarded ports with OpenVAS/GVM?",
+    "answer": "I'm currently learning about network security and came across a problem, maybe I'm just missing something obvious but I'll try to explain my environment:\nI have a Kali Linux VM connected to the WAN Interface (192.168.178.109) of a Pfsense VM, the PFsense has another LAN (.2.1) and DMZ (.1.1) interfaces with a few VMs connected to each Interface.\nOn the WAN Interface, I disabled all incoming traffic except some NAT rules for port forwarding to hosts in the DMZ (i hope i explained that correctly).",
+    "domain": "internet",
+    "source": "stackexchange:security:242228"
+  },
+  {
+    "question": "Tell me about REFUSED",
+    "answer": "53/tcp\nOpen\nDomain\nSyn-ack ttl 64\n(generic Dns response: REFUSED).",
+    "domain": "networking",
+    "source": "stackexchange:security:242228"
+  },
+  {
+    "question": "Tell me about GVM",
+    "answer": "But if i try to do a vulnerability scan with GVM, it doesn't find anything.",
+    "domain": "general",
+    "source": "stackexchange:security:242228"
+  },
+  {
+    "question": "What is Here?",
+    "answer": "Here is a Screenshot of the firewall settings of the WAN interface:.",
+    "domain": "security",
+    "source": "stackexchange:security:242228"
+  },
+  {
+    "question": "What is discussed about In-kernel WireGuard is on its way to FreeBSD and the pfSense router?",
+    "answer": "PSA:pfSense is closed-source [1]. It was discussed last month here on HN [2]. OPNsense is the equivalent FOSS alternative [3].[1] https://github.com/rapi3/pfsense-is-closed-source[2] https://news.ycombinator.com/item?id=25894420[3] https://en.wikipedia.org/wiki/OPNsense I'll have to take a look at freebsd, does anyone have a good reference to the differences in a bsd versus Linux? Link to relevant announcement email:\nhttps://lists.zx2c4.com/pipermail/wireguard/2021-March/00649...",
+    "domain": "internet",
+    "source": "hackernews:26475519"
+  },
+  {
+    "question": "What is OPNsense?",
+    "answer": "OPNsense is the equivalent FOSS alternative [3].[1] https://github.com/rapi3/pfsense-is-closed-source[2] https://news.ycombinator.com/item?id=25894420[3] https://en.wikipedia.org/wiki/OPNsense I'll have to take a look at freebsd, does anyone have a good reference to the differences in a bsd versus Linux?.",
+    "domain": "internet",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is discussed about pfSense: Open source network firewall distribution?",
+    "answer": "It's been a few years since I used pfSense (maybe 7 or 8 years?) - when did they become so \"commerical\"?(I'm not saying thats a bad thing, I really have no opinion on that, I'm just curious!) Happy user here. I have used this exclusively for the past eight years.  It's gotten better as it's got more commercial – better UI, more polished plugins, better features, etc. Having used pfsense for a good few years, we recently switched to Meraki.",
+    "domain": "security",
+    "source": "hackernews:13615424"
+  },
+  {
+    "question": "Tell me about APs",
+    "answer": "Having used pfsense for a good few years, we recently switched to Meraki.Global infrastructure and Meraki APs just made it easier to go with their ecosystem, despite the licensing costs.",
+    "domain": "networking",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is discussed about PfSense Is Closed Source?",
+    "answer": "OpnSense is a true open fork of pfSense.  https://opnsense.org(not affiliated, just friends with the OpnSense team) I ran PfSense for a year or two and thought it was an ok product.  Then I started looking for the sources because I wanted to fix some bugs and discovered it's not an actual open source project so I was dismayed and went back to using another product.  I'll have to check out opnsense as there are quite a few things I'm not doing as well as I'd like in my current network. Wow.",
+    "domain": "internet",
+    "source": "hackernews:25894420"
+  },
+  {
+    "question": "What is I'll have to check out opnsense as there?",
+    "answer": "I'll have to check out opnsense as there are quite a few things I'm not doing as well as I'd like in my current network.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is that's quite the mouthful.It goes to show that there?",
+    "answer": "that's quite the mouthful.It goes to show that there is no guarantees that a company is standing by its word.I imagine in the wild there are a ton of companies who \"in theory\" are open source, but they're just chunk of useless code by itself, opaque enough to not be obvious.In reality a lot of companies appear to show off their internal deployment bits, leaving all the IP safely tucked away, whilst looking \"open\".But that's no different that people using their github account as a portfolio showpiece, and dipping in as many projects as possible.",
+    "domain": "troubleshooting",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about BSD",
+    "answer": "This + all the hullabaloo around Amazon / Elastic should really remind developers to carefully consider the license that they apply to their software.FreeBSD is licensed under the 2-clause BSD license.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is discussed about Multiple Vulnerabilities in PfSense?",
+    "answer": "> Can this vulnerability be exploited remotely?> Yes. This vulnerability can be exploited by a remote authenticated privileged user via the Internet. Please use Opnsense now, or something else entirely (Vyos is great but CLI based).I was a big pfSense fan, telling myself that the odd stuff Netgate did was normal/justified.Until the attack on Wireguard's Jason A. Donenfeld.  Then I realised - it's all true.  They are bordering on insane in that organisation.",
+    "domain": "troubleshooting",
+    "source": "hackernews:30719013"
+  },
+  {
+    "question": "What is Please use Opnsense now, or something else entirely (Vyos?",
+    "answer": "Please use Opnsense now, or something else entirely (Vyos is great but CLI based).I was a big pfSense fan, telling myself that the odd stuff Netgate did was normal/justified.Until the attack on Wireguard's Jason A.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is They?",
+    "answer": "They are bordering on insane in that organisation.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is I regret suggesting my old workmate purchase some of their hardware now.Opnsense?",
+    "answer": "I regret suggesting my old workmate purchase some of their hardware now.Opnsense is a great replacement.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is \"specially crafted request\"?",
+    "answer": "The \"specially crafted request\" is just dumb when you realize it means \"a string with a semicolon\" or such.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is discussed about The pfSense Book?",
+    "answer": "A great resource for an excellently flexible and rock-solid reliable platform.Have been running pfsense and pfsense clusters for many, many years and had practically nothing but ultra-reliable success stories. Anyone used the commercial firewall / IP list you can slap on top of pfSense?There is the community version, but then there is also this: https://www.proofpoint.com/us/threat-insight/et-pro-rulesetMy understanding is it’s around $900 or so a year for a license. That kind of sucks.",
+    "domain": "security",
+    "source": "hackernews:17719297"
+  },
+  {
+    "question": "Tell me about AES",
+    "answer": "I am looking for something that can do ipsec at 10Gbps which seems like it should be possible with an x86 processor that supports AES-NI but a lot of anecdotal benchmarks I've seen on randon websites seem to suggest it is difficult to achieve.",
+    "domain": "security",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is discussed about pfSense CE 2.5.2?",
+    "answer": "This[0] change is interesting for home deployments of IPv6: If your ISP changes advertised prefixes occasionally (which mine does), it was until now not practical to assign/use addresses with fixed host suffixes, e.g. for internal services, because you couldn't write firewall rules using those addresses (part of the address could just change and there's no automatic update of the rules).The change now enables you to write firewall rules that use a placeholder for the ISP-assigned prefix.",
+    "domain": "internet",
+    "source": "hackernews:27768934"
+  },
+  {
+    "question": "What is This[0] change?",
+    "answer": "This[0] change is interesting for home deployments of IPv6: If your ISP changes advertised prefixes occasionally (which mine does), it was until now not practical to assign/use addresses with fixed host suffixes, e.g.",
+    "domain": "internet",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is Open source continues to be important and CMB?",
+    "answer": "Open source continues to be important and CMB is in charge for the most part.Netgate ownership completes obtaining full ownership / gets their hooks into every bit of the project.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about OPNSense",
+    "answer": "We see annoying screen about licensing and they start nonsense with OPNSense to flex their tiny muscles.FYI netgate hardware isn’t bad and you get stellar support for what is currently an open source product but they have worked hard to fracture the hard won trust CMB had been building up in the community.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is discussed about PfSense 2.2-Release Now Available?",
+    "answer": "It's on FreeBSD 10.1 now. Nice. 2.2-RELEASE also has a working 6rd implementation, so now I can finally use ipv6 :-) The tickets graph is impressive. Ive previously used PfSense as the main routers in offices on embedded hardware and in the data center on baremetal (for specific use cases). \nIts great. I recommend anyone to try this if you want low cost performance, without compromising on features. PfSense is great, I've been using it for a few years. 2.",
+    "domain": "networking",
+    "source": "hackernews:8952204"
+  },
+  {
+    "question": "Tell me about RELEASE",
+    "answer": "2.2-RELEASE also has a working 6rd implementation, so now I can finally use ipv6 :-) The tickets graph is impressive.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is discussed about PfSense – WireGuard Returns as Experimental Package?",
+    "answer": "It's odd that they mention working with Christian McDonald and not Jason A. Donenfeld or Matt Dunwoodie. The module they reference appears to be https://www.freshports.org/net/wireguard-kmod/ which itself came from the work the latter two did here https://git.zx2c4.com/wireguard-freebsd/log/And indeed just three days ago the work was announced on the wireguard list https://lists.zx2c4.com/pipermail/wireguard/2021-May/006711.... Works fine on opnsense.",
+    "domain": "internet",
+    "source": "hackernews:27095317"
+  },
+  {
+    "question": "Tell me about Christian Mc",
+    "answer": "It's odd that they mention working with Christian McDonald and not Jason A.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is So what?",
+    "answer": "So what is new here?Btw, I'm wondering what HN folks think but I'm leaning to basically go full wireguard.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is discussed about PfSense 2.3-Release Now Available?",
+    "answer": "Not that a firewall needs to look pretty, and yes, I know it's Bootstrap, but the new UI is so much more pleasant to look at! Worth it for this alone. With the crappy, underpowered consumer routers with gaping security holes pfSense is a god send. Last few years I've been running pfSense and the experience has been fairly great.I had a backup server running Ubuntu with ZFS which was always on anyways so I just had to install pfSense on OS disk and it imported the ZFS disks right away.",
+    "domain": "internet",
+    "source": "hackernews:11482560"
+  },
+  {
+    "question": "Tell me about ZFS",
+    "answer": "Last few years I've been running pfSense and the experience has been fairly great.I had a backup server running Ubuntu with ZFS which was always on anyways so I just had to install pfSense on OS disk and it imported the ZFS disks right away.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about RCs",
+    "answer": "So for a long time it was both my backup server and the router/firewall.But lately with all the upgrades (including 2.3 betas and RCs I ran) SAMBA throughput was reduced significantly - not entirely sure if it were the drivers, ZFS or something else.",
+    "domain": "networking",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is And I realized maybe it?",
+    "answer": "And I realized maybe it is not such a great practice to make your router/firewall double up as a backup server.",
+    "domain": "networking",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about ESXi",
+    "answer": "So I virtualized the box using ESXi and ran pfSense and Debian in two VMs on it.The box being weak and running virtualized along side another backup server VM exposed the performance issues with pfSense - I had given a single CPU and 512Mb to it and with the GUI and other process overheads - DNS cache, pingers etc.",
+    "domain": "internet",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about WORK",
+    "answer": "At $WORK we have a need for many small firewall appliances, but I refuse to use anything we can't deploy zero-touch, automate, monitor and back up/restore in a semi-sane way.Either it needs a configuration language like Cisco/Juniper than can be dumped/imported/configured over SSH, or a web API (supposedly on the roadmap for pfsense 3.0 ...",
+    "domain": "internet",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is discussed about Show HN: Pfelk, a customizable pfSense/OPNsense firewall visualization?",
+    "answer": "PFELK is a pfSense/OPNsense firewall traffic visualization solution based on ELK stack. It is a highly customizable tool that let’s you have extensive insight into your network traffic.Key points:- pfSense/OPNsense support- openVPN support- pfSense/Suricata/Snort dashboards with interactive Maps support (MaxMind GeoIp fields, src -> dest locations, Heatmap, etc.)- deploy with ansible-playbook, docker or script.https://github.com/3ilson/pfelk",
+    "domain": "security",
+    "source": "hackernews:22656156"
+  },
+  {
+    "question": "What is PFELK?",
+    "answer": "PFELK is a pfSense/OPNsense firewall traffic visualization solution based on ELK stack.",
+    "domain": "security",
+    "source": "hackernews"
+  }
+]
