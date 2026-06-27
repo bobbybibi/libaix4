@@ -64,6 +64,37 @@ Files included for hosting: `passenger_wsgi.py`, `.htaccess`
 | **Self-Deploying** | `start.py` / `start.sh` / `start.bat` — zero-config launch |
 | **No ML Frameworks** | Pure NumPy neural network — no TensorFlow/PyTorch needed |
 
+
+## SaaS Productization Foundation
+
+This repository now includes initial SaaS scaffolding for web + mobile clients:
+
+- **Multi-tenant database layer** (`saas_db.py`) with tenants, users, subscriptions, analytics events
+- **Versioned API** (`api_v1.py`) under `/api/v1` for auth, onboarding, plans, chat/research wrappers, analytics capture
+- **Background job queue** (`job_queue.py`, `worker.py`) using Redis + RQ for research/retraining/retriever rebuild jobs
+- **Container deployment** (`Dockerfile`, `docker-compose.yml`, `.env.example`) with web + worker + Postgres + Redis
+- **Web onboarding UX** in `templates/index.html` for trade-pack selection and trade disclaimers
+
+### API v1 quick endpoints
+
+- `GET /api/v1/health`
+- `POST /api/v1/auth/register`
+- `POST /api/v1/auth/login`
+- `POST /api/v1/onboarding/select-trade`
+- `GET /api/v1/billing/plans`
+- `POST /api/v1/billing/subscribe`
+- `POST /api/v1/chat`
+- `POST /api/v1/research`
+- `POST /api/v1/analytics/query-feedback`
+
+### Docker quick start
+
+```bash
+docker compose up --build
+```
+
+Then open `http://localhost:5000`.
+
 ## Project Assistant
 
 ```bash

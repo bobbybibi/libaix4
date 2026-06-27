@@ -1,0 +1,10 @@
+- [x] Baseline repo inspection completed (files: /home/runner/work/libaix4/libaix4/README.md, /home/runner/work/libaix4/libaix4/app.py)
+- [x] Baseline validation completed (make check: 904 passed)
+- [x] Implement SaaS foundation (DB models, tenant/user/subscription) (file: /home/runner/work/libaix4/libaix4/saas_db.py)
+- [x] Add versioned API v1 (auth/onboarding/chat/research wrappers) (file: /home/runner/work/libaix4/libaix4/api_v1.py)
+- [x] Add queue worker scaffolding (Redis/RQ) (files: /home/runner/work/libaix4/libaix4/job_queue.py, /home/runner/work/libaix4/libaix4/worker.py)
+- [x] Add deployment scaffolding (Docker, compose, env example) (files: /home/runner/work/libaix4/libaix4/Dockerfile, /home/runner/work/libaix4/libaix4/docker-compose.yml, /home/runner/work/libaix4/libaix4/.env.example)
+- [x] Add onboarding/disclaimer web UX updates (file: /home/runner/work/libaix4/libaix4/templates/index.html)
+- [x] Add analytics capture for unanswered/low-confidence queries (files: /home/runner/work/libaix4/libaix4/api_v1.py, /home/runner/work/libaix4/libaix4/templates/index.html)
+- [x] Add tests for SaaS API v1 (file: /home/runner/work/libaix4/libaix4/tests/test_api_v1_saas.py)
+- [ ] Run lint/tests and security checks

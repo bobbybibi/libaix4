@@ -28,6 +28,8 @@ from flask_wtf.csrf import CSRFProtect
 from admin import admin_bp, _is_safe_url
 from knowledge_base import KNOWLEDGE, get_domains
 from neural_network import ACTIVATIONS, OPTIMIZERS, NeuralNetwork
+from api_v1 import api_v1_bp
+from saas_db import init_saas_app
 from project_memory import (
     build_startup_context,
     cache_response,
@@ -135,12 +137,16 @@ except ImportError:
 
 app = Flask(__name__)
 app.secret_key = os.environ.get("FLASK_SECRET_KEY") or secrets.token_hex(32)
+app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("SQLALCHEMY_DATABASE_URI") or os.environ.get("DATABASE_URL") or "sqlite:///data/libaix_saas.db"
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+init_saas_app(app)
 csrf = CSRFProtect(app)
 # Only enforce CSRF on the admin blueprint (HTML forms).
 # Public JSON API endpoints are exempt — they check session auth
 # and require Content-Type: application/json which simple forms can't set.
 app.config["WTF_CSRF_CHECK_DEFAULT"] = False
 app.register_blueprint(admin_bp)
+app.register_blueprint(api_v1_bp)
 
 
 # ── Rate limiting (in-memory token bucket) ────────────────────────────
