@@ -95,6 +95,23 @@ docker compose up --build
 
 Then open `http://localhost:5000`.
 
+### FTP Website Deployment (photon-bounce)
+
+A workflow is included at `.github/workflows/deploy-ftp.yml` to deploy `site/` to your FTP host and remote subfolder.
+It automatically performs a backup of existing remote content before replacing it.
+
+Required GitHub repository secrets:
+
+- `FTP_HOST` (example: `ftp.photon-bounce.com`)
+- `FTP_USER`
+- `FTP_PASS`
+- `FTP_REMOTE_DIR` (optional; defaults to `/libaix`)
+
+The workflow runs on:
+
+- manual dispatch (`workflow_dispatch`)
+- pushes to `main` that modify `site/**`
+
 ## Project Assistant
 
 ```bash

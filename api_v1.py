@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import json
-import re
 from datetime import datetime, timezone
 
 from flask import Blueprint, current_app, jsonify, request, session
@@ -20,9 +19,24 @@ from saas_db import (
     slugify_name,
 )
 
-_EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
-
 api_v1_bp = Blueprint("api_v1", __name__, url_prefix="/api/v1")
+
+
+
+def _is_valid_email(email: str) -> bool:
+    if not email or " " in email or "\t" in email or "\n" in email:
+        return False
+    if email.count("@") != 1:
+        return False
+    local, domain = email.split("@", 1)
+    if not local or not domain:
+        return False
+    if "." not in domain:
+        return False
+    if domain.startswith(".") or domain.endswith("."):
+        return False
+    return True
+
 
 _PLAN_DEFS = {
     "free": {"name": "Free", "monthly_usd": 0, "max_requests_per_day": 150},
@@ -118,7 +132,7 @@ def register():
     tenant_name = str(data.get("tenant_name", "")).strip() or email.split("@")[0]
     trade_id = str(data.get("trade_id", "networking")).strip() or "networking"
 
-    if not _EMAIL_RE.match(email):
+    if not _is_valid_email(email):
         return jsonify({"error": "Valid email is required"}), 400
     if len(password) < 8:
         return jsonify({"error": "Password must be at least 8 characters"}), 400

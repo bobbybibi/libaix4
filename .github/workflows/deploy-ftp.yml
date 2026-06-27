@@ -1,0 +1,82 @@
+name: Deploy website to FTP
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'site/**'
+      - '.github/workflows/deploy-ftp.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install lftp
+        run: sudo apt-get update && sudo apt-get install -y lftp
+
+      - name: Validate FTP secrets
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USER: ${{ secrets.FTP_USER }}
+          FTP_PASS: ${{ secrets.FTP_PASS }}
+        run: |
+          test -n "$FTP_HOST"
+          test -n "$FTP_USER"
+          test -n "$FTP_PASS"
+
+      - name: Backup current remote /libaix content
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USER: ${{ secrets.FTP_USER }}
+          FTP_PASS: ${{ secrets.FTP_PASS }}
+          FTP_REMOTE_DIR: ${{ secrets.FTP_REMOTE_DIR }}
+        run: |
+          set -euo pipefail
+          REMOTE_DIR="${FTP_REMOTE_DIR:-/libaix}"
+          STAMP="$(date -u +%Y%m%d-%H%M%S)"
+          BACKUP_DIR="/libaix_backups/$STAMP"
+
+          mkdir -p /tmp/ftp-remote-backup
+
+          lftp -u "$FTP_USER","$FTP_PASS" "$FTP_HOST" <<LFTP
+          set ssl:verify-certificate no
+          set ftp:ssl-allow true
+          set net:max-retries 2
+          mirror --verbose "$REMOTE_DIR" /tmp/ftp-remote-backup || true
+          bye
+LFTP
+
+          if [ -n "$(ls -A /tmp/ftp-remote-backup 2>/dev/null || true)" ]; then
+            lftp -u "$FTP_USER","$FTP_PASS" "$FTP_HOST" <<LFTP
+            set ssl:verify-certificate no
+            set ftp:ssl-allow true
+            mkdir -p "$BACKUP_DIR"
+            mirror -R --verbose /tmp/ftp-remote-backup "$BACKUP_DIR"
+            bye
+LFTP
+          fi
+
+      - name: Deploy new site into /libaix (replace old content)
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USER: ${{ secrets.FTP_USER }}
+          FTP_PASS: ${{ secrets.FTP_PASS }}
+          FTP_REMOTE_DIR: ${{ secrets.FTP_REMOTE_DIR }}
+        run: |
+          set -euo pipefail
+          REMOTE_DIR="${FTP_REMOTE_DIR:-/libaix}"
+
+          lftp -u "$FTP_USER","$FTP_PASS" "$FTP_HOST" <<LFTP
+          set ssl:verify-certificate no
+          set ftp:ssl-allow true
+          mkdir -p "$REMOTE_DIR"
+          mirror -R --delete --verbose ./site "$REMOTE_DIR"
+          bye
+LFTP
