@@ -137,7 +137,8 @@ except ImportError:
 
 app = Flask(__name__)
 app.secret_key = os.environ.get("FLASK_SECRET_KEY") or secrets.token_hex(32)
-app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("SQLALCHEMY_DATABASE_URI") or os.environ.get("DATABASE_URL") or "sqlite:///data/libaix_saas.db"
+default_db_path = (Path(__file__).resolve().parent / "data" / "libaix_saas.db").as_posix()
+app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("SQLALCHEMY_DATABASE_URI") or os.environ.get("DATABASE_URL") or f"sqlite:///{default_db_path}"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 init_saas_app(app)
 csrf = CSRFProtect(app)

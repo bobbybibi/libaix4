@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from datetime import datetime, timezone
+from pathlib import Path
 
 from flask import session
 from flask_sqlalchemy import SQLAlchemy
@@ -98,8 +99,15 @@ def current_tenant() -> Tenant | None:
 
 
 def init_saas_app(app) -> None:
-    app.config.setdefault("SQLALCHEMY_DATABASE_URI", "sqlite:///data/libaix_saas.db")
+    default_db_path = (Path(__file__).resolve().parent / "data" / "libaix_saas.db").as_posix()
+    app.config.setdefault("SQLALCHEMY_DATABASE_URI", f"sqlite:///{default_db_path}")
     app.config.setdefault("SQLALCHEMY_TRACK_MODIFICATIONS", False)
+
+    uri = str(app.config.get("SQLALCHEMY_DATABASE_URI", ""))
+    if uri.startswith("sqlite:///"):
+        sqlite_path = Path(uri.replace("sqlite:///", "", 1))
+        sqlite_path.parent.mkdir(parents=True, exist_ok=True)
+
     db.init_app(app)
     with app.app_context():
         db.create_all()
