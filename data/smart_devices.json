@@ -26,5 +26,12 @@
     "protocol": "mqtt",
     "endpoint": "home/bedroom/lights/set",
     "state": "off"
+  },
+  {
+    "name": "test_toaster_xyz",
+    "type": "generic",
+    "protocol": "http",
+    "endpoint": "",
+    "state": "unknown"
   }
 ]

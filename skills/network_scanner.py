@@ -14,7 +14,6 @@ graceful error handling.  No third-party packages required.
 from __future__ import annotations
 
 import logging
-import platform
 import re
 import shutil
 import socket

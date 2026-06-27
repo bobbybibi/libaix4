@@ -28,6 +28,9 @@
       "phishing.example.net"
     ]
   },
-  "custom": [],
-  "updated_at": 1782530555.8653526
+  "custom": [
+    "test-block-xyz.example.com",
+    "dup-test.example.com"
+  ],
+  "updated_at": 1782531476.7673304
 }
