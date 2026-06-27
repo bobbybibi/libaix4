@@ -56,6 +56,7 @@ Files included for hosting: `passenger_wsgi.py`, `.htaccess`
 |---|---|
 | **AI Chat** | Knowledge Q&A chatbot (networking, security, internet, intranet, wifi) |
 | **Admin Dashboard** | `/admin` — manage knowledge, crawlers, file uploads, ML engine |
+| **Retrieval Engine** | TF-IDF cosine nearest-question retrieval (`retrieval.py`) — answers instantly with no training; preferred over the classifier when its index is present |
 | **ML Self-Optimization** | Auto-optimizes hyperparameters, stabilizes training, prevents forgetting |
 | **Knowledge Crawlers** | Wikipedia + forum crawlers (StackExchange, Reddit, HN) for auto-learning |
 | **Logic Gate Playground** | Interactive XOR/AND/OR/NAND neural network trainer |
@@ -89,7 +90,7 @@ GitHub Actions (`.github/workflows/ci.yml`) runs on every push/PR:
 - Tests across Python 3.10, 3.11, 3.12
 
 Local scheduler (`python local_scheduler.py`) provides offline automation:
-- Auto-trains knowledge model
+- Auto-trains knowledge model (single mini-batch config once daily, plus on-demand; mini-batch SGD converges in far fewer epochs)
 - Crawls Wikipedia & forums for new knowledge
 - Runs ML self-growth optimization cycles
 
@@ -104,6 +105,7 @@ libaix/
 ├── admin.py                  # Admin dashboard blueprint
 ├── neural_network.py         # Core neural network (forward/backward/train)
 ├── vectorizer.py             # Bag-of-words text vectorizer with TF-IDF
+├── retrieval.py              # Zero-training retrieval engine (TF-IDF cosine lookup)
 ├── knowledge_base.py         # Curated Q&A knowledge entries
 ├── train_knowledge.py        # Knowledge classifier training pipeline
 ├── ml_engine.py              # ML self-optimization engine
@@ -111,6 +113,8 @@ libaix/
 ├── forum_crawler.py          # Forum crawler (StackExchange, Reddit, etc.)
 ├── local_scheduler.py        # Background job scheduler
 ├── passenger_wsgi.py         # WSGI entry for shared hosting
+├── scripts/
+│   └── build_retrieval_index.py  # Builds the retrieval index
 ├── .htaccess                 # Apache/Passenger config
 ├── models/                   # Trained model files
 ├── data/                     # Config, knowledge data, crawler output
@@ -126,9 +130,10 @@ libaix/
 
 1. **Knowledge Base** — Curated Q&A triples (question, answer, domain) plus crawled knowledge
 2. **Vectorization** — Bag-of-words with TF-IDF converts questions to numeric vectors
-3. **Neural Network** — Multi-layer softmax classifier maps vectors to answer classes
-4. **ML Engine** — Self-assesses accuracy, auto-optimizes hyperparameters, prevents forgetting
-5. **Web UI** — Flask serves the chat interface, admin dashboard, and logic-gate playground
+3. **Retrieval Engine** — `KnowledgeRetriever` (in `retrieval.py`) vectorizes all known questions using TF-IDF with L2-normalization and answers queries via cosine-similarity nearest-question lookup. The `/chat` endpoint prefers retrieval when an index is loaded and falls back to the neural classifier otherwise. `start.py` builds the index automatically on launch; it can also be (re)built with `python scripts/build_retrieval_index.py`.
+4. **Neural Network** — Multi-layer softmax classifier maps vectors to answer classes
+5. **ML Engine** — Self-assesses accuracy, auto-optimizes hyperparameters, prevents forgetting
+6. **Web UI** — Flask serves the chat interface, admin dashboard, and logic-gate playground
 
 ## Running Tests
 

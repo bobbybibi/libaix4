@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 from pathlib import Path
 
 import numpy as np
@@ -73,6 +74,25 @@ def augment_questions(knowledge: list[tuple[str, str, str]]) -> list[tuple[str, 
     return augmented
 
 
+def dedupe_entries(
+    entries: list[tuple[str, str, str]],
+) -> list[tuple[str, str, str]]:
+    """Drop exact duplicate (question, answer) pairs, preserving first-seen order.
+
+    The crawlers re-fetch the same articles on every cycle, so the raw corpus
+    is overwhelmingly exact duplicates. Collapsing them keeps every unique
+    question/answer while keeping the training matrices a sane size.
+    """
+    seen: set[tuple[str, str]] = set()
+    out: list[tuple[str, str, str]] = []
+    for q, a, d in entries:
+        key = (q, a)
+        if key not in seen:
+            seen.add(key)
+            out.append((q, a, d))
+    return out
+
+
 def train(
     activation: str = "tanh",
     optimizer: str = "adam",
@@ -88,6 +108,8 @@ def train(
     grad_clip: float | None = None,
     lr_schedule: str | None = None,
     val_split: float = 0.0,
+    max_label_gb: float | None = None,
+    batch_size: int | None = None,
 ) -> tuple[NeuralNetwork, BagOfWords, dict[int, str]]:
     """Train the knowledge classifier.  Returns (model, vectorizer, answer_map)."""
 
@@ -101,7 +123,42 @@ def train(
                 base.extend(load_extra_knowledge(fp))
             except Exception:
                 pass
+
+    # Collapse the ~99% duplicate corpus the crawlers produce before we build
+    # any matrices.
+    n_raw = len(base)
+    base = dedupe_entries(base)
+    if verbose and n_raw != len(base):
+        print(f"Deduplicated {n_raw:,} entries → {len(base):,} unique (q,a) pairs")
+
+    # A dense one-hot label matrix is (n_samples x n_classes) float64 and is the
+    # dominant memory cost. Resolve a budget (env-overridable) and degrade
+    # gracefully so we never attempt an impossible allocation: drop augmentation
+    # first, then subsample as a last resort.
+    if max_label_gb is None:
+        max_label_gb = float(os.environ.get("LIBAIX_TRAIN_MAX_LABEL_GB", "2.0"))
+    n_classes_est = len({a for _, a, _ in base})
+    budget_bytes = max_label_gb * (1024 ** 3)
+
     data = augment_questions(base) if augment else base
+    if augment and n_classes_est and len(data) * n_classes_est * 8 > budget_bytes:
+        if verbose:
+            print(
+                f"One-hot labels would need {len(data) * n_classes_est * 8 / 1e9:.1f} GB "
+                f"> {max_label_gb:.1f} GB budget — training without augmentation."
+            )
+        data = base
+    if n_classes_est and len(data) * n_classes_est * 8 > budget_bytes:
+        max_samples = max(1, int(budget_bytes // (n_classes_est * 8)))
+        rng = np.random.RandomState(seed)
+        keep = sorted(rng.permutation(len(data))[:max_samples].tolist())
+        data = [data[i] for i in keep]
+        if verbose:
+            print(
+                f"Subsampling to {len(data):,} samples to fit the "
+                f"{max_label_gb:.1f} GB label-matrix budget."
+            )
+
     questions = [q for q, _, _ in data]
     answers_source = [a for _, a, _ in data]
     n_samples = len(questions)
@@ -163,6 +220,7 @@ def train(
         dropout_rate=dropout_rate,
         grad_clip=grad_clip,
         lr_schedule=lr_schedule,
+        batch_size=batch_size,
     )
 
     if verbose:
@@ -273,6 +331,16 @@ def main() -> None:
         "--val-split", type=float, default=0.0,
         help="Fraction of data to hold out for validation (0-1)",
     )
+    parser.add_argument(
+        "--max-label-gb", type=float, default=None,
+        help="Max GB for the one-hot label matrix before dropping augmentation "
+        "and then subsampling (default 2.0, or $LIBAIX_TRAIN_MAX_LABEL_GB)",
+    )
+    parser.add_argument(
+        "--batch-size", type=int, default=None,
+        help="Mini-batch size for SGD (default: full-batch). Mini-batches "
+        "converge in far fewer epochs on large datasets.",
+    )
     args = parser.parse_args()
 
     train(
@@ -289,6 +357,8 @@ def main() -> None:
         grad_clip=args.grad_clip,
         lr_schedule=args.lr_schedule,
         val_split=args.val_split,
+        max_label_gb=args.max_label_gb,
+        batch_size=args.batch_size,
     )
 
 

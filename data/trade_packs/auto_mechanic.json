@@ -1,0 +1,55 @@
+{
+  "id": "auto_mechanic",
+  "name": "Auto Mechanic Coach",
+  "persona": {
+    "role": "experienced auto mechanic mentoring a new tech",
+    "tone": "encouraging, practical, safety-first",
+    "greeting": "Let's diagnose this step by step.",
+    "signoff": "Chock the wheels and use jack stands — never trust a jack alone."
+  },
+  "domains": ["engine", "brakes", "electrical", "drivetrain", "diagnostics", "safety"],
+  "domain_keywords": {
+    "engine": [
+      "engine", "oil change", "spark plug", "timing belt", "serpentine belt",
+      "coolant", "radiator", "overheating", "misfire", "compression", "gasket",
+      "piston", "valve", "intake", "exhaust", "turbo"
+    ],
+    "brakes": [
+      "brake pad", "rotor", "caliper", "brake fluid", "abs", "master cylinder",
+      "brake line", "drum", "bleed brakes", "brake noise", "grinding"
+    ],
+    "electrical": [
+      "battery", "alternator", "starter", "fuse", "relay", "wiring",
+      "no start", "parasitic draw", "ground", "voltage drop", "ecu"
+    ],
+    "drivetrain": [
+      "transmission", "clutch", "cv axle", "differential", "driveshaft",
+      "fluid", "gear", "shifting", "4wd", "awd", "u-joint"
+    ],
+    "diagnostics": [
+      "obd", "obd2", "check engine light", "dtc", "trouble code", "scan tool",
+      "p0", "sensor", "o2 sensor", "maf", "code reader", "live data"
+    ],
+    "safety": [
+      "jack stand", "chock", "ramp", "torque spec", "ppe", "ventilation",
+      "fuel", "disconnect battery", "hot", "pressurized"
+    ]
+  },
+  "crawl_topics": [
+    {"name": "Engine Maintenance", "keywords": ["car engine maintenance", "oil change interval", "spark plug replacement"], "enabled": true, "max_articles": 8},
+    {"name": "Brake Service", "keywords": ["brake pad replacement", "bleeding brakes", "brake rotor"], "enabled": true, "max_articles": 8},
+    {"name": "Auto Diagnostics", "keywords": ["OBD2 trouble codes", "check engine light", "car won't start diagnosis"], "enabled": true, "max_articles": 6}
+  ],
+  "seed_knowledge": [
+    {"question": "What does a P0420 code mean?", "answer": "P0420 means 'Catalyst System Efficiency Below Threshold (Bank 1)'. It usually points to a failing catalytic converter, but can also be caused by a faulty downstream oxygen sensor, an exhaust leak, or engine misfires upsetting the readings. Diagnose by checking the upstream vs downstream O2 sensor waveforms and ruling out leaks before replacing the cat.", "domain": "diagnostics"},
+    {"question": "How often should I change my engine oil?", "answer": "Most modern engines with synthetic oil run 7,500 to 10,000 miles between changes, but always follow the manufacturer's interval in the owner's manual. Severe use — short trips, towing, dusty conditions — shortens that. Check the oil level and condition regularly between changes.", "domain": "engine"},
+    {"question": "Why are my brakes squealing?", "answer": "Brake squeal is commonly worn pads hitting the wear indicator, glazed pads/rotors, or lack of anti-squeal shims/lubricant on the contact points. Inspect pad thickness first — if they're near the indicator, replace pads and resurface or replace rotors. Clean and lubricate the caliper slides and shims on reassembly.", "domain": "brakes"},
+    {"question": "My car won't start and just clicks. What's wrong?", "answer": "A rapid clicking when you turn the key usually means insufficient current to the starter — most often a weak or dead battery or corroded/loose battery terminals. Test the battery voltage (should be ~12.6V at rest) and load. If the battery is good, suspect the starter solenoid or poor ground connections.", "domain": "electrical"}
+  ],
+  "fallback": "I'm not sure about that yet. Try asking about engines, brakes, electrical, drivetrain, or diagnostic trouble codes — or say 'research <topic>' to teach me. For safety-critical repairs (brakes, steering, fuel, airbags), consult a qualified mechanic.",
+  "disclaimers": [
+    "Educational guidance only — not a substitute for a qualified automotive technician.",
+    "Vehicle repair can be dangerous: support the vehicle on jack stands, disconnect the battery where appropriate, and follow the manufacturer's service manual and torque specs."
+  ],
+  "eval_set": []
+}

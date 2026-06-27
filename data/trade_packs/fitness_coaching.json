@@ -1,0 +1,51 @@
+{
+  "id": "fitness_coaching",
+  "name": "Fitness & Coaching",
+  "persona": {
+    "role": "certified personal trainer and supportive life coach",
+    "tone": "warm, motivating, encouraging",
+    "greeting": "Love that you're working on this — let's build a plan.",
+    "signoff": "Small consistent steps win. You've got this."
+  },
+  "domains": ["fitness", "nutrition", "coaching", "recovery", "mindset"],
+  "domain_keywords": {
+    "fitness": [
+      "workout", "exercise", "strength training", "cardio", "reps", "sets",
+      "hypertrophy", "squat", "deadlift", "bench press", "progressive overload",
+      "warm up", "mobility", "hiit", "rest day", "form"
+    ],
+    "nutrition": [
+      "calories", "protein", "carbs", "fat", "macros", "deficit", "surplus",
+      "hydration", "meal prep", "fiber", "supplement", "creatine", "tdee"
+    ],
+    "coaching": [
+      "goal", "habit", "accountability", "motivation", "consistency",
+      "time management", "productivity", "discipline", "routine", "plan"
+    ],
+    "recovery": [
+      "sleep", "rest", "stretching", "foam roll", "soreness", "doms",
+      "injury", "overtraining", "deload", "mobility"
+    ],
+    "mindset": [
+      "confidence", "stress", "burnout", "focus", "self-talk", "growth mindset",
+      "resilience", "anxiety", "journaling", "gratitude"
+    ]
+  },
+  "crawl_topics": [
+    {"name": "Strength Training Basics", "keywords": ["beginner strength training", "progressive overload", "compound lifts"], "enabled": true, "max_articles": 8},
+    {"name": "Nutrition Fundamentals", "keywords": ["macronutrients explained", "protein for muscle", "calorie deficit"], "enabled": true, "max_articles": 8},
+    {"name": "Habit and Goal Coaching", "keywords": ["building habits", "goal setting", "accountability coaching"], "enabled": true, "max_articles": 6}
+  ],
+  "seed_knowledge": [
+    {"question": "How many days a week should a beginner work out?", "answer": "For most beginners, 3 days a week of full-body strength training with a rest day between sessions is ideal. It builds the habit, allows recovery, and drives steady progress. You can add light walking or mobility on off days. Consistency over months matters far more than training every single day.", "domain": "fitness"},
+    {"question": "How much protein should I eat to build muscle?", "answer": "A common evidence-based target is roughly 1.6 to 2.2 grams of protein per kilogram of bodyweight per day (about 0.7 to 1.0 g per pound) when building muscle. Spread it across meals. Individual needs vary — consult a registered dietitian for a personalized plan, especially if you have health conditions.", "domain": "nutrition"},
+    {"question": "How do I stay motivated to reach my goals?", "answer": "Motivation fades, so build systems instead: make the goal specific and small enough to start today, attach the new habit to an existing routine, track it visibly, and forgive missed days without quitting. Focus on identity ('I'm someone who trains') rather than outcomes. Consistency beats intensity.", "domain": "coaching"},
+    {"question": "What is progressive overload?", "answer": "Progressive overload means gradually increasing the demand on your muscles over time — by adding weight, reps, sets, or improving form/control — so they keep adapting and getting stronger. Even small weekly increases compound. Aim to beat your last session by a little, while keeping good form.", "domain": "fitness"}
+  ],
+  "fallback": "I'm not sure about that yet. Try asking about workouts, nutrition, recovery, or building habits — or say 'research <topic>' to teach me. For medical concerns or injuries, please consult a doctor or qualified professional.",
+  "disclaimers": [
+    "General fitness and coaching information only — not medical, psychological, or professional advice.",
+    "Consult a physician before starting any new exercise or nutrition program, and seek a qualified professional for injuries or health conditions."
+  ],
+  "eval_set": []
+}

@@ -17,3 +17,12 @@ nn_test.txt
 run_inspection.py
 run_tests.py
 *.log
+
+# Generated retrieval index (rebuilt from knowledge on launch)
+models/retrieval/
+
+# Runtime data — caches, logs, memory, model backups (regenerated at runtime).
+# Knowledge corpus (data/extra_knowledge) stays tracked until cloud storage exists.
+data/memory/
+data/active_trade.json
+models/backups/

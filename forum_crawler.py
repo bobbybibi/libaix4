@@ -19,7 +19,7 @@ from datetime import datetime, timezone
 from html import unescape
 from pathlib import Path
 
-from file_processor import classify_domain, generate_qa_from_text
+from file_processor import classify_domain, dedupe_new_entries, generate_qa_from_text
 
 USER_AGENT = (
     "libaix-crawler/1.0 (educational neural network project; "
@@ -524,36 +524,71 @@ def save_forum_config(config: dict) -> None:
     )
 
 
+_FORUM_SOURCES = ["stackexchange", "reddit", "hackernews", "devto"]
+
+
 def _default_forum_config() -> dict:
     return {
-        "topics": [
-            {
-                "name": "Wi-Fi Security",
-                "keywords": ["WPA3", "802.1X", "wireless security"],
-                "enabled": True,
-                "max_per_source": 10,
-                "sources": ["stackexchange", "reddit", "hackernews", "devto"],
-            },
-            {
-                "name": "Network Troubleshooting",
-                "keywords": ["packet loss", "latency", "DNS resolution"],
-                "enabled": True,
-                "max_per_source": 10,
-                "sources": ["stackexchange", "reddit", "hackernews", "devto"],
-            },
-        ],
+        "topics": _default_forum_topics(),
         "last_crawl": None,
         "stats": {},
     }
 
 
-def save_forum_knowledge(entries: list[dict], topic_name: str) -> Path:
+def _default_forum_topics() -> list[dict]:
+    """Forum topics for the active trade pack, or the built-in networking set.
+
+    A pack may declare explicit ``forum_topics``; otherwise they are derived
+    from its ``crawl_topics`` (so any trade gets sensible forum coverage).
+    """
+    try:
+        import trade_pack
+
+        topics = trade_pack.forum_topics_for()
+        if not topics:
+            topics = [
+                {
+                    "name": t.get("name", ""),
+                    "keywords": list(t.get("keywords", [])),
+                    "enabled": t.get("enabled", True),
+                    "max_per_source": 10,
+                    "sources": list(_FORUM_SOURCES),
+                }
+                for t in trade_pack.crawl_topics_for()
+            ]
+        if topics:
+            return topics
+    except Exception:
+        pass
+    return [
+        {
+            "name": "Wi-Fi Security",
+            "keywords": ["WPA3", "802.1X", "wireless security"],
+            "enabled": True,
+            "max_per_source": 10,
+            "sources": list(_FORUM_SOURCES),
+        },
+        {
+            "name": "Network Troubleshooting",
+            "keywords": ["packet loss", "latency", "DNS resolution"],
+            "enabled": True,
+            "max_per_source": 10,
+            "sources": list(_FORUM_SOURCES),
+        },
+    ]
+
+
+def save_forum_knowledge(entries: list[dict], topic_name: str) -> Path | None:
+    """Persist new forum entries, skipping ones already saved (None if none new)."""
     EXTRA_KNOWLEDGE_DIR.mkdir(parents=True, exist_ok=True)
+    new_entries = dedupe_new_entries(entries, EXTRA_KNOWLEDGE_DIR)
+    if entries and not new_entries:
+        return None
     safe = re.sub(r"[^\w\-]", "_", topic_name.lower())
     ts = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
     fp = EXTRA_KNOWLEDGE_DIR / f"forum_{safe}_{ts}.json"
     fp.write_text(
-        json.dumps(entries, indent=2, ensure_ascii=False),
+        json.dumps(new_entries, indent=2, ensure_ascii=False),
         encoding="utf-8",
     )
     return fp
@@ -578,19 +613,22 @@ def run_all_forum_crawlers() -> dict:
             )
             if entries:
                 fp = save_forum_knowledge(entries, topic["name"])
-                results[topic["name"]] = {
-                    "status": "success",
-                    "entries": len(entries),
-                    "file": str(fp),
-                }
-                total_new += len(entries)
-                # Count entries by source
-                source_counts = {}
-                for e in entries:
-                    src = (e.get("source", "unknown").split(":")[0])
-                    source_counts[src] = source_counts.get(src, 0) + 1
-                log_learning_event("forum_crawler", topic["name"], len(entries),
-                                   {"source_breakdown": source_counts})
+                if fp is not None:
+                    results[topic["name"]] = {
+                        "status": "success",
+                        "entries": len(entries),
+                        "file": str(fp),
+                    }
+                    total_new += len(entries)
+                    # Count entries by source
+                    source_counts = {}
+                    for e in entries:
+                        src = (e.get("source", "unknown").split(":")[0])
+                        source_counts[src] = source_counts.get(src, 0) + 1
+                    log_learning_event("forum_crawler", topic["name"], len(entries),
+                                       {"source_breakdown": source_counts})
+                else:
+                    results[topic["name"]] = {"status": "no_new", "entries": 0}
             else:
                 results[topic["name"]] = {"status": "no_results", "entries": 0}
         except Exception as exc:
@@ -622,6 +660,8 @@ def crawl_single_forum_topic(
     entries = crawl_forums(topic_name, keywords, max_per_source, sources)
     if entries:
         fp = save_forum_knowledge(entries, topic_name)
+        if fp is None:
+            return {"status": "no_new", "entries": 0}
 
         # Count entries by source
         source_counts: dict[str, int] = {}

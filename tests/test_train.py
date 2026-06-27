@@ -2,7 +2,6 @@
 from __future__ import annotations
 
 import numpy as np
-import pytest
 
 from train import DATASETS, INPUTS, train_and_eval
 

@@ -127,7 +127,7 @@ except ImportError:
 
 try:
     from conversation_engine import (
-        ConversationContext, enrich_with_context, is_followup,
+        ConversationContext, enrich_with_context,
     )
     _CONVERSATION_AVAILABLE = True
 except ImportError:
@@ -201,6 +201,7 @@ knowledge_model: NeuralNetwork | None = None
 knowledge_bow: BagOfWords | None = None
 knowledge_answer_map: dict[int, str] = {}
 knowledge_domains: list[str] = []
+knowledge_retriever = None  # optional KnowledgeRetriever — preferred answer source
 
 MODEL_DIR = Path("models")
 
@@ -232,6 +233,49 @@ def _load_knowledge_model() -> bool:
     return True
 
 
+def _load_retriever() -> bool:
+    """Load the optional zero-training retrieval index if it has been built.
+
+    Independent of the neural classifier: when present it becomes the preferred
+    answer source; when absent the app falls back to the classifier unchanged.
+    """
+    global knowledge_retriever
+    retr_dir = MODEL_DIR / "retrieval"
+    if not ((retr_dir / "vectorizer.json").exists() and (retr_dir / "entries.json").exists()):
+        return False
+    try:
+        from retrieval import KnowledgeRetriever
+        knowledge_retriever = KnowledgeRetriever.load(retr_dir)
+        return True
+    except Exception:
+        knowledge_retriever = None
+        return False
+
+
+def rebuild_retriever() -> bool:
+    """Rebuild the retrieval index from current knowledge and swap it in live.
+
+    Lets newly-taught or crawled knowledge become answerable without a restart.
+    The (~seconds) build runs outside the lock; only the pointer swap is locked,
+    so queries are never blocked. Best-effort — failures leave the existing
+    retriever untouched.
+    """
+    global knowledge_retriever
+    try:
+        from retrieval import KnowledgeRetriever
+        retriever = KnowledgeRetriever.build_from_knowledge()
+    except Exception as exc:
+        print(f"Retriever rebuild failed: {type(exc).__name__}: {exc}")
+        return False
+    with _knowledge_lock:
+        knowledge_retriever = retriever
+    try:
+        retriever.save(MODEL_DIR / "retrieval")
+    except Exception:
+        pass
+    return True
+
+
 # Startup
 print("Training XOR neural network …")
 _train("xor")
@@ -242,6 +286,9 @@ if _load_knowledge_model():
           f"domains: {', '.join(knowledge_domains)}")
 else:
     print("Warning: Knowledge model not found. Run 'python train_knowledge.py' first.")
+
+if _load_retriever():
+    print(f"Retrieval engine loaded — {knowledge_retriever.size} knowledge entries")
 
 # Load project memory context
 try:
@@ -500,12 +547,43 @@ def _background_retrain() -> None:
                 augment=True, verbose=False,
             )
             _load_knowledge_model()
-            print("Background retrain complete — knowledge model reloaded.")
+            rebuild_retriever()
+            print("Background retrain complete — knowledge model + retriever reloaded.")
         except Exception as exc:
             print(f"Background retrain failed: {type(exc).__name__}: {exc}")
 
     t = threading.Thread(target=_do_retrain, daemon=True)
     t.start()
+
+
+def _coach_compose_enabled() -> bool:
+    """True when persona-framed coaching composition is switched on."""
+    return os.environ.get("COACH_COMPOSE", "").strip().lower() in ("1", "true", "yes", "on")
+
+
+def _coach_wrap(question: str, answer: str, hits: list, confidence: float) -> str:
+    """Apply persona coaching composition on read (gated, best-effort).
+
+    Off by default (``COACH_COMPOSE``) and skipped for low-confidence/fallback
+    answers, so production behaviour is unchanged until explicitly enabled.
+    """
+    if not _coach_compose_enabled() or confidence < 0.15:
+        return answer
+    try:
+        import coach
+        import trade_pack
+
+        composed = coach.compose_coaching_answer(
+            question,
+            hits,
+            trade_pack.persona_for(),
+            base_answer=answer,
+            disclaimers=trade_pack.disclaimers_for(),
+        )
+        return composed or answer
+    except Exception:
+        return answer
+
 
 @app.route("/chat", methods=["POST"])
 def chat():
@@ -588,7 +666,7 @@ def chat():
     cached = lookup_cached_response(question)
     if cached and cached.get("confidence", 0) >= 0.15:
         return jsonify({
-            "answer": cached["answer"],
+            "answer": _coach_wrap(question, cached["answer"], [], cached.get("confidence", 0)),
             "confidence": cached["confidence"],
             "domain": cached.get("domain", "general"),
             "suggestions": [],
@@ -611,11 +689,24 @@ def chat():
     classifier_confidence = float(probs[top_idx])
 
     classifier_answer = knowledge_answer_map.get(top_idx, "I don't have an answer for that.")
+    strategy = "classifier"
 
-    # Start with classifier result
+    # Retrieval (preferred when available): scales and gives better answers with
+    # no training. Falls back to the classifier when no index is loaded.
+    retrieval_hits: list[dict] = []
+    if knowledge_retriever is not None:
+        try:
+            retrieval_hits = knowledge_retriever.query(effective_question, top_k=3)
+        except Exception:
+            retrieval_hits = []
+    if retrieval_hits and retrieval_hits[0]["score"] >= classifier_confidence:
+        classifier_answer = retrieval_hits[0]["answer"]
+        classifier_confidence = float(retrieval_hits[0]["score"])
+        strategy = "retrieval"
+
+    # Start with the best result so far
     answer = classifier_answer
     confidence = classifier_confidence
-    strategy = "classifier"
     reasoning_chain = []
 
     # Reasoning engine fallback: if classifier is unsure, ask the reasoning engine
@@ -631,41 +722,58 @@ def chat():
         except Exception:
             pass  # fall back to classifier result
 
-    # Find the domain for context
-    # Match back to original KNOWLEDGE entry via the answer
+    # Find the domain for context — match back via the answer text.
     domain = "general"
     for _, a, d in KNOWLEDGE:
         if a == answer:
             domain = d
             break
+    if domain == "general" and retrieval_hits:
+        for h in retrieval_hits:
+            if h["answer"] == answer:
+                domain = h["domain"]
+                break
 
-    # Get top-3 for multi-result
-    top3_idx = np.argsort(probs)[::-1][:3]
+    # Get top-3 for multi-result (from retrieval when available, else classifier)
     suggestions = []
-    for idx in top3_idx:
-        idx = int(idx)
-        a = knowledge_answer_map.get(idx, "")
-        if a:
-            suggestions.append({
-                "answer": a,
-                "confidence": round(float(probs[idx]), 4),
-            })
+    if retrieval_hits:
+        for h in retrieval_hits:
+            if h["answer"]:
+                suggestions.append({
+                    "answer": h["answer"],
+                    "confidence": round(float(h["score"]), 4),
+                })
+    else:
+        top3_idx = np.argsort(probs)[::-1][:3]
+        for idx in top3_idx:
+            idx = int(idx)
+            a = knowledge_answer_map.get(idx, "")
+            if a:
+                suggestions.append({
+                    "answer": a,
+                    "confidence": round(float(probs[idx]), 4),
+                })
 
     # Low confidence threshold
     if confidence < 0.15:
-        answer = (
-            "I'm not sure about that. Try asking about networking, internet, "
-            "intranet, security, programming, or algorithms. You can also say "
-            "'research <topic>' to teach me something new!"
-        )
+        try:
+            import trade_pack
+
+            answer = trade_pack.fallback_for()
+        except Exception:
+            answer = (
+                "I'm not sure about that. Try asking about networking, internet, "
+                "intranet, security, programming, or algorithms. You can also say "
+                "'research <topic>' to teach me something new!"
+            )
         domain = "general"
         strategy = "fallback"
 
-    # Cache the response for future lookups
+    # Cache the response for future lookups (raw answer — composition is on read)
     cache_response(question, answer, confidence, domain)
 
     response = {
-        "answer": answer,
+        "answer": _coach_wrap(question, answer, retrieval_hits, confidence),
         "confidence": round(confidence, 4),
         "domain": domain,
         "suggestions": suggestions,
@@ -1384,15 +1492,11 @@ try:
         extract_forms,
         classify_field,
         parse_fill_prompt,
-        fill_form,
-        submit_form,
         save_profile,
         load_profiles,
         delete_profile,
-        save_form_template,
         load_form_templates,
         get_fill_history,
-        extract_validation_rules,
         FillProfile,
     )
     _FORM_AVAILABLE = True
@@ -1454,7 +1558,6 @@ def forms_fill():
     data = request.get_json(force=True)
     prompt = str(data.get("prompt", "")).strip()
     values = data.get("values", {})
-    profile_name = data.get("profile", "")
 
     # Parse prompt if provided
     if prompt and not values:
@@ -1583,4 +1686,21 @@ def stats_all():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=False)
+    # Pick a free port without ever killing whatever may already hold 5000.
+    _host = os.environ.get("LIBAIX_HOST", "0.0.0.0")
+    _requested = int(os.environ.get("LIBAIX_PORT", "5000"))
+    try:
+        from net_utils import find_available_port, is_port_available
+
+        if is_port_available(_host, _requested):
+            _port = _requested
+        else:
+            _port = find_available_port(_host, _requested + 1) or _requested
+            if _port != _requested:
+                print(
+                    f"Note: port {_requested} is in use by another app — "
+                    f"leaving it untouched; using {_port} instead."
+                )
+    except Exception:
+        _port = _requested
+    app.run(host=_host, port=_port, debug=False)

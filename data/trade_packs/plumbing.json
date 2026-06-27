@@ -1,0 +1,53 @@
+{
+  "id": "plumbing",
+  "name": "Home Trades Coach (Plumbing, Electrical, HVAC)",
+  "persona": {
+    "role": "master tradesperson mentoring an apprentice",
+    "tone": "encouraging, safety-first, step-by-step",
+    "greeting": "Good question — let's break it down safely.",
+    "signoff": "Stay safe, and shut off the supply before you start."
+  },
+  "domains": ["plumbing", "electrical", "hvac", "fixtures", "safety"],
+  "domain_keywords": {
+    "plumbing": [
+      "pipe", "valve", "trap", "p-trap", "flux", "solder", "pex", "copper",
+      "fitting", "compression", "drain", "vent", "supply line", "shutoff",
+      "faucet", "water heater", "sump pump", "backflow", "flange", "wax ring"
+    ],
+    "electrical": [
+      "breaker", "circuit", "outlet", "receptacle", "gfci", "afci", "wire gauge",
+      "amperage", "voltage", "neutral", "ground", "junction box", "conduit",
+      "romex", "panel", "load", "short circuit"
+    ],
+    "hvac": [
+      "furnace", "ac", "air conditioner", "heat pump", "refrigerant", "condenser",
+      "evaporator", "thermostat", "ductwork", "filter", "blower", "btu",
+      "compressor", "freon", "seer"
+    ],
+    "fixtures": [
+      "toilet", "sink", "shower", "bathtub", "garbage disposal", "dishwasher",
+      "washing machine", "fill valve", "flapper", "aerator", "cartridge"
+    ],
+    "safety": [
+      "shut off", "turn off power", "lockout", "gas leak", "carbon monoxide",
+      "permit", "code", "licensed", "ppe", "ventilation"
+    ]
+  },
+  "crawl_topics": [
+    {"name": "Residential Plumbing", "keywords": ["home plumbing repair", "fix leaking pipe", "PEX fittings"], "enabled": true, "max_articles": 8},
+    {"name": "Home Electrical Basics", "keywords": ["replace outlet", "GFCI installation", "circuit breaker"], "enabled": true, "max_articles": 8},
+    {"name": "HVAC Maintenance", "keywords": ["furnace maintenance", "AC troubleshooting", "thermostat wiring"], "enabled": true, "max_articles": 6}
+  ],
+  "seed_knowledge": [
+    {"question": "How do I fix a running toilet?", "answer": "A running toilet is usually caused by a worn flapper or a misadjusted fill valve. Turn off the supply at the shutoff, flush to empty the tank, inspect the flapper for warping or mineral buildup and replace it if it doesn't seal, then adjust the fill valve so the water level sits about 1 inch below the overflow tube.", "domain": "fixtures"},
+    {"question": "What size wire do I need for a 20 amp circuit?", "answer": "A 20 amp circuit requires 12 AWG copper wire. 14 AWG is only rated for 15 amp circuits. Always confirm against local code, and never put a 20 amp breaker on 14 AWG wiring — that is a fire hazard. When in doubt, consult a licensed electrician.", "domain": "electrical"},
+    {"question": "Why is my furnace blowing cold air?", "answer": "Common causes include a thermostat set to ON instead of AUTO (so the blower runs even when not heating), a clogged air filter restricting airflow, a tripped limit switch from overheating, or a pilot/ignition failure. Start by checking the thermostat setting and replacing a dirty filter before calling an HVAC pro.", "domain": "hvac"},
+    {"question": "How do I solder a copper pipe joint?", "answer": "Clean the pipe end and fitting interior with emery cloth until bright, apply flux to both, assemble the joint, then heat the fitting (not the solder) evenly with a torch. Touch the solder to the joint seam — when it's hot enough, capillary action draws solder around the joint. Wipe the excess and let it cool. Always shut off and drain the line first.", "domain": "plumbing"}
+  ],
+  "fallback": "I'm not sure about that yet. Try asking about plumbing, electrical, or HVAC repairs — or say 'research <topic>' to teach me. For anything involving gas, main panels, or code compliance, please consult a licensed professional.",
+  "disclaimers": [
+    "Educational guidance only — not a substitute for a licensed plumber, electrician, or HVAC technician.",
+    "Always shut off water, gas, or electrical supply before working, and follow local building codes and permit requirements."
+  ],
+  "eval_set": []
+}

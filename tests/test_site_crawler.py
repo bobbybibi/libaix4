@@ -1,8 +1,6 @@
 """Tests for site_crawler.py — mock all HTTP calls."""
 from __future__ import annotations
 
-import json
-from pathlib import Path
 
 import pytest
 
@@ -70,12 +68,12 @@ class TestExtractLinks:
         html = '<a href="https://example.com/page#section">link</a>'
         links = _extract_links(html, "https://example.com")
         assert "https://example.com/page" in links
-        assert not any("#" in l for l in links)
+        assert not any("#" in link for link in links)
 
     def test_ignores_non_http(self):
         html = '<a href="mailto:x@x.com">email</a><a href="https://ok.com">ok</a>'
         links = _extract_links(html, "https://example.com")
-        assert all(l.startswith("http") for l in links)
+        assert all(link.startswith("http") for link in links)
 
 
 # ── Domain/relevance checks ─────────────────────────────────────────

@@ -6,7 +6,6 @@ import pytest
 
 from conversation_engine import (
     ConversationContext,
-    ConversationTurn,
     _extract_topic,
     enrich_with_context,
     is_followup,

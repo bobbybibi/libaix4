@@ -9,8 +9,47 @@ Original files are deleted by the caller after extraction (space preservation).
 from __future__ import annotations
 
 import csv
+import json
 import re
 from pathlib import Path
+
+
+def existing_qa_keys(directory: Path) -> set[tuple[str, str]]:
+    """Return all (question, answer) pairs already saved under *directory*."""
+    keys: set[tuple[str, str]] = set()
+    directory = Path(directory)
+    if not directory.exists():
+        return keys
+    for fp in directory.glob("*.json"):
+        try:
+            data = json.loads(fp.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        if isinstance(data, list):
+            for entry in data:
+                if isinstance(entry, dict):
+                    keys.add((entry.get("question", ""), entry.get("answer", "")))
+    return keys
+
+
+def dedupe_new_entries(entries: list[dict], directory: Path) -> list[dict]:
+    """Return only entries not already saved under *directory*.
+
+    Matches on the (question, answer) pair and also drops within-batch
+    duplicates. Crawlers re-fetch the same sources every cycle, so this stops
+    identical files from accumulating in the knowledge directory.
+    """
+    existing = existing_qa_keys(directory)
+    seen: set[tuple[str, str]] = set()
+    out: list[dict] = []
+    for entry in entries:
+        key = (entry.get("question", ""), entry.get("answer", ""))
+        if key in existing or key in seen:
+            continue
+        seen.add(key)
+        out.append(entry)
+    return out
+
 
 # Domain keywords for auto-classification
 DOMAIN_KEYWORDS: dict[str, list[str]] = {
@@ -114,12 +153,36 @@ def _strip_tags(html: str) -> str:
 
 # ── Domain classification ─────────────────────────────────────────────
 
-def classify_domain(text: str) -> str:
-    """Classify text into a knowledge domain via keyword scoring."""
+def _active_domain_keywords() -> dict[str, list[str]]:
+    """Domain keywords for the active trade pack, falling back to networking.
+
+    Lets ``classify_domain`` work for any trade while keeping ``DOMAIN_KEYWORDS``
+    (networking) as the hard fallback when no pack is available — so existing
+    networking behaviour and tests are unchanged.
+    """
+    try:
+        import trade_pack
+
+        keywords = trade_pack.domain_keywords_for()
+        if keywords:
+            return keywords
+    except Exception:
+        pass
+    return DOMAIN_KEYWORDS
+
+
+def classify_domain(text: str, keywords: dict[str, list[str]] | None = None) -> str:
+    """Classify text into a knowledge domain via keyword scoring.
+
+    *keywords* defaults to the active trade pack's domain keywords (or the
+    built-in networking ``DOMAIN_KEYWORDS`` when no pack is loaded).
+    """
+    if keywords is None:
+        keywords = _active_domain_keywords()
     text_lower = text.lower()
     scores: dict[str, int] = {}
-    for domain, keywords in DOMAIN_KEYWORDS.items():
-        score = sum(1 for kw in keywords if kw in text_lower)
+    for domain, kw_list in keywords.items():
+        score = sum(1 for kw in kw_list if kw in text_lower)
         if score > 0:
             scores[domain] = score
     if not scores:

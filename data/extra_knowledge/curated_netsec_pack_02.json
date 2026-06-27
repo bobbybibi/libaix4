@@ -1,0 +1,524 @@
+[
+  {
+    "question": "How does TCP CUBIC congestion control differ from BBR, and when would you prefer one over the other?",
+    "answer": "TCP CUBIC is a loss-based algorithm that reduces its congestion window upon packet loss, making it well-suited for wired networks where loss is a reliable congestion signal. BBR (Bottleneck Bandwidth and RTT) is model-based, estimating available bandwidth and RTT to probe capacity without relying solely on loss, making it better for high-latency or lossy links (e.g., satellite or long-haul WAN) where loss may be random rather than congestion-related. In data-center environments with predictable low-latency paths, CUBIC often performs adequately, whereas BBR shines on heterogeneous wide-area paths. Deploying BBR on servers serving global clients typically improves throughput and reduces buffer bloat.",
+    "domain": "networking",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is TCP SACK and how does it improve retransmission efficiency?",
+    "answer": "Selective Acknowledgment (SACK) allows a TCP receiver to inform the sender exactly which segments were received out of order, so the sender can retransmit only the missing segments rather than everything from the last acknowledged byte. Without SACK, a single loss forces retransmission of all subsequent data once the window expires, severely reducing throughput on high-bandwidth-delay-product links. SACK is negotiated during the three-way handshake and is enabled by default on modern operating systems. In high-loss or reordering scenarios, SACK significantly reduces the number of spurious retransmissions and the time to recover from loss events.",
+    "domain": "networking",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What are the primary architectural differences between QUIC and TCP, and what security benefits does QUIC provide?",
+    "answer": "QUIC is a multiplexed, encrypted transport protocol built on UDP that integrates TLS 1.3 by design, eliminating the head-of-line blocking inherent in TCP's single byte stream. Each QUIC stream is independently flow-controlled, so a lost packet blocks only its own stream, not all concurrent streams. Because encryption is mandatory and the handshake combines transport and cryptographic negotiation, QUIC typically achieves 0-RTT or 1-RTT connection establishment. From a security perspective, QUIC's mandatory encryption makes passive traffic analysis harder, and its connection IDs enable transparent NAT rebinding without exposing identifying metadata.",
+    "domain": "networking",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is an MTU/PMTUD black hole and how do you diagnose and fix it?",
+    "answer": "A Path MTU Discovery (PMTUD) black hole occurs when intermediate firewalls or routers silently drop ICMP 'fragmentation needed' messages that TCP uses to discover the correct MTU, causing connections to stall or hang after the initial handshake. Diagnosis involves capturing traffic with Wireshark and looking for TCP SYN/ACK followed by data retransmissions without ICMP unreachable replies, or using 'ping -M do -s <size>' to manually probe the path. The standard fix is to configure 'ip tcp adjust-mss' (Cisco) or equivalent clamping on routers/firewalls to set the MSS to a safe value (e.g., 1452 for PPPoE). Alternatively, ensure firewall rules permit ICMP type 3 code 4 messages through the path.",
+    "domain": "networking",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "How does RPKI and ROA prevent BGP prefix hijacking?",
+    "answer": "Resource Public Key Infrastructure (RPKI) is a cryptographic framework that lets IP address block holders issue Route Origin Authorizations (ROAs) asserting which Autonomous Systems are permitted to originate specific prefixes. Routers participating in RPKI perform Route Origin Validation (ROV), marking routes as Valid, Invalid, or Not Found and dropping or deprioritizing Invalid routes. This prevents accidental or malicious BGP hijacks where an unauthorized AS announces someone else's prefix, as seen in high-profile incidents affecting major providers. Operators should create ROAs for all their prefixes via their RIR portal and configure their upstream peers to enforce ROV to provide mutual protection.",
+    "domain": "networking",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is OSPF area design and why is a hierarchical multi-area structure preferred over a flat single-area deployment?",
+    "answer": "OSPF divides networks into areas to limit the scope of link-state database (LSDB) flooding and SPF computation. In a single Area 0 flat design, every router must store and process the full LSDB, which grows quadratically with network size, consuming CPU and memory. A hierarchical design uses Area 0 as the backbone with subordinate areas connected via Area Border Routers (ABRs) that summarize routes, dramatically reducing LSDB size in each area and containing topology changes locally. This also improves convergence time and makes the network more manageable by isolating faults to specific areas.",
+    "domain": "networking",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "How does anycast routing work and what are its primary use cases?",
+    "answer": "Anycast assigns the same IP address to multiple nodes in different locations; the routing protocol directs each client to the topologically nearest node based on routing metrics. It is widely used for DNS root servers, CDN edge nodes, and DDoS-scrubbing infrastructure because it naturally distributes load and provides automatic failover—if one node fails, BGP withdraws its routes and traffic shifts to the next closest instance. Anycast also provides inherent resilience against volumetric DDoS attacks because attack traffic is absorbed across many geographically distributed nodes rather than concentrated on one. The main operational challenge is that return paths can be asymmetric, which can complicate stateful session tracking.",
+    "domain": "networking",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is CGNAT, and what are its implications for network troubleshooting and security logging?",
+    "answer": "Carrier-Grade NAT (CGNAT) places an additional NAT layer between the subscriber's home router and the public internet, mapping many customers to a shared pool of public IP addresses. From a troubleshooting perspective, this means a single public IP may represent thousands of users, making IP-based geolocation or abuse attribution unreliable. Security logging must include port numbers and timestamps in addition to IP addresses so ISPs can map a connection back to a specific subscriber. CGNAT also complicates peer-to-peer applications and VPNs, often requiring NAT traversal mechanisms such as STUN or UPnP.",
+    "domain": "networking",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What distinguishes SD-WAN from traditional WAN, and what security considerations does SD-WAN introduce?",
+    "answer": "Software-Defined WAN abstracts the underlying transport (MPLS, broadband, LTE) behind a centralized control plane that dynamically steers traffic based on application policies and real-time path quality metrics. This enables enterprises to use cheaper commodity internet links while maintaining application-level SLAs. Security considerations include the need to encrypt all overlay tunnels (typically IPsec or DTLS) since traffic traverses untrusted internet links, and ensuring the centralized controller itself is hardened and not a single point of compromise. Many SD-WAN platforms integrate next-generation firewall and secure web gateway functions, but these must be explicitly configured and updated.",
+    "domain": "networking",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "Walk through the full DNS resolution path for a user querying example.com, including DNSSEC validation.",
+    "answer": "The stub resolver queries the local recursive resolver, which first checks its cache; on a miss, it queries a root name server to find the .com TLD servers, then queries the .com TLD server for example.com's authoritative server, and finally queries that server for the A record. With DNSSEC, each delegation includes DS and RRSIG records that the recursive resolver uses to verify a chain of trust from the IANA root key signing key (KSK) down through the zone-signing keys (ZSKs) to the final record signature. If any signature fails validation, the resolver returns SERVFAIL rather than the potentially forged record. Operators must ensure their zones have current, non-expired RRSIG records and that DS records in the parent zone match their active KSK.",
+    "domain": "networking",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "How do STUN and TURN protocols enable NAT traversal for real-time communications?",
+    "answer": "STUN (Session Traversal Utilities for NAT) allows an endpoint behind NAT to discover its public IP address and port mapping by querying a STUN server on the internet; this information is exchanged with the remote peer via a signaling channel to attempt a direct peer-to-peer connection. If the NAT type is symmetric or the direct path is blocked, TURN (Traversal Using Relays around NAT) relays media through a server on the public internet, ensuring connectivity at the cost of latency and relay server bandwidth. ICE (Interactive Connectivity Establishment) orchestrates STUN and TURN candidate gathering and connectivity checks to select the best available path. From a security standpoint, TURN servers should require authentication and rate-limit connections to prevent relay abuse.",
+    "domain": "networking",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is ECMP and what operational challenges arise when it is combined with stateful firewalls?",
+    "answer": "Equal-Cost Multi-Path (ECMP) routing distributes traffic across multiple paths with identical routing metrics, improving bandwidth utilization and providing redundancy. The challenge arises with stateful firewalls or NAT devices: if forward and return packets for a session take different ECMP paths, they may hit different firewall instances that each lack the full session state, causing the firewall to drop the return traffic as untracked. Solutions include using flow-based hashing (5-tuple) to ensure all packets of a session follow the same path, deploying stateful session synchronization between firewall cluster members, or using asymmetric routing-aware firewall configurations.",
+    "domain": "networking",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What are the core principles of a zero-trust architecture and where are enforcement points typically placed?",
+    "answer": "Zero trust operates on the principle of 'never trust, always verify'—no user, device, or network segment is implicitly trusted based on location, requiring continuous authentication and authorization for every access request. Enforcement points include identity-aware proxies in front of applications, device health attestation integrated into the access decision, micro-perimeter controls between workloads, and data-centric controls such as encryption and DLP. Policy engines evaluate signals from identity providers, device management platforms, and threat intelligence to issue dynamic, least-privilege access grants. Network-level enforcement is implemented via software-defined perimeter gateways or service mesh sidecar proxies that verify mTLS certificates before allowing inter-service communication.",
+    "domain": "security",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "How does microsegmentation differ from traditional VLAN-based network segmentation?",
+    "answer": "Traditional VLAN segmentation creates broadcast domains at Layer 2, but once inside a VLAN an attacker can typically move laterally between hosts without restriction. Microsegmentation applies workload-level firewall policies that control east-west traffic between individual VMs, containers, or services regardless of their VLAN membership, typically enforced at the hypervisor or container orchestration layer. This limits the blast radius of a compromised workload because even hosts in the same subnet cannot communicate unless explicitly permitted. Microsegmentation policies are typically defined in terms of application roles rather than IP addresses, making them easier to maintain in dynamic cloud environments.",
+    "domain": "security",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is detection engineering in the context of a SIEM, and what makes a detection rule high quality?",
+    "answer": "Detection engineering is the disciplined process of creating, testing, tuning, and maintaining detection logic in a SIEM or detection platform to identify adversary behaviors with high fidelity. A high-quality detection rule is mapped to specific adversary tactics and techniques (e.g., MITRE ATT&CK), generates a low false-positive rate through careful field scoping and baseline exclusions, includes contextual metadata (severity, tactic, data sources), and has automated test cases that validate the rule fires on synthetic attack data. Rules should be version-controlled, peer-reviewed, and regularly evaluated against evolving attacker TTPs. Detection-as-code practices (storing rules in Git with CI pipelines) enable consistent quality and auditability.",
+    "domain": "security",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "How does EDR differ from traditional antivirus, and what visibility gaps does each leave?",
+    "answer": "Traditional antivirus relies primarily on signature matching against known malware hashes and patterns, making it effective against commodity threats but blind to novel or fileless attacks. Endpoint Detection and Response (EDR) collects rich telemetry—process creation trees, network connections, file operations, registry changes—and applies behavioral analytics and threat intelligence to detect suspicious activity indicative of attack patterns. EDR's visibility gap lies in encrypted communications and activities that blend with normal administrative behavior, while legacy AV's gap is essentially everything that lacks a known signature. Both leave blind spots around firmware-level or hypervisor-based attacks, which require hardware-based integrity measurements to address.",
+    "domain": "security",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What are the standard phases of an incident response runbook and what key activities occur in each?",
+    "answer": "The NIST incident response lifecycle covers Preparation, Detection and Analysis, Containment/Eradication/Recovery, and Post-Incident Activity. Preparation involves establishing response teams, playbooks, communication channels, and tooling before an incident occurs. Detection and Analysis encompasses triage of alerts, log correlation, scoping the affected systems, and determining indicators of compromise. Containment isolates affected systems to prevent spread; eradication removes the threat (malware, unauthorized accounts); recovery restores systems to known-good state and monitors for reinfection. Post-incident activity produces a lessons-learned report and updates playbooks, detection rules, and controls to prevent recurrence.",
+    "domain": "security",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "How do threat hunters formulate and validate hypotheses, and what distinguishes hunting from reactive alert triage?",
+    "answer": "Threat hunting is a proactive, hypothesis-driven search for adversary activity that has evaded existing automated detections, as opposed to reactive triage which responds to fired alerts. Hunters formulate hypotheses based on threat intelligence, adversary TTPs from frameworks like MITRE ATT&CK, or anomalies observed in telemetry—for example, 'an attacker may be using WMI for lateral movement' leads to querying EDR logs for unusual WMI process ancestry. The hunt is validated by searching historical data, narrowing to anomalous patterns, and either finding evidence of compromise or producing new detection logic if nothing is found. Successful hunts close the loop by converting the hypothesis and query into automated detections.",
+    "domain": "security",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "Describe defense-in-depth layering and give a concrete example applied to a web application.",
+    "answer": "Defense-in-depth places multiple independent defensive controls at different layers so that the failure or bypass of one layer does not result in a complete breach. For a web application, this might include a WAF at the perimeter filtering malicious HTTP requests, network segmentation restricting the app server from initiating outbound connections to arbitrary destinations, input validation and parameterized queries in the application code preventing injection, least-privilege database accounts limiting what an attacker can do if SQL injection occurs, EDR on the app server to detect post-exploitation activity, and centralized logging/SIEM to detect anomalous query patterns. Each layer addresses a different phase of the attack chain, making end-to-end exploitation significantly harder.",
+    "domain": "security",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What log sources are most valuable for detecting lateral movement in a Windows environment?",
+    "answer": "Windows Security Event Log event IDs 4624 (logon) and 4625 (failed logon) with logon type 3 (network) or 10 (remote interactive) are primary indicators of credential-based lateral movement. Process creation events (4688 or Sysmon Event ID 1) showing tools like PsExec, WMIC, or PowerShell remoting spawned by unexpected parents are key behavioral signals. SMB access to admin shares (Event ID 5140) and WMI activity logs surface common lateral movement techniques. Combining these with network flow data showing new inter-host connections on ports 445, 135, 5985, or 3389 dramatically improves detection confidence.",
+    "domain": "security",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "How does PKI certificate chain validation work, and what happens when an intermediate CA is untrusted?",
+    "answer": "When a client receives a server certificate, it builds a chain from the leaf certificate up through one or more intermediate CAs to a root CA that is anchored in the system's trust store, verifying each certificate's signature with the public key of its issuer. If an intermediate CA certificate is not included in the server's TLS handshake and not cached by the client, validation fails with an 'unknown CA' error even if the root is trusted. An untrusted intermediate causes the chain to break, resulting in a TLS handshake failure—legitimate users see browser certificate errors, and services fail to connect. Remediation involves ensuring servers send the full chain (excluding the root) and that the intermediate CA certificate is either included in the handshake or distributed via AIA (Authority Information Access) fetching.",
+    "domain": "security",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is mTLS, where is it typically enforced, and what does it protect against compared to server-only TLS?",
+    "answer": "Mutual TLS (mTLS) requires both the client and server to present and validate X.509 certificates during the TLS handshake, authenticating both parties rather than only the server. It is typically enforced at API gateways, service meshes (e.g., Istio, Linkerd), and zero-trust access proxies to ensure that only authorized services or users can communicate with a given endpoint. Server-only TLS prevents passive eavesdropping and authenticates the server but allows any client to initiate a connection, leaving the service vulnerable to unauthorized access if application-layer authentication is weak. mTLS closes this gap by binding connection authorization to a cryptographic identity, making it a cornerstone of microsegmentation and zero-trust service-to-service authentication.",
+    "domain": "security",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "Explain the OAuth 2.0 authorization code flow and how PKCE improves its security for public clients.",
+    "answer": "In the authorization code flow, the client redirects the user to the authorization server, which authenticates the user and returns a short-lived authorization code to the client's redirect URI; the client then exchanges this code for tokens at the token endpoint using its client secret. Public clients (mobile apps, SPAs) cannot securely store a client secret, making the code exchange vulnerable to interception. PKCE (Proof Key for Code Exchange) mitigates this by having the client generate a cryptographic 'code verifier', hash it to a 'code challenge', and send the challenge with the initial authorization request; the verifier is sent with the token exchange, proving the entity exchanging the code initiated the original request. Even if an attacker intercepts the authorization code, they cannot complete the exchange without the original verifier.",
+    "domain": "security",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is secrets management, and what are the key operational practices for secrets rotation and access control?",
+    "answer": "Secrets management refers to the secure storage, distribution, auditing, and lifecycle control of sensitive credentials such as API keys, database passwords, and TLS private keys, typically via dedicated platforms like HashiCorp Vault, AWS Secrets Manager, or Azure Key Vault. Key practices include storing secrets in the vault rather than in source code or environment files, scoping access via least-privilege policies tied to service identities rather than shared credentials, enabling automatic rotation so secrets have short lifetimes limiting the window of exposure after a breach. All secret access should be audited with who, when, and from where, and alerts should fire on anomalous access patterns such as bulk secret reads or access from unexpected IP ranges.",
+    "domain": "security",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What are the cryptographic and authentication improvements WPA3 SAE provides over WPA2-PSK?",
+    "answer": "WPA3's Simultaneous Authentication of Equals (SAE) replaces WPA2's PSK-based 4-way handshake with a Dragonfly key exchange that provides forward secrecy, meaning that capturing the handshake and later learning the password does not allow decryption of previously captured traffic. SAE is also resistant to offline dictionary attacks because the protocol requires active interaction for each guess, unlike WPA2-PSK where an attacker can capture the handshake and brute-force it offline. WPA3 also mandates 128-bit minimum encryption (192-bit in Enterprise mode) and protects management frames via PMF. These improvements make passive sniffing and credential-stuffing attacks against the wireless authentication significantly harder.",
+    "domain": "wifi_security",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "Compare EAP-TLS and PEAP as 802.1X authentication methods and describe the key operational trade-offs.",
+    "answer": "EAP-TLS requires both the authentication server and the client to present X.509 certificates, providing the strongest mutual authentication and resistance to credential theft since there is no password to intercept. The operational burden is higher because client certificates must be provisioned to every device, typically via an MDM or SCEP enrollment system. PEAP (Protected EAP) creates an encrypted TLS tunnel to the RADIUS server using only a server certificate, then tunnels an inner authentication method (typically MSCHAPv2) carrying username and password. PEAP is easier to deploy but relies on users or devices correctly validating the server certificate to prevent rogue RADIUS server attacks; misconfigured clients that accept any certificate are vulnerable to credential harvesting via evil-twin access points.",
+    "domain": "wifi_security",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "How does an evil-twin attack work conceptually, and what network-level controls can detect or prevent it?",
+    "answer": "An evil-twin attack involves deploying a rogue access point with the same SSID as a legitimate network; clients that automatically reconnect to known SSIDs may associate with the attacker's AP, enabling credential capture or man-in-the-middle interception of traffic. Detection mechanisms include wireless intrusion detection systems (WIDS) that monitor for unauthorized APs broadcasting known SSIDs, and ROGUE AP detection based on inconsistencies in BSSID, supported rates, or beacon intervals. 802.11w Protected Management Frames (PMF) prevents deauthentication spoofing that attackers use to force clients to reassociate, and 802.1X with strict server certificate validation ensures clients only authenticate to the legitimate RADIUS server.",
+    "domain": "wifi_security",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is a Wi-Fi deauthentication attack and how does PMF (Protected Management Frames) mitigate it?",
+    "answer": "A deauthentication attack sends spoofed 802.11 management frames with a client's MAC address to the AP instructing it to disconnect the client, causing a denial of service or forcing the client to reassociate (potentially with a rogue AP). Because legacy 802.11 management frames are unauthenticated, any device can forge them. 802.11w PMF, mandated in WPA3 and optional in WPA2, cryptographically protects unicast management frames using the session keys negotiated during the 4-way handshake, so forged deauth frames from a device without those keys are rejected. Deploying WPA3 or enabling PMF on WPA2 networks significantly reduces the effectiveness of deauth-based attacks.",
+    "domain": "wifi_security",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What BYOD and NAC policy controls should an enterprise implement when personal devices connect to corporate Wi-Fi?",
+    "answer": "Network Access Control (NAC) should enforce device posture assessment before granting access, checking criteria such as OS patch level, antivirus status, and MDM enrollment; devices that fail posture checks should be redirected to a quarantine VLAN with remediation resources. BYOD policies should place personal devices on a dedicated SSID or VLAN that provides internet access but prohibits lateral access to internal servers and resources, enforced via firewall ACLs. 802.1X authentication with per-user dynamic VLAN assignment allows identity-based network placement without requiring separate physical SSIDs for every user category. Acceptable-use policies must be communicated to BYOD users, and devices should be enrolled in an MDM that can remotely wipe corporate data without touching personal data.",
+    "domain": "wifi_policy",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "How should a guest Wi-Fi network be isolated from the corporate network, and what policies should govern it?",
+    "answer": "Guest Wi-Fi should be placed on a completely separate VLAN that routes directly to the internet via a dedicated firewall policy that blocks all access to RFC 1918 private address space and internal DNS zones. Client isolation (AP-level setting) should prevent guest clients from communicating with each other to reduce the risk of peer-to-peer attacks between guests. A captive portal can be used to present acceptable-use terms and optionally require email verification, creating an audit trail. Guest network bandwidth should be rate-limited to prevent a single guest from monopolizing internet capacity, and DNS should use a filtering resolver to block known malicious domains.",
+    "domain": "wifi_policy",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is DFS in Wi-Fi channel planning and what operational considerations apply to DFS channels?",
+    "answer": "Dynamic Frequency Selection (DFS) allows Wi-Fi to use 5 GHz channels that are shared with radar systems (such as weather radar and military radar), requiring APs to monitor for radar signals and vacate the channel within 10 seconds if detected. DFS channels (e.g., 52-144 in the US) offer significantly less interference than non-DFS channels (36-48) because they are not used by consumer Wi-Fi devices or Bluetooth. The operational trade-off is that radar detection events cause clients to disconnect while the AP moves to a new channel, which can be disruptive in radar-rich environments such as airports or coastal areas. Proper channel planning should assign non-DFS channels to latency-sensitive applications and use DFS channels where the coverage benefit outweighs the radar disruption risk.",
+    "domain": "wifi",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "How do you approach a systematic Wireshark capture and filter workflow when diagnosing an intermittent network issue?",
+    "answer": "Begin by capturing at the right vantage point—as close to the suspected problem as possible—using a port mirror (SPAN) or inline tap to avoid altering traffic, and save full packet captures to a ring-buffer file for post-analysis. Apply display filters iteratively: start broad with 'ip.addr == <host>' to isolate traffic to the affected host, then narrow with 'tcp.analysis.retransmission' or 'tcp.analysis.zero_window' to surface TCP-layer problems. Look for patterns in expert info (Edit > Expert Information) which aggregates warnings and errors across the capture. Use 'Statistics > TCP Stream Graphs' to visualize throughput, round-trip time, and window scaling, which quickly reveals whether the problem is packet loss, receiver buffer limits, or application delays.",
+    "domain": "troubleshooting",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "How do you interpret traceroute output to distinguish between routing loops, high-latency hops, and packet loss at a specific hop?",
+    "answer": "Traceroute sends probes with incrementing TTLs and reports the RTT at each hop; a sudden large RTT increase at a specific hop that persists for all subsequent hops indicates congestion or a slow link at that hop. Asterisks (no reply) at a hop do not necessarily indicate loss—many routers de-prioritize TTL-exceeded ICMP generation; loss that appears at a specific hop but not subsequent hops is almost always a rate-limiting artifact. True loss is confirmed when asterisks appear at a hop AND all subsequent hops, and is further validated by running 'mtr' which shows a rolling per-hop packet-loss percentage. A routing loop appears as the same hop IPs repeating in sequence with incrementing RTTs until the TTL expires.",
+    "domain": "troubleshooting",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "A user reports 'ping works but web browsing fails'—walk through your diagnostic approach.",
+    "answer": "ICMP echo success confirms basic IP connectivity but does not validate TCP, DNS, or application-layer function. First test DNS resolution with 'nslookup example.com' or 'dig example.com' to rule out DNS failure, which is a common cause. If DNS resolves, attempt a manual TCP connection with 'curl -v https://example.com' or 'telnet example.com 443' to determine if the TCP handshake completes; a timeout here points to a firewall blocking port 443, an MTU issue, or a TCP PMTUD black hole. If the handshake completes but the response is slow or absent, capture traffic with Wireshark to check for TLS handshake failures, certificate errors, or zero-window conditions indicating a capacity or application issue.",
+    "domain": "troubleshooting",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What are the most common causes of DHCP lease failures and how do you systematically diagnose them?",
+    "answer": "DHCP relies on a broadcast DORA exchange (Discover, Offer, Request, Acknowledge); failure can occur at any step. Common causes include exhausted IP address pools (check DHCP server scope utilization), missing or misconfigured DHCP relay agents on inter-VLAN routers (relay forwards broadcasts across subnets to the DHCP server), firewall rules blocking UDP ports 67/68, and rogue DHCP servers responding before the legitimate server. Diagnose by capturing on the client VLAN and filtering for 'bootp' or 'udp.port==67' in Wireshark to see if the Discover is sent, if an Offer is received, and from which server MAC address. On Windows, 'ipconfig /release' then 'ipconfig /renew' with simultaneous Wireshark capture quickly reveals where the DORA sequence breaks.",
+    "domain": "troubleshooting",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is asymmetric routing and why is it problematic for stateful firewalls?",
+    "answer": "Asymmetric routing occurs when the forward and return paths of a flow traverse different network devices, which is common in multi-homed environments or when ECMP is in use. Stateful firewalls track connection state (SYN, established, FIN) by seeing all packets in both directions; if only one direction traverses the firewall, it sees an 'established' return packet without a corresponding 'SYN' and drops it as an invalid/untracked connection. Diagnosing asymmetric routing involves running traceroute from both endpoints to compare forward and return paths, and checking firewall logs for 'invalid state' or 'asymmetric routing' drops. Fixes include adjusting routing metrics to force symmetry, enabling asymmetric routing mode on the firewall (which reduces state inspection fidelity), or deploying the firewall in a topology where all paths converge.",
+    "domain": "troubleshooting",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "How do you differentiate packet loss, increased latency, and jitter as root causes of application performance degradation?",
+    "answer": "Packet loss increases TCP retransmission counts and inflates application response times by at least one RTT per retransmit; it manifests in Wireshark as duplicate ACKs followed by retransmissions and can be quantified with 'ping -c 100' loss percentage or MTR. Increased latency uniformly delays all packets and shows as high RTT in ping and consistent throughput reduction; it points to congested or distant links rather than loss. Jitter is variance in delay between packets and is most damaging to real-time applications (VoIP, video); it is measured by the standard deviation of RTT across multiple pings or via tools like iperf3 with UDP mode. A combination of high jitter and low loss typically indicates queue management issues or QoS misconfiguration rather than physical link degradation.",
+    "domain": "troubleshooting",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is BGP route leaking, how does it differ from hijacking, and what controls prevent it?",
+    "answer": "A BGP route leak occurs when a transit or peer AS incorrectly re-advertises routes received from one AS to another AS that should not receive them, often due to misconfigured route policies rather than malicious intent—for example, a customer re-advertising their ISP's full routing table to a second ISP, making themselves an unintended transit. Hijacking involves an AS originating a prefix it does not own, while a leak re-advertises legitimate routes to unintended peers. Prevention relies on strict outbound BGP policy filters that permit only the AS's own prefixes when peering with transit providers, proper use of BGP communities to signal route scope, and the emerging BGP Roles draft (RFC 9234) which codifies relationship-based filtering. Route leak detection services and IRR-based prefix filters at IX points also help.",
+    "domain": "networking",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "How does TCP slow start interact with congestion avoidance, and what effect does this have on bulk data transfers over high-latency links?",
+    "answer": "TCP slow start begins with a small congestion window (typically 10 MSS in modern kernels via RFC 6928) and doubles it each RTT until it reaches the slow-start threshold (ssthresh) or detects loss, after which congestion avoidance increases the window linearly by one MSS per RTT. On high-latency links (e.g., 100ms RTT), slow start may take many seconds to reach the link's bandwidth-delay product, resulting in extremely low throughput during the ramp-up phase—particularly damaging for short-lived connections that transfer a few hundred kilobytes. Increasing the initial congestion window, using BBR which ramps more aggressively, or enabling TCP Fast Open to avoid connection setup latency are practical mitigations for high-latency bulk transfer scenarios.",
+    "domain": "networking",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is a split-brain DNS configuration and when is it used?",
+    "answer": "Split-brain (or split-horizon) DNS serves different responses to DNS queries depending on the source network—internal users receive private IP addresses or internal hostnames for corporate resources, while external queries receive public-facing IP addresses. This is commonly used to allow employees to reach internal services by the same FQDN regardless of location while exposing only necessary public IPs externally. The implementation typically involves separate authoritative zones for the same domain name on internal and external DNS servers, or a single DNS platform with view-based response policies. Security considerations include ensuring the internal zone does not leak sensitive internal resource names or IP ranges via zone transfer misconfigurations or recursive resolver exposure.",
+    "domain": "networking",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What are the security implications of DNS over HTTPS (DoH) for enterprise network monitoring?",
+    "answer": "DoH encrypts DNS queries within HTTPS sessions to port 443, preventing network-level monitoring tools and firewalls from inspecting DNS traffic for threat detection, data exfiltration via DNS, or policy enforcement. Enterprise security tools that rely on DNS query logs (SIEM detection rules for C2 beaconing, DLP, content filtering) are effectively bypassed when clients use third-party DoH resolvers. Mitigation involves configuring managed devices to use a designated internal DoH-capable resolver via MDM or group policy, blocking access to well-known DoH provider IPs/domains at the firewall, and ensuring the internal resolver logs queries for security monitoring. Browser DoH settings should be controlled via enterprise policy.",
+    "domain": "security",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is OIDC and how does it extend OAuth 2.0 for authentication use cases?",
+    "answer": "OpenID Connect (OIDC) is an identity layer built on top of OAuth 2.0 that adds an ID token (a signed JWT) containing claims about the authenticated user, enabling relying parties to verify identity rather than just receive delegated authorization. While OAuth 2.0 issues access tokens for API authorization, OIDC's ID token is explicitly for authentication and includes standardized claims such as 'sub' (subject identifier), 'iss' (issuer), 'aud' (audience), and 'exp' (expiration). The UserInfo endpoint provides additional profile attributes using the access token. OIDC enables single sign-on federations and is the protocol underlying most modern enterprise SSO integrations with identity providers such as Okta, Azure AD, and Google Workspace.",
+    "domain": "security",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "Describe a concrete threat hunting hypothesis for detecting living-off-the-land (LotL) attacks and the data sources used to investigate it.",
+    "answer": "A hypothesis for LotL detection might be: 'Attackers are using built-in Windows binaries to execute malicious code under the guise of legitimate administrative activity.' The investigation queries EDR process creation logs for LOLBins (e.g., certutil.exe, mshta.exe, regsvr32.exe, wscript.exe) spawned by unusual parent processes such as Office applications or web browsers, which strongly suggests exploitation followed by script execution. PowerShell ScriptBlock logging (Event ID 4104) and command-line argument logging (Event ID 4688) in the Windows Security log provide content-level visibility into what these binaries executed. Cross-referencing network connections initiated by these processes with threat intelligence feeds helps identify C2 communication.",
+    "domain": "security",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is 802.1X port-based NAC and how does the EAP exchange between supplicant, authenticator, and RADIUS server work?",
+    "answer": "802.1X Network Access Control blocks network access on a switch port until the connected device (supplicant) successfully authenticates. The switch (authenticator) intercepts EAPOL (EAP over LAN) frames from the supplicant and relays them as RADIUS Access-Request messages to the authentication server, forwarding EAP method packets between them. The RADIUS server validates credentials or certificates and responds with Access-Accept (optionally with VLAN assignment attributes) or Access-Reject, at which point the switch opens or keeps the port in the restricted state. Dynamic VLAN assignment via RADIUS attributes enables identity-based network placement without requiring per-port manual configuration.",
+    "domain": "wifi_security",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is Opportunistic Wireless Encryption (OWE) and in what scenario is it most useful?",
+    "answer": "OWE (IEEE 802.11ax/WPA3-equivalent, defined in RFC 8110) provides unauthenticated but encrypted wireless connections for open networks, replacing unencrypted open Wi-Fi. Each client performs an ephemeral Diffie-Hellman key exchange with the AP to derive a unique session key, preventing passive over-the-air eavesdropping between clients even though no credentials are required to join. OWE is most useful for public hotspots (cafes, airports, hotels) where deploying shared passwords is impractical but protecting users from passive sniffing is desirable. It does not prevent an active attacker from operating a rogue AP, so critical applications must still use end-to-end TLS; OWE is a wireless transport improvement, not an authentication control.",
+    "domain": "wifi_security",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What are the risks of MAC address spoofing in a Wi-Fi environment and what controls mitigate it?",
+    "answer": "MAC address spoofing allows an attacker to change their device's MAC address to impersonate an authorized device, bypassing MAC-based ACLs and potentially inheriting a valid DHCP lease or network access grant. Since MAC filtering is trivially bypassed by passively observing an authorized device's MAC address, it should never be relied upon as a primary access control. Effective mitigations include 802.1X authentication (which uses cryptographic credentials rather than MAC addresses), per-client DHCP lease binding combined with ARP inspection (Dynamic ARP Inspection on switches), and behavioral detection via WIDS that flags a MAC address appearing on two different BSSIDs simultaneously. Private/randomized MAC addressing by clients complicates device tracking but does not introduce new security risks.",
+    "domain": "wifi_security",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is a rogue DHCP server attack and how do DHCP snooping and Dynamic ARP Inspection prevent it?",
+    "answer": "A rogue DHCP server responds to client DHCP Discovers before the legitimate server, assigning itself as the default gateway and DNS server to redirect client traffic through the attacker for man-in-the-middle interception. DHCP snooping is a switch feature that designates only specific trusted ports (uplinks to the legitimate DHCP server) as allowed to send DHCP Offer and Acknowledge messages, silently discarding DHCP server responses from untrusted access ports. Dynamic ARP Inspection (DAI) uses the DHCP snooping binding table to validate ARP replies, dropping ARP packets where the sender IP/MAC pair does not match a valid DHCP binding, preventing ARP poisoning that could redirect traffic even after successful DHCP. Together these controls eliminate a primary mechanism for MITM attacks on switched networks.",
+    "domain": "security",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "How should an organization approach Wi-Fi channel planning to minimize co-channel and adjacent-channel interference?",
+    "answer": "In the 2.4 GHz band only channels 1, 6, and 11 are non-overlapping in most regions; all APs in overlapping physical areas should use these three channels, and adjacent-area APs should never use overlapping channels. The 5 GHz band offers many more non-overlapping 20 MHz channels and supports channel bonding to 40/80/160 MHz for higher throughput, but wider channels reduce the number of non-overlapping options and increase interference risk in dense deployments. Automatic channel selection (ACS) features in enterprise Wi-Fi controllers scan the RF environment at startup or periodically and assign channels to minimize co-channel interference. Site surveys using spectrum analysis tools should validate planned channel assignments and identify sources of non-Wi-Fi interference such as microwave ovens or Bluetooth devices.",
+    "domain": "wifi",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is intranet segmentation and how does it differ from internet-facing DMZ architecture?",
+    "answer": "Intranet segmentation divides an organization's internal network into logical zones (e.g., servers, workstations, OT/ICS, management) separated by firewall policies that permit only necessary inter-zone traffic, limiting lateral movement after an internal breach. A DMZ is a semi-trusted perimeter zone between the internet and the internal network hosting services that must be reachable from the internet (web servers, mail gateways, VPN concentrators), with strict inbound rules from the internet and equally strict outbound rules preventing DMZ hosts from initiating connections to internal resources. The key architectural difference is that DMZ controls external access to specific published services, while intranet segmentation controls lateral movement between internal zones; both are necessary layers in a defense-in-depth strategy.",
+    "domain": "intranet",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is a VPN split tunnel and when is it a security risk versus an operational benefit?",
+    "answer": "Split tunneling allows VPN clients to route only corporate-destined traffic through the encrypted VPN tunnel while local and internet traffic bypasses it directly, reducing VPN server load and improving performance for internet-heavy workloads. The security risk is that traffic to the internet from a split-tunneled device bypasses corporate security controls (web proxy, DNS filtering, DLP), potentially allowing malware to beacon out or sensitive data to exfiltrate via non-corporate paths. In a zero-trust architecture the risk is lower because application-level controls are enforced at the destination rather than at the network perimeter. Split tunneling should be combined with endpoint security controls (EDR, local firewall, DNS-over-VPN for threat intelligence) and excluded from use for devices accessing regulated data requiring full traffic inspection.",
+    "domain": "security",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "How does a SIEM correlate events from disparate sources to detect a multi-stage attack?",
+    "answer": "A SIEM ingests normalized logs from firewalls, endpoints, identity providers, and applications, and applies correlation rules that sequence events across these sources within a time window to identify multi-stage attack patterns. For example, a rule might trigger when a user account has a failed login (identity log) followed within 10 minutes by a successful login from a different geography (identity log), followed by access to a sensitive file share (file system log) from the same account. The SIEM enriches events with asset context (is the destination a critical server?) and threat intelligence (is the source IP known-bad?) to prioritize the resulting alert. Effective correlation requires careful tuning of time windows and field mappings to minimize false positives while maintaining detection coverage.",
+    "domain": "security",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is the purpose of OSPF stub and totally stubby areas, and when would you configure each?",
+    "answer": "An OSPF stub area blocks external LSAs (Type 5) from flooding into the area, replacing them with a default route from the ABR, which reduces LSDB size in areas where all external destinations are reached via a single ABR exit point. A totally stubby area also blocks inter-area summary LSAs (Type 3), leaving only intra-area routes and a single default route, further shrinking the LSDB and SPF computation in areas with limited routing intelligence needs such as branch offices. Configure a stub area when the area has multiple ABRs (so you want external routes suppressed but inter-area specifics retained for proper exit selection); use totally stubby when there is a single ABR or all traffic exits via the same default path regardless of destination.",
+    "domain": "networking",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "Explain what a TCP zero-window condition is and how it should be interpreted in a performance investigation.",
+    "answer": "A TCP zero-window occurs when the receiver advertises a window size of zero, telling the sender to stop transmitting because the receiver's buffer is full—typically indicating that the receiving application is not reading data from the socket fast enough. In Wireshark, you will see 'TCP Zero Window' annotations followed by 'TCP Window Full' on the sender side, with the sender stalling and sending periodic zero-window probes. This condition points to an application or system performance issue on the receiver rather than a network problem; common causes include slow application processing, insufficient CPU or I/O on the server, or garbage collection pauses in JVM-based applications. Distinguishing zero-window from packet loss is important: zero-window shows consistent window size of 0 in ACKs, while loss shows retransmissions and duplicate ACKs.",
+    "domain": "troubleshooting",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is DNS cache poisoning and how do DNSSEC and source port randomization defend against it?",
+    "answer": "DNS cache poisoning involves an attacker injecting forged DNS responses into a resolver's cache, redirecting users to attacker-controlled IPs for legitimate domain names. The classic Kaminsky attack exploited predictable query transaction IDs and source ports to race-guess the correct values and inject poisoned records before the legitimate response arrived. Source port randomization (BCP 0358) dramatically increases the entropy an attacker must guess by randomizing the UDP source port in addition to the 16-bit transaction ID, expanding the attack space from 65,536 to over 2 billion combinations. DNSSEC eliminates the attack entirely by cryptographically signing DNS records so that even a successfully injected response cannot be validated without the zone's private key.",
+    "domain": "security",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "How does network-based DLP differ from endpoint DLP, and what are the blind spots of each?",
+    "answer": "Network-based DLP inspects traffic at egress points (proxies, email gateways, CASB) to detect and block sensitive data leaving the organization, but is blind to encrypted channels it cannot inspect (e.g., personal cloud storage apps using pinned certificates) and to data exfiltrated via offline media. Endpoint DLP operates on the device, monitoring file operations, clipboard, print, and network connections, providing visibility into user actions regardless of encryption but dependent on the agent being installed, running, and tamper-resistant. The blind spots of endpoint DLP include unmanaged devices and actions taken after an attacker has elevated privileges to disable or circumvent the agent. A layered approach combining both with CASB for sanctioned cloud services provides the most comprehensive coverage.",
+    "domain": "security",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is IP SLA in network monitoring and how is it used to measure service availability and performance?",
+    "answer": "Cisco IP SLA (Service Level Agreement) is a feature that actively generates synthetic test traffic—ICMP pings, UDP jitter probes, HTTP GETs, DNS queries—between network devices to continuously measure latency, jitter, packet loss, and availability from a network-device perspective rather than relying on passive monitoring. It is used to track WAN link quality, validate QoS policies by measuring jitter on voice traffic paths, and trigger routing changes via Object Tracking when an SLA probe fails (e.g., failing over to a backup ISP when the primary exceeds a latency threshold). Results are accessible via SNMP for integration with NMS platforms. IP SLA provides proactive visibility into degradation before users report issues.",
+    "domain": "networking",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is a supply-chain attack and what controls reduce its risk in software development and deployment?",
+    "answer": "A supply-chain attack compromises software, dependencies, or infrastructure upstream of the final target—for example, injecting malicious code into an open-source package, build pipeline, or hardware firmware—so that the attack is distributed to all consumers of that component. Controls include software composition analysis (SCA) to inventory and audit third-party dependencies for known vulnerabilities, reproducible builds to verify that build artifacts match source code, signing of build artifacts and verification of signatures at deployment, and restricting dependency sources to private registries with curated, approved packages. Runtime controls such as behavioral monitoring and application allow-listing help detect unexpected behavior from compromised dependencies that pass static analysis.",
+    "domain": "security",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "How does VXLAN extend Layer 2 networks across Layer 3 boundaries, and what security considerations apply?",
+    "answer": "VXLAN (Virtual Extensible LAN) encapsulates Ethernet frames in UDP packets (port 4789), allowing Layer 2 broadcast domains to span across routed Layer 3 networks, which is critical for VM mobility in data centers and cloud environments. Each VXLAN segment is identified by a 24-bit VNI (VXLAN Network Identifier), providing up to 16 million isolated segments versus VLAN's 4094 limit. Security considerations include the fact that standard VXLAN provides no encryption or authentication, so underlay traffic should traverse only trusted data-center fabrics; for untrusted paths, VXLAN over IPsec (EVPN with encryption) should be used. VTEP (tunnel endpoint) authentication via EVPN control-plane mechanisms prevents unauthorized VTEPs from joining segments and injecting traffic.",
+    "domain": "networking",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is SNMPv3 and why should SNMPv1/v2c be disabled on production network equipment?",
+    "answer": "SNMPv3 adds authentication (MD5/SHA) and encryption (DES/AES) to the Simple Network Management Protocol, whereas SNMPv1 and SNMPv2c use cleartext community strings for authentication that are trivially intercepted by passive sniffing on the management network. An attacker who learns a read-write community string can modify device configurations or extract the full routing table and device inventory. Disabling SNMPv1/v2c and requiring SNMPv3 with SHA-256 authentication and AES-128 encryption is a baseline hardening requirement for network devices. Management traffic should additionally be restricted to a dedicated out-of-band management VLAN with ACLs limiting which NMS servers can poll each device.",
+    "domain": "security",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is a timing side-channel attack conceptually, and how are modern systems designed to mitigate it?",
+    "answer": "A timing side-channel attack infers secret information (e.g., cryptographic keys, password validity) by measuring differences in execution time for operations that depend on secret data—for example, a string comparison that short-circuits on the first mismatch reveals how many characters matched by returning faster for incorrect guesses. Cryptographic libraries use constant-time comparison functions that always execute the same number of operations regardless of input values, eliminating timing variance. Modern CPUs and OS kernels implement mitigations for Spectre/Meltdown-class hardware timing attacks via techniques such as kernel page-table isolation, retpoline, and microcode updates that add speculative execution barriers. Applications should use vetted cryptographic libraries rather than implementing primitives where constant-time guarantees are difficult to verify.",
+    "domain": "security",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "How does BGP TTL Security (GTSM) protect BGP sessions from spoofed TCP segments?",
+    "answer": "Generalized TTL Security Mechanism (GTSM, RFC 5082) configures BGP peers to send packets with a TTL of 255 and to drop received BGP packets with a TTL below a configured threshold (e.g., 254 for directly connected peers). Because routers decrement TTL at each hop, a spoofed packet injected from a non-adjacent network will arrive with a significantly lower TTL and be discarded without processing. This defeats off-path TCP RST injection and BGP session tear-down attacks that were possible when BGP ran over TCP without additional transport-layer authentication. GTSM is complementary to BGP MD5 authentication and should be deployed on all eBGP sessions, especially in IXP environments.",
+    "domain": "networking",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is network telemetry streaming (gRPC/gNMI) and how does it improve on SNMP polling for operational monitoring?",
+    "answer": "gRPC Network Management Interface (gNMI) enables network devices to push telemetry data to collectors at sub-second intervals using efficient binary encoding, in contrast to SNMP polling which pulls data at fixed intervals (typically 5 minutes) and incurs per-poll overhead proportional to the number of devices. Streaming telemetry provides near-real-time visibility into interface counters, routing table changes, and CPU/memory utilization that is critical for detecting microbursts, BGP flaps, or latency spikes that average out in 5-minute SNMP samples. The YANG data model used with gNMI provides a structured, machine-readable schema for network state, enabling automated closed-loop remediation. Collectors such as Telegraf, Prometheus, or commercial platforms ingest gNMI streams and feed dashboards and alerting systems.",
+    "domain": "networking",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is the difference between IDS and IPS, and where in the network should each be deployed?",
+    "answer": "An Intrusion Detection System (IDS) passively monitors a copy of network traffic (typically via a port mirror or network tap) and generates alerts when it detects suspicious patterns, without blocking traffic. An Intrusion Prevention System (IPS) is inline in the traffic path, inspecting each packet and actively dropping or resetting connections when an attack signature or anomaly is detected. IDS is preferred where the priority is visibility without risk of disrupting legitimate traffic due to false positives; IPS is appropriate at well-understood chokepoints (internet ingress, DMZ, critical application segments) where the traffic profile is predictable and the cost of a missed attack exceeds the risk of a false positive. Modern next-generation firewalls integrate IPS functionality at the perimeter, while network detection and response (NDR) platforms operate in IDS mode on internal east-west traffic.",
+    "domain": "security",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is certificate pinning, what problem does it solve, and what operational risks does it introduce?",
+    "answer": "Certificate pinning is a technique where a client application hardcodes expected certificate properties (public key hash, CA certificate) and rejects TLS connections that present certificates not matching the pin, preventing MITM attacks even if the attacker possesses a certificate signed by a trusted CA in the system store. It was widely used in mobile applications to prevent SSL interception attacks. The operational risk is pin expiration: if the certificate or key associated with the pin changes (e.g., during a normal rotation), all app versions with the old pin stop working until they are updated, causing a widespread outage. Modern best practice favors HTTP Public Key Pinning's successor approach of strong certificate transparency logging and CAA DNS records over hardcoded pins, reserving pinning for high-risk applications with controlled deployment pipelines.",
+    "domain": "security",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is an 802.11 beacon frame and what security-relevant information does it expose?",
+    "answer": "Beacon frames are management frames broadcast by APs roughly every 100ms announcing the network's presence; they contain the SSID, BSSID (AP MAC), supported rates, RSN (Robust Security Network) Information Element describing the security suite (WPA2/WPA3, cipher suites, AKM), and capability flags including whether PMF is required or capable. An attacker passively scanning beacons can map all visible networks, identify under-protected SSIDs (e.g., WEP, open, WPA-TKIP), discover AP vendor from OUI, and determine whether PMF is enforced. Security professionals should use beacon analysis during site assessments to identify rogue APs and verify that production networks advertise the expected security suite; any discrepancy between expected and observed RSN IEs warrants investigation.",
+    "domain": "wifi",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "How should an organization handle Wi-Fi password rotation on shared PSK networks, and what does WPA3 SAE-PK offer?",
+    "answer": "Rotating shared PSK passwords requires updating the credential on every AP and every device simultaneously, making large-scale rotations operationally disruptive; this discourages frequent rotation, allowing compromised credentials to remain valid for extended periods. Enterprise 802.1X avoids this by using per-user credentials that can be revoked individually. WPA3 SAE-PK (SAE with Public Key) is an extension that embeds a cryptographic fingerprint of a public key in the password string itself, allowing clients to verify they are connecting to a legitimate AP even with a shared password, and enabling passwordless deployment in some scenarios. For shared-key networks that cannot migrate to 802.1X, consider using dedicated per-SSID passwords rotated on a scheduled basis with MDM-pushed updates.",
+    "domain": "wifi_policy",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is an intranet proxy (forward proxy) and how is SSL inspection implemented, along with its privacy considerations?",
+    "answer": "An intranet forward proxy intercepts outbound web requests from internal clients, enabling URL filtering, malware scanning, DLP, and caching before traffic exits to the internet. SSL inspection (also called TLS interception or HTTPS inspection) involves the proxy terminating the client's TLS session, decrypting content for inspection, then re-establishing a separate TLS session to the origin server and presenting a dynamically generated certificate signed by a trusted internal CA. The internal CA's root certificate must be pre-installed on client devices (typically via MDM or group policy) for clients to trust the proxy's generated certificates without errors. Privacy considerations require that SSL inspection exempt sensitive categories (banking, healthcare portals, personal email) and that the proxy access logs be protected, access-controlled, and subject to a clear data retention policy.",
+    "domain": "intranet",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is the Internet routing table growth problem and how does route aggregation address it?",
+    "answer": "The global BGP routing table has grown beyond 900,000 IPv4 prefixes and 200,000 IPv6 prefixes, straining the TCAM memory of older routers and increasing convergence times after topology changes. Route aggregation (or summarization) reduces the number of prefixes by advertising a single covering prefix (e.g., a /20) instead of multiple more-specific prefixes (e.g., sixteen /24s), provided all more-specifics are within the aggregator's control. De-aggregation of prefixes (announcing more-specifics alongside the aggregate) is used for traffic engineering but contributes to table growth; operators should limit de-aggregation to necessary cases and filter customer routes to prevent injection of overly specific prefixes. IRR-based filtering and RPKI ROA maximum-length constraints help enforce aggregation discipline at peering boundaries.",
+    "domain": "internet",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is internet exchange point (IXP) peering and how does it reduce latency and cost compared to transit?",
+    "answer": "An Internet Exchange Point (IXP) is a physical facility where multiple networks connect to a shared switching fabric and exchange traffic directly (settlement-free peering) rather than routing through a paid transit provider. Peering at an IXP reduces per-bit cost by eliminating transit fees for traffic that peers exchange, and reduces latency by shortening the path—traffic between two networks at the same IXP traverses a single switch hop rather than multiple transit hops. Bilateral peering agreements define which routes each party accepts from the other; route servers at many IXPs simplify multilateral peering by allowing participants to exchange routes with all other route-server clients through a single BGP session. Effective peering strategy analyzes traffic patterns to peer with networks that exchange significant mutual traffic volumes.",
+    "domain": "internet",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What are the DHCP option 82 and 43 use cases in enterprise networks?",
+    "answer": "DHCP Option 82 (Relay Agent Information) is inserted by DHCP relay agents on switches to inform the DHCP server of the client's physical location (switch port and VLAN), enabling the server to assign IP addresses from the correct subnet and apply per-port policies such as restricting certain device types. Option 43 (Vendor Specific Information) is used by specific device types (IP phones, APs, printers) to receive vendor-specific configuration data from the DHCP server—for example, Cisco IP phones use Option 43 to receive the TFTP server address from which to download their configuration. Together these options allow a single DHCP infrastructure to serve diverse device types with location-aware, vendor-specific configurations without requiring separate DHCP servers per subnet.",
+    "domain": "networking",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is a walled-garden captive portal and how is it typically implemented?",
+    "answer": "A walled-garden captive portal intercepts unauthenticated wireless or wired clients and redirects all HTTP/HTTPS traffic to a landing page where users must accept terms, authenticate, or pay before gaining full internet access. Implementation typically uses firewall redirect rules that intercept DNS queries and HTTP(S) requests from unauthenticated clients and forward them to the portal server, while whitelisting specific destinations (e.g., the portal server itself, payment processors) that clients can reach before authentication. HTTPS redirection requires either a self-signed certificate on the portal (causing browser warnings) or DNS-based interception that responds to all queries with the portal IP, relying on HTTP initial contact before TLS. Modern captive portal detection by OSes (iOS Captive Network Assistant, Android, Windows) automates portal detection and display.",
+    "domain": "wifi",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "How do you diagnose and resolve a scenario where two hosts on the same subnet cannot communicate despite correct IP configuration?",
+    "answer": "Start by verifying ARP tables on both hosts ('arp -a') to confirm each has a valid MAC-to-IP mapping for the other; a missing or incorrect ARP entry indicates an ARP resolution failure, often caused by a VLAN misconfiguration or a firewall on one of the hosts dropping ARP replies. Check switch port configuration to ensure both hosts are in the same VLAN and that there are no port security violations (check 'show port-security' on Cisco switches for MAC violations that cause the port to err-disable). Capture traffic on both hosts simultaneously to verify whether frames are transmitted and whether they arrive—a one-sided capture showing sends but no receives points to a switch configuration issue. Also verify that host-based firewalls allow ICMP and the relevant protocol on both endpoints.",
+    "domain": "troubleshooting",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is IPv6 neighbor discovery and how does it differ from ARP in IPv4?",
+    "answer": "IPv6 Neighbor Discovery Protocol (NDP) replaces ARP and adds additional functions, using ICMPv6 messages rather than Layer 2 broadcasts. Neighbor Solicitation (ICMPv6 type 135) is sent to a solicited-node multicast address (derived from the target's lower 24 bits) to resolve a target's link-layer address, which reduces broadcast traffic compared to IPv4 ARP's broadcast Requests. Neighbor Advertisement (type 136) carries the responder's MAC address. NDP also handles router discovery (RS/RA messages), stateless address autoconfiguration (SLAAC), and Duplicate Address Detection (DAD). From a security perspective, NDP is vulnerable to spoofing attacks analogous to ARP poisoning, mitigated by SEND (Secure Neighbor Discovery) or RA Guard/ND Inspection on managed switches.",
+    "domain": "networking",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is a man-in-the-middle (MITM) attack conceptually and what network controls detect or prevent it?",
+    "answer": "A MITM attack positions an adversary between two communicating parties to intercept, read, or modify traffic without either party being aware, commonly achieved via ARP poisoning, rogue DHCP server, or BGP hijack to redirect traffic. Prevention focuses on eliminating the ability to redirect traffic (DHCP snooping, DAI, RPKI) and ensuring end-to-end encryption so that even intercepted traffic cannot be read or modified (TLS with proper certificate validation, mTLS). Detection involves monitoring for ARP table anomalies (same MAC mapping to multiple IPs), unexpected BGP route changes, and certificate transparency log entries for unauthorized certificates issued for your domains. Certificate Authority Authorization (CAA) DNS records limit which CAs may issue certificates for a domain, reducing the risk of unauthorized certificate issuance enabling MITM.",
+    "domain": "security",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is a DDoS attack and what mitigation layers does a service provider use to absorb and filter attack traffic?",
+    "answer": "A Distributed Denial of Service attack floods a target with traffic from many sources simultaneously to exhaust its bandwidth, connection table, or computational capacity, preventing legitimate users from accessing the service. Mitigation begins at the network edge with flowspec or BGP blackholing to drop attack traffic upstream at the ISP or IXP level before it reaches the target's infrastructure. Scrubbing centers use traffic diversion (via BGP or DNS) to route attack traffic through specialized hardware that filters volumetric floods (rate-limiting UDP amplification), SYN floods (SYN cookies), and application-layer attacks (HTTP request rate limiting, CAPTCHA challenges). Anycast distribution of infrastructure spreads volumetric attacks across many PoPs, and CDN integration absorbs application-layer floods by serving cached content at the edge.",
+    "domain": "security",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "How is NTP security relevant to a network's overall security posture, and what is NTP amplification?",
+    "answer": "Accurate time synchronization is critical for security because certificate validity checking, Kerberos authentication (which fails if clocks are skewed more than 5 minutes), log correlation, and forensic analysis all depend on consistent timestamps; an attacker who compromises NTP can invalidate security controls by shifting clocks. NTP amplification is a DDoS technique where attackers spoof the victim's source IP and send small requests to NTP servers with 'monlist' or 'readvar' commands, which respond with large data sets, amplifying traffic by up to 4,000x. Mitigation involves disabling the monlist command on NTP servers (ntpd 'noquery' and 'nopeer' restrictions), using BCP 38 source address validation to block spoofed packets, and deploying NTPsec or Chrony with authenticated NTP (NTS) to ensure time sources are legitimate.",
+    "domain": "security",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is a network baseline and how is it used in anomaly detection?",
+    "answer": "A network baseline characterizes normal traffic patterns—volume, protocols, top talkers, flow sizes, connection rates, geographic distribution—over a representative time period that captures daily and weekly cycles. Anomaly detection compares current traffic metrics against this baseline using statistical methods (standard deviation thresholds, percentile bands) or machine learning models to identify deviations that may indicate attack traffic, misconfiguration, or data exfiltration. For example, a 10x spike in DNS query volume outside business hours against the established baseline warrants investigation for DNS-based C2 beaconing. Baselines must be continuously updated to reflect legitimate growth and seasonal changes; static baselines degrade in accuracy over time and generate increasing false positives.",
+    "domain": "security",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is the impact of TCP keepalive on long-running connections through stateful firewalls and NAT devices?",
+    "answer": "Stateful firewalls and NAT devices maintain session tables with idle timeout values, typically 30-300 seconds for TCP; connections idle longer than the timeout are removed from the state table, causing subsequent packets to be dropped as untracked. TCP keepalive probes prevent this by sending empty ACK segments at configured intervals (default: 2 hours in most OSes, which is far too long for most firewall timeouts). Applications with long-idle connections (database connections, SSH sessions, VPN tunnels) should reduce the TCP keepalive interval (e.g., to 60 seconds) via socket options or OS configuration to maintain firewall state. Alternatively, application-level heartbeat messages at the protocol layer provide more reliable keepalive behavior that is not dependent on OS socket settings.",
+    "domain": "networking",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is the principle of least privilege as applied to network device administration, and what controls implement it?",
+    "answer": "Least privilege for network device administration means each administrator account has only the permissions necessary for their role—for example, a NOC operator can view interface statistics and clear counters but cannot modify routing configurations or create new accounts. RADIUS or TACACS+ with per-command authorization enforces this by requiring the AAA server to authorize each command before the device executes it, creating an auditable record of all administrative actions. Role-based access control on the AAA server maps user groups to permission sets; TACACS+ is preferred over RADIUS for device administration because it authorizes individual commands rather than just authentication. SSH key-based authentication should be required for all administrative access, and shared enable/root passwords should be eliminated in favor of per-user privileged access.",
+    "domain": "security",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "How does QUIC's connection migration feature work and what security mechanism validates a migrated path?",
+    "answer": "QUIC connections are identified by a connection ID rather than the 4-tuple (src IP, src port, dst IP, dst port), allowing a connection to survive IP address changes such as a mobile client switching from Wi-Fi to cellular without losing the session. When the client detects a path change, it begins sending packets with its new address while including the existing connection ID; the server performs a path validation by sending a PATH_CHALLENGE frame containing a random 64-bit value that the client must echo back in a PATH_RESPONSE on the new path. This validation prevents attackers from injecting forged path migration frames to redirect a victim's traffic, since they cannot observe and echo the challenge without being on-path. Once validated, the new path becomes the active path for the connection.",
+    "domain": "networking",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is a Wi-Fi site survey and what are the key deliverables that determine AP placement?",
+    "answer": "A Wi-Fi site survey is an assessment of the physical environment and RF propagation characteristics to determine optimal AP placement, quantity, and configuration. A passive survey maps existing RF coverage, interference sources, and channel utilization using spectrum analyzer tools, while an active survey uses a test AP to measure RSSI, SNR, data rates, and roaming behavior at surveyed locations. Key deliverables include a heat map showing signal strength and data rate coverage across the floor plan, interference source identification, channel and power recommendations, AP mounting location recommendations accounting for physical obstructions (concrete, metal, glass), and capacity planning based on device density and throughput requirements. Post-deployment validation surveys verify that the installed APs achieve the designed coverage and performance targets.",
+    "domain": "wifi",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "Describe the role of a hardware security module (HSM) in PKI and cryptographic key management.",
+    "answer": "An HSM is a tamper-resistant hardware device that generates, stores, and performs cryptographic operations with private keys in a secure enclave that prevents key extraction—even privileged administrators cannot export the raw key material. In PKI deployments, the root CA private key is kept exclusively within an offline HSM, while subordinate CA keys may reside in network-attached HSMs for online signing operations, ensuring that a software compromise of the CA server does not expose the private key. HSMs provide FIPS 140-2/140-3 validation, audit logging of all key operations, and multi-person authorization (M-of-N) requirements for sensitive operations. Cloud HSMs (AWS CloudHSM, Azure Dedicated HSM) offer similar guarantees in managed form for organizations that cannot maintain physical HSM infrastructure.",
+    "domain": "security",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is OSPF route redistribution and what loop-prevention mechanisms are used when redistributing between routing domains?",
+    "answer": "OSPF route redistribution injects routes from external sources (other OSPF processes, BGP, static, connected) into an OSPF domain as Type 5 (or Type 7 in NSSA) external LSAs, enabling routing across administrative or protocol boundaries. Without care, mutual redistribution between two routing domains can create routing loops where routes learned via redistribution in one domain are re-redistributed back into the origin domain. Loop prevention uses route tagging: routes redistributed from Domain A to Domain B are tagged with a unique value, and a route-map in Domain B filters out routes with that tag before redistributing back to Domain A, ensuring routes don't bounce. Administrative distance manipulation ensures locally originated routes are preferred over redistributed external routes, providing a secondary loop-prevention mechanism.",
+    "domain": "networking",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "How does HSTS (HTTP Strict Transport Security) protect against SSL stripping attacks, and what is HSTS preloading?",
+    "answer": "An SSL stripping attack downgrades a user's HTTPS connection to HTTP by intercepting the initial cleartext HTTP request before the browser has established an HTTPS connection, typically in a MITM position. HSTS instructs browsers to always use HTTPS for a specified domain for a defined period via the 'Strict-Transport-Security' response header, so the browser refuses to make non-TLS connections and treats any attempt to downgrade as an error. HSTS preloading submits a domain to a browser-maintained hardcoded list of HSTS-enforced domains, providing protection even on the first visit before any HSTS header has been received, eliminating the initial cleartext contact opportunity entirely. Organizations deploying HSTS should ensure long max-age values (at least one year) and include the 'includeSubDomains' and 'preload' directives once the deployment is stable.",
+    "domain": "security",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What causes intermittent packet drops on a switch trunk link and how do you isolate the fault?",
+    "answer": "Intermittent drops on a trunk link are commonly caused by duplex mismatches (one end auto-negotiated to half-duplex, causing collisions and late collisions), exceeding QoS queue depths during microbursts, spanning-tree topology changes causing brief forwarding interruptions, or physical layer issues (cable, transceiver). Isolate by checking interface error counters ('show interface' on Cisco) for input errors, CRC errors, late collisions (duplex mismatch signature), and output drops (QoS queue overflow). Correlation with specific VLANs may indicate an STP topology change triggered by the VLAN's root port; 'show spanning-tree detail' shows TC (topology change) counts and last-change timestamps. Physical issues are identified by comparing optical power levels on fiber trunks against transceiver specifications using 'show interface transceiver'.",
+    "domain": "troubleshooting",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is an intranet wiki or internal knowledge base from a security risk perspective, and what controls should govern it?",
+    "answer": "An intranet knowledge base or wiki often accumulates sensitive information—network diagrams, configuration snippets, credential hints, incident post-mortems, architecture documentation—making it a high-value target for attackers who gain internal access. Access should be governed by role-based permissions so that sensitive runbooks and architecture documents are visible only to relevant teams, rather than granting read access to all employees by default. Search indexing of the wiki by external search engines must be prevented via robots.txt and network-level controls, and content DLP scans should alert when credentials, IP ranges, or other sensitive patterns are published. Regular access reviews should revoke permissions for departed employees and contractors, and the wiki platform itself should be patched and enrolled in the vulnerability management program.",
+    "domain": "intranet",
+    "source": "curated:netsec-pack-02"
+  },
+  {
+    "question": "What is Internet BGP prefix filtering with IRR (Internet Routing Registry) and how does it reduce the risk of route pollution?",
+    "answer": "The Internet Routing Registry is a public database of BGP routing policies and prefix ownership information; operators publish route objects listing which prefixes their AS originates, and peering/transit providers use this data to build prefix-list filters allowing only declared prefixes from each peer. IRR-based filtering prevents a customer or peer from accidentally or maliciously injecting unauthorized routes into the global routing table, which could cause traffic to be misrouted or hijacked. Tools like IRRd, BGPQ4, and RIPE's filtering tools automate the generation of prefix-list ACLs from IRR data. IRR accuracy depends on operators keeping their objects current; RPKI provides a cryptographically verifiable complement to IRR for origin validation, while IRR covers more detailed policy attributes.",
+    "domain": "internet",
+    "source": "curated:netsec-pack-02"
+  }
+]

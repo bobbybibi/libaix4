@@ -1,0 +1,102 @@
+{
+  "id": "networking",
+  "name": "Networking & IT Coach",
+  "persona": {
+    "role": "senior network engineer and patient mentor",
+    "tone": "encouraging, precise, step-by-step",
+    "greeting": "Let's work through this together.",
+    "signoff": "Want me to go deeper on any step?"
+  },
+  "domains": [
+    "networking", "wifi", "wifi_security", "wifi_policy",
+    "security", "internet", "intranet", "troubleshooting"
+  ],
+  "domain_keywords": {
+    "networking": [
+      "tcp", "udp", "ip address", "router", "switch", "vlan", "ospf", "bgp",
+      "subnet", "ethernet", "arp", "mac address", "layer 2", "layer 3", "osi",
+      "routing", "bandwidth", "latency", "mpls", "sd-wan", "stp", "lacp",
+      "port number", "icmp", "nat", "gateway", "dhcp"
+    ],
+    "wifi": [
+      "wifi", "wi-fi", "802.11", "wireless", "ssid", "access point", "ofdma",
+      "mu-mimo", "beamforming", "channel", "2.4 ghz", "5 ghz", "6 ghz",
+      "mesh network", "roaming", "band steering", "dfs"
+    ],
+    "wifi_security": [
+      "wpa2", "wpa3", "802.1x", "radius", "eap", "eap-tls", "peap", "psk",
+      "rogue ap", "evil twin", "pmf", "krack", "nac", "wids", "wips",
+      "mac filtering", "captive portal"
+    ],
+    "wifi_policy": [
+      "guest network", "byod", "content filtering", "bandwidth throttling",
+      "qos", "captive portal", "acceptable use", "mdm", "client isolation",
+      "dns filtering", "application control", "wmm"
+    ],
+    "security": [
+      "firewall", "ids", "ips", "siem", "zero trust", "vpn", "encryption",
+      "malware", "ransomware", "phishing", "ddos", "penetration testing",
+      "certificate", "pki", "ipsec", "ssl", "tls", "xss", "sql injection",
+      "endpoint detection", "dlp", "casb"
+    ],
+    "internet": [
+      "http", "https", "dns", "url", "web server", "api", "rest", "cloud",
+      "cdn", "ftp", "ssh", "tls", "cookie", "websocket", "smtp", "imap"
+    ],
+    "intranet": [
+      "active directory", "ldap", "sso", "single sign-on", "proxy", "dmz",
+      "group policy", "kerberos", "ntlm", "nps", "azure ad", "intune",
+      "extranet"
+    ],
+    "troubleshooting": [
+      "troubleshoot", "diagnose", "debug", "rssi", "snr", "site survey",
+      "wireshark", "traceroute", "ping", "packet loss", "slow network"
+    ]
+  },
+  "crawl_topics": [
+    {
+      "name": "Wi-Fi Security",
+      "keywords": ["WPA3", "802.1X authentication", "wireless security"],
+      "enabled": true,
+      "max_articles": 8
+    },
+    {
+      "name": "Network Protocols",
+      "keywords": ["TCP/IP protocol", "routing protocol", "network protocol"],
+      "enabled": true,
+      "max_articles": 8
+    },
+    {
+      "name": "Corporate Network Security",
+      "keywords": ["enterprise security", "zero trust architecture", "NAC"],
+      "enabled": true,
+      "max_articles": 8
+    },
+    {
+      "name": "Network Troubleshooting",
+      "keywords": ["Wi-Fi troubleshooting", "network diagnostics"],
+      "enabled": true,
+      "max_articles": 5
+    }
+  ],
+  "forum_topics": [
+    {
+      "name": "Wi-Fi Security",
+      "keywords": ["WPA3", "802.1X", "wireless security"],
+      "enabled": true,
+      "max_per_source": 10,
+      "sources": ["stackexchange", "reddit", "hackernews", "devto"]
+    },
+    {
+      "name": "Network Troubleshooting",
+      "keywords": ["packet loss", "latency", "DNS resolution"],
+      "enabled": true,
+      "max_per_source": 10,
+      "sources": ["stackexchange", "reddit", "hackernews", "devto"]
+    }
+  ],
+  "seed_knowledge": [],
+  "fallback": "I'm not sure about that. Try asking about networking, internet, intranet, security, programming, or algorithms. You can also say 'research <topic>' to teach me something new!",
+  "disclaimers": [],
+  "eval_set": []
+}

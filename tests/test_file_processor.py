@@ -1,9 +1,7 @@
 """Tests for file_processor.py — text extraction, domain classification, Q&A generation."""
 from __future__ import annotations
 
-from pathlib import Path
 
-import pytest
 
 from file_processor import (
     classify_domain,
