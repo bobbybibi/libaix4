@@ -1,0 +1,38 @@
+[
+  {
+    "question": "What is discussed about RTM: flow-based network monitoring?",
+    "answer": "How does this differ from Silk+Flowbat? Wait. How do I actually download this and where's the documentation? RUAG was hacked over a year ago an didn't notice until recently when the intelligence agency informed them. It's a huge scandal here.http://www.swissinfo.ch/eng/ruag-affair_sensitive-personal-i...http://www.blick.ch/news/wirtschaft/beunruhigender-hack-wie-... Kentik (http://www.kentik.com) is doing something very similar, as a cloud-based service or on-prem cluster.",
+    "domain": "networking",
+    "source": "hackernews:11676489"
+  },
+  {
+    "question": "Tell me about RUAG",
+    "answer": "RUAG was hacked over a year ago an didn't notice until recently when the intelligence agency informed them.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is Kentik (http://www.kentik.com)?",
+    "answer": "Kentik (http://www.kentik.com) is doing something very similar, as a cloud-based service or on-prem cluster.",
+    "domain": "internet",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is discussed about Network Monitoring Tools?",
+    "answer": "The accompanying tutorial: https://www.slac.stanford.edu/comp/net/wan-mon/tutorial.html... I appreciate all the effort and work put into this, but honestly a huge wall of text makes me cringe and hit the back button.Minimal design and html does not take that much time. My eyes...The goggles do nothing! From an ISP network engineering perspective, something like 85-90% of these tools are obsolete, no longer maintained, or proprietary to some particular manufacturer's platform.",
+    "domain": "internet",
+    "source": "hackernews:11704378"
+  },
+  {
+    "question": "Tell me about ISP",
+    "answer": "From an ISP network engineering perspective, something like 85-90% of these tools are obsolete, no longer maintained, or proprietary to some particular manufacturer's platform.There's a much, much shorter list of modern BSD, Apache or GSL licensed monitoring systems that includes opennms, zabbix, zenoss, cacti, etc.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about VM",
+    "answer": "My working environment is as follows :\nHost : Windows 10 (64-bit)\nOracle VM VirutalBox machines :.",
+    "domain": "general",
+    "source": "stackexchange:security:226059"
+  }
+]
