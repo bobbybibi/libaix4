@@ -1,0 +1,33 @@
+{
+  "enabled": true,
+  "domains": {
+    "ads": [
+      "doubleclick.net",
+      "googlesyndication.com",
+      "googleadservices.com",
+      "adservice.google.com",
+      "pagead2.googlesyndication.com",
+      "ads.facebook.com",
+      "ad.doubleclick.net"
+    ],
+    "trackers": [
+      "google-analytics.com",
+      "googletagmanager.com",
+      "facebook.com/tr",
+      "connect.facebook.net",
+      "analytics.twitter.com",
+      "bat.bing.com",
+      "pixel.quantserve.com",
+      "scorecardresearch.com"
+    ],
+    "malware": [
+      "malware-check.disconnect.me",
+      "iloveyou.virus.test",
+      "tracking.example.com",
+      "badware.example.org",
+      "phishing.example.net"
+    ]
+  },
+  "custom": [],
+  "updated_at": 1782530555.8653526
+}

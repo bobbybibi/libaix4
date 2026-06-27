@@ -191,3 +191,35 @@ def enrich_with_context(question: str, context: ConversationContext) -> dict[str
         "domain_hint": domain_hint,
         "context_summary": summary,
     }
+
+
+# ── Action intent detection ──────────────────────────────────────────
+
+# Patterns that indicate the user wants an *action* rather than a knowledge answer.
+ACTION_PATTERNS = [
+    re.compile(r"^(scan|block|unblock|monitor|watch|quarantine|isolate)\b", re.I),
+    re.compile(r"^turn\s+(on|off)\b", re.I),
+    re.compile(r"^(connect|disconnect|start|stop)\s+(to\s+)?vpn\b", re.I),
+    re.compile(r"\bvpn\s+(connect|disconnect|start|stop|on|off|up|down|status)\b", re.I),
+    re.compile(r"^(fetch|extract|search|look\s+up)\b.*\b(page|url|links?|web|online)\b", re.I),
+    re.compile(r"\b(firewall|malware|virus)\s+(scan|block|status|rules)\b", re.I),
+    re.compile(r"^(show|list|check)\s+(my\s+)?(devices?|processes|connections|firewall|blocked)\b", re.I),
+    re.compile(r"\b(am\s+i\s+(being\s+)?hacked)\b", re.I),
+    re.compile(r"^(research|study|investigate|learn\s+about|deep\s+dive)\b", re.I),
+    re.compile(r"^(summarize|fact\s+check|verify)\b", re.I),
+    re.compile(r"\b(dns|domain)\s+(filter|block|status)\b", re.I),
+    re.compile(r"^(add|register)\s+(smart\s+)?device\b", re.I),
+    re.compile(r"\bsystem\s+(info|information|status|health)\b", re.I),
+    re.compile(r"\bport\s+scan\b", re.I),
+    re.compile(r"\bscan\s+ports?\b", re.I),
+    re.compile(r"\b(switch|power)\s+(on|off)\b", re.I),
+    re.compile(r"\bwho\s+is\s+on\s+my\s+network\b", re.I),
+]
+
+
+def is_action_intent(question: str) -> bool:
+    """Detect if a question is an action command rather than a knowledge query."""
+    q = question.strip()
+    if len(q) < 3:
+        return False
+    return any(p.search(q) for p in ACTION_PATTERNS)
