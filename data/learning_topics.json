@@ -1367,8 +1367,26 @@
       "priority": "medium",
       "enabled": false,
       "added_at": "2026-06-28T06:20:35.176220+00:00"
+    },
+    {
+      "name": "test_topic_2e856e90",
+      "priority": "low",
+      "enabled": true,
+      "added_at": "2026-06-28T06:29:52.769318+00:00"
+    },
+    {
+      "name": "dup_test_4a31ea8b",
+      "priority": "low",
+      "enabled": true,
+      "added_at": "2026-06-28T06:29:52.849556+00:00"
+    },
+    {
+      "name": "toggle_test_8f41663d",
+      "priority": "medium",
+      "enabled": false,
+      "added_at": "2026-06-28T06:29:52.930536+00:00"
     }
   ],
   "auto_discover": true,
-  "last_updated": "2026-06-28T06:20:35.178770+00:00"
+  "last_updated": "2026-06-28T06:29:52.932613+00:00"
 }
