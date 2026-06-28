@@ -28,6 +28,8 @@ from flask_wtf.csrf import CSRFProtect
 from admin import admin_bp, _is_safe_url
 from knowledge_base import KNOWLEDGE, get_domains
 from neural_network import ACTIVATIONS, OPTIMIZERS, NeuralNetwork
+from api_v1 import api_v1_bp
+from saas_db import init_saas_app
 from project_memory import (
     build_startup_context,
     cache_response,
@@ -127,20 +129,42 @@ except ImportError:
 
 try:
     from conversation_engine import (
-        ConversationContext, enrich_with_context,
+        ConversationContext, enrich_with_context, is_action_intent,
     )
     _CONVERSATION_AVAILABLE = True
 except ImportError:
     _CONVERSATION_AVAILABLE = False
 
+# Agent framework (optional — graceful if not yet available)
+try:
+    from agent_executor import get_executor as _get_agent_executor
+    from skill_registry import get_registry as _get_skill_registry
+    from skills.network_scanner import NetworkScannerSkill
+    from skills.file_monitor import FileMonitorSkill
+    from skills.malware_scanner import MalwareScannerSkill
+    from skills.firewall_manager import FirewallManagerSkill
+    from skills.vpn_manager import VPNManagerSkill
+    from skills.dns_filter import DNSFilterSkill
+    from skills.smart_home import SmartHomeSkill
+    from skills.web_automation import WebAutomationSkill
+    from skills.research_agent import ResearchAgentSkill
+    _AGENT_AVAILABLE = True
+except ImportError:
+    _AGENT_AVAILABLE = False
+
 app = Flask(__name__)
 app.secret_key = os.environ.get("FLASK_SECRET_KEY") or secrets.token_hex(32)
+default_db_path = (Path(__file__).resolve().parent / "data" / "libaix_saas.db").as_posix()
+app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("SQLALCHEMY_DATABASE_URI") or os.environ.get("DATABASE_URL") or f"sqlite:///{default_db_path}"
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+init_saas_app(app)
 csrf = CSRFProtect(app)
 # Only enforce CSRF on the admin blueprint (HTML forms).
 # Public JSON API endpoints are exempt — they check session auth
 # and require Content-Type: application/json which simple forms can't set.
 app.config["WTF_CSRF_CHECK_DEFAULT"] = False
 app.register_blueprint(admin_bp)
+app.register_blueprint(api_v1_bp)
 
 
 # ── Rate limiting (in-memory token bucket) ────────────────────────────
@@ -338,6 +362,27 @@ if _REASONING_AVAILABLE and not _is_testing:
         print("Reasoning engine: knowledge base built.")
     except Exception as _e:
         print(f"Note: Reasoning engine init skipped ({type(_e).__name__}: {_e})")
+
+# Agent framework init — register all skills
+if _AGENT_AVAILABLE and not _is_testing:
+    try:
+        _agent_registry = _get_skill_registry()
+        for _SkillClass in (
+            NetworkScannerSkill,
+            FileMonitorSkill,
+            MalwareScannerSkill,
+            FirewallManagerSkill,
+            VPNManagerSkill,
+            DNSFilterSkill,
+            SmartHomeSkill,
+            WebAutomationSkill,
+            ResearchAgentSkill,
+        ):
+            _agent_registry.register(_SkillClass())
+        print(f"Agent framework: {len(_agent_registry.list_skills())} skills registered.")
+    except Exception as _e:
+        print(f"Note: Agent framework init skipped ({type(_e).__name__}: {_e})")
+
 print()
 
 
@@ -657,6 +702,42 @@ def chat():
                 "suggestions": [],
                 "research": result,
             })
+
+    # ── Agent action detection ────────────────────────────────────────
+    # If the user input looks like an action command, try the agent framework.
+    if _AGENT_AVAILABLE and _CONVERSATION_AVAILABLE and is_action_intent(question):
+        try:
+            executor = _get_agent_executor()
+            agent_result = executor.process_message(question)
+            if agent_result.get("action_taken"):
+                skill_result = agent_result.get("result")
+                return jsonify({
+                    "answer": agent_result.get("message", "Action completed."),
+                    "confidence": 1.0,
+                    "domain": "agent",
+                    "suggestions": [],
+                    "agent": {
+                        "skill": agent_result.get("skill", ""),
+                        "command": agent_result.get("command", ""),
+                        "success": skill_result.success if skill_result else False,
+                        "data": skill_result.data if skill_result else {},
+                        "task_id": agent_result.get("task_id"),
+                    },
+                })
+            if agent_result.get("requires_confirmation"):
+                return jsonify({
+                    "answer": agent_result.get("message", "This action requires confirmation."),
+                    "confidence": 1.0,
+                    "domain": "agent",
+                    "suggestions": [],
+                    "agent": {
+                        "requires_confirmation": True,
+                        "skill": agent_result.get("skill", ""),
+                        "command": agent_result.get("command", ""),
+                    },
+                })
+        except Exception:
+            pass  # Fall through to regular Q&A
 
     # Regular Q&A — requires loaded model
     if knowledge_model is None or knowledge_bow is None:
@@ -1683,6 +1764,83 @@ def stats_all():
     except Exception:
         pass
     return jsonify(stats)
+
+
+# ── Agent framework endpoints ─────────────────────────────────────────
+
+@app.route("/agent/skills", methods=["GET"])
+def agent_skills():
+    """List all registered agent skills and their commands."""
+    if not _AGENT_AVAILABLE:
+        return jsonify({"error": "Agent framework not available"}), 503
+    registry = _get_skill_registry()
+    return jsonify({"skills": registry.list_skills()})
+
+
+@app.route("/agent/execute", methods=["POST"])
+@csrf.exempt
+def agent_execute():
+    """Execute an agent skill command directly."""
+    rl = _rate_limit("chat")
+    if rl:
+        return jsonify(rl[0]), rl[1]
+    if not _AGENT_AVAILABLE:
+        return jsonify({"error": "Agent framework not available"}), 503
+    data = request.get_json(force=True)
+    skill_name = str(data.get("skill", "")).strip()
+    command = str(data.get("command", "")).strip()
+    args = data.get("args", {})
+    if not skill_name or not command:
+        return jsonify({"error": "skill and command are required"}), 400
+    executor = _get_agent_executor()
+    task = executor.execute_task(skill_name, command, args)
+    return jsonify({
+        "task_id": task.task_id,
+        "status": task.status,
+        "result": task.result,
+        "error": task.error,
+    })
+
+
+@app.route("/agent/tasks", methods=["GET"])
+def agent_tasks():
+    """List active agent tasks."""
+    if not _AGENT_AVAILABLE:
+        return jsonify({"error": "Agent framework not available"}), 503
+    executor = _get_agent_executor()
+    tasks = executor.list_active_tasks()
+    return jsonify({
+        "tasks": [
+            {
+                "task_id": t.task_id,
+                "skill": t.skill_name,
+                "command": t.command,
+                "status": t.status,
+                "background": t.background,
+            }
+            for t in tasks
+        ]
+    })
+
+
+@app.route("/agent/task/<task_id>", methods=["GET"])
+def agent_task_status(task_id: str):
+    """Check the status of a specific agent task."""
+    if not _AGENT_AVAILABLE:
+        return jsonify({"error": "Agent framework not available"}), 503
+    executor = _get_agent_executor()
+    task = executor.get_task_status(task_id)
+    if task is None:
+        return jsonify({"error": "Task not found"}), 404
+    return jsonify({
+        "task_id": task.task_id,
+        "skill": task.skill_name,
+        "command": task.command,
+        "status": task.status,
+        "result": task.result,
+        "error": task.error,
+        "background": task.background,
+    })
 
 
 if __name__ == "__main__":

@@ -1,0 +1,37 @@
+[
+  {
+    "name": "living room lights",
+    "type": "light",
+    "protocol": "http",
+    "endpoint": "http://192.168.1.100/api/light",
+    "state": "off"
+  },
+  {
+    "name": "TV",
+    "type": "tv",
+    "protocol": "http",
+    "endpoint": "http://192.168.1.101/api/power",
+    "state": "off"
+  },
+  {
+    "name": "thermostat",
+    "type": "thermostat",
+    "protocol": "homeassistant",
+    "endpoint": "http://homeassistant.local:8123/api/services/climate/set_hvac_mode",
+    "state": "unknown"
+  },
+  {
+    "name": "bedroom lights",
+    "type": "light",
+    "protocol": "mqtt",
+    "endpoint": "home/bedroom/lights/set",
+    "state": "off"
+  },
+  {
+    "name": "test_toaster_xyz",
+    "type": "generic",
+    "protocol": "http",
+    "endpoint": "",
+    "state": "unknown"
+  }
+]

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>libaix — AI Knowledge Assistant</title>
+  <title>libaix — Trade AI Coach</title>
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
     body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:#0d1117;color:#e6edf3;min-height:100vh;display:flex;flex-direction:column}
@@ -149,6 +149,13 @@
     .xp-fill{height:100%;background:linear-gradient(90deg,#1f6feb,#bc8cff);border-radius:4px;transition:width .5s ease}
     .xp-text{font-size:.75rem;color:#8b949e;min-width:120px;text-align:right}
     .xp-streak{font-size:.75rem;color:#d29922;font-weight:600}
+    .trade-onboard{margin:.8rem 0;padding:.7rem .8rem;background:#161b22;border:1px solid #30363d;border-radius:10px;display:flex;gap:.6rem;align-items:center;flex-wrap:wrap}
+    .trade-onboard .label{font-size:.75rem;color:#8b949e;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+    .trade-onboard select{padding:.45rem .6rem;border-radius:6px;border:1px solid #30363d;background:#0d1117;color:#e6edf3;font-size:.85rem;min-width:200px}
+    .trade-onboard .btn-mini{padding:.45rem .8rem;border:none;border-radius:8px;background:linear-gradient(135deg,#1f6feb,#388bfd);color:#fff;font-size:.8rem;font-weight:700;cursor:pointer}
+    .trade-onboard .state{font-size:.75rem;color:#8b949e}
+    .trade-disclaimer{margin:.2rem 0 .8rem;padding:.6rem .7rem;border-radius:8px;border:1px solid #d29922;background:#d2992218;color:#f2cc60;font-size:.8rem;display:none}
+    .trade-disclaimer.show{display:block}
 
     /* Achievement toast */
     .ach-toast{position:fixed;top:80px;right:20px;background:#161b22;border:2px solid #3fb950;border-radius:12px;padding:1rem 1.2rem;color:#e6edf3;font-size:.85rem;z-index:9999;animation:slideIn .4s ease,fadeOut .4s ease 3.6s forwards;box-shadow:0 8px 32px rgba(0,0,0,.4);max-width:320px}
@@ -207,9 +214,16 @@
       <span class="xp-streak" id="xpStreak"></span>
     </div>
     <div class="chat-container">
+      <div class="trade-onboard">
+        <span class="label">Trade Pack</span>
+        <select id="tradeSelect"><option value="">Loading packs…</option></select>
+        <button class="btn-mini" id="tradeApplyBtn" onclick="applyTradePack()">Apply</button>
+        <span class="state" id="tradeState"></span>
+      </div>
+      <div class="trade-disclaimer" id="tradeDisclaimer"></div>
       <div class="chat-messages" id="chatMessages" role="log" aria-live="polite" aria-label="Chat messages">
         <div class="msg bot">
-          👋 Hello! I'm <strong>libaix</strong>, a neural network built from scratch with NumPy.<br>
+          👋 Hello! I'm <strong>libaix</strong>, your private trade-focused AI coach.<br>
           I know about <strong>networking</strong>, <strong>security</strong>, <strong>programming</strong>, <strong>algorithms</strong>, <strong>Git</strong>, <strong>debugging</strong>, and <strong>testing</strong>.<br>
           Ask me anything! Type <em>help</em> for topic ideas.
         </div>
@@ -227,7 +241,7 @@
         <button onclick="openQuiz()" style="border-color:#bc8cff;color:#bc8cff">🎮 Quiz</button>
       </div>
       <div class="chat-input-wrap">
-        <input type="text" class="chat-input" id="chatInput" placeholder="Ask me about networking, internet, security…" autocomplete="off" aria-label="Ask a question">
+        <input type="text" class="chat-input" id="chatInput" placeholder="Ask about your trade, safety, troubleshooting, or workflow…" autocomplete="off" aria-label="Ask a question">
         <button class="send-btn" id="sendBtn" onclick="sendChat()">Send</button>
       </div>
     </div>
@@ -516,6 +530,63 @@
 
     function askQuick(q) { chatInput.value = q; sendChat(); }
 
+
+    let _tradePacks = [];
+
+    async function initTradePackUI() {
+      try {
+        const [packsRes, cfgRes] = await Promise.all([
+          fetch('/api/v1/trade-packs').then(r => r.json()),
+          fetch('/api/v1/config').then(r => r.json()).catch(() => ({})),
+        ]);
+
+        _tradePacks = Array.isArray(packsRes.trades) ? packsRes.trades : [];
+        const select = document.getElementById('tradeSelect');
+        select.innerHTML = _tradePacks.map(t => `<option value="${escapeHtml(t.id)}">${escapeHtml(t.name)}</option>`).join('');
+
+        const active = (cfgRes && cfgRes.active_trade) || packsRes.active_trade || 'networking';
+        if (active) select.value = active;
+        setTradeDisclaimer(active);
+      } catch (_) {
+        const state = document.getElementById('tradeState');
+        if (state) state.textContent = 'Trade packs unavailable';
+      }
+    }
+
+    function setTradeDisclaimer(tradeId) {
+      const el = document.getElementById('tradeDisclaimer');
+      const pack = (_tradePacks || []).find(p => p.id === tradeId);
+      const list = pack && Array.isArray(pack.disclaimers) ? pack.disclaimers.filter(Boolean) : [];
+      if (!list.length) {
+        el.classList.remove('show');
+        el.textContent = '';
+        return;
+      }
+      el.innerHTML = '<strong>Safety / Legal:</strong> ' + list.map(escapeHtml).join(' · ');
+      el.classList.add('show');
+    }
+
+    async function applyTradePack() {
+      const select = document.getElementById('tradeSelect');
+      const state = document.getElementById('tradeState');
+      const trade_id = select.value;
+      if (!trade_id) return;
+
+      state.textContent = 'Applying…';
+      const res = await fetch('/api/v1/onboarding/select-trade', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({trade_id}),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        state.textContent = data.error || 'Sign in required for tenant-level change';
+      } else {
+        state.textContent = 'Applied';
+      }
+      setTradeDisclaimer(trade_id);
+    }
+
     function escapeHtml(str) {
       const d = document.createElement('div');
       d.textContent = str;
@@ -569,7 +640,22 @@
         });
         const d = await res.json();
         if (d.error) { addMsg('⚠️ ' + d.error, false); }
-        else { addMsg(d.answer, false, d); handleGameEvents(d.game); trackConversation(q, d); }
+        else {
+          addMsg(d.answer, false, d);
+          handleGameEvents(d.game);
+          trackConversation(q, d);
+          fetch('/api/v1/analytics/query-feedback', {
+            method: 'POST',
+            headers: {'Content-Type':'application/json'},
+            body: JSON.stringify({
+              question: q,
+              domain: d.domain || 'general',
+              confidence: Number(d.confidence || 0),
+              answered: Boolean(d.answer),
+              strategy: d.strategy || ''
+            })
+          }).catch(() => {});
+        }
       } catch(e) { addMsg('⚠️ Network error: ' + e.message, false); }
       btn.disabled = false;
       chatInput.focus();
@@ -1138,6 +1224,8 @@
       if (name === 'boil') { loadBoilStatus(); loadBoilLog(); }
       if (name === 'dashboard') loadDashboard();
     };
+
+    initTradePackUI();
   </script>
 </body>
 </html>

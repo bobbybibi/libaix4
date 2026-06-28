@@ -55,6 +55,7 @@ Files included for hosting: `passenger_wsgi.py`, `.htaccess`
 | Feature | Details |
 |---|---|
 | **AI Chat** | Knowledge Q&A chatbot (networking, security, internet, intranet, wifi) |
+| **Agent Framework** | Action-oriented skill system — scan networks, control devices, automate tasks |
 | **Admin Dashboard** | `/admin` — manage knowledge, crawlers, file uploads, ML engine |
 | **Retrieval Engine** | TF-IDF cosine nearest-question retrieval (`retrieval.py`) — answers instantly with no training; preferred over the classifier when its index is present |
 | **ML Self-Optimization** | Auto-optimizes hyperparameters, stabilizes training, prevents forgetting |
@@ -63,6 +64,84 @@ Files included for hosting: `passenger_wsgi.py`, `.htaccess`
 | **Local Scheduler** | Background automation for crawling, training, and ML growth cycles |
 | **Self-Deploying** | `start.py` / `start.sh` / `start.bat` — zero-config launch |
 | **No ML Frameworks** | Pure NumPy neural network — no TensorFlow/PyTorch needed |
+
+### Agent Skills (Bodyguard AI)
+
+libaix includes a modular agent framework with 9 built-in skills across 4 categories:
+
+| Skill | Category | Commands | Description |
+|---|---|---|---|
+| **Network Scanner** | security | `scan_network`, `scan_ports`, `check_connections`, `detect_suspicious` | Scan networks for devices, open ports, and suspicious activity |
+| **File Monitor** | security | `check_processes`, `watch_directory`, `check_directory_changes`, `system_info` | Monitor files and processes for suspicious changes |
+| **Malware Scanner** | security | `scan_file`, `scan_directory`, `update_signatures`, `quarantine_file` | Scan files against known malware hash signatures |
+| **Firewall Manager** | security | `block_ip`, `unblock_ip`, `list_rules`, `firewall_status` | Manage OS firewall rules (iptables/netsh) |
+| **VPN Manager** | network | `vpn_connect`, `vpn_disconnect`, `vpn_status`, `vpn_config` | Manage VPN connections (WireGuard/OpenVPN) |
+| **DNS Filter** | network | `block_domain`, `unblock_domain`, `list_blocked`, `dns_status` | Block malicious/tracking domains at DNS level |
+| **Smart Home** | device | `device_on`, `device_off`, `list_devices`, `device_status`, `add_device` | Control smart home devices (HTTP/MQTT/Home Assistant) |
+| **Web Automation** | automation | `fetch_page`, `extract_links`, `search_web`, `monitor_page` | Automate web tasks — fetch, extract, monitor pages |
+| **Research Agent** | automation | `research_topic`, `summarize_url`, `compare_topics`, `fact_check` | Research any topic from multiple sources |
+
+**Usage:** Just tell libaix what you want in natural language:
+- *"scan my network"* → Network Scanner runs ARP discovery
+- *"turn on the TV"* → Smart Home sends power-on command
+- *"block ip 10.0.0.5"* → Firewall Manager adds a block rule
+- *"am I being hacked?"* → Network Scanner checks for suspicious connections
+- *"research quantum computing"* → Research Agent fetches from Wikipedia + web
+- *"scan /home for malware"* → Malware Scanner checks file hashes
+
+**Agent API endpoints:**
+- `GET /agent/skills` — List all registered skills and commands
+- `POST /agent/execute` — Execute a skill command directly (`{"skill": "...", "command": "...", "args": {...}}`)
+- `GET /agent/tasks` — List active background tasks
+- `GET /agent/task/<id>` — Check task status
+
+
+## SaaS Productization Foundation
+
+This repository now includes initial SaaS scaffolding for web + mobile clients:
+
+- **Multi-tenant database layer** (`saas_db.py`) with tenants, users, subscriptions, analytics events
+- **Versioned API** (`api_v1.py`) under `/api/v1` for auth, onboarding, plans, chat/research wrappers, analytics capture
+- **Background job queue** (`job_queue.py`, `worker.py`) using Redis + RQ for research/retraining/retriever rebuild jobs
+- **Container deployment** (`Dockerfile`, `docker-compose.yml`, `.env.example`) with web + worker + Postgres + Redis
+- **Web onboarding UX** in `templates/index.html` for trade-pack selection and trade disclaimers
+
+### API v1 quick endpoints
+
+- `GET /api/v1/health`
+- `POST /api/v1/auth/register`
+- `POST /api/v1/auth/login`
+- `POST /api/v1/onboarding/select-trade`
+- `GET /api/v1/billing/plans`
+- `POST /api/v1/billing/subscribe`
+- `POST /api/v1/chat`
+- `POST /api/v1/research`
+- `POST /api/v1/analytics/query-feedback`
+
+### Docker quick start
+
+```bash
+docker compose up --build
+```
+
+Then open `http://localhost:5000`.
+
+### FTP Website Deployment (photon-bounce)
+
+A workflow is included at `.github/workflows/deploy-ftp.yml` to deploy `site/` to your FTP host and remote subfolder.
+It automatically performs a backup of existing remote content before replacing it.
+
+Required GitHub repository secrets:
+
+- `FTP_HOST` (example: `ftp.photon-bounce.com`)
+- `FTP_USER`
+- `FTP_PASS`
+- `FTP_REMOTE_DIR` (optional; defaults to `/libaix`)
+
+The workflow runs on:
+
+- manual dispatch (`workflow_dispatch`)
+- pushes to `main` that modify `site/**`
 
 ## Project Assistant
 
@@ -101,7 +180,7 @@ libaix/
 ├── start.py                  # ⭐ Self-deploying launcher (run this!)
 ├── start.sh                  # One-click launcher (Linux/Mac)
 ├── start.bat                 # One-click launcher (Windows)
-├── app.py                    # Flask web server (chat, playground, API)
+├── app.py                    # Flask web server (chat, playground, API, agent)
 ├── admin.py                  # Admin dashboard blueprint
 ├── neural_network.py         # Core neural network (forward/backward/train)
 ├── vectorizer.py             # Bag-of-words text vectorizer with TF-IDF
@@ -109,9 +188,23 @@ libaix/
 ├── knowledge_base.py         # Curated Q&A knowledge entries
 ├── train_knowledge.py        # Knowledge classifier training pipeline
 ├── ml_engine.py              # ML self-optimization engine
+├── skill_registry.py         # Agent skill framework — base class, registry, intent router
+├── agent_executor.py         # Agent task executor with background execution
+├── skills/                   # Pluggable agent skills
+│   ├── network_scanner.py    # Network scanning (ARP, port scan, connections)
+│   ├── file_monitor.py       # File/process monitoring, directory snapshots
+│   ├── malware_scanner.py    # Malware hash scanning, quarantine
+│   ├── firewall_manager.py   # OS firewall management (iptables/netsh)
+│   ├── vpn_manager.py        # VPN client integration (WireGuard/OpenVPN)
+│   ├── dns_filter.py         # DNS-level domain blocking
+│   ├── smart_home.py         # Smart home device control (HTTP/MQTT/HA)
+│   ├── web_automation.py     # Web automation (fetch, extract, monitor)
+│   └── research_agent.py     # Multi-source research agent
 ├── crawler.py                # Wikipedia knowledge crawler
 ├── forum_crawler.py          # Forum crawler (StackExchange, Reddit, etc.)
 ├── local_scheduler.py        # Background job scheduler
+├── conversation_engine.py    # Conversation context + action intent detection
+├── reasoning_engine.py       # Deductive reasoning engine
 ├── passenger_wsgi.py         # WSGI entry for shared hosting
 ├── scripts/
 │   └── build_retrieval_index.py  # Builds the retrieval index

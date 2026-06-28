@@ -1,0 +1,41 @@
+services:
+  web:
+    build: .
+    command: python app.py
+    ports:
+      - "5000:5000"
+    environment:
+      FLASK_SECRET_KEY: ${FLASK_SECRET_KEY:-dev-secret-change-me}
+      DATABASE_URL: ${DATABASE_URL:-postgresql+psycopg2://libaix:libaix@postgres:5432/libaix}
+      SQLALCHEMY_DATABASE_URI: ${SQLALCHEMY_DATABASE_URI:-postgresql+psycopg2://libaix:libaix@postgres:5432/libaix}
+      REDIS_URL: ${REDIS_URL:-redis://redis:6379/0}
+    depends_on:
+      - postgres
+      - redis
+
+  worker:
+    build: .
+    command: python worker.py
+    environment:
+      DATABASE_URL: ${DATABASE_URL:-postgresql+psycopg2://libaix:libaix@postgres:5432/libaix}
+      SQLALCHEMY_DATABASE_URI: ${SQLALCHEMY_DATABASE_URI:-postgresql+psycopg2://libaix:libaix@postgres:5432/libaix}
+      REDIS_URL: ${REDIS_URL:-redis://redis:6379/0}
+      LIBAIX_QUEUE: ${LIBAIX_QUEUE:-libaix}
+    depends_on:
+      - postgres
+      - redis
+
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: libaix
+      POSTGRES_PASSWORD: libaix
+      POSTGRES_DB: libaix
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7-alpine
+
+volumes:
+  postgres_data:
