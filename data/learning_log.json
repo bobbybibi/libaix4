@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-04-01T23:56:15.078928+00:00",
-    "source": "forum_crawler",
-    "topic": "Network Troubleshooting",
-    "entries": 635,
-    "source_breakdown": {
-      "stackexchange": 506,
-      "hackernews": 129
-    }
-  },
-  {
     "timestamp": "2026-04-01T23:59:04.641738+00:00",
     "source": "forum_crawler",
     "topic": "Firewall Configuration",
@@ -4997,6 +4987,16 @@
     "source_breakdown": {
       "stackexchange": 363,
       "hackernews": 98
+    }
+  },
+  {
+    "timestamp": "2026-07-01T01:41:24.120566+00:00",
+    "source": "forum_crawler",
+    "topic": "Firewall Configuration",
+    "entries": 516,
+    "source_breakdown": {
+      "stackexchange": 398,
+      "hackernews": 118
     }
   }
 ]

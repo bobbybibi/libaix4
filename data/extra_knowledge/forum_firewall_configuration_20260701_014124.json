@@ -1,0 +1,20 @@
+[
+  {
+    "question": "How to properly unban an IP address which Fail2Ban banned?",
+    "answer": "I'm using Fail2Ban on a server and I'm wondering how to properly unban an IP address.\nI know I can work with iptables directly, but is there no way to do it with fail2ban-client?\nIn the manuals it states something like: fail2ban-client get ssh actionunban <IP>, but that doesn't work with my version.",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:285256"
+  },
+  {
+    "question": "What is I know I can work with iptables directly, but?",
+    "answer": "I know I can work with iptables directly, but is there no way to do it with fail2ban-client?.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:285256"
+  },
+  {
+    "question": "Tell me about IPTables",
+    "answer": "How could I rate limit using IPTables based on incoming IP addresses?.",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:384132"
+  }
+]
