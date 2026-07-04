@@ -1,45 +1,5 @@
 [
   {
-    "timestamp": "2026-04-01T23:59:04.641738+00:00",
-    "source": "forum_crawler",
-    "topic": "Firewall Configuration",
-    "entries": 522,
-    "source_breakdown": {
-      "stackexchange": 401,
-      "hackernews": 121
-    }
-  },
-  {
-    "timestamp": "2026-04-02T00:02:05.894729+00:00",
-    "source": "forum_crawler",
-    "topic": "VPN Setup",
-    "entries": 563,
-    "source_breakdown": {
-      "stackexchange": 421,
-      "hackernews": 142
-    }
-  },
-  {
-    "timestamp": "2026-04-02T00:04:56.733377+00:00",
-    "source": "forum_crawler",
-    "topic": "Network Monitoring",
-    "entries": 467,
-    "source_breakdown": {
-      "stackexchange": 361,
-      "hackernews": 106
-    }
-  },
-  {
-    "timestamp": "2026-04-02T01:55:26.955505+00:00",
-    "source": "forum_crawler",
-    "topic": "Wi-Fi Security",
-    "entries": 487,
-    "source_breakdown": {
-      "stackexchange": 359,
-      "hackernews": 128
-    }
-  },
-  {
     "timestamp": "2026-04-02T01:58:28.815192+00:00",
     "source": "forum_crawler",
     "topic": "Network Troubleshooting",
@@ -4997,6 +4957,43 @@
     "source_breakdown": {
       "stackexchange": 398,
       "hackernews": 118
+    }
+  },
+  {
+    "timestamp": "2026-07-04T16:17:13.539419+00:00",
+    "source": "forum_crawler",
+    "topic": "Network Troubleshooting",
+    "entries": 419,
+    "source_breakdown": {
+      "stackexchange": 288,
+      "hackernews": 131
+    }
+  },
+  {
+    "timestamp": "2026-07-04T16:19:44.146934+00:00",
+    "source": "forum_crawler",
+    "topic": "Firewall Configuration",
+    "entries": 130,
+    "source_breakdown": {
+      "hackernews": 130
+    }
+  },
+  {
+    "timestamp": "2026-07-04T16:22:19.255830+00:00",
+    "source": "forum_crawler",
+    "topic": "VPN Setup",
+    "entries": 161,
+    "source_breakdown": {
+      "hackernews": 161
+    }
+  },
+  {
+    "timestamp": "2026-07-04T16:24:50.880577+00:00",
+    "source": "forum_crawler",
+    "topic": "Network Monitoring",
+    "entries": 114,
+    "source_breakdown": {
+      "hackernews": 114
     }
   }
 ]

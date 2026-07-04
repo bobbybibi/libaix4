@@ -1,0 +1,50 @@
+[
+  {
+    "question": "Tell me about IPFIX",
+    "answer": "An OpenBSD box at the egress point exports IPFIX data to nfdump and I designed custom charts for myself using the legacy dygraphs.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about API",
+    "answer": "Godot (Node app that aims to be Riemann API-compatible) seems to be a better option for smaller scale operations.Right now the solution for many CI and webhook servers is to push events to Hipchat.",
+    "domain": "internet",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about PIX",
+    "answer": "The Cisco products mentioned were the Cisco PIX and Cisco ASA firewalls.> Source> The exploit of this vulnerability was publicly disclosed by the alleged Shadow Brokers group.",
+    "domain": "security",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about SNMP",
+    "answer": "In my experience the largest pain with SNMP comes from the fact that vendors usually provide their MIBs as a single huge pile of junk containing some random version of all the dependencies as well, with completely random file naming conventions.This means that trying to use two vendors' MIBs together with eg.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about OID",
+    "answer": "I don't know if there any way to actually tell which definitions will take precedence or whether the definition is correct.It also doesn't help that often the trap's translation is just as cryptic as the bare OID.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is What?",
+    "answer": "What are you crazy the wood screw installation professionals such as myself will not tolerate that, patch denied.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is Also?",
+    "answer": "Also, are people still using Nagios?.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about DB",
+    "answer": "Zabbix complementary system for live metric monitoring using:Zabbix Postgresql DB Notifications + Websocket server + Next.js Web Application.",
+    "domain": "internet",
+    "source": "hackernews"
+  }
+]

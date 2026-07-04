@@ -1,0 +1,116 @@
+[
+  {
+    "question": "Tell me about DNS",
+    "answer": "I put my domain name in the Private DNS settings of my Android and I get 24/7 adblocking without the hassle and battery drain of my Wireguard VPN (which I still use to access private stuff) I have a similar setup, but with AdGuardHome.",
+    "domain": "security",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about OS",
+    "answer": "I saw the docker compose package, but I wanted something that runs at the OS level.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is There?",
+    "answer": "There are docker packages for Wireguard too and I had also a look at Mistborn (https://gitlab.com/cyber5k/mistborn)3.",
+    "domain": "internet",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about DO",
+    "answer": "I tried streisand / wireguard setup awhile back (MacOS to DO server).",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about WG",
+    "answer": "It worked great until I tried to disconnect (it would save the old WG settings in my connection tables and then just keep me completely disconnected from the internet).",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about VPN",
+    "answer": "Given that our web browsing history will now be sold to the highest bidder[0], I'm no longer considering a VPN optional.",
+    "domain": "security",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about IPsec",
+    "answer": "It aims to be faster, simpler, leaner, and more useful than IPsec, while avoiding the massive headache.",
+    "domain": "security",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is WireGuard?",
+    "answer": "WireGuard is designed as a general purpose VPN for running on embedded interfaces and super computers alike, fit for many different circumstances.",
+    "domain": "security",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about VPNs",
+    "answer": "VPNs have become a more important piece of infrastructure now.",
+    "domain": "security",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about TCP",
+    "answer": "The overhead of layer 2/3 packet headers in OpenVPN did not cause such a huge slowdown, its much more likely that OpenVPN was operating in TCP mode, and thus subject to the tcp-in-tcp[1] problem with tunnel internal tcp sessions.",
+    "domain": "networking",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about UDP",
+    "answer": "Doesn't look like there were runs of iperf over UDP and TCP, with simulated buffer sizes, so hard to know what the network connection is even capable of.2.",
+    "domain": "networking",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about ISP",
+    "answer": "> Do not check use IPv6last time I set up an openvpn server on digitalocean without `tun-ipv6`, it leaked my ISP's ipv6 address to the internet while my ipv4 address was correct (a digitalocean address).",
+    "domain": "security",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about SSL",
+    "answer": "The material we found was sufficient for us to recreate the private key and impersonate the server.As you may know, OpenVPN has an SSL/TLS mode where certificates are used for authentication.",
+    "domain": "security",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about VM",
+    "answer": "However, until now there hasn't been any solid evidence that private key material can be extracted from OpenVPN just like it has from some web servers.This was the server setup we used:\nUbuntu 12.04 (VM using KVM)\nOpenVPN 2.2.1\nOpenSSL 1.0.1-4ubuntu5.11Our exploit is decently weaponized, and while the code is an abomination that even Eris would be embarrassed to present, we believe it may severely impact those who have not already upgraded.",
+    "domain": "security",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about SSH",
+    "answer": "Is there an advantage of using SSH VPN instead of SSH as a SOCKS proxy?.",
+    "domain": "security",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is They?",
+    "answer": "They are calling the project algo.https://github.com/trailofbits/algo I don't know Ansible very well...",
+    "domain": "internet",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is OpenVPN?",
+    "answer": "OpenVPN is meant for access control to/between private networks, not for skirting public access controls put in place on your immediate, local upstream.",
+    "domain": "security",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about WAN",
+    "answer": "Here's what he actually said:\"Our team (FreeS/WAN) built the Linux implementation of IPSEC, but at least while I was involved in it, the packet processing code never became a default part of the Linux kernel, because of bullheadedness in the maintainer who managed that part of the kernel.",
+    "domain": "security",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about NAT",
+    "answer": "How's the performance of this utilizing the Docker controlled NAT?.",
+    "domain": "networking",
+    "source": "hackernews"
+  }
+]

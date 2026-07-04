@@ -1,0 +1,14 @@
+[
+  {
+    "question": "Tell me about CPU",
+    "answer": "It's pretty much zero effort, low CPU and low bandwidth usage.These days mainly just as a backup for when Discord lags, which over the past few weeks has been often.",
+    "domain": "networking",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about DNS",
+    "answer": "\"We want to give you further information regarding the occasional DNS resolution errors.",
+    "domain": "internet",
+    "source": "hackernews"
+  }
+]

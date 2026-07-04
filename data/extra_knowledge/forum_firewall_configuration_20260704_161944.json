@@ -1,0 +1,68 @@
+[
+  {
+    "question": "Tell me about VPN",
+    "answer": "I created Firezone to make it easier to host and manage your own WireGuard VPN server.",
+    "domain": "security",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about NAT",
+    "answer": "Firezone builds on that and also handles NAT traversal, so you don’t need to change your firewall configuration to use it.",
+    "domain": "networking",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about VPS",
+    "answer": "Came up with some fun iptables rules for securing my servers and I'd like to test out how effective they are, so here's a challenge for you all!There's a VPS on 152.70.178.90 with a quite unique firewall configuration.",
+    "domain": "security",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is This?",
+    "answer": "This is not real DDoS protection since it does not deal with jamming the pipes.",
+    "domain": "security",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about IP",
+    "answer": "For complex setups you sooner or later have to dynamically add/remove rules, based on values only known at runtime (such as an IP address obtained by DHCP).",
+    "domain": "networking",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is What?",
+    "answer": "What is this guy talking about??.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about GUI",
+    "answer": "But on the other hand I know it’s very easy to install, just a one-liner in the GUI of pfSense (which is how I found out about it).",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is PfSense?",
+    "answer": "PfSense is great, I've been using it for a few years.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about TCP",
+    "answer": "There don't see to be any performance issues (running production database through it right now), and when running it at home it can even make my Internet seem faster when tunneling through it (probably because of some suboptimal TCP settings somewhere along the way, which seems common).",
+    "domain": "networking",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about VMs",
+    "answer": "meant that I had noticeable slowdowns when both VMs were active.I am giving VyOS a try - it's a debian based router distro and purely command line based but resource utilization wise it seems to be doing fine with 512Mb and single CPU.Anyone having a low power dedicated box for pfSense should just use pfSense though - the UI is way too good in 2.3 release and stuff just works - IPV6, Tunneling, VPN are very easy to configure along with a bunch of other things limited only by the box you're running it on.",
+    "domain": "networking",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about API",
+    "answer": "I'd really love to see an API or a unified configuration system.",
+    "domain": "internet",
+    "source": "hackernews"
+  }
+]
