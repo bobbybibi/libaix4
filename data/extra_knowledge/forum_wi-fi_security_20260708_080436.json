@@ -1,0 +1,20 @@
+[
+  {
+    "question": "What is discussed about Show HN: NovaSCM – open-source SCCM alternative (WPF and Python and SQLite)?",
+    "answer": "I built NovaSCM, a self-hosted fleet management tool inspired by Microsoft SCCM but free and open source.  Stack: C# WPF console (Windows), Python/Flask REST API, SQLite, cross-platform Python agent.\n\n  Features:\n  - Generates autounattend.xml for zero-touch Windows installs (USB/PXE)\n  - Network scanner (IP, MAC, vendor, open ports)\n  - Visual workflow editor for multi-step deployments (winget, PowerShell, reboot, registry...)\n  - WiFi 802.",
+    "domain": "internet",
+    "source": "hackernews:47287684"
+  },
+  {
+    "question": "Tell me about SCCM",
+    "answer": "I built NovaSCM, a self-hosted fleet management tool inspired by Microsoft SCCM but free and open source.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about WPF",
+    "answer": "Stack: C# WPF console (Windows), Python/Flask REST API, SQLite, cross-platform Python agent.",
+    "domain": "internet",
+    "source": "hackernews"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "question": "What is discussed about Show HN: We built instant Kubernetes provisioning with KVM and gRPC?",
+    "answer": "We've spent the last year building RunOS, a platform that spins up production-ready Kubernetes clusters in 5-10 minutes with databases, message queues, observability, and AI tooling configured.The ProblemEvery team rebuilds the same Kubernetes infrastructure: networking, certificates, monitoring, databases, storage. The existing solutions either lock you into a vendor ecosystem or dump you into raw Kubernetes complexity. We wanted the control of self-hosting without weeks of setup.",
+    "domain": "security",
+    "source": "hackernews:45936611"
+  },
+  {
+    "question": "Tell me about Version Management Hell",
+    "answer": "Centrally coordinated, locally executed.Version Management HellThe hardest problem?.",
+    "domain": "networking",
+    "source": "hackernews"
+  },
+  {
+    "question": "What does Keeping 20+ services compatible across updates.The platform provide?",
+    "answer": "Keeping 20+ services compatible across updates.The platform supports one-click installation of: PostgreSQL, MySQL, ClickHouse, Kafka, RabbitMQ, MinIO, Longhorn, Harbor, Traefik, Grafana, Prometheus, Ollama, LiteLLM, Open WebUI, and more.Each has opinions about K8s versions, storage, and networking.",
+    "domain": "troubleshooting",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about YAML",
+    "answer": "We use Helm charts, operators, and custom YAML as appropriate.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is real work?",
+    "answer": "The real work is maintaining compatibility matrices and testing every combination.Deployment ModelsManaged option: Dedicated servers with fixed 8 CPU/16GB instances.",
+    "domain": "networking",
+    "source": "hackernews"
+  }
+]

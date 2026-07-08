@@ -1,0 +1,38 @@
+[
+  {
+    "question": "Ask HN: What was your foot in the door?",
+    "answer": "I’ll share mine.  Would love to hear other stories/anecdotes as to how others got into tech.  I’m 44 and got my start in tech in 2009, after doing a myriad of other things, like carpentry, aircraft catering, assistant to an artist in the country-wide outdoor art fair circuit, etc.  (no college degree).  I didn’t mind any of those things, but never felt a “calling” for them.",
+    "domain": "networking",
+    "source": "hackernews:23229986"
+  },
+  {
+    "question": "What is So NOC Technician?",
+    "answer": "So NOC Technician is basically where it’s at for that to get a foot in the door.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about IRC",
+    "answer": "I was hanging out in an IRC channel for a local Linux user group, and lo and behold, there was a guy who worked in a local datacenter/hosting company.",
+    "domain": "wifi",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about OK",
+    "answer": "I got the manager contact from him, and basically called and emailed and bothered the hell out of him until he relented and said OK come work as an unpaid intern.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about DNS",
+    "answer": "I worked hard, learned and incredible amount there (they hired me on after a few weeks, albeit very cheaply of course)— DNS/network/webserver/troubleshooting, all the fundamentals, and there were incredibly smart and brilliant people there that I learned from.",
+    "domain": "wifi_security",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about ISPs",
+    "answer": "have worked at two very large ISPs/telecoms in Systems and Server Operations since then.",
+    "domain": "general",
+    "source": "hackernews"
+  }
+]
