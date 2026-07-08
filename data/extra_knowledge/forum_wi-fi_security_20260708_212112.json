@@ -1,0 +1,86 @@
+[
+  {
+    "question": "What is There?",
+    "answer": "There is a way to do smart card authentication to a LAN,where you would not be required to enter a password to connect and everything would be wpa2 encrypted.",
+    "domain": "wifi_security",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about VPN",
+    "answer": "If people don't have their own VPN,captive portal directs them to install/run  a VPN app where the VPN terminates at the AP or at a VPN provider you pay for (or better yet,work with one of the more reputable procviders to have an audited cross-platform VPN app).Back to the problem: even if everything used DNSSEC and TLS, a passive adversary can still see which sites you're going to.",
+    "domain": "security",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about MAC",
+    "answer": "I can find zero references to certificate solicitation attacks.> MAC address collectionModern devices randomize their MAC address for each new network they connect to.> Traffic timing and volume analysisThat's a thing you can do, but how is it an \"attack\"?> Certificate pinning can prevent Attacker-in-the-Middle (AITM) attacks for TLS/HTTPS connections.",
+    "domain": "internet",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about PSK",
+    "answer": "Without Multi-PSK, if it's not clear, every device that has the WiFi password can sniff encrypted traffic with WPA2, make a Rogue AP to attack WPA3 in case its in use, and can perform ARP spoofing on the network to interfere with other devices.",
+    "domain": "wifi_security",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about RADIUS",
+    "answer": "> Toggle the switch on the Smallstep RADIUS Root CA to enable Full Trust.",
+    "domain": "networking",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about SAE",
+    "answer": "WPA3 Personal seems to be another name for SAE that was defined in 802.11s > Wi-Fi Alliance is also introducing Wi-Fi CERTIFIED Easy Connect™, a new program that reduces the complexity of onboarding Wi-Fi devices with limited or no display interface – such as devices coming to market for Internet of Things (IoT) – while still maintaining high security standards.",
+    "domain": "wifi",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about HTTP",
+    "answer": "Summary:\n“[For HTTP/2], we just need to make sure that both requests are placed in a single packet (e.g.",
+    "domain": "internet",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about OS",
+    "answer": "That raises the question: which Raspberry Pi OS-compatible USB wi-fi adapters do happen to support WPA3?.",
+    "domain": "wifi",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is How?",
+    "answer": "How are competing boards with RockChip SoCs doing on this front?WiFi support is kind of a mess of nasty blobs across the board unless you go back to Wireless AC or N, though.",
+    "domain": "wifi",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is This?",
+    "answer": "This is oddly something about social proof - the upstream maintainer did not want to break cypress support but needed a high profile public confirmation that the cypress code was not working (presumably as a final straw that broke the camels back)This is (bit of a callback) exactly the sort of story I would like the new journalist at lwn.net to deep dive in, give us a nuanced, sympathetic story of what really happened and how such decisions are made.No blame - just good decisions.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about HTTPS",
+    "answer": "For some reason I'm surprised we've had so many issues with Wi-Fi security.I don't know if it was addressed in WPA3 (or if it would be addressed there), but my understanding is that a good chunk of the protocol isn't authenticated at all, such as the de-auth packets.In a world with growing HTTPS support, OpenVPN, WireGuard, etc.",
+    "domain": "internet",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about IP",
+    "answer": "Once I had that, I wanted quick access to core details—external IP, Wi-Fi data, and local topology.",
+    "domain": "wifi",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about DHCP",
+    "answer": "* Continuous “live ping” monitoring to visualize latency spikes, packet loss, and reconnects.Low-level Traffic (but only what matters):\n* Live capture of DHCP, ARP, 802.1X, LLDP/CDP, ICMP, and off-subnet chatter.",
+    "domain": "networking",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is What?",
+    "answer": "What are the general considerations for something like this?.",
+    "domain": "general",
+    "source": "hackernews"
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "question": "What is This?",
+    "answer": "This is a pretty good write up.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is What?",
+    "answer": "What are the odds this brings GCP closer to https://killedbygoogle.com/ ?Nobody pays retail for GCP anyways.",
+    "domain": "internet",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about UDP",
+    "answer": "It's a shame these have been locked up for so long -- there's a lot of network infrastructure that could be improved by them.The patents are hopefully expiring soon.Generic tornado codes are likely patent free, having been expired for a few years now: https://en.wikipedia.org/wiki/Tornado_codeEDIT: looking a bit deeper into this repo, it's really just a wrapper over the raptorq crate with a basic UDP layer on top.",
+    "domain": "internet",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about TCP",
+    "answer": "You'd need to open up a new type of socket (neither TCP nor UDP but nyxpsi) and everything along your network route would need to support it.",
+    "domain": "networking",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about IT",
+    "answer": "Within minutes, the fire brigade had been called and were on their way to rescue me.All I can think of when I read this is Maurice Moss (Richard Ayoade) from the IT Crowd sending an email about a fire in the office.Edit: Here is the clip for those who haven't seen it: https://www.youtube.com/watch?v=1EBfxjSFAxQ (Here is it queued up to the most relevant bit: https://youtu.be/1EBfxjSFAxQ?t=110).",
+    "domain": "internet",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about VPN",
+    "answer": "I just use a VPN connecting to a far away server so that the latency does go up and at the same time confuses the sites I’m visiting.",
+    "domain": "networking",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is It also?",
+    "answer": "It also is indicative of why people who really understand systems will always be so employable - it's just so hard to make things run well.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is There?",
+    "answer": "There is one \"site on the Internet\" being pinged, the author's personal site.",
+    "domain": "troubleshooting",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about URL",
+    "answer": "Because hashCode has to maintain certain relationships with equals, namely if two objects are equal, they should have the same hashCode, the implementation of hashCode also tries to resolve the host in the URL into an IP address.",
+    "domain": "networking",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about VMs",
+    "answer": "We're a somewhat popular hosting provider that runs Docker containers (as VMs) for our customers and does private networking over IPv6, which expands the size of our DNS requests, and we run into this all the time with Alpine.",
+    "domain": "internet",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about TLS",
+    "answer": "Let’s be honest: I don’t know how this serves any purpose, but if you do, please let me know!You can use that to- test weird dns setups- to issue proper TLS certificates (you can do that technically, but it's less known fact and some services like let's encrypt forbid that as their rule)- to utilize single IP and same port for multiple services (so just a common host/server configuration on typical reverse proxy, optionally with SNI to be used with TLS on top.",
+    "domain": "security",
+    "source": "hackernews"
+  }
+]

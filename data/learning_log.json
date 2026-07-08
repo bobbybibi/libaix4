@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-04-02T04:29:37.279810+00:00",
-    "source": "forum_crawler",
-    "topic": "Wi-Fi Security",
-    "entries": 487,
-    "source_breakdown": {
-      "stackexchange": 359,
-      "hackernews": 128
-    }
-  },
-  {
-    "timestamp": "2026-04-02T04:32:39.043588+00:00",
-    "source": "forum_crawler",
-    "topic": "Network Troubleshooting",
-    "entries": 635,
-    "source_breakdown": {
-      "stackexchange": 506,
-      "hackernews": 129
-    }
-  },
-  {
     "timestamp": "2026-04-02T04:35:32.983142+00:00",
     "source": "forum_crawler",
     "topic": "Firewall Configuration",
@@ -4994,6 +4974,24 @@
     "source_breakdown": {
       "stackexchange": 399,
       "hackernews": 113
+    }
+  },
+  {
+    "timestamp": "2026-07-08T21:21:12.591159+00:00",
+    "source": "forum_crawler",
+    "topic": "Wi-Fi Security",
+    "entries": 142,
+    "source_breakdown": {
+      "hackernews": 142
+    }
+  },
+  {
+    "timestamp": "2026-07-08T21:23:46.964905+00:00",
+    "source": "forum_crawler",
+    "topic": "Network Troubleshooting",
+    "entries": 142,
+    "source_breakdown": {
+      "hackernews": 142
     }
   }
 ]
