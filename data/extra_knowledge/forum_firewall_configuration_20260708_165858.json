@@ -1,0 +1,56 @@
+[
+  {
+    "question": "What is discussed about Moving from Iptables to Nftables?",
+    "answer": "My biggest beef with the nftables wiki is that I deploy and maintain numerous hand-crafted default-deny firewalls and their wiki does not allow me to update their wiki pages.I have done nftables default-deny to shorewall, firewalld, as well.  Wiki page needs updating rather badly.A request for an account fell on deaf ear.So, i had to resort to internal wiki pages instead.",
+    "domain": "security",
+    "source": "hackernews:36461998"
+  },
+  {
+    "question": "What is My biggest beef with the nftables wiki?",
+    "answer": "My biggest beef with the nftables wiki is that I deploy and maintain numerous hand-crafted default-deny firewalls and their wiki does not allow me to update their wiki pages.I have done nftables default-deny to shorewall, firewalld, as well.",
+    "domain": "security",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is discussed about How to Use Iptables?",
+    "answer": "For a full, visual explanation, I'd recommend checking https://stuffphilwrites.com/2014/09/iptables-processing-flow... to see the flowchart for multiple scenarios.",
+    "domain": "internet",
+    "source": "hackernews:40408013"
+  },
+  {
+    "question": "Ask HN: Have you used iptables to prevent procrastination?",
+    "answer": "After reading the comments on today's Disconnecting Distraction essay by PG (http://news.ycombinator.com/item?id=192654), I realized that I wanted to throttle my internet usage, not relegate it to a few times during the day.  That way, I could still spend some time online, but the \"Unable to connect\" page would set off alarms.",
+    "domain": "networking",
+    "source": "hackernews:192953"
+  },
+  {
+    "question": "Tell me about PG",
+    "answer": "After reading the comments on today's Disconnecting Distraction essay by PG (http://news.ycombinator.com/item?id=192654), I realized that I wanted to throttle my internet usage, not relegate it to a few times during the day.",
+    "domain": "networking",
+    "source": "hackernews"
+  },
+  {
+    "question": "What does Is there anyone out there who provide?",
+    "answer": "Is there anyone out there who uses iptables to prevent procrastination?Not having used iptables before, but knowing that I wasn't blocking anything because I'm behind a router firewall, I read the man page and implemented some rules that throttled my hourly connections to 200:  iptables -A OUTPUT -p !.",
+    "domain": "networking",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about ACCEPT",
+    "answer": "80 -j ACCEPT\n  iptables -A OUTPUT -p tcp --dport 80 -m limit --limit 400/hour --limit-burst 500 -j ACCEPT\n  iptables -A OUTPUT -j REJECT.",
+    "domain": "networking",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about DNS",
+    "answer": "Since I am using a windows server to run my DNS server (was forced to), I expected to setup a route on the DNS server to point to my pfsense's IP.",
+    "domain": "internet",
+    "source": "stackexchange:security:252404"
+  },
+  {
+    "question": "Tell me about UI",
+    "answer": "It's gotten better as it's got more commercial – better UI, more polished plugins, better features, etc.",
+    "domain": "general",
+    "source": "hackernews"
+  }
+]

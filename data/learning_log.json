@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-04-02T02:07:24.316214+00:00",
-    "source": "forum_crawler",
-    "topic": "Network Monitoring",
-    "entries": 467,
-    "source_breakdown": {
-      "stackexchange": 361,
-      "hackernews": 106
-    }
-  },
-  {
     "timestamp": "2026-04-02T04:29:37.279810+00:00",
     "source": "forum_crawler",
     "topic": "Wi-Fi Security",
@@ -4994,6 +4984,16 @@
     "source_breakdown": {
       "stackexchange": 398,
       "hackernews": 128
+    }
+  },
+  {
+    "timestamp": "2026-07-08T16:58:58.708037+00:00",
+    "source": "forum_crawler",
+    "topic": "Firewall Configuration",
+    "entries": 512,
+    "source_breakdown": {
+      "stackexchange": 399,
+      "hackernews": 113
     }
   }
 ]
