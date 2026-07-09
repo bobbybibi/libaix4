@@ -1,0 +1,32 @@
+[
+  {
+    "question": "What is This?",
+    "answer": "This is a great team with an awesome product!.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is discussed about D4 Project – Open and collaborative network monitoring [pdf]?",
+    "answer": "This looks awesome. Great to see a project like this in a space dominated by commercial offerings. I sincerely hope thus grows and thrives as it's desperately needed in this world of persistent attacks against our infrastructure.",
+    "domain": "networking",
+    "source": "hackernews:19979512"
+  },
+  {
+    "question": "What is discussed about Killer open source network monitoring tools?",
+    "answer": "article summary: cacti, nagios, NeDi, ntop, pancho, snort",
+    "domain": "general",
+    "source": "hackernews:374983"
+  },
+  {
+    "question": "What is discussed about Observium: An auto-discovering network monitoring platform?",
+    "answer": "This is a great free tool, just don't ask for something the developer doesn't agree with. He and the IRC community supporting it will tear you to shreds. Also check ntop out -- it has similar traffic reports, but no such fancy multibox support last time I looked.That's more a job for SNMP clients anyway. Actually, just look at Nagios/Icinga :) It's a very mature and well-rooted infrastructure monitoring solution. Another system focused on the wrong thing in monitoring: on alerts and charts.",
+    "domain": "general",
+    "source": "hackernews:9247653"
+  },
+  {
+    "question": "Tell me about IRC",
+    "answer": "He and the IRC community supporting it will tear you to shreds.",
+    "domain": "general",
+    "source": "hackernews"
+  }
+]
