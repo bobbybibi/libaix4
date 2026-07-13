@@ -1,0 +1,32 @@
+[
+  {
+    "question": "Tell me about PREROUTING",
+    "answer": "iptables -t nat -A PREROUTING -i $INTERNA -p tcp -m multiport --dports 80,443 -j REDIRECT --to-port 3128.",
+    "domain": "networking",
+    "source": "stackexchange:security:230227"
+  },
+  {
+    "question": "Tell me about DNAT",
+    "answer": "The second one (-j DNAT), worked fine while I was using an ACCEPT default policy, but now I need to set the default policy to DROP, and it's not working anymore.",
+    "domain": "networking",
+    "source": "stackexchange:security:230227"
+  },
+  {
+    "question": "Tell me about IPTABLES",
+    "answer": "$IPTABLES -N In_RULE_5\n$IPTABLES -A INPUT -i eth0  -p tcp -m tcp   --tcp-flags ACK,RST,SYN,FIN SYN  -m limit --limit 3/second --limit-burst 5 -j In_RULE_5\n$IPTABLES -A In_RULE_5  -j LOG  --log-level info --log-prefix \"SYN FLOOD: \"\n$IPTABLES -A In_RULE_5  -j ACCEPT.",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:655071"
+  },
+  {
+    "question": "What is idea?",
+    "answer": "The idea is to have many of these devices in our LAN so not sure how a 1:1 NAT rule could work there.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:53423"
+  },
+  {
+    "question": "Tell me about DHCP",
+    "answer": "Also, we used to use a Windows server for DHCP and Routing and Remote Access, which included a very basic port forward function which did work.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:35716"
+  }
+]

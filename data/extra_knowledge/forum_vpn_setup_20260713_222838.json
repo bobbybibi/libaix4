@@ -1,0 +1,20 @@
+[
+  {
+    "question": "Tell me about TCP",
+    "answer": "The attacker can then\nuse those packets to actively probe for certain properties of the TCP\nconnections originating from your device.",
+    "domain": "networking",
+    "source": "stackexchange:security:237391"
+  },
+  {
+    "question": "Tell me about TLS",
+    "answer": "tls-client\ntls-version-min 1.2\ntls-cipher TLS-ECDHE-ECDSA-WITH-AES-128-GCM-SHA256.",
+    "domain": "security",
+    "source": "stackexchange:networkengineering:55082"
+  },
+  {
+    "question": "Tell me about AES",
+    "answer": "dev tap\npersist-tun\npersist-key\ncipher AES-128-CBC\nauth SHA1\ntls-client\nclient\nresolv-retry infinite\nremote smthvpn06.somedomain.com 1194 udp\nlport 0\nauth-user-pass\nns-cert-type server.",
+    "domain": "security",
+    "source": "stackexchange:networkengineering:36299"
+  }
+]

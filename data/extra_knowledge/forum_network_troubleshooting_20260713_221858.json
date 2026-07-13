@@ -1,0 +1,68 @@
+[
+  {
+    "question": "Tell me about ISP",
+    "answer": "I work as a junior network admin at an ISP and I would like your help in resolving an issue whose cause is not readily apparent.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:83838"
+  },
+  {
+    "question": "What is There?",
+    "answer": "There are no port errors (no drops, collisions, FCS etc) recorded on the switch.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:23145"
+  },
+  {
+    "question": "Tell me about IP",
+    "answer": "Every IP address/network address as shown on the image is correct.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:5990"
+  },
+  {
+    "question": "Tell me about PC",
+    "answer": "Does it make sense for an Administrator to use his privileged credentials for signing into his PC, and using RunAs for non-administrative tasks?.",
+    "domain": "general",
+    "source": "stackexchange:security:7437"
+  },
+  {
+    "question": "What is What?",
+    "answer": "What is the logical next step in troubleshooting this?.",
+    "domain": "troubleshooting",
+    "source": "stackexchange:security:146609"
+  },
+  {
+    "question": "Tell me about OS",
+    "answer": "I am working on a commercial device (custom hardware with firmware and embedded software) that includes a Linux OS and will run in an unsecured network environment connected via Ethernet.",
+    "domain": "networking",
+    "source": "stackexchange:security:151506"
+  },
+  {
+    "question": "Tell me about TCP",
+    "answer": "I have to implement a pseudo TCP handshake that leads into a file transfer.",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:362889"
+  },
+  {
+    "question": "Tell me about VMs",
+    "answer": "I am experiencing some high-percentage packet loss (more than 70%) between two specific VMs in a local network, in a remote cluster (I have no physical access to it).",
+    "domain": "troubleshooting",
+    "source": "stackexchange:serverfault:577569"
+  },
+  {
+    "question": "Tell me about OC",
+    "answer": "Specifically I'm looking for the latency I could expect to be added to an OC-3 piped through these pieces of gear:.",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:31970"
+  },
+  {
+    "question": "Tell me about HTTP",
+    "answer": "Golang community provide a HTTP/2 demo website to compare the performance between HTTP 1.1 and HTTP/2.",
+    "domain": "internet",
+    "source": "stackexchange:networkengineering:52232"
+  },
+  {
+    "question": "What is My understanding?",
+    "answer": "My understanding is that by default port forwarding (or DMZ) sort of remaps the WAN IP to the Laptop's private IP so it's accessible from the internet when behind a Firewall/NAT'd Router.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:46877"
+  }
+]
