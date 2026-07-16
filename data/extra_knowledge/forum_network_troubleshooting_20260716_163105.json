@@ -1,0 +1,32 @@
+[
+  {
+    "question": "Tell me about EU",
+    "answer": "EU needs to go further - erect its own Great Firewall, protect and nurture EU native tech.",
+    "domain": "networking",
+    "source": "hackernews"
+  },
+  {
+    "question": "Why is DNS resolution via UDP slower than TCP on Mac?",
+    "answer": "My understanding is that DNS queries via UDP (the default) should be faster, but I am seeing the opposite on two Macs I own, and other 3 people I have asked who are also on Mac, see exactly the same thing. It's weird, but queries over UDP are 3-5 times slower than queries over TCP. I cannot reproduce this on my Linux servers for example.On my Macs I switched to DNS over TLS which is much faster than the default UDP querying for me, but I am still curious.",
+    "domain": "networking",
+    "source": "hackernews:34439131"
+  },
+  {
+    "question": "What is It's weird, but queries over UDP?",
+    "answer": "It's weird, but queries over UDP are 3-5 times slower than queries over TCP.",
+    "domain": "networking",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is discussed about Tell HN: Godaddy DNS resolution down for 2+ hours?",
+    "answer": "Their DNS resolution has been severely degraded for 2+ hours impacting websites and now their status page is randomly crashing as well. \nhttps://status.godaddy.com",
+    "domain": "internet",
+    "source": "hackernews:47405685"
+  },
+  {
+    "question": "What is discussed about Dynamic DNS Resolution in Nginx?",
+    "answer": "I'd rather reccomend using the \"valid\" parameter for resolver than using a variable.Like:\nresolver 10.0.0.2 valid=30s;",
+    "domain": "internet",
+    "source": "hackernews:19761983"
+  }
+]
