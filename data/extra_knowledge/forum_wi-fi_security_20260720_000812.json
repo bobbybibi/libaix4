@@ -1,0 +1,20 @@
+[
+  {
+    "question": "Tell me about AP",
+    "answer": "Grab a decent microtik router and a few Ubiquiti Unifi AP's, setup automatic updates, and never touch them again.",
+    "domain": "networking",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about TLS",
+    "answer": "Password identity/login sent in cleartext\nYes (when available)\nDepends (no, if using a TLS-based method).",
+    "domain": "security",
+    "source": "stackexchange:security:272965"
+  },
+  {
+    "question": "Tell me about CA",
+    "answer": "I believe i'm going to need to obtain a valid client machine certificate for the machine, the CA cert for the domain, and the private key for the client.",
+    "domain": "security",
+    "source": "stackexchange:serverfault:667234"
+  }
+]
