@@ -15533,5 +15533,8 @@
   "15531": "For some reason I'm surprised we've had so many issues with Wi-Fi security.I don't know if it was addressed in WPA3 (or if it would be addressed there), but my understanding is that a good chunk of the protocol isn't authenticated at all, such as the de-auth packets.In a world with growing HTTPS support, OpenVPN, WireGuard, etc.",
   "15532": "Once I had that, I wanted quick access to core details—external IP, Wi-Fi data, and local topology.",
   "15533": "* Continuous “live ping” monitoring to visualize latency spikes, packet loss, and reconnects.Low-level Traffic (but only what matters):\n* Live capture of DHCP, ARP, 802.1X, LLDP/CDP, ICMP, and off-subnet chatter.",
-  "15534": "What are the general considerations for something like this?."
+  "15534": "What are the general considerations for something like this?.",
+  "15535": "Grab a decent microtik router and a few Ubiquiti Unifi AP's, setup automatic updates, and never touch them again.",
+  "15536": "Password identity/login sent in cleartext\nYes (when available)\nDepends (no, if using a TLS-based method).",
+  "15537": "I believe i'm going to need to obtain a valid client machine certificate for the machine, the CA cert for the domain, and the private key for the client."
 }
