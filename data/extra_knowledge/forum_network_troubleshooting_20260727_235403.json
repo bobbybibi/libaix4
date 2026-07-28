@@ -1,0 +1,38 @@
+[
+  {
+    "question": "What is discussed about Async DNS Resolution?",
+    "answer": "It asynchronously sends out DNS queries to each configured nameserverI believe that may be a mistake in some deployments.  As is many hosts are poorly configured in terms of \"search\", \"domain\" and IPv4/IPv6 priority resulting in a 3x or greater amplification of invalid requests.  Now send all those invalid requests to all upstream resolvers at the same time and a host could be IP rate limited depending on what resolver is being used at the edge of data-centers and how they are configured.",
+    "domain": "networking",
+    "source": "hackernews:45603875"
+  },
+  {
+    "question": "What is As is many hosts?",
+    "answer": "As is many hosts are poorly configured in terms of \"search\", \"domain\" and IPv4/IPv6 priority resulting in a 3x or greater amplification of invalid requests.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about SIEM",
+    "answer": "Some SIEM may also detect this as an attack and would require some de-tuning to avoid false positives.",
+    "domain": "networking",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about SNAT",
+    "answer": "Adding to this, sending valid requests to all the upstream resolvers at the same time mean that the outbound SNAT of data-centers will be seen as making many duplicate requests and that could also be detected as a small resource attack, especially if a company for whatever reason is not talking directly to the root servers and is instead using one of the corporate open resolvers such as Cloudflare or Google.This is not theory.",
+    "domain": "networking",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about TTL",
+    "answer": "This includes application latency and amplification of server outages.What worked best in the past to reduce the impact of all the poorly configured applications was to just run a local instance of Unbound on every node and it handled negative cache and TTL's to keep the load down on the edge and improve application latency.",
+    "domain": "networking",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is Unbound also keeps track of which upstream resolvers?",
+    "answer": "Unbound also keeps track of which upstream resolvers are the fastest and which ones are not working.Will this feature have a toggle or option in /etc/resolv.conf to disable the behavior for those that find they need it disabled?.",
+    "domain": "general",
+    "source": "hackernews"
+  }
+]
