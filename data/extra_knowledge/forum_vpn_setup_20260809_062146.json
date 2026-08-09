@@ -1,0 +1,8 @@
+[
+  {
+    "question": "Tell me about IPs",
+    "answer": "Instead of configuring permissions basing on source IPs, or configuring specific ports, I want to demand IPSEC on anything which is not meant to be public - I feel it's less error-prone this way.).",
+    "domain": "security",
+    "source": "stackexchange:serverfault:445316"
+  }
+]

@@ -1,0 +1,8 @@
+[
+  {
+    "question": "Tell me about ISP",
+    "answer": "We have a modem which cannot be put into bridge mode for several reasons and cannot be swapped out for another bridgeable modem as we use certain services from the ISP that only function with their (rather crappy) modem.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:35716"
+  }
+]
