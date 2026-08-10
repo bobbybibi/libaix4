@@ -84,32 +84,32 @@
       ]
     }
   ],
-  "last_crawl": "2026-08-10T00:51:39.494765+00:00",
+  "last_crawl": "2026-08-10T02:41:50.012347+00:00",
   "stats": {
     "Wi-Fi Security": {
       "total_crawled": 69351,
-      "crawl_count": 1382,
-      "last_crawl": "2026-08-10T00:51:39.494724+00:00"
+      "crawl_count": 1383,
+      "last_crawl": "2026-08-10T02:41:50.012298+00:00"
     },
     "Network Troubleshooting": {
       "total_crawled": 93611,
-      "crawl_count": 1382,
-      "last_crawl": "2026-08-10T00:51:39.494751+00:00"
+      "crawl_count": 1383,
+      "last_crawl": "2026-08-10T02:41:50.012334+00:00"
     },
     "Firewall Configuration": {
       "total_crawled": 75281,
-      "crawl_count": 1382,
-      "last_crawl": "2026-08-10T00:51:39.494755+00:00"
+      "crawl_count": 1383,
+      "last_crawl": "2026-08-10T02:41:50.012339+00:00"
     },
     "VPN Setup": {
       "total_crawled": 79497,
-      "crawl_count": 1382,
-      "last_crawl": "2026-08-10T00:51:39.494759+00:00"
+      "crawl_count": 1383,
+      "last_crawl": "2026-08-10T02:41:50.012342+00:00"
     },
     "Network Monitoring": {
       "total_crawled": 66967,
-      "crawl_count": 1382,
-      "last_crawl": "2026-08-10T00:51:39.494762+00:00"
+      "crawl_count": 1383,
+      "last_crawl": "2026-08-10T02:41:50.012345+00:00"
     }
   }
 }
