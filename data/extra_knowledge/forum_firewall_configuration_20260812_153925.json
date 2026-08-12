@@ -1,0 +1,32 @@
+[
+  {
+    "question": "What is discussed about Counter argument against QubesOS more secure by being a type 1 hypervisor?",
+    "answer": "Read this first to understand what I'm counter arguing against:\nhttp://qubesosfasa4zl44o4tws22di6kepyzfeqv3tg4e3ztknltfxqrymdad.onion/faq/#how-does-qubes-os-compare-to-running-vms-in-a-conventional-osQubesOS devs make a great point about how difficult it is to trust operating systems and because of that qubesos is great because it's easier to trust the xen hypervisor.But all the Qubes still use a \"conventional\" OS, by default it's either Fedora or Debian.",
+    "domain": "security",
+    "source": "hackernews:41401318"
+  },
+  {
+    "question": "What is That means if Fedora or Debian OS?",
+    "answer": "That means if Fedora or Debian OS is compromised then all Qubes will be compromised if all Qubes are using either of those OS.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is I could even argue that qubesos?",
+    "answer": "I could even argue that qubesos is less secure because like I have explained, if the OS used in all or most Qubes is compromised then all or most of your Qubes are compromised so it's almost same problem as if you used that OS to host VMs on.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is But there?",
+    "answer": "But there is probably a good reason for QubesOS doing that and that's a reason to use QubesOS because QubesOS does a lot of things most people don't understand or know about but it increases security.Another thing I like about QubesOS is I've read that anyone can build the OS from source code and that way there is no trust involved when installing QubesOS.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is I haven't looked into how all that?",
+    "answer": "I haven't looked into how all that is done yet but if it's not too difficult or too much work for every update then that is a huge huge reason to use QubesOS because with most other OS you have to trust the .iso because you're not installing from the open source code because the dev who build the .iso could secretely add malicious modules.",
+    "domain": "general",
+    "source": "hackernews"
+  }
+]
