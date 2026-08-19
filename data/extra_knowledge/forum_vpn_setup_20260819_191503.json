@@ -1,0 +1,14 @@
+[
+  {
+    "question": "Tell me about VPS",
+    "answer": "When it comes to securing your home hosted servers, the most common advice appears to be:\n1.Have a VPS with a reverse proxy\n2.Tunnel to your home network from the VPS using a VPN like Wireguard\nAlthough I understand 1 (hides IP, DDOS protection), I don’t see why doing 2 is any better than simply exposing the relevant port rather than the Wireguard port.",
+    "domain": "security",
+    "source": "stackexchange:security:268135"
+  },
+  {
+    "question": "What is This?",
+    "answer": "This is my configuration for your reference.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:36364"
+  }
+]

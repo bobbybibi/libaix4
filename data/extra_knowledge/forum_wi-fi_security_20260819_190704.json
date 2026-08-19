@@ -1,0 +1,20 @@
+[
+  {
+    "question": "Tell me about AP",
+    "answer": "Can I pin a certificate after connecting to make sure I only use that AP?.",
+    "domain": "security",
+    "source": "stackexchange:security:188707"
+  },
+  {
+    "question": "Tell me about QR",
+    "answer": "Wi-Fi enhanced open looks like a nice security enhancement for open networks, but unfortunately (correct me if I'm wrong) it still doesn't look like it protects users from rogue access points; it only stops eavesdropping if users have already connected to the correct network.I'd love to see a system similar to what Wi-Fi is already doing with Easy Connect, where users can scan a public key embedded in a QR Code or NFC tag to securely connect to a Wi-Fi network.",
+    "domain": "wifi",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about EAP",
+    "answer": "There maybe something silly I am missing here, but how can the book call EAP-TLS a layer 2 authentication mechanism when TLS doesn't even kick into the picture until layer 4?.",
+    "domain": "wifi_security",
+    "source": "stackexchange:security:3477"
+  }
+]

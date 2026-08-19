@@ -1,0 +1,8 @@
+[
+  {
+    "question": "Tell me about OK",
+    "answer": "zabbixserver reports that mysql on the databaseserver is down, while it is up\nzabbixserver reports for other services on the databaseserver work OK.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:737265"
+  }
+]
