@@ -1,0 +1,14 @@
+[
+  {
+    "question": "What is That?",
+    "answer": "That is far from the truth.Most attacks are usually small(<10 Gbps) and effective iptables rules can go a long way, both against unwanted application traffic and packet floods.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is nftables?",
+    "answer": "nftables is meant to replace iptables everywhere.It might take time for it to gain the same usage as iptables, but it is currently a drop-in replacement for iptables on many distros.",
+    "domain": "general",
+    "source": "hackernews"
+  }
+]
