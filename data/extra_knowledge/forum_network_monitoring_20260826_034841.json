@@ -1,0 +1,68 @@
+[
+  {
+    "question": "What is discussed about Network Monitoring, Moral Hazards and Crumple Zones?",
+    "answer": "This article resonates a lot with me as someone that was supposed to be in devops and wound up becoming a human network monitor in the end that covered the blind spots of the network infrastructure team's monitoring while teaching some engineers how to use tools like mtr and how to disprove that the network is not responsible and how to use Chrome Developer Tools to show network latency v. infrastructure latency.",
+    "domain": "networking",
+    "source": "hackernews:11467268"
+  },
+  {
+    "question": "Tell me about Chrome Developer Tools",
+    "answer": "This article resonates a lot with me as someone that was supposed to be in devops and wound up becoming a human network monitor in the end that covered the blind spots of the network infrastructure team's monitoring while teaching some engineers how to use tools like mtr and how to disprove that the network is not responsible and how to use Chrome Developer Tools to show network latency v.",
+    "domain": "networking",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about DCs",
+    "answer": "Yet somehow every rack in the DCs had perfect layout and each cable was pinpointed to the extent that if you unplugged a cable randomly someone would come directly to that rack and switch in 3 minutes...",
+    "domain": "networking",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about SDN",
+    "answer": "May be the challenges faced by SDN/NFV can similarly be classified as growing pains and the times may present a tangible solution to address the problems you've discussed.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is I agree that a big part of the problem?",
+    "answer": "I agree that a big part of the problem is SNMP and logs/screen scraping.",
+    "domain": "internet",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is NETCONF?",
+    "answer": "NETCONF is a good starting point for this but there should be an equivalent for getting XML of monitoring and metrics in a streaming manner.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about NANOG",
+    "answer": "Facebook actually posts things along these lines such as their NANOG talks on automation.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "Tell me about BGP",
+    "answer": "Do the same with control plane protocols like BGP and OSPF in that any changes like learning a new route or removing a new route should be relayed to a monitoring tool directly from the protocol stack itself.",
+    "domain": "networking",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is discussed about Synthetic Network Monitoring on Debian/Raspberry Pi?",
+    "answer": "NetBeez makes sure that users on large and distributed enterprise networks have access to the applications and resources they need. As soon as an app or the network connectivity goes down it notifies the network operator.It works by installing software agents/bots in the network that simulate user behavior. We use Raspberry Pis to host our agent software, because their low-cost, size, and power consumption make it possible to scale to hundreds of agents from a pricing and technology perspective.",
+    "domain": "wifi",
+    "source": "hackernews:10854478"
+  },
+  {
+    "question": "Tell me about Raspberry Pis",
+    "answer": "We use Raspberry Pis to host our agent software, because their low-cost, size, and power consumption make it possible to scale to hundreds of agents from a pricing and technology perspective.",
+    "domain": "general",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is It does wired and WiFi monitoring.If you?",
+    "answer": "It does wired and WiFi monitoring.If you are network engineer and have any Raspberry Pis laying around install an agent on them and play with NetBeez.",
+    "domain": "wifi",
+    "source": "hackernews"
+  }
+]
