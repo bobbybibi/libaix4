@@ -1,0 +1,14 @@
+[
+  {
+    "question": "Tell me about LAN",
+    "answer": "I understand allowing the ports outbound from our LAN to WAN on the firewall.",
+    "domain": "security",
+    "source": "stackexchange:networkengineering:53423"
+  },
+  {
+    "question": "Tell me about NIC",
+    "answer": "I tried to use E1000e NIC in VMware but it doesn't work neither.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:60490"
+  }
+]
