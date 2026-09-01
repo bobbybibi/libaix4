@@ -1,0 +1,104 @@
+[
+  {
+    "question": "Tell me about UPDATE",
+    "answer": "UPDATE: The problem was in proxy settings (as the link from the accepted answer suggests).",
+    "domain": "intranet",
+    "source": "stackexchange:serverfault:948826"
+  },
+  {
+    "question": "Tell me about IP",
+    "answer": "It does so once every minute, but the public IP address actually changes only on reboot of the router/firewall, which basically never happens.",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:1040165"
+  },
+  {
+    "question": "Tell me about LAN",
+    "answer": "Here is a dirty diagram that depicts the situation:\nClient B -> LAN B -> VDSL Router B (NAT) -> the internet -> ZyWALL (NAT) -> LAN A -> Server A.",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:1040165"
+  },
+  {
+    "question": "Tell me about NAT",
+    "answer": "create a Wireguard configuration just as stated here\ncreate a client configuration exactly as stated here\nmake my client be able to tunnel all internet traffic through Wireguard as described here\nalter the 99-sysctl.conf file to enable ip forwarding and enable NAT on the server as stated here.",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:1165210"
+  },
+  {
+    "question": "Tell me about AWS",
+    "answer": "I set up a wireguard tunnel between an AWS instance (acting as server) and a personal computer acting as client.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:1104101"
+  },
+  {
+    "question": "Tell me about FORWARD",
+    "answer": "Here is my /etc/wireguard/wg0.conf of a server:\n[Interface]\nAddress = 10.0.0.1/24\nListenPort = 194\nPrivateKey = <ServerPrivateKey>\nPostUp = iptables -A FORWARD -i %i -j ACCEPT; iptables -A FORWARD -o %i -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE\nPostDown = iptables -D FORWARD -i %i -j ACCEPT; iptables -D FORWARD -o %i -j ACCEPT; iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE.",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:1117839"
+  },
+  {
+    "question": "What is What?",
+    "answer": "What is the remote endpoint of peer ABCDEFGH?.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:56214"
+  },
+  {
+    "question": "Tell me about UDP",
+    "answer": "Send encrypted bytes from step 2 over the Internet to 216.58.211.110:53133 using UDP.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:56214"
+  },
+  {
+    "question": "Tell me about IPSEC",
+    "answer": "Earth-Moon are interconnected via layer 2 IPSEC using 2 standard off the shelve routers\nEarth-Mars wireguard appliance on Earth, to wireguard appliance on Mars (Linux x86)\nMoon-Mars wireguard appliance on Moon, to wireguard appliance on Mars (Linux x86)\nSaturn-Mars wireguard appliance on Saturn, to wireguard appliance on Mars (Linux x86).",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:85261"
+  },
+  {
+    "question": "Tell me about VPNs",
+    "answer": "In Saturn the internet also goes up and down, (but ping always works) and I am unable to ping to either VPNs with big packets, and lowering the MTUs even on the local machine didn't helped.",
+    "domain": "security",
+    "source": "stackexchange:networkengineering:85261"
+  },
+  {
+    "question": "Tell me about DD",
+    "answer": "I've used it on DD-WRT routers, big servers and android phones, to name a few.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:1067"
+  },
+  {
+    "question": "Tell me about ISP",
+    "answer": "My ISP provider blocks some sites, for instance mail.ru with default these configuration configuration I'm not able to establish connection to the blocked site, while my IP address corresponds to the address of OpenVPN server.",
+    "domain": "networking",
+    "source": "stackexchange:security:196191"
+  },
+  {
+    "question": "Tell me about CA",
+    "answer": "Each OpenVPN client has its own certificate-key pair issued with the aforementioned CA.",
+    "domain": "security",
+    "source": "stackexchange:security:97666"
+  },
+  {
+    "question": "Tell me about HTTP",
+    "answer": "Bob connects to OpenVPN\nBob has set web browser to use Socks5 or HTTP/HTTPS proxy\nBob goes to stackexchange.com.",
+    "domain": "internet",
+    "source": "stackexchange:security:40321"
+  },
+  {
+    "question": "Tell me about SSH",
+    "answer": "- SSH Client (for example, putty) send to SSH Server -> SSH server send plaintext to stackexchange.com.",
+    "domain": "internet",
+    "source": "stackexchange:security:40321"
+  },
+  {
+    "question": "Tell me about ASA",
+    "answer": "For example, most new ASA firewalls come with plenty of IPSec VPN licences but only a few SSL VPN licences.",
+    "domain": "security",
+    "source": "stackexchange:serverfault:5221"
+  },
+  {
+    "question": "Tell me about WAN",
+    "answer": "Routing table\n1      0.0.0.0          0.0.0.0          x.x.x.x            WAN           0.",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:1153293"
+  }
+]

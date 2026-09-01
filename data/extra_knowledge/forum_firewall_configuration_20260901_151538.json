@@ -1,0 +1,14 @@
+[
+  {
+    "question": "Tell me about IPTABLES",
+    "answer": "$IPTABLES -P INPUT ACCEPT\n        $IPTABLES -F INPUT\n        $IPTABLES -P OUTPUT ACCEPT\n        $IPTABLES -F OUTPUT\n        $IPTABLES -P FORWARD DROP\n        $IPTABLES -F FORWARD\n        $IPTABLES -t nat -F.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:30524"
+  },
+  {
+    "question": "What is firewall?",
+    "answer": "The firewall is to explicitly join the broadcast domains of the two segments such that they're both within 192.168.1.1/24.",
+    "domain": "security",
+    "source": "stackexchange:networkengineering:53332"
+  }
+]
