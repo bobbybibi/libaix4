@@ -1,0 +1,8 @@
+[
+  {
+    "question": "Tell me about SSH",
+    "answer": "For example, I want to prevent users from creating firewall rules that use 'any' as a source for ports such as SSH, RDP, SQL, and so on.",
+    "domain": "security",
+    "source": "stackexchange:serverfault:1070355"
+  }
+]
