@@ -1,0 +1,32 @@
+[
+  {
+    "question": "What is discussed about Newpipe.net is down – DNS resolution is failing?",
+    "answer": "World wide it appears [1].  I get NXDOMAIN from the .net root servers.  Domain registration status appears normal.From the github thread:Indeed, if you do dig @ns3.inwx.de newpipe.net you will get a proper response, but other nameservers have not yet picked up on the registrar changeSomeone did the migration wrong as the root servers have no glue records for anyone to boot-strap from.    dig @192.54.112.30 newpipe.net -t ns  # one of the .",
+    "domain": "internet",
+    "source": "hackernews:46735054"
+  },
+  {
+    "question": "Tell me about SOA",
+    "answer": "[1] - https://www.whatsmydns.net/#SOA/newpipe.net The F-Droid repo(https://archive.newpipe.net/fdroid/repo?fingerprint=e2402c78...) is also not reachable.",
+    "domain": "internet",
+    "source": "hackernews"
+  },
+  {
+    "question": "What is discussed about Speeding up global DNS resolution by avoiding CNAMES?",
+    "answer": "Recently I learned: CNAMES come at a cost, esp. if latency to the nameservers are high.",
+    "domain": "networking",
+    "source": "hackernews:44394482"
+  },
+  {
+    "question": "What is discussed about OS X Lion /etc/hosts bugs & DNS Resolution?",
+    "answer": "I recently had to point my browser to a local copy of a public domain and after trying in vain for several hours I found this blog post.  It turns out that, for some reason, Apple changed the way OS X resolves DNS requests and it now involves some gymnastics instead of just changing the /etc/hosts file.  :(",
+    "domain": "internet",
+    "source": "hackernews:3183426"
+  },
+  {
+    "question": "Ask HN: Why uncached DNS resolutions are still slow?",
+    "answer": "Most of the DNS resolvers respond <100ms. Some queries can take up to a second.Why is it still so slow? What are we doing to speed it up?",
+    "domain": "internet",
+    "source": "hackernews:16473904"
+  }
+]
