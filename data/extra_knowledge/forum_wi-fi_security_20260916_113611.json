@@ -1,0 +1,32 @@
+[
+  {
+    "question": "Tell me about VLAN",
+    "answer": "But, the phones can still fully access the data VLAN - what am I doing wrong?.",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:678416"
+  },
+  {
+    "question": "Tell me about IOS",
+    "answer": "int-remote-sw-1#show ver\n    Cisco IOS Software, C2960 Software (C2960-LANBASEK9-M), Version 15.0(2)SE7, RELEASE SOFTWARE (fc1).",
+    "domain": "general",
+    "source": "stackexchange:serverfault:678416"
+  },
+  {
+    "question": "Tell me about PCs",
+    "answer": "So, PCs and other devices aren´t connected directly to the 802.1x Dynamic VLAN capable switch ( HP 1920G ) but to a smart switch ( TP-Link TL-1016DE ).",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:35874"
+  },
+  {
+    "question": "Tell me about DHCP",
+    "answer": "Now I have been able to successfully complete the authentication and want to create a separate DHCP thread/application to initiate the \"DHCP Discover \" to get an IP Address.",
+    "domain": "networking",
+    "source": "stackexchange:security:198184"
+  },
+  {
+    "question": "Tell me about WLC",
+    "answer": "I have configured a Cisco WLC to authenticate users using External Web Authentication at Layer 3.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:3847"
+  }
+]

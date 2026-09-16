@@ -1,0 +1,14 @@
+[
+  {
+    "question": "Tell me about DNS",
+    "answer": "I want to configure our Ciscos so they can do forward DNS resolution, but not reverse DNS resolution from the CLI.",
+    "domain": "internet",
+    "source": "stackexchange:networkengineering:2786"
+  },
+  {
+    "question": "Tell me about DHCP",
+    "answer": "On the Netgear you can either have a DHCP client or a DHCP server but not both at the same time so I would assume I need to setup a static IP?.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:5836"
+  }
+]
