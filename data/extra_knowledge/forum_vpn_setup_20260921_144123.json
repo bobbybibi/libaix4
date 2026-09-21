@@ -1,0 +1,62 @@
+[
+  {
+    "question": "Tell me about AWS",
+    "answer": "I'm trying to setup an OpenVPN Access Server in AWS using the market place AMI, but I;m struggling to connect to it.",
+    "domain": "security",
+    "source": "stackexchange:serverfault:647231"
+  },
+  {
+    "question": "What is What?",
+    "answer": "What are the differences between using dev tap and dev tun for openvpn?.",
+    "domain": "security",
+    "source": "stackexchange:serverfault:21157"
+  },
+  {
+    "question": "What is Here?",
+    "answer": "Here is the log I see on the server when I try to connect from a client:.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:765521"
+  },
+  {
+    "question": "Tell me about IP",
+    "answer": "client\ndev tun\nproto udp\nremote [my public IP here] 1194\nresolv-retry infinite\nnobind\nuser nobody\ngroup nobody\npersist-key\npersist-tun\nca /etc/openvpn/ca.crt\ncert /etc/openvpn/client-name.crt\nkey /etc/openvpn/client-name.key\nremote-cert-tls server\ntls-auth /etc/openvpn/ta.key 1\ncomp-lzo\nverb 3.",
+    "domain": "security",
+    "source": "stackexchange:serverfault:709860"
+  },
+  {
+    "question": "Tell me about LAN",
+    "answer": "The machine that's on the LAN has the IP X.Y.Z.12, and it can ping its gateway, X.Y.Z.254.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:37522"
+  },
+  {
+    "question": "Tell me about NAT",
+    "answer": "I suspect that either I need to tell pfSense how to route traffic between 10.0.8.0/24 and X.Y.Z.0/24, such as with a bridge or a NAT, or that my routing table is incorrect.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:37522"
+  },
+  {
+    "question": "Tell me about UDP",
+    "answer": "I was capturing some traffic on my home server during an active OpenVPN session using Mullvad recently and I noticed that the traffic is predominantly UDP which would make sense per the .conf file:.",
+    "domain": "networking",
+    "source": "stackexchange:security:183695"
+  },
+  {
+    "question": "Tell me about TCP",
+    "answer": "However I noticed that there was some traffic using TCP and TLSv1.2 to an IP address that I do not recognize.",
+    "domain": "networking",
+    "source": "stackexchange:security:183695"
+  },
+  {
+    "question": "Tell me about POSTROUTING",
+    "answer": "-A POSTROUTING -s CLIENT1-IP_ADDRESS -o eth0 -m policy --dir out --pol ipsec -j ACCEPT\n-A POSTROUTING -o eth0 -j SNAT --to-source IPSEC-SERVER-IP-ADDRESS.",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:947218"
+  },
+  {
+    "question": "Tell me about INPUT",
+    "answer": "-A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT\n-A INPUT -p tcp -m tcp --dport 22 -j ACCEPT\n-A INPUT -i lo -j ACCEPT\n-A INPUT -p udp -m udp --dport 500 -j ACCEPT\n-A INPUT -p udp -m udp --dport 4500 -j ACCEPT\n-A FORWARD -i eth0 -m policy --dir in --pol ipsec --proto esp -j ACCEPT\n-A FORWARD -o eth0 -m policy --dir out --pol ipsec --proto esp -j ACCEPT.",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:947218"
+  }
+]
