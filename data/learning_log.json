@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-04-02T14:31:25.522018+00:00",
-    "source": "forum_crawler",
-    "topic": "Firewall Configuration",
-    "entries": 522,
-    "source_breakdown": {
-      "stackexchange": 401,
-      "hackernews": 121
-    }
-  },
-  {
     "timestamp": "2026-04-02T14:34:21.340667+00:00",
     "source": "forum_crawler",
     "topic": "VPN Setup",
@@ -4992,6 +4982,16 @@
     "source_breakdown": {
       "hackernews": 153,
       "stackexchange": 202
+    }
+  },
+  {
+    "timestamp": "2026-09-21T21:13:11.654767+00:00",
+    "source": "forum_crawler",
+    "topic": "Firewall Configuration",
+    "entries": 515,
+    "source_breakdown": {
+      "stackexchange": 398,
+      "hackernews": 117
     }
   }
 ]
