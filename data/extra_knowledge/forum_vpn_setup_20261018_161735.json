@@ -1,0 +1,32 @@
+[
+  {
+    "question": "IPSec does not work via backup interface?",
+    "answer": "Cisco ASA 5506-X connected to two ISP - main and standby channel, interfaces outside_1 and outside_2. IPSec works via outside_1, but does not work via outside_2, if outside_1 down. At this moment Internet works, means SLA works correctly. I check with Packet-Tracer:\n\npacket-tracer in inside tcp 10.20.2.8 www 172.31.10.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:64445"
+  },
+  {
+    "question": "Tell me about UN",
+    "answer": "Phase: 1\nType: UN-NAT\nSubtype: static\nResult: ALLOW\nConfig:\nnat (inside,outside_1) source static LAN LAN destination static MSKNET MSKNET\nAdditional Information:\nNAT divert to egress interface outside_1\nUntranslate 172.31.10.9/80 to 172.31.10.9/80.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:64445"
+  },
+  {
+    "question": "Tell me about INTERNET",
+    "answer": "object network INTERNET-1\n subnet 10.20.2.0 255.255.255.0\n description PRIMARY_CHANNEL\nobject network INTERNET-2\n subnet 10.20.2.0 255.255.255.0\n description STANDBY_CHANNEL\nobject network LAN \n subnet 10.20.2.0 255.255.255.0 \n!.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:64445"
+  },
+  {
+    "question": "Tell me about IKE",
+    "answer": "1   IKE Peer: 11.22.33.44\n    Type    : L2L             Role    : responder\n    Rekey   : no              State   : MM_ACTIVE.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:64445"
+  },
+  {
+    "question": "What is UPD2: Firewall rebooted, link outside_1?",
+    "answer": "UPD2: Firewall rebooted, link outside_1 is down and IPSec started.",
+    "domain": "security",
+    "source": "stackexchange:networkengineering:64445"
+  }
+]
