@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-04-02T15:59:19.958662+00:00",
-    "source": "forum_crawler",
-    "topic": "Wi-Fi Security",
-    "entries": 487,
-    "source_breakdown": {
-      "stackexchange": 359,
-      "hackernews": 128
-    }
-  },
-  {
     "timestamp": "2026-04-02T16:02:18.597024+00:00",
     "source": "forum_crawler",
     "topic": "Network Troubleshooting",
@@ -4992,6 +4982,16 @@
     "source_breakdown": {
       "stackexchange": 418,
       "hackernews": 142
+    }
+  },
+  {
+    "timestamp": "2026-10-30T21:19:33.069833+00:00",
+    "source": "forum_crawler",
+    "topic": "VPN Setup",
+    "entries": 505,
+    "source_breakdown": {
+      "stackexchange": 418,
+      "hackernews": 87
     }
   }
 ]

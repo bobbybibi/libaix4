@@ -1,0 +1,8 @@
+[
+  {
+    "question": "What is This?",
+    "answer": "This is because sk_GENERAL_NAME_free frees only the containing structure, whereas GENERAL_NAMES_free frees the structure AND its items.And later:> Here, the code assumes that a return value that is negative or zero indicates failure, and ‘buf’ is not initialized, and needs not to be freed.",
+    "domain": "general",
+    "source": "hackernews"
+  }
+]
