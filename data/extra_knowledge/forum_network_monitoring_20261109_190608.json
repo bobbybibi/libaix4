@@ -1,0 +1,38 @@
+[
+  {
+    "question": "Tell me about SNMP",
+    "answer": "Using various commands like snmpget, snmpwalk, snmpbulkwalk etc, the SNMP MASTER can fetch each piece of information or many at a time from the agent.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:28845"
+  },
+  {
+    "question": "Tell me about NET",
+    "answer": "snmptrap -v 2c -c public localhost \"\" NET-SNMP-EXAMPLES-MIB::netSnmpExampleHeartbeatNotification netSnmpExampleHeartbeatRate i 9323.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:28845"
+  },
+  {
+    "question": "Tell me about MIBs",
+    "answer": "Normally I'm on the receiving end of these traps and rely on the manufacturer-provided MIBs.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:53378"
+  },
+  {
+    "question": "Tell me about MAC",
+    "answer": "I know you can also use Radius (which transmits the MAC address directly).",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:13307"
+  },
+  {
+    "question": "Tell me about UDP",
+    "answer": "But when I do so, UDP scan goes on without a problem, but the NSE script just freezes at 33.33%.",
+    "domain": "networking",
+    "source": "stackexchange:security:226059"
+  },
+  {
+    "question": "Tell me about IP",
+    "answer": "When I type the IP of kali machine, I am able to get the cloned facebook.com page.",
+    "domain": "general",
+    "source": "stackexchange:security:117170"
+  }
+]
