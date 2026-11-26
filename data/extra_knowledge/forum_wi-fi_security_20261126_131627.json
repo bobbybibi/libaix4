@@ -1,0 +1,50 @@
+[
+  {
+    "question": "What is There?",
+    "answer": "There are 2 sections: the administration buildings and the factory.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:62828"
+  },
+  {
+    "question": "Tell me about MAC",
+    "answer": "I want to configure port-security on a c2960 cisco switch to allow maximum of 10 MAC addresses per port.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:28459"
+  },
+  {
+    "question": "What is My goal?",
+    "answer": "My goal is to mask my WIRED devices from all Wi-Fi scanning efforts for extra security and privacy.",
+    "domain": "wifi",
+    "source": "stackexchange:networkengineering:58418"
+  },
+  {
+    "question": "What is What?",
+    "answer": "What are your advices to improve stability ?.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:76758"
+  },
+  {
+    "question": "Tell me about VPN",
+    "answer": "I therefore always use a VPN connection to encrypt my traffic while using open Wi-Fi hotspots to avoid these attacks.",
+    "domain": "wifi",
+    "source": "stackexchange:security:114762"
+  },
+  {
+    "question": "Tell me about WPA",
+    "answer": "In current years we have used WPA and WPA 2 for the encryption of data sent over an 802.11 network.",
+    "domain": "wifi",
+    "source": "stackexchange:security:21534"
+  },
+  {
+    "question": "Tell me about SSID",
+    "answer": "I'm concerned about how I will know that I'm connecting to the right Foo's Coffee WiFi SSID.",
+    "domain": "wifi",
+    "source": "stackexchange:security:188707"
+  },
+  {
+    "question": "Tell me about RADIUS",
+    "answer": "My wifi equipment has the possibility for RADIUS authentication.",
+    "domain": "wifi",
+    "source": "stackexchange:security:181758"
+  }
+]

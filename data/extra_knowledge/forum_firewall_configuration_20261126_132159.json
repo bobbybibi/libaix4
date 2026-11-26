@@ -1,0 +1,74 @@
+[
+  {
+    "question": "Tell me about WAN",
+    "answer": "In this case I want to put the WAN interfaces on top, followed by PFSYNC, MGMT, SRV and finally LAN.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:1022296"
+  },
+  {
+    "question": "Tell me about VM",
+    "answer": "2x Intel 10gbE\npfSense (VM) with WAN on one vSwitch, LAN on other vSwitch, NIC's above respectively for each.",
+    "domain": "networking",
+    "source": "stackexchange:serverfault:883309"
+  },
+  {
+    "question": "Tell me about PC",
+    "answer": "I'm new to pfSense and VirtualBox, I have a PC running Ubuntu, in Ubuntu I run a VirtualBox host.",
+    "domain": "general",
+    "source": "stackexchange:serverfault:760237"
+  },
+  {
+    "question": "Tell me about VLAN",
+    "answer": "I have a client in a VLAN 220 (172.2.20.100/23) trying to ping his gateway (pfSense : 172.2.20.1/23) but it doesn't work as the inter-VLAN routing doesn't work also.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:60490"
+  },
+  {
+    "question": "Tell me about LAN",
+    "answer": "I don't care if I use local IPv6 addresses on my LAN and match them with public on WAN or set directly the public ipv6 to my clients.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:46170"
+  },
+  {
+    "question": "What is Below?",
+    "answer": "Below is the picture of my current configurations.",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:51690"
+  },
+  {
+    "question": "Tell me about AP",
+    "answer": "I have a Unifi AP with a single MYNET SSID connected to my HP 2520 switch on port 23.",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:72652"
+  },
+  {
+    "question": "Tell me about GUI",
+    "answer": "This seems like a simple thing but there doesn't appear to be an easy way (in the GUI).",
+    "domain": "general",
+    "source": "stackexchange:networkengineering:50135"
+  },
+  {
+    "question": "Tell me about ARP",
+    "answer": "> ff:ff:ff:ff:ff:ff, ethertype ARP (0x0806), length 42: Request who-has 192.168.1.1 tell 192.168.1.windows, length 28\n0a:...",
+    "domain": "networking",
+    "source": "stackexchange:networkengineering:53332"
+  },
+  {
+    "question": "What does It also provide?",
+    "answer": "It also offers more control than my router.",
+    "domain": "networking",
+    "source": "stackexchange:security:90890"
+  },
+  {
+    "question": "What is How?",
+    "answer": "How is it possible that by navigating to my new subdomain that it correctly links with my pfsense's ip?.",
+    "domain": "general",
+    "source": "stackexchange:security:252404"
+  },
+  {
+    "question": "Tell me about UDP",
+    "answer": "For the past weeks I have noticed an increased of hosts trying to send UDP packets to mainly 1 port at a time.",
+    "domain": "networking",
+    "source": "stackexchange:security:4274"
+  }
+]
